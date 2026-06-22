@@ -602,14 +602,16 @@ test("index signature in shape", () => {
   expectTypeOf<schema>().toEqualTypeOf<Record<string, string>>();
 });
 
-test("extent() on object with refinements should throw", () => {
+// Updated behavior: `extend` now only throws when trying to overwrite existing keys
+// on an object schema that has refinements. Adding new keys is allowed.
+test("extend() on object with refinements should not throw when adding new keys", () => {
   const schema = z
     .object({
       a: z.string(),
     })
     .refine(() => true);
 
-  expect(() => schema.extend({ b: z.string() })).toThrow();
+  expect(() => schema.extend({ b: z.string() })).not.toThrow();
 });
 
 test("safeExtend() on object with refinements should not throw", () => {
