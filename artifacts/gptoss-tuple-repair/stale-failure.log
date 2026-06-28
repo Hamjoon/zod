@@ -1,0 +1,75 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+(node:27144) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /Users/garibong/.openclaw/workspace/tmp/zod-gptoss-pr
+
+ ❯ |zod| src/v4/classic/tests/tuple.test.ts (17 tests | 2 failed) 16ms
+   ✓ successful validation 5ms
+   ✓ async validation 1ms
+   ✓ tuple with optional elements 1ms
+   ✓ tuple with optional elements followed by required 0ms
+   ✓ tuple with all optional elements 0ms
+   ✓ tuple fills defaults for missing trailing elements 1ms
+   ✓ tuple fills defaults under async parse 0ms
+   ✓ tuple keeps length-1 array for missing `.optional()` elements 1ms
+   ✓ tuple result is dense when optional precedes a default 0ms
+   × tuple breaks and truncates on first absent-optional rejection 2ms
+   × tuple breaks on absent-optional rejection under async parse 0ms
+   ✓ tuple preserves explicit undefined inside input even for optional-out schemas 0ms
+   ✓ tuple does NOT break when a required slot fails past input length 0ms
+   ✓ tuple with rest schema 0ms
+   ✓ sparse array input 0ms
+   ✓ under-length tuple emits a single too_small with optStart minimum 1ms
+   ✓ too_big tuple still surfaces element-wise type errors for present indices 0ms
+ ✓ |zod|  TS  src/v4/classic/tests/tuple.test.ts (17 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |zod| src/v4/classic/tests/tuple.test.ts > tuple breaks and truncates on first absent-optional rejection
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/v4/classic/tests/tuple.test.ts:297:22
+    295|   const trailingDefault = z.tuple([z.string(), refusesUndefined, z.str…
+    296|   const r1 = trailingDefault.safeParse(["alpha"]);
+    297|   expect(r1.success).toBe(true);
+       |                      ^
+    298|   expect(r1.data).toEqual(["alpha"]);
+    299|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |zod| src/v4/classic/tests/tuple.test.ts > tuple breaks on absent-optional rejection under async parse
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/v4/classic/tests/tuple.test.ts:320:21
+    318|   const schema = z.tuple([z.string(), refusesUndefined, z.string().def…
+    319|   const r = await schema.safeParseAsync(["alpha"]);
+    320|   expect(r.success).toBe(true);
+       |                     ^
+    321|   expect(r.data).toEqual(["alpha"]);
+    322| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  2 failed | 32 passed (34)
+Type Errors  no errors
+   Start at  19:19:54
+   Duration  4.90s (transform 250ms, setup 18ms, collect 286ms, tests 16ms, environment 0ms, prepare 3ms, typecheck 4.46s)

@@ -1,0 +1,56 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+(node:36927) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /Users/garibong/.openclaw/workspace/tmp/zod-gptoss-pr
+
+ ❯ |zod| src/v4/classic/tests/tuple.test.ts (17 tests | 1 failed) 15ms
+   ✓ successful validation 5ms
+   ✓ async validation 1ms
+   ✓ tuple with optional elements 1ms
+   ✓ tuple with optional elements followed by required 0ms
+   ✓ tuple with all optional elements 0ms
+   ✓ tuple fills defaults for missing trailing elements 1ms
+   ✓ tuple fills defaults under async parse 0ms
+   ✓ tuple keeps length-1 array for missing `.optional()` elements 1ms
+   ✓ tuple result is dense when optional precedes a default 0ms
+   × tuple breaks and truncates on first absent-optional rejection 2ms
+   ✓ tuple breaks on absent-optional rejection under async parse 0ms
+   ✓ tuple preserves explicit undefined inside input even for optional-out schemas 0ms
+   ✓ tuple does NOT break when a required slot fails past input length 0ms
+   ✓ tuple with rest schema 0ms
+   ✓ sparse array input 0ms
+   ✓ under-length tuple emits a single too_small with optStart minimum 1ms
+   ✓ too_big tuple still surfaces element-wise type errors for present indices 0ms
+ ✓ |zod|  TS  src/v4/classic/tests/tuple.test.ts (17 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |zod| src/v4/classic/tests/tuple.test.ts > tuple breaks and truncates on first absent-optional rejection
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ src/v4/classic/tests/tuple.test.ts:311:22
+    309|   const noTrailingDefault = z.tuple([z.string(), refusesUndefined]);
+    310|   const r3 = noTrailingDefault.safeParse(["alpha"]);
+    311|   expect(r3.success).toBe(false);
+       |                      ^
+    312|   expect(r3.error?.issues?.[0]?.message).toBe("must not be undefined");
+    313| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 33 passed (34)
+Type Errors  no errors
+   Start at  19:52:41
+   Duration  1.34s (transform 252ms, setup 19ms, collect 288ms, tests 15ms, environment 0ms, prepare 3ms, typecheck 903ms)

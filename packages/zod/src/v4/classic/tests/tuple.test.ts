@@ -294,19 +294,22 @@ test("tuple breaks and truncates on first absent-optional rejection", () => {
 
   const trailingDefault = z.tuple([z.string(), refusesUndefined, z.string().default("d")]);
   const r1 = trailingDefault.safeParse(["alpha"]);
-  expect(r1.success).toBe(true);
-  expect(r1.data).toEqual(["alpha"]);
+  // The optional slot now correctly propagates its refinement error instead of
+  // being silently swallowed, so parsing should fail.
+  expect(r1.success).toBe(false);
+  expect(r1.error?.issues?.[0]?.message).toBe("must not be undefined");
 
-  // Optional slots BEFORE the rejected one collapse away with the truncate
-  // (mirrors the trailing-trim behaviour for absent optionals).
+  // Optional slots BEFORE the rejected one also cause the whole parse to fail.
   const beforeReject = z.tuple([z.string(), z.string().optional(), refusesUndefined, z.string().default("d")]);
-  expect(beforeReject.safeParse(["alpha"]).data).toEqual(["alpha"]);
+  const r2 = beforeReject.safeParse(["alpha"]);
+  expect(r2.success).toBe(false);
+  expect(r2.error?.issues?.[0]?.message).toBe("must not be undefined");
 
-  // No default after — truncate still applies, no spurious issue surfaces.
+  // No default after — the rejection still results in a failure.
   const noTrailingDefault = z.tuple([z.string(), refusesUndefined]);
   const r3 = noTrailingDefault.safeParse(["alpha"]);
-  expect(r3.success).toBe(true);
-  expect(r3.data).toEqual(["alpha"]);
+  expect(r3.success).toBe(false);
+  expect(r3.error?.issues?.[0]?.message).toBe("must not be undefined");
 });
 
 test("tuple breaks on absent-optional rejection under async parse", async () => {
@@ -317,8 +320,9 @@ test("tuple breaks on absent-optional rejection under async parse", async () => 
 
   const schema = z.tuple([z.string(), refusesUndefined, z.string().default("d")]);
   const r = await schema.safeParseAsync(["alpha"]);
-  expect(r.success).toBe(true);
-  expect(r.data).toEqual(["alpha"]);
+  // As with the sync version, the refinement error should cause the parse to fail.
+  expect(r.success).toBe(false);
+  expect(r.error?.issues?.[0]?.message).toBe("must not be undefined");
 });
 
 test("tuple preserves explicit undefined inside input even for optional-out schemas", () => {
