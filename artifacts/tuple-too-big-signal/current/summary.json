@@ -1,0 +1,54 @@
+{
+  "variant": "current",
+  "coverage": {
+    "lines": {
+      "total": 5662,
+      "covered": 793,
+      "skipped": 0,
+      "pct": 14
+    },
+    "statements": {
+      "total": 6348,
+      "covered": 832,
+      "skipped": 0,
+      "pct": 13.1
+    },
+    "branches": {
+      "total": 4399,
+      "covered": 182,
+      "skipped": 0,
+      "pct": 4.13
+    },
+    "functions": {
+      "total": 1341,
+      "covered": 108,
+      "skipped": 0,
+      "pct": 8.05
+    }
+  },
+  "mutation": {
+    "total": 3,
+    "killed": 3,
+    "survived": 0,
+    "statuses": [
+      [
+        "0",
+        "ObjectLiteral",
+        "Killed",
+        "{}"
+      ],
+      [
+        "1",
+        "StringLiteral",
+        "Killed",
+        "\"\""
+      ],
+      [
+        "2",
+        "BooleanLiteral",
+        "Killed",
+        "false"
+      ]
+    ]
+  }
+}

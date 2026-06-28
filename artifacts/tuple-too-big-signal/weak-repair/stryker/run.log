@@ -1,0 +1,55 @@
+22:07:39 (69251) INFO ProjectReader Found 1 of 579 file(s) to be mutated.
+22:07:39 (69251) INFO Instrumenter Instrumented 1 source file(s) with 3 mutant(s)
+22:07:39 (69251) INFO ConcurrencyTokenProvider Creating 2 test runner process(es).
+22:07:40 (69251) INFO DryRunExecutor Starting initial test run (vitest test runner with "off" coverage analysis). This may take a while.
+22:07:41 (69251) INFO DryRunExecutor Initial test run succeeded. Ran 7 tests in 0 seconds (net 8.18416700000023 ms, overhead 346.81583299999977 ms).
+
+All tests/tuple.test.ts
+  ~ successful validation (covered 3)
+  ~ async validation (covered 3)
+  ✘ tuple with optional elements (covered 0)
+  ✘ tuple with optional elements followed by required (covered 0)
+  ~ tuple with all optional elements (covered 3)
+  ✘ tuple with rest schema (covered 0)
+  ✘ sparse array input (covered 0)
+
+[Survived] StringLiteral
+packages/zod/src/v4/core/schemas.ts:2537:23
+-               ? { code: "too_big", maximum: items.length, inclusive: true }
++               ? { code: "", maximum: items.length, inclusive: true }
+Tests ran:
+    successful validation
+    async validation
+    tuple with all optional elements
+
+
+[Survived] BooleanLiteral
+packages/zod/src/v4/core/schemas.ts:2537:68
+-               ? { code: "too_big", maximum: items.length, inclusive: true }
++               ? { code: "too_big", maximum: items.length, inclusive: false }
+Tests ran:
+    successful validation
+    async validation
+    tuple with all optional elements
+
+
+[Survived] ObjectLiteral
+packages/zod/src/v4/core/schemas.ts:2537:15
+-               ? { code: "too_big", maximum: items.length, inclusive: true }
++               ? {}
+Tests ran:
+    successful validation
+    async validation
+    tuple with all optional elements
+
+
+Ran 3.00 tests per mutant on average.
+------------|------------------|----------|-----------|------------|----------|----------|
+            | % Mutation score |          |           |            |          |          |
+File        |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+All files   |   0.00 |    0.00 |        0 |         0 |          3 |        0 |        0 |
+ schemas.ts |   0.00 |    0.00 |        0 |         0 |          3 |        0 |        0 |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+22:07:41 (69251) INFO JsonReporter Your report can be found at: file:///Users/garibong/.openclaw/workspace/tmp/zod-gptoss-pr/artifacts/tuple-too-big-signal/weak-repair/stryker/mutation.json
+22:07:41 (69251) INFO MutationTestExecutor Done in 1 second.

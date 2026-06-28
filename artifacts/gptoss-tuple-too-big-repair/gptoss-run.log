@@ -1,0 +1,83 @@
+```diff
+diff --git a/packages/zod/src/v4/classic/tests/tuple.test.ts b/packages/zod/src/v4/classic/tests/tuple.test.ts
+index 5c9e1a7..d3f4b2c 100644
+--- a/packages/zod/src/v4/classic/tests/tuple.test.ts
++++ b/packages/zod/src/v4/classic/tests/tuple.test.ts
+@@
+   const r2 = testTuple.safeParse(["asdf", 1234, true]);
+   expect(r2.success).toEqual(false);
+   expect(r2.error!).toMatchInlineSnapshot(`
+-    [ZodError: [
+-      {
+-        "code": "too_big",
+-        "maximum": 2,
+-        "origin": "array",
+-        "path": [],
+-        "message": "Too big: expected array to have <2 items"
+-      }
+-    ]]
++    [ZodError: [
++      {
++        "code": "too_big",
++        "maximum": 2,
++        "inclusive": true,
++        "origin": "array",
++        "path": [],
++        "message": "Too big: expected array to have <=2 items"
++      }
++    ]]
+   `);
+@@
+   const r2 = await testTuple.safeParseAsync(["asdf", 1234, true]);
+   expect(r2.success).toEqual(false);
+   expect(r2.error!).toMatchInlineSnapshot(`
+-    [ZodError: [
+-      {
+-        "code": "too_big",
+-        "maximum": 2,
+-        "origin": "array",
+-        "path": [],
+-        "message": "Too big: expected array to have <2 items"
+-      }
+-    ]]
++    [ZodError: [
++      {
++        "code": "too_big",
++        "maximum": 2,
++        "inclusive": true,
++        "origin": "array",
++        "path": [],
++        "message": "Too big: expected array to have <=2 items"
++      }
++    ]]
+   `);
+```
+
+--- usage ---
+{
+  "prompt_tokens": 2218,
+  "completion_tokens": 559,
+  "total_tokens": 2777,
+  "cost": 0.0006681,
+  "is_byok": false,
+  "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+  },
+  "cost_details": {
+    "upstream_inference_cost": 0.0006681,
+    "upstream_inference_prompt_cost": 0.0003327,
+    "upstream_inference_completions_cost": 0.0003354
+  },
+  "completion_tokens_details": {
+    "reasoning_tokens": 135,
+    "image_tokens": 0,
+    "audio_tokens": 0
+  }
+}
+
+--- wrote prompt: artifacts/gptoss-tuple-too-big-repair/gptoss-prompt.md ---
+--- wrote response: artifacts/gptoss-tuple-too-big-repair/gptoss-response.md ---
+--- wrote usage: artifacts/gptoss-tuple-too-big-repair/gptoss-usage.json ---

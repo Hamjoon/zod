@@ -1,0 +1,54 @@
+{
+  "variant": "weak-repair",
+  "coverage": {
+    "lines": {
+      "total": 5662,
+      "covered": 793,
+      "skipped": 0,
+      "pct": 14
+    },
+    "statements": {
+      "total": 6348,
+      "covered": 832,
+      "skipped": 0,
+      "pct": 13.1
+    },
+    "branches": {
+      "total": 4399,
+      "covered": 182,
+      "skipped": 0,
+      "pct": 4.13
+    },
+    "functions": {
+      "total": 1341,
+      "covered": 108,
+      "skipped": 0,
+      "pct": 8.05
+    }
+  },
+  "mutation": {
+    "total": 3,
+    "killed": 0,
+    "survived": 3,
+    "statuses": [
+      [
+        "0",
+        "ObjectLiteral",
+        "Survived",
+        "{}"
+      ],
+      [
+        "1",
+        "StringLiteral",
+        "Survived",
+        "\"\""
+      ],
+      [
+        "2",
+        "BooleanLiteral",
+        "Survived",
+        "false"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+22:07:02 (69012) INFO ProjectReader Found 1 of 574 file(s) to be mutated.
+22:07:02 (69012) INFO Instrumenter Instrumented 1 source file(s) with 3 mutant(s)
+22:07:03 (69012) INFO ConcurrencyTokenProvider Creating 2 test runner process(es).
+22:07:03 (69012) INFO DryRunExecutor Starting initial test run (vitest test runner with "off" coverage analysis). This may take a while.
+22:07:04 (69012) INFO DryRunExecutor Initial test run succeeded. Ran 7 tests in 0 seconds (net 8.382498999999939 ms, overhead 335.61750100000006 ms).
+
+All tests/tuple.test.ts
+  ✓ successful validation (killed 3)
+  ~ async validation (covered 3)
+  ✘ tuple with optional elements (covered 0)
+  ✘ tuple with optional elements followed by required (covered 0)
+  ~ tuple with all optional elements (covered 3)
+  ✘ tuple with rest schema (covered 0)
+  ✘ sparse array input (covered 0)
+
+Ran 1.00 tests per mutant on average.
+------------|------------------|----------|-----------|------------|----------|----------|
+            | % Mutation score |          |           |            |          |          |
+File        |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+All files   | 100.00 |  100.00 |        3 |         0 |          0 |        0 |        0 |
+ schemas.ts | 100.00 |  100.00 |        3 |         0 |          0 |        0 |        0 |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+22:07:04 (69012) INFO JsonReporter Your report can be found at: file:///Users/garibong/.openclaw/workspace/tmp/zod-gptoss-pr/artifacts/tuple-too-big-signal/current/stryker/mutation.json
+22:07:04 (69012) INFO MutationTestExecutor Done in 1 second.

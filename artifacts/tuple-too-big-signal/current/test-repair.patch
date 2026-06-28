@@ -1,0 +1,28 @@
+diff --git a/packages/zod/src/v4/classic/tests/tuple.test.ts b/packages/zod/src/v4/classic/tests/tuple.test.ts
+index 753e86df..8497f15f 100644
+--- a/packages/zod/src/v4/classic/tests/tuple.test.ts
++++ b/packages/zod/src/v4/classic/tests/tuple.test.ts
+@@ -30,9 +30,10 @@ test("successful validation", () => {
+       {
+         "code": "too_big",
+         "maximum": 2,
++        "inclusive": true,
+         "origin": "array",
+         "path": [],
+-        "message": "Too big: expected array to have <2 items"
++        "message": "Too big: expected array to have <=2 items"
+       }
+     ]]
+   `);
+@@ -82,9 +83,10 @@ test("async validation", async () => {
+       {
+         "code": "too_big",
+         "maximum": 2,
++        "inclusive": true,
+         "origin": "array",
+         "path": [],
+-        "message": "Too big: expected array to have <2 items"
++        "message": "Too big: expected array to have <=2 items"
+       }
+     ]]
+   `);
