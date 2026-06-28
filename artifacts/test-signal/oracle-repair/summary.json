@@ -1,0 +1,547 @@
+{
+  "label": "oracle-repair",
+  "testSource": "hamjoon/repair/object-extend-refinement-test",
+  "testFile": "packages/zod/src/v4/classic/tests/object.test.ts",
+  "productionFile": "packages/zod/src/v4/core/util.ts",
+  "assertions": {
+    "testFile": "packages/zod/src/v4/classic/tests/object.test.ts",
+    "relevantTestCount": 3,
+    "tests": [
+      {
+        "name": "extend() on object with refinements should allow adding non-overlapping properties",
+        "expectCount": 1,
+        "matchers": [
+          "not.toThrow"
+        ],
+        "expects": [
+          {
+            "target": "() => schema.extend({ b: z.string() })",
+            "matcher": "not.toThrow"
+          }
+        ]
+      },
+      {
+        "name": "extend() on object with refinements should still reject overlapping keys",
+        "expectCount": 1,
+        "matchers": [
+          "toThrow"
+        ],
+        "expects": [
+          {
+            "target": "() => schema.extend({ a: z.number() })",
+            "matcher": "toThrow"
+          }
+        ]
+      },
+      {
+        "name": "safeExtend() on object with refinements should not throw",
+        "expectCount": 1,
+        "matchers": [
+          "not.toThrow"
+        ],
+        "expects": [
+          {
+            "target": "() => schema.safeExtend({ b: z.string() })",
+            "matcher": "not.toThrow"
+          }
+        ]
+      }
+    ]
+  },
+  "coverage": {
+    "productionFile": "packages/zod/src/v4/core/util.ts",
+    "metrics": {
+      "lines": {
+        "total": 313,
+        "covered": 131,
+        "skipped": 0,
+        "pct": 41.85
+      },
+      "functions": {
+        "total": 90,
+        "covered": 40,
+        "skipped": 0,
+        "pct": 44.44
+      },
+      "statements": {
+        "total": 350,
+        "covered": 139,
+        "skipped": 0,
+        "pct": 39.71
+      },
+      "branches": {
+        "total": 206,
+        "covered": 70,
+        "skipped": 0,
+        "pct": 33.98
+      }
+    }
+  },
+  "mutation": {
+    "productionFile": "packages/zod/src/v4/core/util.ts",
+    "totals": {
+      "NoCoverage": 2,
+      "Killed": 19,
+      "Survived": 4
+    },
+    "mutants": [
+      {
+        "id": "4",
+        "mutatorName": "BlockStatement",
+        "replacement": "{}",
+        "status": "NoCoverage",
+        "location": {
+          "end": {
+            "column": 4,
+            "line": 654
+          },
+          "start": {
+            "column": 30,
+            "line": 652
+          }
+        }
+      },
+      {
+        "id": "5",
+        "mutatorName": "StringLiteral",
+        "replacement": "\"\"",
+        "status": "NoCoverage",
+        "location": {
+          "end": {
+            "column": 71,
+            "line": 653
+          },
+          "start": {
+            "column": 21,
+            "line": 653
+          }
+        }
+      },
+      {
+        "id": "1",
+        "mutatorName": "BooleanLiteral",
+        "replacement": "isPlainObject(shape)",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 28,
+            "line": 652
+          },
+          "start": {
+            "column": 7,
+            "line": 652
+          }
+        },
+        "killedBy": [
+          "34"
+        ]
+      },
+      {
+        "id": "2",
+        "mutatorName": "ConditionalExpression",
+        "replacement": "true",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 28,
+            "line": 652
+          },
+          "start": {
+            "column": 7,
+            "line": 652
+          }
+        },
+        "killedBy": [
+          "34"
+        ]
+      },
+      {
+        "id": "3",
+        "mutatorName": "ConditionalExpression",
+        "replacement": "false",
+        "status": "Survived",
+        "location": {
+          "end": {
+            "column": 28,
+            "line": 652
+          },
+          "start": {
+            "column": 7,
+            "line": 652
+          }
+        }
+      },
+      {
+        "id": "0",
+        "mutatorName": "BlockStatement",
+        "replacement": "{}",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 2,
+            "line": 677
+          },
+          "start": {
+            "column": 83,
+            "line": 651
+          }
+        },
+        "killedBy": [
+          "34"
+        ]
+      },
+      {
+        "id": "6",
+        "mutatorName": "ConditionalExpression",
+        "replacement": "true",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 48,
+            "line": 657
+          },
+          "start": {
+            "column": 21,
+            "line": 657
+          }
+        },
+        "killedBy": [
+          "35"
+        ]
+      },
+      {
+        "id": "7",
+        "mutatorName": "ConditionalExpression",
+        "replacement": "false",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 48,
+            "line": 657
+          },
+          "start": {
+            "column": 21,
+            "line": 657
+          }
+        },
+        "killedBy": [
+          "47"
+        ]
+      },
+      {
+        "id": "8",
+        "mutatorName": "LogicalOperator",
+        "replacement": "checks || checks.length > 0",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 48,
+            "line": 657
+          },
+          "start": {
+            "column": 21,
+            "line": 657
+          }
+        },
+        "killedBy": [
+          "34"
+        ]
+      },
+      {
+        "id": "9",
+        "mutatorName": "ConditionalExpression",
+        "replacement": "true",
+        "status": "Survived",
+        "location": {
+          "end": {
+            "column": 48,
+            "line": 657
+          },
+          "start": {
+            "column": 31,
+            "line": 657
+          }
+        }
+      },
+      {
+        "id": "10",
+        "mutatorName": "EqualityOperator",
+        "replacement": "checks.length >= 0",
+        "status": "Survived",
+        "location": {
+          "end": {
+            "column": 48,
+            "line": 657
+          },
+          "start": {
+            "column": 31,
+            "line": 657
+          }
+        }
+      },
+      {
+        "id": "11",
+        "mutatorName": "EqualityOperator",
+        "replacement": "checks.length <= 0",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 48,
+            "line": 657
+          },
+          "start": {
+            "column": 31,
+            "line": 657
+          }
+        },
+        "killedBy": [
+          "47"
+        ]
+      },
+      {
+        "id": "12",
+        "mutatorName": "ConditionalExpression",
+        "replacement": "true",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 16,
+            "line": 658
+          },
+          "start": {
+            "column": 7,
+            "line": 658
+          }
+        },
+        "killedBy": [
+          "35"
+        ]
+      },
+      {
+        "id": "13",
+        "mutatorName": "ConditionalExpression",
+        "replacement": "false",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 16,
+            "line": 658
+          },
+          "start": {
+            "column": 7,
+            "line": 658
+          }
+        },
+        "killedBy": [
+          "47"
+        ]
+      },
+      {
+        "id": "14",
+        "mutatorName": "BlockStatement",
+        "replacement": "{}",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 4,
+            "line": 667
+          },
+          "start": {
+            "column": 18,
+            "line": 658
+          }
+        },
+        "killedBy": [
+          "47"
+        ]
+      },
+      {
+        "id": "15",
+        "mutatorName": "BlockStatement",
+        "replacement": "{}",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 6,
+            "line": 666
+          },
+          "start": {
+            "column": 30,
+            "line": 662
+          }
+        },
+        "killedBy": [
+          "47"
+        ]
+      },
+      {
+        "id": "16",
+        "mutatorName": "ConditionalExpression",
+        "replacement": "true",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 76,
+            "line": 663
+          },
+          "start": {
+            "column": 11,
+            "line": 663
+          }
+        },
+        "killedBy": [
+          "46"
+        ]
+      },
+      {
+        "id": "17",
+        "mutatorName": "ConditionalExpression",
+        "replacement": "false",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 76,
+            "line": 663
+          },
+          "start": {
+            "column": 11,
+            "line": 663
+          }
+        },
+        "killedBy": [
+          "47"
+        ]
+      },
+      {
+        "id": "18",
+        "mutatorName": "EqualityOperator",
+        "replacement": "Object.getOwnPropertyDescriptor(existingShape, key) === undefined",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 76,
+            "line": 663
+          },
+          "start": {
+            "column": 11,
+            "line": 663
+          }
+        },
+        "killedBy": [
+          "46"
+        ]
+      },
+      {
+        "id": "19",
+        "mutatorName": "BlockStatement",
+        "replacement": "{}",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 8,
+            "line": 665
+          },
+          "start": {
+            "column": 78,
+            "line": 663
+          }
+        },
+        "killedBy": [
+          "47"
+        ]
+      },
+      {
+        "id": "20",
+        "mutatorName": "StringLiteral",
+        "replacement": "\"\"",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 119,
+            "line": 664
+          },
+          "start": {
+            "column": 25,
+            "line": 664
+          }
+        },
+        "killedBy": [
+          "47"
+        ]
+      },
+      {
+        "id": "21",
+        "mutatorName": "ObjectLiteral",
+        "replacement": "{}",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 4,
+            "line": 675
+          },
+          "start": {
+            "column": 42,
+            "line": 669
+          }
+        },
+        "killedBy": [
+          "34"
+        ]
+      },
+      {
+        "id": "22",
+        "mutatorName": "BlockStatement",
+        "replacement": "{}",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 6,
+            "line": 674
+          },
+          "start": {
+            "column": 17,
+            "line": 670
+          }
+        },
+        "killedBy": [
+          "34"
+        ]
+      },
+      {
+        "id": "23",
+        "mutatorName": "ObjectLiteral",
+        "replacement": "{}",
+        "status": "Killed",
+        "location": {
+          "end": {
+            "column": 60,
+            "line": 671
+          },
+          "start": {
+            "column": 22,
+            "line": 671
+          }
+        },
+        "killedBy": [
+          "34"
+        ]
+      },
+      {
+        "id": "24",
+        "mutatorName": "StringLiteral",
+        "replacement": "\"\"",
+        "status": "Survived",
+        "location": {
+          "end": {
+            "column": 31,
+            "line": 672
+          },
+          "start": {
+            "column": 24,
+            "line": 672
+          }
+        }
+      }
+    ]
+  }
+}

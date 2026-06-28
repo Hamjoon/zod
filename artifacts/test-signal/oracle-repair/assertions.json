@@ -1,0 +1,45 @@
+{
+  "testFile": "packages/zod/src/v4/classic/tests/object.test.ts",
+  "relevantTestCount": 3,
+  "tests": [
+    {
+      "name": "extend() on object with refinements should allow adding non-overlapping properties",
+      "expectCount": 1,
+      "matchers": [
+        "not.toThrow"
+      ],
+      "expects": [
+        {
+          "target": "() => schema.extend({ b: z.string() })",
+          "matcher": "not.toThrow"
+        }
+      ]
+    },
+    {
+      "name": "extend() on object with refinements should still reject overlapping keys",
+      "expectCount": 1,
+      "matchers": [
+        "toThrow"
+      ],
+      "expects": [
+        {
+          "target": "() => schema.extend({ a: z.number() })",
+          "matcher": "toThrow"
+        }
+      ]
+    },
+    {
+      "name": "safeExtend() on object with refinements should not throw",
+      "expectCount": 1,
+      "matchers": [
+        "not.toThrow"
+      ],
+      "expects": [
+        {
+          "target": "() => schema.safeExtend({ b: z.string() })",
+          "matcher": "not.toThrow"
+        }
+      ]
+    }
+  ]
+}

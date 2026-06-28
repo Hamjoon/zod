@@ -1,0 +1,32 @@
+{
+  "testFile": "packages/zod/src/v4/classic/tests/object.test.ts",
+  "relevantTestCount": 2,
+  "tests": [
+    {
+      "name": "extend() on object with refinements should not throw when adding new keys",
+      "expectCount": 1,
+      "matchers": [
+        "not.toThrow"
+      ],
+      "expects": [
+        {
+          "target": "() => schema.extend({ b: z.string() })",
+          "matcher": "not.toThrow"
+        }
+      ]
+    },
+    {
+      "name": "safeExtend() on object with refinements should not throw",
+      "expectCount": 1,
+      "matchers": [
+        "not.toThrow"
+      ],
+      "expects": [
+        {
+          "target": "() => schema.safeExtend({ b: z.string() })",
+          "matcher": "not.toThrow"
+        }
+      ]
+    }
+  ]
+}
