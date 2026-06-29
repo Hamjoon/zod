@@ -42,9 +42,16 @@ Artifact:
 - Model: `openai/gpt-oss-120b`
 - Mode: single-shot prompt
 - Temperature: `0`
+- Runner: `scripts/run-gptoss-test-maintenance.py`
 - Prompt: `artifacts/gptoss-tuple-too-big-repair/gptoss-prompt.md`
 - Response: `artifacts/gptoss-tuple-too-big-repair/gptoss-response.md`
 - Usage: `artifacts/gptoss-tuple-too-big-repair/gptoss-usage.json`
+
+The OpenRouter call and prompt assembly use the same automation path as the
+previous zod object-extend experiment, with the case-specific file paths,
+snippet ranges, failure log, and extra signal-preservation constraint supplied
+as runner configuration. The old tuple-specific command remains as a small
+compatibility wrapper around the shared runner.
 
 The model repaired the two stale snapshots by adding `inclusive: true` and
 updating the message to `<=2 items`. The returned hunk header was not directly
