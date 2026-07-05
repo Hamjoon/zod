@@ -1,0 +1,82 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+(node:19966) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /private/tmp/zod-matrix-stale-object-extend
+
+ ❯ |zod| src/v4/classic/tests/object.test.ts (50 tests | 1 failed) 15ms
+   ✓ object type inference 0ms
+   ✓ unknown throw 1ms
+   ✓ shape() should return schema of particular key 0ms
+   ✓ correct parsing 0ms
+   ✓ nonstrict by default 0ms
+   ✓ parse optional keys  0ms
+   ✓ empty object 0ms
+   ✓ strip by default 0ms
+   ✓ unknownkeys override 0ms
+   ✓ passthrough unknown 0ms
+   ✓ strip unknown 0ms
+   ✓ strict 0ms
+   ✓ catchall inference 0ms
+   ✓ catchall overrides strict 0ms
+   ✓ catchall overrides strict 0ms
+   ✓ optional keys are unset 0ms
+   ✓ catchall parsing 0ms
+   ✓ nonexistent keys 0ms
+   ✓ test async union 0ms
+   ✓ test inferred merged type 0ms
+   ✓ inferred type with Record shape 0ms
+   ✓ inferred merged object type with optional properties 0ms
+   ✓ inferred unioned object type with optional properties 0ms
+   ✓ inferred enum type 0ms
+   ✓ z.keyof returns enum 0ms
+   ✓ inferred partial object type with optional properties 0ms
+   ✓ inferred picked object type with optional properties 0ms
+   ✓ inferred type for unknown/any keys 0ms
+   ✓ strictObject 0ms
+   ✓ object with refine 1ms
+   ✓ intersection of object with date 1ms
+   ✓ intersection of object with refine with date 0ms
+   ✓ constructor key 0ms
+   ✓ constructor key 0ms
+   ✓ catchall 0ms
+   ✓ unknownkeys merging 0ms
+   ✓ extend() should return schema with new key 0ms
+   ✓ extend() should have power to override existing key 0ms
+   ✓ safeExtend() should have power to override existing key 0ms
+   ✓ safeExtend() maintains refinements 0ms
+   ✓ passthrough index signature 0ms
+   ✓ assignability 0ms
+   ✓ null prototype 0ms
+   ✓ empty objects 0ms
+   ✓ preserve key order 3ms
+   ✓ empty shape 0ms
+   ✓ zodtype assignability 0ms
+   ✓ index signature in shape 0ms
+   × extent() on object with refinements should throw 1ms
+   ✓ safeExtend() on object with refinements should not throw 0ms
+ ✓ |zod|  TS  src/v4/classic/tests/object.test.ts (50 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |zod| src/v4/classic/tests/object.test.ts > extent() on object with refinements should throw
+AssertionError: expected [Function] to throw an error
+ ❯ src/v4/classic/tests/object.test.ts:612:50
+    610|     .refine(() => true);
+    611|
+    612|   expect(() => schema.extend({ b: z.string() })).toThrow();
+       |                                                  ^
+    613| });
+    614|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 99 passed (100)
+Type Errors  no errors
+   Start at  18:22:24
+   Duration  4.89s (transform 280ms, setup 17ms, collect 318ms, tests 15ms, environment 0ms, prepare 3ms, typecheck 4.41s)
