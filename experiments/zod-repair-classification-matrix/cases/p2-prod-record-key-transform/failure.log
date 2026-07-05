@@ -1,0 +1,108 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+(node:21497) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5891
+
+ ❯ |zod| src/v4/classic/tests/record.test.ts (24 tests | 2 failed) 20ms
+   ✓ type inference 2ms
+   ✓ enum exhaustiveness 4ms
+   ✓ typescript enum exhaustiveness 1ms
+   ✓ literal exhaustiveness 0ms
+   ✓ pipe exhaustiveness 1ms
+   ✓ union exhaustiveness 1ms
+   × applies transforms on the key schema (#5296) 2ms
+   × surfaces key schema refinement failures as invalid_key 2ms
+   ✓ string record parse - pass 0ms
+   ✓ key and value getters 0ms
+   ✓ is not vulnerable to prototype pollution 1ms
+   ✓ dont remove undefined values 0ms
+   ✓ allow undefined values 0ms
+   ✓ async parsing 0ms
+   ✓ async parsing 0ms
+   ✓ partial record 0ms
+   ✓ partialRecord with z.literal([key, ...]) 0ms
+   ✓ partialRecord with numeric literal keys 0ms
+   ✓ partialRecord with union of string and numeric literal keys 0ms
+   ✓ looseRecord passes through non-matching keys 1ms
+   ✓ intersection of loose records 1ms
+   ✓ object with looseRecord index signature 1ms
+   ✓ numeric string keys 1ms
+   ✓ v3-compat single-arg form: z.record(valueType) 1ms
+ ✓ |zod|  TS  src/v4/classic/tests/record.test.ts (24 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |zod| src/v4/classic/tests/record.test.ts > applies transforms on the key schema (#5296)
+AssertionError: expected { a: 'John' } to deeply equal { b: 'John' }
+
+- Expected
++ Received
+
+  {
+-   "b": "John",
++   "a": "John",
+  }
+
+ ❯ src/v4/classic/tests/record.test.ts:280:39
+    278|     z.string()
+    279|   );
+    280|   expect(single.parse({ a: "John" })).toEqual({ b: "John" });
+       |                                       ^
+    281|
+    282|   const multi = z.record(
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |zod| src/v4/classic/tests/record.test.ts > surfaces key schema refinement failures as invalid_key
+Error: Snapshot `surfaces key schema refinement failures as invalid_key 1` mismatched
+
+- Expected
++ Received
+
+  {
+-   "error": [ZodError: [
+-   {
+-     "code": "invalid_key",
+-     "origin": "record",
+-     "issues": [
+-       {
+-         "code": "custom",
+-         "path": [],
+-         "message": "only 'a' is allowed"
+-       }
+-     ],
+-     "path": [
+-       "b"
+-     ],
+-     "message": "Invalid key in record"
++   "data": {
++     "a": "ok",
++     "b": "nope",
+-   }
+- ]],
++   },
+-   "success": false,
++   "success": true,
+  }
+
+ ❯ src/v4/classic/tests/record.test.ts:312:52
+    310|   );
+    311|
+    312|   expect(schema.safeParse({ a: "ok", b: "nope" })).toMatchInlineSnapsh…
+       |                                                    ^
+    313|     {
+    314|       "error": [ZodError: [
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+  Snapshots  1 failed
+ Test Files  1 failed | 1 passed (2)
+      Tests  2 failed | 46 passed (48)
+Type Errors  no errors
+   Start at  18:27:27
+   Duration  1.94s (transform 249ms, setup 18ms, collect 283ms, tests 20ms, environment 0ms, prepare 3ms, typecheck 1.50s)
