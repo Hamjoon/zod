@@ -1,0 +1,92 @@
+diff --git a/packages/zod/src/v4/classic/tests/catch.test.ts b/packages/zod/src/v4/classic/tests/catch.test.ts
+index c79a0ee1..ad86f594 100644
+--- a/packages/zod/src/v4/classic/tests/catch.test.ts
++++ b/packages/zod/src/v4/classic/tests/catch.test.ts
+@@ -128,8 +128,8 @@ test("native enum", () => {
+     fruit: z.nativeEnum(Fruits).catch(Fruits.apple),
+   });
+
+-  expect(schema.safeParse({}).success).toEqual(false);
+-  expect(schema.safeParse({}, { jitless: true }).success).toEqual(false);
++  expect(schema.parse({})).toEqual({ fruit: Fruits.apple });
++  expect(schema.parse({}, { jitless: true })).toEqual({ fruit: Fruits.apple });
+   expect(schema.parse({ fruit: 15 })).toEqual({ fruit: Fruits.apple });
+ });
+
+@@ -138,12 +138,23 @@ test("enum", () => {
+     fruit: z.enum(["apple", "orange"]).catch("apple"),
+   });
+
+-  expect(schema.safeParse({}).success).toEqual(false);
+-  expect(schema.safeParse({}, { jitless: true }).success).toEqual(false);
++  expect(schema.parse({})).toEqual({ fruit: "apple" });
++  expect(schema.parse({}, { jitless: true })).toEqual({ fruit: "apple" });
+   expect(schema.parse({ fruit: true })).toEqual({ fruit: "apple" });
+   expect(schema.parse({ fruit: 15 })).toEqual({ fruit: "apple" });
+ });
+
++test("preprocess + catch on absent key (#5937)", () => {
++  const schema = z.object({
++    area: z.preprocess((v) => (v ? v.toString().split(",") : []), z.array(z.string())).catch([]),
++  });
++
++  expect(schema.parse({})).toEqual({ area: [] });
++  expect(schema.parse({}, { jitless: true })).toEqual({ area: [] });
++  expect(schema.parse({ area: "a,b,c" })).toEqual({ area: ["a", "b", "c"] });
++  expect(schema.parse({ area: 123 })).toEqual({ area: ["123"] });
++});
++
+ test("reported issues with nested usage", () => {
+   const schema = z.object({
+     string: z.string(),
+diff --git a/packages/zod/src/v4/classic/tests/partial.test.ts b/packages/zod/src/v4/classic/tests/partial.test.ts
+index 7b9edf78..828f2adf 100644
+--- a/packages/zod/src/v4/classic/tests/partial.test.ts
++++ b/packages/zod/src/v4/classic/tests/partial.test.ts
+@@ -156,30 +156,23 @@ test("catch/prefault/default", () => {
+     f: z.string().prefault("prefault value"),
+   });
+
+-  expect(mySchema.safeParse({}).error!.issues).toMatchInlineSnapshot(`
+-    [
+-      {
+-        "code": "invalid_type",
+-        "expected": "nonoptional",
+-        "message": "Invalid input: expected nonoptional, received undefined",
+-        "path": [
+-          "d",
+-        ],
+-      },
+-    ]
++  expect(mySchema.parse({})).toMatchInlineSnapshot(`
++    {
++      "b": "default value",
++      "c": "prefault value",
++      "d": "catch value",
++      "e": "default value",
++      "f": "prefault value",
++    }
+   `);
+-
+-  expect(mySchema.safeParse({}, { jitless: true }).error!.issues).toMatchInlineSnapshot(`
+-    [
+-      {
+-        "code": "invalid_type",
+-        "expected": "nonoptional",
+-        "message": "Invalid input: expected nonoptional, received undefined",
+-        "path": [
+-          "d",
+-        ],
+-      },
+-    ]
++  expect(mySchema.parse({}, { jitless: true })).toMatchInlineSnapshot(`
++    {
++      "b": "default value",
++      "c": "prefault value",
++      "d": "catch value",
++      "e": "default value",
++      "f": "prefault value",
++    }
+   `);
+
+   expect(mySchema.parse({ d: undefined })).toMatchInlineSnapshot(`

@@ -1,0 +1,37 @@
+diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts
+index 0845cf89..c3f9a9e7 100644
+--- a/packages/zod/src/v4/core/schemas.ts
++++ b/packages/zod/src/v4/core/schemas.ts
+@@ -2767,12 +2767,31 @@ function handleTupleResults(
+   // swallow at index k, every later index is also absent-or-corrupted,
+   // so we truncate the result there and stop processing — including
+   // skipping any later defaults.
++  //
++  // However, we must not swallow an absent-optional rejection if any
++  // later output slot is required (i.e. its `optout` is not `"optional"`).
++  // In that case the tuple's output type would become invalid if we
++  // truncated, so we surface the issue instead.
++
++  // Pre-compute for each index whether a required (non-optional-out) slot
++  // exists later in the tuple.
++  const laterRequiresOutput: boolean[] = new Array(items.length);
++  let anyRequiredLater = false;
++  for (let i = items.length - 1; i >= 0; i--) {
++    laterRequiresOutput[i] = anyRequiredLater;
++    if (items[i]._zod.optout !== "optional") {
++      anyRequiredLater = true;
++    }
++  }
++
+   for (let i = 0; i < items.length; i++) {
+     const r = itemResults[i];
+     const isOptionalOut = items[i]._zod.optout === "optional";
+     const isPresent = i < input.length;
+     if (r.issues.length) {
+-      if (isOptionalOut && !isPresent) {
++      // Swallow only when the slot is optional-out, absent, and there is
++      // no required output later in the tuple.
++      if (isOptionalOut && !isPresent && !laterRequiresOutput[i]) {
+         final.value.length = i;
+         break;
+       }
