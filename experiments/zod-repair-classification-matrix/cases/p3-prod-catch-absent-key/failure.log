@@ -1,0 +1,110 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.1.5 /private/tmp/zod-prod-candidate-5937
+
+(node:21749) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ ❯ |zod| src/v4/classic/tests/catch.test.ts (18 tests | 3 failed) 13ms
+   × native enum 2ms
+   × enum 0ms
+   × preprocess + catch on absent key (#5937) 1ms
+ ❯ |zod| src/v4/classic/tests/partial.test.ts (16 tests | 1 failed) 14ms
+   × catch/prefault/default 3ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |zod| src/v4/classic/tests/catch.test.ts > native enum
+ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "nonoptional",
+    "path": [
+      "fruit"
+    ],
+    "message": "Invalid input: expected nonoptional, received undefined"
+  }
+]
+ ❯ src/v4/classic/tests/catch.test.ts:131:17
+    129|   });
+    130|
+    131|   expect(schema.parse({})).toEqual({ fruit: Fruits.apple });
+       |                 ^
+    132|   expect(schema.parse({}, { jitless: true })).toEqual({ fruit: Fruits.…
+    133|   expect(schema.parse({ fruit: 15 })).toEqual({ fruit: Fruits.apple });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  |zod| src/v4/classic/tests/catch.test.ts > enum
+ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "nonoptional",
+    "path": [
+      "fruit"
+    ],
+    "message": "Invalid input: expected nonoptional, received undefined"
+  }
+]
+ ❯ src/v4/classic/tests/catch.test.ts:141:17
+    139|   });
+    140|
+    141|   expect(schema.parse({})).toEqual({ fruit: "apple" });
+       |                 ^
+    142|   expect(schema.parse({}, { jitless: true })).toEqual({ fruit: "apple"…
+    143|   expect(schema.parse({ fruit: true })).toEqual({ fruit: "apple" });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  |zod| src/v4/classic/tests/catch.test.ts > preprocess + catch on absent key (#5937)
+ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "nonoptional",
+    "path": [
+      "area"
+    ],
+    "message": "Invalid input: expected nonoptional, received undefined"
+  }
+]
+ ❯ src/v4/classic/tests/catch.test.ts:152:17
+    150|   });
+    151|
+    152|   expect(schema.parse({})).toEqual({ area: [] });
+       |                 ^
+    153|   expect(schema.parse({}, { jitless: true })).toEqual({ area: [] });
+    154|   expect(schema.parse({ area: "a,b,c" })).toEqual({ area: ["a", "b", "…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  |zod| src/v4/classic/tests/partial.test.ts > catch/prefault/default
+ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "nonoptional",
+    "path": [
+      "d"
+    ],
+    "message": "Invalid input: expected nonoptional, received undefined"
+  }
+]
+ ❯ src/v4/classic/tests/partial.test.ts:159:19
+    157|   });
+    158|
+    159|   expect(mySchema.parse({})).toMatchInlineSnapshot(`
+       |                   ^
+    160|     {
+    161|       "b": "default value",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  2 failed | 2 passed (4)
+      Tests  4 failed | 64 passed (68)
+Type Errors  no errors
+   Start at  18:28:24
+   Duration  1.52s (transform 498ms, setup 39ms, import 574ms, tests 27ms, environment 0ms, typecheck 1.06s)
