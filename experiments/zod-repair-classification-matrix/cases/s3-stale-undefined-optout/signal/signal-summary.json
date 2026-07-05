@@ -1,0 +1,30 @@
+{
+  "case": "s3-stale-undefined-optout",
+  "repo": "/private/tmp/zod-stale-candidate-undefined-optout",
+  "tests": [
+    "packages/zod/src/v4/classic/tests/optional.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/core/schemas.ts",
+  "mutate": "packages/zod/src/v4/core/schemas.ts:1359-1362",
+  "validation": {
+    "status": 1,
+    "signal": null
+  },
+  "coverage": {
+    "status": null,
+    "signal": null,
+    "summary": {
+      "available": false,
+      "productionFile": "packages/zod/src/v4/core/schemas.ts"
+    }
+  },
+  "mutation": {
+    "status": null,
+    "signal": null,
+    "summary": {
+      "available": false,
+      "productionFile": "packages/zod/src/v4/core/schemas.ts"
+    }
+  },
+  "verdict": "partial_repair"
+}

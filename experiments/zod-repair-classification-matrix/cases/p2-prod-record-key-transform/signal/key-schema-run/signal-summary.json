@@ -1,0 +1,101 @@
+{
+  "case": "p2-prod-record-key-transform-keyrun",
+  "repo": "/Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5891",
+  "tests": [
+    "packages/zod/src/v4/classic/tests/record.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/core/schemas.ts",
+  "mutate": "packages/zod/src/v4/core/schemas.ts:2791-2791",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/schemas.ts",
+      "fileKey": "/Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5891/packages/zod/src/v4/core/schemas.ts",
+      "metrics": {
+        "lines": {
+          "total": 1134,
+          "covered": 429,
+          "skipped": 0,
+          "pct": 37.83
+        },
+        "functions": {
+          "total": 270,
+          "covered": 72,
+          "skipped": 0,
+          "pct": 26.66
+        },
+        "statements": {
+          "total": 1269,
+          "covered": 459,
+          "skipped": 0,
+          "pct": 36.17
+        },
+        "branches": {
+          "total": 598,
+          "covered": 177,
+          "skipped": 0,
+          "pct": 29.59
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/schemas.ts",
+      "fileKey": "packages/zod/src/v4/core/schemas.ts",
+      "totals": {
+        "Killed": 2
+      },
+      "mutants": [
+        {
+          "id": "1",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[\"Stryker was here\"]",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 74,
+              "line": 2791
+            },
+            "start": {
+              "column": 72,
+              "line": 2791
+            }
+          },
+          "killedBy": [
+            "1"
+          ]
+        },
+        {
+          "id": "0",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 76,
+              "line": 2791
+            },
+            "start": {
+              "column": 50,
+              "line": 2791
+            }
+          },
+          "killedBy": [
+            "1"
+          ]
+        }
+      ]
+    }
+  },
+  "verdict": "signal_preserved"
+}

@@ -1,0 +1,15 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/catch.test.ts packages/zod/src/v4/classic/tests/partial.test.ts --config /private/tmp/zod-prod-candidate-5937/.openclaw-signal/p3-prod-catch-absent-key/vitest.signal.config.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter json --coverage.reporter json-summary --coverage.reportsDirectory /tmp/zod-week1-signal-results/p3-prod-catch-absent-key/coverage --coverage.include packages/zod/src/v4/core/schemas.ts
+status=0
+## stdout
+
+ RUN  v4.1.5 /private/tmp/zod-prod-candidate-5937
+      Coverage enabled with v8
+
+
+ Test Files  2 passed (2)
+      Tests  34 passed (34)
+   Start at  22:11:37
+   Duration  526ms (transform 501ms, setup 37ms, import 581ms, tests 32ms, environment 0ms)
+
+
+## stderr

@@ -1,0 +1,393 @@
+{
+  "case": "s1-stale-object-extend",
+  "repo": "/private/tmp/zod-matrix-stale-object-extend",
+  "tests": [
+    "packages/zod/src/v4/classic/tests/object.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/core/util.ts",
+  "mutate": "packages/zod/src/v4/core/util.ts:656-677",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/util.ts",
+      "fileKey": "/private/tmp/zod-matrix-stale-object-extend/packages/zod/src/v4/core/util.ts",
+      "metrics": {
+        "lines": {
+          "total": 313,
+          "covered": 130,
+          "skipped": 0,
+          "pct": 41.53
+        },
+        "functions": {
+          "total": 90,
+          "covered": 40,
+          "skipped": 0,
+          "pct": 44.44
+        },
+        "statements": {
+          "total": 350,
+          "covered": 138,
+          "skipped": 0,
+          "pct": 39.42
+        },
+        "branches": {
+          "total": 206,
+          "covered": 69,
+          "skipped": 0,
+          "pct": 33.49
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/util.ts",
+      "fileKey": "packages/zod/src/v4/core/util.ts",
+      "totals": {
+        "NoCoverage": 2,
+        "Survived": 9,
+        "Killed": 8
+      },
+      "mutants": [
+        {
+          "id": "13",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 665
+            },
+            "start": {
+              "column": 78,
+              "line": 663
+            }
+          }
+        },
+        {
+          "id": "14",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "location": {
+            "end": {
+              "column": 119,
+              "line": 664
+            },
+            "start": {
+              "column": 25,
+              "line": 664
+            }
+          }
+        },
+        {
+          "id": "1",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 657
+            },
+            "start": {
+              "column": 21,
+              "line": 657
+            }
+          }
+        },
+        {
+          "id": "2",
+          "mutatorName": "LogicalOperator",
+          "replacement": "checks || checks.length > 0",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 657
+            },
+            "start": {
+              "column": 21,
+              "line": 657
+            }
+          },
+          "killedBy": [
+            "34"
+          ]
+        },
+        {
+          "id": "3",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 657
+            },
+            "start": {
+              "column": 31,
+              "line": 657
+            }
+          }
+        },
+        {
+          "id": "0",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 657
+            },
+            "start": {
+              "column": 21,
+              "line": 657
+            }
+          },
+          "killedBy": [
+            "35"
+          ]
+        },
+        {
+          "id": "4",
+          "mutatorName": "EqualityOperator",
+          "replacement": "checks.length >= 0",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 657
+            },
+            "start": {
+              "column": 31,
+              "line": 657
+            }
+          }
+        },
+        {
+          "id": "5",
+          "mutatorName": "EqualityOperator",
+          "replacement": "checks.length <= 0",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 657
+            },
+            "start": {
+              "column": 31,
+              "line": 657
+            }
+          }
+        },
+        {
+          "id": "6",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 16,
+              "line": 658
+            },
+            "start": {
+              "column": 7,
+              "line": 658
+            }
+          },
+          "killedBy": [
+            "35"
+          ]
+        },
+        {
+          "id": "7",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 16,
+              "line": 658
+            },
+            "start": {
+              "column": 7,
+              "line": 658
+            }
+          }
+        },
+        {
+          "id": "8",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 667
+            },
+            "start": {
+              "column": 18,
+              "line": 658
+            }
+          }
+        },
+        {
+          "id": "9",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 666
+            },
+            "start": {
+              "column": 30,
+              "line": 662
+            }
+          }
+        },
+        {
+          "id": "10",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 76,
+              "line": 663
+            },
+            "start": {
+              "column": 11,
+              "line": 663
+            }
+          },
+          "killedBy": [
+            "46"
+          ]
+        },
+        {
+          "id": "11",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 76,
+              "line": 663
+            },
+            "start": {
+              "column": 11,
+              "line": 663
+            }
+          }
+        },
+        {
+          "id": "12",
+          "mutatorName": "EqualityOperator",
+          "replacement": "Object.getOwnPropertyDescriptor(existingShape, key) === undefined",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 76,
+              "line": 663
+            },
+            "start": {
+              "column": 11,
+              "line": 663
+            }
+          },
+          "killedBy": [
+            "46"
+          ]
+        },
+        {
+          "id": "15",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 675
+            },
+            "start": {
+              "column": 42,
+              "line": 669
+            }
+          },
+          "killedBy": [
+            "34"
+          ]
+        },
+        {
+          "id": "16",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 674
+            },
+            "start": {
+              "column": 17,
+              "line": 670
+            }
+          },
+          "killedBy": [
+            "34"
+          ]
+        },
+        {
+          "id": "17",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 60,
+              "line": 671
+            },
+            "start": {
+              "column": 22,
+              "line": 671
+            }
+          },
+          "killedBy": [
+            "34"
+          ]
+        },
+        {
+          "id": "18",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 31,
+              "line": 672
+            },
+            "start": {
+              "column": 24,
+              "line": 672
+            }
+          }
+        }
+      ]
+    }
+  },
+  "verdict": "signal_weakened"
+}

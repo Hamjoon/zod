@@ -1,0 +1,22 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/tuple.test.ts --reporter=dot
+status=0
+## stdout
+
+ RUN  v4.0.10 /Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5900
+
+····································
+
+ Test Files  2 passed (2)
+      Tests  36 passed (36)
+Type Errors  no errors
+   Start at  22:10:15
+   Duration  1.59s (transform 256ms, setup 18ms, collect 292ms, tests 15ms, environment 0ms, prepare 3ms, typecheck 1.15s)
+
+
+## stderr
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+(node:85586) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.

@@ -1,0 +1,56 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/optional.test.ts --reporter=dot
+status=1
+## stdout
+
+ RUN  v4.0.10 /private/tmp/zod-stale-candidate-undefined-optout
+
+··x··············x············
+
+ Test Files  2 failed (2)
+      Tests  2 failed | 28 passed (30)
+Type Errors  1 failed
+   Start at  22:10:02
+   Duration  1.60s (transform 250ms, setup 19ms, collect 284ms, tests 10ms, environment 0ms, prepare 3ms, typecheck 1.17s)
+
+
+## stderr
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+(node:85505) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |zod| src/v4/classic/tests/optional.test.ts > optionality
+AssertionError: expected undefined to deeply equal 'optional'
+
+- Expected: 
+"optional"
+
++ Received: 
+undefined
+
+ ❯ src/v4/classic/tests/optional.test.ts:53:25
+     51|   const g = z.union([z.string(), z.undefined()]);
+     52|   expect(g._zod.optin).toEqual("optional");
+     53|   expect(g._zod.optout).toEqual("optional");
+       |                         ^
+     54|   expectTypeOf<typeof g._zod.optin>().toEqualTypeOf<"optional" | undef…
+     55|   expectTypeOf<typeof g._zod.optout>().toEqualTypeOf<"optional" | unde…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |zod| src/v4/classic/tests/optional.test.ts > optionality
+TypeCheckError: Type 'undefined' does not satisfy the constraint '"Expected undefined, Actual literal string optional"'.
+ ❯ src/v4/classic/tests/optional.test.ts:48:54
+     46|   expectTypeOf<typeof f._zod.optin>().toEqualTypeOf<"optional" | undef…
+     47|   // Since optout is now undefined, its type should reflect that.
+     48|   expectTypeOf<typeof f._zod.optout>().toEqualTypeOf<undefined>();
+       |                                                      ^
+     49| 
+     50|   // z.union should be optional if any of the types are optional
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+

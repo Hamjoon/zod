@@ -1,0 +1,16 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/tuple.test.ts --config /private/tmp/zod-matrix-stale-tuple-too-big/.openclaw-signal/s2-stale-tuple-too-big/vitest.signal.config.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter json --coverage.reporter json-summary --coverage.reportsDirectory /tmp/zod-week1-signal-results/s2-stale-tuple-too-big/coverage --coverage.include packages/zod/src/v4/core/schemas.ts
+status=0
+## stdout
+
+ RUN  v4.0.10 /private/tmp/zod-matrix-stale-tuple-too-big
+      Coverage enabled with v8
+
+ ✓ packages/zod/src/v4/classic/tests/tuple.test.ts (7 tests) 10ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  22:09:48
+   Duration  564ms (transform 294ms, setup 16ms, collect 356ms, tests 10ms, environment 0ms, prepare 8ms)
+
+
+## stderr

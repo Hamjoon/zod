@@ -1,0 +1,16 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/object.test.ts --config /private/tmp/zod-matrix-stale-object-extend/.openclaw-signal/s1-stale-object-extend/vitest.signal.config.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter json --coverage.reporter json-summary --coverage.reportsDirectory /tmp/zod-week1-signal-results/s1-stale-object-extend/coverage --coverage.include packages/zod/src/v4/core/util.ts
+status=0
+## stdout
+
+ RUN  v4.0.10 /private/tmp/zod-matrix-stale-object-extend
+      Coverage enabled with v8
+
+ ✓ packages/zod/src/v4/classic/tests/object.test.ts (50 tests) 17ms
+
+ Test Files  1 passed (1)
+      Tests  50 passed (50)
+   Start at  22:09:31
+   Duration  466ms (transform 238ms, setup 17ms, collect 280ms, tests 17ms, environment 0ms, prepare 9ms)
+
+
+## stderr

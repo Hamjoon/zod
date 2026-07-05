@@ -1,0 +1,48 @@
+$ pnpm stryker run /Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5891/.openclaw-signal/p2-prod-record-key-transform-keyrun/stryker.signal.config.mjs
+status=0
+## stdout
+[32m22:12:07 (86663) INFO ProjectReader[39m Found 1 of 598 file(s) to be mutated.
+[32m22:12:07 (86663) INFO ProjectReader[39m Found 1 test file(s) matching --testFiles patterns.
+[32m22:12:07 (86663) INFO Instrumenter[39m Instrumented 1 source file(s) with 2 mutant(s)
+[32m22:12:07 (86663) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m22:12:08 (86663) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m22:12:09 (86663) INFO DryRunExecutor[39m Initial test run succeeded. Ran 24 tests in 0 seconds (net 20.413163999999938 ms, overhead 428.58683600000006 ms).
+
+All tests/record.test.ts
+  ✘ type inference (covered 0)
+  ✓ enum exhaustiveness (killed 2)
+  ~ typescript enum exhaustiveness (covered 2)
+  ~ literal exhaustiveness (covered 2)
+  ~ pipe exhaustiveness (covered 2)
+  ~ union exhaustiveness (covered 2)
+  ~ applies transforms on the key schema (#5296) (covered 2)
+  ~ surfaces key schema refinement failures as invalid_key (covered 2)
+  ✘ string record parse - pass (covered 0)
+  ✘ key and value getters (covered 0)
+  ✘ is not vulnerable to prototype pollution (covered 0)
+  ✘ dont remove undefined values (covered 0)
+  ✘ allow undefined values (covered 0)
+  ✘ async parsing (covered 0)
+  ✘ partial record (covered 0)
+  ✘ partialRecord with z.literal([key, ...]) (covered 0)
+  ✘ partialRecord with numeric literal keys (covered 0)
+  ✘ partialRecord with union of string and numeric literal keys (covered 0)
+  ✘ looseRecord passes through non-matching keys (covered 0)
+  ✘ intersection of loose records (covered 0)
+  ✘ object with looseRecord index signature (covered 0)
+  ✘ numeric string keys (covered 0)
+  ✘ v3-compat single-arg form: z.record(valueType) (covered 0)
+
+Ran 1.00 tests per mutant on average.
+------------|------------------|----------|-----------|------------|----------|----------|
+            | % Mutation score |          |           |            |          |          |
+File        |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+All files   | 100.00 |  100.00 |        2 |         0 |          0 |        0 |        0 |
+ schemas.ts | 100.00 |  100.00 |        2 |         0 |          0 |        0 |        0 |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+[32m22:12:09 (86663) INFO MutationTestReportHelper[39m Final mutation score of 100.00 is greater than or equal to break threshold 0
+[32m22:12:09 (86663) INFO JsonReporter[39m Your report can be found at: file:///tmp/zod-week1-signal-results/p2-prod-record-key-transform-keyrun/stryker/mutation.json
+[32m22:12:09 (86663) INFO MutationTestExecutor[39m Done in 2 seconds.
+
+## stderr

@@ -1,0 +1,32 @@
+$ pnpm stryker run /private/tmp/zod-matrix-stale-tuple-too-big/.openclaw-signal/s2-stale-tuple-too-big/stryker.signal.config.mjs
+status=0
+## stdout
+[32m22:09:50 (85362) INFO ProjectReader[39m Found 1 of 566 file(s) to be mutated.
+[32m22:09:50 (85362) INFO ProjectReader[39m Found 1 test file(s) matching --testFiles patterns.
+[32m22:09:50 (85362) INFO Instrumenter[39m Instrumented 1 source file(s) with 3 mutant(s)
+[32m22:09:51 (85362) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m22:09:51 (85362) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m22:09:52 (85362) INFO DryRunExecutor[39m Initial test run succeeded. Ran 7 tests in 0 seconds (net 8.421206000000097 ms, overhead 348.5787939999999 ms).
+
+All tests/tuple.test.ts
+  ✓ successful validation (killed 3)
+  ~ async validation (covered 3)
+  ✘ tuple with optional elements (covered 0)
+  ✘ tuple with optional elements followed by required (covered 0)
+  ~ tuple with all optional elements (covered 3)
+  ✘ tuple with rest schema (covered 0)
+  ✘ sparse array input (covered 0)
+
+Ran 1.00 tests per mutant on average.
+------------|------------------|----------|-----------|------------|----------|----------|
+            | % Mutation score |          |           |            |          |          |
+File        |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+All files   | 100.00 |  100.00 |        3 |         0 |          0 |        0 |        0 |
+ schemas.ts | 100.00 |  100.00 |        3 |         0 |          0 |        0 |        0 |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+[32m22:09:52 (85362) INFO MutationTestReportHelper[39m Final mutation score of 100.00 is greater than or equal to break threshold 0
+[32m22:09:52 (85362) INFO JsonReporter[39m Your report can be found at: file:///tmp/zod-week1-signal-results/s2-stale-tuple-too-big/stryker/mutation.json
+[32m22:09:52 (85362) INFO MutationTestExecutor[39m Done in 1 second.
+
+## stderr

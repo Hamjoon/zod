@@ -1,0 +1,175 @@
+$ pnpm stryker run /private/tmp/zod-matrix-stale-object-extend/.openclaw-signal/s1-stale-object-extend/stryker.signal.config.mjs
+status=0
+## stdout
+[32m22:09:32 (85148) INFO ProjectReader[39m Found 1 of 573 file(s) to be mutated.
+[32m22:09:32 (85148) INFO ProjectReader[39m Found 1 test file(s) matching --testFiles patterns.
+[32m22:09:32 (85148) INFO Instrumenter[39m Instrumented 1 source file(s) with 19 mutant(s)
+[32m22:09:33 (85148) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m22:09:33 (85148) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m22:09:34 (85148) INFO DryRunExecutor[39m Initial test run succeeded. Ran 50 tests in 0 seconds (net 14.066915999999878 ms, overhead 357.9330840000001 ms).
+
+All tests/object.test.ts
+  ✘ object type inference (covered 0)
+  ✘ unknown throw (covered 0)
+  ✘ shape() should return schema of particular key (covered 0)
+  ✘ correct parsing (covered 0)
+  ✘ nonstrict by default (covered 0)
+  ✘ parse optional keys (covered 0)
+  ✘ empty object (covered 0)
+  ✘ strip by default (covered 0)
+  ✘ unknownkeys override (covered 0)
+  ✘ passthrough unknown (covered 0)
+  ✘ strip unknown (covered 0)
+  ✘ strict (covered 0)
+  ✘ catchall inference (covered 0)
+  ✘ catchall overrides strict (covered 0)
+  ✘ optional keys are unset (covered 0)
+  ✘ catchall parsing (covered 0)
+  ✘ nonexistent keys (covered 0)
+  ✘ test async union (covered 0)
+  ✘ test inferred merged type (covered 0)
+  ✘ inferred type with Record shape (covered 0)
+  ✘ inferred merged object type with optional properties (covered 0)
+  ✘ inferred unioned object type with optional properties (covered 0)
+  ✘ inferred enum type (covered 0)
+  ✘ z.keyof returns enum (covered 0)
+  ✘ inferred partial object type with optional properties (covered 0)
+  ✘ inferred picked object type with optional properties (covered 0)
+  ✘ inferred type for unknown/any keys (covered 0)
+  ✘ strictObject (covered 0)
+  ✘ object with refine (covered 0)
+  ✘ intersection of object with date (covered 0)
+  ✘ intersection of object with refine with date (covered 0)
+  ✘ constructor key (covered 0)
+  ✘ catchall (covered 0)
+  ✘ unknownkeys merging (covered 0)
+  ✓ extend() should return schema with new key (killed 4)
+  ✓ extend() should have power to override existing key (killed 2)
+  ✘ safeExtend() should have power to override existing key (covered 0)
+  ✘ safeExtend() maintains refinements (covered 0)
+  ✘ passthrough index signature (covered 0)
+  ✘ assignability (covered 0)
+  ✘ null prototype (covered 0)
+  ✘ empty objects (covered 0)
+  ✘ preserve key order (covered 0)
+  ✘ empty shape (covered 0)
+  ✘ zodtype assignability (covered 0)
+  ✘ index signature in shape (covered 0)
+  ✓ extend() on object with refinements should not throw when adding new keys (killed 2)
+  ✘ safeExtend() on object with refinements should not throw (covered 0)
+
+[NoCoverage] BlockStatement
+packages/zod/src/v4/core/util.ts:663:78
+-         if (Object.getOwnPropertyDescriptor(existingShape, key) !== undefined) {
+-           throw new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
+-         }
++         if (Object.getOwnPropertyDescriptor(existingShape, key) !== undefined) {}
+
+[NoCoverage] StringLiteral
+packages/zod/src/v4/core/util.ts:664:25
+-           throw new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
++           throw new Error("");
+
+[Survived] ConditionalExpression
+packages/zod/src/v4/core/util.ts:657:21
+-     const hasChecks = checks && checks.length > 0;
++     const hasChecks = false;
+Tests ran:
+    extend() should return schema with new key
+    extend() should have power to override existing key
+    extend() on object with refinements should not throw when adding new keys
+
+
+[Survived] ConditionalExpression
+packages/zod/src/v4/core/util.ts:657:31
+-     const hasChecks = checks && checks.length > 0;
++     const hasChecks = checks && true;
+Tests ran:
+    extend() on object with refinements should not throw when adding new keys
+
+
+[Survived] EqualityOperator
+packages/zod/src/v4/core/util.ts:657:31
+-     const hasChecks = checks && checks.length > 0;
++     const hasChecks = checks && checks.length >= 0;
+Tests ran:
+    extend() on object with refinements should not throw when adding new keys
+
+
+[Survived] EqualityOperator
+packages/zod/src/v4/core/util.ts:657:31
+-     const hasChecks = checks && checks.length > 0;
++     const hasChecks = checks && checks.length <= 0;
+Tests ran:
+    extend() on object with refinements should not throw when adding new keys
+
+
+[Survived] ConditionalExpression
+packages/zod/src/v4/core/util.ts:658:7
+-     if (hasChecks) {
++     if (false) {
+Tests ran:
+    extend() should return schema with new key
+    extend() should have power to override existing key
+    extend() on object with refinements should not throw when adding new keys
+
+
+[Survived] BlockStatement
+packages/zod/src/v4/core/util.ts:658:18
+-     if (hasChecks) {
+-       // Only throw if new shape overlaps with existing shape
+-       // Use getOwnPropertyDescriptor to check key existence without accessing values
+-       const existingShape = schema._zod.def.shape;
+-       for (const key in shape) {
+-         if (Object.getOwnPropertyDescriptor(existingShape, key) !== undefined) {
+-           throw new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
+-         }
+-       }
+-     }
++     if (hasChecks) {}
+Tests ran:
+    extend() on object with refinements should not throw when adding new keys
+
+
+[Survived] BlockStatement
+packages/zod/src/v4/core/util.ts:662:30
+-       for (const key in shape) {
+-         if (Object.getOwnPropertyDescriptor(existingShape, key) !== undefined) {
+-           throw new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
+-         }
+-       }
++       for (const key in shape) {}
+Tests ran:
+    extend() on object with refinements should not throw when adding new keys
+
+
+[Survived] ConditionalExpression
+packages/zod/src/v4/core/util.ts:663:11
+-         if (Object.getOwnPropertyDescriptor(existingShape, key) !== undefined) {
++         if (false) {
+Tests ran:
+    extend() on object with refinements should not throw when adding new keys
+
+
+[Survived] StringLiteral
+packages/zod/src/v4/core/util.ts:672:24
+-         assignProp(this, "shape", _shape); // self-caching
++         assignProp(this, "", _shape); // self-caching
+Tests ran:
+    extend() should return schema with new key
+    extend() should have power to override existing key
+
+
+Ran 1.26 tests per mutant on average.
+----------|------------------|----------|-----------|------------|----------|----------|
+          | % Mutation score |          |           |            |          |          |
+File      |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+----------|--------|---------|----------|-----------|------------|----------|----------|
+All files |  42.11 |   47.06 |        8 |         0 |          9 |        2 |        0 |
+ util.ts  |  42.11 |   47.06 |        8 |         0 |          9 |        2 |        0 |
+----------|--------|---------|----------|-----------|------------|----------|----------|
+[32m22:09:35 (85148) INFO MutationTestReportHelper[39m Final mutation score of 42.11 is greater than or equal to break threshold 0
+[32m22:09:35 (85148) INFO JsonReporter[39m Your report can be found at: file:///tmp/zod-week1-signal-results/s1-stale-object-extend/stryker/mutation.json
+[32m22:09:35 (85148) INFO MutationTestExecutor[39m Done in 2 seconds.
+
+## stderr

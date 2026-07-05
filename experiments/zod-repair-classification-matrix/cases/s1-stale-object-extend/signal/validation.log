@@ -1,0 +1,22 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/object.test.ts --reporter=dot
+status=0
+## stdout
+
+ RUN  v4.0.10 /private/tmp/zod-matrix-stale-object-extend
+
+····································································································
+
+ Test Files  2 passed (2)
+      Tests  100 passed (100)
+Type Errors  no errors
+   Start at  22:09:29
+   Duration  1.12s (transform 234ms, setup 16ms, collect 272ms, tests 15ms, environment 0ms, prepare 2ms, typecheck 706ms)
+
+
+## stderr
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+(node:85097) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.

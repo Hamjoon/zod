@@ -1,0 +1,120 @@
+{
+  "case": "s2-stale-tuple-too-big",
+  "repo": "/private/tmp/zod-matrix-stale-tuple-too-big",
+  "tests": [
+    "packages/zod/src/v4/classic/tests/tuple.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/core/schemas.ts",
+  "mutate": "packages/zod/src/v4/core/schemas.ts:2537-2537",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/schemas.ts",
+      "fileKey": "/private/tmp/zod-matrix-stale-tuple-too-big/packages/zod/src/v4/core/schemas.ts",
+      "metrics": {
+        "lines": {
+          "total": 1084,
+          "covered": 194,
+          "skipped": 0,
+          "pct": 17.89
+        },
+        "functions": {
+          "total": 263,
+          "covered": 26,
+          "skipped": 0,
+          "pct": 9.88
+        },
+        "statements": {
+          "total": 1210,
+          "covered": 206,
+          "skipped": 0,
+          "pct": 17.02
+        },
+        "branches": {
+          "total": 551,
+          "covered": 76,
+          "skipped": 0,
+          "pct": 13.79
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/schemas.ts",
+      "fileKey": "packages/zod/src/v4/core/schemas.ts",
+      "totals": {
+        "Killed": 3
+      },
+      "mutants": [
+        {
+          "id": "1",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 32,
+              "line": 2537
+            },
+            "start": {
+              "column": 23,
+              "line": 2537
+            }
+          },
+          "killedBy": [
+            "0"
+          ]
+        },
+        {
+          "id": "2",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "false",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 72,
+              "line": 2537
+            },
+            "start": {
+              "column": 68,
+              "line": 2537
+            }
+          },
+          "killedBy": [
+            "0"
+          ]
+        },
+        {
+          "id": "0",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 74,
+              "line": 2537
+            },
+            "start": {
+              "column": 15,
+              "line": 2537
+            }
+          },
+          "killedBy": [
+            "0"
+          ]
+        }
+      ]
+    }
+  },
+  "verdict": "signal_preserved"
+}

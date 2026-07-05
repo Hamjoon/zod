@@ -1,0 +1,101 @@
+{
+  "case": "p1-prod-tuple-holes",
+  "repo": "/Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5900",
+  "tests": [
+    "packages/zod/src/v4/classic/tests/tuple.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/core/schemas.ts",
+  "mutate": "packages/zod/src/v4/core/schemas.ts:2680-2681",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/schemas.ts",
+      "fileKey": "/Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5900/packages/zod/src/v4/core/schemas.ts",
+      "metrics": {
+        "lines": {
+          "total": 1161,
+          "covered": 314,
+          "skipped": 0,
+          "pct": 27.04
+        },
+        "functions": {
+          "total": 271,
+          "covered": 60,
+          "skipped": 0,
+          "pct": 22.14
+        },
+        "statements": {
+          "total": 1297,
+          "covered": 340,
+          "skipped": 0,
+          "pct": 26.21
+        },
+        "branches": {
+          "total": 617,
+          "covered": 115,
+          "skipped": 0,
+          "pct": 18.63
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/schemas.ts",
+      "fileKey": "packages/zod/src/v4/core/schemas.ts",
+      "totals": {
+        "Killed": 2
+      },
+      "mutants": [
+        {
+          "id": "1",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 57,
+              "line": 2681
+            },
+            "start": {
+              "column": 49,
+              "line": 2681
+            }
+          },
+          "killedBy": [
+            "9"
+          ]
+        },
+        {
+          "id": "0",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 55,
+              "line": 2680
+            },
+            "start": {
+              "column": 48,
+              "line": 2680
+            }
+          },
+          "killedBy": [
+            "4"
+          ]
+        }
+      ]
+    }
+  },
+  "verdict": "signal_preserved"
+}

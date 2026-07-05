@@ -1,0 +1,43 @@
+$ pnpm stryker run /Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5900/.openclaw-signal/p1-prod-tuple-holes/stryker.signal.config.mjs
+status=0
+## stdout
+[32m22:10:19 (85639) INFO ProjectReader[39m Found 1 of 597 file(s) to be mutated.
+[32m22:10:19 (85639) INFO ProjectReader[39m Found 1 test file(s) matching --testFiles patterns.
+[32m22:10:19 (85639) INFO Instrumenter[39m Instrumented 1 source file(s) with 2 mutant(s)
+[32m22:10:20 (85639) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m22:10:20 (85639) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m22:10:21 (85639) INFO DryRunExecutor[39m Initial test run succeeded. Ran 18 tests in 0 seconds (net 15.210538999999926 ms, overhead 364.7894610000001 ms).
+
+All tests/tuple.test.ts
+  ~ successful validation (covered 2)
+  ~ async validation (covered 2)
+  ~ tuple with optional elements (covered 2)
+  ~ tuple with optional elements followed by required (covered 2)
+  ✓ tuple with all optional elements (killed 1)
+  ~ tuple fills defaults for missing trailing elements (covered 2)
+  ~ tuple fills defaults under async parse (covered 2)
+  ~ tuple keeps length-1 array for missing `.optional()` elements (covered 2)
+  ~ tuple result is dense when optional precedes a default (covered 2)
+  ✓ tuple truncates absent optional rejections only when the output tail is optional (killed 1)
+  ~ tuple rejects absent optional before required output under async parse (covered 2)
+  ~ tuple rejects absent exact optional before defaulted output (covered 2)
+  ~ tuple preserves explicit undefined inside input even for optional-out schemas (covered 2)
+  ~ tuple does NOT break when a required slot fails past input length (covered 2)
+  ~ tuple with rest schema (covered 2)
+  ~ sparse array input (covered 2)
+  ~ under-length tuple emits a single too_small with optStart minimum (covered 2)
+  ~ too_big tuple still surfaces element-wise type errors for present indices (covered 2)
+
+Ran 7.50 tests per mutant on average.
+------------|------------------|----------|-----------|------------|----------|----------|
+            | % Mutation score |          |           |            |          |          |
+File        |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+All files   | 100.00 |  100.00 |        2 |         0 |          0 |        0 |        0 |
+ schemas.ts | 100.00 |  100.00 |        2 |         0 |          0 |        0 |        0 |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+[32m22:10:21 (85639) INFO MutationTestReportHelper[39m Final mutation score of 100.00 is greater than or equal to break threshold 0
+[32m22:10:21 (85639) INFO JsonReporter[39m Your report can be found at: file:///tmp/zod-week1-signal-results/p1-prod-tuple-holes/stryker/mutation.json
+[32m22:10:21 (85639) INFO MutationTestExecutor[39m Done in 2 seconds.
+
+## stderr
