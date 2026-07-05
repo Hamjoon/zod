@@ -1,0 +1,84 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+(node:20233) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /private/tmp/zod-matrix-stale-tuple-too-big
+
+ ❯ |zod| src/v4/classic/tests/tuple.test.ts (7 tests | 2 failed) 10ms
+   × successful validation 6ms
+   × async validation 1ms
+   ✓ tuple with optional elements 1ms
+   ✓ tuple with optional elements followed by required 0ms
+   ✓ tuple with all optional elements 0ms
+   ✓ tuple with rest schema 0ms
+   ✓ sparse array input 0ms
+ ✓ |zod|  TS  src/v4/classic/tests/tuple.test.ts (7 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |zod| src/v4/classic/tests/tuple.test.ts > successful validation
+Error: Snapshot `successful validation 2` mismatched
+
+- Expected
++ Received
+
+  [ZodError: [
+    {
+      "code": "too_big",
+      "maximum": 2,
++     "inclusive": true,
+      "origin": "array",
+      "path": [],
+-     "message": "Too big: expected array to have <2 items"
++     "message": "Too big: expected array to have <=2 items"
+    }
+  ]]
+
+ ❯ src/v4/classic/tests/tuple.test.ts:28:21
+     26|   const r2 = testTuple.safeParse(["asdf", 1234, true]);
+     27|   expect(r2.success).toEqual(false);
+     28|   expect(r2.error!).toMatchInlineSnapshot(`
+       |                     ^
+     29|     [ZodError: [
+     30|       {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |zod| src/v4/classic/tests/tuple.test.ts > async validation
+Error: Snapshot `async validation 2` mismatched
+
+- Expected
++ Received
+
+  [ZodError: [
+    {
+      "code": "too_big",
+      "maximum": 2,
++     "inclusive": true,
+      "origin": "array",
+      "path": [],
+-     "message": "Too big: expected array to have <2 items"
++     "message": "Too big: expected array to have <=2 items"
+    }
+  ]]
+
+ ❯ src/v4/classic/tests/tuple.test.ts:80:21
+     78|   const r2 = await testTuple.safeParseAsync(["asdf", 1234, true]);
+     79|   expect(r2.success).toEqual(false);
+     80|   expect(r2.error!).toMatchInlineSnapshot(`
+       |                     ^
+     81|     [ZodError: [
+     82|       {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+  Snapshots  2 failed
+ Test Files  1 failed | 1 passed (2)
+      Tests  2 failed | 12 passed (14)
+Type Errors  no errors
+   Start at  18:23:16
+   Duration  4.32s (transform 224ms, setup 17ms, collect 256ms, tests 10ms, environment 0ms, prepare 3ms, typecheck 3.90s)
