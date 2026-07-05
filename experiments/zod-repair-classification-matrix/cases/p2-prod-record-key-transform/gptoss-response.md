@@ -1,0 +1,170 @@
+```diff
+diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts
+index 7c9f3a2..e5b1d4f 100644
+--- a/packages/zod/src/v4/core/schemas.ts
++++ b/packages/zod/src/v4/core/schemas.ts
+@@
+-    const values = def.keyType._zod.values;
+-    if (values) {
+-      payload.value = {};
+-      const recordKeys = new Set<string | symbol>();
+-      for (const key of values) {
+-        if (typeof key === "string" || typeof key === "number" || typeof key === "symbol") {
+-          recordKeys.add(typeof key === "number" ? key.toString() : key);
+-          const result = def.valueType._zod.run({ value: input[key], issues: [] }, ctx);
+-
+-          if (result instanceof Promise) {
+-            proms.push(
+-              result.then((result) => {
+-                if (result.issues.length) {
+-                  payload.issues.push(...util.prefixIssues(key, result.issues));
+-                }
+-                payload.value[key] = result.value;
+-              })
+-            );
+-          } else {
+-            if (result.issues.length) {
+-              payload.issues.push(...util.prefixIssues(key, result.issues));
+-            }
+-            payload.value[key] = result.value;
+-          }
+-        }
+-      }
+-
+-      let unrecognized!: string[];
+-      for (const key in input) {
+-        if (!recordKeys.has(key)) {
+-          unrecognized = unrecognized ?? [];
+-          unrecognized.push(key);
+-        }
+-      }
+-      if (unrecognized && unrecognized.length > 0) {
+-        payload.issues.push({
+-          code: "unrecognized_keys",
+-
+-          input,
+-          inst,
+-          keys: unrecognized,
+-        });
+-
+-        // we still want to parse the unrecognized keys
+-        for (const key of unrecognized) {
+-          const result = def.valueType._zod.run({ value: input[key], issues: [] }, ctx);
+-          if (result instanceof Promise) {
+-            proms.push(
+-              result.then((result) => {
+-                if (result.issues.length) {
+-                  payload.issues.push(...util.prefixIssues(key, result.issues));
+-                }
+-                payload.value[key] = result.value;
+-              })
+-            );
+-          } else {
+-            if (result.issues.length) {
+-              payload.issues.push(...util.prefixIssues(key, result.issues));
+-            }
+-            payload.value[key] = result.value;
+-          }
+-        }
+-      }
+-    }
++    const values = def.keyType._zod.values;
++    if (values) {
++      payload.value = {};
++      const recordKeys = new Set<string | symbol>();
++
++      // First, process known keys (required‑key semantics) while applying
++      // key‑schema transforms and surface refinement failures as `invalid_key`.
++      for (const key of values) {
++        if (typeof key !== "string" && typeof key !== "number" && typeof key !== "symbol") continue;
++
++        // keep original key for unrecognized‑key detection
++        recordKeys.add(typeof key === "number" ? key.toString() : key);
++
++        // Run the key schema (including transforms / refinements)
++        const keyResult = def.keyType._zod.run({ value: key, issues: [] }, ctx);
++
++        const handleKeySuccess = (transformedKey: any) => {
++          // Parse the corresponding value (using the original input key)
++          const valueResult = def.valueType._zod.run({ value: input[key], issues: [] }, ctx);
++
++          const storeValue = (vr: any) => {
++            if (vr.issues.length) {
++              payload.issues.push(...util.prefixIssues(key, vr.issues));
++            }
++            // Use the transformed key in the output record
++            payload.value[transformedKey] = vr.value;
++          };
++
++          if (valueResult instanceof Promise) {
++            proms.push(valueResult.then(storeValue));
++          } else {
++            storeValue(valueResult);
++          }
++        };
++
++        if (keyResult instanceof Promise) {
++          proms.push(
++            keyResult.then((kr) => {
++              if (kr.issues.length) {
++                payload.issues.push({
++                  code: "invalid_key",
++                  origin: "record",
++                  path: [key],
++                  issues: kr.issues,
++                  message: "Invalid key in record",
++                });
++                return;
++              }
++              handleKeySuccess(kr.value);
++            })
++          );
++        } else {
++          if (keyResult.issues.length) {
++            payload.issues.push({
++              code: "invalid_key",
++              origin: "record",
++              path: [key],
++              issues: keyResult.issues,
++              message: "Invalid key in record",
++            });
++            continue;
++          }
++          handleKeySuccess(keyResult.value);
++        }
++      }
++
++      // Detect and parse unrecognized keys (keys not in the known set)
++      let unrecognized!: string[];
++      for (const key in input) {
++        if (!recordKeys.has(key)) {
++          unrecognized = unrecognized ?? [];
++          unrecognized.push(key);
++        }
++      }
++      if (unrecognized && unrecognized.length > 0) {
++        payload.issues.push({
++          code: "unrecognized_keys",
++          input,
++          inst,
++          keys: unrecognized,
++        });
++
++        // Still parse the unrecognized keys using the value schema
++        for (const key of unrecognized) {
++          const result = def.valueType._zod.run({ value: input[key], issues: [] }, ctx);
++          const store = (vr: any) => {
++            if (vr.issues.length) {
++              payload.issues.push(...util.prefixIssues(key, vr.issues));
++            }
++            payload.value[key] = vr.value;
++          };
++          if (result instanceof Promise) {
++            proms.push(result.then(store));
++          } else {
++            store(result);
++          }
++        }
++      }
++    }
+```
