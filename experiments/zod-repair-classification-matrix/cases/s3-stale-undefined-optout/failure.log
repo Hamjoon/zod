@@ -1,0 +1,54 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+(node:20482) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /private/tmp/zod-stale-candidate-undefined-optout
+
+ ❯ |zod| src/v4/classic/tests/optional.test.ts (15 tests | 1 failed) 9ms
+   ✓ .optional() 2ms
+   ✓ unwrap 0ms
+   × optionality 3ms
+   ✓ pipe optionality 1ms
+   ✓ pipe optionality inside objects 1ms
+   ✓ optional prop with pipe 1ms
+   ✓ .exactOptional() 0ms
+   ✓ exactOptional unwrap 0ms
+   ✓ exactOptional optionality 0ms
+   ✓ exactOptional in objects - absent keys 0ms
+   ✓ exactOptional in objects - explicit undefined rejected 0ms
+   ✓ exactOptional type inference in objects 0ms
+   ✓ exactOptional vs optional comparison 0ms
+   ✓ object key optionality through optout propagation 0ms
+   ✓ tuple tail optionality through optout propagation 0ms
+ ✓ |zod|  TS  src/v4/classic/tests/optional.test.ts (15 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |zod| src/v4/classic/tests/optional.test.ts > optionality
+AssertionError: expected undefined to deeply equal 'optional'
+
+- Expected:
+"optional"
+
++ Received:
+undefined
+
+ ❯ src/v4/classic/tests/optional.test.ts:44:25
+     42|   const f = z.undefined();
+     43|   expect(f._zod.optin).toEqual("optional");
+     44|   expect(f._zod.optout).toEqual("optional");
+       |                         ^
+     45|   expectTypeOf<typeof f._zod.optin>().toEqualTypeOf<"optional" | undef…
+     46|   expectTypeOf<typeof f._zod.optout>().toEqualTypeOf<"optional" | unde…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 29 passed (30)
+Type Errors  no errors
+   Start at  18:24:02
+   Duration  1.28s (transform 242ms, setup 19ms, collect 275ms, tests 9ms, environment 0ms, prepare 3ms, typecheck 862ms)
