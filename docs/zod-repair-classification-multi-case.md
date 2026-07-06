@@ -18,7 +18,7 @@
 2. production-regression case
    - upstream `t+1`에서 새 test oracle이 production bug를 드러내고, 올바른 대응은 production code fix인 사례
 
-이 실험은 세 질문을 분리해서 본다.
+이번 주 실험은 아래와 같이 세 가지 질문으로 분리해서 진행했다.
 
 1. Failing test를 보고 model이 test file을 고쳐야 하는 상황과 production file을 고쳐야 하는 상황을 구분하는가?
 2. Model repair를 적용한 뒤 target test가 실제로 green이 되는가?
@@ -323,7 +323,7 @@ Signal check 결과는 target classification 결과보다 더 엄격하다.
 
 ## 해석
 
-S3 stale-test repair는 `partial`이었다. Model은 test repair를 선택했지만, upstream test update 중 direct `z.undefined()` assertion만 반영했고 union optout assertion과 type expectation은 완전히 맞추지 못했다. 그러나 repair target decision은 일관적이었다.
+S3 stale-test repair는 `partial`이었다. Model은 test repair를 선택했지만, upstream test update 중 direct `z.undefined()` assertion만 반영했고 union optout assertion과 type expectation은 완전히 맞추지 못했다. 그러나 모든 case에 대해 repair target decision은 일관적이었다.
 
 - failure가 의도적인 production behavior change에서 온 경우 GPT-OSS는 test repair를 선택했다.
 - failure가 새 oracle이 드러낸 production regression에서 온 경우 GPT-OSS는 production repair를 선택했다.
@@ -334,6 +334,4 @@ S3 stale-test repair는 `partial`이었다. Model은 test repair를 선택했지
 2. repair completeness: `5 / 6` complete, `1 / 6` partial
 3. test signal preservation: `3 / 6` signal_preserved, `2 / 6` signal_weakened, `1 / 6` partial_repair
 
-논문 실험 관점에서 가장 강하게 말할 수 있는 문장은 다음과 같다.
-
-> Zod의 stale-test case 3개와 production-regression case 3개로 구성한 3:3 matrix에서 GPT-OSS는 여섯 번 모두 expected repair target을 선택했다. 다만 coverage와 focused StrykerJS로 test signal을 따로 평가하면, signal_preserved는 3개였고 S1/P3는 signal_weakened, S3는 partial_repair였다. 즉 repair target 분류 능력은 안정적으로 관찰됐지만, 생성된 repair가 항상 충분한 test signal을 보존한다고 보기는 어렵다.
+이번 주 실험은 다음과 같이 요약 정리할 수 있다. Zod의 stale-test case 3개와 production-regression case 3개로 구성한 3:3 matrix에서 GPT-OSS는 여섯 번 모두 expected repair target을 선택했다. 다만 coverage와 focused StrykerJS로 test signal을 따로 평가하면, signal_preserved는 3개였고 S1/P3는 signal_weakened, S3는 partial_repair였다. 즉 repair target 분류 능력은 안정적으로 관찰됐지만, 생성된 repair가 항상 충분한 test signal을 보존한다고 보기는 어렵다.
