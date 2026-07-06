@@ -323,8 +323,6 @@ Signal check 결과는 target classification 결과보다 더 엄격하다.
 
 ## 해석
 
-이 반복 결과는 단일 production-regression 예시보다 교수님께 설명하려는 claim을 더 직접적으로 뒷받침한다.
-
 S3 stale-test repair는 `partial`이었다. Model은 test repair를 선택했지만, upstream test update 중 direct `z.undefined()` assertion만 반영했고 union optout assertion과 type expectation은 완전히 맞추지 못했다. 그러나 repair target decision은 일관적이었다.
 
 - failure가 의도적인 production behavior change에서 온 경우 GPT-OSS는 test repair를 선택했다.
