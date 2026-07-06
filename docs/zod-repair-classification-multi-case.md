@@ -1,13 +1,11 @@
-# GPT-OSS repair target classification 3:3 다중 사례 실험
+# GPT-OSS repair target 및 test signal classification 3:3 다중 사례 실험
 
 ## 공개 산출물 링크
 
 - 실험 대상 프로젝트: [colinhacks/zod](https://github.com/colinhacks/zod)
 - 산출물 저장소: [Hamjoon/zod](https://github.com/Hamjoon/zod)
-- 보고서 고정 태그: [experiment-2026-07-week1-repair-classification-matrix](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix)
-- 보고서 직접 링크: [docs/zod-repair-classification-multi-case.md](https://github.com/Hamjoon/zod/blob/experiment-2026-07-week1-repair-classification-matrix/docs/zod-repair-classification-multi-case.md)
 - archive branch: [experiment/2026-07-week1-repair-classification-archive](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive)
-- 작업 확인용 PR: [Hamjoon/zod#9](https://github.com/Hamjoon/zod/pull/9)
+- 보고서 직접 링크: [docs/zod-repair-classification-multi-case.md](https://github.com/Hamjoon/zod/blob/experiment/2026-07-week1-repair-classification-archive/docs/zod-repair-classification-multi-case.md)
 
 ## 실험 질문
 
@@ -20,9 +18,11 @@
 2. production-regression case
    - upstream `t+1`에서 새 test oracle이 production bug를 드러내고, 올바른 대응은 production code fix인 사례
 
-핵심 평가는 patch quality 전체가 아니라 first-order classification이다.
+이 실험은 세 질문을 분리해서 본다.
 
-> Failing test를 보고 model이 test file을 고쳐야 하는 상황과 production file을 고쳐야 하는 상황을 구분하는가?
+1. Failing test를 보고 model이 test file을 고쳐야 하는 상황과 production file을 고쳐야 하는 상황을 구분하는가?
+2. Model repair를 적용한 뒤 target test가 실제로 green이 되는가?
+3. Target validation을 통과한 repair가 coverage와 focused StrykerJS 기준으로 의미 있는 test signal을 유지하는가?
 
 ## 실행 방식
 
@@ -101,18 +101,18 @@ production-regression case는 다음 두 commit으로 구성했다.
 
 이번 보고서에서는 6개 case에 대해 target validation, coverage, focused StrykerJS signal check를 수행했다. S3는 GPT-OSS repair가 partial이라 target validation에서 실패했고, coverage/StrykerJS는 실행하지 않고 `partial_repair`로 기록했다. 나머지 5개 case는 target validation, coverage, focused StrykerJS를 실행했다.
 
-2026-07-06에 빠졌던 target validation 검증 단계를 다시 실행해 각 case의 `signal/validation.log`와 `signal-summary.json`을 갱신했다. 따라서 아래 판정은 코드 diff를 사람이 읽은 판단이 아니라, runner가 남긴 target validation status와 focused StrykerJS 결과를 기준으로 한다.
+2026-07-06에 각 case의 target validation을 다시 실행해 `signal/validation.log`와 `signal-summary.json`을 갱신했다. 따라서 아래 판정은 코드 diff를 사람이 읽은 판단이 아니라, runner가 남긴 target validation status와 focused StrykerJS 결과를 기준으로 한다.
 
 Coverage는 target test가 관련 production file을 실행하는지 확인하는 용도다. StrykerJS는 해당 production change 주변의 focused mutant가 repaired test에 의해 killed되는지 확인하는 용도다. Coverage만으로는 signal 보존 여부를 판정하지 않는다. [Hamjoon/zod#7](https://github.com/Hamjoon/zod/pull/7)에서도 같은 production path를 실행하는 두 repair를 coverage만으로는 구분하지 못했고, focused StrykerJS가 weak repair를 구분했다.
 
 | ID | Target validation | Coverage line summary | Focused StrykerJS scope | Mutants | Signal 판정 | Artifact |
 | --- | --- | --- | --- | --- | --- | --- |
-| S1 | pass | `util.ts` 130/313 lines, 41.53% | `util.ts:656-677` | Killed 8 / Survived 9 / NoCoverage 2 | signal_weakened | [signal](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/s1-stale-object-extend/signal) |
-| S2 | pass | `schemas.ts` 194/1084 lines, 17.89% | `schemas.ts:2537-2537` | Killed 3 / Survived 0 / NoCoverage 0 | signal_preserved | [signal](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/s2-stale-tuple-too-big/signal) |
-| S3 | fail | not run | not run | not run | partial_repair | [signal](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/s3-stale-undefined-optout/signal) |
-| P1 | pass | `schemas.ts` 314/1161 lines, 27.04% | `schemas.ts:2680-2681` | Killed 2 / Survived 0 / NoCoverage 0 | signal_preserved | [signal](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/p1-prod-tuple-holes/signal) |
-| P2 | pass | `schemas.ts` 429/1134 lines, 37.83% | `schemas.ts:2791`, `schemas.ts:2806-2807` | Killed 4 / Survived 0 / NoCoverage 0 | signal_preserved | [signal](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/p2-prod-record-key-transform/signal) |
-| P3 | pass | `schemas.ts` 372/1165 lines, 31.93% | `schemas.ts:1762-1762` | Killed 7 / Survived 2 / NoCoverage 0 | signal_weakened | [signal](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/p3-prod-catch-absent-key/signal) |
+| S1 | pass | `util.ts` 130/313 lines, 41.53% | `util.ts:656-677` | Killed 8 / Survived 9 / NoCoverage 2 | signal_weakened | [signal](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/s1-stale-object-extend/signal) |
+| S2 | pass | `schemas.ts` 194/1084 lines, 17.89% | `schemas.ts:2537-2537` | Killed 3 / Survived 0 / NoCoverage 0 | signal_preserved | [signal](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/s2-stale-tuple-too-big/signal) |
+| S3 | fail | not run | not run | not run | partial_repair | [signal](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/s3-stale-undefined-optout/signal) |
+| P1 | pass | `schemas.ts` 314/1161 lines, 27.04% | `schemas.ts:2680-2681` | Killed 2 / Survived 0 / NoCoverage 0 | signal_preserved | [signal](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/p1-prod-tuple-holes/signal) |
+| P2 | pass | `schemas.ts` 429/1134 lines, 37.83% | `schemas.ts:2791`, `schemas.ts:2806-2807` | Killed 4 / Survived 0 / NoCoverage 0 | signal_preserved | [signal](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/p2-prod-record-key-transform/signal) |
+| P3 | pass | `schemas.ts` 372/1165 lines, 31.93% | `schemas.ts:1762-1762` | Killed 7 / Survived 2 / NoCoverage 0 | signal_weakened | [signal](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/p3-prod-catch-absent-key/signal) |
 
 Signal check 결과는 target classification 결과보다 더 엄격하다.
 
@@ -125,7 +125,7 @@ Signal check 결과는 target classification 결과보다 더 엄격하다.
 
 ### S1. Object extend stale expectation
 
-- case packet: [experiments/zod-repair-classification-matrix/cases/s1-stale-object-extend](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/s1-stale-object-extend)
+- case packet: [experiments/zod-repair-classification-matrix/cases/s1-stale-object-extend](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/s1-stale-object-extend)
 - base commit: [1899684f](https://github.com/colinhacks/zod/commit/1899684fc34d149ebb5d6f9fd95a588e94f27053)
 - upstream commit: [0fe88407](https://github.com/colinhacks/zod/commit/0fe88407a4149c907929b757dc6618d8afe998fc) (`allow non-overwriting extends with refinements. 4.3.1`)
 - fixture commit: [187b3f03](https://github.com/Hamjoon/zod/commit/187b3f036f317362750160137c78b401ec3b895b) (`experiment fixture: S1 object extend production evolution`)
@@ -154,7 +154,7 @@ Signal check 결과는 target classification 결과보다 더 엄격하다.
 
 ### S2. Tuple `too_big` stale snapshots
 
-- case packet: [experiments/zod-repair-classification-matrix/cases/s2-stale-tuple-too-big](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/s2-stale-tuple-too-big)
+- case packet: [experiments/zod-repair-classification-matrix/cases/s2-stale-tuple-too-big](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/s2-stale-tuple-too-big)
 - base commit: [7abe4e51](https://github.com/colinhacks/zod/commit/7abe4e510042cc05aafdcf4c1a80ba9c91d998f5)
 - upstream commit: [ae68f62f](https://github.com/colinhacks/zod/commit/ae68f62fddc4f7b2bbc5df5a9ca49a83c697eef2) (`fix: Fix error details for tuples with extraneous elements (#5555)`)
 - fixture commit: [1f3f1c58](https://github.com/Hamjoon/zod/commit/1f3f1c58fe8a2f11c4d05826aaee430038d674f1) (`experiment fixture: S2 tuple too_big production evolution`)
@@ -184,7 +184,7 @@ Signal check 결과는 target classification 결과보다 더 엄격하다.
 
 ### S3. `z.undefined()` optout stale expectation
 
-- case packet: [experiments/zod-repair-classification-matrix/cases/s3-stale-undefined-optout](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/s3-stale-undefined-optout)
+- case packet: [experiments/zod-repair-classification-matrix/cases/s3-stale-undefined-optout](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/s3-stale-undefined-optout)
 - base commit: [57d80a82](https://github.com/colinhacks/zod/commit/57d80a82bde8877f3eb79e5dad9786096c37490f)
 - upstream commit: [f32ddf9e](https://github.com/colinhacks/zod/commit/f32ddf9e581d5ba5f0278ad26b1bfb9ff8f8a6dd) (`fix: drop z.undefined()'s optout = "optional"`)
 - fixture commit: [e0d9d20e](https://github.com/Hamjoon/zod/commit/e0d9d20e19a99294a5883f79e733e7c87faad81e) (`experiment fixture: S3 undefined optout production evolution`)
@@ -219,7 +219,7 @@ Signal check 결과는 target classification 결과보다 더 엄격하다.
 
 ### P1. Tuple holes before required defaults
 
-- case packet: [experiments/zod-repair-classification-matrix/cases/p1-prod-tuple-holes](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/p1-prod-tuple-holes)
+- case packet: [experiments/zod-repair-classification-matrix/cases/p1-prod-tuple-holes](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/p1-prod-tuple-holes)
 - base commit: [95ccab42](https://github.com/colinhacks/zod/commit/95ccab423aec720b2523c3a64cdc7e3204537cc7)
 - upstream commit: [cede2c63](https://github.com/colinhacks/zod/commit/cede2c63739a5823d6aa5093d291e9a111da943d) (`fix(v4): reject tuple holes before required defaults (#5900)`)
 - upstream PR: [colinhacks/zod#5900](https://github.com/colinhacks/zod/pull/5900)
@@ -249,7 +249,7 @@ Signal check 결과는 target classification 결과보다 더 엄격하다.
 
 ### P2. `z.record()` key schema transforms
 
-- case packet: [experiments/zod-repair-classification-matrix/cases/p2-prod-record-key-transform](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/p2-prod-record-key-transform)
+- case packet: [experiments/zod-repair-classification-matrix/cases/p2-prod-record-key-transform](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/p2-prod-record-key-transform)
 - base commit: [195e8696](https://github.com/colinhacks/zod/commit/195e86962b5156012a4cdcfbff87dffddce87b78)
 - upstream commit: [61d7bedb](https://github.com/colinhacks/zod/commit/61d7bedb873bf8185162bb51d027fd8acf2710ee) (`fix(v4): apply key schema transforms in z.record() (#5891)`)
 - upstream PR: [colinhacks/zod#5891](https://github.com/colinhacks/zod/pull/5891)
@@ -280,7 +280,7 @@ Signal check 결과는 target classification 결과보다 더 엄격하다.
 
 ### P3. Catch/preprocess absent object keys
 
-- case packet: [experiments/zod-repair-classification-matrix/cases/p3-prod-catch-absent-key](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/p3-prod-catch-absent-key)
+- case packet: [experiments/zod-repair-classification-matrix/cases/p3-prod-catch-absent-key](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week1-repair-classification-archive/experiments/zod-repair-classification-matrix/cases/p3-prod-catch-absent-key)
 - base commit: [02c2baf7](https://github.com/colinhacks/zod/commit/02c2baf7d0d615872fa4528a8020603b71211702)
 - upstream commit: [b5ab55e4](https://github.com/colinhacks/zod/commit/b5ab55e41b615e961775feb2160c2eddf29fdf84) (`fix(v4): allow catch/preprocess to handle absent object keys (#5937)`)
 - upstream PR: [colinhacks/zod#5937](https://github.com/colinhacks/zod/pull/5937)
