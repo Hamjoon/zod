@@ -101,8 +101,6 @@ production-regression case는 다음 두 commit으로 구성했다.
 
 이번 보고서에서는 6개 case에 대해 target validation, coverage, focused StrykerJS signal check를 수행했다. S3는 GPT-OSS repair가 partial이라 target validation에서 실패했고, coverage/StrykerJS는 실행하지 않고 `partial_repair`로 기록했다. 나머지 5개 case는 target validation, coverage, focused StrykerJS를 실행했다.
 
-2026-07-06에 각 case의 target validation을 다시 실행해 `signal/validation.log`와 `signal-summary.json`을 갱신했다. 따라서 아래 판정은 코드 diff를 사람이 읽은 판단이 아니라, runner가 남긴 target validation status와 focused StrykerJS 결과를 기준으로 한다.
-
 Coverage는 target test가 관련 production file을 실행하는지 확인하는 용도다. StrykerJS는 해당 production change 주변의 focused mutant가 repaired test에 의해 killed되는지 확인하는 용도다. Coverage만으로는 signal 보존 여부를 판정하지 않는다. [Hamjoon/zod#7](https://github.com/Hamjoon/zod/pull/7)에서도 같은 production path를 실행하는 두 repair를 coverage만으로는 구분하지 못했고, focused StrykerJS가 weak repair를 구분했다.
 
 | ID | Target validation | Coverage line summary | Focused StrykerJS scope | Mutants | Signal 판정 | Artifact |
