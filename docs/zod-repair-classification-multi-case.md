@@ -76,9 +76,9 @@ production-regression case는 다음 두 commit으로 구성했다.
 | S1 | stale-test | [1899684f](https://github.com/colinhacks/zod/commit/1899684fc34d149ebb5d6f9fd95a588e94f27053) | [0fe88407](https://github.com/colinhacks/zod/commit/0fe88407a4149c907929b757dc6618d8afe998fc) object extend production change | test / test (일치) | complete | signal_weakened | Model은 `object.test.ts` expectation을 throw에서 non-throw로 수정했지만 focused mutants 일부가 survived/no-coverage였다. |
 | S2 | stale-test | [7abe4e51](https://github.com/colinhacks/zod/commit/7abe4e510042cc05aafdcf4c1a80ba9c91d998f5) | [ae68f62f](https://github.com/colinhacks/zod/commit/ae68f62fddc4f7b2bbc5df5a9ca49a83c697eef2) tuple `too_big` inclusive issue | test / test (일치) | complete | signal_preserved | Model은 tuple inline snapshot에 `inclusive: true`와 `<=`를 반영했고 focused mutants 3개를 모두 killed했다. |
 | S3 | stale-test | [57d80a82](https://github.com/colinhacks/zod/commit/57d80a82bde8877f3eb79e5dad9786096c37490f) | [f32ddf9e](https://github.com/colinhacks/zod/commit/f32ddf9e581d5ba5f0278ad26b1bfb9ff8f8a6dd) `z.undefined()` optout change | test / test (일치) | partial | partial_repair | Model은 test patch를 선택했지만 direct `z.undefined()` expectation만 수정했고 target validation이 실패했다. |
-| P1 | production-regression | [95ccab42](https://github.com/colinhacks/zod/commit/95ccab423aec720b2523c3a64cdc7e3204537cc7) | [cede2c63](https://github.com/colinhacks/zod/commit/cede2c63739a5823d6aa5093d291e9a111da943d) tuple holes before required defaults | production / production (일치) | yes | complete | signal_preserved | Model은 `core/schemas.ts`를 선택했고 focused mutants 2개를 모두 killed했다. |
-| P2 | production-regression | [195e8696](https://github.com/colinhacks/zod/commit/195e86962b5156012a4cdcfbff87dffddce87b78) | [61d7bedb](https://github.com/colinhacks/zod/commit/61d7bedb873bf8185162bb51d027fd8acf2710ee) `z.record()` key schema transforms | production / production (일치) | yes | complete | signal_preserved | 핵심 key schema 실행과 transformed output key 저장 sub-range에서 focused mutants 4개를 모두 killed했다. |
-| P3 | production-regression | [02c2baf7](https://github.com/colinhacks/zod/commit/02c2baf7d0d615872fa4528a8020603b71211702) | [b5ab55e4](https://github.com/colinhacks/zod/commit/b5ab55e41b615e961775feb2160c2eddf29fdf84) catch/preprocess absent object keys | production / production (일치) | yes | complete | signal_weakened | Target test는 통과했지만 focused mutants 2개가 survived했다. |
+| P1 | production-regression | [95ccab42](https://github.com/colinhacks/zod/commit/95ccab423aec720b2523c3a64cdc7e3204537cc7) | [cede2c63](https://github.com/colinhacks/zod/commit/cede2c63739a5823d6aa5093d291e9a111da943d) tuple holes before required defaults | production / production (일치) | complete | signal_preserved | Model은 `core/schemas.ts`를 선택했고 focused mutants 2개를 모두 killed했다. |
+| P2 | production-regression | [195e8696](https://github.com/colinhacks/zod/commit/195e86962b5156012a4cdcfbff87dffddce87b78) | [61d7bedb](https://github.com/colinhacks/zod/commit/61d7bedb873bf8185162bb51d027fd8acf2710ee) `z.record()` key schema transforms | production / production (일치) | complete | signal_preserved | 핵심 key schema 실행과 transformed output key 저장 sub-range에서 focused mutants 4개를 모두 killed했다. |
+| P3 | production-regression | [02c2baf7](https://github.com/colinhacks/zod/commit/02c2baf7d0d615872fa4528a8020603b71211702) | [b5ab55e4](https://github.com/colinhacks/zod/commit/b5ab55e41b615e961775feb2160c2eddf29fdf84) catch/preprocess absent object keys | production / production (일치) | complete | signal_weakened | Target test는 통과했지만 focused mutants 2개가 survived했다. |
 
 요약:
 
@@ -88,11 +88,13 @@ production-regression case는 다음 두 commit으로 구성했다.
 - repair completeness: `5 / 6` complete, `1 / 6` partial
 - signal verdict: `3 / 6` signal_preserved, `2 / 6` signal_weakened, `1 / 6` partial_repair
 
-`Repair 완성도`는 target 선택 이후 model patch가 해당 case의 oracle repair 범위를 얼마나 채웠는지를 나타낸다. `partial`은 repair target은 맞았지만 upstream oracle의 일부 assertion이나 expectation을 놓친 경우다.
+`Repair 완성도`는 target 선택 이후 model repair를 적용한 상태에서 target validation이 통과했는지를 나타낸다. `complete`는 target validation pass, `partial`은 repair target은 맞았지만 target validation이 fail한 경우다. Upstream oracle diff는 실패 원인 설명에는 사용하지만, 완성도 판정 자체는 `signal/validation.log`의 실행 결과를 기준으로 한다.
 
 ## Coverage 및 Mutation Signal
 
-이번 보고서에서는 6개 case에 대해 coverage와 focused StrykerJS signal check를 수행했다. S3는 GPT-OSS repair가 partial이라 target validation에서 실패했고, coverage/StrykerJS는 실행하지 않고 `partial_repair`로 기록했다. 나머지 5개 case는 target validation, coverage, focused StrykerJS를 실행했다.
+이번 보고서에서는 6개 case에 대해 target validation, coverage, focused StrykerJS signal check를 수행했다. S3는 GPT-OSS repair가 partial이라 target validation에서 실패했고, coverage/StrykerJS는 실행하지 않고 `partial_repair`로 기록했다. 나머지 5개 case는 target validation, coverage, focused StrykerJS를 실행했다.
+
+2026-07-06에 빠졌던 target validation 검증 단계를 다시 실행해 각 case의 `signal/validation.log`와 `signal-summary.json`을 갱신했다. 따라서 아래 판정은 코드 diff를 사람이 읽은 판단이 아니라, runner가 남긴 target validation status와 focused StrykerJS 결과를 기준으로 한다.
 
 Coverage는 target test가 관련 production file을 실행하는지 확인하는 용도다. StrykerJS는 해당 production change 주변의 focused mutant가 repaired test에 의해 killed되는지 확인하는 용도다. Coverage만으로는 signal 보존 여부를 판정하지 않는다. [Hamjoon/zod#7](https://github.com/Hamjoon/zod/pull/7)에서도 같은 production path를 실행하는 두 repair를 coverage만으로는 구분하지 못했고, focused StrykerJS가 weak repair를 구분했다.
 

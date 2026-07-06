@@ -1,12 +1,12 @@
 $ pnpm stryker run /Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5900/.openclaw-signal/p1-prod-tuple-holes/stryker.signal.config.mjs
 status=0
 ## stdout
-[32m22:10:19 (85639) INFO ProjectReader[39m Found 1 of 597 file(s) to be mutated.
-[32m22:10:19 (85639) INFO ProjectReader[39m Found 1 test file(s) matching --testFiles patterns.
-[32m22:10:19 (85639) INFO Instrumenter[39m Instrumented 1 source file(s) with 2 mutant(s)
-[32m22:10:20 (85639) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
-[32m22:10:20 (85639) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
-[32m22:10:21 (85639) INFO DryRunExecutor[39m Initial test run succeeded. Ran 18 tests in 0 seconds (net 15.210538999999926 ms, overhead 364.7894610000001 ms).
+[32m16:19:18 (41035) INFO ProjectReader[39m Found 1 of 597 file(s) to be mutated.
+[32m16:19:18 (41035) INFO ProjectReader[39m Found 1 test file(s) matching --testFiles patterns.
+[32m16:19:18 (41035) INFO Instrumenter[39m Instrumented 1 source file(s) with 2 mutant(s)
+[32m16:19:19 (41035) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m16:19:19 (41035) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m16:19:20 (41035) INFO DryRunExecutor[39m Initial test run succeeded. Ran 18 tests in 0 seconds (net 15.238745999999765 ms, overhead 363.76125400000024 ms).
 
 All tests/tuple.test.ts
   ~ successful validation (covered 2)
@@ -36,8 +36,8 @@ File        |  total | covered | # killed | # timeout | # survived | # no cov | 
 All files   | 100.00 |  100.00 |        2 |         0 |          0 |        0 |        0 |
  schemas.ts | 100.00 |  100.00 |        2 |         0 |          0 |        0 |        0 |
 ------------|--------|---------|----------|-----------|------------|----------|----------|
-[32m22:10:21 (85639) INFO MutationTestReportHelper[39m Final mutation score of 100.00 is greater than or equal to break threshold 0
-[32m22:10:21 (85639) INFO JsonReporter[39m Your report can be found at: file:///tmp/zod-week1-signal-results/p1-prod-tuple-holes/stryker/mutation.json
-[32m22:10:21 (85639) INFO MutationTestExecutor[39m Done in 2 seconds.
+[32m16:19:20 (41035) INFO MutationTestReportHelper[39m Final mutation score of 100.00 is greater than or equal to break threshold 0
+[32m16:19:20 (41035) INFO JsonReporter[39m Your report can be found at: file:///private/tmp/zod-week1-orphan-archive/experiments/zod-repair-classification-matrix/cases/p1-prod-tuple-holes/signal/stryker/mutation.json
+[32m16:19:20 (41035) INFO MutationTestExecutor[39m Done in 2 seconds.
 
 ## stderr

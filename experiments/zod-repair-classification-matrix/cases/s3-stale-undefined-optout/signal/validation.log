@@ -2,21 +2,21 @@ $ pnpm vitest run packages/zod/src/v4/classic/tests/optional.test.ts --reporter=
 status=1
 ## stdout
 
- RUN  v4.0.10 /private/tmp/zod-stale-candidate-undefined-optout
+ RUN  v4.0.10 /private/tmp/zod-s3-target-validation
 
 ··x··············x············
 
  Test Files  2 failed (2)
       Tests  2 failed | 28 passed (30)
 Type Errors  1 failed
-   Start at  22:10:02
-   Duration  1.60s (transform 250ms, setup 19ms, collect 284ms, tests 10ms, environment 0ms, prepare 3ms, typecheck 1.17s)
+   Start at  16:19:12
+   Duration  1.20s (transform 245ms, setup 18ms, collect 278ms, tests 9ms, environment 0ms, prepare 3ms, typecheck 780ms)
 
 
 ## stderr
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
-(node:85505) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(node:40981) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.

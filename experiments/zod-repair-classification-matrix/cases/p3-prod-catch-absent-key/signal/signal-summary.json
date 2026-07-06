@@ -90,7 +90,7 @@
             }
           },
           "killedBy": [
-            "27"
+            "6"
           ]
         },
         {
@@ -113,9 +113,9 @@
           ]
         },
         {
-          "id": "4",
-          "mutatorName": "LogicalOperator",
-          "replacement": "!isPresent || !isOptionalIn",
+          "id": "3",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
           "status": "Killed",
           "location": {
             "end": {
@@ -132,9 +132,9 @@
           ]
         },
         {
-          "id": "3",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "true",
+          "id": "4",
+          "mutatorName": "LogicalOperator",
+          "replacement": "!isPresent || !isOptionalIn",
           "status": "Killed",
           "location": {
             "end": {

@@ -1,12 +1,12 @@
 $ pnpm stryker run /private/tmp/zod-prod-candidate-5937/.openclaw-signal/p3-prod-catch-absent-key/stryker.signal.config.mjs
 status=0
 ## stdout
-[32m22:11:39 (86363) INFO ProjectReader[39m Found 1 of 600 file(s) to be mutated.
-[32m22:11:39 (86363) INFO ProjectReader[39m Found 2 test file(s) matching --testFiles patterns.
-[32m22:11:39 (86363) INFO Instrumenter[39m Instrumented 1 source file(s) with 9 mutant(s)
-[32m22:11:39 (86363) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
-[32m22:11:40 (86363) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
-[32m22:11:41 (86363) INFO DryRunExecutor[39m Initial test run succeeded. Ran 34 tests in 0 seconds (net 24.482248999999683 ms, overhead 462.5177510000003 ms).
+[32m16:19:38 (41508) INFO ProjectReader[39m Found 1 of 600 file(s) to be mutated.
+[32m16:19:38 (41508) INFO ProjectReader[39m Found 2 test file(s) matching --testFiles patterns.
+[32m16:19:38 (41508) INFO Instrumenter[39m Instrumented 1 source file(s) with 9 mutant(s)
+[32m16:19:38 (41508) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m16:19:39 (41508) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m16:19:39 (41508) INFO DryRunExecutor[39m Initial test run succeeded. Ran 34 tests in 0 seconds (net 23.99541700000009 ms, overhead 449.0045829999999 ms).
 
 All tests
   catch.test.ts
@@ -21,7 +21,7 @@ All tests
     ✘ removeCatch (covered 0)
     ✘ nested (covered 0)
     ✘ chained catch (covered 0)
-    ✓ native enum (killed 1)
+    ~ native enum (covered 9)
     ~ enum (covered 9)
     ~ preprocess + catch on absent key (#5937) (covered 9)
     ✘ reported issues with nested usage (covered 0)
@@ -35,7 +35,7 @@ All tests
     ✘ required inference (covered 0)
     ✘ required with mask (covered 0)
     ✘ required with mask -- ignore falsy values (covered 0)
-    ✓ partial with mask (killed 4)
+    ✓ partial with mask (killed 5)
     ~ partial with mask -- ignore falsy values (covered 7)
     ✓ catch/prefault/default (killed 2)
     ~ handleOptionalObjectResult branches (covered 7)
@@ -68,7 +68,7 @@ Tests ran:
   and 5 more tests!
 
 
-Ran 2.89 tests per mutant on average.
+Ran 2.56 tests per mutant on average.
 ------------|------------------|----------|-----------|------------|----------|----------|
             | % Mutation score |          |           |            |          |          |
 File        |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
@@ -76,8 +76,8 @@ File        |  total | covered | # killed | # timeout | # survived | # no cov | 
 All files   |  77.78 |   77.78 |        7 |         0 |          2 |        0 |        0 |
  schemas.ts |  77.78 |   77.78 |        7 |         0 |          2 |        0 |        0 |
 ------------|--------|---------|----------|-----------|------------|----------|----------|
-[32m22:11:42 (86363) INFO MutationTestReportHelper[39m Final mutation score of 77.78 is greater than or equal to break threshold 0
-[32m22:11:42 (86363) INFO JsonReporter[39m Your report can be found at: file:///tmp/zod-week1-signal-results/p3-prod-catch-absent-key/stryker/mutation.json
-[32m22:11:42 (86363) INFO MutationTestExecutor[39m Done in 2 seconds.
+[32m16:19:40 (41508) INFO MutationTestReportHelper[39m Final mutation score of 77.78 is greater than or equal to break threshold 0
+[32m16:19:40 (41508) INFO JsonReporter[39m Your report can be found at: file:///private/tmp/zod-week1-orphan-archive/experiments/zod-repair-classification-matrix/cases/p3-prod-catch-absent-key/signal/stryker/mutation.json
+[32m16:19:40 (41508) INFO MutationTestExecutor[39m Done in 2 seconds.
 
 ## stderr

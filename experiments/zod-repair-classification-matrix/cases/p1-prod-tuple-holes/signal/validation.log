@@ -9,14 +9,14 @@ status=0
  Test Files  2 passed (2)
       Tests  36 passed (36)
 Type Errors  no errors
-   Start at  22:10:15
-   Duration  1.59s (transform 256ms, setup 18ms, collect 292ms, tests 15ms, environment 0ms, prepare 3ms, typecheck 1.15s)
+   Start at  16:19:15
+   Duration  1.27s (transform 253ms, setup 18ms, collect 288ms, tests 14ms, environment 0ms, prepare 3ms, typecheck 829ms)
 
 
 ## stderr
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
-(node:85586) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(node:40999) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.

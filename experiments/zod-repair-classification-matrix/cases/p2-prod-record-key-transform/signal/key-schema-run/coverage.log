@@ -1,16 +1,16 @@
-$ pnpm vitest run packages/zod/src/v4/classic/tests/record.test.ts --config /Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5891/.openclaw-signal/p2-prod-record-key-transform-keyrun/vitest.signal.config.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter json --coverage.reporter json-summary --coverage.reportsDirectory /tmp/zod-week1-signal-results/p2-prod-record-key-transform-keyrun/coverage --coverage.include packages/zod/src/v4/core/schemas.ts
+$ pnpm vitest run packages/zod/src/v4/classic/tests/record.test.ts --config /Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5891/.openclaw-signal/p2-prod-record-key-transform-keyrun/vitest.signal.config.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter json --coverage.reporter json-summary --coverage.reportsDirectory /private/tmp/zod-week1-orphan-archive/experiments/zod-repair-classification-matrix/cases/p2-prod-record-key-transform/signal/key-schema-run/coverage --coverage.include packages/zod/src/v4/core/schemas.ts
 status=0
 ## stdout
 
  RUN  v4.0.10 /Users/garibong/.openclaw/workspace/tmp/zod-prod-regression-5891
       Coverage enabled with v8
 
- ✓ packages/zod/src/v4/classic/tests/record.test.ts (24 tests) 20ms
+ ✓ packages/zod/src/v4/classic/tests/record.test.ts (24 tests) 19ms
 
  Test Files  1 passed (1)
       Tests  24 passed (24)
-   Start at  22:12:05
-   Duration  567ms (transform 286ms, setup 17ms, collect 334ms, tests 20ms, environment 0ms, prepare 10ms)
+   Start at  16:19:23
+   Duration  501ms (transform 243ms, setup 15ms, collect 286ms, tests 19ms, environment 0ms, prepare 9ms)
 
 
 ## stderr

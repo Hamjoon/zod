@@ -1,6 +1,6 @@
 {
   "case": "s3-stale-undefined-optout",
-  "repo": "/private/tmp/zod-stale-candidate-undefined-optout",
+  "repo": "/tmp/zod-s3-target-validation",
   "tests": [
     "packages/zod/src/v4/classic/tests/optional.test.ts"
   ],
