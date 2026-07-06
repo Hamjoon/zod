@@ -71,7 +71,7 @@ production-regression case는 다음 두 commit으로 구성했다.
 
 ## Case Matrix 결과
 
-| ID | 분류 | Base commit | Upstream commit | 기대 target /<br>Model 선택 | Repair<br>완성도 | Signal 유지 판정 | 비고 |
+| ID | 분류 | Base commit | Upstream commit | 기대 target /<br>Model 선택 | Repair<br>완성도 | Signal 판정 | 비고 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | S1 | stale-test | [1899684f](https://github.com/colinhacks/zod/commit/1899684fc34d149ebb5d6f9fd95a588e94f27053) | [0fe88407](https://github.com/colinhacks/zod/commit/0fe88407a4149c907929b757dc6618d8afe998fc) object extend production change | test / test (일치) | complete | signal_weakened | Model은 `object.test.ts` expectation을 throw에서 non-throw로 수정했지만 focused mutants 일부가 survived/no-coverage였다. |
 | S2 | stale-test | [7abe4e51](https://github.com/colinhacks/zod/commit/7abe4e510042cc05aafdcf4c1a80ba9c91d998f5) | [ae68f62f](https://github.com/colinhacks/zod/commit/ae68f62fddc4f7b2bbc5df5a9ca49a83c697eef2) tuple `too_big` inclusive issue | test / test (일치) | complete | signal_preserved | Model은 tuple inline snapshot에 `inclusive: true`와 `<=`를 반영했고 focused mutants 3개를 모두 killed했다. |
@@ -98,7 +98,7 @@ production-regression case는 다음 두 commit으로 구성했다.
 
 Coverage는 target test가 관련 production file을 실행하는지 확인하는 용도다. StrykerJS는 해당 production change 주변의 focused mutant가 repaired test에 의해 killed되는지 확인하는 용도다. Coverage만으로는 signal 보존 여부를 판정하지 않는다. [Hamjoon/zod#7](https://github.com/Hamjoon/zod/pull/7)에서도 같은 production path를 실행하는 두 repair를 coverage만으로는 구분하지 못했고, focused StrykerJS가 weak repair를 구분했다.
 
-| ID | Target validation | Coverage line summary | Focused StrykerJS scope | Mutants | Signal verdict | Artifact |
+| ID | Target validation | Coverage line summary | Focused StrykerJS scope | Mutants | Signal 판정 | Artifact |
 | --- | --- | --- | --- | --- | --- | --- |
 | S1 | pass | `util.ts` 130/313 lines, 41.53% | `util.ts:656-677` | Killed 8 / Survived 9 / NoCoverage 2 | signal_weakened | [signal](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/s1-stale-object-extend/signal) |
 | S2 | pass | `schemas.ts` 194/1084 lines, 17.89% | `schemas.ts:2537-2537` | Killed 3 / Survived 0 / NoCoverage 0 | signal_preserved | [signal](https://github.com/Hamjoon/zod/tree/experiment-2026-07-week1-repair-classification-matrix/experiments/zod-repair-classification-matrix/cases/s2-stale-tuple-too-big/signal) |
