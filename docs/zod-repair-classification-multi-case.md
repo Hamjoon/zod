@@ -86,9 +86,16 @@ production-regression case는 다음 두 commit으로 구성했다.
 - stale-test controls: `3 / 3` 모두 test file repair 선택
 - production-regression cases: `3 / 3` 모두 production file repair 선택
 - repair completeness: `5 / 6` complete, `1 / 6` partial
-- signal verdict: `3 / 6` signal_preserved, `2 / 6` signal_weakened, `1 / 6` partial_repair
+- Signal 판정: `3 / 6` signal_preserved, `2 / 6` signal_weakened, `1 / 6` partial_repair
 
 `Repair 완성도`는 target 선택 이후 model repair를 적용한 상태에서 target validation이 통과했는지를 나타낸다. `complete`는 target validation pass, `partial`은 repair target은 맞았지만 target validation이 fail한 경우다. Upstream oracle diff는 실패 원인 설명에는 사용하지만, 완성도 판정 자체는 `signal/validation.log`의 실행 결과를 기준으로 한다.
+
+`Signal 판정`은 target validation, coverage, focused StrykerJS 결과를 조합해 test signal 유지 여부를 분류한 값이다.
+
+- `signal_preserved`: target validation이 통과했고, focused StrykerJS 기준으로 관련 behavior regression을 test가 실제로 잡았다.
+- `signal_weakened`: target validation은 통과했지만, focused StrykerJS 기준으로 survived/no-coverage mutant가 남아 behavior regression을 놓칠 수 있는 구멍이 확인됐다.
+- `partial_repair`: repair target 선택은 맞았지만, model repair 자체가 target validation을 통과하지 못해 signal 유지 여부를 평가할 수 있는 완성된 repair가 아니었다.
+- `signal_unknown`: 실행 로그나 artifact가 부족해 위 세 범주 중 하나로 자동 판정하기 어려운 보류 상태다. 이번 6개 case에서는 발생하지 않았다.
 
 ## Coverage 및 Mutation Signal
 
