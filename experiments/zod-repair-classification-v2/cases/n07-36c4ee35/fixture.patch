@@ -1,0 +1,37 @@
+diff --git a/packages/zod/src/v4/core/registries.ts b/packages/zod/src/v4/core/registries.ts
+index 2b48edc0f..a4e8ae063 100644
+--- a/packages/zod/src/v4/core/registries.ts
++++ b/packages/zod/src/v4/core/registries.ts
+@@ -27,7 +27,7 @@ type MetadataType = object | undefined;
+ export class $ZodRegistry<Meta extends MetadataType = MetadataType, Schema extends $ZodType = $ZodType> {
+   _meta!: Meta;
+   _schema!: Schema;
+-  _map: Map<Schema, $replace<Meta, Schema>> = new Map();
++  _map: WeakMap<Schema, $replace<Meta, Schema>> = new WeakMap();
+   _idmap: Map<string, Schema> = new Map();
+ 
+   add<S extends Schema>(
+@@ -46,7 +46,7 @@ export class $ZodRegistry<Meta extends MetadataType = MetadataType, Schema exten
+   }
+ 
+   clear(): this {
+-    this._map = new Map();
++    this._map = new WeakMap();
+     this._idmap = new Map();
+     return this;
+   }
+diff --git a/play.ts b/play.ts
+index 4564a8e84..fa23e12e3 100644
+--- a/play.ts
++++ b/play.ts
+@@ -1,3 +1,10 @@
+ import * as z from "zod";
+ 
+ z;
++
++z.superRefine((val, ctx) => {
++  ctx.addIssue({
++    code: "custom",
++    message: "Custom message",
++  });
++});
