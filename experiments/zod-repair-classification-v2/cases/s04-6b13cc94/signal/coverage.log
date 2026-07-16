@@ -1,0 +1,16 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/json-schema.test.ts --config /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s04-6b13cc94/.openclaw-signal/s04-6b13cc94/vitest.signal.config.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter json --coverage.reporter json-summary --coverage.reportsDirectory /Users/donggi/_projects/etc-projects/zod-thesis/experiments/zod-repair-classification-v2/cases/s04-6b13cc94/signal/coverage --coverage.include packages/zod/src/v4/core/to-json-schema.ts
+status=0
+## stdout
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s04-6b13cc94
+      Coverage enabled with v8
+
+ ✓ packages/zod/src/v4/classic/tests/json-schema.test.ts (41 tests) 36ms
+
+ Test Files  1 passed (1)
+      Tests  41 passed (41)
+   Start at  16:41:34
+   Duration  577ms (transform 188ms, setup 0ms, collect 253ms, tests 36ms, environment 0ms, prepare 44ms)
+
+
+## stderr

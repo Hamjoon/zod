@@ -1,0 +1,130 @@
+$ pnpm stryker run /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s04-6b13cc94/.openclaw-signal/s04-6b13cc94/stryker.signal.config.mjs
+status=0
+## stdout
+[32m16:41:36 (45774) INFO ProjectReader[39m Found 1 of 460 file(s) to be mutated.
+[32m16:41:36 (45774) INFO ProjectReader[39m Found 1 test file(s) matching --testFiles patterns.
+[32m16:41:36 (45774) INFO Instrumenter[39m Instrumented 1 source file(s) with 17 mutant(s)
+[32m16:41:36 (45774) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m16:41:37 (45774) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m16:41:38 (45774) INFO DryRunExecutor[39m Initial test run succeeded. Ran 41 tests in 0 seconds (net 36.2250829999997 ms, overhead 511.7749170000003 ms).
+
+All tests/json-schema.test.ts
+  ✓ toJSONSchema primitive types (killed 4)
+  ✘ toJSONSchema unsupported schema types (covered 0)
+  ~ toJSONSchema string formats (covered 7)
+  ✓ toJSONSchema string patterns (killed 5)
+  ✘ toJSONSchema number constraints (covered 0)
+  ✘ toJSONSchema arrays (covered 0)
+  ✘ toJSONSchema unions (covered 0)
+  ✘ toJSONSchema intersections (covered 0)
+  ✘ toJSONSchema record (covered 0)
+  ✘ toJSONSchema tuple (covered 0)
+  ✘ toJSONSchema promise (covered 0)
+  ✘ toJSONSchema lazy (covered 0)
+  ✘ toJSONSchema enum (covered 0)
+  ✘ toJSONSchema literal (covered 0)
+  ✘ toJSONSchema pipe (covered 0)
+  ✘ toJSONSchema simple objects (covered 0)
+  ✘ toJSONSchema additionalproperties in z.object (covered 0)
+  ✘ toJSONSchema catchall objects (covered 0)
+  ✘ toJSONSchema optional fields - object (covered 0)
+  ✘ toJSONSchema recursive object (covered 0)
+  ✘ toJSONSchema simple interface (covered 0)
+  ✘ toJSONSchema catchall interface (covered 0)
+  ✘ toJSONSchema recursive interface schemas (covered 0)
+  ✘ toJSONSchema mutually recursive interface schemas (covered 0)
+  ✘ override (covered 0)
+  ~ override: do not run on references (covered 7)
+  ✘ override with refs (covered 0)
+  ✘ override execution order (covered 0)
+  ✘ pipe (covered 0)
+  ✘ passthrough schemas (covered 0)
+  ✘ extract schemas with id (covered 0)
+  ✘ unrepresentable literal values are ignored (covered 0)
+  ✘ describe with id (covered 0)
+  ✘ overwrite id (covered 0)
+  ✘ overwrite descriptions (covered 0)
+  ✘ top-level readonly (covered 0)
+  ✘ basic registry (covered 0)
+  ✘ _ref (covered 0)
+  ✘ defaults/prefaults (covered 0)
+  ✘ input type (covered 0)
+  ✘ examples on pipe (covered 0)
+
+[NoCoverage] ObjectLiteral
+packages/zod/src/v4/core/to-json-schema.ts:172:51
+-                     ...(this.target === "draft-7" ? { type: "string" } : {}),
++                     ...(this.target === "draft-7" ? {} : {}),
+
+[NoCoverage] StringLiteral
+packages/zod/src/v4/core/to-json-schema.ts:172:59
+-                     ...(this.target === "draft-7" ? { type: "string" } : {}),
++                     ...(this.target === "draft-7" ? { type: "" } : {}),
+
+[Survived] ConditionalExpression
+packages/zod/src/v4/core/to-json-schema.ts:163:17
+-               if (json.format === "") delete json.format; // empty format is not valid
++               if (false) delete json.format; // empty format is not valid
+Tests ran:
+    toJSONSchema primitive types
+    toJSONSchema string formats
+    toJSONSchema string patterns
+  and 1 more test!
+
+
+[Survived] StringLiteral
+packages/zod/src/v4/core/to-json-schema.ts:163:33
+-               if (json.format === "") delete json.format; // empty format is not valid
++               if (json.format === "Stryker was here!") delete json.format; // empty format is not valid
+Tests ran:
+    toJSONSchema primitive types
+    toJSONSchema string formats
+    toJSONSchema string patterns
+  and 1 more test!
+
+
+[Survived] ConditionalExpression
+packages/zod/src/v4/core/to-json-schema.ts:169:22
+-               else if (regexes.length > 1) {
++               else if (true) {
+Tests ran:
+    toJSONSchema string patterns
+
+
+[Survived] EqualityOperator
+packages/zod/src/v4/core/to-json-schema.ts:169:22
+-               else if (regexes.length > 1) {
++               else if (regexes.length >= 1) {
+Tests ran:
+    toJSONSchema string patterns
+
+
+[Survived] ConditionalExpression
+packages/zod/src/v4/core/to-json-schema.ts:172:23
+-                     ...(this.target === "draft-7" ? { type: "string" } : {}),
++                     ...(false ? { type: "string" } : {}),
+Tests ran:
+    toJSONSchema string patterns
+
+
+[Survived] StringLiteral
+packages/zod/src/v4/core/to-json-schema.ts:172:39
+-                     ...(this.target === "draft-7" ? { type: "string" } : {}),
++                     ...(this.target === "" ? { type: "string" } : {}),
+Tests ran:
+    toJSONSchema string patterns
+
+
+Ran 1.35 tests per mutant on average.
+-------------------|------------------|----------|-----------|------------|----------|----------|
+                   | % Mutation score |          |           |            |          |          |
+File               |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+-------------------|--------|---------|----------|-----------|------------|----------|----------|
+All files          |  52.94 |   60.00 |        9 |         0 |          6 |        2 |        0 |
+ to-json-schema.ts |  52.94 |   60.00 |        9 |         0 |          6 |        2 |        0 |
+-------------------|--------|---------|----------|-----------|------------|----------|----------|
+[32m16:41:39 (45774) INFO MutationTestReportHelper[39m Final mutation score of 52.94 is greater than or equal to break threshold 0
+[32m16:41:39 (45774) INFO JsonReporter[39m Your report can be found at: file:///Users/donggi/_projects/etc-projects/zod-thesis/experiments/zod-repair-classification-v2/cases/s04-6b13cc94/signal/stryker/mutation.json
+[32m16:41:39 (45774) INFO MutationTestExecutor[39m Done in 3 seconds.
+
+## stderr

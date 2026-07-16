@@ -1,0 +1,70 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s04-6b13cc94/packages/zod
+
+ ❯ src/v4/classic/tests/json-schema.test.ts (41 tests | 2 failed) 35ms
+   × toJSONSchema > string formats 3ms
+     → Snapshot `toJSONSchema > string formats 12` mismatched
+   × toJSONSchema > string patterns 1ms
+     → Snapshot `toJSONSchema > string patterns 2` mismatched
+ ✓  TS  src/v4/classic/tests/json-schema.test.ts (41 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/v4/classic/tests/json-schema.test.ts > toJSONSchema > string formats
+Error: Snapshot `toJSONSchema > string formats 12` mismatched
+
+- Expected
++ Received
+
+  {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+-   "format": "regex",
+    "pattern": "asdf",
+    "type": "string",
+  }
+
+ ❯ src/v4/classic/tests/json-schema.test.ts:361:54
+    359|       }
+    360|     `);
+    361|     expect(z.toJSONSchema(z.string().regex(/asdf/))).toMatchInlineSnap…
+       |                                                      ^
+    362|       {
+    363|         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/v4/classic/tests/json-schema.test.ts > toJSONSchema > string patterns
+Error: Snapshot `toJSONSchema > string patterns 2` mismatched
+
+- Expected
++ Received
+
+@@ -6,8 +6,7 @@
+      },
+      {
+        "pattern": "world$",
+      },
+    ],
+-   "format": "regex",
+    "type": "string",
+  }
+
+ ❯ src/v4/classic/tests/json-schema.test.ts:397:7
+    395|           .regex(/world$/)
+    396|       )
+    397|     ).toMatchInlineSnapshot(`
+       |       ^
+    398|   {
+    399|     "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+  Snapshots  2 failed
+ Test Files  1 failed | 1 passed (2)
+      Tests  2 failed | 80 passed (82)
+Type Errors  no errors
+   Start at  15:51:29
+   Duration  4.08s (transform 156ms, setup 0ms, collect 231ms, tests 35ms, environment 0ms, prepare 42ms, typecheck 3.97s)
+

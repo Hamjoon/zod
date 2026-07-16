@@ -1,0 +1,15 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/json-schema.test.ts --config /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s04-6b13cc94/.openclaw-signal/s04-6b13cc94/vitest.signal.config.ts --reporter=dot
+status=0
+## stdout
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s04-6b13cc94
+
+ ✓ packages/zod/src/v4/classic/tests/json-schema.test.ts (41 tests) 33ms
+
+ Test Files  1 passed (1)
+      Tests  41 passed (41)
+   Start at  16:41:33
+   Duration  511ms (transform 188ms, setup 0ms, collect 243ms, tests 33ms, environment 0ms, prepare 41ms)
+
+
+## stderr

@@ -1,0 +1,364 @@
+{
+  "case": "s04-6b13cc94",
+  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s04-6b13cc94",
+  "tests": [
+    "packages/zod/src/v4/classic/tests/json-schema.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/core/to-json-schema.ts",
+  "mutate": "packages/zod/src/v4/core/to-json-schema.ts:51-54,packages/zod/src/v4/core/to-json-schema.ts:163-163,packages/zod/src/v4/core/to-json-schema.ts:168-170,packages/zod/src/v4/core/to-json-schema.ts:172-172",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/to-json-schema.ts",
+      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s04-6b13cc94/packages/zod/src/v4/core/to-json-schema.ts",
+      "metrics": {
+        "lines": {
+          "total": 586,
+          "covered": 520,
+          "skipped": 0,
+          "pct": 88.73
+        },
+        "functions": {
+          "total": 7,
+          "covered": 7,
+          "skipped": 0,
+          "pct": 100
+        },
+        "statements": {
+          "total": 586,
+          "covered": 520,
+          "skipped": 0,
+          "pct": 88.73
+        },
+        "branches": {
+          "total": 201,
+          "covered": 162,
+          "skipped": 0,
+          "pct": 80.59
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/to-json-schema.ts",
+      "fileKey": "packages/zod/src/v4/core/to-json-schema.ts",
+      "totals": {
+        "NoCoverage": 2,
+        "Survived": 6,
+        "Killed": 9
+      },
+      "mutants": [
+        {
+          "id": "15",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "location": {
+            "end": {
+              "column": 69,
+              "line": 172
+            },
+            "start": {
+              "column": 51,
+              "line": 172
+            }
+          }
+        },
+        {
+          "id": "16",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "location": {
+            "end": {
+              "column": 67,
+              "line": 172
+            },
+            "start": {
+              "column": 59,
+              "line": 172
+            }
+          }
+        },
+        {
+          "id": "1",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 35,
+              "line": 163
+            },
+            "start": {
+              "column": 17,
+              "line": 163
+            }
+          }
+        },
+        {
+          "id": "2",
+          "mutatorName": "EqualityOperator",
+          "replacement": "json.format !== \"\"",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 35,
+              "line": 163
+            },
+            "start": {
+              "column": 17,
+              "line": 163
+            }
+          },
+          "killedBy": [
+            "0"
+          ]
+        },
+        {
+          "id": "0",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 35,
+              "line": 163
+            },
+            "start": {
+              "column": 17,
+              "line": 163
+            }
+          },
+          "killedBy": [
+            "0"
+          ]
+        },
+        {
+          "id": "3",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 35,
+              "line": 163
+            },
+            "start": {
+              "column": 33,
+              "line": 163
+            }
+          }
+        },
+        {
+          "id": "5",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 168
+            },
+            "start": {
+              "column": 17,
+              "line": 168
+            }
+          },
+          "killedBy": [
+            "0"
+          ]
+        },
+        {
+          "id": "4",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 168
+            },
+            "start": {
+              "column": 17,
+              "line": 168
+            }
+          },
+          "killedBy": [
+            "3"
+          ]
+        },
+        {
+          "id": "7",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 40,
+              "line": 169
+            },
+            "start": {
+              "column": 22,
+              "line": 169
+            }
+          }
+        },
+        {
+          "id": "6",
+          "mutatorName": "EqualityOperator",
+          "replacement": "regexes.length !== 1",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 168
+            },
+            "start": {
+              "column": 17,
+              "line": 168
+            }
+          },
+          "killedBy": [
+            "0"
+          ]
+        },
+        {
+          "id": "9",
+          "mutatorName": "EqualityOperator",
+          "replacement": "regexes.length >= 1",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 40,
+              "line": 169
+            },
+            "start": {
+              "column": 22,
+              "line": 169
+            }
+          }
+        },
+        {
+          "id": "8",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 40,
+              "line": 169
+            },
+            "start": {
+              "column": 22,
+              "line": 169
+            }
+          },
+          "killedBy": [
+            "3"
+          ]
+        },
+        {
+          "id": "10",
+          "mutatorName": "EqualityOperator",
+          "replacement": "regexes.length <= 1",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 40,
+              "line": 169
+            },
+            "start": {
+              "column": 22,
+              "line": 169
+            }
+          },
+          "killedBy": [
+            "3"
+          ]
+        },
+        {
+          "id": "11",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 172
+            },
+            "start": {
+              "column": 23,
+              "line": 172
+            }
+          },
+          "killedBy": [
+            "3"
+          ]
+        },
+        {
+          "id": "12",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 172
+            },
+            "start": {
+              "column": 23,
+              "line": 172
+            }
+          }
+        },
+        {
+          "id": "13",
+          "mutatorName": "EqualityOperator",
+          "replacement": "this.target !== \"draft-7\"",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 172
+            },
+            "start": {
+              "column": 23,
+              "line": 172
+            }
+          },
+          "killedBy": [
+            "3"
+          ]
+        },
+        {
+          "id": "14",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 172
+            },
+            "start": {
+              "column": 39,
+              "line": 172
+            }
+          }
+        }
+      ]
+    }
+  },
+  "verdict": "signal_weakened"
+}

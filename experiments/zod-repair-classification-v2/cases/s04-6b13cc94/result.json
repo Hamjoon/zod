@@ -1,0 +1,12 @@
+{
+  "id": "s04-6b13cc94",
+  "category": "S",
+  "expected": "fix_tests",
+  "decision": "fix_production",
+  "decision_match": false,
+  "first_line_ok": true,
+  "has_diff": true,
+  "validation": "green",
+  "apply_method": "context-match",
+  "note": ""
+}
