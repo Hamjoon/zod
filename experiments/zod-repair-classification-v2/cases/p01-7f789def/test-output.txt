@@ -1,0 +1,84 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p01-7f789def
+
+ ❯  zod  src/v4/core/tests/record-constructor.test.ts (8 tests | 3 failed) 14ms
+   ✓ record should parse objects with non-function constructor field 2ms
+   ✓ record should still work with normal objects 0ms
+   ✓ record should validate values according to schema even with constructor field 0ms
+   ✓ record should work with different key types and constructor field 0ms
+   × record should skip non-enumerable own properties 3ms
+   ✓ record fails on enumerable invalid values even when non-enumerable properties are present 1ms
+   × record validates enumerable Symbol keys and skips non-enumerable Symbol keys 1ms
+   × z.json() accepts z.toJSONSchema() output (issue #5714) 5ms
+ ✓  zod   TS  src/v4/core/tests/record-constructor.test.ts (8 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL   zod  src/v4/core/tests/record-constructor.test.ts > record should skip non-enumerable own properties
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/v4/core/tests/record-constructor.test.ts:81:26
+     79| 
+     80|   const result = schema.safeParse(input);
+     81|   expect(result.success).toBe(true);
+       |                          ^
+     82|   if (result.success) {
+     83|     expect(result.data).toEqual({ key: "value" });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL   zod  src/v4/core/tests/record-constructor.test.ts > record validates enumerable Symbol keys and skips non-enumerable Symbol keys
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/v4/core/tests/record-constructor.test.ts:113:26
+    111| 
+    112|   const result = schema.safeParse(input);
+    113|   expect(result.success).toBe(true);
+       |                          ^
+    114|   if (result.success) {
+    115|     expect(result.data[enumerableSym]).toBe("value");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL   zod  src/v4/core/tests/record-constructor.test.ts > z.json() accepts z.toJSONSchema() output (issue #5714)
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/v4/core/tests/record-constructor.test.ts:124:50
+    122|   const jsonSchema = z.toJSONSchema(schema);
+    123| 
+    124|   expect(z.json().safeParse(jsonSchema).success).toBe(true);
+       |                                                  ^
+    125| });
+    126| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  3 failed | 13 passed (16)
+Type Errors  no errors
+   Start at  15:50:51
+   Duration  7.68s (transform 1.16s, setup 23ms, collect 1.47s, tests 14ms, environment 0ms, prepare 4ms, typecheck 6.06s)
+

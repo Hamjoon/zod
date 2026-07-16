@@ -1,0 +1,33 @@
+$ pnpm stryker run /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p01-7f789def/.openclaw-signal/p01-7f789def/stryker.signal.config.mjs
+status=0
+## stdout
+[32m16:34:41 (36619) INFO ProjectReader[39m Found 1 of 588 file(s) to be mutated.
+[32m16:34:41 (36619) INFO ProjectReader[39m Found 1 test file(s) matching --testFiles patterns.
+[32m16:34:42 (36619) INFO Instrumenter[39m Instrumented 1 source file(s) with 3 mutant(s)
+[32m16:34:42 (36619) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m16:34:42 (36619) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m16:34:43 (36619) INFO DryRunExecutor[39m Initial test run succeeded. Ran 8 tests in 0 seconds (net 5.033626000000027 ms, overhead 352.966374 ms).
+
+All tests/record-constructor.test.ts
+  ✓ record should parse objects with non-function constructor field (killed 2)
+  ~ record should still work with normal objects (covered 3)
+  ~ record should validate values according to schema even with constructor field (covered 3)
+  ✘ record should work with different key types and constructor field (covered 0)
+  ✓ record should skip non-enumerable own properties (killed 1)
+  ~ record fails on enumerable invalid values even when non-enumerable properties are present (covered 3)
+  ~ record validates enumerable Symbol keys and skips non-enumerable Symbol keys (covered 3)
+  ~ z.json() accepts z.toJSONSchema() output (issue #5714) (covered 3)
+
+Ran 2.00 tests per mutant on average.
+------------|------------------|----------|-----------|------------|----------|----------|
+            | % Mutation score |          |           |            |          |          |
+File        |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+All files   | 100.00 |  100.00 |        3 |         0 |          0 |        0 |        0 |
+ schemas.ts | 100.00 |  100.00 |        3 |         0 |          0 |        0 |        0 |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+[32m16:34:43 (36619) INFO MutationTestReportHelper[39m Final mutation score of 100.00 is greater than or equal to break threshold 0
+[32m16:34:43 (36619) INFO JsonReporter[39m Your report can be found at: file:///Users/donggi/_projects/etc-projects/zod-thesis/experiments/zod-repair-classification-v2/cases/p01-7f789def/signal/stryker/mutation.json
+[32m16:34:43 (36619) INFO MutationTestExecutor[39m Done in 1 second.
+
+## stderr

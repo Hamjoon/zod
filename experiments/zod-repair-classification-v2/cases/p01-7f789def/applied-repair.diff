@@ -1,0 +1,22 @@
+diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts
+index 501d44c4..0f78a798 100644
+--- a/packages/zod/src/v4/core/schemas.ts
++++ b/packages/zod/src/v4/core/schemas.ts
+@@ -2815,8 +2815,17 @@ export const $ZodRecord: core.$constructor<$ZodRecord> = /*@__PURE__*/ core.$con
+       }
+     } else {
+       payload.value = {};
++      // Only iterate over **enumerable** own properties.
++      // Reflect.ownKeys returns both enumerable and non‑enumerable keys (including symbols).
++      // Zod's record schema should ignore non‑enumerable properties, mirroring the behavior
++      // of plain object iteration (e.g., `for...in` or `Object.keys`). This also ensures that
++      // hidden/internal properties (like those used by Zod internally) do not cause validation
++      // failures.
+       for (const key of Reflect.ownKeys(input)) {
++        // Skip prototype pollution
+         if (key === "__proto__") continue;
++        // Skip non‑enumerable properties
++        if (!Object.prototype.propertyIsEnumerable.call(input, key)) continue;
+         let keyResult = def.keyType._zod.run({ value: key, issues: [] }, ctx);
+         if (keyResult instanceof Promise) {
+           throw new Error("Async schemas not supported in object keys currently");
