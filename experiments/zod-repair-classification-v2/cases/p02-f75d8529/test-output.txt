@@ -1,0 +1,51 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p02-f75d8529/packages/zod
+
+ ❯ src/v4/classic/tests/literal.test.ts (10 tests | 1 failed) 13ms
+   × literal pattern 1ms
+     → Snapshot `literal pattern 1` mismatched
+ ❯ src/v4/classic/tests/template-literal.test.ts (8 tests | 1 failed) 46ms
+   × template literal parsing - failure - basic cases 4ms
+     → expected [Function] to throw an error
+ ✓  TS  src/v4/classic/tests/template-literal.test.ts (8 tests)
+ ✓  TS  src/v4/classic/tests/literal.test.ts (10 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/v4/classic/tests/literal.test.ts > literal pattern
+Error: Snapshot `literal pattern 1` mismatched
+
+Expected: "/\^\(1\\\.1\)\$/"
+Received: "/\^\(1\.1\)\$/"
+
+ ❯ src/v4/classic/tests/literal.test.ts:95:39
+     93| 
+     94| test("literal pattern", () => {
+     95|   expect(z.literal(1.1)._zod.pattern).toMatchInlineSnapshot(`/\\^\\(1\…
+       |                                       ^
+     96| 
+     97|   expect(z.templateLiteral([z.literal(1.1)]).safeParse("1.1")).toMatch…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/v4/classic/tests/template-literal.test.ts > template literal parsing - failure - basic cases
+AssertionError: expected [Function] to throw an error
+ ❯ src/v4/classic/tests/template-literal.test.ts:386:42
+    384|   expect(() => one.parse("12")).toThrow();
+    385|   expect(() => one.parse("21")).toThrow();
+    386|   expect(() => onePointOne.parse("1s1")).toThrow();
+       |                                          ^
+    387|   expect(() => two.parse("1")).toThrow();
+    388|   expect(() => two.parse("21")).toThrow();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+  Snapshots  1 failed
+ Test Files  2 failed | 2 passed (4)
+      Tests  2 failed | 34 passed (36)
+Type Errors  no errors
+   Start at  15:51:11
+   Duration  5.28s (transform 814ms, setup 0ms, collect 2.31s, tests 59ms, environment 0ms, prepare 338ms, typecheck 4.99s)
+

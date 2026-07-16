@@ -1,0 +1,7 @@
+@@
+-        .map((o) => (typeof o === "string" ? util.escapeRegex(o) : o ? o.toString() : String(o)))
++        .map((o) => {
++          // For non-string literals, ensure the string representation is escaped for regex.
++          const str = typeof o === "string" ? o : o ? o.toString() : String(o);
++          return util.escapeRegex(str);
++        })

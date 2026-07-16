@@ -1,0 +1,57 @@
+$ pnpm stryker run /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p02-f75d8529/.openclaw-signal/p02-f75d8529/stryker.signal.config.mjs
+status=0
+## stdout
+[32m16:35:03 (37742) INFO ProjectReader[39m Found 1 of 495 file(s) to be mutated.
+[32m16:35:03 (37742) INFO ProjectReader[39m Found 2 test file(s) matching --testFiles patterns.
+[32m16:35:03 (37742) INFO Instrumenter[39m Instrumented 1 source file(s) with 5 mutant(s)
+[32m16:35:04 (37742) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m16:35:04 (37742) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m16:35:05 (37742) INFO DryRunExecutor[39m Initial test run succeeded. Ran 18 tests in 0 seconds (net 26.873542999999927 ms, overhead 417.1264570000001 ms).
+
+All tests
+  literal.test.ts
+    ✘ passing validations (covered 0)
+    ✘ failing validations (covered 0)
+    ✘ invalid_literal should have `input` field with data (covered 0)
+    ✘ invalid_literal should return default message (covered 0)
+    ✘ invalid_literal should return custom message (covered 0)
+    ~ literal default error message (covered 5)
+    ✓ literal bigint default error message (killed 2)
+    ~ .value getter (covered 5)
+    ~ readonly (covered 5)
+    ✓ literal pattern (killed 1)
+  template-literal.test.ts
+    ✘ template literal type inference (covered 0)
+    ✘ template literal unsupported args (covered 0)
+    ✘ template literal parsing - success - basic cases (covered 0)
+    ✘ template literal parsing - failure - basic cases (covered 0)
+    ✘ regexes (covered 0)
+    ✘ template literal parsing - success - complex cases (covered 0)
+    ✘ template literal parsing - failure - complex cases (covered 0)
+    ✘ template literal parsing - failure - issue format (covered 0)
+
+[Survived] ConditionalExpression
+packages/zod/src/v4/core/schemas.ts:2800:23
+-             const str = typeof o === "string" ? o : o ? o.toString() : String(o);
++             const str = false ? o : o ? o.toString() : String(o);
+Ran all tests for this mutant.
+
+[Survived] StringLiteral
+packages/zod/src/v4/core/schemas.ts:2800:36
+-             const str = typeof o === "string" ? o : o ? o.toString() : String(o);
++             const str = typeof o === "" ? o : o ? o.toString() : String(o);
+Ran all tests for this mutant.
+
+Ran 3.80 tests per mutant on average.
+------------|------------------|----------|-----------|------------|----------|----------|
+            | % Mutation score |          |           |            |          |          |
+File        |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+All files   |  60.00 |   60.00 |        3 |         0 |          2 |        0 |        0 |
+ schemas.ts |  60.00 |   60.00 |        3 |         0 |          2 |        0 |        0 |
+------------|--------|---------|----------|-----------|------------|----------|----------|
+[32m16:35:05 (37742) INFO MutationTestReportHelper[39m Final mutation score of 60.00 is greater than or equal to break threshold 0
+[32m16:35:05 (37742) INFO JsonReporter[39m Your report can be found at: file:///Users/donggi/_projects/etc-projects/zod-thesis/experiments/zod-repair-classification-v2/cases/p02-f75d8529/signal/stryker/mutation.json
+[32m16:35:05 (37742) INFO MutationTestExecutor[39m Done in 1 second.
+
+## stderr

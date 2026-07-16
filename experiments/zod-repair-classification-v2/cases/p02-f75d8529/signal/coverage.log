@@ -1,0 +1,17 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/literal.test.ts packages/zod/src/v4/classic/tests/template-literal.test.ts --config /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p02-f75d8529/.openclaw-signal/p02-f75d8529/vitest.signal.config.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter json --coverage.reporter json-summary --coverage.reportsDirectory /Users/donggi/_projects/etc-projects/zod-thesis/experiments/zod-repair-classification-v2/cases/p02-f75d8529/signal/coverage --coverage.include packages/zod/src/v4/core/schemas.ts
+status=0
+## stdout
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p02-f75d8529
+      Coverage enabled with v8
+
+ ✓ packages/zod/src/v4/classic/tests/literal.test.ts (10 tests) 9ms
+ ✓ packages/zod/src/v4/classic/tests/template-literal.test.ts (8 tests) 25ms
+
+ Test Files  2 passed (2)
+      Tests  18 passed (18)
+   Start at  16:35:01
+   Duration  635ms (transform 220ms, setup 0ms, collect 564ms, tests 34ms, environment 0ms, prepare 81ms)
+
+
+## stderr

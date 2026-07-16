@@ -1,0 +1,17 @@
+diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts
+index d95afdeb..fcefeb1a 100644
+--- a/packages/zod/src/v4/core/schemas.ts
++++ b/packages/zod/src/v4/core/schemas.ts
+@@ -2795,7 +2795,11 @@ export const $ZodLiteral: core.$constructor<$ZodLiteral> = /*@__PURE__*/ core.$c
+     inst._zod.pattern = new RegExp(
+       `^(${def.values
+ 
+-        .map((o) => (typeof o === "string" ? util.escapeRegex(o) : o ? o.toString() : String(o)))
++        .map((o) => {
++          // For non-string literals, ensure the string representation is escaped for regex.
++          const str = typeof o === "string" ? o : o ? o.toString() : String(o);
++          return util.escapeRegex(str);
++        })
+         .join("|")})$`
+     );
+ 
