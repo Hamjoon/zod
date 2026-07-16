@@ -8,5 +8,7 @@
   "has_diff": true,
   "validation": "green",
   "apply_method": "context-match",
-  "note": ""
+  "note": "",
+  "preservation": "preserved",
+  "completeness": "complete"
 }

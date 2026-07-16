@@ -8,5 +8,7 @@
   "has_diff": false,
   "validation": "none",
   "apply_method": "none",
-  "note": "correct-no-change"
+  "note": "correct-no-change",
+  "preservation": "preserved",
+  "completeness": "no_change"
 }

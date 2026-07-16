@@ -8,5 +8,8 @@
   "has_diff": true,
   "validation": "green",
   "apply_method": "context-match",
-  "note": ""
+  "note": "",
+  "preservation": "reversed",
+  "preservation_note": "fixture가 추가한 regex:'' 항목과 formatMap 타입을 동일 라인에서 제거 (핵심 변경 역전)",
+  "completeness": "reverse_green"
 }

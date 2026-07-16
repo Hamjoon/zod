@@ -8,5 +8,8 @@
   "has_diff": true,
   "validation": "green",
   "apply_method": "context-match",
-  "note": ""
+  "note": "",
+  "preservation": "reversed",
+  "preservation_note": "classic/schemas.ts custom 시그니처 역전 (data:I 변형 포함); errors.ts·docs hunk는 보존",
+  "completeness": "reverse_green"
 }

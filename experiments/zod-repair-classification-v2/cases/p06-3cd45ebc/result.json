@@ -8,5 +8,7 @@
   "has_diff": true,
   "validation": "apply_failed",
   "apply_method": "none",
-  "note": "patch-does-not-apply"
+  "note": "patch-does-not-apply",
+  "preservation": "preserved",
+  "completeness": "apply_failed"
 }

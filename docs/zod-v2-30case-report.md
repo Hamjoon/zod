@@ -34,7 +34,10 @@
 2. **분류 지표는 보조 지표다.** v2 프롬프트는 diff 위치(테스트 파일 vs production 파일)와
    테스트 상태(red vs green)라는 표면 규칙만으로도 기대 분류를 복원할 수 있는 구조다.
    따라서 주 지표는 repair 완성도, focused mutation signal, N 불필요 수정률이고,
-   DECISION 일치율은 참고용이다.
+   DECISION 일치율은 참고용이다. 다만 반증 관찰을 병기한다: 모델이 실제로 이 표면 규칙
+   ("최근 바뀐 쪽이 옳다")을 따랐다면 DECISION은 30/30이어야 하나 실측은 S 5/10이었다.
+   즉 모델은 표면 규칙을 사용하지 않았고, P 10/10 vs S 5/10의 비대칭은 diff 위치와 무관하게
+   **테스트를 스펙으로 신뢰하는** 사전 성향과 정합한다.
 3. 빌드 산출물에서 테스트가 zod를 import하는 upstream 구간은 **"dist-mode 구간(2025-09~2025-12)"**
    으로 통일해 부른다. 이번 30케이스 중 dist-mode 구간 케이스는 p03(base `f97e80da`) 1건이며,
    fixture 구성·validation·signal 측정 모두 재빌드 상태에서 수행했다.
@@ -92,18 +95,18 @@ worktree로 재구성했고, 30건 모두 red/green 상태가 검증 배치 기�
 | --- | --- | --- | --- | --- | --- |
 | s01 | [a410616b](https://github.com/colinhacks/zod/commit/a410616b) | [0cf45896](https://github.com/colinhacks/zod/commit/0cf45896) tuple→JSON Schema oneOf | fix_tests ✅ | complete | signal_preserved |
 | s02 | [9443aab0](https://github.com/colinhacks/zod/commit/9443aab0) | [66bda749](https://github.com/colinhacks/zod/commit/66bda749) ZodMiniType `.refine()` 제거 | fix_production ❌ | patch 적용 실패 | - |
-| s03 | [103f69be](https://github.com/colinhacks/zod/commit/103f69be) | [3a8edd74](https://github.com/colinhacks/zod/commit/3a8edd74) preprocess output type revert | fix_production ❌ | complete (역방향) | signal_weakened |
-| s04 | [39d84d03](https://github.com/colinhacks/zod/commit/39d84d03) | [6b13cc94](https://github.com/colinhacks/zod/commit/6b13cc94) JSON Schema pattern polish | fix_production ❌ | complete (역방향) | signal_weakened |
+| s03 | [103f69be](https://github.com/colinhacks/zod/commit/103f69be) | [3a8edd74](https://github.com/colinhacks/zod/commit/3a8edd74) preprocess output type revert | fix_production ❌ | reverse_green | (별도 표) |
+| s04 | [39d84d03](https://github.com/colinhacks/zod/commit/39d84d03) | [6b13cc94](https://github.com/colinhacks/zod/commit/6b13cc94) JSON Schema pattern polish | fix_production ❌ | reverse_green | (별도 표) |
 | s05 | [845a230b](https://github.com/colinhacks/zod/commit/845a230b) | [27f13d62](https://github.com/colinhacks/zod/commit/27f13d62) regex 정밀도 개선 | fix_tests ✅ | patch 적용 실패 | - |
-| s06 | [a2c98924](https://github.com/colinhacks/zod/commit/a2c98924) | [6d47791b](https://github.com/colinhacks/zod/commit/6d47791b) v.custom input type fix | fix_production ❌ | complete (역방향) | signal_unknown |
+| s06 | [a2c98924](https://github.com/colinhacks/zod/commit/a2c98924) | [6d47791b](https://github.com/colinhacks/zod/commit/6d47791b) v.custom input type fix | fix_production ❌ | reverse_green | (별도 표) |
 | s07 | [98c849de](https://github.com/colinhacks/zod/commit/98c849de) | [2529f827](https://github.com/colinhacks/zod/commit/2529f827) JSON Schema identifier 교정 | fix_tests ✅ | partial (37→17 red) | partial_repair |
 | s08 | [f97733ff](https://github.com/colinhacks/zod/commit/f97733ff) | [ad2fc5ee](https://github.com/colinhacks/zod/commit/ad2fc5ee) File schema JSON Schema | fix_production ❌ | patch 적용 실패 | - |
 | s09 | [592de8de](https://github.com/colinhacks/zod/commit/592de8de) | [f98d1a30](https://github.com/colinhacks/zod/commit/f98d1a30) URL behavior 표준화 | fix_tests ✅ | partial (1 red) | partial_repair |
 | s10 | [a73a3b30](https://github.com/colinhacks/zod/commit/a73a3b30) | [5fdece94](https://github.com/colinhacks/zod/commit/5fdece94) min/maxLength inclusive 반영 | fix_tests ✅ | partial (10→11 red) | partial_repair |
 
-"complete (역방향)"은 target validation은 green이지만 모델이 테스트 대신 production을 고쳐
-**의도된 behavior 변경 자체를 되돌리는 방향**으로 green을 만든 경우다. 분류상 misclassification이고,
-실행 결과로는 green repair라서 signal 측정 대상에 포함했다.
+`reverse_green`은 target validation은 green이지만 fixture로 적용된 최근 변경이 repair 후
+트리에 보존되지 않은 — 즉 **의도된 behavior 변경을 되돌려 green에 도달한** — 경우로,
+completeness 집계에서 제외하고 misrepair로 분류한다 (taxonomy 정의는 요약 절 참조).
 
 ## Case Matrix — P (production-regression, 기대 DECISION: fix_production)
 
@@ -142,32 +145,43 @@ worktree로 재구성했고, 30건 모두 red/green 상태가 검증 배치 기�
 
 - DECISION 분류: 전체 `25 / 30` (S `5/10`, P `10/10`, N `10/10`)
 - S 오분류 5건은 모두 `fix_production` — 의도된 변경을 되돌리는 방향
-- repair 완성도 (S/P 20건): complete `10`, partial `6`, patch 적용 실패 `4`
-  - 기대 target대로 green: `7` (s01, p01, p02, p03, p04, p07, p09)
-  - 역방향(오분류) green: `3` (s03, s04, s06)
-- Signal 판정 (green 10건): signal_preserved `5`, signal_weakened `4`, signal_unknown `1`
+- repair 완성도 (S/P 20건): **complete `7` · reverse_green `3` · partial `6` · patch 적용 실패 `4`**
+  - complete (기대 target대로 green + 최근 변경 보존): s01, p01, p02, p03, p04, p07, p09
+  - reverse_green (green이지만 최근 변경이 되돌려짐 — misrepair): s03, s04, s06
+- Signal 판정 (정방향 green 7건 기준): signal_preserved `5`, signal_weakened `2`
+  - reverse_green 3건의 mutation 측정치는 별도 표로 보고 (본 지표와 의미가 다름)
 - N 불필요 수정률: `0 / 10`
 
+### Taxonomy 정의와 계보
+
 `Repair 완성도`는 모델 diff 적용 후 target validation(S/P는 대상 테스트 파일, N은 `packages/zod`
-스위트) 실행 결과다. `complete`=green, `partial`=적용됐으나 red, `patch 적용 실패`=어떤 적용
-방식으로도 diff를 적용할 수 없음.
+스위트) 실행 결과에 **recent-change preservation 체크**를 결합해 판정한다.
+
+- `complete` = green 도달 **+** fixture로 적용한 최근 변경이 repair 후 트리에 보존
+  (`git apply --reverse --check fixture.patch` 성공)
+- `reverse_green` = green 도달했으나 최근 변경이 되돌려지거나 훼손됨. completeness 집계에서
+  제외하고 misrepair로 분류
+- `partial` = 적용됐으나 red, `patch 적용 실패` = 어떤 적용 방식으로도 diff를 적용할 수 없음
+
+정의 계보: v1에서 승계한 green 기준 completeness 정의는 v1 프로토콜의 constraint상
+역방향 green이 발생할 수 없어 충분했으나, v2에서 S의 target 선택이 자유로워지며 불충분함이
+드러났다. 이에 사후 재분석에서 `reverse_green`을 분리하고 preservation을 `complete`의
+필요조건으로 추가했다. preservation 체크는 30건 전체에 소급 실행했으며(정적 검사만,
+모델·테스트·Stryker 재실행 없음), 실패 3건(s03/s04/s06)은 diff를 열어 전면/부분 revert임을
+확인한 뒤 판정했다 — 정당한 수정이 fixture hunk와 라인만 겹친 경우는 없었다.
 
 `Signal 판정`은 7월 1주차와 동일한 분류를 쓴다: target validation green이면서 focused mutants가
 모두 killed면 `signal_preserved`, survived/no-coverage가 남으면 `signal_weakened`, validation red면
 `partial_repair`, mutation 결과가 판정 불능이면 `signal_unknown`.
 
-## Coverage 및 Mutation Signal (green repair 10건)
+## Coverage 및 Mutation Signal (정방향 green 7건)
 
 Focused StrykerJS scope는 검증된 worktree의 production 순변경(base 대비 git diff) hunk 라인으로
-한정했다. S/N은 upstream production diff, P는 모델 patch, 역방향 green은 둘의 합성 영역과 같다.
+한정했다. S/N은 upstream production diff, P는 모델 patch에 해당한다.
 
 | ID | Scope (파일: 라인) | Coverage lines | Mutants (K/S/NC) | Signal 판정 |
 | --- | --- | --- | --- | --- |
 | s01 | `to-json-schema.ts:387-391` | 710/798 (88.97%) | 2 / 0 / 0 | signal_preserved |
-| s03 | `v3/types.ts:4077-4426` 7구간 | 962/3470 (27.72%) | 0 / 15 / 0 | signal_weakened |
-| s03 | `to-json-schema.ts:502-509` | 531/595 (89.24%) | 8 / 0 / 0 | (v4 scope는 preserved) |
-| s04 | `to-json-schema.ts:51-172` 4구간 | 520/586 (88.73%) | 9 / 6 / 2 | signal_weakened |
-| s06 | `classic/schemas.ts:1966`, `errors.ts:89,152-153` | 73~95% | 0 / 0 / 0 (mutant 없음) | signal_unknown |
 | p01 | `schemas.ts:2818-2828` 3구간 | 231/1124 (20.55%) | 3 / 0 / 0 | signal_preserved |
 | p02 | `schemas.ts:2798-2802` | 470/1713 (27.43%) | 3 / 2 / 0 | signal_weakened |
 | p03 | `util.ts:378-390` 3구간 | 95/280 (33.92%) | 7 / 0 / 0 | signal_preserved |
@@ -175,32 +189,53 @@ Focused StrykerJS scope는 검증된 worktree의 production 순변경(base 대�
 | p07 | `schemas.ts:890-895` | 270/1128 (23.93%) | 4 / 0 / 0 | signal_preserved |
 | p09 | `to-json-schema.ts:371-408` 8구간 | 708/791 (89.5%) | 12 / 4 / 0 | signal_weakened |
 
-s06은 repair 영역이 전부 타입 시그니처 변경이라 focused scope 안에 behavioral mutant가
-생성되지 않았다(0 mutants). 판정 불능이므로 `signal_unknown`으로 남긴다.
+### reverse_green 3건의 mutation 측정치 (참고용 별도 보고)
+
+아래 측정치는 **mutation scope의 대상인 upstream 변경 자체가 부재한(되돌려진) 트리에서의
+측정**으로, 위 본 지표와 의미가 다르다. 폐기하지 않고 참고용으로 보존한다.
+
+| ID | Scope (파일: 라인) | Mutants (K/S/NC) | 당시 판정 |
+| --- | --- | --- | --- |
+| s03 | `v3/types.ts:4077-4426` 7구간 / `to-json-schema.ts:502-509` | 0/15/0 · 8/0/0 | signal_weakened |
+| s04 | `to-json-schema.ts:51-172` 4구간 | 9 / 6 / 2 | signal_weakened |
+| s06 | `classic/schemas.ts:1966`, `errors.ts:89,152-153` | 0 / 0 / 0 (타입 전용, mutant 없음) | signal_unknown |
+
+## 핵심 발견: target validation은 preservation 체크 없이는 불완전하다
+
+reverse_green 3건(s03/s04/s06)은 red→green이라는 validation 신호만 보면 올바른 repair와
+구분되지 않는다. 셋 모두 대상 테스트를 전부 통과시켰지만, green의 달성 경로는 "테스트를
+새 behavior에 맞춘 것"이 아니라 "**의도된 production 변경을 되돌려 옛 behavior를 복원한 것**"
+이었다. 이 구분은 `git apply --reverse --check fixture.patch`라는 정적 검사 하나로 기계적으로
+잡힌다 (30건 소급 실행 결과 정확히 이 3건만 실패, 오탐 0건). 따라서 **recent-change
+preservation 체크는 automated repair 평가에서 target validation의 필수 구성요소**이며,
+green 여부만 보는 completeness 정의는 target 선택이 자유로운 프로토콜에서 misrepair를
+complete로 과대집계한다.
 
 ## 이상 케이스 상세
 
-### S 오분류 5건 — 전부 "의도된 변경 되돌리기" 방향
+### reverse_green 3건 + S 오분류 잔여 2건 — 전부 "의도된 변경 되돌리기" 방향
 
 - **s02** (`.refine()` 제거): 모델은 제거된 `.refine()`을 복원하는 production patch를 시도했다.
   하지만 hunk pre-image가 fixture에 존재하지 않는 라인(제거 전 코드)을 문맥으로 포함해 적용 실패.
-- **s03** (preprocess revert): 모델은 revert된 `return INVALID` 동작과 pipe io-side 처리를
-  production에 다시 넣어 green을 만들었다. 사실상 upstream revert를 재-revert한 것.
-  v4 scope mutants는 전부 killed(8/8)였지만 v3 `types.ts` scope는 15개 전부 survived —
-  대상 v3 refine 테스트가 해당 경로의 behavior를 사실상 구속하지 않음이 드러났다.
-- **s04** (JSON Schema pattern polish): 모델은 `formatMap`에서 `regex: ""` 항목을 삭제하는
-  등 upstream 변경을 부분적으로 되돌려 green을 만들었다. focused mutants 9 killed /
-  6 survived / 2 no-coverage로 signal_weakened.
-- **s06** (v.custom input type): 모델은 `z.custom` 시그니처를 stale 테스트의 타입 기대에
-  맞게 재변경(사실상 반대 방향 수정)해 green. 타입 전용 변경이라 mutant가 없어 판정 불능.
+- **s03** (preprocess revert) → **reverse_green**: 모델은 fixture가 바꾼 `isValid` 반환
+  (`return base`)과 `innerType` 단순화를 **동일 hunk에서 역방향으로** 수정해 revert 이전
+  behavior(`return INVALID` + transform-skip 로직)를 복원했다. 코드 형태만 다른 기능적
+  전면 revert. preservation 체크 실패.
+- **s04** (JSON Schema pattern polish) → **reverse_green**: fixture가 추가한 `regex: ""`
+  formatMap 항목과 `string | undefined` 타입을 동일 라인에서 제거 — 핵심 변경의 직접 역전.
+  preservation 체크 실패.
+- **s06** (v.custom input type) → **reverse_green**: fixture가 단순화한 `z.custom` 시그니처
+  (`custom<O>`, `data: unknown`)를 두-generic 형태(`custom<O = unknown, I = O>`, `data: I`)로
+  역전(원형의 `data: O`와 다른 변형 포함). errors.ts·docs 등 나머지 fixture hunk는 보존된
+  **부분 역전**이지만, green을 만든 수정 자체가 역방향이므로 reverse_green. preservation 체크 실패.
 - **s08** (File schema JSON Schema): production patch 시도가 스니펫 밖 `to-json-schema.ts`
   내용을 지어낸 pre-image라 적용 실패.
 
 S 케이스에서 diff가 production에 있고 테스트가 red인 상황은, 모델에게 "테스트가 맞고 변경이
 버그"라는 P-형 해석과 "변경이 의도이고 테스트가 stale"이라는 S-형 해석이 모두 열려 있다.
 gpt-oss-120b는 절반의 케이스에서 전자를 골랐고, 그 절반 중 3건은 실제로 green까지 만들었다.
-**target validation만으로는 이 역방향 green을 올바른 repair와 구분할 수 없다** — 이 구분에는
-결국 upstream 의도(커밋 맥락)가 필요하다는 것이 이번 배치의 핵심 관찰이다.
+어느 해석이 옳은지는 결국 upstream 의도(커밋 맥락)의 문제지만, **역방향 green의 기계적 판별
+자체는 preservation 체크로 가능하다** (핵심 발견 절 참조).
 
 ### Partial repair 6건 (적용됐으나 red)
 
@@ -245,10 +280,11 @@ s02, s05, s08, p06. 네 건 모두 모델이 제공받은 스니펫 범위 밖�
 2. **S 방향은 자유 선택이 되는 순간 절반이 무너졌다.** v1에서 6/6으로 보였던 분류 능력은
    S 쪽이 모드에 의해 강제된 control이었기 때문이며(명시 사항 1), 통일 프레이밍에서 모델은
    S 케이스 절반에서 의도된 변경을 되돌리는 `fix_production`을 골랐다. 그 중 3건은 target
-   validation까지 통과하는 "그럴듯한 역방향 green"이었다.
-3. **completeness와 signal은 여전히 병목이다.** 기대 target대로 green이 된 것은 S/P 20건 중
-   7건이고, green 10건 중 focused mutants를 전부 죽인 것은 5건이다. survived mutant가 남은
-   4건(s03, s04, p02, p09)은 관련 behavior의 회귀를 테스트가 놓칠 수 있는 구멍이 확인된 경우다.
+   validation까지 통과하는 reverse_green이었고, 이 3건은 preservation 체크로만 잡혔다
+   (핵심 발견 절).
+3. **completeness와 signal은 여전히 병목이다.** complete(green + 최근 변경 보존)는 S/P
+   20건 중 7건이고, 그 7건 중 focused mutants를 전부 죽인 것은 5건이다. survived mutant가
+   남은 2건(p02, p09)은 관련 behavior의 회귀를 테스트가 놓칠 수 있는 구멍이 확인된 경우다.
 4. **diff 형식 품질이 별도의 실패 축으로 드러났다.** 적용 실패 4건은 모두 모델이 보지 못한
    코드를 추정해 쓴 데서 왔고, 적용 성공 건도 전부 표준 도구가 거부하는 형식이었다.
    single-shot repair의 실측 완성도는 diff 적용기의 관용성 정의에 민감하다.

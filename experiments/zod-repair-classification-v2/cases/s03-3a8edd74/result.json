@@ -8,5 +8,8 @@
   "has_diff": true,
   "validation": "green",
   "apply_method": "context-match",
-  "note": ""
+  "note": "",
+  "preservation": "reversed",
+  "preservation_note": "fixture isValid/innerType hunk를 동일 지점에서 역방향 수정 (형태만 다른 기능적 전면 revert)",
+  "completeness": "reverse_green"
 }
