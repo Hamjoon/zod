@@ -1,0 +1,18 @@
+diff --git a/packages/zod/src/v4/core/to-json-schema.ts b/packages/zod/src/v4/core/to-json-schema.ts
+index ab11672e..db93ce9f 100644
+--- a/packages/zod/src/v4/core/to-json-schema.ts
++++ b/packages/zod/src/v4/core/to-json-schema.ts
+@@ -589,9 +589,11 @@ export interface ZodStandardJSONSchemaPayload<T> extends JSONSchema.BaseSchema {
+  * This encapsulates the logic of initializing context, processing, extracting defs, and finalizing.
+  */
+ export const createToJSONSchemaMethod =
+-  <T extends schemas.$ZodType>(schema: T, processors: Record<string, Processor> = {}) =>
++  <T extends schemas.$ZodType>(schema: T, processors?: Record<string, Processor>) =>
+   (params?: ToJSONSchemaParams): ZodStandardJSONSchemaPayload<T> => {
+-    const ctx = initializeContext({ ...params, processors });
++    // Only pass custom processors if they are provided; otherwise let the core
++    // initialization supply the default set of processors (including object handling).
++    const ctx = initializeContext({ ...params, ...(processors ? { processors } : {}) });
+     process(schema, ctx);
+     extractDefs(ctx, schema);
+     return finalize(ctx, schema);

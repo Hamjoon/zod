@@ -1,0 +1,48 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p05-363c966b
+
+ ❯  zod  src/v4/mini/tests/standard-schema.test.ts (2 tests | 1 failed) 3ms
+   ✓ Zod Mini schemas are NOT assignable to StandardJSONSchema 1ms
+   × toJSONSchema result ~standard.jsonSchema works with objects 2ms
+ ✓  zod   TS  src/v4/mini/tests/standard-schema.test.ts (2 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL   zod  src/v4/mini/tests/standard-schema.test.ts > toJSONSchema result ~standard.jsonSchema works with objects
+Error: [toJSONSchema]: Non-representable type encountered: object
+ ❯ process src/v4/core/to-json-schema.ts:182:15
+    180|       const processor = ctx.processors[def.type];
+    181|       if (!processor) {
+    182|         throw new Error(`[toJSONSchema]: Non-representable type encoun…
+       |               ^
+    183|       }
+    184|       processor(schema, ctx, _json, params);
+ ❯ Object.input src/v4/core/to-json-schema.ts:612:5
+ ❯ src/v4/mini/tests/standard-schema.test.ts:28:58
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯ Unhandled Source Error ⎯⎯⎯
+TypeCheckError: Argument of type '{ processors? Record<string, core.Processor<core.$ZodType<unknown, unknown, core.$ZodTypeInternals<unknown, unknown>>>>; metadata? $ZodRegistry<Record<string, any>>; target? "draft-04" | "draft-07" | "draft-2020-12" | "openapi-3.0" | ({} & string) | undefined; ... 4 more ...; reused? "ref" | "inline"; }' is not assignable to parameter of type 'JSONSchemaGeneratorParams' with 'exactOptionalPropertyTypes true'. Consider adding 'undefined' to the types of the target's properties.
+  Property 'processors' is optional in type '{ processors? Record<string, Processor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>; metadata? $ZodRegistry<Record<string, any>, $ZodType<...>>; ... 5 more ...; reused? "ref" | "inline"; }' but required in type 'JSONSchemaGeneratorParams'.
+ ❯ packages/zod/src/v4/core/to-json-schema.ts:596:35
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 3 passed (4)
+Type Errors  no errors
+     Errors  1 error
+   Start at  16:33:41
+   Duration  3.13s (transform 226ms, setup 17ms, collect 259ms, tests 3ms, environment 0ms, prepare 2ms, typecheck 2.79s)
+

@@ -1,0 +1,15 @@
+@@
+-export const createToJSONSchemaMethod =
+-  <T extends schemas.$ZodType>(schema: T, processors: Record<string, Processor> = {}) =>
+-  (params?: ToJSONSchemaParams): ZodStandardJSONSchemaPayload<T> => {
+-    const ctx = initializeContext({ ...params, processors });
++export const createToJSONSchemaMethod =
++  <T extends schemas.$ZodType>(schema: T, processors?: Record<string, Processor>) =>
++  (params?: ToJSONSchemaParams): ZodStandardJSONSchemaPayload<T> => {
++    // Only pass custom processors if they are provided; otherwise let the core
++    // initialization supply the default set of processors (including object handling).
++    const ctx = initializeContext({ ...params, ...(processors ? { processors } : {}) });
+     process(schema, ctx);
+     extractDefs(ctx, schema);
+     return finalize(ctx, schema);
+   };
