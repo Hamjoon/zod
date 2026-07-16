@@ -1,0 +1,12 @@
+{
+  "id": "p10-2e5b23dc",
+  "category": "P",
+  "expected": "fix_production",
+  "decision": "fix_production",
+  "decision_match": true,
+  "first_line_ok": true,
+  "has_diff": true,
+  "validation": "red",
+  "apply_method": "context-match",
+  "note": "failed=1"
+}

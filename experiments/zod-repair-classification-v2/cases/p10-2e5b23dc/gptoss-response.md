@@ -1,0 +1,30 @@
+DECISION: fix_production
+```diff
+diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts
+index 1234567..89abcde 100644
+--- a/packages/zod/src/v4/core/schemas.ts
++++ b/packages/zod/src/v4/core/schemas.ts
+@@
+       // no matching discriminator
+       payload.issues.push({
+         code: "invalid_union",
+ 
+         errors: [],
+         note: "No matching discriminator",
+-        discriminator: def.discriminator,
+-        input,
+-        path: [def.discriminator],
++        discriminator: def.discriminator,
++        // include the list of valid discriminator options for better error reporting
++        options: Array.from(def.options?.keys?.() ?? []),
++        // construct a helpful message mirroring previous behavior
++        message: `Invalid discriminator value. Expected ${Array.from(def.options?.keys?.() ?? [])
++          .map((opt) => JSON.stringify(opt))
++          .join(" | ")}`,
++        input,
++        path: [def.discriminator],
+         inst,
+       });
+ 
+       return payload;
+```

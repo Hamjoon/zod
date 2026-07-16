@@ -1,0 +1,82 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p10-2e5b23dc
+
+ ❯  zod  src/v4/classic/tests/discriminated-unions.test.ts (22 tests | 1 failed) 20ms
+   ✓ _values 3ms
+   ✓ valid parse - object 1ms
+   ✓ valid - include discriminator key (deprecated) 0ms
+   ✓ valid - optional discriminator (object) 0ms
+   ✓ valid - discriminator value of various primitive types 1ms
+   ✓ invalid - null 3ms
+   × invalid discriminator value 2ms
+   ✓ invalid discriminator value - unionFallback 1ms
+   ✓ valid discriminator value, invalid data 0ms
+   ✓ wrong schema - missing discriminator 0ms
+   ✓ async - valid 1ms
+   ✓ async - invalid 0ms
+   ✓ valid - literals with .default or .pipe 0ms
+   ✓ enum and nativeEnum 2ms
+   ✓ branded 1ms
+   ✓ optional and nullable 0ms
+   ✓ multiple discriminators 0ms
+   ✓ single element union 1ms
+   ✓ nested discriminated unions 1ms
+   ✓ readonly literal discriminator 1ms
+   ✓ pipes 0ms
+   ✓ def 0ms
+ ✓  zod   TS  src/v4/classic/tests/discriminated-unions.test.ts (22 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL   zod  src/v4/classic/tests/discriminated-unions.test.ts > invalid discriminator value
+Error: Snapshot `invalid discriminator value 1` mismatched
+
+- Expected
++ Received
+
+@@ -4,16 +4,16 @@
+      "code": "invalid_union",
+      "errors": [],
+      "note": "No matching discriminator",
+      "discriminator": "type",
+      "options": [
+-       "a",
+-       "b"
+-     ],
+-     "path": [
+-       "type"
++       0,
++       1
+      ],
+-     "message": "Invalid discriminator value. Expected 'a' | 'b'"
++     "message": "Invalid discriminator value. Expected 0 | 1",
++     "path": [
++       "type"
++     ]
+    }
+  ]],
+    "success": false,
+  }
+
+ ❯ src/v4/classic/tests/discriminated-unions.test.ts:153:18
+    151|     .safeParse({ type: "x", a: "abc" });
+    152| 
+    153|   expect(result).toMatchInlineSnapshot(`
+       |                  ^
+    154|     {
+    155|       "error": [ZodError: [
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+  Snapshots  1 failed
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 43 passed (44)
+Type Errors  no errors
+   Start at  16:34:54
+   Duration  3.75s (transform 252ms, setup 18ms, collect 290ms, tests 20ms, environment 0ms, prepare 3ms, typecheck 3.34s)
+
