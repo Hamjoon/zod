@@ -1,0 +1,127 @@
+diff --git a/packages/docs/content/api.mdx b/packages/docs/content/api.mdx
+index 3a88d5c2..d31ae332 100644
+--- a/packages/docs/content/api.mdx
++++ b/packages/docs/content/api.mdx
+@@ -297,16 +297,15 @@ z.guid();
+ 
+ ### URLs
+ 
+-To validate any WHATWG-compatible URL.
++The validate any WHATWG-compatible URL. 
+ 
+ ```ts
+ const schema = z.url();
+ 
+ schema.parse("https://example.com"); // ✅
+ schema.parse("http://localhost"); // ✅
+-
+-schema.parse("mailto:noreply@zod.dev"); // ❌
+-schema.parse("sup"); // ❌
++schema.parse("mailto:noreply@zod.dev"); // ✅
++schema.parse("sup"); // ✅
+ ```
+ 
+ > Internally this uses the `new URL()` constructor to perform validation. This may behave differently across platforms and runtimes but is generally the most rigorous way to validate URIs/URLs. 
+@@ -329,6 +328,15 @@ schema.parse("https://example.com"); // ✅
+ schema.parse("http://example.com"); // ❌
+ ```
+ 
++Here is the recommended schema for validating HTTP URLs. It limits the protocol to `http`/`https` and ensures the hostname is a valid domain name.
++
++```ts
++const httpUrl = z.url({
++  protocol: /^https?$/,
++  hostname: z.regexes.domain 
++            // /^([a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/
++});
++```
+ 
+ ### ISO datetimes
+ 
+diff --git a/packages/zod/src/v4/core/regexes.ts b/packages/zod/src/v4/core/regexes.ts
+index 62490d7f..7ecfed8a 100644
+--- a/packages/zod/src/v4/core/regexes.ts
++++ b/packages/zod/src/v4/core/regexes.ts
+@@ -74,6 +74,7 @@ export const base64url: RegExp = /^[A-Za-z0-9_-]*$/;
+ // export const hostname: RegExp =
+ //   /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)+([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$/;
+ export const hostname: RegExp = /^([a-zA-Z0-9-]+\.)*[a-zA-Z0-9-]+$/;
++export const domain: RegExp = /^([a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/;
+ 
+ // https://blog.stevenlevithan.com/archives/validate-phone-number#r4-3 (regex sans spaces)
+ export const e164: RegExp = /^\+(?:[0-9]){6,14}[0-9]$/;
+diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts
+index a9ff9668..d378133e 100644
+--- a/packages/zod/src/v4/core/schemas.ts
++++ b/packages/zod/src/v4/core/schemas.ts
+@@ -426,18 +426,6 @@ export const $ZodURL: core.$constructor<$ZodURL> = /*@__PURE__*/ core.$construct
+     try {
+       const url = new URL(payload.value);
+ 
+-      regexes.hostname.lastIndex = 0;
+-      if (!regexes.hostname.test(url.hostname)) {
+-        payload.issues.push({
+-          code: "invalid_format",
+-          format: "url",
+-          note: "Invalid hostname",
+-          pattern: regexes.hostname.source,
+-          input: payload.value,
+-          inst,
+-        });
+-      }
+-
+       if (def.hostname) {
+         def.hostname.lastIndex = 0;
+         if (!def.hostname.test(url.hostname)) {
+@@ -445,7 +433,7 @@ export const $ZodURL: core.$constructor<$ZodURL> = /*@__PURE__*/ core.$construct
+             code: "invalid_format",
+             format: "url",
+             note: "Invalid hostname",
+-            pattern: def.hostname.source,
++            pattern: regexes.hostname.source,
+             input: payload.value,
+             inst,
+           });
+diff --git a/play.ts b/play.ts
+index fcc1a10b..1470d54c 100644
+--- a/play.ts
++++ b/play.ts
+@@ -1,13 +1,29 @@
+-import * as z from "zod/v4";
++import * as z from "zod/v3";
+ 
+-export const a = z.object({
+-  asdf: z.iso.datetime(),
++console.log({
++  href: new URL(import.meta.url).href,
++  hostname: new URL(import.meta.url).hostname,
++  pathname: new URL(import.meta.url).pathname,
+ });
+ 
+-const fn = z.function({
+-  // input: z.tuple([z.string()], z.number()),
+-  output: z.string(),
+-});
++// z.
++// z.string.url({ hostname: /.*/ }).parse(import.meta.url);
++
++// const a = z.url({
++//   protocol: /^https?$/,
++// });
++const a = z.string().url();
++
++a.parse("https://example.com");
++a.parse("http://example.com");
++a.parse("htt://example.com");
++a.parse("c:");
++a.parse("mailto:noreply@zod.dev"); // ❌
++
++// const a = z.url();
+ 
+-fn.def.output;
+-fn.def.input;
++// a.parse("https://example.com"); // ✅
++// a.parse("http://localhost"); // ✅
++// a.parse("mailto:noreply@zod.dev"); // ❌
++// a.parse("sup"); // ❌
++/^([a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/;

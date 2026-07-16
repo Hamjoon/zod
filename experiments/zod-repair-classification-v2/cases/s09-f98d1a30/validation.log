@@ -1,0 +1,32 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s09-f98d1a30/packages/zod
+
+ ✓ src/v4/mini/tests/string.test.ts (23 tests) 10ms
+ ❯ src/v4/classic/tests/string.test.ts (39 tests | 1 failed) 87ms
+   × url validations 4ms
+     → expected [Function] to throw an error
+ ✓  TS  src/v4/classic/tests/string.test.ts (39 tests)
+ ✓  TS  src/v4/mini/tests/string.test.ts (23 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/v4/classic/tests/string.test.ts > url validations
+AssertionError: expected [Function] to throw an error
+ ❯ src/v4/classic/tests/string.test.ts:343:33
+    341| 
+    342|   expect(() => url.parse("asdf")).toThrow();
+    343|   expect(() => url.parse("c:")).toThrow();
+       |                                 ^
+    344|   expect(() => url.parse("WWW:WWW.COM")).toThrow();
+    345|   expect(() => url.parse("https:/")).toThrow();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 123 passed (124)
+Type Errors  no errors
+   Start at  16:27:26
+   Duration  1.20s (transform 279ms, setup 0ms, collect 653ms, tests 96ms, environment 0ms, prepare 120ms, typecheck 1.06s)
+

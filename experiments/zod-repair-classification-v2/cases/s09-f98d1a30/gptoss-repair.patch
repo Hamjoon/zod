@@ -1,0 +1,16 @@
+diff --git a/packages/zod/src/v4/classic/tests/string.test.ts b/packages/zod/src/v4/classic/tests/string.test.ts
+index 9c7b1e2..e5f8d3a 100644
+--- a/packages/zod/src/v4/classic/tests/string.test.ts
++++ b/packages/zod/src/v4/classic/tests/string.test.ts
+@@
+   url.parse("https://my.local");
+   url.parse("http://aslkfjdalsdfkjaf");
+   url.parse("http://localhost");
+ 
+   expect(() => url.parse("asdf")).toThrow();
+-  expect(() => url.parse("http:.......///broken.com")).toThrow();
+   expect(() => url.parse("c:")).toThrow();
+   expect(() => url.parse("WWW:WWW.COM")).toThrow();
+   expect(() => url.parse("https:/")).toThrow();
+   expect(() => url.parse("asdfj@lkjsdf.com")).toThrow();
+ });
