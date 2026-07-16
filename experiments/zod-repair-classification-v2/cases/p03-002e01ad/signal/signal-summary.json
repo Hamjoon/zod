@@ -1,0 +1,198 @@
+{
+  "case": "p03-002e01ad",
+  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p03-002e01ad",
+  "tests": [
+    "packages/zod/src/v4/classic/tests/index.test.ts",
+    "packages/zod/src/v4/core/tests/extend.test.ts",
+    "packages/zod/src/v4/core/tests/record-constructor.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/core/util.ts",
+  "mutate": "packages/zod/src/v4/core/util.ts:378-378,packages/zod/src/v4/core/util.ts:381-384,packages/zod/src/v4/core/util.ts:386-390",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/util.ts",
+      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p03-002e01ad/packages/zod/src/v4/core/util.ts",
+      "metrics": {
+        "lines": {
+          "total": 280,
+          "covered": 95,
+          "skipped": 0,
+          "pct": 33.92
+        },
+        "functions": {
+          "total": 88,
+          "covered": 33,
+          "skipped": 0,
+          "pct": 37.5
+        },
+        "statements": {
+          "total": 315,
+          "covered": 106,
+          "skipped": 0,
+          "pct": 33.65
+        },
+        "branches": {
+          "total": 172,
+          "covered": 54,
+          "skipped": 0,
+          "pct": 31.39
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/util.ts",
+      "fileKey": "packages/zod/src/v4/core/util.ts",
+      "totals": {
+        "Killed": 7
+      },
+      "mutants": [
+        {
+          "id": "1",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 384
+            },
+            "start": {
+              "column": 7,
+              "line": 384
+            }
+          },
+          "killedBy": [
+            "53"
+          ]
+        },
+        {
+          "id": "2",
+          "mutatorName": "EqualityOperator",
+          "replacement": "proto !== null",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 384
+            },
+            "start": {
+              "column": 7,
+              "line": 384
+            }
+          },
+          "killedBy": [
+            "51"
+          ]
+        },
+        {
+          "id": "3",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "false",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 34,
+              "line": 384
+            },
+            "start": {
+              "column": 30,
+              "line": 384
+            }
+          },
+          "killedBy": [
+            "53"
+          ]
+        },
+        {
+          "id": "0",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 384
+            },
+            "start": {
+              "column": 7,
+              "line": 384
+            }
+          },
+          "killedBy": [
+            "51"
+          ]
+        },
+        {
+          "id": "4",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 390
+            },
+            "start": {
+              "column": 10,
+              "line": 390
+            }
+          },
+          "killedBy": [
+            "51"
+          ]
+        },
+        {
+          "id": "5",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 390
+            },
+            "start": {
+              "column": 10,
+              "line": 390
+            }
+          },
+          "killedBy": [
+            "21"
+          ]
+        },
+        {
+          "id": "6",
+          "mutatorName": "EqualityOperator",
+          "replacement": "proto !== Object.prototype",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 390
+            },
+            "start": {
+              "column": 10,
+              "line": 390
+            }
+          },
+          "killedBy": [
+            "21"
+          ]
+        }
+      ]
+    }
+  },
+  "verdict": "signal_preserved"
+}

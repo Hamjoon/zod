@@ -1,0 +1,93 @@
+$ pnpm stryker run /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p03-002e01ad/.openclaw-signal/p03-002e01ad/stryker.signal.config.mjs
+status=0
+## stdout
+[32m16:34:47 (36782) INFO ProjectReader[39m Found 1 of 953 file(s) to be mutated.
+[32m16:34:47 (36782) INFO ProjectReader[39m Found 3 test file(s) matching --testFiles patterns.
+[32m16:34:47 (36782) INFO Instrumenter[39m Instrumented 1 source file(s) with 7 mutant(s)
+[32m16:34:47 (36782) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m16:34:48 (36782) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m16:34:48 (36782) INFO DryRunExecutor[39m Initial test run succeeded. Ran 65 tests in 0 seconds (net 25.165375000000154 ms, overhead 523.8346249999998 ms).
+
+All tests
+  classic/tests/index.test.ts
+    ✘ z.boolean (covered 0)
+    ✘ z.bigint (covered 0)
+    ✘ z.symbol (covered 0)
+    ✘ z.date (covered 0)
+    ✘ z.coerce.string (covered 0)
+    ✘ z.coerce.number (covered 0)
+    ✘ z.coerce.boolean (covered 0)
+    ✘ z.coerce.bigint (covered 0)
+    ✘ z.coerce.date (covered 0)
+    ✘ z.iso.datetime (covered 0)
+    ✘ z.iso.date (covered 0)
+    ✘ z.iso.time (covered 0)
+    ✘ z.iso.duration (covered 0)
+    ✘ z.undefined (covered 0)
+    ✘ z.null (covered 0)
+    ✘ z.any (covered 0)
+    ✘ z.unknown (covered 0)
+    ✘ z.never (covered 0)
+    ✘ z.void (covered 0)
+    ✘ z.array (covered 0)
+    ✘ z.union (covered 0)
+    ✓ z.intersection (killed 2)
+    ✘ z.tuple (covered 0)
+    ~ z.record (covered 6)
+    ✘ z.map (covered 0)
+    ✘ z.map invalid_element (covered 0)
+    ✘ z.map async (covered 0)
+    ✘ z.set (covered 0)
+    ✘ z.enum (covered 0)
+    ✘ z.enum - native (covered 0)
+    ✘ z.nativeEnum (covered 0)
+    ✘ z.literal (covered 0)
+    ✘ z.file (covered 0)
+    ✘ z.transform (covered 0)
+    ✘ z.transform async (covered 0)
+    ✘ z.preprocess (covered 0)
+    ✘ z.optional (covered 0)
+    ✘ z.nullable (covered 0)
+    ✘ z.default (covered 0)
+    ✘ z.catch (covered 0)
+    ✘ z.nan (covered 0)
+    ✘ z.pipe (covered 0)
+    ✘ z.readonly (covered 0)
+    ✘ z.templateLiteral (covered 0)
+    ✘ z.custom schema (covered 0)
+    ✘ z.custom check (covered 0)
+    ✘ z.check (covered 0)
+    ✘ z.instanceof (covered 0)
+    ✘ z.refine (covered 0)
+    ✘ z.$brand() (covered 0)
+    ✘ z.lazy (covered 0)
+    ✓ z.json (killed 3)
+    ✘ z.promise (covered 0)
+    ✓ isPlainObject (killed 2)
+    ~ shallowClone with constructor field (covered 6)
+    ✘ def typing (covered 0)
+    ✘ runtime type property exists and returns correct values (covered 0)
+    ✘ type narrowing works with type property (covered 0)
+  core/tests
+    extend.test.ts
+      ~ extend chaining preserves and overrides properties (covered 6)
+      ~ extend with constructor field in shape (covered 6)
+    record-constructor.test.ts
+      ~ record should parse objects with non-function constructor field (covered 6)
+      ~ record should still work with normal objects (covered 6)
+      ~ record should validate values according to schema even with constructor field (covered 6)
+      ~ record should work with different key types and constructor field (covered 6)
+
+Ran 2.29 tests per mutant on average.
+----------|------------------|----------|-----------|------------|----------|----------|
+          | % Mutation score |          |           |            |          |          |
+File      |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+----------|--------|---------|----------|-----------|------------|----------|----------|
+All files | 100.00 |  100.00 |        7 |         0 |          0 |        0 |        0 |
+ util.ts  | 100.00 |  100.00 |        7 |         0 |          0 |        0 |        0 |
+----------|--------|---------|----------|-----------|------------|----------|----------|
+[32m16:34:49 (36782) INFO MutationTestReportHelper[39m Final mutation score of 100.00 is greater than or equal to break threshold 0
+[32m16:34:49 (36782) INFO JsonReporter[39m Your report can be found at: file:///Users/donggi/_projects/etc-projects/zod-thesis/experiments/zod-repair-classification-v2/cases/p03-002e01ad/signal/stryker/mutation.json
+[32m16:34:49 (36782) INFO MutationTestExecutor[39m Done in 2 seconds.
+
+## stderr

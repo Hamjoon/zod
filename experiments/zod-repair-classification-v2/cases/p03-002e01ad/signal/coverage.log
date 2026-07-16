@@ -1,0 +1,18 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/index.test.ts packages/zod/src/v4/core/tests/extend.test.ts packages/zod/src/v4/core/tests/record-constructor.test.ts --config /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p03-002e01ad/.openclaw-signal/p03-002e01ad/vitest.signal.config.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter json --coverage.reporter json-summary --coverage.reportsDirectory /Users/donggi/_projects/etc-projects/zod-thesis/experiments/zod-repair-classification-v2/cases/p03-002e01ad/signal/coverage --coverage.include packages/zod/src/v4/core/util.ts
+status=0
+## stdout
+
+[1m[46m RUN [49m[22m [36mv4.0.10 [39m[90m/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p03-002e01ad[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+ [32m✓[39m packages/zod/src/v4/core/tests/record-constructor.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m packages/zod/src/v4/core/tests/extend.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m packages/zod/src/v4/classic/tests/index.test.ts [2m([22m[2m59 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m65 passed[39m[22m[90m (65)[39m
+[2m   Start at [22m 16:34:45
+[2m   Duration [22m 444ms[2m (transform 701ms, setup 46ms, collect 872ms, tests 34ms, environment 0ms, prepare 22ms)[22m
+
+
+## stderr

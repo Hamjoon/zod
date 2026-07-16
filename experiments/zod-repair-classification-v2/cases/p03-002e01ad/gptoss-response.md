@@ -1,0 +1,45 @@
+DECISION: fix_production
+```diff
+diff --git a/packages/zod/src/v4/core/util.ts b/packages/zod/src/v4/core/util.ts
+index 5c2e1a7..d3f4b9c 100644
+--- a/packages/zod/src/v4/core/util.ts
++++ b/packages/zod/src/v4/core/util.ts
+@@
+ export function isPlainObject(o: any): o is Record<PropertyKey, unknown> {
+-  if (isObject(o) === false) return false;
+-
+-  // modified constructor
+-  const ctor = o.constructor;
+-  if (ctor === undefined) return true;
+-
+-  // modified prototype
+-  const prot = ctor.prototype;
+-  if (isObject(prot) === false) return false;
+-
+-  // ctor doesn't have static `isPrototypeOf`
+-  if (Object.prototype.hasOwnProperty.call(prot, "isPrototypeOf") === false) {
+-    return false;
+-  }
+-
+-  return true;
++  // Must be an object and not an array (handled by isObject)
++  if (isObject(o) === false) return false;
++
++  // Objects created with `Object.create(null)` have a null prototype and are
++  // considered plain objects.
++  const proto = Object.getPrototypeOf(o);
++  if (proto === null) return true;
++
++  // For regular objects, a plain object has `Object.prototype` as its prototype.
++  // This also correctly treats objects that have a non‑function `constructor`
++  // property (e.g., { constructor: \"string\" }) as plain, because the prototype
++  // chain is still `Object.prototype`.
++  return proto === Object.prototype;
+ }
+ 
+ export function shallowClone(o: any): any {
+   if (isPlainObject(o)) return { ...o };
+   if (Array.isArray(o)) return [...o];
+   return o;
+*** End of File
+```

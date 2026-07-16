@@ -1,0 +1,20 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p03-002e01ad
+
+ ✓  zod  src/v4/core/tests/record-constructor.test.ts (4 tests) 3ms
+ ✓  zod  src/v4/core/tests/extend.test.ts (2 tests) 4ms
+ ✓  zod  src/v4/classic/tests/index.test.ts (59 tests) 19ms
+ ✓  zod   TS  src/v4/classic/tests/index.test.ts (59 tests)
+ ✓  zod   TS  src/v4/core/tests/extend.test.ts (2 tests)
+ ✓  zod   TS  src/v4/core/tests/record-constructor.test.ts (4 tests)
+
+ Test Files  6 passed (6)
+      Tests  130 passed (130)
+Type Errors  no errors
+   Start at  16:29:39
+   Duration  2.51s (transform 379ms, setup 55ms, collect 523ms, tests 25ms, environment 0ms, prepare 8ms, typecheck 2.22s)
+
