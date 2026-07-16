@@ -1,0 +1,15 @@
+$ pnpm vitest run packages/zod/src/v4/core/tests/extend.test.ts --config /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p04-3048d14b/.openclaw-signal/p04-3048d14b/vitest.signal.config.ts --reporter=dot
+status=0
+## stdout
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p04-3048d14b
+
+ ✓ packages/zod/src/v4/core/tests/extend.test.ts (1 test) 2ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  16:35:10
+   Duration  458ms (transform 191ms, setup 0ms, collect 257ms, tests 2ms, environment 0ms, prepare 40ms)
+
+
+## stderr

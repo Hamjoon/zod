@@ -1,0 +1,120 @@
+{
+  "case": "p04-3048d14b",
+  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p04-3048d14b",
+  "tests": [
+    "packages/zod/src/v4/core/tests/extend.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/core/util.ts",
+  "mutate": "packages/zod/src/v4/core/util.ts:288-301",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/util.ts",
+      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p04-3048d14b/packages/zod/src/v4/core/util.ts",
+      "metrics": {
+        "lines": {
+          "total": 530,
+          "covered": 165,
+          "skipped": 0,
+          "pct": 31.13
+        },
+        "functions": {
+          "total": 51,
+          "covered": 17,
+          "skipped": 0,
+          "pct": 33.33
+        },
+        "statements": {
+          "total": 530,
+          "covered": 165,
+          "skipped": 0,
+          "pct": 31.13
+        },
+        "branches": {
+          "total": 37,
+          "covered": 20,
+          "skipped": 0,
+          "pct": 54.05
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/util.ts",
+      "fileKey": "packages/zod/src/v4/core/util.ts",
+      "totals": {
+        "Killed": 3
+      },
+      "mutants": [
+        {
+          "id": "1",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 299
+            },
+            "start": {
+              "column": 24,
+              "line": 296
+            }
+          },
+          "killedBy": [
+            "0"
+          ]
+        },
+        {
+          "id": "2",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "false",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 25,
+              "line": 298
+            },
+            "start": {
+              "column": 21,
+              "line": 298
+            }
+          },
+          "killedBy": [
+            "0"
+          ]
+        },
+        {
+          "id": "0",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 300
+            },
+            "start": {
+              "column": 79,
+              "line": 293
+            }
+          },
+          "killedBy": [
+            "0"
+          ]
+        }
+      ]
+    }
+  },
+  "verdict": "signal_preserved"
+}
