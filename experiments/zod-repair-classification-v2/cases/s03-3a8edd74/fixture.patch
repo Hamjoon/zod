@@ -1,0 +1,111 @@
+diff --git a/packages/zod/src/v3/types.ts b/packages/zod/src/v3/types.ts
+index 1df681cb..2b3efe02 100644
+--- a/packages/zod/src/v3/types.ts
++++ b/packages/zod/src/v3/types.ts
+@@ -4074,7 +4074,7 @@ function createZodEnum(values: [string, ...string[]], params?: RawCreateParams)
+ }
+ 
+ export class ZodEnum<T extends [string, ...string[]]> extends ZodType<T[number], ZodEnumDef<T>, T[number]> {
+-  _cache: Set<T[number]> | undefined;
++  #cache: Set<T[number]> | undefined;
+ 
+   _parse(input: ParseInput): ParseReturnType<this["_output"]> {
+     if (typeof input.data !== "string") {
+@@ -4088,11 +4088,11 @@ export class ZodEnum<T extends [string, ...string[]]> extends ZodType<T[number],
+       return INVALID;
+     }
+ 
+-    if (!this._cache) {
+-      this._cache = new Set(this._def.values);
++    if (!this.#cache) {
++      this.#cache = new Set(this._def.values);
+     }
+ 
+-    if (!this._cache.has(input.data)) {
++    if (!this.#cache.has(input.data)) {
+       const ctx = this._getOrReturnCtx(input);
+       const expectedValues = this._def.values;
+ 
+@@ -4172,7 +4172,7 @@ export interface ZodNativeEnumDef<T extends EnumLike = EnumLike> extends ZodType
+ export type EnumLike = { [k: string]: string | number; [nu: number]: string };
+ 
+ export class ZodNativeEnum<T extends EnumLike> extends ZodType<T[keyof T], ZodNativeEnumDef<T>, T[keyof T]> {
+-  _cache: Set<T[keyof T]> | undefined;
++  #cache: Set<T[keyof T]> | undefined;
+   _parse(input: ParseInput): ParseReturnType<T[keyof T]> {
+     const nativeEnumValues = util.getValidEnumValues(this._def.values);
+ 
+@@ -4187,11 +4187,11 @@ export class ZodNativeEnum<T extends EnumLike> extends ZodType<T[keyof T], ZodNa
+       return INVALID;
+     }
+ 
+-    if (!this._cache) {
+-      this._cache = new Set(util.getValidEnumValues(this._def.values));
++    if (!this.#cache) {
++      this.#cache = new Set(util.getValidEnumValues(this._def.values));
+     }
+ 
+-    if (!this._cache.has(input.data)) {
++    if (!this.#cache.has(input.data)) {
+       const expectedValues = util.objectValues(nativeEnumValues);
+ 
+       addIssueToContext(ctx, {
+@@ -4411,7 +4411,7 @@ export class ZodEffects<T extends ZodTypeAny, Output = output<T>, Input = input<
+           parent: ctx,
+         });
+ 
+-        if (!isValid(base)) return INVALID;
++        if (!isValid(base)) return base;
+ 
+         const result = effect.transform(base.value, checkCtx);
+         if (result instanceof Promise) {
+@@ -4423,7 +4423,7 @@ export class ZodEffects<T extends ZodTypeAny, Output = output<T>, Input = input<
+         return { status: status.value, value: result };
+       } else {
+         return this._def.schema._parseAsync({ data: ctx.data, path: ctx.path, parent: ctx }).then((base) => {
+-          if (!isValid(base)) return INVALID;
++          if (!isValid(base)) return base;
+ 
+           return Promise.resolve(effect.transform(base.value, checkCtx)).then((result) => ({
+             status: status.value,
+diff --git a/packages/zod/src/v4/core/to-json-schema.ts b/packages/zod/src/v4/core/to-json-schema.ts
+index 641c7943..06eeb793 100644
+--- a/packages/zod/src/v4/core/to-json-schema.ts
++++ b/packages/zod/src/v4/core/to-json-schema.ts
+@@ -499,7 +499,7 @@ export class JSONSchemaGenerator {
+           break;
+         }
+         case "pipe": {
+-          const innerType = this.io === "input" ? (def.in._zod.def.type === "transform" ? def.out : def.in) : def.out;
++          const innerType = this.io === "input" ? def.in : def.out;
+           this.process(innerType, params);
+           result.ref = innerType;
+           break;
+diff --git a/play.ts b/play.ts
+index 23bdd10a..41eb006b 100644
+--- a/play.ts
++++ b/play.ts
+@@ -1,21 +1,3 @@
+-import { z } from "zod/v3";
++import { z } from "zod/v4";
+ 
+-// import * as z from "zod";
+-
+-const parseResult = z
+-  .string()
+-  .refine((x) => false) // force anything/everything to fail
+-  .transform((x) => {
+-    console.log("I don't get called"); // correct
+-    return x.length;
+-  })
+-  .refine((x) => {
+-    console.log("I shouldn't get called!!!!!!");
+-    console.log(typeof x); // number
+-    console.log(x);
+-  })
+-  .safeParse("123");
+-
+-console.log(`succeeded:  ${parseResult.success}`); // false (correct behavior)
+-
+-// z.string().min(1234, { abort: true });
++z;

@@ -1,0 +1,304 @@
+{
+  "case": "s03-3a8edd74",
+  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s03-3a8edd74",
+  "tests": [
+    "packages/zod/src/v3/tests/refine.test.ts",
+    "packages/zod/src/v4/classic/tests/to-json-schema.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v3/types.ts",
+  "mutate": "packages/zod/src/v3/types.ts:4077-4077,packages/zod/src/v3/types.ts:4091-4092,packages/zod/src/v3/types.ts:4095-4095,packages/zod/src/v3/types.ts:4175-4175,packages/zod/src/v3/types.ts:4190-4191,packages/zod/src/v3/types.ts:4194-4194,packages/zod/src/v3/types.ts:4426-4426",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v3/types.ts",
+      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s03-3a8edd74/packages/zod/src/v3/types.ts",
+      "metrics": {
+        "lines": {
+          "total": 3470,
+          "covered": 962,
+          "skipped": 0,
+          "pct": 27.72
+        },
+        "functions": {
+          "total": 321,
+          "covered": 82,
+          "skipped": 0,
+          "pct": 25.54
+        },
+        "statements": {
+          "total": 3470,
+          "covered": 962,
+          "skipped": 0,
+          "pct": 27.72
+        },
+        "branches": {
+          "total": 197,
+          "covered": 142,
+          "skipped": 0,
+          "pct": 72.08
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v3/types.ts",
+      "fileKey": "packages/zod/src/v3/types.ts",
+      "totals": {
+        "Survived": 15
+      },
+      "mutants": [
+        {
+          "id": "1",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 4091
+            },
+            "start": {
+              "column": 9,
+              "line": 4091
+            }
+          }
+        },
+        {
+          "id": "2",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 4091
+            },
+            "start": {
+              "column": 9,
+              "line": 4091
+            }
+          }
+        },
+        {
+          "id": "0",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "this.#cache",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 4091
+            },
+            "start": {
+              "column": 9,
+              "line": 4091
+            }
+          }
+        },
+        {
+          "id": "3",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "this.#cache.has(input.data)",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 4095
+            },
+            "start": {
+              "column": 9,
+              "line": 4095
+            }
+          }
+        },
+        {
+          "id": "4",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 4095
+            },
+            "start": {
+              "column": 9,
+              "line": 4095
+            }
+          }
+        },
+        {
+          "id": "5",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 4095
+            },
+            "start": {
+              "column": 9,
+              "line": 4095
+            }
+          }
+        },
+        {
+          "id": "6",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "this.#cache",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 4190
+            },
+            "start": {
+              "column": 9,
+              "line": 4190
+            }
+          }
+        },
+        {
+          "id": "7",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 4190
+            },
+            "start": {
+              "column": 9,
+              "line": 4190
+            }
+          }
+        },
+        {
+          "id": "8",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 4190
+            },
+            "start": {
+              "column": 9,
+              "line": 4190
+            }
+          }
+        },
+        {
+          "id": "9",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "this.#cache.has(input.data)",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 4194
+            },
+            "start": {
+              "column": 9,
+              "line": 4194
+            }
+          }
+        },
+        {
+          "id": "10",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 4194
+            },
+            "start": {
+              "column": 9,
+              "line": 4194
+            }
+          }
+        },
+        {
+          "id": "11",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 4194
+            },
+            "start": {
+              "column": 9,
+              "line": 4194
+            }
+          }
+        },
+        {
+          "id": "12",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "isValid(base)",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 27,
+              "line": 4426
+            },
+            "start": {
+              "column": 13,
+              "line": 4426
+            }
+          }
+        },
+        {
+          "id": "13",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 27,
+              "line": 4426
+            },
+            "start": {
+              "column": 13,
+              "line": 4426
+            }
+          }
+        },
+        {
+          "id": "14",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Survived",
+          "location": {
+            "end": {
+              "column": 27,
+              "line": 4426
+            },
+            "start": {
+              "column": 13,
+              "line": 4426
+            }
+          }
+        }
+      ]
+    }
+  },
+  "verdict": "signal_weakened"
+}
