@@ -1,0 +1,12 @@
+{
+  "id": "n03-5b574501",
+  "category": "N",
+  "expected": "no_change",
+  "decision": "no_change",
+  "decision_match": true,
+  "first_line_ok": true,
+  "has_diff": false,
+  "validation": "none",
+  "apply_method": "none",
+  "note": "correct-no-change"
+}
