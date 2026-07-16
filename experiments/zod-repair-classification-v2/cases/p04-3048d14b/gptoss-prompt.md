@@ -43,7 +43,7 @@ Current test results:
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
 
- RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p04-3048d14b/packages/zod
+ RUN  v2.1.9 <worktree>/p04-3048d14b/packages/zod
 
  ❯ src/v4/core/tests/extend.test.ts (1 test | 1 failed) 5ms
    × extend chaining preserves and overrides properties 5ms

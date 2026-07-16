@@ -68,7 +68,7 @@ Breaking changes might not follow SemVer, please pin Vitest's version when using
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
 
- RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p05-363c966b
+ RUN  v4.0.10 <worktree>/p05-363c966b
 
  ❯  zod  src/v4/mini/tests/standard-schema.test.ts (2 tests | 1 failed) 3ms
    ✓ Zod Mini schemas are NOT assignable to StandardJSONSchema 1ms

@@ -6,7 +6,7 @@
 - 산출물 저장소: [Hamjoon/zod](https://github.com/Hamjoon/zod)
 - archive branch: [experiment/2026-07-week3-v2-30case-archive](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week3-v2-30case-archive)
 - 보고서 직접 링크: [docs/zod-v2-30case-report.md](https://github.com/Hamjoon/zod/blob/experiment/2026-07-week3-v2-30case-archive/docs/zod-v2-30case-report.md)
-- 케이스 선별·검증 기록: `zod-30case-verification-results.md` (검증 배치, 2026-07-15)
+- 케이스 선별·검증 기록: [docs/zod-30case-verification-results.md](zod-30case-verification-results.md) (검증 배치, 2026-07-15 — 이 30케이스가 채택된 경위)
 
 ## 실험 질문
 
@@ -81,7 +81,9 @@ worktree로 재구성했고, 30건 모두 red/green 상태가 검증 배치 기�
 ## Commit 구성
 
 산출물은 Zod source tree를 상속하지 않는 orphan archive branch에 보존했다.
-케이스별 packet commit 30개(채택 순서) + 보고서·runner·도구 commit 1개로 구성된다.
+케이스별 packet commit 30개(채택 순서) + 보고서·runner·도구 commit 1개로 최초 구성했고,
+이후 사후 재분석 commit(reverse_green 분리·preservation 체크)과 이식성·아티팩트 링크
+정리 commit이 추가되었다 (force-push 없이 이력 보존).
 각 케이스 packet은 다음을 포함한다.
 
 - `fixture.patch` (base에 적용된 diff), `test-output.txt` (모델에게 준 테스트 상태)
@@ -93,16 +95,16 @@ worktree로 재구성했고, 30건 모두 red/green 상태가 검증 배치 기�
 
 | ID | Base | Upstream 변경 | DECISION | Repair 완성도 | Signal 판정 |
 | --- | --- | --- | --- | --- | --- |
-| s01 | [a410616b](https://github.com/colinhacks/zod/commit/a410616b) | [0cf45896](https://github.com/colinhacks/zod/commit/0cf45896) tuple→JSON Schema oneOf | fix_tests ✅ | complete | signal_preserved |
-| s02 | [9443aab0](https://github.com/colinhacks/zod/commit/9443aab0) | [66bda749](https://github.com/colinhacks/zod/commit/66bda749) ZodMiniType `.refine()` 제거 | fix_production ❌ | patch 적용 실패 | - |
-| s03 | [103f69be](https://github.com/colinhacks/zod/commit/103f69be) | [3a8edd74](https://github.com/colinhacks/zod/commit/3a8edd74) preprocess output type revert | fix_production ❌ | reverse_green | (별도 표) |
-| s04 | [39d84d03](https://github.com/colinhacks/zod/commit/39d84d03) | [6b13cc94](https://github.com/colinhacks/zod/commit/6b13cc94) JSON Schema pattern polish | fix_production ❌ | reverse_green | (별도 표) |
-| s05 | [845a230b](https://github.com/colinhacks/zod/commit/845a230b) | [27f13d62](https://github.com/colinhacks/zod/commit/27f13d62) regex 정밀도 개선 | fix_tests ✅ | patch 적용 실패 | - |
-| s06 | [a2c98924](https://github.com/colinhacks/zod/commit/a2c98924) | [6d47791b](https://github.com/colinhacks/zod/commit/6d47791b) v.custom input type fix | fix_production ❌ | reverse_green | (별도 표) |
-| s07 | [98c849de](https://github.com/colinhacks/zod/commit/98c849de) | [2529f827](https://github.com/colinhacks/zod/commit/2529f827) JSON Schema identifier 교정 | fix_tests ✅ | partial (37→17 red) | partial_repair |
-| s08 | [f97733ff](https://github.com/colinhacks/zod/commit/f97733ff) | [ad2fc5ee](https://github.com/colinhacks/zod/commit/ad2fc5ee) File schema JSON Schema | fix_production ❌ | patch 적용 실패 | - |
-| s09 | [592de8de](https://github.com/colinhacks/zod/commit/592de8de) | [f98d1a30](https://github.com/colinhacks/zod/commit/f98d1a30) URL behavior 표준화 | fix_tests ✅ | partial (1 red) | partial_repair |
-| s10 | [a73a3b30](https://github.com/colinhacks/zod/commit/a73a3b30) | [5fdece94](https://github.com/colinhacks/zod/commit/5fdece94) min/maxLength inclusive 반영 | fix_tests ✅ | partial (10→11 red) | partial_repair |
+| [s01](../experiments/zod-repair-classification-v2/cases/s01-0cf45896/) | [a410616b](https://github.com/colinhacks/zod/commit/a410616b) | [0cf45896](https://github.com/colinhacks/zod/commit/0cf45896) tuple→JSON Schema oneOf | fix_tests ✅ | complete | signal_preserved |
+| [s02](../experiments/zod-repair-classification-v2/cases/s02-66bda749/) | [9443aab0](https://github.com/colinhacks/zod/commit/9443aab0) | [66bda749](https://github.com/colinhacks/zod/commit/66bda749) ZodMiniType `.refine()` 제거 | fix_production ❌ | patch 적용 실패 | - |
+| [s03](../experiments/zod-repair-classification-v2/cases/s03-3a8edd74/) | [103f69be](https://github.com/colinhacks/zod/commit/103f69be) | [3a8edd74](https://github.com/colinhacks/zod/commit/3a8edd74) preprocess output type revert | fix_production ❌ | reverse_green | (별도 표) |
+| [s04](../experiments/zod-repair-classification-v2/cases/s04-6b13cc94/) | [39d84d03](https://github.com/colinhacks/zod/commit/39d84d03) | [6b13cc94](https://github.com/colinhacks/zod/commit/6b13cc94) JSON Schema pattern polish | fix_production ❌ | reverse_green | (별도 표) |
+| [s05](../experiments/zod-repair-classification-v2/cases/s05-27f13d62/) | [845a230b](https://github.com/colinhacks/zod/commit/845a230b) | [27f13d62](https://github.com/colinhacks/zod/commit/27f13d62) regex 정밀도 개선 | fix_tests ✅ | patch 적용 실패 | - |
+| [s06](../experiments/zod-repair-classification-v2/cases/s06-6d47791b/) | [a2c98924](https://github.com/colinhacks/zod/commit/a2c98924) | [6d47791b](https://github.com/colinhacks/zod/commit/6d47791b) v.custom input type fix | fix_production ❌ | reverse_green | (별도 표) |
+| [s07](../experiments/zod-repair-classification-v2/cases/s07-2529f827/) | [98c849de](https://github.com/colinhacks/zod/commit/98c849de) | [2529f827](https://github.com/colinhacks/zod/commit/2529f827) JSON Schema identifier 교정 | fix_tests ✅ | partial (37→17 red) | partial_repair |
+| [s08](../experiments/zod-repair-classification-v2/cases/s08-ad2fc5ee/) | [f97733ff](https://github.com/colinhacks/zod/commit/f97733ff) | [ad2fc5ee](https://github.com/colinhacks/zod/commit/ad2fc5ee) File schema JSON Schema | fix_production ❌ | patch 적용 실패 | - |
+| [s09](../experiments/zod-repair-classification-v2/cases/s09-f98d1a30/) | [592de8de](https://github.com/colinhacks/zod/commit/592de8de) | [f98d1a30](https://github.com/colinhacks/zod/commit/f98d1a30) URL behavior 표준화 | fix_tests ✅ | partial (1 red) | partial_repair |
+| [s10](../experiments/zod-repair-classification-v2/cases/s10-5fdece94/) | [a73a3b30](https://github.com/colinhacks/zod/commit/a73a3b30) | [5fdece94](https://github.com/colinhacks/zod/commit/5fdece94) min/maxLength inclusive 반영 | fix_tests ✅ | partial (10→11 red) | partial_repair |
 
 `reverse_green`은 target validation은 green이지만 fixture로 적용된 최근 변경이 repair 후
 트리에 보존되지 않은 — 즉 **의도된 behavior 변경을 되돌려 green에 도달한** — 경우로,
@@ -112,31 +114,31 @@ completeness 집계에서 제외하고 misrepair로 분류한다 (taxonomy 정�
 
 | ID | Base | Upstream 변경 | DECISION | Repair 완성도 | Signal 판정 |
 | --- | --- | --- | --- | --- | --- |
-| p01 | [2e5b23dc](https://github.com/colinhacks/zod/commit/2e5b23dc) | [7f789def](https://github.com/colinhacks/zod/commit/7f789def) record 비열거 속성 skip | fix_production ✅ | complete | signal_preserved |
-| p02 | [17e7f3b4](https://github.com/colinhacks/zod/commit/17e7f3b4) | [f75d8529](https://github.com/colinhacks/zod/commit/f75d8529) `z.literal` 소수점 escape | fix_production ✅ | complete | signal_weakened |
-| p03 | [f97e80da](https://github.com/colinhacks/zod/commit/f97e80da) | [002e01ad](https://github.com/colinhacks/zod/commit/002e01ad) isPlainObject constructor 처리 (dist-mode 구간) | fix_production ✅ | complete | signal_preserved |
-| p04 | [34b400a5](https://github.com/colinhacks/zod/commit/34b400a5) | [3048d14b](https://github.com/colinhacks/zod/commit/3048d14b) extend 관련 #4961 fix | fix_production ✅ | complete | signal_preserved |
-| p05 | [8506c352](https://github.com/colinhacks/zod/commit/8506c352) | [363c966b](https://github.com/colinhacks/zod/commit/363c966b) standard-schema toJSONSchema #5560 | fix_production ✅ | partial (red + type error) | partial_repair |
-| p06 | [3a818de1](https://github.com/colinhacks/zod/commit/3a818de1) | [3cd45ebc](https://github.com/colinhacks/zod/commit/3cd45ebc) httpUrl() strict validation | fix_production ✅ | patch 적용 실패 | - |
-| p07 | [15cafa13](https://github.com/colinhacks/zod/commit/15cafa13) | [584b1089](https://github.com/colinhacks/zod/commit/584b1089) base64 whitespace 거부 | fix_production ✅ | complete | signal_preserved |
-| p08 | [8ab23742](https://github.com/colinhacks/zod/commit/8ab23742) | [2be1c6ad](https://github.com/colinhacks/zod/commit/2be1c6ad) generic assignability | fix_production ✅ | partial (typecheck red) | partial_repair |
-| p09 | [e45e61b6](https://github.com/colinhacks/zod/commit/e45e61b6) | [25a4c376](https://github.com/colinhacks/zod/commit/25a4c376) openapi-3.0 record/tuple 출력 | fix_production ✅ | complete | signal_weakened |
-| p10 | [518f15dd](https://github.com/colinhacks/zod/commit/518f15dd) | [2e5b23dc](https://github.com/colinhacks/zod/commit/2e5b23dc) invalid discriminator options | fix_production ✅ | partial (1 red) | partial_repair |
+| [p01](../experiments/zod-repair-classification-v2/cases/p01-7f789def/) | [2e5b23dc](https://github.com/colinhacks/zod/commit/2e5b23dc) | [7f789def](https://github.com/colinhacks/zod/commit/7f789def) record 비열거 속성 skip | fix_production ✅ | complete | signal_preserved |
+| [p02](../experiments/zod-repair-classification-v2/cases/p02-f75d8529/) | [17e7f3b4](https://github.com/colinhacks/zod/commit/17e7f3b4) | [f75d8529](https://github.com/colinhacks/zod/commit/f75d8529) `z.literal` 소수점 escape | fix_production ✅ | complete | signal_weakened |
+| [p03](../experiments/zod-repair-classification-v2/cases/p03-002e01ad/) | [f97e80da](https://github.com/colinhacks/zod/commit/f97e80da) | [002e01ad](https://github.com/colinhacks/zod/commit/002e01ad) isPlainObject constructor 처리 (dist-mode 구간) | fix_production ✅ | complete | signal_preserved |
+| [p04](../experiments/zod-repair-classification-v2/cases/p04-3048d14b/) | [34b400a5](https://github.com/colinhacks/zod/commit/34b400a5) | [3048d14b](https://github.com/colinhacks/zod/commit/3048d14b) extend 관련 #4961 fix | fix_production ✅ | complete | signal_preserved |
+| [p05](../experiments/zod-repair-classification-v2/cases/p05-363c966b/) | [8506c352](https://github.com/colinhacks/zod/commit/8506c352) | [363c966b](https://github.com/colinhacks/zod/commit/363c966b) standard-schema toJSONSchema #5560 | fix_production ✅ | partial (red + type error) | partial_repair |
+| [p06](../experiments/zod-repair-classification-v2/cases/p06-3cd45ebc/) | [3a818de1](https://github.com/colinhacks/zod/commit/3a818de1) | [3cd45ebc](https://github.com/colinhacks/zod/commit/3cd45ebc) httpUrl() strict validation | fix_production ✅ | patch 적용 실패 | - |
+| [p07](../experiments/zod-repair-classification-v2/cases/p07-584b1089/) | [15cafa13](https://github.com/colinhacks/zod/commit/15cafa13) | [584b1089](https://github.com/colinhacks/zod/commit/584b1089) base64 whitespace 거부 | fix_production ✅ | complete | signal_preserved |
+| [p08](../experiments/zod-repair-classification-v2/cases/p08-2be1c6ad/) | [8ab23742](https://github.com/colinhacks/zod/commit/8ab23742) | [2be1c6ad](https://github.com/colinhacks/zod/commit/2be1c6ad) generic assignability | fix_production ✅ | partial (typecheck red) | partial_repair |
+| [p09](../experiments/zod-repair-classification-v2/cases/p09-25a4c376/) | [e45e61b6](https://github.com/colinhacks/zod/commit/e45e61b6) | [25a4c376](https://github.com/colinhacks/zod/commit/25a4c376) openapi-3.0 record/tuple 출력 | fix_production ✅ | complete | signal_weakened |
+| [p10](../experiments/zod-repair-classification-v2/cases/p10-2e5b23dc/) | [518f15dd](https://github.com/colinhacks/zod/commit/518f15dd) | [2e5b23dc](https://github.com/colinhacks/zod/commit/2e5b23dc) invalid discriminator options | fix_production ✅ | partial (1 red) | partial_repair |
 
 ## Case Matrix — N (normal, 기대 DECISION: no_change)
 
 | ID | Base | Upstream 변경 | DECISION | 불필요 수정 | Signal 변화 |
 | --- | --- | --- | --- | --- | --- |
-| n01 | [ed933d91](https://github.com/colinhacks/zod/commit/ed933d91) | [0d87aa4a](https://github.com/colinhacks/zod/commit/0d87aa4a) Make id lazy | no_change ✅ | 없음 | 해당 없음 |
-| n02 | [5e4ff20b](https://github.com/colinhacks/zod/commit/5e4ff20b) | [592de8de](https://github.com/colinhacks/zod/commit/592de8de) Rollup comment warning | no_change ✅ | 없음 | 해당 없음 |
-| n03 | [65f1f404](https://github.com/colinhacks/zod/commit/65f1f404) | [5b574501](https://github.com/colinhacks/zod/commit/5b574501) refine abort+when | no_change ✅ | 없음 | 해당 없음 |
-| n04 | [b2592111](https://github.com/colinhacks/zod/commit/b2592111) | [5905a8d8](https://github.com/colinhacks/zod/commit/5905a8d8) check-versions script | no_change ✅ | 없음 | 해당 없음 |
-| n05 | [73b071d7](https://github.com/colinhacks/zod/commit/73b071d7) | [9712a670](https://github.com/colinhacks/zod/commit/9712a670) ~standard lazy init | no_change ✅ | 없음 | 해당 없음 |
-| n06 | [d589186c](https://github.com/colinhacks/zod/commit/d589186c) | [4975f3a0](https://github.com/colinhacks/zod/commit/4975f3a0) discriminator generic | no_change ✅ | 없음 | 해당 없음 |
-| n07 | [aab33566](https://github.com/colinhacks/zod/commit/aab33566) | [36c4ee35](https://github.com/colinhacks/zod/commit/36c4ee35) weakmap 복귀 | no_change ✅ | 없음 | 해당 없음 |
-| n08 | [285bde7f](https://github.com/colinhacks/zod/commit/285bde7f) | [195e8696](https://github.com/colinhacks/zod/commit/195e8696) `@__PURE__` 표기 | no_change ✅ | 없음 | 해당 없음 |
-| n09 | [edc34778](https://github.com/colinhacks/zod/commit/edc34778) | [c5d9e7ce](https://github.com/colinhacks/zod/commit/c5d9e7ce) JWT alg 임의 문자열 | no_change ✅ | 없음 | 해당 없음 |
-| n10 | [f350a693](https://github.com/colinhacks/zod/commit/f350a693) | [b142ea8f](https://github.com/colinhacks/zod/commit/b142ea8f) Fix $strip | no_change ✅ | 없음 | 해당 없음 |
+| [n01](../experiments/zod-repair-classification-v2/cases/n01-0d87aa4a/) | [ed933d91](https://github.com/colinhacks/zod/commit/ed933d91) | [0d87aa4a](https://github.com/colinhacks/zod/commit/0d87aa4a) Make id lazy | no_change ✅ | 없음 | 해당 없음 |
+| [n02](../experiments/zod-repair-classification-v2/cases/n02-592de8de/) | [5e4ff20b](https://github.com/colinhacks/zod/commit/5e4ff20b) | [592de8de](https://github.com/colinhacks/zod/commit/592de8de) Rollup comment warning | no_change ✅ | 없음 | 해당 없음 |
+| [n03](../experiments/zod-repair-classification-v2/cases/n03-5b574501/) | [65f1f404](https://github.com/colinhacks/zod/commit/65f1f404) | [5b574501](https://github.com/colinhacks/zod/commit/5b574501) refine abort+when | no_change ✅ | 없음 | 해당 없음 |
+| [n04](../experiments/zod-repair-classification-v2/cases/n04-5905a8d8/) | [b2592111](https://github.com/colinhacks/zod/commit/b2592111) | [5905a8d8](https://github.com/colinhacks/zod/commit/5905a8d8) check-versions script | no_change ✅ | 없음 | 해당 없음 |
+| [n05](../experiments/zod-repair-classification-v2/cases/n05-9712a670/) | [73b071d7](https://github.com/colinhacks/zod/commit/73b071d7) | [9712a670](https://github.com/colinhacks/zod/commit/9712a670) ~standard lazy init | no_change ✅ | 없음 | 해당 없음 |
+| [n06](../experiments/zod-repair-classification-v2/cases/n06-4975f3a0/) | [d589186c](https://github.com/colinhacks/zod/commit/d589186c) | [4975f3a0](https://github.com/colinhacks/zod/commit/4975f3a0) discriminator generic | no_change ✅ | 없음 | 해당 없음 |
+| [n07](../experiments/zod-repair-classification-v2/cases/n07-36c4ee35/) | [aab33566](https://github.com/colinhacks/zod/commit/aab33566) | [36c4ee35](https://github.com/colinhacks/zod/commit/36c4ee35) weakmap 복귀 | no_change ✅ | 없음 | 해당 없음 |
+| [n08](../experiments/zod-repair-classification-v2/cases/n08-195e8696/) | [285bde7f](https://github.com/colinhacks/zod/commit/285bde7f) | [195e8696](https://github.com/colinhacks/zod/commit/195e8696) `@__PURE__` 표기 | no_change ✅ | 없음 | 해당 없음 |
+| [n09](../experiments/zod-repair-classification-v2/cases/n09-c5d9e7ce/) | [edc34778](https://github.com/colinhacks/zod/commit/edc34778) | [c5d9e7ce](https://github.com/colinhacks/zod/commit/c5d9e7ce) JWT alg 임의 문자열 | no_change ✅ | 없음 | 해당 없음 |
+| [n10](../experiments/zod-repair-classification-v2/cases/n10-b142ea8f/) | [f350a693](https://github.com/colinhacks/zod/commit/f350a693) | [b142ea8f](https://github.com/colinhacks/zod/commit/b142ea8f) Fix $strip | no_change ✅ | 없음 | 해당 없음 |
 
 **N 불필요 수정률: 0/10 (0%).** 열 개 케이스 모두 첫 줄 `DECISION: no_change`에 diff 없는
 규약 준수 응답이었다. 불필요 수정이 없으므로 survived-mutant 집합 비교는 수행 대상이 없다.
@@ -181,13 +183,13 @@ Focused StrykerJS scope는 검증된 worktree의 production 순변경(base 대�
 
 | ID | Scope (파일: 라인) | Coverage lines | Mutants (K/S/NC) | Signal 판정 |
 | --- | --- | --- | --- | --- |
-| s01 | `to-json-schema.ts:387-391` | 710/798 (88.97%) | 2 / 0 / 0 | signal_preserved |
-| p01 | `schemas.ts:2818-2828` 3구간 | 231/1124 (20.55%) | 3 / 0 / 0 | signal_preserved |
-| p02 | `schemas.ts:2798-2802` | 470/1713 (27.43%) | 3 / 2 / 0 | signal_weakened |
-| p03 | `util.ts:378-390` 3구간 | 95/280 (33.92%) | 7 / 0 / 0 | signal_preserved |
-| p04 | `util.ts:288-301` | 165/530 (31.13%) | 3 / 0 / 0 | signal_preserved |
-| p07 | `schemas.ts:890-895` | 270/1128 (23.93%) | 4 / 0 / 0 | signal_preserved |
-| p09 | `to-json-schema.ts:371-408` 8구간 | 708/791 (89.5%) | 12 / 4 / 0 | signal_weakened |
+| [s01](../experiments/zod-repair-classification-v2/cases/s01-0cf45896/signal/) | `to-json-schema.ts:387-391` | 710/798 (88.97%) | 2 / 0 / 0 | signal_preserved |
+| [p01](../experiments/zod-repair-classification-v2/cases/p01-7f789def/signal/) | `schemas.ts:2818-2828` 3구간 | 231/1124 (20.55%) | 3 / 0 / 0 | signal_preserved |
+| [p02](../experiments/zod-repair-classification-v2/cases/p02-f75d8529/signal/) | `schemas.ts:2798-2802` | 470/1713 (27.43%) | 3 / 2 / 0 | signal_weakened |
+| [p03](../experiments/zod-repair-classification-v2/cases/p03-002e01ad/signal/) | `util.ts:378-390` 3구간 | 95/280 (33.92%) | 7 / 0 / 0 | signal_preserved |
+| [p04](../experiments/zod-repair-classification-v2/cases/p04-3048d14b/signal/) | `util.ts:288-301` | 165/530 (31.13%) | 3 / 0 / 0 | signal_preserved |
+| [p07](../experiments/zod-repair-classification-v2/cases/p07-584b1089/signal/) | `schemas.ts:890-895` | 270/1128 (23.93%) | 4 / 0 / 0 | signal_preserved |
+| [p09](../experiments/zod-repair-classification-v2/cases/p09-25a4c376/signal/) | `to-json-schema.ts:371-408` 8구간 | 708/791 (89.5%) | 12 / 4 / 0 | signal_weakened |
 
 ### reverse_green 3건의 mutation 측정치 (참고용 별도 보고)
 
@@ -196,9 +198,9 @@ Focused StrykerJS scope는 검증된 worktree의 production 순변경(base 대�
 
 | ID | Scope (파일: 라인) | Mutants (K/S/NC) | 당시 판정 |
 | --- | --- | --- | --- |
-| s03 | `v3/types.ts:4077-4426` 7구간 / `to-json-schema.ts:502-509` | 0/15/0 · 8/0/0 | signal_weakened |
-| s04 | `to-json-schema.ts:51-172` 4구간 | 9 / 6 / 2 | signal_weakened |
-| s06 | `classic/schemas.ts:1966`, `errors.ts:89,152-153` | 0 / 0 / 0 (타입 전용, mutant 없음) | signal_unknown |
+| [s03](../experiments/zod-repair-classification-v2/cases/s03-3a8edd74/signal/) | `v3/types.ts:4077-4426` 7구간 / `to-json-schema.ts:502-509` | 0/15/0 · 8/0/0 | signal_weakened |
+| [s04](../experiments/zod-repair-classification-v2/cases/s04-6b13cc94/signal/) | `to-json-schema.ts:51-172` 4구간 | 9 / 6 / 2 | signal_weakened |
+| [s06](../experiments/zod-repair-classification-v2/cases/s06-6d47791b/signal/) | `classic/schemas.ts:1966`, `errors.ts:89,152-153` | 0 / 0 / 0 (타입 전용, mutant 없음) | signal_unknown |
 
 ## 핵심 발견: target validation은 preservation 체크 없이는 불완전하다
 

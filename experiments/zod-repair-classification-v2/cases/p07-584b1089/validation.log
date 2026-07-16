@@ -3,7 +3,7 @@ Breaking changes might not follow SemVer, please pin Vitest's version when using
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
 
- RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p07-584b1089
+ RUN  v4.0.10 <worktree>/p07-584b1089
 
  ✓  zod  src/v4/mini/tests/string.test.ts (27 tests) 11ms
  ✓  zod  src/v4/classic/tests/string.test.ts (47 tests) 79ms

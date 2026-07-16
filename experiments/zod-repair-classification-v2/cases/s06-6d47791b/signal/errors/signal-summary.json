@@ -1,6 +1,6 @@
 {
   "case": "s06-6d47791b",
-  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b",
+  "repo": "<worktree>/s06-6d47791b",
   "tests": [
     "packages/zod/src/v4/classic/tests/error-utils.test.ts",
     "packages/zod/src/v4/classic/tests/index.test.ts"
@@ -17,7 +17,7 @@
     "summary": {
       "available": true,
       "productionFile": "packages/zod/src/v4/core/errors.ts",
-      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b/packages/zod/src/v4/core/errors.ts",
+      "fileKey": "<worktree>/s06-6d47791b/packages/zod/src/v4/core/errors.ts",
       "metrics": {
         "lines": {
           "total": 139,

@@ -95,7 +95,7 @@ Current test results:
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
 
- RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p09-25a4c376/packages/zod
+ RUN  v2.1.9 <worktree>/p09-25a4c376/packages/zod
 
  ❯ src/v4/classic/tests/to-json-schema.test.ts (55 tests | 2 failed) 41ms
    × toJSONSchema > tuple openapi 2ms

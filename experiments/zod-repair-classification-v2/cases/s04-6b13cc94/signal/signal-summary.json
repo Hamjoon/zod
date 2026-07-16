@@ -1,6 +1,6 @@
 {
   "case": "s04-6b13cc94",
-  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s04-6b13cc94",
+  "repo": "<worktree>/s04-6b13cc94",
   "tests": [
     "packages/zod/src/v4/classic/tests/json-schema.test.ts"
   ],
@@ -16,7 +16,7 @@
     "summary": {
       "available": true,
       "productionFile": "packages/zod/src/v4/core/to-json-schema.ts",
-      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s04-6b13cc94/packages/zod/src/v4/core/to-json-schema.ts",
+      "fileKey": "<worktree>/s04-6b13cc94/packages/zod/src/v4/core/to-json-schema.ts",
       "metrics": {
         "lines": {
           "total": 586,

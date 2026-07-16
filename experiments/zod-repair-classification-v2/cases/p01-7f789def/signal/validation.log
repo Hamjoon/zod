@@ -1,8 +1,8 @@
-$ pnpm vitest run packages/zod/src/v4/core/tests/record-constructor.test.ts --config /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p01-7f789def/.openclaw-signal/p01-7f789def/vitest.signal.config.ts --reporter=dot
+$ pnpm vitest run packages/zod/src/v4/core/tests/record-constructor.test.ts --config <worktree>/p01-7f789def/.openclaw-signal/p01-7f789def/vitest.signal.config.ts --reporter=dot
 status=0
 ## stdout
 
-[1m[46m RUN [49m[22m [36mv4.0.10 [39m[90m/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p01-7f789def[39m
+[1m[46m RUN [49m[22m [36mv4.0.10 [39m[90m<worktree>/p01-7f789def[39m
 
 [33m[39m[32m·[39m[33m[39m[32m·[39m[33m[39m[32m·[39m[33m[39m[32m·[39m[33m[39m[32m·[39m[33m[39m[32m·[39m[33m[39m[32m·[39m[33m[39m[32m·[39m
 

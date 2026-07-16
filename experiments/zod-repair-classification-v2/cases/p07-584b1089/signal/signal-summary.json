@@ -1,6 +1,6 @@
 {
   "case": "p07-584b1089",
-  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p07-584b1089",
+  "repo": "<worktree>/p07-584b1089",
   "tests": [
     "packages/zod/src/v4/classic/tests/string.test.ts",
     "packages/zod/src/v4/mini/tests/string.test.ts"
@@ -17,7 +17,7 @@
     "summary": {
       "available": true,
       "productionFile": "packages/zod/src/v4/core/schemas.ts",
-      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p07-584b1089/packages/zod/src/v4/core/schemas.ts",
+      "fileKey": "<worktree>/p07-584b1089/packages/zod/src/v4/core/schemas.ts",
       "metrics": {
         "lines": {
           "total": 1128,

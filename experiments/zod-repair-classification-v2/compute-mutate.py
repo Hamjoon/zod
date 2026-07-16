@@ -18,7 +18,15 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path("/Users/donggi/_projects/etc-projects/zod-thesis")
+import os
+import subprocess
+
+def _repo_root() -> str:
+    return os.environ.get("ZOD_THESIS_ROOT") or subprocess.check_output(
+        ["git", "rev-parse", "--show-toplevel"], text=True
+    ).strip()
+
+ROOT = Path(_repo_root())
 EXP = ROOT / "experiments/zod-repair-classification-v2"
 TEST_RE = re.compile(r"\.test\.ts$|/tests/")
 

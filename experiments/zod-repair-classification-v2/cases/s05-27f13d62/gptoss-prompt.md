@@ -70,7 +70,7 @@ Current test results:
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
 
- RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s05-27f13d62/packages/zod
+ RUN  v2.1.9 <worktree>/s05-27f13d62/packages/zod
 
  ❯ src/v4/classic/tests/template-literal.test.ts (8 tests | 3 failed) 34ms
    × regexes 8ms

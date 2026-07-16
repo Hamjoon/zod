@@ -1,8 +1,8 @@
-$ pnpm vitest run packages/zod/src/v4/classic/tests/error-utils.test.ts packages/zod/src/v4/classic/tests/index.test.ts --config /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b/.openclaw-signal/s06-6d47791b/vitest.signal.config.ts --reporter=dot
+$ pnpm vitest run packages/zod/src/v4/classic/tests/error-utils.test.ts packages/zod/src/v4/classic/tests/index.test.ts --config <worktree>/s06-6d47791b/.openclaw-signal/s06-6d47791b/vitest.signal.config.ts --reporter=dot
 status=0
 ## stdout
 
- RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b
+ RUN  v2.1.9 <worktree>/s06-6d47791b
 
  ✓ packages/zod/src/v4/classic/tests/error-utils.test.ts (11 tests) 11ms
  ✓ packages/zod/src/v4/classic/tests/index.test.ts (57 tests) 21ms

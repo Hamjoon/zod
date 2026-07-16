@@ -1,6 +1,6 @@
 {
   "case": "p03-002e01ad",
-  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p03-002e01ad",
+  "repo": "<worktree>/p03-002e01ad",
   "tests": [
     "packages/zod/src/v4/classic/tests/index.test.ts",
     "packages/zod/src/v4/core/tests/extend.test.ts",
@@ -18,7 +18,7 @@
     "summary": {
       "available": true,
       "productionFile": "packages/zod/src/v4/core/util.ts",
-      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p03-002e01ad/packages/zod/src/v4/core/util.ts",
+      "fileKey": "<worktree>/p03-002e01ad/packages/zod/src/v4/core/util.ts",
       "metrics": {
         "lines": {
           "total": 280,

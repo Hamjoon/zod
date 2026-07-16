@@ -130,7 +130,7 @@ Current test results:
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
 
- RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s03-3a8edd74/packages/zod
+ RUN  v2.1.9 <worktree>/s03-3a8edd74/packages/zod
 
  ❯ src/v3/tests/refine.test.ts (14 tests | 1 failed) 8ms
    × superRefine after skipped transform 4ms

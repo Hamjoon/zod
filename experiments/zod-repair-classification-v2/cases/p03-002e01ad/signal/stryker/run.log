@@ -1,4 +1,4 @@
-$ pnpm stryker run /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p03-002e01ad/.openclaw-signal/p03-002e01ad/stryker.signal.config.mjs
+$ pnpm stryker run <worktree>/p03-002e01ad/.openclaw-signal/p03-002e01ad/stryker.signal.config.mjs
 status=0
 ## stdout
 [32m16:34:47 (36782) INFO ProjectReader[39m Found 1 of 953 file(s) to be mutated.
@@ -87,7 +87,7 @@ All files | 100.00 |  100.00 |        7 |         0 |          0 |        0 |   
  util.ts  | 100.00 |  100.00 |        7 |         0 |          0 |        0 |        0 |
 ----------|--------|---------|----------|-----------|------------|----------|----------|
 [32m16:34:49 (36782) INFO MutationTestReportHelper[39m Final mutation score of 100.00 is greater than or equal to break threshold 0
-[32m16:34:49 (36782) INFO JsonReporter[39m Your report can be found at: file:///Users/donggi/_projects/etc-projects/zod-thesis/experiments/zod-repair-classification-v2/cases/p03-002e01ad/signal/stryker/mutation.json
+[32m16:34:49 (36782) INFO JsonReporter[39m Your report can be found at: file://<repo>/experiments/zod-repair-classification-v2/cases/p03-002e01ad/signal/stryker/mutation.json
 [32m16:34:49 (36782) INFO MutationTestExecutor[39m Done in 2 seconds.
 
 ## stderr

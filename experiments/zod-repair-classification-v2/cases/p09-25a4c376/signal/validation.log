@@ -1,8 +1,8 @@
-$ pnpm vitest run packages/zod/src/v4/classic/tests/to-json-schema.test.ts --config /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p09-25a4c376/.openclaw-signal/p09-25a4c376/vitest.signal.config.ts --reporter=dot
+$ pnpm vitest run packages/zod/src/v4/classic/tests/to-json-schema.test.ts --config <worktree>/p09-25a4c376/.openclaw-signal/p09-25a4c376/vitest.signal.config.ts --reporter=dot
 status=0
 ## stdout
 
- RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p09-25a4c376
+ RUN  v2.1.9 <worktree>/p09-25a4c376
 
  ✓ packages/zod/src/v4/classic/tests/to-json-schema.test.ts (55 tests) 36ms
 

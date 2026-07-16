@@ -87,7 +87,7 @@ Breaking changes might not follow SemVer, please pin Vitest's version when using
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
 
- RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p01-7f789def
+ RUN  v4.0.10 <worktree>/p01-7f789def
 
  ❯  zod  src/v4/core/tests/record-constructor.test.ts (8 tests | 3 failed) 14ms
    ✓ record should parse objects with non-function constructor field 2ms

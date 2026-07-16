@@ -4,7 +4,7 @@
 # one commit per case packet (adoption order), then a final commit with the
 # report, runner, signal script, cases.json, helper scripts, results summary.
 set -eu
-ROOT=/Users/donggi/_projects/etc-projects/zod-thesis
+ROOT=${ZOD_THESIS_ROOT:-$(git rev-parse --show-toplevel)}
 EXP=$ROOT/experiments/zod-repair-classification-v2
 BRANCH=experiment/2026-07-week3-v2-30case-archive
 AWT=$ROOT/.worktrees/archive-week3

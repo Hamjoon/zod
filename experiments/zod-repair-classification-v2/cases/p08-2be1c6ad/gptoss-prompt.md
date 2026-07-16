@@ -43,7 +43,7 @@ Current test results:
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
 
- RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p08-2be1c6ad/packages/zod
+ RUN  v2.1.9 <worktree>/p08-2be1c6ad/packages/zod
 
  ✓ src/v4/classic/tests/assignability.test.ts (5 tests) 7ms
  ❯  TS  src/v4/classic/tests/assignability.test.ts (5 tests | 1 failed)

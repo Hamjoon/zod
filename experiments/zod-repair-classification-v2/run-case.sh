@@ -2,7 +2,7 @@
 # run-case.sh <case-id> — single-shot gpt-oss-120b run for one v2 case.
 # API key is injected from the keychain at call time only; never written anywhere.
 set -u
-ROOT=/Users/donggi/_projects/etc-projects/zod-thesis
+ROOT=${ZOD_THESIS_ROOT:-$(git rev-parse --show-toplevel)}
 EXP=$ROOT/experiments/zod-repair-classification-v2
 ID=$1
 CASEDIR=$EXP/cases/$ID

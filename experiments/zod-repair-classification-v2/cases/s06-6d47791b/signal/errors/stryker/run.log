@@ -1,4 +1,4 @@
-$ pnpm stryker run /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b/.openclaw-signal/s06-6d47791b/stryker.signal.config.mjs
+$ pnpm stryker run <worktree>/s06-6d47791b/.openclaw-signal/s06-6d47791b/stryker.signal.config.mjs
 status=0
 ## stdout
 [32m16:09:57 (21569) INFO ProjectReader[39m Found 1 of 448 file(s) to be mutated.
@@ -87,7 +87,7 @@ File      |  total | covered | # killed | # timeout | # survived | # no cov | # 
 All files |    n/a |     n/a |        0 |         0 |          0 |        0 |        0 |
 ----------|--------|---------|----------|-----------|------------|----------|----------|
 [32m16:09:58 (21569) INFO MutationTestReportHelper[39m Final mutation score of NaN is greater than or equal to break threshold 0
-[32m16:09:58 (21569) INFO JsonReporter[39m Your report can be found at: file:///Users/donggi/_projects/etc-projects/zod-thesis/experiments/zod-repair-classification-v2/cases/s06-6d47791b/signal/errors/stryker/mutation.json
+[32m16:09:58 (21569) INFO JsonReporter[39m Your report can be found at: file://<repo>/experiments/zod-repair-classification-v2/cases/s06-6d47791b/signal/errors/stryker/mutation.json
 [32m16:09:58 (21569) INFO MutationTestExecutor[39m Done in 1 second.
 
 ## stderr

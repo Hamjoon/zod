@@ -203,7 +203,7 @@ Current test results:
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
 
- RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s08-ad2fc5ee/packages/zod
+ RUN  v2.1.9 <worktree>/s08-ad2fc5ee/packages/zod
 
  ❯ src/v4/classic/tests/to-json-schema.test.ts (43 tests | 1 failed) 31ms
    × toJSONSchema > unsupported schema types 2ms

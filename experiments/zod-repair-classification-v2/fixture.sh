@@ -2,9 +2,9 @@
 # fixture.sh <case-id> — build the v2 fixture worktree for one case and capture test output.
 # Prints "FIXTURE: <OK|FAIL> <id> <detail>" as the last line.
 set -u
-ROOT=/Users/donggi/_projects/etc-projects/zod-thesis
+ROOT=${ZOD_THESIS_ROOT:-$(git rev-parse --show-toplevel)}
 EXP=$ROOT/experiments/zod-repair-classification-v2
-SCRATCH=${V2_SCRATCH:-/private/tmp/claude-501/-Users-donggi--projects-etc-projects-zod-thesis/d3931c70-456e-417b-9afb-2f6b808ef4e9/scratchpad}
+SCRATCH=${V2_SCRATCH:-$ROOT/.v2-scratch}
 ID=$1
 LOG=$SCRATCH/logs/$ID
 CASEDIR=$EXP/cases/$ID

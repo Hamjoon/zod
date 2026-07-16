@@ -3,7 +3,7 @@ Breaking changes might not follow SemVer, please pin Vitest's version when using
 Testing types with tsc and vue-tsc is an experimental feature.
 Breaking changes might not follow SemVer, please pin Vitest's version when using it.
 
- RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p10-2e5b23dc
+ RUN  v4.0.10 <worktree>/p10-2e5b23dc
 
  ❯  zod  src/v4/classic/tests/discriminated-unions.test.ts (22 tests | 1 failed) 23ms
    ✓ _values 3ms
