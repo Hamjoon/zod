@@ -1,0 +1,12 @@
+{
+  "id": "s02-66bda749",
+  "category": "S",
+  "expected": "fix_tests",
+  "decision": "fix_production",
+  "decision_match": false,
+  "first_line_ok": true,
+  "has_diff": true,
+  "validation": "apply_failed",
+  "apply_method": "none",
+  "note": "patch-does-not-apply"
+}

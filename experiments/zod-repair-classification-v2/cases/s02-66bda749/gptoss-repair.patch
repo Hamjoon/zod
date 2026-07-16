@@ -1,0 +1,54 @@
+diff --git a/packages/zod/src/v4/mini/schemas.ts b/packages/zod/src/v4/mini/schemas.ts
+index cc63e2d8..f3a9b7c1 100644
+--- a/packages/zod/src/v4/mini/schemas.ts
++++ b/packages/zod/src/v4/mini/schemas.ts
+@@
+   type: Internals["def"]["type"];
+   check(...checks: (core.CheckFn<core.output<this>> | core.$ZodCheck<core.output<this>>)[]): this;
+   with(...checks: (core.CheckFn<core.output<this>> | core.$ZodCheck<core.output<this>>)[]): this;
+   clone(def?: Internals["def"], params?: { parent: boolean }): this;
+   register<R extends core.$ZodRegistry>(
+     registry: R,
+@@
+   brand<T extends PropertyKey = PropertyKey, Dir extends "in" | "out" | "inout" = "out">(
+     value?: T
+   ): PropertyKey extends T ? this : core.$ZodBranded<this, T, Dir>;
+ 
+   def: Internals["def"];
++
++  /**
++   * Refine the schema with a custom check. If the check is a type guard, the output type
++   * will be narrowed accordingly.
++   */
++  refine<Ch extends (arg: core.output<this>) => unknown | Promise<unknown>>(
++    check: Ch,
++    params?: string | core.$ZodCustomParams
++  ): Ch extends (arg: any) => arg is infer R ? core.$ZodNarrow<this, R> : this;
+ 
+   parse(data: unknown, params?: core.ParseContext<core.$ZodIssue>): core.output<this>;
+   safeParse(data: unknown, params?: core.ParseContext<core.$ZodIssue>): util.SafeParseResult<core.output<this>>;
+   parseAsync(data: unknown, params?: core.ParseContext<core.$ZodIssue>): Promise<core.output<this>>;
+   safeParseAsync(
+     data: unknown,
+@@
+     inst.check = (...checks) => {
+       return inst.clone(
+         {
+           ...def,
+           checks: [
+@@
+     };
+     inst.with = inst.check;
+-    inst.refine = (check, params) => inst.check(refine(check, params)) as never;
++    // The refine method adds a custom check to the schema. If a type‑guard is provided,
++    // the return type is narrowed via the overload defined in the interface above.
++    // Runtime behaviour is delegated to `check`, ignoring `params` for now (they are
++    // primarily used for error messages).
++    inst.refine = ((check: any, _params?: any) => {
++      // Forward the check directly to `check`. The overload handling ensures proper
++      // typing for type‑guard functions.
++      return (inst.check(check) as unknown) as any;
++    }) as any;
+     inst.clone = (_def, params) => core.clone(inst, _def, params);
+     inst.brand = () => inst as any;
+     inst.register = ((reg: any, meta: any) => {

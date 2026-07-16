@@ -1,0 +1,95 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s02-66bda749
+
+ ❯  zod  src/v4/mini/tests/refine.test.ts (2 tests | 2 failed) 2ms
+     × type guard narrows output type 2ms
+     × non-type-guard refine does not narrow 0ms
+ ❯  zod   TS  src/v4/mini/tests/refine.test.ts (2 tests | 2 failed)
+     × type guard narrows output type
+     × non-type-guard refine does not narrow
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL   zod  src/v4/mini/tests/refine.test.ts > type refinement with type guards > type guard narrows output type
+TypeError: __vite_ssr_import_1__.string(...).refine is not a function
+ ❯ src/v4/mini/tests/refine.test.ts:7:31
+      5| describe("type refinement with type guards", () => {
+      6|   test("type guard narrows output type", () => {
+      7|     const schema = z.string().refine((s): s is "a" => s === "a");
+       |                               ^
+      8| 
+      9|     expectTypeOf<core.input<typeof schema>>().toEqualTypeOf<string>();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL   zod  src/v4/mini/tests/refine.test.ts > type refinement with type guards > non-type-guard refine does not narrow
+TypeError: __vite_ssr_import_1__.string(...).refine is not a function
+ ❯ src/v4/mini/tests/refine.test.ts:14:31
+     12| 
+     13|   test("non-type-guard refine does not narrow", () => {
+     14|     const schema = z.string().refine((s) => s.length > 0);
+       |                               ^
+     15| 
+     16|     expectTypeOf<core.input<typeof schema>>().toEqualTypeOf<string>();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL   zod  src/v4/mini/tests/refine.test.ts > type refinement with type guards > type guard narrows output type
+TypeCheckError: Property 'refine' does not exist on type 'ZodMiniString<string>'.
+ ❯ src/v4/mini/tests/refine.test.ts:7:31
+      5| describe("type refinement with type guards", () => {
+      6|   test("type guard narrows output type", () => {
+      7|     const schema = z.string().refine((s): s is "a" => s === "a");
+       |                               ^
+      8| 
+      9|     expectTypeOf<core.input<typeof schema>>().toEqualTypeOf<string>();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+ FAIL   zod  src/v4/mini/tests/refine.test.ts > type refinement with type guards > type guard narrows output type
+TypeCheckError: Parameter 's' implicitly has an 'any' type.
+ ❯ src/v4/mini/tests/refine.test.ts:7:39
+      5| describe("type refinement with type guards", () => {
+      6|   test("type guard narrows output type", () => {
+      7|     const schema = z.string().refine((s): s is "a" => s === "a");
+       |                                       ^
+      8| 
+      9|     expectTypeOf<core.input<typeof schema>>().toEqualTypeOf<string>();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/6]⎯
+
+ FAIL   zod  src/v4/mini/tests/refine.test.ts > type refinement with type guards > non-type-guard refine does not narrow
+TypeCheckError: Property 'refine' does not exist on type 'ZodMiniString<string>'.
+ ❯ src/v4/mini/tests/refine.test.ts:14:31
+     12| 
+     13|   test("non-type-guard refine does not narrow", () => {
+     14|     const schema = z.string().refine((s) => s.length > 0);
+       |                               ^
+     15| 
+     16|     expectTypeOf<core.input<typeof schema>>().toEqualTypeOf<string>();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/6]⎯
+
+ FAIL   zod  src/v4/mini/tests/refine.test.ts > type refinement with type guards > non-type-guard refine does not narrow
+TypeCheckError: Parameter 's' implicitly has an 'any' type.
+ ❯ src/v4/mini/tests/refine.test.ts:14:39
+     12| 
+     13|   test("non-type-guard refine does not narrow", () => {
+     14|     const schema = z.string().refine((s) => s.length > 0);
+       |                                       ^
+     15| 
+     16|     expectTypeOf<core.input<typeof schema>>().toEqualTypeOf<string>();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/6]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  4 failed (4)
+Type Errors  2 failed
+   Start at  15:50:48
+   Duration  7.65s (transform 233ms, setup 17ms, collect 266ms, tests 2ms, environment 0ms, prepare 3ms, typecheck 7.29s)
+
