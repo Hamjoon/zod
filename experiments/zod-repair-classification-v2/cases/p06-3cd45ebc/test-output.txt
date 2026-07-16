@@ -1,0 +1,78 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p06-3cd45ebc
+
+ ❯  zod  src/v4/classic/tests/string.test.ts (47 tests | 1 failed) 105ms
+   ✓ length checks 2ms
+   ✓ includes 0ms
+   ✓ includes with string error message 5ms
+   ✓ startswith/endswith 0ms
+   ✓ email validations 1ms
+   ✓ base64 validations 1ms
+   ✓ base64url validations 0ms
+   ✓ big base64 and base64url 75ms
+   ✓ jwt token 1ms
+   ✓ url validations 0ms
+   ✓ url preserves original input 4ms
+   ✓ url trims whitespace 0ms
+   ✓ url normalize flag 0ms
+   ✓ url normalize with hostname and protocol constraints 0ms
+   × httpurl 1ms
+   ✓ url error overrides 0ms
+   ✓ emoji validations 1ms
+   ✓ nanoid 1ms
+   ✓ bad nanoid 0ms
+   ✓ good uuid 0ms
+   ✓ bad uuid 0ms
+   ✓ good guid 0ms
+   ✓ bad guid 0ms
+   ✓ cuid 0ms
+   ✓ cuid2 0ms
+   ✓ ulid 0ms
+   ✓ xid 0ms
+   ✓ ksuid 0ms
+   ✓ regex 0ms
+   ✓ regexp error message 1ms
+   ✓ regexp error custom message 0ms
+   ✓ regex lastIndex reset 0ms
+   ✓ format 2ms
+   ✓ min max getters 0ms
+   ✓ boundary cases with zero length 0ms
+   ✓ trim 0ms
+   ✓ lowerCase 0ms
+   ✓ slugify 1ms
+   ✓ IPv4 validation 1ms
+   ✓ IPv6 validation 0ms
+   ✓ MAC validation 0ms
+   ✓ MAC validation with custom delimiter 0ms
+   ✓ CIDR v4 validation 0ms
+   ✓ CIDR v6 validation 0ms
+   ✓ E.164 validation 0ms
+   ✓ hostname 1ms
+   ✓ hash validation 1ms
+ ✓  zod   TS  src/v4/classic/tests/string.test.ts (47 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL   zod  src/v4/classic/tests/string.test.ts > httpurl
+AssertionError: expected [Function] to throw an error
+ ❯ src/v4/classic/tests/string.test.ts:458:51
+    456|   expect(() => httpUrl.parse("mailto:asdf@lckj.com")).toThrow();
+    457|   // missing // after protocol
+    458|   expect(() => httpUrl.parse("http:example.com")).toThrow();
+       |                                                   ^
+    459|   expect(() => httpUrl.parse("https:example.com")).toThrow();
+    460|   // missing one /
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 93 passed (94)
+Type Errors  no errors
+   Start at  15:52:37
+   Duration  6.68s (transform 1.23s, setup 27ms, collect 1.52s, tests 105ms, environment 0ms, prepare 5ms, typecheck 4.86s)
+

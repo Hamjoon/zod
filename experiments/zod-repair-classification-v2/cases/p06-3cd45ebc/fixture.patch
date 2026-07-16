@@ -1,0 +1,17 @@
+diff --git a/packages/zod/src/v4/classic/tests/string.test.ts b/packages/zod/src/v4/classic/tests/string.test.ts
+index 509f497b..186bc2b5 100644
+--- a/packages/zod/src/v4/classic/tests/string.test.ts
++++ b/packages/zod/src/v4/classic/tests/string.test.ts
+@@ -454,6 +454,12 @@ test("httpurl", () => {
+   ).toThrow();
+   expect(() => httpUrl.parse("http://asdf.c")).toThrow();
+   expect(() => httpUrl.parse("mailto:asdf@lckj.com")).toThrow();
++  // missing // after protocol
++  expect(() => httpUrl.parse("http:example.com")).toThrow();
++  expect(() => httpUrl.parse("https:example.com")).toThrow();
++  // missing one /
++  expect(() => httpUrl.parse("https:/www.google.com")).toThrow();
++  expect(() => httpUrl.parse("http:/example.com")).toThrow();
+ });
+ 
+ test("url error overrides", () => {

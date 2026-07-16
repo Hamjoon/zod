@@ -1,0 +1,42 @@
+DECISION: fix_production
+```diff
+diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts
+index 9c2e1f7..e5b3a4d 100644
+--- a/packages/zod/src/v4/core/schemas.ts
++++ b/packages/zod/src/v4/core/schemas.ts
+@@
+       if (def.protocol) {
+         def.protocol.lastIndex = 0;
+         if (!def.protocol.test(url.protocol.endsWith(":") ? url.protocol.slice(0, -1) : url.protocol)) {
+           payload.issues.push({
+             code: "invalid_format",
+             format: "url",
+             note: "Invalid protocol",
+             pattern: def.protocol.source,
+             input: payload.value,
+             inst,
+             continue: !def.abort,
+           });
+         }
++        // Ensure that the protocol is followed by "//"
++        // This catches cases like "http:example.com" or "https:/example.com"
++        // which the URL constructor may accept but are not valid full URLs.
++        const protocolMatch = trimmed.match(/^([a-zA-Z][a-zA-Z0-9+.-]*):/);
++        if (protocolMatch) {
++          const afterProtocol = trimmed.slice(protocolMatch[0].length);
++          if (!afterProtocol.startsWith("//")) {
++            payload.issues.push({
++              code: "invalid_format",
++              format: "url",
++              note: "Missing // after protocol",
++              input: payload.value,
++              inst,
++              continue: !def.abort,
++            });
++          }
++        }
+       }
+ 
+       if (def.hostname) {
+         def.hostname.lastIndex = 0;
+```
