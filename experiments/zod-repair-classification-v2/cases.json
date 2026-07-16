@@ -1,0 +1,462 @@
+[
+  {
+    "id": "s01-0cf45896",
+    "category": "S",
+    "upstream_sha": "0cf45896",
+    "base_sha": "a410616b",
+    "upstream_subject": "fix(v4): toJSONSchema - add missing oneOf inside items in tuple conversion (#5146)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/to-json-schema.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/core/to-json-schema.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "s02-66bda749",
+    "category": "S",
+    "upstream_sha": "66bda749",
+    "base_sha": "9443aab0",
+    "upstream_subject": "Remove .refine() from ZodMiniType",
+    "test_paths": [
+      "packages/zod/src/v4/mini/tests/refine.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/mini/schemas.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "s03-3a8edd74",
+    "category": "S",
+    "upstream_sha": "3a8edd74",
+    "base_sha": "103f69be",
+    "upstream_subject": "Revert \"Use output type for preprocess (#4552)\"",
+    "test_paths": [
+      "packages/zod/src/v3/tests/refine.test.ts",
+      "packages/zod/src/v4/classic/tests/json-schema.test.ts",
+      "packages/zod/src/v4/classic/tests/to-json-schema.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v3/types.ts",
+      "packages/zod/src/v4/core/to-json-schema.ts",
+      "play.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "s04-6b13cc94",
+    "category": "S",
+    "upstream_sha": "6b13cc94",
+    "base_sha": "39d84d03",
+    "upstream_subject": "Polish JSON Schema for patterns",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/json-schema.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/core/to-json-schema.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "s05-27f13d62",
+    "category": "S",
+    "upstream_sha": "27f13d62",
+    "base_sha": "845a230b",
+    "upstream_subject": "Improve regex precision and eliminate duplicates in regexes.ts (#5181)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/template-literal.test.ts",
+      "packages/zod/src/v4/classic/tests/to-json-schema.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/core/regexes.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "s06-6d47791b",
+    "category": "S",
+    "upstream_sha": "6d47791b",
+    "base_sha": "a2c98924",
+    "upstream_subject": "Fix v.custom input type, add z.core., error map docs",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/error-utils.test.ts",
+      "packages/zod/src/v4/classic/tests/index.test.ts"
+    ],
+    "prod_paths": [
+      "packages/docs/content/error-customization.mdx",
+      "packages/zod/package.json",
+      "packages/zod/src/v4/classic/schemas.ts",
+      "packages/zod/src/v4/core/errors.ts",
+      "play.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "s07-2529f827",
+    "category": "S",
+    "upstream_sha": "2529f827",
+    "base_sha": "98c849de",
+    "upstream_subject": "fix: update correct JSON Schema identifiers (#4485)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/json-schema.test.ts"
+    ],
+    "prod_paths": [
+      "packages/docs/content/json-schema.mdx",
+      "packages/zod/src/v4/core/to-json-schema.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "s08-ad2fc5ee",
+    "category": "S",
+    "upstream_sha": "ad2fc5ee",
+    "base_sha": "f97733ff",
+    "upstream_subject": "Implement OpenAPI-friendly JSON Schema for File schemas (#4567)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/to-json-schema.test.ts"
+    ],
+    "prod_paths": [
+      "packages/docs/content/api.mdx",
+      "packages/docs/content/json-schema.mdx",
+      "packages/docs/content/v4/index.mdx",
+      "packages/zod/src/v4/classic/schemas.ts",
+      "packages/zod/src/v4/core/schemas.ts",
+      "packages/zod/src/v4/core/to-json-schema.ts",
+      "play.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "s09-f98d1a30",
+    "category": "S",
+    "upstream_sha": "f98d1a30",
+    "base_sha": "592de8de",
+    "upstream_subject": "Standardize URL behavior, clarify docs",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/string.test.ts",
+      "packages/zod/src/v4/mini/tests/string.test.ts"
+    ],
+    "prod_paths": [
+      "packages/docs/content/api.mdx",
+      "packages/zod/src/v4/core/regexes.ts",
+      "packages/zod/src/v4/core/schemas.ts",
+      "play.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "s10-5fdece94",
+    "category": "S",
+    "upstream_sha": "5fdece94",
+    "base_sha": "a73a3b30",
+    "upstream_subject": "fix(v4): reflect inclusive boundaries in minLength/maxLength issue objects (#4591)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/array.test.ts",
+      "packages/zod/src/v4/classic/tests/error.test.ts",
+      "packages/zod/src/v4/classic/tests/nested-refine.test.ts",
+      "packages/zod/src/v4/classic/tests/preprocess.test.ts",
+      "packages/zod/src/v4/classic/tests/validations.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/core/checks.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "p01-7f789def",
+    "category": "P",
+    "upstream_sha": "7f789def",
+    "base_sha": "2e5b23dc",
+    "upstream_subject": "fix: skip non-enumerable properties in record validation (#5719)",
+    "test_paths": [
+      "packages/zod/src/v4/core/tests/record-constructor.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/core/schemas.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "p02-f75d8529",
+    "category": "P",
+    "upstream_sha": "f75d8529",
+    "base_sha": "17e7f3b4",
+    "upstream_subject": "fix: escapes decimal place in `z.literal` (#4895)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/literal.test.ts",
+      "packages/zod/src/v4/classic/tests/template-literal.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/core/schemas.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "p03-002e01ad",
+    "category": "P",
+    "upstream_sha": "002e01ad",
+    "base_sha": "f97e80da",
+    "upstream_subject": "fix(record): handle non-function constructor field in isPlainObject (#5098)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/index.test.ts",
+      "packages/zod/src/v4/core/tests/extend.test.ts",
+      "packages/zod/src/v4/core/tests/record-constructor.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/core/util.ts"
+    ],
+    "dist_mode": true
+  },
+  {
+    "id": "p04-3048d14b",
+    "category": "P",
+    "upstream_sha": "3048d14b",
+    "base_sha": "34b400a5",
+    "upstream_subject": "Fix #4961",
+    "test_paths": [
+      "packages/zod/src/v4/core/tests/extend.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/jsr.json",
+      "packages/zod/package.json",
+      "packages/zod/src/v4/core/util.ts",
+      "packages/zod/src/v4/core/versions.ts",
+      "play.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "p05-363c966b",
+    "category": "P",
+    "upstream_sha": "363c966b",
+    "base_sha": "8506c352",
+    "upstream_subject": "Fix #5560",
+    "test_paths": [
+      "packages/zod/src/v4/mini/tests/standard-schema.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/core/to-json-schema.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "p06-3cd45ebc",
+    "category": "P",
+    "upstream_sha": "3cd45ebc",
+    "base_sha": "3a818de1",
+    "upstream_subject": "fix (v4) : adds strict validation to httpUrl()  (#5672)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/string.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/classic/schemas.ts",
+      "packages/zod/src/v4/core/regexes.ts",
+      "packages/zod/src/v4/core/schemas.ts",
+      "packages/zod/src/v4/mini/schemas.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "p07-584b1089",
+    "category": "P",
+    "upstream_sha": "584b1089",
+    "base_sha": "15cafa13",
+    "upstream_subject": "fix(v4): reject whitespace in z.base64() to close atob bypass (#5888)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/string.test.ts",
+      "packages/zod/src/v4/mini/tests/string.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/core/schemas.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "p08-2be1c6ad",
+    "category": "P",
+    "upstream_sha": "2be1c6ad",
+    "base_sha": "8ab23742",
+    "upstream_subject": "Fix generic assignability issue. 3.25.54",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/assignability.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/package.json",
+      "packages/zod/src/v4/classic/schemas.ts",
+      "packages/zod/src/v4/core/schemas.ts",
+      "play.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "p09-25a4c376",
+    "category": "P",
+    "upstream_sha": "25a4c376",
+    "base_sha": "e45e61b6",
+    "upstream_subject": "fix(v4): toJSONSchema - wrong record tuple output when targeting `openapi-3.0` (#5145)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/to-json-schema.test.ts"
+    ],
+    "prod_paths": [
+      "packages/docs/loaders/get-llm-text.ts",
+      "packages/zod/src/v4/core/to-json-schema.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "p10-2e5b23dc",
+    "category": "P",
+    "upstream_sha": "2e5b23dc",
+    "base_sha": "518f15dd",
+    "upstream_subject": "fix: add options to invalid discriminator errors (#5723)",
+    "test_paths": [
+      "packages/zod/src/v4/classic/tests/discriminated-unions.test.ts"
+    ],
+    "prod_paths": [
+      "packages/zod/src/v4/core/errors.ts",
+      "packages/zod/src/v4/core/schemas.ts",
+      "packages/zod/src/v4/locales/en.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "n01-0d87aa4a",
+    "category": "N",
+    "upstream_sha": "0d87aa4a",
+    "base_sha": "ed933d91",
+    "upstream_subject": "Make id lazy",
+    "test_paths": [],
+    "prod_paths": [
+      "packages/zod/src/v4/core/schemas.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "n02-592de8de",
+    "category": "N",
+    "upstream_sha": "592de8de",
+    "base_sha": "5e4ff20b",
+    "upstream_subject": "fix: Rollup comment warning. (#4462)",
+    "test_paths": [],
+    "prod_paths": [
+      "packages/zod/src/v4/classic/schemas.ts",
+      "packages/zod/src/v4/core/schemas.ts",
+      "packages/zod/src/v4/mini/schemas.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "n03-5b574501",
+    "category": "N",
+    "upstream_sha": "5b574501",
+    "base_sha": "65f1f404",
+    "upstream_subject": "fix: respect `abort: true` in `.refine()` for checks with `when` function (#5681)",
+    "test_paths": [],
+    "prod_paths": [
+      "packages/zod/src/v4/core/schemas.ts",
+      "packages/zod/src/v4/core/util.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "n04-5905a8d8",
+    "category": "N",
+    "upstream_sha": "5905a8d8",
+    "base_sha": "b2592111",
+    "upstream_subject": "Improve check-versions script",
+    "test_paths": [],
+    "prod_paths": [
+      ".github/workflows/release.yml",
+      "packages/zod/package.json",
+      "packages/zod/src/v4/core/schemas.ts",
+      "packages/zod/src/v4/core/versions.ts",
+      "scripts/check-versions.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "n05-9712a670",
+    "category": "N",
+    "upstream_sha": "9712a670",
+    "base_sha": "73b071d7",
+    "upstream_subject": "perf: lazy initialize ~standard schema property (#5363)",
+    "test_paths": [],
+    "prod_paths": [
+      "packages/zod/src/v4/core/schemas.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "n06-4975f3a0",
+    "category": "N",
+    "upstream_sha": "4975f3a0",
+    "base_sha": "d589186c",
+    "upstream_subject": "feat: add discriminator generic (#5044)",
+    "test_paths": [],
+    "prod_paths": [
+      "packages/zod/src/v4/classic/schemas.ts",
+      "packages/zod/src/v4/core/api.ts",
+      "packages/zod/src/v4/core/schemas.ts",
+      "packages/zod/src/v4/mini/schemas.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "n07-36c4ee35",
+    "category": "N",
+    "upstream_sha": "36c4ee35",
+    "base_sha": "aab33566",
+    "upstream_subject": "Switch back to weakmap",
+    "test_paths": [],
+    "prod_paths": [
+      "packages/zod/src/v4/core/registries.ts",
+      "play.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "n08-195e8696",
+    "category": "N",
+    "upstream_sha": "195e8696",
+    "base_sha": "285bde7f",
+    "upstream_subject": "perf(v4): mark top-level factory calls as `/*@__PURE__*/` for tree-shaking",
+    "test_paths": [],
+    "prod_paths": [
+      "packages/zod/src/v4/classic/errors.ts",
+      "packages/zod/src/v4/classic/from-json-schema.ts",
+      "packages/zod/src/v4/core/core.ts",
+      "packages/zod/src/v4/core/util.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "n09-c5d9e7ce",
+    "category": "N",
+    "upstream_sha": "c5d9e7ce",
+    "base_sha": "edc34778",
+    "upstream_subject": "Allow arbitary strings for JWT alg",
+    "test_paths": [],
+    "prod_paths": [
+      "packages/docs/content/error-formatting.mdx",
+      "packages/zod/src/v4/core/errors.ts",
+      "packages/zod/src/v4/core/util.ts",
+      "play.ts"
+    ],
+    "dist_mode": false
+  },
+  {
+    "id": "n10-b142ea8f",
+    "category": "N",
+    "upstream_sha": "b142ea8f",
+    "base_sha": "f350a693",
+    "upstream_subject": "Fix $strip",
+    "test_paths": [],
+    "prod_paths": [
+      "packages/zod/src/v4/classic/schemas.ts",
+      "play.ts"
+    ],
+    "dist_mode": false
+  }
+]
