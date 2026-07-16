@@ -1,0 +1,81 @@
+diff --git a/packages/zod/src/v4/classic/errors.ts b/packages/zod/src/v4/classic/errors.ts
+index 695a5343..e4eb99d0 100644
+--- a/packages/zod/src/v4/classic/errors.ts
++++ b/packages/zod/src/v4/classic/errors.ts
+@@ -61,8 +61,8 @@ const initializer = (inst: ZodError, issues: core.$ZodIssue[]) => {
+   //   },
+   // });
+ };
+-export const ZodError: core.$constructor<ZodError> = core.$constructor("ZodError", initializer);
+-export const ZodRealError: core.$constructor<ZodError> = core.$constructor("ZodError", initializer, {
++export const ZodError: core.$constructor<ZodError> = /*@__PURE__*/ core.$constructor("ZodError", initializer);
++export const ZodRealError: core.$constructor<ZodError> = /*@__PURE__*/ core.$constructor("ZodError", initializer, {
+   Parent: Error,
+ });
+ 
+diff --git a/packages/zod/src/v4/classic/from-json-schema.ts b/packages/zod/src/v4/classic/from-json-schema.ts
+index 76cbf999..7934f337 100644
+--- a/packages/zod/src/v4/classic/from-json-schema.ts
++++ b/packages/zod/src/v4/classic/from-json-schema.ts
+@@ -29,7 +29,7 @@ interface ConversionContext {
+ }
+ 
+ // Keys that are recognized and handled by the conversion logic
+-const RECOGNIZED_KEYS = new Set([
++const RECOGNIZED_KEYS = /*@__PURE__*/ new Set([
+   // Schema identification
+   "$schema",
+   "$ref",
+diff --git a/packages/zod/src/v4/core/core.ts b/packages/zod/src/v4/core/core.ts
+index 8950dbbf..c191fdbe 100644
+--- a/packages/zod/src/v4/core/core.ts
++++ b/packages/zod/src/v4/core/core.ts
+@@ -10,7 +10,7 @@ export interface $constructor<T extends ZodTrait, D = T["_zod"]["def"]> {
+ }
+ 
+ /** A special constant with type `never` */
+-export const NEVER: never = Object.freeze({
++export const NEVER: never = /*@__PURE__*/ Object.freeze({
+   status: "aborted",
+ }) as never;
+ 
+diff --git a/packages/zod/src/v4/core/util.ts b/packages/zod/src/v4/core/util.ts
+index f7b9ada7..8738df4e 100644
+--- a/packages/zod/src/v4/core/util.ts
++++ b/packages/zod/src/v4/core/util.ts
+@@ -254,7 +254,7 @@ export function floatSafeRemainder(val: number, step: number): number {
+   return ratio - roundedRatio;
+ }
+ 
+-const EVALUATING = Symbol("evaluating");
++const EVALUATING = /* @__PURE__*/ Symbol("evaluating");
+ 
+ export function defineLazy<T, K extends keyof T>(object: T, key: K, getter: () => T[K]): void {
+   let value: T[K] | typeof EVALUATING | undefined = undefined;
+@@ -361,7 +361,7 @@ export function isObject(data: any): data is Record<PropertyKey, unknown> {
+   return typeof data === "object" && data !== null && !Array.isArray(data);
+ }
+ 
+-export const allowsEval: { value: boolean } = cached(() => {
++export const allowsEval: { value: boolean } = /* @__PURE__*/ cached(() => {
+   // Skip the probe under `jitless`: strict CSPs report the caught `new Function`
+   // as a `securitypolicyviolation` even though the throw is swallowed.
+   if (globalConfig.jitless) {
+@@ -476,8 +476,15 @@ export const getParsedType = (data: any): ParsedTypes => {
+   }
+ };
+ 
+-export const propertyKeyTypes: Set<string> = new Set(["string", "number", "symbol"]);
+-export const primitiveTypes: Set<string> = new Set(["string", "number", "bigint", "boolean", "symbol", "undefined"]);
++export const propertyKeyTypes: Set<string> = /* @__PURE__*/ new Set(["string", "number", "symbol"]);
++export const primitiveTypes: Set<string> = /* @__PURE__*/ new Set([
++  "string",
++  "number",
++  "bigint",
++  "boolean",
++  "symbol",
++  "undefined",
++]);
+ export function escapeRegex(str: string): string {
+   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+ }
