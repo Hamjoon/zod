@@ -1,0 +1,159 @@
+diff --git a/packages/zod/src/v4/classic/tests/array.test.ts b/packages/zod/src/v4/classic/tests/array.test.ts
+index 42982dd0..2d160ae4 100644
+--- a/packages/zod/src/v4/classic/tests/array.test.ts
++++ b/packages/zod/src/v4/classic/tests/array.test.ts
+@@ -14,7 +14,8 @@ test("array min/max", async () => {
+     [
+       {
+         "code": "too_small",
+-        "message": "Too small: expected array to have >2 items",
++        "inclusive": true,
++        "message": "Too small: expected array to have >=2 items",
+         "minimum": 2,
+         "origin": "array",
+         "path": [],
+@@ -28,8 +29,9 @@ test("array min/max", async () => {
+     [
+       {
+         "code": "too_big",
++        "inclusive": true,
+         "maximum": 2,
+-        "message": "Too big: expected array to have <2 items",
++        "message": "Too big: expected array to have <=2 items",
+         "origin": "array",
+         "path": [],
+       },
+@@ -47,7 +49,8 @@ test("array length", async () => {
+     [
+       {
+         "code": "too_small",
+-        "message": "Too small: expected array to have >2 items",
++        "inclusive": true,
++        "message": "Too small: expected array to have >=2 items",
+         "minimum": 2,
+         "origin": "array",
+         "path": [],
+@@ -121,11 +124,12 @@ test("continue parsing despite array size error", () => {
+       {
+         "origin": "array",
+         "code": "too_small",
++        "inclusive": true,
+         "minimum": 2,
+         "path": [
+           "people"
+         ],
+-        "message": "Too small: expected array to have >2 items"
++        "message": "Too small: expected array to have >=2 items"
+       }
+     ]],
+       "success": false,
+diff --git a/packages/zod/src/v4/classic/tests/error.test.ts b/packages/zod/src/v4/classic/tests/error.test.ts
+index 19e25abf..2c119691 100644
+--- a/packages/zod/src/v4/classic/tests/error.test.ts
++++ b/packages/zod/src/v4/classic/tests/error.test.ts
+@@ -175,9 +175,10 @@ test("array minimum", () => {
+       {
+         "origin": "array",
+         "code": "too_small",
++        "inclusive": true,
+         "minimum": 3,
+         "path": [],
+-        "message": "Too small: expected array to have >3 items"
++        "message": "Too small: expected array to have >=3 items"
+       }
+     ]]
+   `);
+@@ -529,6 +530,7 @@ test("z.config customError ", () => {
+       {
+         "origin": "string",
+         "code": "too_small",
++        "inclusive": true,
+         "minimum": 10,
+         "path": [],
+         "message": "override"
+@@ -613,11 +615,12 @@ test("dont short circuit on continuable errors", () => {
+       {
+         "origin": "string",
+         "code": "too_small",
++        "inclusive": true,
+         "minimum": 6,
+         "path": [
+           "password"
+         ],
+-        "message": "Too small: expected string to have >6 characters"
++        "message": "override"
+       },
+       {
+         "code": "custom",
+@@ -690,7 +693,7 @@ test("error serialization", () => {
+           "expected": "string",
+           "code": "invalid_type",
+           "path": [],
+-          "message": "Invalid input: expected string, received number"
++        "message": "override"
+         }
+       ]]
+     `);
+diff --git a/packages/zod/src/v4/classic/tests/nested-refine.test.ts b/packages/zod/src/v4/classic/tests/nested-refine.test.ts
+index 0d3401e9..dd3639e7 100644
+--- a/packages/zod/src/v4/classic/tests/nested-refine.test.ts
++++ b/packages/zod/src/v4/classic/tests/nested-refine.test.ts
+@@ -44,6 +44,7 @@ test("nested refinements", () => {
+       {
+         "origin": "string",
+         "code": "too_small",
++        "inclusive": true,
+         "minimum": 1,
+         "path": [
+           "nested",
+@@ -86,6 +87,7 @@ test("nested refinements", () => {
+       {
+         "origin": "string",
+         "code": "too_small",
++        "inclusive": true,
+         "minimum": 1,
+         "path": [
+           "nested",
+diff --git a/packages/zod/src/v4/classic/tests/preprocess.test.ts b/packages/zod/src/v4/classic/tests/preprocess.test.ts
+index 880504e7..781974df 100644
+--- a/packages/zod/src/v4/classic/tests/preprocess.test.ts
++++ b/packages/zod/src/v4/classic/tests/preprocess.test.ts
+@@ -213,11 +213,12 @@ test("preprocess as the second property of object", () => {
+       {
+         "origin": "string",
+         "code": "too_small",
++        "inclusive": true,
+         "minimum": 1,
+         "path": [
+           "nonEmptyStr"
+         ],
+-        "message": "Too small: expected string to have >1 characters"
++        "message": "Too small: expected string to have >=1 characters"
+       },
+       {
+         "origin": "number",
+diff --git a/packages/zod/src/v4/classic/tests/validations.test.ts b/packages/zod/src/v4/classic/tests/validations.test.ts
+index 6be5d40f..2bae3e9d 100644
+--- a/packages/zod/src/v4/classic/tests/validations.test.ts
++++ b/packages/zod/src/v4/classic/tests/validations.test.ts
+@@ -11,7 +11,8 @@ test("string length", async () => {
+       [
+         {
+           "code": "too_small",
+-          "message": "Too small: expected string to have >4 characters",
++          "inclusive": true,
++          "message": "Too small: expected string to have >=4 characters",
+           "minimum": 4,
+           "origin": "string",
+           "path": [],
+@@ -28,8 +29,9 @@ test("string length", async () => {
+       [
+         {
+           "code": "too_big",
++          "inclusive": true,
+           "maximum": 4,
+-          "message": "Too big: expected string to have <4 characters",
++          "message": "Too big: expected string to have <=4 characters",
+           "origin": "string",
+           "path": [],
+         },

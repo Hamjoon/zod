@@ -1,0 +1,20 @@
+diff --git a/packages/zod/src/v4/core/checks.ts b/packages/zod/src/v4/core/checks.ts
+index 8184ac32..c0708c0f 100644
+--- a/packages/zod/src/v4/core/checks.ts
++++ b/packages/zod/src/v4/core/checks.ts
+@@ -622,6 +622,7 @@ export const $ZodCheckMaxLength: core.$constructor<$ZodCheckMaxLength> = /*@__PU
+         origin,
+         code: "too_big",
+         maximum: def.maximum,
++        inclusive: true,
+         input,
+         inst,
+         continue: !def.abort,
+@@ -672,6 +673,7 @@ export const $ZodCheckMinLength: core.$constructor<$ZodCheckMinLength> = /*@__PU
+         origin,
+         code: "too_small",
+         minimum: def.minimum,
++        inclusive: true,
+         input,
+         inst,
+         continue: !def.abort,
