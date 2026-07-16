@@ -1,0 +1,290 @@
+DECISION: fix_tests
+```diff
+--- a/packages/zod/src/v4/classic/tests/json-schema.test.ts
++++ b/packages/zod/src/v4/classic/tests/json-schema.test.ts
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+@@
+-        "$schema": "https://json-schema.org/draft-2020-12/schema",
++        "$schema": "https://json-schema.org/draft/2020-12/schema",
+```

@@ -1,0 +1,200 @@
+ FAIL  src/v4/classic/tests/json-schema.test.ts > overwrite descriptions
+Error: Snapshot `overwrite descriptions 1` mismatched
+
+- Expected
++ Received
+
+@@ -1,7 +1,7 @@
+  {
+-     "$schema": "https://json-schema.org/draft/2020-12/schema",
++   "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "properties": {
+      "d": {
+        "description": "d",
+        "type": "string",
+      },
+
+ ❯ src/v4/classic/tests/json-schema.test.ts:1380:13
+    1378|     })
+    1379|   );
+    1380|   expect(a).toMatchInlineSnapshot(`
+       |             ^
+    1381|     {
+    1382|         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/17]⎯
+
+ FAIL  src/v4/classic/tests/json-schema.test.ts > top-level readonly
+Error: Snapshot `top-level readonly 1` mismatched
+
+- Expected
++ Received
+
+@@ -16,11 +16,11 @@
+          "a",
+        ],
+        "type": "object",
+      },
+    },
+-     "$schema": "https://json-schema.org/draft/2020-12/schema",
++   "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "id": "A",
+    "properties": {
+      "b": {
+        "$ref": "#/$defs/B",
+      },
+
+ ❯ src/v4/classic/tests/json-schema.test.ts:1460:18
+    1458| 
+    1459|   const result = z.toJSONSchema(A);
+    1460|   expect(result).toMatchInlineSnapshot(`
+       |                  ^
+    1461|     {
+    1462|       "$defs": {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/17]⎯
+
+ FAIL  src/v4/classic/tests/json-schema.test.ts > basic registry
+Error: Snapshot `basic registry 1` mismatched
+
+- Expected
++ Received
+
+@@ -1,9 +1,9 @@
+  {
+    "schemas": {
+      "Post": {
+-     "$schema": "https://json-schema.org/draft/2020-12/schema",
++       "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "author": {
+            "$ref": "User",
+          },
+          "content": {
+@@ -19,11 +19,11 @@
+          "author",
+        ],
+        "type": "object",
+      },
+      "User": {
+-     "$schema": "https://json-schema.org/draft/2020-12/schema",
++       "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "name": {
+            "type": "string",
+          },
+          "posts": {
+
+ ❯ src/v4/classic/tests/json-schema.test.ts:1522:18
+    1520| 
+    1521|   const result = z.toJSONSchema(myRegistry);
+    1522|   expect(result).toMatchInlineSnapshot(`
+       |                  ^
+    1523|     {
+    1524|       "schemas": {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/17]⎯
+
+ FAIL  src/v4/classic/tests/json-schema.test.ts > _ref
+Error: Snapshot `_ref 1` mismatched
+
+- Expected
++ Received
+
+  {
+-     "$schema": "https://json-schema.org/draft/2020-12/schema",
++   "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "a",
+    "type": "string",
+  }
+
+ ❯ src/v4/classic/tests/json-schema.test.ts:1572:13
+    1570|   // const a = z.promise(z.string().describe("a"));
+    1571|   const a = z.toJSONSchema(z.promise(z.string().describe("a")));
+    1572|   expect(a).toMatchInlineSnapshot(`
+       |             ^
+    1573|     {
+    1574|         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/17]⎯
+
+ FAIL  src/v4/classic/tests/json-schema.test.ts > defaults/prefaults
+Error: Snapshot `defaults/prefaults 1` mismatched
+
+- Expected
++ Received
+
+  {
+-   "$schema": "https://json-schema.org/draft-2020-12/schema",
++   "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "number",
+  }
+
+ ❯ src/v4/classic/tests/json-schema.test.ts:1608:27
+    1606| 
+    1607|   // a
+    1608|   expect(toJSONSchema(a)).toMatchInlineSnapshot(`
+       |                           ^
+    1609|     {
+    1610|       "$schema": "https://json-schema.org/draft-2020-12/schema",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/17]⎯
+
+ FAIL  src/v4/classic/tests/json-schema.test.ts > input type
+Error: Snapshot `input type 1` mismatched
+
+- Expected
++ Received
+
+@@ -1,7 +1,7 @@
+  {
+-   "$schema": "https://json-schema.org/draft-2020-12/schema",
++   "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "properties": {
+      "a": {
+        "type": "string",
+      },
+      "b": {
+
+ ❯ src/v4/classic/tests/json-schema.test.ts:1660:49
+    1658|     e: z.string().prefault("hello"),
+    1659|   });
+    1660|   expect(toJSONSchema(schema, { io: "input" })).toMatchInlineSnapshot(`
+       |                                                 ^
+    1661|     {
+    1662|       "$schema": "https://json-schema.org/draft-2020-12/schema",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/17]⎯
+
+ FAIL  src/v4/classic/tests/json-schema.test.ts > examples on pipe
+Error: Snapshot `examples on pipe 1` mismatched
+
+- Expected
++ Received
+
+  {
+-   "$schema": "https://json-schema.org/draft-2020-12/schema",
++   "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "examples": [
+      "test",
+    ],
+    "type": "string",
+  }
+
+ ❯ src/v4/classic/tests/json-schema.test.ts:1744:13
+    1742| 
+    1743|   const i = z.toJSONSchema(schema, { io: "input", unrepresentable: "an…
+    1744|   expect(i).toMatchInlineSnapshot(`
+       |             ^
+    1745|     {
+    1746|       "$schema": "https://json-schema.org/draft-2020-12/schema",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/17]⎯
+
+  Snapshots  17 failed
+ Test Files  1 failed | 1 passed (2)
+      Tests  17 failed | 61 passed (78)
+Type Errors  no errors
+   Start at  16:38:59
+   Duration  1.08s (transform 183ms, setup 0ms, collect 286ms, tests 39ms, environment 0ms, prepare 61ms, typecheck 968ms)
+

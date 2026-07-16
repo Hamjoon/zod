@@ -1,0 +1,29 @@
+diff --git a/packages/docs/content/json-schema.mdx b/packages/docs/content/json-schema.mdx
+index 94298d727..084007d7b 100644
+--- a/packages/docs/content/json-schema.mdx
++++ b/packages/docs/content/json-schema.mdx
+@@ -142,7 +142,7 @@ Below is a quick reference for each supported parameter. Each one is explained i
+ interface ToJSONSchemaParams {
+   /** The JSON Schema version to target.
+    * - `"draft-2020-12"` — Default. JSON Schema Draft 2020-12
+-   * - `"draft-7"` — Default. JSON Schema Draft 7 */
++   * - `"draft-7"` — JSON Schema Draft 7 */
+   target?: "draft-7" | "draft-2020-12";
+ 
+   /** A registry used to look up metadata for each schema. 
+diff --git a/packages/zod/src/v4/core/to-json-schema.ts b/packages/zod/src/v4/core/to-json-schema.ts
+index 3b350c7de..22d48b57e 100644
+--- a/packages/zod/src/v4/core/to-json-schema.ts
++++ b/packages/zod/src/v4/core/to-json-schema.ts
+@@ -719,9 +719,9 @@ export class JSONSchemaGenerator {
+     }
+ 
+     if (this.target === "draft-2020-12") {
+-      result.$schema = "https://json-schema.org/draft-2020-12/schema";
++      result.$schema = "https://json-schema.org/draft/2020-12/schema";
+     } else if (this.target === "draft-7") {
+-      result.$schema = "https://json-schema.org/draft-07/schema";
++      result.$schema = "http://json-schema.org/draft-07/schema#";
+     } else {
+       console.warn(`Invalid target: ${this.target}`);
+     }
