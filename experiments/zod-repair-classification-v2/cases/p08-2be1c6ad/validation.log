@@ -1,0 +1,42 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p08-2be1c6ad/packages/zod
+
+ ✓ src/v4/classic/tests/assignability.test.ts (5 tests) 5ms
+ ❯  TS  src/v4/classic/tests/assignability.test.ts (5 tests | 1 failed)
+   × generic assignability in objects
+     → No overload matches this call.
+  Overload 1 of 2, '(def { [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? never  k] output<...>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })[K]; }[]) ZodDefault<...>', gave the following error.
+    Argument of type 'SortItem<output<T>>[]' is not assignable to parameter of type '{ [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly [k in ...'.
+      Type 'SortItem<output<T>>' is not assignable to type '{ [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly [k in ...'.
+  Overload 2 of 2, '(def () => { [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? never  k] output<...>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })[K]; }[]) ZodDefault<...>', gave the following error.
+    Argument of type 'SortItem<output<T>>[]' is not assignable to parameter of type '() => { [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly ...'.
+      Type 'SortItem<output<T>>[]' provides no match for the signature '() { [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? never  k] output<...>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })[K]; }[]'.
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/v4/classic/tests/assignability.test.ts > generic assignability in objects
+TypeCheckError: No overload matches this call.
+  Overload 1 of 2, '(def { [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? never  k] output<...>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })[K]; }[]) ZodDefault<...>', gave the following error.
+    Argument of type 'SortItem<output<T>>[]' is not assignable to parameter of type '{ [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly [k in ...'.
+      Type 'SortItem<output<T>>' is not assignable to type '{ [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly [k in ...'.
+  Overload 2 of 2, '(def () => { [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? never  k] output<...>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })[K]; }[]) ZodDefault<...>', gave the following error.
+    Argument of type 'SortItem<output<T>>[]' is not assignable to parameter of type '() => { [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly ...'.
+      Type 'SortItem<output<T>>[]' provides no match for the signature '() { [K in keyof ({ -readonly [k in keyof { key T; order ZodString; } as { key T; order ZodString; }[k] extends OptionalOutSchema ? never  k] output<{ key T; order ZodString; }[k]>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })] ({ -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? never  k] output<...>; } & { -readonly [k in keyof { ...; } as { ...; }[k] extends OptionalOutSchema ? k  never]? output<...>; })[K]; }[]'.
+ ❯ src/v4/classic/tests/assignability.test.ts:209:57
+    207| 
+    208|   <T extends z.ZodType<string>>(sortKeySchema: T, defaultSortBy: SortI…
+    209|     createSortItemSchema(sortKeySchema).array().default(defaultSortBy);
+       |                                                         ^
+    210| });
+    211| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 9 passed (10)
+Type Errors  1 failed
+   Start at  16:33:48
+   Duration  1.97s (transform 232ms, setup 0ms, collect 341ms, tests 5ms, environment 0ms, prepare 63ms, typecheck 1.91s)
+

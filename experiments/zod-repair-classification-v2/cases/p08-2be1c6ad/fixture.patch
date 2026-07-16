@@ -1,0 +1,24 @@
+diff --git a/packages/zod/src/v4/classic/tests/assignability.test.ts b/packages/zod/src/v4/classic/tests/assignability.test.ts
+index 43a3fbfe4..603ff6c1a 100644
+--- a/packages/zod/src/v4/classic/tests/assignability.test.ts
++++ b/packages/zod/src/v4/classic/tests/assignability.test.ts
+@@ -192,3 +192,19 @@ test("assignability with narrowing", () => {
+ 
+   type RefinedUnionSchema<T extends z.ZodUnion> = T;
+ });
++
++test("generic assignability in objects", () => {
++  interface SortItem<T extends string> {
++    key: T;
++    order: string;
++  }
++
++  const createSortItemSchema = <T extends z.ZodType<string>>(sortKeySchema: T) =>
++    z.object({
++      key: sortKeySchema,
++      order: z.string(),
++    });
++
++  <T extends z.ZodType<string>>(sortKeySchema: T, defaultSortBy: SortItem<z.output<T>>[] = []) =>
++    createSortItemSchema(sortKeySchema).array().default(defaultSortBy);
++});
