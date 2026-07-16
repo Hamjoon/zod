@@ -1,0 +1,61 @@
+{
+  "case": "s06-6d47791b",
+  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b",
+  "tests": [
+    "packages/zod/src/v4/classic/tests/error-utils.test.ts",
+    "packages/zod/src/v4/classic/tests/index.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/core/errors.ts",
+  "mutate": "packages/zod/src/v4/core/errors.ts:89-89,packages/zod/src/v4/core/errors.ts:152-153",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/errors.ts",
+      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b/packages/zod/src/v4/core/errors.ts",
+      "metrics": {
+        "lines": {
+          "total": 139,
+          "covered": 132,
+          "skipped": 0,
+          "pct": 94.96
+        },
+        "functions": {
+          "total": 12,
+          "covered": 12,
+          "skipped": 0,
+          "pct": 100
+        },
+        "statements": {
+          "total": 139,
+          "covered": 132,
+          "skipped": 0,
+          "pct": 94.96
+        },
+        "branches": {
+          "total": 44,
+          "covered": 37,
+          "skipped": 0,
+          "pct": 84.09
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": false,
+      "productionFile": "packages/zod/src/v4/core/errors.ts",
+      "fileKey": null,
+      "totals": {},
+      "mutants": []
+    }
+  },
+  "verdict": "signal_unknown"
+}

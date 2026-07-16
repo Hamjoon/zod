@@ -1,0 +1,16 @@
+$ pnpm vitest run packages/zod/src/v4/classic/tests/error-utils.test.ts packages/zod/src/v4/classic/tests/index.test.ts --config /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b/.openclaw-signal/s06-6d47791b/vitest.signal.config.ts --reporter=dot
+status=0
+## stdout
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b
+
+ ✓ packages/zod/src/v4/classic/tests/error-utils.test.ts (11 tests) 11ms
+ ✓ packages/zod/src/v4/classic/tests/index.test.ts (57 tests) 22ms
+
+ Test Files  2 passed (2)
+      Tests  68 passed (68)
+   Start at  16:09:49
+   Duration  614ms (transform 299ms, setup 0ms, collect 650ms, tests 33ms, environment 0ms, prepare 133ms)
+
+
+## stderr

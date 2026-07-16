@@ -1,0 +1,61 @@
+{
+  "case": "s06-6d47791b",
+  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b",
+  "tests": [
+    "packages/zod/src/v4/classic/tests/error-utils.test.ts",
+    "packages/zod/src/v4/classic/tests/index.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/classic/schemas.ts",
+  "mutate": "packages/zod/src/v4/classic/schemas.ts:1966-1966",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/classic/schemas.ts",
+      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s06-6d47791b/packages/zod/src/v4/classic/schemas.ts",
+      "metrics": {
+        "lines": {
+          "total": 1033,
+          "covered": 759,
+          "skipped": 0,
+          "pct": 73.47
+        },
+        "functions": {
+          "total": 219,
+          "covered": 56,
+          "skipped": 0,
+          "pct": 25.57
+        },
+        "statements": {
+          "total": 1033,
+          "covered": 759,
+          "skipped": 0,
+          "pct": 73.47
+        },
+        "branches": {
+          "total": 122,
+          "covered": 115,
+          "skipped": 0,
+          "pct": 94.26
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": false,
+      "productionFile": "packages/zod/src/v4/classic/schemas.ts",
+      "fileKey": null,
+      "totals": {},
+      "mutants": []
+    }
+  },
+  "verdict": "signal_unknown"
+}

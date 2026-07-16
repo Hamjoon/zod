@@ -1,0 +1,191 @@
+diff --git a/packages/docs/content/error-customization.mdx b/packages/docs/content/error-customization.mdx
+index 8206a6bc..c817a358 100644
+--- a/packages/docs/content/error-customization.mdx
++++ b/packages/docs/content/error-customization.mdx
+@@ -56,7 +56,7 @@ Every issue contains a `message` property with a human-readable error message. E
+ 
+ ## The `error` param
+ 
+-Virtually every Zod API accepts an optional error message parameter.
++Virtually every Zod API accepts an optional error message.
+ 
+ ```ts
+ z.string("Not a string!");
+@@ -87,7 +87,7 @@ z.string("Bad!");
+ z.string().min(5, "Too short!");
+ z.uuid("Bad UUID!");
+ z.iso.date("Bad date!");
+-z.array(z.string(), "Bad array!");
++z.array(z.string(), "Not an array!");
+ z.array(z.string()).min(5, "Too few items!");
+ z.set(z.string(), "Bad set!");
+ ```
+@@ -133,7 +133,8 @@ z.set(z.string(), { error: "Bad set!" });
+ </Tab>
+ </Tabs>
+ 
+-The `error` param optionally accepts a function. This function will be called at parse time if a valiation error occurs.
++
++The `error` param optionally accepts a function. An error customization function is known as an **error map** in Zod terminology. The error map will can at parse time if a valiation error occurs.
+ 
+ ```ts
+ z.string({ error: ()=>`[${Date.now()}]: Validation failure.` });
+@@ -143,31 +144,16 @@ z.string({ error: ()=>`[${Date.now()}]: Validation failure.` });
+ **Note** — In Zod v3, there were separate params for `message` (a string) and `errorMap` (a function). These have been unified in Zod 4 as `error`.
+ </Callout>
+ 
++The error map receives a context object you can use to customize the error message based on the validation issue.
+ 
+-The `error` function received a context object you can use to customize the error message based on the `input` or other validation information.
+-
+-<Tabs groupId="lib" items={["Zod", "Zod Mini"]}>
+-<Tab value="Zod">
+-```ts
+-z.string({
+-  error: (iss) => iss.input===undefined ? "Field is required." : "Invalid input."
+-});
+-```
+-</Tab>
+-<Tab value="Zod Mini">
+ ```ts
+ z.string({
+-  error: (iss) => iss.input===undefined ? "Field is required." : "Invalid input."
++  error: (iss) => iss.input === undefined ? "Field is required." : "Invalid input."
+ });
+ ```
+-</Tab>
+-</Tabs>
+ 
+ For advanced cases, the `iss` object provides additional information you can use to customize the error.
+ 
+-
+-<Tabs groupId="lib" items={["Zod", "Zod Mini"]}>
+-<Tab value="Zod">
+ ```ts
+ z.string({
+   error: (iss) => {
+@@ -178,21 +164,6 @@ z.string({
+   },
+ });
+ ```
+-</Tab>
+-<Tab value="Zod Mini">
+-```ts
+-z.string({
+-  error: (iss) => {
+-    iss.inst;
+-    iss.code; // the issue code
+-    iss.input; // the input data
+-    iss.inst; // the schema/check that originated this issue
+-    iss.path; // the path of the error
+-  },
+-});
+-```
+-</Tab>
+-</Tabs>
+ 
+ Depending on the API you are using, there may be additional properties available. Use TypeScript's autocomplete to explore the available properties.
+ 
+@@ -207,6 +178,22 @@ z.string().min(5, {
+ });
+ ```
+ 
++Return `undefined` to avoid setting an error message. This is useful for customizing certain error messages but not others. Zod will yield control to the next error map in the [precedence chain](#error-precedence).
++
++```ts
++z.string().min(5, {
++  error: (iss) => {
++    // customize "too_small" error message
++    if (iss.code === "too_small") {
++      return `Password must have ${iss.minimum} characters or more`;
++    }
++
++    // use default error otherwise
++    return undefined;
++  },
++});
++```
++
+ ## Per-parse error customization
+ 
+ To customize errors on a *per-parse* basis, pass an error map into the parse method:
+diff --git a/packages/zod/package.json b/packages/zod/package.json
+index a3bf1f1d..4dc1a32e 100644
+--- a/packages/zod/package.json
++++ b/packages/zod/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "zod",
+-  "version": "3.25.20",
++  "version": "3.25.21",
+   "type": "module",
+   "author": "Colin McDonnell <zod@colinhacks.com>",
+   "description": "TypeScript-first schema declaration and validation library with static type inference",
+diff --git a/packages/zod/src/v4/classic/schemas.ts b/packages/zod/src/v4/classic/schemas.ts
+index cae4af3c..05144e2c 100644
+--- a/packages/zod/src/v4/classic/schemas.ts
++++ b/packages/zod/src/v4/classic/schemas.ts
+@@ -1962,10 +1962,10 @@ export function check<O = unknown>(fn: core.CheckFn<O>, params?: string | core.$
+   return ch;
+ }
+ 
+-export function custom<O = unknown, I = O>(
+-  fn?: (data: O) => unknown,
++export function custom<O>(
++  fn?: (data: unknown) => unknown,
+   _params?: string | core.$ZodCustomParams | undefined
+-): ZodCustom<O, I> {
++): ZodCustom<O, O> {
+   return core._custom(ZodCustom, fn ?? (() => true), _params) as any;
+ }
+ 
+diff --git a/packages/zod/src/v4/core/errors.ts b/packages/zod/src/v4/core/errors.ts
+index 59fb738b..b2b09bba 100644
+--- a/packages/zod/src/v4/core/errors.ts
++++ b/packages/zod/src/v4/core/errors.ts
+@@ -86,7 +86,7 @@ export interface $ZodIssueInvalidValue<Input = unknown> extends $ZodIssueBase {
+ }
+ 
+ export interface $ZodIssueCustom extends $ZodIssueBase {
+-  readonly code?: "custom";
++  readonly code: "custom";
+   readonly params?: Record<string, any> | undefined;
+   readonly input: unknown;
+ }
+@@ -149,6 +149,8 @@ export type $ZodIssue =
+   | $ZodIssueInvalidValue
+   | $ZodIssueCustom;
+ 
++export type $ZodIssueCode = $ZodIssue["code"];
++
+ export type $ZodRawIssue<T extends $ZodIssueBase = $ZodIssue> = T extends any ? RawIssue<T> : never;
+ type RawIssue<T extends $ZodIssueBase> = util.Flatten<
+   util.MakePartial<T, "message" | "path"> & {
+diff --git a/play.ts b/play.ts
+index ab8f7e24..b6e8215b 100644
+--- a/play.ts
++++ b/play.ts
+@@ -1,3 +1,22 @@
+ import * as z from "zod/v4";
+ 
+-z;
++z.custom<Date>((val) => val instanceof Date);
++
++z.string().min(5, {
++  error: (iss) => {
++    // customize "too_small" error message
++    if (iss.code === "too_small") {
++      return `Password must have ${iss.minimum} characters or more`;
++    }
++
++    // use default error otherwise
++    return undefined;
++  },
++});
++
++z.ZodError;
++
++const arg = z.custom<Date>((val) => val instanceof Date);
++z.date().check(z.custom((val) => val.getTime() > 0));
++
++// z.tuple<[title: string, text: string]>([z.string(), z.string()]);

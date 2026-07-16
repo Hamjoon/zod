@@ -1,0 +1,18 @@
+diff --git a/packages/zod/src/v4/classic/schemas.ts b/packages/zod/src/v4/classic/schemas.ts
+index 05144e2c..91034dfe 100644
+--- a/packages/zod/src/v4/classic/schemas.ts
++++ b/packages/zod/src/v4/classic/schemas.ts
+@@ -1962,10 +1962,10 @@ export function check<O = unknown>(fn: core.CheckFn<O>, params?: string | core.$
+   return ch;
+ }
+ 
+-export function custom<O>(
+-  fn?: (data: unknown) => unknown,
++export function custom<O = unknown, I = O>(
++  fn?: (data: I) => unknown,
+   _params?: string | core.$ZodCustomParams | undefined
+-): ZodCustom<O, O> {
++): ZodCustom<O, I> {
+   return core._custom(ZodCustom, fn ?? (() => true), _params) as any;
+ }
+ 
