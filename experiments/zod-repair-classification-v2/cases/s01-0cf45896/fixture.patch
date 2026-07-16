@@ -1,0 +1,18 @@
+diff --git a/packages/zod/src/v4/core/to-json-schema.ts b/packages/zod/src/v4/core/to-json-schema.ts
+index a18b2fcdc..bbf3524e6 100644
+--- a/packages/zod/src/v4/core/to-json-schema.ts
++++ b/packages/zod/src/v4/core/to-json-schema.ts
+@@ -384,9 +384,11 @@ export class JSONSchemaGenerator {
+                 json.items = rest;
+               }
+             } else if (this.target === "openapi-3.0") {
+-              json.items = [...prefixItems];
++              json.items = {
++                anyOf: [...prefixItems],
++              };
+               if (rest) {
+-                json.items.push(rest);
++                json.items.anyOf!.push(rest);
+               }
+               json.minItems = prefixItems.length;
+               if (!rest) {

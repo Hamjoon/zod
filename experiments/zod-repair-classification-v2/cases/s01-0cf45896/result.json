@@ -1,0 +1,12 @@
+{
+  "id": "s01-0cf45896",
+  "category": "S",
+  "expected": "fix_tests",
+  "decision": "fix_tests",
+  "decision_match": true,
+  "first_line_ok": true,
+  "has_diff": true,
+  "validation": "green",
+  "apply_method": "context-match",
+  "note": ""
+}
