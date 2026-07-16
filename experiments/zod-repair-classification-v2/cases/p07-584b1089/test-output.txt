@@ -1,0 +1,123 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v4.0.10 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p07-584b1089
+
+ ❯  zod  src/v4/mini/tests/string.test.ts (27 tests | 1 failed) 16ms
+   ✓ z.string 4ms
+   ✓ z.string with custom error 0ms
+   ✓ inference in checks 1ms
+   ✓ z.string async 0ms
+   ✓ z.uuid 1ms
+   ✓ z.email 0ms
+   ✓ z.url 1ms
+   ✓ z.url with optional hostname regex 0ms
+   ✓ z.url - file urls 0ms
+   ✓ z.url with optional protocol regex 0ms
+   ✓ z.url with both hostname and protocol regexes 0ms
+   ✓ z.url with invalid regex patterns 0ms
+   ✓ z.emoji 0ms
+   ✓ z.nanoid 0ms
+   ✓ z.cuid 0ms
+   ✓ z.cuid2 0ms
+   ✓ z.ulid 0ms
+   ✓ z.xid 0ms
+   ✓ z.ksuid 0ms
+   ✓ z.ipv4 1ms
+   ✓ z.ipv6 0ms
+   ✓ z.mac 0ms
+   ✓ z.mac with custom delimiter 0ms
+   × z.base64 3ms
+   ✓ z.e164 0ms
+   ✓ z.jwt 0ms
+   ✓ z.hash generic format 0ms
+ ❯  zod  src/v4/classic/tests/string.test.ts (47 tests | 1 failed) 87ms
+   ✓ length checks 1ms
+   ✓ includes 0ms
+   ✓ includes with string error message 4ms
+   ✓ startswith/endswith 0ms
+   ✓ email validations 1ms
+   × base64 validations 3ms
+   ✓ base64url validations 1ms
+   ✓ big base64 and base64url 61ms
+   ✓ jwt token 1ms
+   ✓ url validations 0ms
+   ✓ url preserves original input 0ms
+   ✓ url trims whitespace 0ms
+   ✓ url normalize flag 0ms
+   ✓ url normalize with hostname and protocol constraints 0ms
+   ✓ httpurl 1ms
+   ✓ url error overrides 0ms
+   ✓ emoji validations 1ms
+   ✓ nanoid 1ms
+   ✓ bad nanoid 0ms
+   ✓ good uuid 0ms
+   ✓ bad uuid 0ms
+   ✓ good guid 0ms
+   ✓ bad guid 0ms
+   ✓ cuid 0ms
+   ✓ cuid2 0ms
+   ✓ ulid 0ms
+   ✓ xid 0ms
+   ✓ ksuid 0ms
+   ✓ regex 0ms
+   ✓ regexp error message 0ms
+   ✓ regexp error custom message 0ms
+   ✓ regex lastIndex reset 0ms
+   ✓ format 1ms
+   ✓ min max getters 0ms
+   ✓ boundary cases with zero length 0ms
+   ✓ trim 0ms
+   ✓ lowerCase 0ms
+   ✓ slugify 1ms
+   ✓ IPv4 validation 0ms
+   ✓ IPv6 validation 0ms
+   ✓ MAC validation 0ms
+   ✓ MAC validation with custom delimiter 0ms
+   ✓ CIDR v4 validation 0ms
+   ✓ CIDR v6 validation 0ms
+   ✓ E.164 validation 0ms
+   ✓ hostname 1ms
+   ✓ hash validation 1ms
+ ✓  zod   TS  src/v4/classic/tests/string.test.ts (47 tests)
+ ✓  zod   TS  src/v4/mini/tests/string.test.ts (27 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL   zod  src/v4/mini/tests/string.test.ts > z.base64
+AssertionError: expected [Function] to throw an error
+ ❯ src/v4/mini/tests/string.test.ts:286:36
+    284|   expect(() => z.parse(a, "hello")).toThrow();
+    285|   // whitespace is not allowed (atob would otherwise strip it)
+    286|   expect(() => z.parse(a, "123 ")).toThrow();
+       |                                    ^
+    287|   expect(() => z.parse(a, "SGVsbG8gd29ybGQ= ")).toThrow();
+    288|   expect(() => z.parse(a, "SGVsbG8gd29ybGQ=\n")).toThrow();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL   zod  src/v4/classic/tests/string.test.ts > base64 validations
+AssertionError: expected '123 true' to be '123 false' // Object.is equality
+
+Expected: "123 false"
+Received: "123 true"
+
+ ❯ src/v4/classic/tests/string.test.ts:233:62
+    231| 
+    232|   for (const str of invalidBase64Strings) {
+    233|     expect(str + z.string().base64().safeParse(str).success).toBe(`${s…
+       |                                                              ^
+    234|   }
+    235| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 2 passed (4)
+      Tests  2 failed | 146 passed (148)
+Type Errors  no errors
+   Start at  15:52:57
+   Duration  7.07s (transform 1.14s, setup 45ms, collect 1.43s, tests 103ms, environment 0ms, prepare 5ms, typecheck 6.13s)
+

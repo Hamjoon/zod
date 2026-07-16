@@ -1,0 +1,23 @@
+diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts
+index 864..914 100644
+--- a/packages/zod/src/v4/core/schemas.ts
++++ b/packages/zod/src/v4/core/schemas.ts
+@@
+ export function isValidBase64(data: string): boolean {
+   if (data === "") return true;
+-  if (data.length % 4 !== 0) return false;
++  // Reject any whitespace characters – atob() silently strips them, which would
++  // cause strings like "123 " or "SGVsbG8gV29ybGQ= " to be treated as valid.
++  // RFC 4648 §3.3 defines the canonical Base64 alphabet as not containing
++  // whitespace, so we enforce that here before any further checks.
++  if (/\s/.test(data)) return false;
++
++  if (data.length % 4 !== 0) return false;
+   try {
+     // @ts-ignore
+     atob(data);
+     return true;
+   } catch {
+     return false;
+   }
+ }

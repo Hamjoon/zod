@@ -1,0 +1,140 @@
+{
+  "case": "p07-584b1089",
+  "repo": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p07-584b1089",
+  "tests": [
+    "packages/zod/src/v4/classic/tests/string.test.ts",
+    "packages/zod/src/v4/mini/tests/string.test.ts"
+  ],
+  "productionFile": "packages/zod/src/v4/core/schemas.ts",
+  "mutate": "packages/zod/src/v4/core/schemas.ts:890-895",
+  "validation": {
+    "status": 0,
+    "signal": null
+  },
+  "coverage": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/schemas.ts",
+      "fileKey": "/Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p07-584b1089/packages/zod/src/v4/core/schemas.ts",
+      "metrics": {
+        "lines": {
+          "total": 1128,
+          "covered": 270,
+          "skipped": 0,
+          "pct": 23.93
+        },
+        "functions": {
+          "total": 269,
+          "covered": 50,
+          "skipped": 0,
+          "pct": 18.58
+        },
+        "statements": {
+          "total": 1263,
+          "covered": 293,
+          "skipped": 0,
+          "pct": 23.19
+        },
+        "branches": {
+          "total": 590,
+          "covered": 110,
+          "skipped": 0,
+          "pct": 18.64
+        }
+      }
+    }
+  },
+  "mutation": {
+    "status": 0,
+    "signal": null,
+    "summary": {
+      "available": true,
+      "productionFile": "packages/zod/src/v4/core/schemas.ts",
+      "fileKey": "packages/zod/src/v4/core/schemas.ts",
+      "totals": {
+        "Killed": 4
+      },
+      "mutants": [
+        {
+          "id": "1",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 22,
+              "line": 894
+            },
+            "start": {
+              "column": 7,
+              "line": 894
+            }
+          },
+          "killedBy": [
+            "5"
+          ]
+        },
+        {
+          "id": "2",
+          "mutatorName": "Regex",
+          "replacement": "/\\S/",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 11,
+              "line": 894
+            },
+            "start": {
+              "column": 7,
+              "line": 894
+            }
+          },
+          "killedBy": [
+            "5"
+          ]
+        },
+        {
+          "id": "3",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "true",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 894
+            },
+            "start": {
+              "column": 31,
+              "line": 894
+            }
+          },
+          "killedBy": [
+            "5"
+          ]
+        },
+        {
+          "id": "0",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "Killed",
+          "location": {
+            "end": {
+              "column": 22,
+              "line": 894
+            },
+            "start": {
+              "column": 7,
+              "line": 894
+            }
+          },
+          "killedBy": [
+            "5"
+          ]
+        }
+      ]
+    }
+  },
+  "verdict": "signal_preserved"
+}

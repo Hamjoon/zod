@@ -1,0 +1,37 @@
+diff --git a/packages/zod/src/v4/classic/tests/string.test.ts b/packages/zod/src/v4/classic/tests/string.test.ts
+index 186bc2b5..4528beb8 100644
+--- a/packages/zod/src/v4/classic/tests/string.test.ts
++++ b/packages/zod/src/v4/classic/tests/string.test.ts
+@@ -217,6 +217,16 @@ test("base64 validations", () => {
+     "?QmFzZTY0IGVuY29kaW5nIGlzIGZ1bg==", // Invalid character '?'
+     ".MTIzND2Nzg5MC4=", // Invalid character '.'
+     "QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVo", // Missing padding
++    // Whitespace is not part of canonical base64 (RFC 4648 §3.3) — atob() strips
++    // whitespace internally before validating, so the length check alone would
++    // accept "123 " etc.
++    "123 ", // bypasses length-mod-4 via trailing whitespace
++    "SGVsbG8gV29ybGQ= ", // trailing space
++    " SGVsbG8gV29ybGQ=", // leading space
++    "SGVsbG8gV29ybGQ=\n", // trailing newline
++    "SGVs bG8gV29ybGQ=", // internal space
++    "SGVs\nbG8gV29ybGQ=", // internal newline
++    "SGVs\tbG8gV29ybGQ=", // internal tab
+   ];
+ 
+   for (const str of invalidBase64Strings) {
+diff --git a/packages/zod/src/v4/mini/tests/string.test.ts b/packages/zod/src/v4/mini/tests/string.test.ts
+index 61be8f92..55cbd860 100644
+--- a/packages/zod/src/v4/mini/tests/string.test.ts
++++ b/packages/zod/src/v4/mini/tests/string.test.ts
+@@ -282,6 +282,11 @@ test("z.base64", () => {
+   expect(() => z.parse(a, "SGVsbG8gd29ybGQ")).toThrow();
+   expect(() => z.parse(a, "U29tZSBvdGhlciBzdHJpbmc")).toThrow();
+   expect(() => z.parse(a, "hello")).toThrow();
++  // whitespace is not allowed (atob would otherwise strip it)
++  expect(() => z.parse(a, "123 ")).toThrow();
++  expect(() => z.parse(a, "SGVsbG8gd29ybGQ= ")).toThrow();
++  expect(() => z.parse(a, "SGVsbG8gd29ybGQ=\n")).toThrow();
++  expect(() => z.parse(a, "SGVs bG8gd29ybGQ=")).toThrow();
+   // wrong type
+   expect(() => z.parse(a, 123)).toThrow();
+ });
