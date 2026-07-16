@@ -1,0 +1,12 @@
+{
+  "id": "s05-27f13d62",
+  "category": "S",
+  "expected": "fix_tests",
+  "decision": "fix_tests",
+  "decision_match": true,
+  "first_line_ok": true,
+  "has_diff": true,
+  "validation": "apply_failed",
+  "apply_method": "none",
+  "note": "patch-does-not-apply"
+}

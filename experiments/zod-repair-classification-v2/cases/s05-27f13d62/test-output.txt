@@ -1,0 +1,135 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s05-27f13d62/packages/zod
+
+ ❯ src/v4/classic/tests/template-literal.test.ts (8 tests | 3 failed) 34ms
+   × regexes 8ms
+     → Snapshot `regexes 17` mismatched
+   × template literal parsing - failure - complex cases 2ms
+     → expected [Function] to throw an error
+   × template literal parsing - failure - issue format 1ms
+     → Snapshot `template literal parsing - failure - issue format 4` mismatched
+ ❯ src/v4/classic/tests/to-json-schema.test.ts (61 tests | 2 failed) 123ms
+   × toJSONSchema > primitive types 15ms
+     → Snapshot `toJSONSchema > primitive types 15` mismatched
+   × toJSONSchema > string formats 2ms
+     → Snapshot `toJSONSchema > string formats 8` mismatched
+ ✓  TS  src/v4/classic/tests/to-json-schema.test.ts (61 tests)
+ ✓  TS  src/v4/classic/tests/template-literal.test.ts (8 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/v4/classic/tests/template-literal.test.ts > regexes
+Error: Snapshot `regexes 17` mismatched
+
+Expected: ""^\d+$""
+Received: ""^-?\d+$""
+
+ ❯ src/v4/classic/tests/template-literal.test.ts:537:38
+    535|   expect(lazyString._zod.pattern.source).toMatchInlineSnapshot(`"^[\\s…
+    536|   expect(anyNumber._zod.pattern.source).toMatchInlineSnapshot(`"^-?\\d…
+    537|   expect(anyInt._zod.pattern.source).toMatchInlineSnapshot(`"^\\d+$"`);
+       |                                      ^
+    538|   // expect(anyFiniteNumber._zod.pattern.source).toMatchInlineSnapshot…
+    539|   // expect(anyNegativeNumber._zod.pattern.source).toMatchInlineSnapsh…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  src/v4/classic/tests/template-literal.test.ts > template literal parsing - failure - complex cases
+AssertionError: expected [Function] to throw an error
+ ❯ src/v4/classic/tests/template-literal.test.ts:676:64
+    674|   expect(() => connectionString.parse("mongodb://host:d234")).toThrow(…
+    675|   expect(() => connectionString.parse("mongodb://host:12.34")).toThrow…
+    676|   expect(() => connectionString.parse("mongodb://host:-1234")).toThrow…
+       |                                                                ^
+    677|   expect(() => connectionString.parse("mongodb://host:-12.34")).toThro…
+    678|   expect(() => connectionString.parse("mongodb://host:")).toThrow();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  src/v4/classic/tests/template-literal.test.ts > template literal parsing - failure - issue format
+Error: Snapshot `template literal parsing - failure - issue format 4` mismatched
+
+- Expected
++ Received
+
+@@ -1,11 +1,11 @@
+  {
+    "error": [ZodError: [
+    {
+      "code": "invalid_format",
+      "format": "template_literal",
+-     "pattern": "^mongodb:\\/\\/(\\w+:\\w+@)?\\w+:\\d+(\\/(\\w+)?(\\?(\\w+=\\w+(&\\w+=\\w+)*)?)?)?$",
++     "pattern": "^mongodb:\\/\\/(\\w+:\\w+@)?\\w+:-?\\d+(\\/(\\w+)?(\\?(\\w+=\\w+(&\\w+=\\w+)*)?)?)?$",
+      "path": [],
+      "message": "Invalid input"
+    }
+  ]],
+    "success": false,
+
+ ❯ src/v4/classic/tests/template-literal.test.ts:732:91
+    730|     }
+    731|   `);
+    732|   expect(connectionString.safeParse("mongodb://host:1234/defaultauthdb…
+       |                                                                                           ^
+    733|     {
+    734|       "error": [ZodError: [
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  src/v4/classic/tests/to-json-schema.test.ts > toJSONSchema > primitive types
+Error: Snapshot `toJSONSchema > primitive types 15` mismatched
+
+- Expected
++ Received
+
+  {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "format": "ipv6",
+-   "pattern": "^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::|([0-9a-fA-F]{1,4})?::([0-9a-fA-F]{1,4}:?){0,6})$",
++   "pattern": "^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))$",
+    "type": "string",
+  }
+
+ ❯ src/v4/classic/tests/to-json-schema.test.ts:127:38
+    125|       }
+    126|     `);
+    127|     expect(z.toJSONSchema(z.ipv6())).toMatchInlineSnapshot(`
+       |                                      ^
+    128|       {
+    129|         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+ FAIL  src/v4/classic/tests/to-json-schema.test.ts > toJSONSchema > string formats
+Error: Snapshot `toJSONSchema > string formats 8` mismatched
+
+- Expected
++ Received
+
+  {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "format": "ipv6",
+-   "pattern": "^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::|([0-9a-fA-F]{1,4})?::([0-9a-fA-F]{1,4}:?){0,6})$",
++   "pattern": "^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))$",
+    "type": "string",
+  }
+
+ ❯ src/v4/classic/tests/to-json-schema.test.ts:351:38
+    349|     `);
+    350| 
+    351|     expect(z.toJSONSchema(z.ipv6())).toMatchInlineSnapshot(`
+       |                                      ^
+    352|       {
+    353|         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
+
+  Snapshots  4 failed
+ Test Files  2 failed | 2 passed (4)
+      Tests  5 failed | 133 passed (138)
+Type Errors  no errors
+   Start at  15:51:42
+   Duration  5.90s (transform 379ms, setup 23ms, collect 1.37s, tests 157ms, environment 0ms, prepare 293ms, typecheck 5.56s)
+
