@@ -1,0 +1,86 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p09-25a4c376/packages/zod
+
+ ❯ src/v4/classic/tests/to-json-schema.test.ts (55 tests | 2 failed) 41ms
+   × toJSONSchema > tuple openapi 2ms
+     → Snapshot `toJSONSchema > tuple openapi 1` mismatched
+   × toJSONSchema > tuple with rest openapi 1ms
+     → Snapshot `toJSONSchema > tuple with rest openapi 1` mismatched
+ ✓  TS  src/v4/classic/tests/to-json-schema.test.ts (55 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/v4/classic/tests/to-json-schema.test.ts > toJSONSchema > tuple openapi
+Error: Snapshot `toJSONSchema > tuple openapi 1` mismatched
+
+- Expected
++ Received
+
+@@ -5,9 +5,7 @@
+      },
+      {
+        "type": "number",
+      },
+    ],
+-   "maxItems": 2,
+-   "minItems": 2,
+    "type": "array",
+  }
+
+ ❯ src/v4/classic/tests/to-json-schema.test.ts:696:63
+    694|   test("tuple openapi", () => {
+    695|     const schema = z.tuple([z.string(), z.number()]);
+    696|     expect(z.toJSONSchema(schema, { target: "openapi-3.0" })).toMatchI…
+       |                                                               ^
+    697|       {
+    698|         "items": [
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/v4/classic/tests/to-json-schema.test.ts > toJSONSchema > tuple with rest openapi
+Error: Snapshot `toJSONSchema > tuple with rest openapi 1` mismatched
+
+- Expected
++ Received
+
+  {
+-   "items": [
+-     {
++   "additionalItems": {
+-       "type": "string",
+-     },
+-     {
+-       "type": "number",
+-     },
+-     {
++     "type": "boolean",
++   },
++   "items": {
+-       "type": "boolean",
++     "type": "boolean",
+-     },
++   },
+-   ],
+-   "minItems": 2,
+    "type": "array",
+  }
+
+ ❯ src/v4/classic/tests/to-json-schema.test.ts:715:63
+    713|   test("tuple with rest openapi", () => {
+    714|     const schema = z.tuple([z.string(), z.number()]).rest(z.boolean());
+    715|     expect(z.toJSONSchema(schema, { target: "openapi-3.0" })).toMatchI…
+       |                                                               ^
+    716|       {
+    717|         "items": [
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+  Snapshots  2 failed
+ Test Files  1 failed | 1 passed (2)
+      Tests  2 failed | 108 passed (110)
+Type Errors  no errors
+   Start at  15:53:26
+   Duration  5.53s (transform 159ms, setup 7ms, collect 219ms, tests 41ms, environment 0ms, prepare 46ms, typecheck 5.43s)
+

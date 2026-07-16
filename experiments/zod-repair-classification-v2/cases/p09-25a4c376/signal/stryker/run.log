@@ -1,0 +1,112 @@
+$ pnpm stryker run /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/p09-25a4c376/.openclaw-signal/p09-25a4c376/stryker.signal.config.mjs
+status=0
+## stdout
+[32m16:35:22 (38438) INFO ProjectReader[39m Found 1 of 550 file(s) to be mutated.
+[32m16:35:22 (38438) INFO ProjectReader[39m Found 1 test file(s) matching --testFiles patterns.
+[32m16:35:22 (38438) INFO Instrumenter[39m Instrumented 1 source file(s) with 16 mutant(s)
+[32m16:35:22 (38438) INFO ConcurrencyTokenProvider[39m Creating 2 test runner process(es).
+[32m16:35:23 (38438) INFO DryRunExecutor[39m Starting initial test run (vitest test runner with "perTest" coverage analysis). This may take a while.
+[32m16:35:23 (38438) INFO DryRunExecutor[39m Initial test run succeeded. Ran 55 tests in 0 seconds (net 38.497416999999814 ms, overhead 374.5025830000002 ms).
+
+All tests/to-json-schema.test.ts
+  ✘ toJSONSchema primitive types (covered 0)
+  ✘ toJSONSchema unsupported schema types (covered 0)
+  ✘ toJSONSchema string formats (covered 0)
+  ✘ toJSONSchema string patterns (covered 0)
+  ✘ toJSONSchema number constraints (covered 0)
+  ✘ toJSONSchema number constraints draft-4 (covered 0)
+  ✘ toJSONSchema nullable openapi (covered 0)
+  ✘ toJSONSchema union with null openapi (covered 0)
+  ✘ toJSONSchema arrays (covered 0)
+  ✘ toJSONSchema unions (covered 0)
+  ✘ toJSONSchema intersections (covered 0)
+  ✘ toJSONSchema record (covered 0)
+  ✓ toJSONSchema tuple (killed 1)
+  ✓ toJSONSchema tuple with rest (killed 3)
+  ✓ toJSONSchema tuple openapi (killed 4)
+  ✓ toJSONSchema tuple with rest openapi (killed 4)
+  ✘ toJSONSchema promise (covered 0)
+  ✘ toJSONSchema lazy (covered 0)
+  ✘ toJSONSchema enum (covered 0)
+  ✘ toJSONSchema literal (covered 0)
+  ✘ toJSONSchema literal draft-4 (covered 0)
+  ✘ toJSONSchema pipe (covered 0)
+  ✘ toJSONSchema simple objects (covered 0)
+  ✘ toJSONSchema additionalproperties in z.object (covered 0)
+  ✘ toJSONSchema catchall objects (covered 0)
+  ✘ toJSONSchema optional fields - object (covered 0)
+  ✘ toJSONSchema recursive object (covered 0)
+  ✘ toJSONSchema simple interface (covered 0)
+  ✘ toJSONSchema catchall interface (covered 0)
+  ✘ toJSONSchema recursive interface schemas (covered 0)
+  ✘ toJSONSchema mutually recursive interface schemas (covered 0)
+  ✘ override (covered 0)
+  ✘ override: do not run on references (covered 0)
+  ✘ override with refs (covered 0)
+  ✘ override execution order (covered 0)
+  ✘ override with path (covered 0)
+  ✘ pipe (covered 0)
+  ✘ passthrough schemas (covered 0)
+  ✘ extract schemas with id (covered 0)
+  ✘ unrepresentable literal values are ignored (covered 0)
+  ✘ describe with id (covered 0)
+  ✘ overwrite id (covered 0)
+  ✘ overwrite descriptions (covered 0)
+  ✘ top-level readonly (covered 0)
+  ✘ basic registry (covered 0)
+  ✘ _ref (covered 0)
+  ✘ defaults/prefaults (covered 0)
+  ✘ input type (covered 0)
+  ✘ examples on pipe (covered 0)
+  ✘ use output type for preprocess (covered 0)
+  ✘ flatten simple intersections (covered 0)
+  ✘ z.file() (covered 0)
+  ✘ custom toJSONSchema (covered 0)
+  ✘ cycle detection - root (covered 0)
+  ✘ cycle detection - mutual recursion (covered 0)
+
+[Survived] ArrayDeclaration
+packages/zod/src/v4/core/to-json-schema.ts:384:25
+-                     path: [...params.path, "items"],
++                     path: [],
+Tests ran:
+    toJSONSchema tuple with rest
+
+
+[Survived] StringLiteral
+packages/zod/src/v4/core/to-json-schema.ts:384:42
+-                     path: [...params.path, "items"],
++                     path: [...params.path, ""],
+Tests ran:
+    toJSONSchema tuple with rest
+
+
+[Survived] ArrayDeclaration
+packages/zod/src/v4/core/to-json-schema.ts:393:25
+-                     path: [...params.path, "items"],
++                     path: [],
+Tests ran:
+    toJSONSchema tuple with rest openapi
+
+
+[Survived] StringLiteral
+packages/zod/src/v4/core/to-json-schema.ts:393:42
+-                     path: [...params.path, "items"],
++                     path: [...params.path, ""],
+Tests ran:
+    toJSONSchema tuple with rest openapi
+
+
+Ran 1.31 tests per mutant on average.
+-------------------|------------------|----------|-----------|------------|----------|----------|
+                   | % Mutation score |          |           |            |          |          |
+File               |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+-------------------|--------|---------|----------|-----------|------------|----------|----------|
+All files          |  75.00 |   75.00 |       12 |         0 |          4 |        0 |        0 |
+ to-json-schema.ts |  75.00 |   75.00 |       12 |         0 |          4 |        0 |        0 |
+-------------------|--------|---------|----------|-----------|------------|----------|----------|
+[32m16:35:24 (38438) INFO MutationTestReportHelper[39m Final mutation score of 75.00 is greater than or equal to break threshold 0
+[32m16:35:24 (38438) INFO JsonReporter[39m Your report can be found at: file:///Users/donggi/_projects/etc-projects/zod-thesis/experiments/zod-repair-classification-v2/cases/p09-25a4c376/signal/stryker/mutation.json
+[32m16:35:24 (38438) INFO MutationTestExecutor[39m Done in 2 seconds.
+
+## stderr
