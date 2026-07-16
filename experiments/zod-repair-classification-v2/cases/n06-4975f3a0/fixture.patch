@@ -1,0 +1,142 @@
+diff --git a/packages/zod/src/v4/classic/schemas.ts b/packages/zod/src/v4/classic/schemas.ts
+index 6ef63cf97..8f49caeef 100644
+--- a/packages/zod/src/v4/classic/schemas.ts
++++ b/packages/zod/src/v4/classic/schemas.ts
+@@ -1215,11 +1215,13 @@ export function union<const T extends readonly core.SomeType[]>(
+ }
+ 
+ // ZodDiscriminatedUnion
+-export interface ZodDiscriminatedUnion<Options extends readonly core.SomeType[] = readonly core.$ZodType[]>
+-  extends ZodUnion<Options>,
+-    core.$ZodDiscriminatedUnion<Options> {
+-  _zod: core.$ZodDiscriminatedUnionInternals<Options>;
+-  def: core.$ZodDiscriminatedUnionDef<Options>;
++export interface ZodDiscriminatedUnion<
++  Options extends readonly core.SomeType[] = readonly core.$ZodType[],
++  Disc extends string = string,
++> extends ZodUnion<Options>,
++    core.$ZodDiscriminatedUnion<Options, Disc> {
++  _zod: core.$ZodDiscriminatedUnionInternals<Options, Disc>;
++  def: core.$ZodDiscriminatedUnionDef<Options, Disc>;
+ }
+ export const ZodDiscriminatedUnion: core.$constructor<ZodDiscriminatedUnion> = /*@__PURE__*/ core.$constructor(
+   "ZodDiscriminatedUnion",
+@@ -1231,11 +1233,12 @@ export const ZodDiscriminatedUnion: core.$constructor<ZodDiscriminatedUnion> = /
+ 
+ export function discriminatedUnion<
+   Types extends readonly [core.$ZodTypeDiscriminable, ...core.$ZodTypeDiscriminable[]],
++  Disc extends string,
+ >(
+-  discriminator: string,
++  discriminator: Disc,
+   options: Types,
+   params?: string | core.$ZodDiscriminatedUnionParams
+-): ZodDiscriminatedUnion<Types> {
++): ZodDiscriminatedUnion<Types, Disc> {
+   // const [options, params] = args;
+   return new ZodDiscriminatedUnion({
+     type: "union",
+diff --git a/packages/zod/src/v4/core/api.ts b/packages/zod/src/v4/core/api.ts
+index 6447af97c..98d904775 100644
+--- a/packages/zod/src/v4/core/api.ts
++++ b/packages/zod/src/v4/core/api.ts
+@@ -1081,12 +1081,15 @@ export interface $ZodTypeDiscriminable extends schemas.$ZodType {
+   _zod: $ZodTypeDiscriminableInternals;
+ }
+ export type $ZodDiscriminatedUnionParams = TypeParams<schemas.$ZodDiscriminatedUnion, "options" | "discriminator">;
+-export function _discriminatedUnion<Types extends [$ZodTypeDiscriminable, ...$ZodTypeDiscriminable[]]>(
++export function _discriminatedUnion<
++  Types extends [$ZodTypeDiscriminable, ...$ZodTypeDiscriminable[]],
++  Disc extends string,
++>(
+   Class: util.SchemaClass<schemas.$ZodDiscriminatedUnion>,
+-  discriminator: string,
++  discriminator: Disc,
+   options: Types,
+   params?: string | $ZodDiscriminatedUnionParams
+-): schemas.$ZodDiscriminatedUnion<Types> {
++): schemas.$ZodDiscriminatedUnion<Types, Disc> {
+   return new Class({
+     type: "union",
+     options,
+diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts
+index aa7aa2788..3f076e60e 100644
+--- a/packages/zod/src/v4/core/schemas.ts
++++ b/packages/zod/src/v4/core/schemas.ts
+@@ -2010,20 +2010,27 @@ export const $ZodUnion: core.$constructor<$ZodUnion> = /*@__PURE__*/ core.$const
+ //////////////////////////////////////////////////////
+ //////////////////////////////////////////////////////
+ 
+-export interface $ZodDiscriminatedUnionDef<Options extends readonly SomeType[] = readonly $ZodType[]>
+-  extends $ZodUnionDef<Options> {
+-  discriminator: string;
++export interface $ZodDiscriminatedUnionDef<
++  Options extends readonly SomeType[] = readonly $ZodType[],
++  Disc extends string = string,
++> extends $ZodUnionDef<Options> {
++  discriminator: Disc;
+   unionFallback?: boolean;
+ }
+ 
+-export interface $ZodDiscriminatedUnionInternals<Options extends readonly SomeType[] = readonly $ZodType[]>
+-  extends $ZodUnionInternals<Options> {
+-  def: $ZodDiscriminatedUnionDef<Options>;
++export interface $ZodDiscriminatedUnionInternals<
++  Options extends readonly SomeType[] = readonly $ZodType[],
++  Disc extends string = string,
++> extends $ZodUnionInternals<Options> {
++  def: $ZodDiscriminatedUnionDef<Options, Disc>;
+   propValues: util.PropValues;
+ }
+ 
+-export interface $ZodDiscriminatedUnion<T extends readonly SomeType[] = readonly $ZodType[]> extends $ZodType {
+-  _zod: $ZodDiscriminatedUnionInternals<T>;
++export interface $ZodDiscriminatedUnion<
++  Options extends readonly SomeType[] = readonly $ZodType[],
++  Disc extends string = string,
++> extends $ZodType {
++  _zod: $ZodDiscriminatedUnionInternals<Options, Disc>;
+ }
+ 
+ export const $ZodDiscriminatedUnion: core.$constructor<$ZodDiscriminatedUnion> =
+diff --git a/packages/zod/src/v4/mini/schemas.ts b/packages/zod/src/v4/mini/schemas.ts
+index b34adb258..f755ae72e 100644
+--- a/packages/zod/src/v4/mini/schemas.ts
++++ b/packages/zod/src/v4/mini/schemas.ts
+@@ -907,9 +907,11 @@ export function union<const T extends readonly SomeType[]>(
+ }
+ 
+ // ZodMiniDiscriminatedUnion
+-export interface ZodMiniDiscriminatedUnion<Options extends readonly SomeType[] = readonly core.$ZodType[]>
+-  extends ZodMiniUnion<Options> {
+-  _zod: core.$ZodDiscriminatedUnionInternals<Options>;
++export interface ZodMiniDiscriminatedUnion<
++  Options extends readonly SomeType[] = readonly core.$ZodType[],
++  Disc extends string = string,
++> extends ZodMiniUnion<Options> {
++  _zod: core.$ZodDiscriminatedUnionInternals<Options, Disc>;
+ }
+ export const ZodMiniDiscriminatedUnion: core.$constructor<ZodMiniDiscriminatedUnion> = /*@__PURE__*/ core.$constructor(
+   "ZodMiniDiscriminatedUnion",
+@@ -921,17 +923,18 @@ export const ZodMiniDiscriminatedUnion: core.$constructor<ZodMiniDiscriminatedUn
+ 
+ export function discriminatedUnion<
+   Types extends readonly [core.$ZodTypeDiscriminable, ...core.$ZodTypeDiscriminable[]],
++  Disc extends string,
+ >(
+-  discriminator: string,
++  discriminator: Disc,
+   options: Types,
+   params?: string | core.$ZodDiscriminatedUnionParams
+-): ZodMiniDiscriminatedUnion<Types> {
++): ZodMiniDiscriminatedUnion<Types, Disc> {
+   return new ZodMiniDiscriminatedUnion({
+     type: "union",
+     options,
+     discriminator,
+     ...util.normalizeParams(params),
+-  }) as ZodMiniDiscriminatedUnion<Types>;
++  }) as ZodMiniDiscriminatedUnion<Types, Disc>;
+ }
+ 
+ // ZodMiniIntersection
