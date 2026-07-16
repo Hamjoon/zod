@@ -1,0 +1,184 @@
+diff --git a/packages/docs/content/api.mdx b/packages/docs/content/api.mdx
+index e673ea9d..89580628 100644
+--- a/packages/docs/content/api.mdx
++++ b/packages/docs/content/api.mdx
+@@ -1630,6 +1630,38 @@ z.set(z.string()).check(z.size(5)); // must contain 5 items exactly
+ </Tab>
+ </Tabs>
+ 
++## Files
++
++To validate `File` instances:
++
++<Tabs groupId="lib" items={["Zod", "Zod Mini"]}>
++<Tab value="Zod">
++```ts
++const fileSchema = z.file();
++
++fileSchema.min(10_000); // minimum .size (bytes)
++fileSchema.max(1_000_000); // maximum .size (bytes)
++fileSchema.mime(["image/png"]); // MIME type
++```
++
++</Tab>
++<Tab value='zod/v4-mini'>
++```ts
++const fileSchema = z.file();
++
++fileSchema.check(
++  z.minSize(10_000), // minimum .size (bytes)
++  z.maxSize(1_000_000), // maximum .size (bytes)
++  z.mime(["image/png"]); // MIME type
++)
++```
++</Tab>
++</Tabs>
++
++
++
++
++
+ ## Promises
+ 
+ <Callout type="warn">
+@@ -2446,6 +2478,7 @@ const jsonSchema = z.lazy(() => {
+ });
+ ```
+ 
++
+ ## Custom
+ 
+ You can create a Zod schema for any TypeScript type by using `z.custom()`. This is useful for creating schemas for types that are not supported by Zod out of the box, such as template string literals.
+diff --git a/packages/docs/content/json-schema.mdx b/packages/docs/content/json-schema.mdx
+index 7039b2d5..f729c30b 100644
+--- a/packages/docs/content/json-schema.mdx
++++ b/packages/docs/content/json-schema.mdx
+@@ -26,6 +26,7 @@ z.toJSONSchema(schema)
+ //   type: 'object',
+ //   properties: { name: { type: 'string' }, age: { type: 'number' } },
+ //   required: [ 'name', 'age' ]
++//   additionalProperties: false
+ // }
+ ```
+ 
+@@ -312,7 +313,6 @@ z.void(); // ❌
+ z.date(); // ❌
+ z.map(); // ❌
+ z.set(); // ❌
+-z.file(); // ❌
+ z.transform(); // ❌
+ z.nan(); // ❌
+ z.custom(); // ❌
+@@ -348,6 +348,7 @@ toJSONSchema(User);
+ //   type: 'object',
+ //   properties: { name: { type: 'string' }, friend: { '$ref': '#' } },
+ //   required: [ 'name', 'friend' ]
++//   additionalProperties: false
+ // }
+ ```
+ 
+diff --git a/packages/docs/content/v4/index.mdx b/packages/docs/content/v4/index.mdx
+index 686841cb..bd318149 100644
+--- a/packages/docs/content/v4/index.mdx
++++ b/packages/docs/content/v4/index.mdx
+@@ -584,7 +584,7 @@ const fileSchema = z.file();
+ 
+ fileSchema.min(10_000); // minimum .size (bytes)
+ fileSchema.max(1_000_000); // maximum .size (bytes)
+-fileSchema.type("image/png"); // MIME type
++fileSchema.mime(["image/png"]); // MIME type
+ ```
+ 
+ ## Internationalization
+diff --git a/packages/zod/src/v4/classic/schemas.ts b/packages/zod/src/v4/classic/schemas.ts
+index 979a72b9..1c1a405c 100644
+--- a/packages/zod/src/v4/classic/schemas.ts
++++ b/packages/zod/src/v4/classic/schemas.ts
+@@ -1554,7 +1554,7 @@ export interface ZodFile extends ZodType {
+ 
+   min(size: number, params?: string | core.$ZodCheckMinSizeParams): this;
+   max(size: number, params?: string | core.$ZodCheckMaxSizeParams): this;
+-  mime(types: Array<util.MimeTypes>, params?: string | core.$ZodCheckMimeTypeParams): this;
++  mime(types: util.MimeTypes | Array<util.MimeTypes>, params?: string | core.$ZodCheckMimeTypeParams): this;
+ }
+ export const ZodFile: core.$constructor<ZodFile> = /*@__PURE__*/ core.$constructor("ZodFile", (inst, def) => {
+   core.$ZodFile.init(inst, def);
+@@ -1562,7 +1562,7 @@ export const ZodFile: core.$constructor<ZodFile> = /*@__PURE__*/ core.$construct
+ 
+   inst.min = (size, params) => inst.check(core._minSize(size, params));
+   inst.max = (size, params) => inst.check(core._maxSize(size, params));
+-  inst.mime = (types, params) => inst.check(core._mime(types, params));
++  inst.mime = (types, params) => inst.check(core._mime(Array.isArray(types) ? types : [types], params));
+ });
+ 
+ export function file(params?: string | core.$ZodFileParams): ZodFile {
+diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts
+index 6f499bd0..37acf14c 100644
+--- a/packages/zod/src/v4/core/schemas.ts
++++ b/packages/zod/src/v4/core/schemas.ts
+@@ -2779,6 +2779,11 @@ export interface $ZodFileDef extends $ZodTypeDef {
+ export interface $ZodFileInternals extends $ZodTypeInternals<File, File> {
+   def: $ZodFileDef;
+   isst: errors.$ZodIssueInvalidType;
++  bag: util.LoosePartial<{
++    minimum: number;
++    maximum: number;
++    mime: util.MimeTypes[];
++  }>;
+ }
+ 
+ export interface $ZodFile extends $ZodType {
+diff --git a/packages/zod/src/v4/core/to-json-schema.ts b/packages/zod/src/v4/core/to-json-schema.ts
+index ca1a6800..26d7adb3 100644
+--- a/packages/zod/src/v4/core/to-json-schema.ts
++++ b/packages/zod/src/v4/core/to-json-schema.ts
+@@ -433,10 +433,33 @@ export class JSONSchemaGenerator {
+           }
+           break;
+         }
++
+         case "file": {
+-          if (this.unrepresentable === "throw") {
+-            throw new Error("File cannot be represented in JSON Schema");
++          const json: JSONSchema.StringSchema = _json as any;
++          const file: JSONSchema.StringSchema = {
++            type: "string",
++            format: "binary",
++            contentEncoding: "binary",
++          };
++
++          const { minimum, maximum, mime } = schema._zod.bag as schemas.$ZodFileInternals["bag"];
++          if (minimum !== undefined) file.minLength = minimum;
++          if (maximum !== undefined) file.maxLength = maximum;
++          if (mime) {
++            if (mime.length === 1) {
++              file.contentMediaType = mime[0];
++              Object.assign(json, file);
++            } else {
++              json.anyOf = mime.map((m) => {
++                const mFile: JSONSchema.StringSchema = { ...file, contentMediaType: m };
++                return mFile;
++              });
++            }
+           }
++
++          // if (this.unrepresentable === "throw") {
++          //   throw new Error("File cannot be represented in JSON Schema");
++          // }
+           break;
+         }
+         case "transform": {
+diff --git a/play.ts b/play.ts
+index 5973834c..3685c47f 100644
+--- a/play.ts
++++ b/play.ts
+@@ -17,3 +17,9 @@ const HelloSchema = FirstSchema.and(SecondSchema).and(ThirdSchema).describe("123
+ // Zod 4
+ const result = z.toJSONSchema(HelloSchema, { target: "draft-7" });
+ console.dir(result, { depth: null });
++
++const fileSchema = z.file();
++
++fileSchema.min(10_000); // minimum .size (bytes)
++fileSchema.max(1_000_000); // maximum .size (bytes)
++fileSchema.mime(["image/png"]); // MIME type

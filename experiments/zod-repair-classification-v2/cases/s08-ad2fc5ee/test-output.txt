@@ -1,0 +1,37 @@
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v2.1.9 /Users/donggi/_projects/etc-projects/zod-thesis/.worktrees/s08-ad2fc5ee/packages/zod
+
+ ❯ src/v4/classic/tests/to-json-schema.test.ts (43 tests | 1 failed) 31ms
+   × toJSONSchema > unsupported schema types 2ms
+     → expected [Function] to throw an error
+ ✓  TS  src/v4/classic/tests/to-json-schema.test.ts (43 tests)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/v4/classic/tests/to-json-schema.test.ts > toJSONSchema > unsupported schema types
+AssertionError: expected [Function] to throw an error
+
+- Expected: 
+null
+
++ Received: 
+undefined
+
+ ❯ src/v4/classic/tests/to-json-schema.test.ts:242:46
+    240|     // File type
+    241|     const fileSchema = z.file();
+    242|     expect(() => z.toJSONSchema(fileSchema)).toThrow("File cannot be r…
+       |                                              ^
+    243| 
+    244|     // Transform
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 85 passed (86)
+Type Errors  no errors
+   Start at  15:52:32
+   Duration  4.14s (transform 158ms, setup 0ms, collect 240ms, tests 31ms, environment 0ms, prepare 62ms, typecheck 4.01s)
+
