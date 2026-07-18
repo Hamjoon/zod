@@ -38,6 +38,8 @@ diff와 현재 테스트 상태만 보고 다음 세 가지를 수행하는지 �
 5. **signal 측정**: 정방향 green 케이스에 대해 coverage와 변경 부위로 한정한
    mutation testing(StrykerJS)으로 test signal 보존을 측정한다.
 
+Case Matrix의 판정 라벨은 각 케이스가 도달한 단계에 대응한다: patch 적용 실패 = ②에서 탈락, partial = ③에서 탈락(적용됐으나 red), reverse_green = ④에서 탈락(green이나 변경 미보존), complete = ④까지 통과, signal 판정(preserved/weakened)은 ⑤ 도달 케이스에만 존재하며 미도달 케이스는 "-"로 표기한다.
+
 ## 결과
 
 ### Case Matrix — S (stale-test, 기대 DECISION: fix_tests)
