@@ -10,11 +10,11 @@
 
 
 ## Case Matrix의 판정 5단계
-![Local Image](./images/zod_v2_pipeline_funnel_30cases.png)
-
+<img src="./images/zod_v2_pipeline_funnel_30cases.png" width="70%" height="70%"/>
 
 ## 자동화 파이프 라인 (설계 및 진행 상황)
-![Local Image](./images/zod_pipeline_automation_status.png)
+<img src="./images/zod_pipeline_automation_status.png" width="70%" height="70%"/>
+
 ####  케이스 생성 단계
 수동 (사람 또는 AI 에이전트 수행)
 
