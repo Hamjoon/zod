@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1810" viewBox="0 0 1500 1810" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8f98"/>
+    </marker>
+  </defs>
+  <rect width="1500" height="1810" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="80" y="70" font-size="30" font-weight="bold" fill="#1f2328">Case-level pipeline — five stages</text>
+  <text x="80" y="106" font-size="20" fill="#6a707a">Each stage: who performs it, what it takes in, what it puts out. A case exits at the first stage it fails.</text>
+
+  <!-- ============ Stage 1 ============ -->
+  <rect x="80" y="150" width="640" height="170" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="192" font-size="25" font-weight="bold" fill="#1f2328">1&#160;&#160;Decision</text>
+  <text x="104" y="222" font-size="19" fill="#57606a">by: model — one LLM request per case, no retries</text>
+  <text x="104" y="256" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">IN&#160;</tspan> recent-change diff · test output · code snippets</text>
+  <text x="104" y="288" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">OUT</tspan> DECISION (+ repair diff when fixing)</text>
+
+  <!-- exit: no_change -->
+  <line x1="720" y1="235" x2="860" y2="235" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="864" y="185" width="556" height="100" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+  <text x="888" y="228" font-size="21" font-weight="bold" fill="#1a7f4b">DECISION: no_change</text>
+  <text x="888" y="260" font-size="19" fill="#2a5540">case ends here — judged against expected</text>
+
+  <line x1="400" y1="320" x2="400" y2="390" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="416" y="362" font-size="18" fill="#6a707a">DECISION: fix_tests / fix_production — with repair diff</text>
+
+  <!-- ============ Stage 2 ============ -->
+  <rect x="80" y="394" width="640" height="170" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="436" font-size="25" font-weight="bold" fill="#1f2328">2&#160;&#160;Patch apply</text>
+  <text x="104" y="466" font-size="19" fill="#57606a">by: apply-patch.py — context-match applier</text>
+  <text x="104" y="500" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">IN&#160;</tspan> repair diff · case source tree</text>
+  <text x="104" y="532" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">OUT</tspan> patched tree</text>
+
+  <!-- exit: apply failure -->
+  <line x1="720" y1="479" x2="860" y2="479" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="864" y="429" width="556" height="100" rx="14" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+  <text x="888" y="472" font-size="21" font-weight="bold" fill="#c4432b">diff cannot be applied</text>
+  <text x="888" y="504" font-size="19" fill="#6e3a30">Repair: no</text>
+
+  <line x1="400" y1="564" x2="400" y2="634" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="416" y="606" font-size="18" fill="#6a707a">patched tree</text>
+
+  <!-- ============ Stage 3 ============ -->
+  <rect x="80" y="638" width="640" height="170" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="680" font-size="25" font-weight="bold" fill="#1f2328">3&#160;&#160;Validation</text>
+  <text x="104" y="710" font-size="19" fill="#57606a">by: validate.sh — vitest run of the target tests</text>
+  <text x="104" y="744" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">IN&#160;</tspan> patched tree</text>
+  <text x="104" y="776" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">OUT</tspan> target test result: pass / fail</text>
+
+  <!-- exit: still red -->
+  <line x1="720" y1="723" x2="860" y2="723" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="864" y="673" width="556" height="100" rx="14" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+  <text x="888" y="716" font-size="21" font-weight="bold" fill="#c4432b">target tests still failing</text>
+  <text x="888" y="748" font-size="19" fill="#6e3a30">Repair: no</text>
+
+  <line x1="400" y1="808" x2="400" y2="878" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="416" y="850" font-size="18" fill="#6a707a">tests passing</text>
+
+  <!-- ============ Stage 4 ============ -->
+  <rect x="80" y="882" width="640" height="170" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="924" font-size="25" font-weight="bold" fill="#1f2328">4&#160;&#160;Preservation check</text>
+  <text x="104" y="954" font-size="19" fill="#57606a">by: git apply --reverse --check (static)</text>
+  <text x="104" y="988" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">IN&#160;</tspan> passing tree · the recent-change patch</text>
+  <text x="104" y="1020" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">OUT</tspan> recent change: preserved / reverted</text>
+
+  <!-- exit: reverted -->
+  <line x1="720" y1="967" x2="860" y2="967" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="864" y="907" width="556" height="126" rx="14" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+  <text x="888" y="948" font-size="21" font-weight="bold" fill="#c4432b">recent change reverted</text>
+  <text x="888" y="980" font-size="19" fill="#6e3a30">tests pass because the change was undone</text>
+  <text x="888" y="1010" font-size="19" fill="#6e3a30">Repair: no</text>
+
+  <line x1="400" y1="1052" x2="400" y2="1122" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="416" y="1094" font-size="18" fill="#6a707a">tests pass + recent change preserved</text>
+
+  <!-- ============ Repair yes box ============ -->
+  <rect x="80" y="1126" width="640" height="110" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2.5"/>
+  <text x="104" y="1172" font-size="23" font-weight="bold" fill="#1a7f4b">Repair: yes</text>
+  <text x="104" y="1206" font-size="19" fill="#2a5540">target tests pass AND recent change preserved</text>
+
+  <line x1="400" y1="1236" x2="400" y2="1306" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="416" y="1278" font-size="18" fill="#6a707a">successfully repaired tree</text>
+
+  <!-- ============ Stage 5 ============ -->
+  <rect x="80" y="1310" width="640" height="170" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="1352" font-size="25" font-weight="bold" fill="#1f2328">5&#160;&#160;Coverage signal</text>
+  <text x="104" y="1382" font-size="19" fill="#57606a">by: signal-case.sh — vitest with coverage, target tests only</text>
+  <text x="104" y="1416" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">IN&#160;</tspan> successfully repaired tree</text>
+  <text x="104" y="1448" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">OUT</tspan> line coverage of the changed production file</text>
+
+  <line x1="400" y1="1480" x2="400" y2="1550" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ============ Final signal box ============ -->
+  <rect x="80" y="1554" width="640" height="110" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2.5"/>
+  <text x="104" y="1600" font-size="23" font-weight="bold" fill="#1a7f4b">Signal check</text>
+  <text x="104" y="1634" font-size="19" fill="#2a5540">do the repaired tests still execute the changed code?</text>
+
+  <!-- Footnote -->
+  <text x="80" y="1730" font-size="18" fill="#6a707a">Per-case counts for each outcome are reported in the case matrices and headline numbers of the report.</text>
+  <text x="80" y="1760" font-size="18" fill="#6a707a">Mutation testing is not part of the signal criterion at this stage (advisor guidance); coverage is retained.</text>
+</svg>

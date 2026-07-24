@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1210" viewBox="0 0 1500 1210" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8f98"/>
+    </marker>
+  </defs>
+  <rect width="1500" height="1210" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="80" y="66" font-size="30" font-weight="bold" fill="#1f2328">Automation pipeline — design and current status</text>
+
+  <!-- Legend -->
+  <rect x="80" y="96" width="26" height="26" rx="6" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+  <text x="116" y="116" font-size="19" fill="#1f2328">scripted</text>
+  <rect x="226" y="96" width="26" height="26" rx="6" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+  <text x="262" y="116" font-size="19" fill="#1f2328">planned — not yet in code</text>
+  <rect x="530" y="96" width="26" height="26" rx="6" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+  <text x="566" y="116" font-size="19" fill="#1f2328">manual</text>
+
+  <!-- ===== Phase 1: Case generation ===== -->
+  <rect x="80" y="160" width="1340" height="240" rx="16" fill="none" stroke="#b0b6bf" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="108" y="204" font-size="24" font-weight="bold" fill="#1f2328">Case generation</text>
+  <text x="108" y="232" font-size="18" fill="#6a707a">runs once per experiment, before the batch</text>
+
+  <rect x="140" y="256" width="580" height="110" rx="14" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+  <text x="164" y="298" font-size="21" font-weight="bold" fill="#1f2328">Candidate mining (screening)</text>
+  <text x="164" y="330" font-size="18" fill="#57606a">one-off script outside the repo, run by hand</text>
+
+  <rect x="780" y="256" width="580" height="110" rx="14" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+  <text x="804" y="298" font-size="21" font-weight="bold" fill="#1f2328">Adoption verification</text>
+  <text x="804" y="330" font-size="18" fill="#57606a">manual — an LLM agent instructed by prompt</text>
+
+  <line x1="750" y1="400" x2="750" y2="452" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="766" y="434" font-size="18" fill="#6a707a">verified case fixtures</text>
+
+  <!-- ===== Phase 2: per-case loop ===== -->
+  <rect x="80" y="456" width="1340" height="430" rx="16" fill="#fff8f6" stroke="#c4432b" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="108" y="500" font-size="24" font-weight="bold" fill="#1f2328">Iterate over all cases — retry on failure</text>
+  <text x="108" y="528" font-size="18" fill="#a03a26">loop script not implemented yet — iteration is driven manually</text>
+
+  <!-- inner container -->
+  <rect x="110" y="552" width="1280" height="250" rx="14" fill="#ffffff" stroke="#b0b6bf" stroke-width="2"/>
+  <text x="134" y="592" font-size="21" font-weight="bold" fill="#1f2328">Per-case run (run-case.sh) — one loop iteration</text>
+
+  <!-- five stage boxes -->
+  <rect x="134" y="620" width="224" height="120" rx="12" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+  <text x="152" y="662" font-size="20" font-weight="bold" fill="#1f2328">Decision</text>
+  <text x="152" y="692" font-size="17" fill="#57606a">LLM runner script</text>
+  <text x="152" y="716" font-size="17" fill="#57606a">(single request)</text>
+
+  <rect x="384" y="620" width="224" height="120" rx="12" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+  <text x="402" y="662" font-size="20" font-weight="bold" fill="#1f2328">Patch apply</text>
+  <text x="402" y="692" font-size="17" fill="#57606a">apply-patch.py</text>
+
+  <rect x="634" y="620" width="224" height="120" rx="12" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+  <text x="652" y="662" font-size="20" font-weight="bold" fill="#1f2328">Validation</text>
+  <text x="652" y="692" font-size="17" fill="#57606a">validate.sh</text>
+
+  <rect x="884" y="620" width="224" height="120" rx="12" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+  <text x="902" y="662" font-size="20" font-weight="bold" fill="#1f2328">Preservation</text>
+  <text x="902" y="692" font-size="17" fill="#57606a">run manually,</text>
+  <text x="902" y="716" font-size="17" fill="#57606a">not in run-case.sh yet</text>
+
+  <rect x="1134" y="620" width="224" height="120" rx="12" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+  <text x="1152" y="662" font-size="20" font-weight="bold" fill="#1f2328">Signal</text>
+  <text x="1152" y="692" font-size="17" fill="#57606a">signal-case.sh</text>
+  <text x="1152" y="716" font-size="17" fill="#57606a">(coverage)</text>
+
+  <!-- arrows between stage boxes -->
+  <line x1="358" y1="680" x2="380" y2="680" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr2)"/>
+  <line x1="608" y1="680" x2="630" y2="680" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr2)"/>
+  <line x1="858" y1="680" x2="880" y2="680" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr2)"/>
+  <line x1="1108" y1="680" x2="1130" y2="680" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- loop-back arrow -->
+  <path d="M 1246 802 L 1246 838 L 246 838 L 246 806" fill="none" stroke="#c4432b" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr2)"/>
+  <text x="560" y="868" font-size="18" fill="#a03a26">next case — repeat while unfinished cases remain</text>
+
+  <line x1="750" y1="886" x2="750" y2="938" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="766" y="920" font-size="18" fill="#6a707a">once, after the loop completes</text>
+
+  <!-- ===== Phase 3: batch post-processing ===== -->
+  <rect x="80" y="942" width="1340" height="220" rx="16" fill="none" stroke="#b0b6bf" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="108" y="986" font-size="24" font-weight="bold" fill="#1f2328">Batch post-processing</text>
+
+  <rect x="140" y="1012" width="580" height="110" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+  <text x="164" y="1054" font-size="21" font-weight="bold" fill="#1f2328">Result aggregation</text>
+  <text x="164" y="1086" font-size="18" fill="#57606a">summarize-results.py</text>
+
+  <rect x="780" y="1012" width="580" height="110" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+  <text x="804" y="1054" font-size="21" font-weight="bold" fill="#1f2328">Artifact archive</text>
+  <text x="804" y="1086" font-size="18" fill="#57606a">archive.sh</text>
+</svg>
