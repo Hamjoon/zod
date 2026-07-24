@@ -391,7 +391,7 @@ force-push. Each case packet contains:
 - **Coverage is a weaker signal criterion than mutation testing.** File-level coverage
   confirms the changed file is executed, but cannot distinguish tests that would catch
   a future bug from tests that merely execute the code. Mutation testing was removed
-  at this stage per advisor guidance and may be revisited later; the week-3 mutation
+  at this stage and may be revisited later; the week-3 mutation
   artifacts remain in the archive.
 - **Generalization.** Single model (`gpt-oss-120b`), single repository (zod).
 - **No comparison with the pilot.** The earlier pilot forced test edits on stale-test
