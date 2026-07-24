@@ -44,6 +44,8 @@ verified candidates per category were adopted
 
 ## Protocol overview
 
+<img src="./images/zod_experiment_overview.png" width="85%"/>
+
 Every case runs under the same framing: with no category hint, the model receives the
 recent-change diff, the test run output, and code snippets around the change, then
 decides whether a modification is needed and, only if so, produces a repair diff. Each

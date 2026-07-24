@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1330" viewBox="0 0 1500 1330" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8f98"/>
+    </marker>
+    <marker id="arrp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8250df"/>
+    </marker>
+  </defs>
+  <rect width="1500" height="1330" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="80" y="66" font-size="30" font-weight="bold" fill="#1f2328">Experiment overview</text>
+
+  <!-- ===== Block 1: Sampling ===== -->
+  <rect x="80" y="104" width="1340" height="110" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="148" font-size="24" font-weight="bold" fill="#1f2328">Commit-history sampling</text>
+  <text x="104" y="184" font-size="19" fill="#57606a">seeded random sampling of real zod commits → a base version + one recent change</text>
+
+  <line x1="750" y1="214" x2="750" y2="258" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="766" y="243" font-size="18" fill="#6a707a">commit pairs</text>
+
+  <!-- ===== Block 2: Case construction ===== -->
+  <rect x="80" y="262" width="1340" height="250" rx="14" fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="306" font-size="24" font-weight="bold" fill="#1f2328">Case construction — three categories</text>
+  <text x="104" y="340" font-size="19" fill="#57606a">each case verified by actually running the tests</text>
+
+  <rect x="110" y="364" width="403" height="122" rx="12" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+  <text x="132" y="402" font-size="20" font-weight="bold" fill="#1f2328">Stale-test</text>
+  <text x="132" y="432" font-size="17" fill="#57606a">old tests now fail</text>
+  <text x="132" y="464" font-size="17" fill="#1f2328">correct: <tspan font-weight="bold">fix_tests</tspan></text>
+
+  <rect x="543" y="364" width="403" height="122" rx="12" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+  <text x="565" y="402" font-size="20" font-weight="bold" fill="#1f2328">Production-regression</text>
+  <text x="565" y="432" font-size="17" fill="#57606a">a newly added test fails</text>
+  <text x="565" y="464" font-size="17" fill="#1f2328">correct: <tspan font-weight="bold">fix_production</tspan></text>
+
+  <rect x="976" y="364" width="404" height="122" rx="12" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+  <text x="998" y="402" font-size="20" font-weight="bold" fill="#1f2328">Normal</text>
+  <text x="998" y="432" font-size="17" fill="#57606a">tests still pass</text>
+  <text x="998" y="464" font-size="17" fill="#1f2328">correct: <tspan font-weight="bold">no_change</tspan></text>
+
+  <line x1="750" y1="512" x2="750" y2="556" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="766" y="541" font-size="18" fill="#6a707a">verified cases</text>
+
+  <!-- ===== Per-case loop container ===== -->
+  <rect x="60" y="560" width="1380" height="490" rx="16" fill="none" stroke="#57606a" stroke-width="2.5" stroke-dasharray="12 8"/>
+  <text x="90" y="602" font-size="22" font-weight="bold" fill="#1f2328">Per-case loop — repeated for every case</text>
+
+  <!-- LLM block -->
+  <rect x="110" y="622" width="1280" height="180" rx="14" fill="#f7f2fd" stroke="#8250df" stroke-width="3.5"/>
+  <rect x="1112" y="648" width="244" height="46" rx="23" fill="#8250df"/>
+  <text x="1234" y="679" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">LLM CALL</text>
+  <text x="134" y="674" font-size="24" font-weight="bold" fill="#5b21b6">Repair decision — gpt-oss-120b</text>
+  <text x="134" y="708" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">prompt&#160;&#160;</tspan> recent-change diff · test output · code snippets &#160;(one request, no retries; category never revealed)</text>
+  <text x="134" y="742" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">response</tspan> DECISION: no_change / fix_tests / fix_production &#160;(+ repair diff)</text>
+  <text x="134" y="776" font-size="17" fill="#6a707a">the only point in the experiment where an LLM is called</text>
+
+  <line x1="750" y1="802" x2="750" y2="846" stroke="#8250df" stroke-width="2.5" marker-end="url(#arrp)"/>
+  <text x="766" y="831" font-size="18" fill="#8250df">DECISION + repair diff</text>
+
+  <!-- Evaluation block -->
+  <rect x="110" y="850" width="1280" height="140" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="134" y="894" font-size="24" font-weight="bold" fill="#1f2328">Per-case evaluation — scripts only, no LLM</text>
+  <text x="134" y="930" font-size="19" fill="#57606a">five stages: decision check → patch apply → validation → preservation check → coverage</text>
+  <text x="134" y="960" font-size="17" fill="#8a8f98">details: "Case-level pipeline — five stages" diagram</text>
+
+  <!-- loop-back arrow -->
+  <path d="M 400 990 L 400 1018 L 86 1018 L 86 712 L 104 712" fill="none" stroke="#8a8f98" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr3)"/>
+  <text x="430" y="1024" font-size="18" fill="#6a707a">next case — repeat until every case has run</text>
+
+  <line x1="750" y1="1050" x2="750" y2="1094" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="766" y="1079" font-size="18" fill="#6a707a">once, after all cases</text>
+
+  <!-- ===== Reporting ===== -->
+  <rect x="80" y="1098" width="1340" height="120" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2.5"/>
+  <text x="104" y="1142" font-size="24" font-weight="bold" fill="#1a7f4b">Aggregation &amp; reporting</text>
+  <text x="104" y="1178" font-size="19" fill="#2a5540">case matrices · headline metrics · full per-case artifact archive</text>
+
+  <!-- Footnote -->
+  <text x="80" y="1288" font-size="17" fill="#8a8f98">Counts and percentages appear in the report tables, not in this diagram.</text>
+</svg>
