@@ -1,7 +1,7 @@
 # Evaluating LLM-Based Test Maintenance on Real Commit History: Decision Correctness, Repair Success, and Test Coverage
 
 - Subject project: [colinhacks/zod](https://github.com/colinhacks/zod) / Model: `openai/gpt-oss-120b`
-- Artifact archive branch: [experiment/2026-07-week3-v2-30case-archive](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week3-v2-30case-archive)
+- Artifacts (per-case packets, prompts, model responses, logs, coverage results): [experiment/2026-07-week4](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week4) — the branch this report lives on
 
 ## Experiment question
 

@@ -11,7 +11,8 @@
 
 - Subject project: [colinhacks/zod](https://github.com/colinhacks/zod)
 - Artifact repository: [Hamjoon/zod](https://github.com/Hamjoon/zod)
-- Archive branch: [experiment/2026-07-week3-v2-30case-archive](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week3-v2-30case-archive)
+- Archive branch (canonical): [experiment/2026-07-week4](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week4) — the branch this report lives on, holding the per-case artifact packets that the case tables link to
+- Original run archive (superseded): [experiment/2026-07-week3-v2-30case-archive](https://github.com/Hamjoon/zod/tree/experiment/2026-07-week3-v2-30case-archive) — the first archive of the same run, carrying the reports as originally written in Korean. Measurements are identical and no case was re-executed; it is retained unchanged for history.
 - Case selection and verification record: [zod-30case-verification-results.md](zod-30case-verification-results.md) (verification batch, 2026-07-15 — how these 30 cases were adopted)
 - Case screening record: [zod-30case-screening.md](zod-30case-screening.md) (candidate pool and verification queues — how the candidates were mined and filtered)
 
@@ -348,6 +349,13 @@ force-push. Each case packet contains:
   post-apply diff)
 - `result.json`, `validation.log`, `signal/` (coverage results for successful repairs;
   archived mutation-testing artifacts are out of scope for this report)
+
+Two archive branches exist for this run. The canonical one is `experiment/2026-07-week4`,
+which carries the current reports and the artifact packets the case tables link to. The
+superseded `experiment/2026-07-week3-v2-30case-archive` holds the same run as first
+archived, and is left unchanged; there the packets sit under
+`experiments/zod-repair-classification-v2/`, a directory name inherited from a runner mode
+in the earlier pilot protocol and since renamed to `experiments/test-maintenance/`.
 
 ## Usage
 
