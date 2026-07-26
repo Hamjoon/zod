@@ -14,7 +14,7 @@ reverting the intended change.
 
 ## Overview
 
-<img src="./docs/images/zod_experiment_overview.png" width="85%"/>
+<img src="./docs/images/zod_experiment_overview.png" width="100%"/>
 
 ## Reports
 
