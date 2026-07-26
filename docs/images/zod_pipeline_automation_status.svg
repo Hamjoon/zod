@@ -22,9 +22,10 @@
   <text x="108" y="204" font-size="24" font-weight="bold" fill="#1f2328">Case generation</text>
   <text x="108" y="232" font-size="18" fill="#6a707a">runs once per experiment, before the batch</text>
 
-  <rect x="140" y="256" width="580" height="110" rx="14" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+  <rect x="140" y="256" width="580" height="110" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
   <text x="164" y="298" font-size="21" font-weight="bold" fill="#1f2328">Candidate mining (screening)</text>
-  <text x="164" y="330" font-size="18" fill="#57606a">one-off script outside the repo, run by hand</text>
+  <text x="164" y="322" font-size="18" fill="#57606a">scripts/mine-candidates.py</text>
+  <text x="164" y="346" font-size="18" fill="#57606a">invoked by hand, once per experiment</text>
 
   <rect x="780" y="256" width="580" height="110" rx="14" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
   <text x="804" y="298" font-size="21" font-weight="bold" fill="#1f2328">Adoption verification</text>
