@@ -45,7 +45,7 @@ screening record: [zod-30case-screening.md](zod-30case-screening.md)).
 
 ## Protocol overview
 
-<img src="./images/zod_experiment_overview.png" width="85%"/>
+<img src="./images/zod_experiment_overview.png" width="100%"/>
 
 Every case runs under the same framing: with no category hint, the model receives the
 recent-change diff, the test run output, and code snippets around the change, then
