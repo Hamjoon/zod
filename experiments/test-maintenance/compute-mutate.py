@@ -27,7 +27,7 @@ def _repo_root() -> str:
     ).strip()
 
 ROOT = Path(_repo_root())
-EXP = ROOT / "experiments/zod-repair-classification-v2"
+EXP = ROOT / "experiments/test-maintenance"
 TEST_RE = re.compile(r"\.test\.ts$|/tests/")
 
 case_id = sys.argv[1]

@@ -12,7 +12,7 @@ def _repo_root() -> str:
     ).strip()
 
 ROOT = Path(_repo_root())
-EXP = ROOT / "experiments/zod-repair-classification-v2"
+EXP = ROOT / "experiments/test-maintenance"
 
 rows = []
 for case in json.loads((EXP / "cases.json").read_text()):

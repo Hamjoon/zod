@@ -3,7 +3,7 @@
 # API key is injected from the keychain at call time only; never written anywhere.
 set -u
 ROOT=${ZOD_THESIS_ROOT:-$(git rev-parse --show-toplevel)}
-EXP=$ROOT/experiments/zod-repair-classification-v2
+EXP=$ROOT/experiments/test-maintenance
 ID=$1
 CASEDIR=$EXP/cases/$ID
 cd "$ROOT" || exit 1

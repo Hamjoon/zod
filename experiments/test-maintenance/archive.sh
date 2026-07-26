@@ -5,7 +5,7 @@
 # report, runner, signal script, cases.json, helper scripts, results summary.
 set -eu
 ROOT=${ZOD_THESIS_ROOT:-$(git rev-parse --show-toplevel)}
-EXP=$ROOT/experiments/zod-repair-classification-v2
+EXP=$ROOT/experiments/test-maintenance
 BRANCH=experiment/2026-07-week3-v2-30case-archive
 AWT=$ROOT/.worktrees/archive-week3
 
@@ -20,7 +20,7 @@ git clean -qfdx
 
 for id in $(jq -r '.[].id' "$EXP/cases.json"); do
   SRC=$EXP/cases/$id
-  DST=experiments/zod-repair-classification-v2/cases/$id
+  DST=experiments/test-maintenance/cases/$id
   mkdir -p "$DST"
   for f in fixture.patch test-output.txt gptoss-prompt.md gptoss-response.md gptoss-usage.json \
            gptoss-repair.patch applied-repair.diff result.json validation.log; do
@@ -38,14 +38,14 @@ for id in $(jq -r '.[].id' "$EXP/cases.json"); do
   git commit -qm "experiment packet: $id"
 done
 
-mkdir -p docs scripts experiments/zod-repair-classification-v2
+mkdir -p docs scripts experiments/test-maintenance
 cp "$ROOT/docs/zod-v2-30case-report.md" docs/
 cp "$ROOT/docs/zod-v2-30case-batch-instructions.md" docs/ 2>/dev/null || true
 cp "$ROOT/scripts/run-gptoss-test-maintenance.py" scripts/
 cp "$ROOT/scripts/run-zod-signal-eval.mjs" scripts/
-cp "$EXP/cases.json" experiments/zod-repair-classification-v2/
-cp "$EXP"/*.sh "$EXP"/*.py experiments/zod-repair-classification-v2/
-cp "$EXP/results-summary.json" experiments/zod-repair-classification-v2/ 2>/dev/null || true
+cp "$EXP/cases.json" experiments/test-maintenance/
+cp "$EXP"/*.sh "$EXP"/*.py experiments/test-maintenance/
+cp "$EXP/results-summary.json" experiments/test-maintenance/ 2>/dev/null || true
 git add -A
 git commit -qm "docs: week3 v2 30-case unified-protocol report and tooling"
 

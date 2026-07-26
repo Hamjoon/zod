@@ -47,7 +47,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--cases-file",
-        default=os.environ.get("GPTOSS_CASES_FILE", "experiments/zod-repair-classification-v2/cases.json"),
+        default=os.environ.get("GPTOSS_CASES_FILE", "experiments/test-maintenance/cases.json"),
         help="v2-unified: JSON file with case metadata (id, category, shas, test/prod paths).",
     )
     parser.add_argument(

@@ -3,7 +3,7 @@
 # Prints "FIXTURE: <OK|FAIL> <id> <detail>" as the last line.
 set -u
 ROOT=${ZOD_THESIS_ROOT:-$(git rev-parse --show-toplevel)}
-EXP=$ROOT/experiments/zod-repair-classification-v2
+EXP=$ROOT/experiments/test-maintenance
 SCRATCH=${V2_SCRATCH:-$ROOT/.v2-scratch}
 ID=$1
 LOG=$SCRATCH/logs/$ID
