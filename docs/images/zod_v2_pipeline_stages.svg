@@ -1,103 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1810" viewBox="0 0 1500 1810" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
-  <defs>
-    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8f98"/>
-    </marker>
-  </defs>
-  <rect width="1500" height="1810" fill="#ffffff"/>
-
-  <!-- Title -->
-  <text x="80" y="70" font-size="30" font-weight="bold" fill="#1f2328">Case-level pipeline — five stages</text>
-  <text x="80" y="106" font-size="20" fill="#6a707a">Each stage: who performs it, what it takes in, what it puts out. A case exits at the first stage it fails.</text>
-
-  <!-- ============ Stage 1 ============ -->
-  <rect x="80" y="150" width="640" height="170" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
-  <text x="104" y="192" font-size="25" font-weight="bold" fill="#1f2328">1&#160;&#160;Decision</text>
-  <text x="104" y="222" font-size="19" fill="#57606a">by: model — one LLM request per case, no retries</text>
-  <text x="104" y="256" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">IN&#160;</tspan> recent-change diff · test output · code snippets</text>
-  <text x="104" y="288" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">OUT</tspan> DECISION (+ repair diff when fixing)</text>
-
-  <!-- exit: no_change -->
-  <line x1="720" y1="235" x2="860" y2="235" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
-  <rect x="864" y="185" width="556" height="100" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
-  <text x="888" y="228" font-size="21" font-weight="bold" fill="#1a7f4b">DECISION: no_change</text>
-  <text x="888" y="260" font-size="19" fill="#2a5540">case ends here — judged against expected</text>
-
-  <line x1="400" y1="320" x2="400" y2="390" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
-  <text x="416" y="362" font-size="18" fill="#6a707a">DECISION: fix_tests / fix_production — with repair diff</text>
-
-  <!-- ============ Stage 2 ============ -->
-  <rect x="80" y="394" width="640" height="170" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
-  <text x="104" y="436" font-size="25" font-weight="bold" fill="#1f2328">2&#160;&#160;Patch apply</text>
-  <text x="104" y="466" font-size="19" fill="#57606a">by: apply-patch.py — context-match applier</text>
-  <text x="104" y="500" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">IN&#160;</tspan> repair diff · case source tree</text>
-  <text x="104" y="532" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">OUT</tspan> patched tree</text>
-
-  <!-- exit: apply failure -->
-  <line x1="720" y1="479" x2="860" y2="479" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
-  <rect x="864" y="429" width="556" height="100" rx="14" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
-  <text x="888" y="472" font-size="21" font-weight="bold" fill="#c4432b">diff cannot be applied</text>
-  <text x="888" y="504" font-size="19" fill="#6e3a30">Repair: no</text>
-
-  <line x1="400" y1="564" x2="400" y2="634" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
-  <text x="416" y="606" font-size="18" fill="#6a707a">patched tree</text>
-
-  <!-- ============ Stage 3 ============ -->
-  <rect x="80" y="638" width="640" height="170" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
-  <text x="104" y="680" font-size="25" font-weight="bold" fill="#1f2328">3&#160;&#160;Validation</text>
-  <text x="104" y="710" font-size="19" fill="#57606a">by: validate.sh — vitest run of the target tests</text>
-  <text x="104" y="744" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">IN&#160;</tspan> patched tree</text>
-  <text x="104" y="776" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">OUT</tspan> target test result: pass / fail</text>
-
-  <!-- exit: still red -->
-  <line x1="720" y1="723" x2="860" y2="723" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
-  <rect x="864" y="673" width="556" height="100" rx="14" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
-  <text x="888" y="716" font-size="21" font-weight="bold" fill="#c4432b">target tests still failing</text>
-  <text x="888" y="748" font-size="19" fill="#6e3a30">Repair: no</text>
-
-  <line x1="400" y1="808" x2="400" y2="878" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
-  <text x="416" y="850" font-size="18" fill="#6a707a">tests passing</text>
-
-  <!-- ============ Stage 4 ============ -->
-  <rect x="80" y="882" width="640" height="170" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
-  <text x="104" y="924" font-size="25" font-weight="bold" fill="#1f2328">4&#160;&#160;Preservation check</text>
-  <text x="104" y="954" font-size="19" fill="#57606a">by: git apply --reverse --check (static)</text>
-  <text x="104" y="988" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">IN&#160;</tspan> passing tree · the recent-change patch</text>
-  <text x="104" y="1020" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">OUT</tspan> recent change: preserved / reverted</text>
-
-  <!-- exit: reverted -->
-  <line x1="720" y1="967" x2="860" y2="967" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
-  <rect x="864" y="907" width="556" height="126" rx="14" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
-  <text x="888" y="948" font-size="21" font-weight="bold" fill="#c4432b">recent change reverted</text>
-  <text x="888" y="980" font-size="19" fill="#6e3a30">tests pass because the change was undone</text>
-  <text x="888" y="1010" font-size="19" fill="#6e3a30">Repair: no</text>
-
-  <line x1="400" y1="1052" x2="400" y2="1122" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
-  <text x="416" y="1094" font-size="18" fill="#6a707a">tests pass + recent change preserved</text>
-
-  <!-- ============ Repair yes box ============ -->
-  <rect x="80" y="1126" width="640" height="110" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2.5"/>
-  <text x="104" y="1172" font-size="23" font-weight="bold" fill="#1a7f4b">Repair: yes</text>
-  <text x="104" y="1206" font-size="19" fill="#2a5540">target tests pass AND recent change preserved</text>
-
-  <line x1="400" y1="1236" x2="400" y2="1306" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
-  <text x="416" y="1278" font-size="18" fill="#6a707a">successfully repaired tree</text>
-
-  <!-- ============ Stage 5 ============ -->
-  <rect x="80" y="1310" width="640" height="170" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
-  <text x="104" y="1352" font-size="25" font-weight="bold" fill="#1f2328">5&#160;&#160;Coverage signal</text>
-  <text x="104" y="1382" font-size="19" fill="#57606a">by: signal-case.sh — vitest with coverage, target tests only</text>
-  <text x="104" y="1416" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">IN&#160;</tspan> successfully repaired tree</text>
-  <text x="104" y="1448" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">OUT</tspan> line coverage of the changed production file</text>
-
-  <line x1="400" y1="1480" x2="400" y2="1550" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- ============ Final signal box ============ -->
-  <rect x="80" y="1554" width="640" height="110" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2.5"/>
-  <text x="104" y="1600" font-size="23" font-weight="bold" fill="#1a7f4b">Signal check</text>
-  <text x="104" y="1634" font-size="19" fill="#2a5540">do the repaired tests still execute the changed code?</text>
-
-  <!-- Footnote -->
-  <text x="80" y="1730" font-size="18" fill="#6a707a">Per-case counts for each outcome are reported in the case matrices and headline numbers of the report.</text>
-  <text x="80" y="1760" font-size="18" fill="#6a707a">Mutation testing is not part of the signal criterion at this stage (advisor guidance); coverage is retained.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="2050" viewBox="0 0 1460 2050" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/></marker></defs>
+<rect width="1460" height="2050" fill="#ffffff"/>
+<text x="730.0" y="54" font-size="30" font-weight="bold" fill="#1f2328" text-anchor="middle">Case-level pipeline — five stages</text>
+<rect x="150" y="82" width="1160" height="50" rx="10" fill="#fcfcfd" stroke="#d0d5db" stroke-width="1.5"/>
+<text x="166" y="112" font-size="16" font-weight="bold" fill="#6a707a" text-anchor="start">Legend</text>
+<rect x="300" y="96.0" width="30" height="22" rx="11" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+<text x="339" y="113.0" font-size="16" fill="#1f2328" text-anchor="start">start / end</text>
+<rect x="456.015625" y="96.0" width="30" height="22" rx="4" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+<text x="495.015625" y="113.0" font-size="16" fill="#1f2328" text-anchor="start">process</text>
+<polygon points="610.53125,94.0 630.53125,107.0 610.53125,120.0 590.53125,107.0" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+<text x="639.53125" y="113.0" font-size="16" fill="#1f2328" text-anchor="start">branch</text>
+<rect x="729.15625" y="96.0" width="30" height="22" rx="11" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+<text x="768.15625" y="113.0" font-size="16" fill="#1f2328" text-anchor="start">failure outcome</text>
+<rect x="928.078125" y="96.0" width="30" height="22" rx="11" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+<text x="967.078125" y="113.0" font-size="16" fill="#1f2328" text-anchor="start">success outcome</text>
+<rect x="220.0" y="150" width="560" height="86" rx="43.0" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+<text x="500" y="182" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">Case fixture</text>
+<text x="500" y="208" font-size="18" fill="#57606a" text-anchor="middle">code + a recent change + captured test output</text>
+<line x1="500" y1="234" x2="500" y2="262" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="220.0" y="262" width="560" height="140" rx="8" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+<text x="500" y="295" font-size="21" font-weight="bold" fill="#1f2328" text-anchor="middle">①  Decision — model call</text>
+<text x="500" y="322" font-size="18" fill="#57606a" text-anchor="middle">by: model — one request, one reply, no retries</text>
+<text x="500" y="349" font-size="18" fill="#57606a" text-anchor="middle">sees: recent-change diff · test output · code snippets</text>
+<text x="500" y="376" font-size="18" fill="#57606a" text-anchor="middle">replies: DECISION + repair diff (when fixing)</text>
+<line x1="500" y1="402" x2="500" y2="430" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="500,430.0 690.0,492 500,554.0 310.0,492" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+<text x="500" y="499" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">DECISION?</text>
+<line x1="690" y1="492" x2="920.0" y2="492" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="805.0" y="482" font-size="17" font-weight="bold" fill="#1f2328" text-anchor="middle">no_change</text>
+<rect x="920.0" y="449" width="470" height="86" rx="43.0" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+<text x="1155" y="481" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">case ends here</text>
+<text x="1155" y="507" font-size="18" fill="#57606a" text-anchor="middle">no diff — judged against expected</text>
+<line x1="500" y1="554" x2="500" y2="616" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="512" y="573.0" font-size="17" font-weight="bold" fill="#1f2328" text-anchor="start">fix_tests / fix_production</text>
+<text x="512" y="594.0" font-size="17" fill="#57606a" text-anchor="start">repair diff attached</text>
+<rect x="220.0" y="616" width="560" height="84" rx="8" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+<text x="500" y="649" font-size="21" font-weight="bold" fill="#1f2328" text-anchor="middle">②  Patch apply</text>
+<text x="252.71875" y="676" font-size="18" fill="#57606a">by: </text>
+<text x="285.265625" y="676" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#57606a">apply-patch.py</text>
+<text x="428.546875" y="676" font-size="18" fill="#57606a"> — apply the model diff to the code</text>
+<line x1="500" y1="700" x2="500" y2="728" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="500,728.0 685.0,790 500,852.0 315.0,790" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+<text x="500" y="797" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">diff applies?</text>
+<line x1="685" y1="790" x2="920.0" y2="790" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="802.5" y="780" font-size="17" font-weight="bold" fill="#1f2328" text-anchor="middle">cannot apply</text>
+<rect x="920.0" y="747" width="470" height="86" rx="43.0" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+<text x="1155" y="779" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">Repair: no</text>
+<text x="1155" y="805" font-size="18" fill="#57606a" text-anchor="middle">diff references code not in the tree</text>
+<line x1="500" y1="852" x2="500" y2="914" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="512" y="871.0" font-size="17" font-weight="bold" fill="#1f2328" text-anchor="start">applies</text>
+<text x="512" y="892.0" font-size="17" fill="#57606a" text-anchor="start">patched tree</text>
+<rect x="220.0" y="914" width="560" height="84" rx="8" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+<text x="500" y="947" font-size="21" font-weight="bold" fill="#1f2328" text-anchor="middle">③  Validation</text>
+<text x="293.8125" y="974" font-size="18" fill="#57606a">by: </text>
+<text x="326.359375" y="974" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#57606a">validate.sh</text>
+<text x="438.9375" y="974" font-size="18" fill="#57606a"> — run the case’s target tests</text>
+<line x1="500" y1="998" x2="500" y2="1026" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="500,1026.0 700.0,1088 500,1150.0 300.0,1088" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+<text x="500" y="1095" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">target tests pass?</text>
+<line x1="700" y1="1088" x2="920.0" y2="1088" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="810.0" y="1078" font-size="17" font-weight="bold" fill="#1f2328" text-anchor="middle">fail</text>
+<rect x="920.0" y="1045" width="470" height="86" rx="43.0" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+<text x="1155" y="1077" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">Repair: no</text>
+<text x="1155" y="1103" font-size="18" fill="#57606a" text-anchor="middle">target tests still fail</text>
+<line x1="500" y1="1150" x2="500" y2="1212" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="512" y="1169.0" font-size="17" font-weight="bold" fill="#1f2328" text-anchor="start">pass</text>
+<text x="512" y="1190.0" font-size="17" fill="#57606a" text-anchor="start">passing tree</text>
+<rect x="220.0" y="1212" width="560" height="84" rx="8" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+<text x="500" y="1245" font-size="21" font-weight="bold" fill="#1f2328" text-anchor="middle">④  Preservation check</text>
+<text x="246.3984375" y="1272" font-size="18" fill="#57606a">by: </text>
+<text x="278.9453125" y="1272" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#57606a">git apply --reverse --check</text>
+<text x="555.2734375" y="1272" font-size="18" fill="#57606a"> — static, no tests run</text>
+<line x1="500" y1="1296" x2="500" y2="1324" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="500,1324.0 715.0,1390 500,1456.0 285.0,1390" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+<text x="500" y="1385" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">recent change</text>
+<text x="500" y="1410" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">preserved?</text>
+<line x1="715" y1="1390" x2="920.0" y2="1390" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="817.5" y="1380" font-size="17" font-weight="bold" fill="#1f2328" text-anchor="middle">reverted</text>
+<rect x="920.0" y="1347" width="470" height="86" rx="43.0" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+<text x="1155" y="1379" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">Repair: no</text>
+<text x="1155" y="1405" font-size="18" fill="#57606a" text-anchor="middle">green by undoing the change</text>
+<line x1="500" y1="1456" x2="500" y2="1494" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="512" y="1473.0" font-size="17" font-weight="bold" fill="#1f2328" text-anchor="start">preserved</text>
+<rect x="180.0" y="1494" width="640" height="84" rx="42.0" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+<text x="500" y="1526" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">Repair: yes</text>
+<text x="500" y="1552" font-size="18" fill="#57606a" text-anchor="middle">target tests pass AND the recent change is preserved</text>
+<line x1="500" y1="1578" x2="500" y2="1616" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="512" y="1595.0" font-size="17" fill="#57606a" text-anchor="start">signal check — successful repairs only</text>
+<rect x="220.0" y="1616" width="560" height="84" rx="8" fill="#f6f8fa" stroke="#8a8f98" stroke-width="2"/>
+<text x="500" y="1649" font-size="21" font-weight="bold" fill="#1f2328" text-anchor="middle">⑤  Coverage signal</text>
+<text x="249.046875" y="1676" font-size="18" fill="#57606a">by: </text>
+<text x="281.59375" y="1676" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#57606a">signal-case.sh</text>
+<text x="424.875" y="1676" font-size="18" fill="#57606a"> — line coverage of the changed file</text>
+<line x1="500" y1="1700" x2="500" y2="1728" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="500,1728.0 735.0,1798 500,1868.0 265.0,1798" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+<text x="500" y="1793" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">changed production</text>
+<text x="500" y="1818" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">file executed?</text>
+<line x1="735" y1="1798" x2="920.0" y2="1798" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="827.5" y="1788" font-size="17" font-weight="bold" fill="#1f2328" text-anchor="middle">line coverage = 0</text>
+<rect x="920.0" y="1755" width="470" height="86" rx="43.0" fill="#fdf1ef" stroke="#c4432b" stroke-width="2"/>
+<text x="1155" y="1787" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">Covered: no</text>
+<text x="1155" y="1813" font-size="18" fill="#57606a" text-anchor="middle">tests no longer reach the changed file</text>
+<line x1="500" y1="1868" x2="500" y2="1904" stroke="#57606a" stroke-width="2" marker-end="url(#ah)"/>
+<text x="512" y="1884.0" font-size="17" font-weight="bold" fill="#1f2328" text-anchor="start">line coverage &gt; 0</text>
+<rect x="220.0" y="1904" width="560" height="86" rx="43.0" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2"/>
+<text x="500" y="1936" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="middle">Covered: yes</text>
+<text x="500" y="1962" font-size="18" fill="#57606a" text-anchor="middle">tests still execute the changed file</text>
 </svg>
