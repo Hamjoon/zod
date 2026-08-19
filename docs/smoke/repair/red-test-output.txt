@@ -1,0 +1,11 @@
+AssertionError: expected 0.4999999999999929 to be close to 0.05, received difference is 0.4499999999999929, but expected 0.005
+    at /root/smoke/wt/experiments/generated-tests/util-main.test.ts:55:15
+    at file:///root/smoke/wt/node_modules/.pnpm/@vitest+runner@4.0.10/node_modules/@vitest/runner/dist/index.js:157:11
+    at file:///root/smoke/wt/node_modules/.pnpm/@vitest+runner@4.0.10/node_modules/@vitest/runner/dist/index.js:753:26
+    at file:///root/smoke/wt/node_modules/.pnpm/@vitest+runner@4.0.10/node_modules/@vitest/runner/dist/index.js:1636:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///root/smoke/wt/node_modules/.pnpm/@vitest+runner@4.0.10/node_modules/@vitest/runner/dist/index.js:1602:10)
+    at runTest (file:///root/smoke/wt/node_modules/.pnpm/@vitest+runner@4.0.10/node_modules/@vitest/runner/dist/index.js:1309:12)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at runSuite (file:///root/smoke/wt/node_modules/.pnpm/@vitest+runner@4.0.10/node_modules/@vitest/runner/dist/index.js:1468:8)
+    at runFiles (file:///root/smoke/wt/node_modules/.pnpm/@vitest+runner@4.0.10/node_modules/@vitest/runner/dist/index.js:1526:3)
