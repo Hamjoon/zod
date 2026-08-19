@@ -3,8 +3,8 @@
 LLM test 생성 → 생존 추적 → stale 판정 → repair의 전체 cycle이 실제 저장소에서
 끝까지 도는지 확인한 smoke test의 결과물 아카이브 브랜치입니다 (히스토리 없는 orphan).
 
-- 실험 대상: [colinhacks/zod](https://github.com/colinhacks/zod), t = v4.0.5 (`45afab0f`, 2025-07-10)
-- 관찰 구간: t 이후 `packages/zod`를 건드린 316커밋 (~2026-08-17)
+- 실험 대상: [colinhacks/zod](https://github.com/colinhacks/zod), t = v4.0.5 (`45afab0f`, 2025-07-11)
+- 관찰 구간: t 이후 `packages/zod`를 건드린 316커밋 (~2026-08-18)
 - 대상 파일: `packages/zod/src/v4/core/util.ts` / 모델: `openai/gpt-oss-120b` (temperature 0, 1회 호출)
 
 **먼저 볼 문서 → [`docs/smoke/zod-smoke-report.md`](docs/smoke/zod-smoke-report.md)** (요약 보고서)
