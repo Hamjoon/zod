@@ -1,4 +1,4 @@
-# Zod LLM test 생성·생존·repair — smoke test 아카이브
+# Zod LLM test generation·survival·repair - smoke test
 
 LLM test 생성 → 생존 추적 → stale 판정 → repair의 전체 cycle이 실제 저장소에서
 끝까지 도는지 확인한 smoke test의 결과물 아카이브 브랜치입니다 (히스토리 없는 orphan).
