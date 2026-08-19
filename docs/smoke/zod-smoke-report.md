@@ -9,8 +9,8 @@ repair, run end to end on a real repository, reaching the repair step at least o
 ## Setup
 
 - Repository: `colinhacks/zod`, tested from source (no build step in the loop).
-- Anchor **t = v4.0.5** (`45afab0f`, 2025-07-10); all 2,757 upstream tests passing at t.
-- Observation window: 316 commits touching `packages/zod`, t to `3c9ca1d9` (2026-08-17).
+- Anchor **t = v4.0.5** (`45afab0f`, 2025-07-11); all 2,757 upstream tests passing at t.
+- Observation window: 316 commits touching `packages/zod`, t to `3c9ca1d9` (2026-08-18).
 - Target file: `packages/zod/src/v4/core/util.ts` (775 LOC at t; 38 window commits; multiple
   verified function-level behavior changes). Selection rationale: separate document.
 - Generator/repairer: `openai/gpt-oss-120b` (temperature 0, single shot, no retries). The
