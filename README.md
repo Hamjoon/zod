@@ -7,14 +7,14 @@ LLM test 생성 → 생존 추적 → stale 판정 → repair의 전체 cycle이
 - 관찰 구간: t 이후 `packages/zod`를 건드린 316커밋 (~2026-08-18)
 - 대상 파일: `packages/zod/src/v4/core/util.ts` / 모델: `openai/gpt-oss-120b` (temperature 0, 1회 호출)
 
-**먼저 볼 문서 → [`docs/smoke/zod-smoke-report.md`](docs/smoke/zod-smoke-report.md)** (요약 보고서)
+요약 보고서: [`docs/smoke/zod-smoke-report.md`](docs/smoke/zod-smoke-report.md)
 
 ## 디렉토리 구조
 
 ```
 docs/smoke/                        실험 기록·보고서
 ├── zod-smoke-report.md            ★ 요약 보고서
-├── zod-smoke-report-full.md       상세 보고서 (정본 - 요약본은 이것의 발췌)
+├── zod-smoke-report-full.md       상세 보고서
 ├── results-table.md               결과 표 (case 단위 18행)
 ├── functions-vs-changes.md        모델이 고른 18개 함수 × 관찰 구간 내 변경 여부 대조표
 ├── timing-summary.md              커밋당 실행 시간 요약 (checkout / install / vitest)
