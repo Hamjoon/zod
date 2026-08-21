@@ -9,7 +9,7 @@ smoke test에서 검증한 cycle(LLM test 생성 → 생존 추적 → stale 판
 - 대상 파일: 7개, t 시점 합계 10,931 LOC / 모델: `openai/gpt-oss-120b` (temperature 0, 파일당 1회 호출)
 - 선행 smoke test: [`experiment/2026-08-week3-smoke`](https://github.com/Hamjoon/zod/tree/experiment/2026-08-week3-smoke)
 
-**먼저 볼 문서 → [`docs/zod-2026-08-week2-3-main-report.md`](docs/zod-2026-08-week2-3-main-report.md)** (요약 보고서)
+요약 보고서: [`docs/zod-2026-08-week2-3-main-report.md`](docs/zod-2026-08-week2-3-main-report.md)
 
 ## 디렉토리 구조
 
@@ -47,9 +47,6 @@ experiments/                       실험 하네스·test (t로 checkout한 zod 
 ├── generated-tests/               모델이 생성한 test 원본 7파일 (105 case, t 기준·수리 전)
 └── repair/                        repair 응답을 반영한 case 2건 (둘 다 검증 실패 - 기록용)
 ```
-
-커밋별 전체 생존 로그(survival-log.jsonl)와 실행 스크립트는 브랜치에 포함하지
-않았습니다. 전체본은 별도 아카이브에 있습니다.
 
 ## 결과 한 줄 요약
 
