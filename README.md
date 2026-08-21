@@ -16,12 +16,12 @@ smoke test에서 검증한 cycle(LLM test 생성 → 생존 추적 → stale 판
 ```
 docs/                                         실험 기록·보고서
 ├── zod-2026-08-week2-3-main-report.md        ★ 요약 보고서
-├── zod-2026-08-week2-3-main-report-full.md   상세 보고서 (정본)
+├── zod-2026-08-week2-3-main-report-full.md   상세 보고서
 ├── t-gate-drops.md                           t 탈락 19건 건별 기록 (원인 5분류)
 ├── phase6-judgment-brief.md                  깨짐 3건의 stale / production 버그 판정 근거
 ├── llm/                                      test 생성 호출 증거 (파일별 디렉토리 7개)
 │   ├── manifest.json                         생성 실행 메타 (모델·t·파일 목록)
-│   └── 01-core-util/ … 07-mini-schemas/
+│   └── 01-core-util ... 07-mini-schemas/
 │       ├── llm-prompt.md                     프롬프트 전문 (대상 파일 소스 전체 포함)
 │       ├── llm-request.json                  API 요청 본문
 │       ├── llm-response.md                   모델 응답 원문 (code fence 그대로)
@@ -29,7 +29,7 @@ docs/                                         실험 기록·보고서
 │       └── llm-usage.json / llm-run.json     토큰·비용 / 실행 메타
 ├── repair/                                   repair 호출 증거 (stale 2건)
 │   ├── repair-manifest.json
-│   └── repair-01-mini-keyof/ · repair-02-util-floatsaferemainder/
+│   └── repair-01-mini-keyof, repair-02-util-floatsaferemainder/
 │       ├── repair-prompt.md                  repair 프롬프트 전문 (깨진 case + diff + 실행 출력)
 │       ├── repair-response.md                모델의 repair 응답 원문
 │       ├── repaired-case.ts                  응답에서 추출한 수리본 case
