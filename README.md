@@ -16,7 +16,7 @@ smoke test에서 검증한 cycle(LLM test 생성 → 생존 추적 → stale 판
 ```
 docs/                              실험 기록·보고서
 ├── zod-2026-08-week2-3-main-report.md        ★ 요약 보고서
-├── zod-2026-08-week2-3-main-report-full.md   상세 보고서 (정본 - 요약본은 이것의 발췌)
+├── zod-2026-08-week2-3-main-report-full.md   상세 보고서 (정본)
 ├── t-gate-drops.md                t 탈락 19건 건별 기록 (원인 5분류)
 ├── phase6-judgment-brief.md       깨짐 3건의 stale / production 버그 판정 근거
 ├── llm/                           test 생성 호출 증거 (파일별 디렉토리 7개)
