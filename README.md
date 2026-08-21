@@ -1,7 +1,7 @@
 # Zod LLM test generation·survival·repair - main experiment (2026-08 2~3주차)
 
 smoke test에서 검증한 cycle(LLM test 생성 → 생존 추적 → stale 판정 → repair)을
-7개 파일·105 case 규모로 확힥해 실행한 본 실험의 결과물 아카이브 브랜치입니다
+7개 파일·105 case 규모로 확장해 실행한 본 실험의 결과물 아카이브 브랜치입니다
 (히스토리 없는 orphan).
 
 - 실험 대상: [colinhacks/zod](https://github.com/colinhacks/zod), t = v4.0.5 (`45afab0f`, 2025-07-11)
@@ -35,8 +35,8 @@ docs/                              실험 기록·보고서
 │       ├── repaired-case.ts       응답에서 추출한 수리본 case
 │       └── repair-request/raw/usage/run.json + meta.json
 └── results/                       실행 결과 원본
-    ├── window-commits.txt          관찰 구간 316커밋 목록 (오래�A�� 순)
-    ├── t-gate-result.json          t gate 실행 raw (vitest JSON, 105 case)
+    ├── window-commits.txt         관찰 구간 316커밋 목록 (오래된 순)
+    ├── t-gate-result.json         t gate 실행 raw (vitest JSON, 105 case)
     ├── t-gate-drops.json          탈락 19건 구조화 기록
     ├── survival-summary.json      생존 추적 요약 (깨짐 3 · 생존 83)
     ├── head-check.json            HEAD(3c9ca1d9)에서 105 case 재실행 raw
@@ -49,7 +49,7 @@ experiments/                       실험 하네스·test (t로 checkout한 zod 
 ```
 
 커밋별 전체 생존 로그(survival-log.jsonl)와 실행 스크립트는 브랜치에 포함하지
-않았습니다. 전체본은 별�'� 아카이브에 있습니다.
+않았습니다. 전체본은 별도 아카이브에 있습니다.
 
 ## 결과 한 줄 요약
 
@@ -57,4 +57,4 @@ experiments/                       실험 하네스·test (t로 checkout한 zod 
 316커밋 관찰에서 3 case가 깨졌고(생존 83개, 96.5%), 판정은 stale 2건 ·
 production 버그 1건(기록만, repair 대상 아님). stale 2건에 각 1회 repair를
 시도했으나 둘 다 실패했습니다 (0/2 - production 미수정·assertion 수 보존,
-m��과만 실패).
+통과만 실패).
