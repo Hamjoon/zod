@@ -1,0 +1,7 @@
+{
+  "id": "repair-01-mini-keyof",
+  "test_file": "mini-schemas-main.test.ts",
+  "target": "packages/zod/src/v4/mini/schemas.ts",
+  "commit": "d589186c20c3dc112f5a5fda23cccd4d1f74420e",
+  "test_name": "object schema shape and keyof utility"
+}

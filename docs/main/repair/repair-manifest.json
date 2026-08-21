@@ -1,0 +1,20 @@
+[
+  {
+    "id": "repair-01-mini-keyof",
+    "status": "ok",
+    "finish_reason": "stop",
+    "prompt_tokens": 716,
+    "completion_tokens": 598,
+    "cost": 0.000128152,
+    "duration_seconds": 13
+  },
+  {
+    "id": "repair-02-util-floatsaferemainder",
+    "status": "ok",
+    "finish_reason": "stop",
+    "prompt_tokens": 905,
+    "completion_tokens": 1188,
+    "cost": 0.00057985,
+    "duration_seconds": 34
+  }
+]

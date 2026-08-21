@@ -1,0 +1,63 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0,
+  "t_commit": "45afab0f846dffd591362b6f770017507eb185b5",
+  "t_label": "v4.0.5",
+  "runs": [
+    {
+      "id": "01-core-util",
+      "path": "packages/zod/src/v4/core/util.ts",
+      "ns": "util",
+      "test_file": "util-main.test.ts",
+      "status": "skipped"
+    },
+    {
+      "id": "02-core-schemas",
+      "path": "packages/zod/src/v4/core/schemas.ts",
+      "ns": "schemas",
+      "test_file": "core-schemas-main.test.ts",
+      "status": "skipped"
+    },
+    {
+      "id": "03-classic-schemas",
+      "path": "packages/zod/src/v4/classic/schemas.ts",
+      "ns": "schemas",
+      "test_file": "classic-schemas-main.test.ts",
+      "status": "skipped"
+    },
+    {
+      "id": "04-core-checks",
+      "path": "packages/zod/src/v4/core/checks.ts",
+      "ns": "checks",
+      "test_file": "checks-main.test.ts",
+      "status": "skipped"
+    },
+    {
+      "id": "05-core-to-json-schema",
+      "path": "packages/zod/src/v4/core/to-json-schema.ts",
+      "ns": "toJSONSchema",
+      "test_file": "to-json-schema-main.test.ts",
+      "status": "skipped"
+    },
+    {
+      "id": "06-core-errors",
+      "path": "packages/zod/src/v4/core/errors.ts",
+      "ns": "errors",
+      "test_file": "errors-main.test.ts",
+      "status": "skipped"
+    },
+    {
+      "id": "07-mini-schemas",
+      "path": "packages/zod/src/v4/mini/schemas.ts",
+      "ns": "schemas",
+      "test_file": "mini-schemas-main.test.ts",
+      "status": "ok",
+      "finish_reason": "stop",
+      "prompt_tokens": 14769,
+      "completion_tokens": 2447,
+      "cost": 0.00368355,
+      "duration_seconds": 17,
+      "test_blocks": 10
+    }
+  ]
+}

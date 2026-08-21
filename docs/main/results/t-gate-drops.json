@@ -1,0 +1,135 @@
+[
+  {
+    "file": "checks-main.test.ts",
+    "title": "$ZodCheckLowerCase \u2013 fails on uppercase",
+    "full": "String format checks $ZodCheckLowerCase \u2013 fails on uppercase",
+    "error": "AssertionError: expected 'invalid_format' to be 'invalid_type' // Object.is equality",
+    "loc": "at /home/claude/zod/experiments/generated-tests/checks-main.test.ts:223:36"
+  },
+  {
+    "file": "classic-schemas-main.test.ts",
+    "title": "pipe transformation from string to number",
+    "full": "Zod core schema behaviours pipe transformation from string to number",
+    "error": "AssertionError: expected true to be false // Object.is equality",
+    "loc": "at /home/claude/zod/experiments/generated-tests/classic-schemas-main.test.ts:97:40"
+  },
+  {
+    "file": "errors-main.test.ts",
+    "title": "produces formatted object with _errors",
+    "full": "formatError produces formatted object with _errors",
+    "error": "AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string",
+    "loc": "at /home/claude/zod/experiments/generated-tests/errors-main.test.ts:111:39"
+  },
+  {
+    "file": "errors-main.test.ts",
+    "title": "sorts by path length and formats lines",
+    "full": "prettifyError sorts by path length and formats lines",
+    "error": "AssertionError: expected '\u2716 Second' to be '  \u2192 at b' // Object.is equality",
+    "loc": "at /home/claude/zod/experiments/generated-tests/errors-main.test.ts:203:22"
+  },
+  {
+    "file": "mini-schemas-main.test.ts",
+    "title": "optional, nullable and nullish schemas compose correctly",
+    "full": "ZodMini schema constructors and core behaviours optional, nullable and nullish schemas compose correctly",
+    "error": "AssertionError: expected ZodMiniString{ _zod: { \u2026(9) }, \u2026(10) } to be { traits: Set{ \u2026(4) }, \u2026(8) } // Object.is equality",
+    "loc": "at /home/claude/zod/experiments/generated-tests/mini-schemas-main.test.ts:25:36"
+  },
+  {
+    "file": "mini-schemas-main.test.ts",
+    "title": "array and tuple schemas retain element definitions",
+    "full": "ZodMini schema constructors and core behaviours array and tuple schemas retain element definitions",
+    "error": "AssertionError: expected ZodMiniString{ _zod: { \u2026(9) }, \u2026(10) } to be { traits: Set{ \u2026(4) }, \u2026(8) } // Object.is equality",
+    "loc": "at /home/claude/zod/experiments/generated-tests/mini-schemas-main.test.ts:64:34"
+  },
+  {
+    "file": "mini-schemas-main.test.ts",
+    "title": "pipe and transform schemas store functions",
+    "full": "ZodMini schema constructors and core behaviours pipe and transform schemas store functions",
+    "error": "AssertionError: expected ZodMiniString{ _zod: { \u2026(9) }, \u2026(10) } to be { traits: Set{ \u2026(4) }, \u2026(8) } // Object.is equality",
+    "loc": "at /home/claude/zod/experiments/generated-tests/mini-schemas-main.test.ts:103:30"
+  },
+  {
+    "file": "mini-schemas-main.test.ts",
+    "title": "readonly and template literal schemas",
+    "full": "ZodMini schema constructors and core behaviours readonly and template literal schemas",
+    "error": "AssertionError: expected ZodMiniString{ _zod: { \u2026(9) }, \u2026(10) } to be { traits: Set{ \u2026(4) }, \u2026(8) } // Object.is equality",
+    "loc": "at /home/claude/zod/experiments/generated-tests/mini-schemas-main.test.ts:114:35"
+  },
+  {
+    "file": "mini-schemas-main.test.ts",
+    "title": "lazy and json schemas resolve correctly",
+    "full": "ZodMini schema constructors and core behaviours lazy and json schemas resolve correctly",
+    "error": "TypeError: __vite_ssr_import_1__._lazy is not a function",
+    "loc": "at /home/claude/zod/experiments/generated-tests/mini-schemas-main.test.ts:122:26"
+  },
+  {
+    "file": "to-json-schema-main.test.ts",
+    "title": "string schema with min, max and format",
+    "full": "string schema with min, max and format",
+    "error": "TypeError: Cannot read properties of undefined (reading 'string')",
+    "loc": "at /home/claude/zod/experiments/generated-tests/to-json-schema-main.test.ts:6:20"
+  },
+  {
+    "file": "to-json-schema-main.test.ts",
+    "title": "number schema with constraints and integer type",
+    "full": "number schema with constraints and integer type",
+    "error": "TypeError: Cannot read properties of undefined (reading 'number')",
+    "loc": "at /home/claude/zod/experiments/generated-tests/to-json-schema-main.test.ts:17:20"
+  },
+  {
+    "file": "to-json-schema-main.test.ts",
+    "title": "object schema required vs optional properties",
+    "full": "object schema required vs optional properties",
+    "error": "TypeError: Cannot read properties of undefined (reading 'object')",
+    "loc": "at /home/claude/zod/experiments/generated-tests/to-json-schema-main.test.ts:28:20"
+  },
+  {
+    "file": "to-json-schema-main.test.ts",
+    "title": "union schema produces anyOf",
+    "full": "union schema produces anyOf",
+    "error": "TypeError: Cannot read properties of undefined (reading 'union')",
+    "loc": "at /home/claude/zod/experiments/generated-tests/to-json-schema-main.test.ts:45:20"
+  },
+  {
+    "file": "to-json-schema-main.test.ts",
+    "title": "nullable schema creates anyOf with null",
+    "full": "nullable schema creates anyOf with null",
+    "error": "TypeError: Cannot read properties of undefined (reading 'string')",
+    "loc": "at /home/claude/zod/experiments/generated-tests/to-json-schema-main.test.ts:54:20"
+  },
+  {
+    "file": "to-json-schema-main.test.ts",
+    "title": "default schema adds default value",
+    "full": "default schema adds default value",
+    "error": "TypeError: Cannot read properties of undefined (reading 'string')",
+    "loc": "at /home/claude/zod/experiments/generated-tests/to-json-schema-main.test.ts:65:20"
+  },
+  {
+    "file": "to-json-schema-main.test.ts",
+    "title": "bigint schema throws when unrepresentable",
+    "full": "bigint schema throws when unrepresentable",
+    "error": "TypeError: Cannot read properties of undefined (reading 'bigint')",
+    "loc": "at /home/claude/zod/experiments/generated-tests/to-json-schema-main.test.ts:71:20"
+  },
+  {
+    "file": "to-json-schema-main.test.ts",
+    "title": "recursive (lazy) schema is emitted with $defs and $ref",
+    "full": "recursive (lazy) schema is emitted with $defs and $ref",
+    "error": "TypeError: Cannot read properties of undefined (reading 'object')",
+    "loc": "at /home/claude/zod/experiments/generated-tests/to-json-schema-main.test.ts:79:23"
+  },
+  {
+    "file": "util-main.test.ts",
+    "title": "getEnumValues extracts string values",
+    "full": "utility functions getEnumValues extracts string values",
+    "error": "AssertionError: expected [ 'zero', 'one', 'a', 'b' ] to deeply equal [ 'a', 'b' ]",
+    "loc": "at /home/claude/zod/experiments/generated-tests/util-main.test.ts:8:20"
+  },
+  {
+    "file": "util-main.test.ts",
+    "title": "defineLazy defines property lazily and allows overwrite",
+    "full": "utility functions defineLazy defines property lazily and allows overwrite",
+    "error": "TypeError: Cannot assign to read only property 'lazy' of object '#<Object>'",
+    "loc": "at /home/claude/zod/experiments/generated-tests/util-main.test.ts:75:9"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "start_utc": "2026-08-21T08:15:26Z",
+  "duration_seconds": 32,
+  "http_code": "200",
+  "curl_exit": 0,
+  "curl_stderr": "",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "request_file": "llm-request.json",
+  "model_reported": "openai/gpt-oss-120b",
+  "finish_reason": "stop",
+  "response_id": "gen-1787300126-kuZvPVImuxFggQA6o0Jm"
+}

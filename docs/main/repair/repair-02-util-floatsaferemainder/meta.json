@@ -1,0 +1,7 @@
+{
+  "id": "repair-02-util-floatsaferemainder",
+  "test_file": "util-main.test.ts",
+  "target": "packages/zod/src/v4/core/util.ts",
+  "commit": "5b7ed214526cb5a7cc508aec236603ff79ae9579",
+  "test_name": "floatSafeRemainder works with decimals"
+}
