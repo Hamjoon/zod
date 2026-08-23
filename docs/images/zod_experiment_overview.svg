@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1590" viewBox="0 0 1500 1590" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8f98"/>
+    </marker>
+    <marker id="arrp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8250df"/>
+    </marker>
+    <marker id="arrd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <rect width="1500" height="1590" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="80" y="66" font-size="30" font-weight="bold" fill="#1f2328">Experiment overview</text>
+
+  <!-- ===== Block 1: Target selection ===== -->
+  <rect x="80" y="104" width="1340" height="110" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="148" font-size="24" font-weight="bold" fill="#1f2328">Target selection — anchor t = v4.0.5</text>
+  <text x="104" y="184" font-size="19" fill="#57606a">7 zod source files (10,931 LOC at t) — chosen by size ranking, plus a designated reserve</text>
+
+  <line x1="750" y1="214" x2="750" y2="258" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="766" y="243" font-size="18" fill="#6a707a">one full file per call</text>
+
+  <!-- ===== Block 2: Test generation (LLM) ===== -->
+  <rect x="80" y="262" width="1340" height="140" rx="14" fill="#f7f2fd" stroke="#8250df" stroke-width="3.5"/>
+  <rect x="1142" y="286" width="244" height="46" rx="23" fill="#8250df"/>
+  <text x="1264" y="317" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">LLM CALL</text>
+  <text x="104" y="306" font-size="24" font-weight="bold" fill="#5b21b6">Test generation — gpt-oss-120b</text>
+  <text x="104" y="340" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">prompt&#160;&#160;</tspan> one full file source · the model chooses what to test &#160;(no case count given or suggested)</text>
+  <text x="104" y="374" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">response</tspan> a file of generated test cases &#160;(temperature 0, single shot, no retries)</text>
+
+  <line x1="750" y1="402" x2="750" y2="446" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="766" y="431" font-size="18" fill="#6a707a">105 generated cases (target: 100–200)</text>
+
+  <!-- ===== Block 3: Pass-at-t gate + drop exit ===== -->
+  <rect x="80" y="450" width="920" height="130" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="494" font-size="24" font-weight="bold" fill="#1f2328">Pass-at-t gate — scripts only, no LLM</text>
+  <text x="104" y="528" font-size="19" fill="#57606a">every generated case runs at the anchor commit t</text>
+  <text x="104" y="558" font-size="17" fill="#1f2328">failing cases are dropped unmodified — every later breakage is attributable to code evolution</text>
+
+  <line x1="1000" y1="515" x2="1090" y2="515" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="1045" y="500" font-size="17" fill="#6a707a" text-anchor="middle">fails at t</text>
+  <rect x="1094" y="465" width="326" height="100" rx="12" fill="#ffffff" stroke="#8a8f98" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="1116" y="507" font-size="20" font-weight="bold" fill="#57606a">Dropped — 19 cases</text>
+  <text x="1116" y="537" font-size="17" fill="#6a707a">recorded, left unmodified</text>
+
+  <line x1="750" y1="580" x2="750" y2="624" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="766" y="609" font-size="18" fill="#6a707a">86 gated cases (hold at t)</text>
+
+  <!-- ===== Block 4: Survival tracking with mini timeline ===== -->
+  <rect x="80" y="628" width="1340" height="240" rx="14" fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="672" font-size="24" font-weight="bold" fill="#1f2328">Survival tracking — 316 commits, oldest first</text>
+  <text x="104" y="704" font-size="19" fill="#57606a">every gated case runs at each window commit — t (2025-07) to HEAD (2026-08), 13 months</text>
+
+  <!-- case line 1: breaks -->
+  <line x1="180" y1="746" x2="632" y2="746" stroke="#57606a" stroke-width="2.5"/>
+  <line x1="632" y1="738" x2="648" y2="754" stroke="#cf222e" stroke-width="3.5"/>
+  <line x1="648" y1="738" x2="632" y2="754" stroke="#cf222e" stroke-width="3.5"/>
+  <!-- case line 2: censored -->
+  <line x1="180" y1="778" x2="1258" y2="778" stroke="#57606a" stroke-width="2.5" marker-end="url(#arrd)"/>
+  <!-- axis -->
+  <line x1="170" y1="812" x2="1292" y2="812" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <line x1="180" y1="804" x2="180" y2="820" stroke="#8a8f98" stroke-width="2"/>
+  <line x1="1258" y1="804" x2="1258" y2="820" stroke="#8a8f98" stroke-width="2"/>
+  <text x="180" y="844" font-size="17" fill="#6a707a" text-anchor="middle">t = v4.0.5</text>
+  <text x="1258" y="844" font-size="17" fill="#6a707a" text-anchor="middle">HEAD</text>
+  <line x1="374" y1="832" x2="386" y2="844" stroke="#cf222e" stroke-width="3"/>
+  <line x1="386" y1="832" x2="374" y2="844" stroke="#cf222e" stroke-width="3"/>
+  <text x="396" y="844" font-size="17" fill="#8a8f98">first failure — 3 of 86 cases &#160;&#160;&#160;&#160;⟶&#160; censored — 83 of 86, still passing at window end</text>
+
+  <line x1="750" y1="868" x2="750" y2="912" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="766" y="897" font-size="18" fill="#6a707a">3 first failures</text>
+
+  <!-- ===== Block 5: Breakage classification ===== -->
+  <rect x="80" y="916" width="1340" height="110" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="104" y="960" font-size="24" font-weight="bold" fill="#1f2328">Breakage classification — stale test vs production bug</text>
+  <text x="104" y="994" font-size="19" fill="#57606a">each first failure is examined at its breaking commit and classified</text>
+
+  <!-- branch arrows -->
+  <line x1="510" y1="1026" x2="510" y2="1070" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="526" y="1055" font-size="18" fill="#6a707a">stale test — 2</text>
+  <line x1="1200" y1="1026" x2="1200" y2="1070" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="1216" y="1055" font-size="18" fill="#6a707a">production bug — 1</text>
+
+  <!-- ===== Branch left: One-shot repair (LLM) ===== -->
+  <rect x="80" y="1074" width="860" height="210" rx="14" fill="#f7f2fd" stroke="#8250df" stroke-width="3.5"/>
+  <rect x="670" y="1098" width="244" height="46" rx="23" fill="#8250df"/>
+  <text x="792" y="1129" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">LLM CALL</text>
+  <text x="104" y="1118" font-size="24" font-weight="bold" fill="#5b21b6">One-shot repair — gpt-oss-120b</text>
+  <text x="104" y="1152" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#0969da">prompt&#160;&#160;</tspan> failing case · production diff · failure output</text>
+  <text x="104" y="1186" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#8250df">response</tspan> repaired test (intent preserved) — validated at the breaking commit</text>
+  <text x="104" y="1220" font-size="19" fill="#1f2328"><tspan font-weight="bold" fill="#cf222e">result&#160;&#160;&#160;&#160;</tspan> 0 of 2 repaired tests pass (both responses well-formed)</text>
+  <text x="104" y="1252" font-size="17" fill="#6a707a">one request, no retries — with generation above, the only two LLM calls in the experiment</text>
+
+  <!-- ===== Branch right: recorded, not repaired ===== -->
+  <rect x="980" y="1074" width="440" height="210" rx="14" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="1004" y="1128" font-size="22" font-weight="bold" fill="#1f2328">Recorded, not repaired</text>
+  <text x="1004" y="1162" font-size="18" fill="#57606a">a real library bug —</text>
+  <text x="1004" y="1190" font-size="18" fill="#57606a">the test is right, production is wrong</text>
+  <text x="1004" y="1224" font-size="17" fill="#8a8f98">broken for 3 commits, fixed upstream</text>
+
+  <!-- merge connectors -->
+  <path d="M 510 1284 L 510 1308 L 1200 1308 L 1200 1284" fill="none" stroke="#8a8f98" stroke-width="2"/>
+  <line x1="750" y1="1308" x2="750" y2="1348" stroke="#8a8f98" stroke-width="2" marker-end="url(#arr3)"/>
+  <text x="766" y="1337" font-size="18" fill="#6a707a">once, after all cases</text>
+
+  <!-- ===== Reporting ===== -->
+  <rect x="80" y="1352" width="1340" height="120" rx="14" fill="#eefaf3" stroke="#1a7f4b" stroke-width="2.5"/>
+  <text x="104" y="1396" font-size="24" font-weight="bold" fill="#1a7f4b">Aggregation &amp; reporting</text>
+  <text x="104" y="1432" font-size="19" fill="#2a5540">survival matrix · breakage &amp; repair record · full per-case artifact archive</text>
+
+  <!-- Footnote -->
+  <text x="80" y="1542" font-size="17" fill="#8a8f98">Counts are from this run (2026-08 weeks 2–3); percentages and per-file breakdowns are in the report tables.</text>
+</svg>
