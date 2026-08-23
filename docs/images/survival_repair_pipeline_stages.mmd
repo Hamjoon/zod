@@ -1,0 +1,76 @@
+---
+config:
+  layout: elk
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif"
+    fontSize: 16px
+    primaryTextColor: '#1f2328'
+    lineColor: '#57606a'
+    edgeLabelBackground: '#ffffff'
+  flowchart:
+    nodeSpacing: 40
+    rankSpacing: 45
+    wrappingWidth: 560
+title: Experiment pipeline — five stages
+id: f025e699-3b7f-4593-8347-39ce88c03a98
+---
+flowchart TB
+ subgraph LEGEND["Legend"]
+    direction LR
+        L1(["start / end"])
+        L2["process"]
+        L3{"branch"}
+        L4(["failure outcome"])
+        L5(["success outcome"])
+        L6["model call"]
+  end
+    L1 ~~~ L2
+    L2 ~~~ L3
+    L3 ~~~ L4
+    L4 ~~~ L5
+    L5 ~~~ L6
+    LEGEND ~~~ S(["<b>Anchor snapshot</b><br>source tree @ anchor commit t"])
+    S -- per target file --> G["<b>① Test generation — model call</b><div style='text-align:left'>in: one full source file — nothing else&nbsp;&nbsp;(no tests, no hints)<br>out: one test file of generated cases</div>"]
+    G -- generated cases --> P2["<b>② Pass-at-t gate — scripts</b><div style='text-align:left'>in: generated cases · source @ t<br>out: pass / fail at t</div>"]
+    P2 --> D2{"holds at t?"}
+    D2 -- yes — gated cases --> P3["<b>③ Survival tracking — scripts</b><div style='text-align:left'>in: gated cases · commit window t → HEAD, oldest first<br>out: first failing commit, if any</div>"]
+    D2 -- no --> F2(["<b>Dropped</b><br>recorded, left unmodified"])
+    P3 --> D3{"fails in the window?"}
+    D3 -- yes — first failure --> P4["<b>④ Breakage classification</b><div style='text-align:left'>in: broken case · its breaking commit<br>out: stale test / production bug</div>"]
+    D3 -- no --> S3(["<b>Censored</b><br>still passing at HEAD"])
+    P4 --> D4{"stale or bug?"}
+    D4 -- stale test --> P5["<b>⑤ One-shot repair — model call</b><div style='text-align:left'>in: failing case · production diff · failure output<br>out: repaired test — one request, no retries</div>"]
+    D4 -- production bug --> E4(["<b>Recorded, not repaired</b><br>the test is right — case ends here"])
+    P5 --> D5{"passes at the<br>breaking commit?"}
+    D5 -- yes --> S5(["<b>Repair: yes</b>"])
+    D5 -- no --> F5(["<b>Repair: no</b>"])
+
+     L1:::startend
+     L2:::process
+     L3:::branch
+     L4:::fail
+     L5:::success
+     L6:::llm
+     S:::startend
+     G:::llm
+     P2:::process
+     D2:::branch
+     P3:::process
+     F2:::fail
+     D3:::branch
+     P4:::process
+     S3:::success
+     D4:::branch
+     P5:::llm
+     E4:::startend
+     D5:::branch
+     S5:::success
+     F5:::fail
+    classDef startend fill:#f6f8fa,stroke:#57606a,stroke-width:2px,color:#1f2328
+    classDef process fill:#f6f8fa,stroke:#8a8f98,stroke-width:2px,color:#1f2328
+    classDef branch fill:#fff8e6,stroke:#d4a72c,stroke-width:2px,color:#1f2328
+    classDef fail fill:#ffebe9,stroke:#cf222e,stroke-width:2px,color:#1f2328
+    classDef success fill:#eefaf3,stroke:#1a7f4b,stroke-width:2px,color:#1f2328
+    classDef llm fill:#f7f2fd,stroke:#8250df,stroke-width:3px,color:#5b21b6
+    style LEGEND fill:#ffffff,stroke:#d0d7de,stroke-width:1.5px
