@@ -11,6 +11,8 @@ smoke test에서 검증한 cycle(LLM test 생성 → 생존 추적 → stale 판
 
 요약 보고서: [`docs/zod-2026-08-week2-3-main-report.md`](docs/zod-2026-08-week2-3-main-report.md)
 
+
+
 ## 디렉토리 구조
 
 ```
@@ -55,3 +57,12 @@ experiments/                                  실험 하네스·test (t로 check
 production 버그 1건(기록만, repair 대상 아님). stale 2건에 각 1회 repair를
 시도했으나 둘 다 실패했습니다 (0/2 - production 미수정·assertion 수 보존,
 통과만 실패).
+
+## 실험 재현 방법
+```bash
+git clone https://github.com/Hamjoon/zod.git
+cd zod && git checkout 45afab0f          # v4.0.5; fetch upstream tags to use the tag name
+pnpm install --frozen-lockfile           # ~30 s
+# place experiments/vitest.gate.mts and generated-tests/, then:
+npx vitest run --config experiments/vitest.gate.mts
+```
