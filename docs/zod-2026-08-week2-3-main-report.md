@@ -50,6 +50,9 @@ production bug; stale cases get exactly one repair call (the failing case + the 
 diff at the breaking commit + the failure output, with intent-preserving instructions),
 validated at the breaking commit.
 
+## Experiment pipelines
+<img src="./images/survival_repair_pipeline_stages.png" width="70%"/>
+
 ## Results
 
 | outcome | cases | detail |
