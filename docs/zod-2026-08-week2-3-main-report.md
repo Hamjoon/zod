@@ -39,6 +39,8 @@ the same core logic) — see Limitations.
 
 ## Protocol
 
+<img src="./images/zod_experiment_overview.png" width="100%"/>
+
 Three stages after generation. (1) Pass-at-t gate: a case that does not hold at t is
 recorded and dropped unmodified, so every later breakage is attributable to code evolution
 alone. (2) Survival tracking: every gated case runs at each of the 316 window commits,
