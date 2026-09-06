@@ -7,7 +7,6 @@ Ouédraogo et al. (EMSE 31:103, 2026)의 prompt-only 방법(ZSL/FSL/COT/TOT/GTOT
 - 단위: `class` 선언 또는 `$constructor` 정의 + 같은 파일의 `XDef` `XInternals` `XParams` `XConfig` `XIssue` `XFn` 타입. 모집단 233, token 필터(최장 prompt 4,096 이하) 후 232, pool 228, 층화 표본 5 (core 2, classic 2, mini 1, seed 20260904)
 - 모델: `openai/gpt-oss-120b` via OpenRouter, temperature 0, (단위 × 기법)당 1회 호출, 재시도 없음
 - 이번 실행: COT, TOT, GTOT만 호출 (15회). ZSL/FSL은 렌더링해 보관만 (논문 저자 회신 대기, provisional)
-- 선행 브랜치: [`experiment/2026-08-week3`](https://github.com/Hamjoon/zod/tree/experiment/2026-08-week3) (생성·생존·repair 본 실험)
 
 요약 보고서: [`docs/zod-2026-09-week1-pilot-report.md`](docs/zod-2026-09-week1-pilot-report.md)
 
