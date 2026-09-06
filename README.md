@@ -10,14 +10,14 @@ Ouédraogo et al. (EMSE 31:103, 2026)의 prompt-only 방법(ZSL/FSL/COT/TOT/GTOT
 - 선행 브랜치: [`experiment/2026-08-week3`](https://github.com/Hamjoon/zod/tree/experiment/2026-08-week3) (생성·생존·repair 본 실험)
 
 요약 보고서: [`docs/zod-2026-09-week1-pilot-report.md`](docs/zod-2026-09-week1-pilot-report.md)
-상세 보고서: [`docs/zod-2026-09-week1-pilot-report-full.md`](docs/zod-2026-09-week1-pilot-report-full.md)
 
-## 어디서부터 읽을지
+## 주요 문서 및 결과물
 
 1. `docs/zod-2026-09-week1-pilot-report.md` 요약 보고서
-2. `experiments/pilot-2026-09/results/matrix.md` RQ 표 (기법 × MSR, CSR, syntax, tsc, pass rate, coverage), 단위별 표, 정적 품질 표
-3. `experiments/pilot-2026-09/results/run-notes.md` 편차·판정·관찰 기록 (D-01, O-01 포함, 시간순)
-4. `experiments/pilot-2026-09/manifest.json` 모델, t, 템플릿 해시, 표본, 결정 D1~D6
+2. `docs/zod-2026-09-week1-pilot-report-full.md` 상세 보고서
+3. `experiments/pilot-2026-09/results/matrix.md` RQ 표 (기법 × MSR, CSR, syntax, tsc, pass rate, coverage), 단위별 표, 정적 품질 표
+4. `experiments/pilot-2026-09/results/run-notes.md` 편차·판정·관찰 기록 (D-01, O-01 포함, 시간순)
+5. `experiments/pilot-2026-09/manifest.json` 모델, t, 템플릿 해시, 표본, 결정 D1~D6
 
 ## 디렉토리 구조
 
