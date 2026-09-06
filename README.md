@@ -23,28 +23,31 @@ Ouédraogo et al. (EMSE 31:103, 2026)의 prompt-only 방법(ZSL/FSL/COT/TOT/GTOT
 
 ```
 docs/
-├── zod-2026-09-week1-pilot-report.md         ★ 요약 보고서
-└── zod-2026-09-week1-pilot-report-full.md    상세 보고서
+├── zod-2026-09-week1-pilot-report.md         : ★ 요약 보고서
+└── zod-2026-09-week1-pilot-report-full.md    : 상세 보고서
 
-experiments/pilot-2026-09/                    t로 checkout한 zod 위에 얹으면 재현 가능
-├── manifest.json                             모델, t, 템플릿 SHA-256, provisional 플래그, D1~D6, 표본 5개, 토큰 수
-├── vitest.pilot.mts                          생성 test 실행 전용 vitest 설정 (소스 직접 테스트, typecheck off)
-├── prompts/                                  템플릿 5개 (ZSL, FSL은 provisional) + paper-original/ 논문 원문 3개
-├── llm/{unit_id}/{TECH}/                     prompt.md 25개. 호출한 15개에는 request.json (본문만), raw-response.json,
-│                                             response.md (응답 원문), usage.json, run.json
-├── generated/                                응답에서 추출한 test 파일 14개 ({unit_id}.{TECH}.test.ts), _unstructured/에 1개
-├── dev-baseline/                             t의 개발자 test 실행 raw (dev-run.json), 집계 (dev-counts.json),
-│                                             v8 커버리지 (coverage/), 단위별 커버리지 (dev-coverage-units.json)
+experiments/pilot-2026-09/                    : t로 checkout한 zod 위에 얹으면 재현 가능
+├── manifest.json                             : 모델, t, 템플릿 SHA-256, provisional 플래그, D1~D6, 표본 5개, 토큰 수
+├── vitest.pilot.mts                          : 생성 test 실행 전용 vitest 설정 (소스 직접 테스트, typecheck off)
+├── prompts/                                  : 템플릿 5개 (ZSL, FSL은 provisional) + paper-original/ 논문 원문 3개
+├── llm/{unit_id}/{TECH}/                     : prompt.md 25개. 호출한 15개에는 request.json (본문만), raw-response.json, response.md (응답 원문), usage.json, run.json
+│                                             
+├── generated/                                : 응답에서 추출한 test 파일 14개 ({unit_id}.{TECH}.test.ts), _unstructured/에 1개
+├── dev-baseline/                             : t의 개발자 test 실행 raw (dev-run.json), 집계 (dev-counts.json), v8 커버리지 (coverage/), 단위별 커버리지 (dev-coverage-units.json)
+│                                             
 ├── results/
-│   ├── matrix.md                             ★ RQ 표
-│   ├── run-notes.md                          ★ 편차·판정·관찰 기록
-│   ├── units-all.json, units-selected.json, units-sampled.json   단위 인벤토리, token 필터, 표본
-│   ├── rq1-extraction.json                   추출 (MSR, CSR, strict CSR)
-│   ├── rq2-syntax-typecheck-run.json         syntax, tsc, 실행 (typecheck/, tests/에 파일별 tsconfig와 로그)
-│   ├── rq5-coverage.json                     커버리지 (실행된 파일 없음, 크기 지표만)
-│   ├── rq7-static-quality.json               biome + test smell (smell-rules.md, smells-dev.json, smells-llm.json)
-│   └── env.json, prompt-tokens.json, phase2-review.md, phase3-runs.json, phase*.log
-└── scripts/                                  실행 순서: inventory-units.ts → count-tokens.py → render-prompts.py →
+│   ├── matrix.md                             : ★ RQ 표
+│   ├── run-notes.md                          : ★ 편차·판정·관찰 기록
+│   ├── units-all.json, units-selected.json,  : 단위 인벤토리, token 필터, 표본
+│   │     units-sampled.json               
+│   ├── rq1-extraction.json                   : 추출 (MSR, CSR, strict CSR)
+│   ├── rq2-syntax-typecheck-run.json         : syntax, tsc, 실행 (typecheck/, tests/에 파일별 tsconfig와 로그)
+│   ├── rq5-coverage.json                     : 커버리지 (실행된 파일 없음, 크기 지표만)
+│   ├── rq7-static-quality.json               : biome + test smell (smell-rules.md, smells-dev.json, smells-llm.json)
+│   ├── env.json, prompt-tokens.json,
+│   │     phase2-review.md, phase3-runs.json,
+│   └──   phase*.log
+└── scripts/                                  : 실행 순서 - inventory-units.ts → count-tokens.py → render-prompts.py →
                                               dev-coverage-units.py → sample-units.py → run-generation.py → extract.py →
                                               check-syntax.ts → run-typecheck.py → run-tests.py → run-coverage.py →
                                               run-biome.py → smells.ts → build-matrix.py (공통: pilot_common.py)
