@@ -1,0 +1,329 @@
+{
+  "pilot": "zod 2026-09 week 1: paper-prompt test generation vs dev tests (Ouédraogo et al., EMSE 31:103, 2026 method)",
+  "instructions_document": "pilot-cc-instructions-2026-09-week1.md (Issued 2026-09-05)",
+  "created_at": "2026-09-05T09:42:13.266Z",
+  "repo": "https://github.com/Hamjoon/zod.git",
+  "anchor_commit": "45afab0f846dffd591362b6f770017507eb185b5",
+  "upstream_tag": "v4.0.5",
+  "model": {
+    "id": "openai/gpt-oss-120b",
+    "provider": "OpenRouter",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "temperature": 0,
+    "messages": "one user message, no system message",
+    "max_tokens": "not set",
+    "retries": 0,
+    "api_key_env": "OPENROUTER_API_KEY (value never recorded)"
+  },
+  "techniques": {
+    "defined": [
+      "ZSL",
+      "FSL",
+      "COT",
+      "TOT",
+      "GTOT"
+    ],
+    "called_this_run": [
+      "COT",
+      "TOT",
+      "GTOT"
+    ],
+    "deferred": [
+      "ZSL",
+      "FSL"
+    ],
+    "deferred_reason": "rendered and archived; not sent until the paper authors reply with the original ZSL/FSL prompts",
+    "calls": 15
+  },
+  "templates": {
+    "ZSL": {
+      "file": "prompts/ZSL.txt",
+      "sha256": "b2abfe59ce6f743a6aaeca3a9886b105a49a21f05583a4d893fb39a234ad1bfc",
+      "provisional": true,
+      "paper_figure": "not printed; reconstructed from §3.4",
+      "paper_original": null
+    },
+    "FSL": {
+      "file": "prompts/FSL.txt",
+      "sha256": "5843367bc2fba4a1abd2cf2b960c0673d062f716eb805dd052eefeb0dd9e8191",
+      "provisional": true,
+      "paper_figure": "not printed; reconstructed (ZSL + one example, placement chosen by the pilot)",
+      "paper_original": null
+    },
+    "COT": {
+      "file": "prompts/COT.txt",
+      "sha256": "263271223d71a6b30f21285b51580ea62f570df00c3ac6f4db719dbd83179793",
+      "provisional": false,
+      "paper_figure": "Fig. 3a",
+      "paper_original": {
+        "file": "prompts/paper-original/cot.txt",
+        "sha256": "64ad89880d7206257934cc5c309e1c02397f09b0112086f93e2dd806d96d56e8"
+      }
+    },
+    "TOT": {
+      "file": "prompts/TOT.txt",
+      "sha256": "01e1bd977ebfb4e5aad82199c9153a9f1eb536cbae7d1596512dbc5ca6280559",
+      "provisional": false,
+      "paper_figure": "Fig. 3b",
+      "paper_original": {
+        "file": "prompts/paper-original/tot.txt",
+        "sha256": "66d8eb561957e3d234fd86cf60345d71b98acf7dfb23964e431b2fb78648a8b0"
+      }
+    },
+    "GTOT": {
+      "file": "prompts/GTOT.txt",
+      "sha256": "159d35a124ef05aa93e0d06ebae09fd6b7f23d686dc4a0ba0ea239eacc2f7783",
+      "provisional": false,
+      "paper_figure": "Fig. 4",
+      "paper_original": {
+        "file": "prompts/paper-original/gtot.txt",
+        "sha256": "b951a869022f2daba638cca012f23b41d669065f9deef430cfbbe97c37211555"
+      }
+    }
+  },
+  "delimiters": {
+    "start": "###Test START##",
+    "end": "###Test END##"
+  },
+  "substitution_table": {
+    "Java": "TypeScript",
+    "JUnit 4 test cases / JUnit 4 test case": "Vitest test cases / Vitest test case",
+    "JUnit 4 test file / JUnit test file": "Vitest test file",
+    "({class_name}Test.java)": "({class_name}.test.ts)"
+  },
+  "render_rule": "single regex pass over {class_name},{source_code},{example_class_name},{example_source},{example_test_source}; template file trailing newline stripped; source_code verbatim, no fences",
+  "decisions": {
+    "D1": {
+      "import_handling": "(a) paper verbatim; no import line added; model import choices kept; failures are data"
+    },
+    "D2": {
+      "example_unit": {
+        "class_name": "$ZodRegistry",
+        "file": "packages/zod/src/v4/core/registries.ts",
+        "kind": "class",
+        "lines": [
+          27,
+          79
+        ],
+        "loc": 53,
+        "tokens": 430
+      },
+      "example_test_file": {
+        "file": "packages/zod/src/v4/classic/tests/registries.test.ts",
+        "loc": 204,
+        "tokens": 1655
+      },
+      "excluded_from_population": true
+    },
+    "D3": {
+      "token_rule": "keep units whose maximum rendered prompt token count over ['ZSL', 'FSL', 'COT', 'TOT', 'GTOT'] is <= 4096 (paper token rule; FSL includes the D2 example)",
+      "token_limit": 4096,
+      "population": 233,
+      "kept": 232,
+      "excluded_over_limit": [
+        "165-JSONSchemaGenerator"
+      ],
+      "excluded_identifier_initializer": [
+        "001-ZodError",
+        "002-ZodRealError",
+        "095-$ZodError",
+        "096-$ZodRealError"
+      ],
+      "excluded_no_coverage_data": [],
+      "no_coverage_data_reading": "line reading (J-01, accepted by the Cowork session)",
+      "pool": 228,
+      "pool_by_stratum": {
+        "core": 93,
+        "classic": 68,
+        "mini": 67
+      },
+      "sample": {
+        "size": 5,
+        "strata": {
+          "core": 2,
+          "classic": 2,
+          "mini": 1
+        },
+        "seed": 20260904,
+        "rng": "Python random.Random(seed).sample(sorted unit_ids, k) per stratum in order core, classic, mini",
+        "python": "3.14.1"
+      }
+    },
+    "D4": {
+      "biome_and_smells": "run (Phase 7 mandatory)"
+    },
+    "D5": {
+      "archive_branch": "experiment/2026-09-week1-pilot"
+    },
+    "D6": {
+      "generated_test_placement": "packages/zod/src/v4/<unit dir>/<class_name>.pilot.test.ts, transient copies for execution only; archive copy in experiments/pilot-2026-09/generated/"
+    }
+  },
+  "unit_definition": {
+    "population": "packages/zod/src/v4/**/*.ts excluding **/tests/**, **/locales/**, *.d.ts; exported class declarations (a) and exported `const X = [/*@__PURE__*/] [core.]$constructor(...)` (b)",
+    "related_types": "top-level interface / type alias in the same file whose name is X or starts with X + one of [\"Def\",\"Internals\",\"Params\",\"Config\",\"Issue\",\"Fn\"]",
+    "leading_comment": "comment ranges immediately preceding an included statement with no blank line in between",
+    "source_text": "included statements in file order, verbatim, joined by one blank line; no imports, nothing else",
+    "ordering": "files sorted by path (classic < core < mini), then by statement position; unit_id = 3-digit 1-based index + class_name",
+    "example_excluded": {
+      "file": "core/registries.ts",
+      "class_name": "$ZodRegistry"
+    },
+    "path_mapping": "none ($ kept in unit_id and file names)"
+  },
+  "units": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "kind_label": "$constructor",
+      "loc": 21,
+      "unit_tokens": 186,
+      "prompt_tokens": {
+        "ZSL": 252,
+        "FSL": 2374,
+        "COT": 360,
+        "TOT": 315,
+        "GTOT": 440
+      },
+      "prompt_sha256": {
+        "ZSL": "665a52182972aa399ac25813dfb07d88b58906cbb6b9fa527f60b1e75dd81a4d",
+        "FSL": "177c3a365c8e7e54e3748a10000e6bb39004d8074044a2e21249837123b708bd",
+        "COT": "0663424cef2d6a860f2222edc7f869e652c2b3e2edabeb43142396517a37ce82",
+        "TOT": "bfcfeb3fd55768f2c4b9b035059ad60e6c351af7d4205da118bae9c0bb6fb34c",
+        "GTOT": "b3540fea02c8c672b86b7c30e970ad9c547bd018d9b79848e36d9eee69e14ff3"
+      },
+      "dev_line_pct": 100,
+      "dev_branch_pct": 100
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "kind_label": "$constructor",
+      "loc": 159,
+      "unit_tokens": 1168,
+      "prompt_tokens": {
+        "ZSL": 1230,
+        "FSL": 3352,
+        "COT": 1336,
+        "TOT": 1295,
+        "GTOT": 1416
+      },
+      "prompt_sha256": {
+        "ZSL": "1fa289e7e7dea2fb9acd74375c75793e5db280f697b9dfd78eb6f7b602fdeda3",
+        "FSL": "36bcfec97aeb436a4bf7a44890b1850530aced02fb38906717d630c0a2a4814c",
+        "COT": "239e7a6e9b651ec1091c01ae3fb4469040fb690b6f536fd2ddc7913401105507",
+        "TOT": "380c238ab1f56da6c8d25bc8d19c02f00c6ac5648b08f9fca7370a1ec6c4c1ca",
+        "GTOT": "878790e9a0c3a10993959023e16b8ff40b9edca8b1908bc259e936adf1227b03"
+      },
+      "dev_line_pct": 100,
+      "dev_branch_pct": 96.15
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "kind_label": "$constructor",
+      "loc": 58,
+      "unit_tokens": 457,
+      "prompt_tokens": {
+        "ZSL": 516,
+        "FSL": 2638,
+        "COT": 622,
+        "TOT": 583,
+        "GTOT": 703
+      },
+      "prompt_sha256": {
+        "ZSL": "a73fff3d43b53ef1d6df29e3dbce0a0f9bba5e4fe30a302070ab2871852387ee",
+        "FSL": "d80e36ab26d1758efcc1068d34ac80a42b39987db0c5be18ef5e87305a7f526e",
+        "COT": "b378ff984f073b41fcb66da021a3b409f486d1fd8ded71421144ff0b842e22b8",
+        "TOT": "9c15fe07ae3bfc191924f5d58820e40e99791761f1e3307316bdae5de0ed598d",
+        "GTOT": "9d652d7a543e2ac2624cbfa08b1509dedd8d83bcd79059b418ea47d118e05aff"
+      },
+      "dev_line_pct": 100,
+      "dev_branch_pct": 71.43
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "kind_label": "$constructor",
+      "loc": 7,
+      "unit_tokens": 81,
+      "prompt_tokens": {
+        "ZSL": 140,
+        "FSL": 2262,
+        "COT": 246,
+        "TOT": 207,
+        "GTOT": 327
+      },
+      "prompt_sha256": {
+        "ZSL": "03c9f25fcf1832dc01e2cc3e2e52eebe8cb6e470d84353b53729084bca797c1c",
+        "FSL": "e051679aa3ac62b162b609687c2310982e4406c867a5ca639bc51f4a6680305a",
+        "COT": "3defbb83ea15c6946bfe9f2f66611caf8e37b6a7b2ecf4c6b022453e744f59e8",
+        "TOT": "d2c2098b3832664ec22a03498beac893298cbfcae1f8f2df9f391c15437fc92d",
+        "GTOT": "deae9a699aca93204ca6d998ff2dcb381557c5617e1fe9e2db48170d82de07a7"
+      },
+      "dev_line_pct": 100,
+      "dev_branch_pct": 100
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "kind_label": "$constructor",
+      "loc": 12,
+      "unit_tokens": 121,
+      "prompt_tokens": {
+        "ZSL": 182,
+        "FSL": 2304,
+        "COT": 289,
+        "TOT": 248,
+        "GTOT": 370
+      },
+      "prompt_sha256": {
+        "ZSL": "11a3e63dd19cae52fa73f88f6a156353063a9d522069c3aff05e6680f52c536e",
+        "FSL": "fa2f920463d9ad78d65474baeadbeef2c163d9238d797a638507a1f77a0a13ac",
+        "COT": "2fb0ce71dff02a97f81af6ad46a415430dd5330dc1b704f241472bf48a12c8a4",
+        "TOT": "00fdaa0209e769c958ec697aa88d7913e4ec2f424a14171a7cd52f3768a55f11",
+        "GTOT": "889d4f2fa4f76ee8ee538abab9745f583658d6fb641d17579426c0a2f4e3514b"
+      },
+      "dev_line_pct": 100,
+      "dev_branch_pct": 100
+    }
+  ],
+  "path_mapping": "none; $ kept in unit_id and file names",
+  "tokenizer": {
+    "library": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base",
+    "python": "Python 3.14.1"
+  },
+  "environment": {
+    "node": "v24.11.0",
+    "pnpm": "10.12.1",
+    "vitest": "2.1.9",
+    "typescript": "5.5.4",
+    "biome": "1.9.4",
+    "coverage_v8": "2.1.9 (D-01)"
+  },
+  "files": {
+    "units_all": "results/units-all.json",
+    "units_selected": "results/units-selected.json",
+    "units_sampled": "results/units-sampled.json",
+    "prompt_tokens": "results/prompt-tokens.json",
+    "run_notes": "results/run-notes.md",
+    "dev_baseline": "dev-baseline/"
+  }
+}

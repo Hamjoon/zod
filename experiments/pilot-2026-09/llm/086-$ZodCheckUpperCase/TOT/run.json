@@ -1,0 +1,18 @@
+{
+  "unit_id": "086-$ZodCheckUpperCase",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-05T09:49:09.060440+00:00",
+  "latency_s": 45.53,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "CoreWeave",
+  "response_id": "gen-1788601749-DOGaZmK7KQWzzo5u0LHa",
+  "content_chars": 9011,
+  "content_empty": false,
+  "completion_tokens": 3087,
+  "prompt_tokens_reported": 382,
+  "error": null
+}

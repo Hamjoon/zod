@@ -1,0 +1,9 @@
+{
+  "extends": "/Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/tsconfig.test.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "/Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "unit_id": "086-$ZodCheckUpperCase",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-05T09:49:09.060244+00:00",
+  "latency_s": 23.875,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "SiliconFlow",
+  "response_id": "gen-1788601749-V0KmiOo2AOT7mz65yB8j",
+  "content_chars": 7211,
+  "content_empty": false,
+  "completion_tokens": 2058,
+  "prompt_tokens_reported": 427,
+  "error": null
+}

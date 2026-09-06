@@ -1,0 +1,5 @@
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(16,29): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(48,35): error TS18046: 'original' is of type 'unknown'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(58,5): error TS2698: Spread types may only be created from object types.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(66,22): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(216,44): error TS6133: 'inst' is declared but its value is never read.

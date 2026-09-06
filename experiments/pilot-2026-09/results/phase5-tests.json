@@ -1,0 +1,268 @@
+[
+  {
+    "unit_id": "086-$ZodCheckUpperCase",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "$ZodCheckUpperCase is not defined",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "086-$ZodCheckUpperCase",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./$ZodCheckUpperCase (resolved id: ./$ZodCheckUpperCase) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "098-$ZodType",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./$ZodType (resolved id: ./$ZodType) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/core/$ZodType.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "098-$ZodType",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./$ZodType (resolved id: ./$ZodType) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/core/$ZodType.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "098-$ZodType",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./$ZodType (resolved id: ./$ZodType) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/core/$ZodType.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "053-ZodEnum",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./ZodEnum (resolved id: ./ZodEnum) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodEnum.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "053-ZodEnum",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./ZodEnum (resolved id: ./ZodEnum) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodEnum.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "053-ZodEnum",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./ZodEnum (resolved id: ./ZodEnum) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodEnum.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "038-ZodNull",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./ZodNull (resolved id: ./ZodNull) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodNull.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "038-ZodNull",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./ZodNull (resolved id: ./ZodNull) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodNull.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "038-ZodNull",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.4,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./ZodNull (resolved id: ./ZodNull) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodNull.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "231-ZodMiniLazy",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./ZodMiniLazy (resolved id: ./ZodMiniLazy) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "231-ZodMiniLazy",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.5,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "[vitest] There was an error when mocking a module. If you are using \"vi.mock\" factory, make sure there are no top level variables inside, since this call is hoisted to top of the file. Read more: https://vitest.dev/api/vi.html#vi-mock",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  },
+  {
+    "unit_id": "231-ZodMiniLazy",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+    "vitest_exit": 1,
+    "seconds": 0.7,
+    "runner_error": null,
+    "load_error": true,
+    "load_error_message": "Failed to load url ./ZodMiniLazy (resolved id: ./ZodMiniLazy) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts. Does the file exist?",
+    "cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": null,
+    "failure_kinds": {
+      "load_error": 1
+    },
+    "case_results": []
+  }
+]

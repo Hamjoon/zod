@@ -1,0 +1,49 @@
+=== Phase 5 step 1: syntax 2026-09-05T09:58:02Z ===
+038-ZodNull.COT.test.ts              syntax_ok=true errors=0 
+038-ZodNull.GTOT.test.ts             syntax_ok=true errors=0 
+038-ZodNull.TOT.test.ts              syntax_ok=true errors=0 
+053-ZodEnum.COT.test.ts              syntax_ok=true errors=0 
+053-ZodEnum.GTOT.test.ts             syntax_ok=true errors=0 
+053-ZodEnum.TOT.test.ts              syntax_ok=true errors=0 
+086-$ZodCheckUpperCase.COT.test.ts   syntax_ok=true errors=0 
+086-$ZodCheckUpperCase.GTOT.test.ts  syntax_ok=true errors=0 
+098-$ZodType.COT.test.ts             syntax_ok=true errors=0 
+098-$ZodType.GTOT.test.ts            syntax_ok=true errors=0 
+098-$ZodType.TOT.test.ts             syntax_ok=true errors=0 
+231-ZodMiniLazy.COT.test.ts          syntax_ok=true errors=0 
+231-ZodMiniLazy.GTOT.test.ts         syntax_ok=true errors=0 
+231-ZodMiniLazy.TOT.test.ts          syntax_ok=true errors=0 
+=== Phase 5 step 2: typecheck 2026-09-05T09:58:03Z ===
+086-$ZodCheckUpperCase   COT   tsc_ok=False errors_in_file=3 elsewhere=0 cats={'name_not_found': 3} (1s)
+086-$ZodCheckUpperCase   GTOT  tsc_ok=False errors_in_file=3 elsewhere=0 cats={'other': 3} (0s)
+098-$ZodType             COT   tsc_ok=False errors_in_file=4 elsewhere=0 cats={'other': 4} (0s)
+098-$ZodType             TOT   tsc_ok=False errors_in_file=20 elsewhere=0 cats={'other': 10, 'property_does_not_exist': 10} (0s)
+098-$ZodType             GTOT  tsc_ok=False errors_in_file=4 elsewhere=0 cats={'other': 4} (0s)
+053-ZodEnum              COT   tsc_ok=False errors_in_file=3 elsewhere=0 cats={'other': 3} (0s)
+053-ZodEnum              TOT   tsc_ok=False errors_in_file=3 elsewhere=0 cats={'other': 3} (0s)
+053-ZodEnum              GTOT  tsc_ok=False errors_in_file=1 elsewhere=0 cats={'other': 1} (0s)
+038-ZodNull              COT   tsc_ok=False errors_in_file=2 elsewhere=0 cats={'other': 2} (0s)
+038-ZodNull              TOT   tsc_ok=False errors_in_file=1 elsewhere=0 cats={'other': 1} (0s)
+038-ZodNull              GTOT  tsc_ok=False errors_in_file=5 elsewhere=0 cats={'other': 2, 'name_not_found': 3} (1s)
+231-ZodMiniLazy          COT   tsc_ok=False errors_in_file=3 elsewhere=0 cats={'other': 3} (0s)
+231-ZodMiniLazy          TOT   tsc_ok=False errors_in_file=5 elsewhere=0 cats={'other': 5} (0s)
+231-ZodMiniLazy          GTOT  tsc_ok=False errors_in_file=2 elsewhere=0 cats={'other': 2} (1s)
+Phase 5 typecheck: git tree clean of pilot files and tracked changes
+=== Phase 5 step 3: execution 2026-09-05T09:58:11Z ===
+086-$ZodCheckUpperCase   COT   exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (1s)
+086-$ZodCheckUpperCase   GTOT  exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (0s)
+098-$ZodType             COT   exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (1s)
+098-$ZodType             TOT   exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (1s)
+098-$ZodType             GTOT  exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (0s)
+053-ZodEnum              COT   exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (0s)
+053-ZodEnum              TOT   exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (0s)
+053-ZodEnum              GTOT  exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (0s)
+038-ZodNull              COT   exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (0s)
+038-ZodNull              TOT   exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (0s)
+038-ZodNull              GTOT  exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (0s)
+231-ZodMiniLazy          COT   exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (0s)
+231-ZodMiniLazy          TOT   exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (0s)
+231-ZodMiniLazy          GTOT  exit=1 load_error=True cases=0 passed=0 failed=0 kinds={'load_error': 1} runner_error=no (1s)
+Phase 5 execution: git tree clean of pilot files and tracked changes
+=== Phase 5 end 2026-09-05T09:58:18Z ===
+pilot files left: 0; tracked changes: []

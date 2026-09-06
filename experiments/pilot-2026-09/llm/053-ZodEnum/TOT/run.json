@@ -1,0 +1,18 @@
+{
+  "unit_id": "053-ZodEnum",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-05T09:53:04.969794+00:00",
+  "latency_s": 15.6,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "SiliconFlow",
+  "response_id": "gen-1788601985-PXpWou0f0rH4KqH2dRA8",
+  "content_chars": 5480,
+  "content_empty": false,
+  "completion_tokens": 1923,
+  "prompt_tokens_reported": 650,
+  "error": null
+}

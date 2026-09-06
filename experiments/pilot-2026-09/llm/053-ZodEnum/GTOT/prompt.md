@@ -1,0 +1,66 @@
+Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class.To comprehensively test all methods in the following class named ZodEnum they must following these steps:
+- Extract and list all the public methods including their signatures
+- For each methods, generate a basic Vitest test case that checks the method's functionality
+- Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+- Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+- Merge all the individual test cases into a complete Vitest test file (ZodEnum.test.ts) for the given TypeScript class.All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
+The TypeScript class is:
+// ZodEnum
+export interface ZodEnum<
+  /** @ts-ignore Cast variance */
+  out T extends util.EnumLike = util.EnumLike,
+> extends _ZodType<core.$ZodEnumInternals<T>>,
+    core.$ZodEnum<T> {
+  enum: T;
+  options: Array<T[keyof T]>;
+
+  extract<const U extends readonly (keyof T)[]>(
+    values: U,
+    params?: string | core.$ZodEnumParams
+  ): ZodEnum<util.Flatten<Pick<T, U[number]>>>;
+  exclude<const U extends readonly (keyof T)[]>(
+    values: U,
+    params?: string | core.$ZodEnumParams
+  ): ZodEnum<util.Flatten<Omit<T, U[number]>>>;
+}
+
+export const ZodEnum: core.$constructor<ZodEnum> = /*@__PURE__*/ core.$constructor("ZodEnum", (inst, def) => {
+  core.$ZodEnum.init(inst, def);
+  ZodType.init(inst, def);
+
+  inst.enum = def.entries;
+  inst.options = Object.values(def.entries);
+
+  const keys = new Set(Object.keys(def.entries));
+
+  inst.extract = (values, params) => {
+    const newEntries: Record<string, any> = {};
+    for (const value of values) {
+      if (keys.has(value)) {
+        newEntries[value] = def.entries[value];
+      } else throw new Error(`Key ${value} not found in enum`);
+    }
+    return new ZodEnum({
+      ...def,
+      checks: [],
+      ...util.normalizeParams(params),
+      entries: newEntries,
+    }) as any;
+  };
+
+  inst.exclude = (values, params) => {
+    const newEntries: Record<string, any> = { ...def.entries };
+    for (const value of values) {
+      if (keys.has(value)) {
+        delete newEntries[value];
+      } else throw new Error(`Key ${value} not found in enum`);
+    }
+    return new ZodEnum({
+      ...def,
+      checks: [],
+      ...util.normalizeParams(params),
+      entries: newEntries,
+    }) as any;
+  };
+});
+At the end they must propose one complete (including typical use cases, edge cases, and error scenarios) Vitest test file (ZodEnum.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##

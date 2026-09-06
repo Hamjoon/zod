@@ -1,0 +1,18 @@
+{
+  "unit_id": "098-$ZodType",
+  "technique": "GTOT",
+  "timestamp_utc": "2026-09-05T09:51:19.461838+00:00",
+  "latency_s": 74.745,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DeepInfra",
+  "response_id": "gen-1788601879-wHWM29XZRjai18FKfWyd",
+  "content_chars": 8880,
+  "content_empty": false,
+  "completion_tokens": 2397,
+  "prompt_tokens_reported": 1470,
+  "error": null
+}

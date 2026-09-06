@@ -1,0 +1,2 @@
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(26,29): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(162,39): error TS7006: Parameter 'val' implicitly has an 'any' type.

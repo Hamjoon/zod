@@ -1,0 +1,5 @@
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(2,25): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(80,23): error TS2304: Cannot find name 'vi'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(87,23): error TS2304: Cannot find name 'vi'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(96,8): error TS7006: Parameter 'val' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(118,20): error TS2304: Cannot find name 'vi'.

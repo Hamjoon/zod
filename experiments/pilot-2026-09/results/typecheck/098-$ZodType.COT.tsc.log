@@ -1,0 +1,4 @@
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(15,26): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(112,14): error TS6133: 'payload' is declared but its value is never read.
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(173,45): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(215,19): error TS6133: 'inst' is declared but its value is never read.

@@ -1,0 +1,3 @@
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(42,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(77,23): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(78,29): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.

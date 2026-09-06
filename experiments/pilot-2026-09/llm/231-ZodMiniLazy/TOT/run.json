@@ -1,0 +1,18 @@
+{
+  "unit_id": "231-ZodMiniLazy",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-05T09:54:49.704962+00:00",
+  "latency_s": 35.784,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "CoreWeave",
+  "response_id": "gen-1788602089-sIk5DRmGbs0oUgmOaKgM",
+  "content_chars": 9868,
+  "content_empty": false,
+  "completion_tokens": 2623,
+  "prompt_tokens_reported": 315,
+  "error": null
+}

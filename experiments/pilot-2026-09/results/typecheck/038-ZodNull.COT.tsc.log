@@ -1,0 +1,2 @@
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(21,25): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(228,34): error TS7006: Parameter 'val' implicitly has an 'any' type.

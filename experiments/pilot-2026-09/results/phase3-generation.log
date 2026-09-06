@@ -1,0 +1,17 @@
+Phase 3 start 2026-09-05T09:49:09.057825+00:00 jobs=15 concurrency=2
+086-$ZodCheckUpperCase   COT   http=200 finish=stop native=stop completion_tokens=2058 chars=7211 latency=23.875s err=None
+086-$ZodCheckUpperCase   TOT   http=200 finish=stop native=stop completion_tokens=3087 chars=9011 latency=45.53s err=None
+086-$ZodCheckUpperCase   GTOT  http=200 finish=stop native=stop completion_tokens=2156 chars=6052 latency=25.467s err=None
+098-$ZodType             COT   http=200 finish=stop native=stop completion_tokens=3849 chars=14103 latency=84.864s err=None
+098-$ZodType             GTOT  http=200 finish=stop native=stop completion_tokens=2397 chars=8880 latency=74.745s err=None
+098-$ZodType             TOT   http=200 finish=stop native=stop completion_tokens=3788 chars=13304 latency=186.557s err=None
+053-ZodEnum              COT   http=200 finish=stop native=stop completion_tokens=2123 chars=6134 latency=43.005s err=None
+053-ZodEnum              TOT   http=200 finish=stop native=stop completion_tokens=1923 chars=5480 latency=15.6s err=None
+053-ZodEnum              GTOT  http=200 finish=stop native=stop completion_tokens=2152 chars=6296 latency=43.72s err=None
+038-ZodNull              TOT   http=200 finish=stop native=stop completion_tokens=1393 chars=4090 latency=5.932s err=None
+038-ZodNull              COT   http=200 finish=stop native=stop completion_tokens=2496 chars=8987 latency=48.415s err=None
+231-ZodMiniLazy          COT   http=200 finish=stop native=stop completion_tokens=2344 chars=9250 latency=40.712s err=None
+038-ZodNull              GTOT  http=200 finish=stop native=stop completion_tokens=3298 chars=10472 latency=59.855s err=None
+231-ZodMiniLazy          GTOT  http=200 finish=stop native=stop completion_tokens=2206 chars=7307 latency=10.363s err=None
+231-ZodMiniLazy          TOT   http=200 finish=stop native=stop completion_tokens=2623 chars=9868 latency=35.784s err=None
+Phase 3 done. flagged: none

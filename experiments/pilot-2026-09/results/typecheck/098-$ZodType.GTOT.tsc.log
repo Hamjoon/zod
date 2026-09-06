@@ -1,0 +1,4 @@
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(2,26): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(3,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './core.js'?
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(4,29): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './checks.js'?
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(174,32): error TS7006: Parameter 'i' implicitly has an 'any' type.

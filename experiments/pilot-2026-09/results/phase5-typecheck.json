@@ -1,0 +1,596 @@
+[
+  {
+    "unit_id": "086-$ZodCheckUpperCase",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.6,
+    "tsc_ok": false,
+    "errors_in_file": 3,
+    "errors_elsewhere": 0,
+    "categories": {
+      "name_not_found": 3
+    },
+    "codes": {
+      "TS2304": 3
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 43,
+        "col": 27,
+        "code": "TS2304",
+        "message": "Cannot find name '$ZodCheckUpperCase'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 85,
+        "col": 27,
+        "code": "TS2304",
+        "message": "Cannot find name '$ZodCheckUpperCase'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 159,
+        "col": 26,
+        "code": "TS2304",
+        "message": "Cannot find name '$ZodCheckUpperCase'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "086-$ZodCheckUpperCase",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.5,
+    "tsc_ok": false,
+    "errors_in_file": 3,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 3
+    },
+    "codes": {
+      "TS2834": 2,
+      "TS2835": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 6,
+        "col": 36,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 7,
+        "col": 25,
+        "code": "TS2835",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './regexes.js'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 8,
+        "col": 44,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "098-$ZodType",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.5,
+    "tsc_ok": false,
+    "errors_in_file": 4,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 4
+    },
+    "codes": {
+      "TS2834": 2,
+      "TS6133": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 15,
+        "col": 26,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 112,
+        "col": 14,
+        "code": "TS6133",
+        "message": "'payload' is declared but its value is never read."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 173,
+        "col": 45,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 215,
+        "col": 19,
+        "code": "TS6133",
+        "message": "'inst' is declared but its value is never read."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "098-$ZodType",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.5,
+    "tsc_ok": false,
+    "errors_in_file": 20,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 10,
+      "property_does_not_exist": 10
+    },
+    "codes": {
+      "TS6133": 2,
+      "TS2834": 2,
+      "TS2835": 3,
+      "TS2339": 10,
+      "TS7053": 3
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 39,
+        "col": 25,
+        "code": "TS6133",
+        "message": "'name' is declared but its value is never read."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 129,
+        "col": 26,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 130,
+        "col": 22,
+        "code": "TS2835",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './core.js'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 131,
+        "col": 22,
+        "code": "TS2835",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './util.js'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 132,
+        "col": 24,
+        "code": "TS2835",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './checks.js'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "098-$ZodType",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.5,
+    "tsc_ok": false,
+    "errors_in_file": 4,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 4
+    },
+    "codes": {
+      "TS2834": 1,
+      "TS2835": 2,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 2,
+        "col": 26,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 3,
+        "col": 22,
+        "code": "TS2835",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './core.js'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 4,
+        "col": 29,
+        "code": "TS2835",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './checks.js'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 174,
+        "col": 32,
+        "code": "TS7006",
+        "message": "Parameter 'i' implicitly has an 'any' type."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "053-ZodEnum",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.4,
+    "tsc_ok": false,
+    "errors_in_file": 3,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 3
+    },
+    "codes": {
+      "TS2834": 1,
+      "TS2578": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 15,
+        "col": 25,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 113,
+        "col": 5,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 120,
+        "col": 5,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "053-ZodEnum",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.5,
+    "tsc_ok": false,
+    "errors_in_file": 3,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 3
+    },
+    "codes": {
+      "TS2834": 1,
+      "TS2578": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 20,
+        "col": 25,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 95,
+        "col": 5,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 145,
+        "col": 5,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "053-ZodEnum",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.5,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1
+    },
+    "codes": {
+      "TS2834": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 13,
+        "col": 25,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "038-ZodNull",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.5,
+    "tsc_ok": false,
+    "errors_in_file": 2,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 2
+    },
+    "codes": {
+      "TS2834": 1,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 21,
+        "col": 25,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 228,
+        "col": 34,
+        "code": "TS7006",
+        "message": "Parameter 'val' implicitly has an 'any' type."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "038-ZodNull",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.5,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1
+    },
+    "codes": {
+      "TS2834": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 18,
+        "col": 44,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "038-ZodNull",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 5,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 2,
+      "name_not_found": 3
+    },
+    "codes": {
+      "TS2834": 1,
+      "TS2304": 3,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 2,
+        "col": 25,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 80,
+        "col": 23,
+        "code": "TS2304",
+        "message": "Cannot find name 'vi'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 87,
+        "col": 23,
+        "code": "TS2304",
+        "message": "Cannot find name 'vi'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 96,
+        "col": 8,
+        "code": "TS7006",
+        "message": "Parameter 'val' implicitly has an 'any' type."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 118,
+        "col": 20,
+        "code": "TS2304",
+        "message": "Cannot find name 'vi'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "231-ZodMiniLazy",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.5,
+    "tsc_ok": false,
+    "errors_in_file": 3,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 3
+    },
+    "codes": {
+      "TS2683": 1,
+      "TS2834": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 42,
+        "col": 16,
+        "code": "TS2683",
+        "message": "'this' implicitly has type 'any' because it does not have a type annotation."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 77,
+        "col": 23,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 78,
+        "col": 29,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "231-ZodMiniLazy",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.5,
+    "tsc_ok": false,
+    "errors_in_file": 5,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 5
+    },
+    "codes": {
+      "TS2834": 2,
+      "TS18046": 1,
+      "TS2698": 1,
+      "TS6133": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 16,
+        "col": 29,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 48,
+        "col": 35,
+        "code": "TS18046",
+        "message": "'original' is of type 'unknown'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 58,
+        "col": 5,
+        "code": "TS2698",
+        "message": "Spread types may only be created from object types."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 66,
+        "col": 22,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 216,
+        "col": 44,
+        "code": "TS6133",
+        "message": "'inst' is declared but its value is never read."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "231-ZodMiniLazy",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.0,
+    "tsc_ok": false,
+    "errors_in_file": 2,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 2
+    },
+    "codes": {
+      "TS2834": 1,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 26,
+        "col": 29,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 162,
+        "col": 39,
+        "code": "TS7006",
+        "message": "Parameter 'val' implicitly has an 'any' type."
+      }
+    ],
+    "other_files_with_errors": []
+  }
+]
