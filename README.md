@@ -8,7 +8,6 @@
 - 추가한 줄: ``The {class_name} class is exported from `{module_specifier}` (path relative to the test file).`` 소스를 소개하는 줄 바로 위에 넣음. `{module_specifier}`는 `./checks.js` 또는 `./schemas.js`
 - 모델: `openai/gpt-oss-120b` via OpenRouter, temperature 0, (단위 × 기법)당 1회 호출, 재시도 없음
 - 이번 실행: COT, TOT, GTOT만 호출 (15회). ZSL/FSL은 렌더링해 보관만 (논문 저자 회신 대기, provisional)
-- 실행: Codex. 계획·판정·보고서: Claude Cowork
 
 요약 보고서: [`docs/zod-2026-09-week2-pilot-import-report.md`](docs/zod-2026-09-week2-pilot-import-report.md)
 
