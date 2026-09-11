@@ -1,0 +1,1 @@
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(4,10): error TS2459: Module '"./schemas.js"' declares 'core' locally, but it is not exported.

@@ -1,0 +1,117 @@
+{
+  "coverage_file": "results/dev-coverage-recheck/coverage-final.json",
+  "rule": "unit_coverage from scripts/pilot_common.py",
+  "all_match": true,
+  "rows": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "week1_node": "v24.11.0",
+      "current_node": "v25.7.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "week1_node": "v24.11.0",
+      "current_node": "v25.7.0",
+      "week1": {
+        "executable_lines": 81,
+        "covered_lines": 81,
+        "line_pct": 100.0,
+        "branches_total": 52,
+        "branches_covered": 50,
+        "branch_pct": 96.15
+      },
+      "current": {
+        "executable_lines": 81,
+        "covered_lines": 81,
+        "line_pct": 100.0,
+        "branches_total": 52,
+        "branches_covered": 50,
+        "branch_pct": 96.15
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "week1_node": "v24.11.0",
+      "current_node": "v25.7.0",
+      "week1": {
+        "executable_lines": 35,
+        "covered_lines": 35,
+        "line_pct": 100.0,
+        "branches_total": 7,
+        "branches_covered": 5,
+        "branch_pct": 71.43
+      },
+      "current": {
+        "executable_lines": 35,
+        "covered_lines": 35,
+        "line_pct": 100.0,
+        "branches_total": 7,
+        "branches_covered": 5,
+        "branch_pct": 71.43
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "week1_node": "v24.11.0",
+      "current_node": "v25.7.0",
+      "week1": {
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "week1_node": "v24.11.0",
+      "current_node": "v25.7.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    }
+  ]
+}

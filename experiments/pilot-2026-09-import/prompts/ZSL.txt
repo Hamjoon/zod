@@ -1,0 +1,4 @@
+As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named {class_name}. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
+The {class_name} class is exported from `{module_specifier}` (path relative to the test file).
+Here is the {class_name} class:
+{source_code}

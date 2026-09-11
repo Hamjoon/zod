@@ -1,0 +1,230 @@
+--- week1/llm/038-ZodNull/COT/prompt.md
++++ week2/llm/038-ZodNull/COT/prompt.md
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file (ZodNull.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The ZodNull class is exported from `./schemas.js` (path relative to the test file).
+ Here is the ZodNull class:
+ // ZodNull
+ export interface ZodNull extends _ZodType<core.$ZodNullInternals> {}
+--- week1/llm/038-ZodNull/FSL/prompt.md
++++ week2/llm/038-ZodNull/FSL/prompt.md
+@@ -261,6 +261,7 @@
+ 
+ 
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named ZodNull. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The ZodNull class is exported from `./schemas.js` (path relative to the test file).
+ Here is the ZodNull class:
+ // ZodNull
+ export interface ZodNull extends _ZodType<core.$ZodNullInternals> {}
+--- week1/llm/038-ZodNull/GTOT/prompt.md
++++ week2/llm/038-ZodNull/GTOT/prompt.md
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file (ZodNull.test.ts) for the given TypeScript class.All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The ZodNull class is exported from `./schemas.js` (path relative to the test file).
+ The TypeScript class is:
+ // ZodNull
+ export interface ZodNull extends _ZodType<core.$ZodNullInternals> {}
+--- week1/llm/038-ZodNull/TOT/prompt.md
++++ week2/llm/038-ZodNull/TOT/prompt.md
+@@ -1,4 +1,5 @@
+ Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The ZodNull class is exported from `./schemas.js` (path relative to the test file).
+ The TypeScript class is:
+ // ZodNull
+ export interface ZodNull extends _ZodType<core.$ZodNullInternals> {}
+--- week1/llm/038-ZodNull/ZSL/prompt.md
++++ week2/llm/038-ZodNull/ZSL/prompt.md
+@@ -1,4 +1,5 @@
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named ZodNull. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The ZodNull class is exported from `./schemas.js` (path relative to the test file).
+ Here is the ZodNull class:
+ // ZodNull
+ export interface ZodNull extends _ZodType<core.$ZodNullInternals> {}
+--- week1/llm/053-ZodEnum/COT/prompt.md
++++ week2/llm/053-ZodEnum/COT/prompt.md
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file (ZodEnum.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The ZodEnum class is exported from `./schemas.js` (path relative to the test file).
+ Here is the ZodEnum class:
+ // ZodEnum
+ export interface ZodEnum<
+--- week1/llm/053-ZodEnum/FSL/prompt.md
++++ week2/llm/053-ZodEnum/FSL/prompt.md
+@@ -261,6 +261,7 @@
+ 
+ 
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named ZodEnum. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The ZodEnum class is exported from `./schemas.js` (path relative to the test file).
+ Here is the ZodEnum class:
+ // ZodEnum
+ export interface ZodEnum<
+--- week1/llm/053-ZodEnum/GTOT/prompt.md
++++ week2/llm/053-ZodEnum/GTOT/prompt.md
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file (ZodEnum.test.ts) for the given TypeScript class.All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The ZodEnum class is exported from `./schemas.js` (path relative to the test file).
+ The TypeScript class is:
+ // ZodEnum
+ export interface ZodEnum<
+--- week1/llm/053-ZodEnum/TOT/prompt.md
++++ week2/llm/053-ZodEnum/TOT/prompt.md
+@@ -1,4 +1,5 @@
+ Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The ZodEnum class is exported from `./schemas.js` (path relative to the test file).
+ The TypeScript class is:
+ // ZodEnum
+ export interface ZodEnum<
+--- week1/llm/053-ZodEnum/ZSL/prompt.md
++++ week2/llm/053-ZodEnum/ZSL/prompt.md
+@@ -1,4 +1,5 @@
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named ZodEnum. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The ZodEnum class is exported from `./schemas.js` (path relative to the test file).
+ Here is the ZodEnum class:
+ // ZodEnum
+ export interface ZodEnum<
+--- week1/llm/086-$ZodCheckUpperCase/COT/prompt.md
++++ week2/llm/086-$ZodCheckUpperCase/COT/prompt.md
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file ($ZodCheckUpperCase.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The $ZodCheckUpperCase class is exported from `./checks.js` (path relative to the test file).
+ Here is the $ZodCheckUpperCase class:
+ //////////////////////////////////////
+ /////    $ZodCheckUpperCase    /////
+--- week1/llm/086-$ZodCheckUpperCase/FSL/prompt.md
++++ week2/llm/086-$ZodCheckUpperCase/FSL/prompt.md
+@@ -261,6 +261,7 @@
+ 
+ 
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named $ZodCheckUpperCase. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The $ZodCheckUpperCase class is exported from `./checks.js` (path relative to the test file).
+ Here is the $ZodCheckUpperCase class:
+ //////////////////////////////////////
+ /////    $ZodCheckUpperCase    /////
+--- week1/llm/086-$ZodCheckUpperCase/GTOT/prompt.md
++++ week2/llm/086-$ZodCheckUpperCase/GTOT/prompt.md
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file ($ZodCheckUpperCase.test.ts) for the given TypeScript class.All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The $ZodCheckUpperCase class is exported from `./checks.js` (path relative to the test file).
+ The TypeScript class is:
+ //////////////////////////////////////
+ /////    $ZodCheckUpperCase    /////
+--- week1/llm/086-$ZodCheckUpperCase/TOT/prompt.md
++++ week2/llm/086-$ZodCheckUpperCase/TOT/prompt.md
+@@ -1,4 +1,5 @@
+ Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The $ZodCheckUpperCase class is exported from `./checks.js` (path relative to the test file).
+ The TypeScript class is:
+ //////////////////////////////////////
+ /////    $ZodCheckUpperCase    /////
+--- week1/llm/086-$ZodCheckUpperCase/ZSL/prompt.md
++++ week2/llm/086-$ZodCheckUpperCase/ZSL/prompt.md
+@@ -1,4 +1,5 @@
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named $ZodCheckUpperCase. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The $ZodCheckUpperCase class is exported from `./checks.js` (path relative to the test file).
+ Here is the $ZodCheckUpperCase class:
+ //////////////////////////////////////
+ /////    $ZodCheckUpperCase    /////
+--- week1/llm/098-$ZodType/COT/prompt.md
++++ week2/llm/098-$ZodType/COT/prompt.md
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file ($ZodType.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The $ZodType class is exported from `./schemas.js` (path relative to the test file).
+ Here is the $ZodType class:
+ export interface $ZodTypeDef {
+   type:
+--- week1/llm/098-$ZodType/FSL/prompt.md
++++ week2/llm/098-$ZodType/FSL/prompt.md
+@@ -261,6 +261,7 @@
+ 
+ 
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named $ZodType. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The $ZodType class is exported from `./schemas.js` (path relative to the test file).
+ Here is the $ZodType class:
+ export interface $ZodTypeDef {
+   type:
+--- week1/llm/098-$ZodType/GTOT/prompt.md
++++ week2/llm/098-$ZodType/GTOT/prompt.md
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file ($ZodType.test.ts) for the given TypeScript class.All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The $ZodType class is exported from `./schemas.js` (path relative to the test file).
+ The TypeScript class is:
+ export interface $ZodTypeDef {
+   type:
+--- week1/llm/098-$ZodType/TOT/prompt.md
++++ week2/llm/098-$ZodType/TOT/prompt.md
+@@ -1,4 +1,5 @@
+ Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The $ZodType class is exported from `./schemas.js` (path relative to the test file).
+ The TypeScript class is:
+ export interface $ZodTypeDef {
+   type:
+--- week1/llm/098-$ZodType/ZSL/prompt.md
++++ week2/llm/098-$ZodType/ZSL/prompt.md
+@@ -1,4 +1,5 @@
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named $ZodType. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The $ZodType class is exported from `./schemas.js` (path relative to the test file).
+ Here is the $ZodType class:
+ export interface $ZodTypeDef {
+   type:
+--- week1/llm/231-ZodMiniLazy/COT/prompt.md
++++ week2/llm/231-ZodMiniLazy/COT/prompt.md
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file (ZodMiniLazy.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The ZodMiniLazy class is exported from `./schemas.js` (path relative to the test file).
+ Here is the ZodMiniLazy class:
+ // ZodMiniLazy
+ export interface ZodMiniLazy<T extends SomeType = core.$ZodType> extends _ZodMiniType<core.$ZodLazyInternals<T>> {
+--- week1/llm/231-ZodMiniLazy/FSL/prompt.md
++++ week2/llm/231-ZodMiniLazy/FSL/prompt.md
+@@ -261,6 +261,7 @@
+ 
+ 
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named ZodMiniLazy. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The ZodMiniLazy class is exported from `./schemas.js` (path relative to the test file).
+ Here is the ZodMiniLazy class:
+ // ZodMiniLazy
+ export interface ZodMiniLazy<T extends SomeType = core.$ZodType> extends _ZodMiniType<core.$ZodLazyInternals<T>> {
+--- week1/llm/231-ZodMiniLazy/GTOT/prompt.md
++++ week2/llm/231-ZodMiniLazy/GTOT/prompt.md
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file (ZodMiniLazy.test.ts) for the given TypeScript class.All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The ZodMiniLazy class is exported from `./schemas.js` (path relative to the test file).
+ The TypeScript class is:
+ // ZodMiniLazy
+ export interface ZodMiniLazy<T extends SomeType = core.$ZodType> extends _ZodMiniType<core.$ZodLazyInternals<T>> {
+--- week1/llm/231-ZodMiniLazy/TOT/prompt.md
++++ week2/llm/231-ZodMiniLazy/TOT/prompt.md
+@@ -1,4 +1,5 @@
+ Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The ZodMiniLazy class is exported from `./schemas.js` (path relative to the test file).
+ The TypeScript class is:
+ // ZodMiniLazy
+ export interface ZodMiniLazy<T extends SomeType = core.$ZodType> extends _ZodMiniType<core.$ZodLazyInternals<T>> {
+--- week1/llm/231-ZodMiniLazy/ZSL/prompt.md
++++ week2/llm/231-ZodMiniLazy/ZSL/prompt.md
+@@ -1,4 +1,5 @@
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named ZodMiniLazy. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The ZodMiniLazy class is exported from `./schemas.js` (path relative to the test file).
+ Here is the ZodMiniLazy class:
+ // ZodMiniLazy
+ export interface ZodMiniLazy<T extends SomeType = core.$ZodType> extends _ZodMiniType<core.$ZodLazyInternals<T>> {

@@ -1,0 +1,74 @@
+{
+  "experiment": "pilot-2026-09-import",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0,
+  "anchor_commit": "45afab0f846dffd591362b6f770017507eb185b5",
+  "week1_archive_commit": "c922ec9f2773f6a0eb6a38ef1623e161bc83ae45",
+  "units": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+      "module_specifier": "./checks.js"
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "test_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    }
+  ],
+  "techniques": {
+    "sent": ["COT", "TOT", "GTOT"],
+    "rendered_only": ["ZSL", "FSL"],
+    "provisional": {"ZSL": true, "FSL": true, "COT": false, "TOT": false, "GTOT": false}
+  },
+  "template_sha256": {
+    "ZSL": "4983535691d0fa62e444b0fdb12458efa187520b7d2a454db3d9bed4681d969e",
+    "FSL": "88e5ab4739b81ce67f9a2d436312a98c29bad19087343ece0af01697c64439c6",
+    "COT": "8816fc94616f54988bd1cdcb026bdfcced153ae683ffc0dc46e92d1b4a9d9783",
+    "TOT": "5d2f751d18736c75b61f59b9c7207c8b69cf8850a98b7d480b58d01c28acdc4a",
+    "GTOT": "e6d66bd25118a4de0d662ddd4fda5872bb31a6c23e4e0544bb661b9734efe201"
+  },
+  "d1_line": "The {class_name} class is exported from `{module_specifier}` (path relative to the test file).",
+  "d2_example": {
+    "class_name": "$ZodRegistry",
+    "source_file": "packages/zod/src/v4/core/registries.ts",
+    "test_file": "packages/zod/src/v4/classic/tests/registries.test.ts",
+    "import_line_added_to_example": false
+  },
+  "d3_sample": "Week-1 sample reused without redrawing or reapplying the token filter.",
+  "d6_test_placement": "packages/zod/src/v4/<dir>/<class_name>.pilot.test.ts; copied only for checks and removed afterwards",
+  "prompt_token_counts_file": "results/prompt-tokens.json",
+  "prompt_token_counts": {
+    "086-$ZodCheckUpperCase": {"ZSL": 276, "FSL": 2398, "COT": 384, "TOT": 339, "GTOT": 464},
+    "098-$ZodType": {"ZSL": 1252, "FSL": 3374, "COT": 1358, "TOT": 1317, "GTOT": 1438},
+    "053-ZodEnum": {"ZSL": 537, "FSL": 2659, "COT": 643, "TOT": 604, "GTOT": 724},
+    "038-ZodNull": {"ZSL": 161, "FSL": 2283, "COT": 267, "TOT": 228, "GTOT": 348},
+    "231-ZodMiniLazy": {"ZSL": 204, "FSL": 2326, "COT": 311, "TOT": 270, "GTOT": 392}
+  },
+  "tokenizer": {"library": "tiktoken", "version": "0.14.0", "encoding": "o200k_base"}
+}

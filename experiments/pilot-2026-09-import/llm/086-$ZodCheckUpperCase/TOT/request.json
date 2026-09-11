@@ -1,0 +1,10 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.\nThe $ZodCheckUpperCase class is exported from `./checks.js` (path relative to the test file).\nThe TypeScript class is:\n//////////////////////////////////////\n/////    $ZodCheckUpperCase    /////\n//////////////////////////////////////\nexport interface $ZodCheckUpperCaseDef extends $ZodCheckStringFormatDef<\"uppercase\"> {}\n\nexport interface $ZodCheckUpperCaseInternals extends $ZodCheckInternals<string> {\n  def: $ZodCheckUpperCaseDef;\n  issc: errors.$ZodIssueInvalidStringFormat;\n}\n\nexport interface $ZodCheckUpperCase extends $ZodCheck<string> {\n  _zod: $ZodCheckUpperCaseInternals;\n}\n\nexport const $ZodCheckUpperCase: core.$constructor<$ZodCheckUpperCase> = /*@__PURE__*/ core.$constructor(\n  \"$ZodCheckUpperCase\",\n  (inst, def) => {\n    def.pattern ??= regexes.uppercase;\n    $ZodCheckStringFormat.init(inst, def);\n  }\n);\nAt the end they must propose one complete (including typical use cases, edge cases, and error scenarios) Vitest test file ($ZodCheckUpperCase.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##"
+    }
+  ]
+}

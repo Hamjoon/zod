@@ -1,0 +1,6 @@
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(46,20): error TS2348: Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(73,20): error TS2348: Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(107,20): error TS2348: Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(140,20): error TS2348: Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(173,20): error TS2348: Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(202,20): error TS2348: Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?

@@ -1,0 +1,871 @@
+{
+  "biome_version": "1.9.4",
+  "config": "biome.jsonc (repo)",
+  "llm_files": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "TOT",
+      "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+      "biome_exit": 0,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 2408916
+        },
+        "errors": 0,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "GTOT",
+      "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+      "biome_exit": 1,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 3305708
+        },
+        "errors": 1,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 1,
+      "warnings": 0,
+      "categories": {
+        "lint/complexity/noForEach": 1
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "COT",
+      "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "biome_exit": 0,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 2195208
+        },
+        "errors": 0,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "TOT",
+      "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "biome_exit": 1,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 3203458
+        },
+        "errors": 1,
+        "warnings": 1,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 1,
+      "warnings": 1,
+      "categories": {
+        "lint/correctness/noUnusedImports": 1,
+        "lint/correctness/noUnusedVariables": 1
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "GTOT",
+      "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "biome_exit": 1,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 1993417
+        },
+        "errors": 1,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 1,
+      "warnings": 0,
+      "categories": {
+        "lint/correctness/noUnusedImports": 1
+      }
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "COT",
+      "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "biome_exit": 0,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 1752667
+        },
+        "errors": 0,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "TOT",
+      "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "biome_exit": 0,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 1409667
+        },
+        "errors": 0,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "GTOT",
+      "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "biome_exit": 0,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 1491625
+        },
+        "errors": 0,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "COT",
+      "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "biome_exit": 1,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 3121833
+        },
+        "errors": 2,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 2,
+      "warnings": 0,
+      "categories": {
+        "lint/style/useNumberNamespace": 2
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "TOT",
+      "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "biome_exit": 1,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 2383125
+        },
+        "errors": 2,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 2,
+      "warnings": 0,
+      "categories": {
+        "lint/complexity/noForEach": 1,
+        "lint/style/useNumberNamespace": 1
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "GTOT",
+      "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "biome_exit": 1,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 1696458
+        },
+        "errors": 2,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 2,
+      "warnings": 0,
+      "categories": {
+        "lint/style/useNumberNamespace": 2
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "COT",
+      "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "biome_exit": 1,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 2150166
+        },
+        "errors": 2,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 2,
+      "warnings": 0,
+      "categories": {
+        "lint/style/useConst": 2
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "TOT",
+      "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "biome_exit": 1,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 1798666
+        },
+        "errors": 2,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 2,
+      "warnings": 0,
+      "categories": {
+        "lint/style/useConst": 2
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "GTOT",
+      "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "biome_exit": 0,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 1958334
+        },
+        "errors": 0,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "COT",
+      "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+      "biome_exit": 0,
+      "summary": {
+        "changed": 0,
+        "unchanged": 1,
+        "matches": 0,
+        "duration": {
+          "secs": 0,
+          "nanos": 17415416
+        },
+        "errors": 0,
+        "warnings": 0,
+        "skipped": 0,
+        "suggestedFixesSkipped": 0,
+        "diagnosticsNotPrinted": 0
+      },
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    }
+  ],
+  "dev_files": [
+    {
+      "file": "packages/zod/src/v4/classic/tests/anyunknown.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/array.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/assignability.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/async-parsing.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/async-refinements.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/base.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/bigint.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/brand.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/catch.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/coalesce.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/coerce.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/continuability.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/custom.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/date.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/datetime.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/default.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/description.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/discriminated-unions.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/enum.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/error-utils.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/error.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/file.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/firstparty.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/function.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/generics.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/index.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/instanceof.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/intersection.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/json.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/lazy.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/literal.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/map.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nan.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nested-refine.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nonoptional.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nullable.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/number.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/object.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/optional.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/partial.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/pickomit.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/pipe.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/prefault.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/preprocess.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/primitive.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/promise.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/prototypes.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/readonly.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/record.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/recursive-types.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/refine.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/registries.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/set.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/standard-schema.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/string-formats.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/string.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/stringbool.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/template-literal.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/to-json-schema.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/transform.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/tuple.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/union.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/validations.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/void.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/index.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/be.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/en.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/ru.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/tr.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/assignability.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/brand.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/checks.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/computed.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/error.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/functions.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/index.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/number.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/object.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/prototypes.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/recursive-types.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/string.test.ts",
+      "errors": 0,
+      "warnings": 0,
+      "categories": {}
+    }
+  ],
+  "dev_summary": {
+    "changed": 0,
+    "unchanged": 81,
+    "matches": 0,
+    "duration": {
+      "secs": 0,
+      "nanos": 22648167
+    },
+    "errors": 0,
+    "warnings": 0,
+    "skipped": 0,
+    "suggestedFixesSkipped": 0,
+    "diagnosticsNotPrinted": 0
+  }
+}

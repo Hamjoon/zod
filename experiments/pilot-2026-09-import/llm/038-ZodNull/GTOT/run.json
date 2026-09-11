@@ -1,0 +1,18 @@
+{
+  "unit_id": "038-ZodNull",
+  "technique": "GTOT",
+  "timestamp_utc": "2026-09-10T10:34:22.344767+00:00",
+  "latency_s": 5.936,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "Groq",
+  "response_id": "gen-1789036462-5zMMa1IXFC3mzOidZPOz",
+  "content_chars": 8349,
+  "content_empty": false,
+  "completion_tokens": 2645,
+  "prompt_tokens_reported": 419,
+  "error": null
+}

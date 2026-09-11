@@ -1,0 +1,2042 @@
+{
+  "definitions": {
+    "syntax": "ts.createSourceFile parseDiagnostics empty",
+    "typecheck": "tsc --noEmit with a tsconfig extending packages/zod/tsconfig.test.json including only the in-place file; ok = exit 0 and no errors",
+    "execution": "vitest run with vitest.pilot.mts in place, one file at a time; 300 s timeout; pass_rate = passed/cases per file; pooled = sum passed / sum cases per technique",
+    "denominators": "per-technique counts are over the 5 sampled units; a unit with no structured extraction counts as not ok / 0 cases",
+    "typecheck_categories": "instruction week-1 mapping; categories_phase5_mapping keeps the direct Phase 5 mapping for audit",
+    "paper_layers": "PDNE-like, CFS-like, type or argument mismatch, other; reported for both runs"
+  },
+  "per_technique": {
+    "COT": {
+      "units": 5,
+      "structured_files": 5,
+      "syntax_ok": 5,
+      "tsc_ok": 0,
+      "tsc_errors_in_file_total": 33,
+      "tsc_categories_total": {
+        "constructor_called_without_new": 31,
+        "other": 2
+      },
+      "tsc_paper_layers_total": {
+        "constructor_called_without_new": 31,
+        "other": 2
+      },
+      "files_loaded": 4,
+      "load_errors": 1,
+      "cases": 38,
+      "passed": 13,
+      "pass_rate_pooled": 0.3421,
+      "pass_rate_mean_per_file": 0.2558,
+      "failure_kinds_total": {
+        "assertion_failure": 4,
+        "load_error": 1,
+        "runtime_error": 21
+      }
+    },
+    "TOT": {
+      "units": 5,
+      "structured_files": 5,
+      "syntax_ok": 5,
+      "tsc_ok": 0,
+      "tsc_errors_in_file_total": 30,
+      "tsc_categories_total": {
+        "constructor_called_without_new": 7,
+        "module_or_path_not_found": 5,
+        "other": 5,
+        "property_does_not_exist": 1,
+        "type_mismatch": 12
+      },
+      "tsc_paper_layers_total": {
+        "CFS_like": 3,
+        "PDNE_like": 3,
+        "constructor_called_without_new": 7,
+        "other": 5,
+        "type_or_argument_mismatch": 12
+      },
+      "files_loaded": 4,
+      "load_errors": 1,
+      "cases": 46,
+      "passed": 11,
+      "pass_rate_pooled": 0.2391,
+      "pass_rate_mean_per_file": 0.25,
+      "failure_kinds_total": {
+        "assertion_failure": 1,
+        "load_error": 1,
+        "runtime_error": 34
+      }
+    },
+    "GTOT": {
+      "units": 5,
+      "structured_files": 5,
+      "syntax_ok": 5,
+      "tsc_ok": 0,
+      "tsc_errors_in_file_total": 10,
+      "tsc_categories_total": {
+        "constructor_called_without_new": 7,
+        "module_or_path_not_found": 1,
+        "other": 2
+      },
+      "tsc_paper_layers_total": {
+        "CFS_like": 1,
+        "constructor_called_without_new": 7,
+        "other": 2
+      },
+      "files_loaded": 3,
+      "load_errors": 2,
+      "cases": 35,
+      "passed": 11,
+      "pass_rate_pooled": 0.3143,
+      "pass_rate_mean_per_file": 0.3636,
+      "failure_kinds_total": {
+        "load_error": 2,
+        "runtime_error": 24
+      }
+    }
+  },
+  "paper_layer_view": {
+    "definition": {
+      "PDNE_like": [
+        "TS2307",
+        "TS2834",
+        "TS2835"
+      ],
+      "CFS_like": [
+        "TS2305",
+        "TS2459",
+        "TS2724",
+        "TS2304",
+        "TS2552",
+        "TS2339",
+        "TS2551"
+      ],
+      "type_or_argument_mismatch": [
+        "TS2322",
+        "TS2345",
+        "TS2554",
+        "TS2555"
+      ],
+      "constructor_called_without_new": [
+        "TS2348"
+      ],
+      "other": "all remaining codes",
+      "note": "TS2305 and TS2459 are module_or_path_not_found in the week-1 category view but CFS_like in this paper-layer view."
+    },
+    "week1": {
+      "COT": {
+        "codes": {
+          "TS2304": 3,
+          "TS2834": 6,
+          "TS6133": 2,
+          "TS2578": 2,
+          "TS7006": 1,
+          "TS2683": 1
+        },
+        "week1_categories": {
+          "name_not_found": 3,
+          "module_or_path_not_found": 6,
+          "other": 6
+        },
+        "paper_layers": {
+          "CFS_like": 3,
+          "PDNE_like": 6,
+          "other": 6
+        }
+      },
+      "TOT": {
+        "codes": {
+          "TS6133": 3,
+          "TS2834": 6,
+          "TS2835": 3,
+          "TS2339": 10,
+          "TS7053": 3,
+          "TS2578": 2,
+          "TS18046": 1,
+          "TS2698": 1
+        },
+        "week1_categories": {
+          "other": 10,
+          "module_or_path_not_found": 9,
+          "property_does_not_exist": 10
+        },
+        "paper_layers": {
+          "other": 10,
+          "PDNE_like": 9,
+          "CFS_like": 10
+        }
+      },
+      "GTOT": {
+        "codes": {
+          "TS2834": 6,
+          "TS2835": 3,
+          "TS7006": 3,
+          "TS2304": 3
+        },
+        "week1_categories": {
+          "module_or_path_not_found": 9,
+          "other": 3,
+          "name_not_found": 3
+        },
+        "paper_layers": {
+          "PDNE_like": 9,
+          "other": 3,
+          "CFS_like": 3
+        }
+      }
+    },
+    "week2": {
+      "COT": {
+        "codes": {
+          "TS2348": 31,
+          "TS2578": 2
+        },
+        "week1_categories": {
+          "constructor_called_without_new": 31,
+          "other": 2
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 31,
+          "other": 2
+        }
+      },
+      "TOT": {
+        "codes": {
+          "TS2305": 2,
+          "TS2835": 2,
+          "TS2834": 1,
+          "TS6133": 1,
+          "TS2345": 12,
+          "TS2578": 2,
+          "TS2348": 7,
+          "TS1361": 2,
+          "TS2339": 1
+        },
+        "week1_categories": {
+          "module_or_path_not_found": 5,
+          "other": 5,
+          "type_mismatch": 12,
+          "constructor_called_without_new": 7,
+          "property_does_not_exist": 1
+        },
+        "paper_layers": {
+          "CFS_like": 3,
+          "PDNE_like": 3,
+          "other": 5,
+          "type_or_argument_mismatch": 12,
+          "constructor_called_without_new": 7
+        }
+      },
+      "GTOT": {
+        "codes": {
+          "TS2348": 7,
+          "TS2459": 1,
+          "TS2578": 2
+        },
+        "week1_categories": {
+          "constructor_called_without_new": 7,
+          "module_or_path_not_found": 1,
+          "other": 2
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 7,
+          "CFS_like": 1,
+          "other": 2
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "COT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 9,
+        "errors_elsewhere": 0,
+        "categories": {
+          "constructor_called_without_new": 9
+        },
+        "categories_phase5_mapping": {
+          "constructor_called_without_new": 9
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 9
+        },
+        "codes": {
+          "TS2348": 9
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 48,
+            "col": 27,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 102,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 115,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?"
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Cannot read properties of undefined (reading 'pattern')",
+        "runner_error_detail": null,
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        },
+        "case_results": []
+      }
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "TOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 2,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 2
+        },
+        "categories_phase5_mapping": {
+          "module_or_export_not_found": 2
+        },
+        "paper_layers": {
+          "CFS_like": 2
+        },
+        "codes": {
+          "TS2305": 2
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 28,
+            "col": 10,
+            "code": "TS2305",
+            "message": "Module '\"./regexes.js\"' has no exported member 'regexes'."
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 29,
+            "col": 10,
+            "code": "TS2305",
+            "message": "Module '\"./errors.js\"' has no exported member 'errors'."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 11,
+        "passed": 0,
+        "failed": 11,
+        "skipped": 0,
+        "pass_rate": 0.0,
+        "failure_kinds": {
+          "runtime_error": 11
+        },
+        "case_results": [
+          {
+            "name": "$ZodCheckUpperCase assigns the default uppercase regex when no pattern is provided",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          },
+          {
+            "name": "$ZodCheckUpperCase accepts plain ASCII uppercase strings",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          },
+          {
+            "name": "$ZodCheckUpperCase accepts Unicode uppercase characters",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          },
+          {
+            "name": "$ZodCheckUpperCase rejects strings containing lowercase letters",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          },
+          {
+            "name": "$ZodCheckUpperCase rejects an empty string (no characters to be uppercase)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          },
+          {
+            "name": "$ZodCheckUpperCase accepts uppercase strings that contain numbers",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          },
+          {
+            "name": "$ZodCheckUpperCase accepts uppercase strings that contain spaces and tabs",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          },
+          {
+            "name": "$ZodCheckUpperCase accepts uppercase strings that contain symbols",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          },
+          {
+            "name": "$ZodCheckUpperCase uses a custom pattern when supplied",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          },
+          {
+            "name": "$ZodCheckUpperCase provides a safeParse method that returns success flag",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          },
+          {
+            "name": "$ZodCheckUpperCase exposes the expected internal structure",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'pattern')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/checks.ts:933:5\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at new $ZodCheckUpperCase (/Users/donggi/_projects/ex"
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "GTOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 2,
+        "errors_elsewhere": 0,
+        "categories": {
+          "constructor_called_without_new": 2
+        },
+        "categories_phase5_mapping": {
+          "other": 2
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 2
+        },
+        "codes": {
+          "TS2348": 2
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 19,
+            "col": 27,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 116,
+            "col": 29,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?"
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Cannot read properties of undefined (reading 'pattern')",
+        "runner_error_detail": null,
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        },
+        "case_results": []
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "COT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 6,
+        "errors_elsewhere": 0,
+        "categories": {
+          "constructor_called_without_new": 6
+        },
+        "categories_phase5_mapping": {
+          "other": 6
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 6
+        },
+        "codes": {
+          "TS2348": 6
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 46,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 73,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 107,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?"
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 6,
+        "passed": 0,
+        "failed": 6,
+        "skipped": 0,
+        "pass_rate": 0.0,
+        "failure_kinds": {
+          "runtime_error": 6
+        },
+        "case_results": [
+          {
+            "name": "$ZodType constructor & runtime behaviour creates a schema and validates synchronously when no checks are present",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType constructor & runtime behaviour runs a synchronous check and adds an issue when the check fails",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType constructor & runtime behaviour awaits an asynchronous check and propagates its issues",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType constructor & runtime behaviour throws $ZodAsyncError when an async check runs with ctx.async === false",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType constructor & runtime behaviour skips a check whose `when` predicate returns false",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType constructor & runtime behaviour `~standard.validate` returns a Promise when async checks are present",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "TOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 4,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 3,
+          "other": 1
+        },
+        "categories_phase5_mapping": {
+          "module_or_export_not_found": 3,
+          "other": 1
+        },
+        "paper_layers": {
+          "PDNE_like": 3,
+          "other": 1
+        },
+        "codes": {
+          "TS2835": 2,
+          "TS2834": 1,
+          "TS6133": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 84,
+            "col": 22,
+            "code": "TS2835",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './core.js'?"
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 85,
+            "col": 22,
+            "code": "TS2835",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './util.js'?"
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 86,
+            "col": 43,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "[vitest] There was an error when mocking a module. If you are using \"vi.mock\" factory, make sure there are no top level variables inside, since this call is hoisted to top of the file. Read more: https://vitest.dev/api/vi.html#vi-mock",
+        "runner_error_detail": null,
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        },
+        "case_results": []
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "GTOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 1,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 1
+        },
+        "categories_phase5_mapping": {
+          "other": 1
+        },
+        "paper_layers": {
+          "CFS_like": 1
+        },
+        "codes": {
+          "TS2459": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 4,
+            "col": 10,
+            "code": "TS2459",
+            "message": "Module '\"./schemas.js\"' declares 'core' locally, but it is not exported."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 14,
+        "passed": 0,
+        "failed": 14,
+        "skipped": 0,
+        "pass_rate": 0.0,
+        "failure_kinds": {
+          "runtime_error": 14
+        },
+        "case_results": [
+          {
+            "name": "$ZodType \u2013 basic functionality validate() returns the value when no checks are present",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 basic functionality validate() returns issues when a synchronous failing check is attached",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 basic functionality validate() works with an async failing check when async is allowed",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 edge cases & error handling skips a check when its `when` predicate returns false",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 edge cases & error handling continues processing after a non\u2011aborting check adds an issue",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 edge cases & error handling throws $ZodAsyncError when an async check runs in a sync context",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 edge cases & error handling defers `run` assignment when no checks are present (deferred initializer)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 comprehensive test suite validates simple string without checks",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 comprehensive test suite fails synchronously when a check adds an issue",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 comprehensive test suite handles async checks correctly",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 comprehensive test suite does not run a check whose `when` returns false",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 comprehensive test suite throws $ZodAsyncError for async check in sync context",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 comprehensive test suite processes multiple checks, preserving non\u2011aborting behavior",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          },
+          {
+            "name": "$ZodType \u2013 comprehensive test suite supports deferred initializer when no checks are defined",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at Module.$ZodType (/Users/donggi/_projects/experime"
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "COT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 2,
+        "errors_elsewhere": 0,
+        "categories": {
+          "other": 2
+        },
+        "categories_phase5_mapping": {
+          "other": 2
+        },
+        "paper_layers": {
+          "other": 2
+        },
+        "codes": {
+          "TS2578": 2
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 127,
+            "col": 5,
+            "code": "TS2578",
+            "message": "Unused '@ts-expect-error' directive."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 136,
+            "col": 5,
+            "code": "TS2578",
+            "message": "Unused '@ts-expect-error' directive."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 13,
+        "passed": 12,
+        "failed": 1,
+        "skipped": 0,
+        "pass_rate": 0.9231,
+        "failure_kinds": {
+          "assertion_failure": 1
+        },
+        "case_results": [
+          {
+            "name": "ZodEnum \u2013 public API should expose the original enum mapping and options",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API extract should keep only the requested keys",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API extract with multiple keys should keep them in order of definition",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude should remove the requested keys",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude with multiple keys should remove all of them",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API extract with an empty array should produce an enum with no entries",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude with an empty array should return an unchanged enum",
+            "status": "failed",
+            "failure_kind": "assertion_failure",
+            "error_name": "AssertionError",
+            "failure_message": "AssertionError: expected { RED: 'red', GREEN: 'green', \u2026(1) } to be { RED: 'red', GREEN: 'green', \u2026(1) } // Object.is equality\n\nIf it should pass with deep equality, replace \"toBe\" with \"toStrictEqual\"\n\nExpected: { RED: 'red', GREEN: 'green', \u2026(1) }\nReceived: serializes to the same string\n\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/s"
+          },
+          {
+            "name": "ZodEnum \u2013 public API extract should throw when a key does not exist in the enum",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude should throw when a key does not exist in the enum",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API extract should accept a string as the second argument without breaking",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude should accept a string as the second argument without breaking",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API extract should accept an object as the second argument (simulated)",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude should accept an object as the second argument (simulated)",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "TOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 14,
+        "errors_elsewhere": 0,
+        "categories": {
+          "type_mismatch": 12,
+          "other": 2
+        },
+        "categories_phase5_mapping": {
+          "type_mismatch": 12,
+          "other": 2
+        },
+        "paper_layers": {
+          "type_or_argument_mismatch": 12,
+          "other": 2
+        },
+        "codes": {
+          "TS2345": 12,
+          "TS2578": 2
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 19,
+            "col": 32,
+            "code": "TS2345",
+            "message": "Argument of type '{ entries: { readonly A: \"a\"; readonly B: \"b\"; readonly C: \"c\"; }; checks: any[]; }' is not assignable to parameter of type '$ZodEnumDef<Readonly<Record<string, EnumValue>>>'."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 28,
+            "col": 32,
+            "code": "TS2345",
+            "message": "Argument of type '{ entries: { readonly A: \"a\"; readonly B: \"b\"; readonly C: \"c\"; }; checks: any[]; }' is not assignable to parameter of type '$ZodEnumDef<Readonly<Record<string, EnumValue>>>'."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 37,
+            "col": 32,
+            "code": "TS2345",
+            "message": "Argument of type '{ entries: { readonly A: \"a\"; readonly B: \"b\"; readonly C: \"c\"; }; checks: any[]; }' is not assignable to parameter of type '$ZodEnumDef<Readonly<Record<string, EnumValue>>>'."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 11,
+        "passed": 11,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": 1.0,
+        "failure_kinds": {},
+        "case_results": [
+          {
+            "name": "ZodEnum \u2013 core behaviour initialises `enum` and `options` from the definition",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 core behaviour extracts a subset of keys (multiple keys)",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 core behaviour extracts a subset of keys (single key)",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 core behaviour extract with an empty array returns an empty enum",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 core behaviour throws when a non\u2011existent key is supplied to extract",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 core behaviour accepts a string as the second argument (params) without breaking",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 core behaviour excludes a single key",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 core behaviour excludes multiple keys",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 core behaviour exclude with an empty array returns an identical enum",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 core behaviour throws when a non\u2011existent key is supplied to exclude",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 core behaviour accepts an object as the second argument (params) without breaking",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "GTOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 2,
+        "errors_elsewhere": 0,
+        "categories": {
+          "other": 2
+        },
+        "categories_phase5_mapping": {
+          "other": 2
+        },
+        "paper_layers": {
+          "other": 2
+        },
+        "codes": {
+          "TS2578": 2
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 63,
+            "col": 5,
+            "code": "TS2578",
+            "message": "Unused '@ts-expect-error' directive."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 91,
+            "col": 5,
+            "code": "TS2578",
+            "message": "Unused '@ts-expect-error' directive."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 10,
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": 1.0,
+        "failure_kinds": {},
+        "case_results": [
+          {
+            "name": "ZodEnum \u2013 public API extract \u2013 keeps only selected keys",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude \u2013 removes selected keys",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API extract \u2013 empty array returns an enum with no entries",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API extract \u2013 duplicate keys are handled gracefully",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API extract \u2013 accepts a string as params without breaking",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API extract \u2013 throws when a non\u2011existent key is requested",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude \u2013 empty array returns a copy of the original enum",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude \u2013 duplicate keys are ignored after first removal",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude \u2013 accepts an object as params without breaking",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodEnum \u2013 public API exclude \u2013 throws when trying to remove a non\u2011existent key",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "COT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 9,
+        "errors_elsewhere": 0,
+        "categories": {
+          "constructor_called_without_new": 9
+        },
+        "categories_phase5_mapping": {
+          "other": 9
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 9
+        },
+        "codes": {
+          "TS2348": 9
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 41,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodNull, $ZodNullDef>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 46,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodNull, $ZodNullDef>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 54,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodNull, $ZodNullDef>' is not callable. Did you mean to include 'new'?"
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 9,
+        "passed": 0,
+        "failed": 9,
+        "skipped": 0,
+        "pass_rate": 0.0,
+        "failure_kinds": {
+          "runtime_error": 9
+        },
+        "case_results": [
+          {
+            "name": "ZodNull schema should successfully parse `null`",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw a ZodError when parsing non\u2011null values (basic types)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema safeParse should succeed for `null` and fail for everything else",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema optional() should accept `undefined` in addition to `null`",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema nullable() should return the same schema instance (no\u2011op)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema default() should supply a default when input is `undefined`",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should reject objects that masquerade as null (e.g., Object.create(null))",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should reject NaN (even though it is a number) and Infinity",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should reject functions and class instances",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "TOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 4,
+        "errors_elsewhere": 0,
+        "categories": {
+          "constructor_called_without_new": 1,
+          "other": 2,
+          "property_does_not_exist": 1
+        },
+        "categories_phase5_mapping": {
+          "other": 3,
+          "property_does_not_exist": 1
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 1,
+          "other": 2,
+          "CFS_like": 1
+        },
+        "codes": {
+          "TS2348": 1,
+          "TS1361": 2,
+          "TS2339": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 6,
+            "col": 28,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodNull, $ZodNullDef>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 41,
+            "col": 59,
+            "code": "TS1361",
+            "message": "'ZodError' cannot be used as a value because it was imported using 'import type'."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 47,
+            "col": 20,
+            "code": "TS2339",
+            "message": "Property 'errors' does not exist on type 'ZodError<unknown>'."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 19,
+        "passed": 0,
+        "failed": 19,
+        "skipped": 0,
+        "pass_rate": 0.0,
+        "failure_kinds": {
+          "runtime_error": 19
+        },
+        "case_results": [
+          {
+            "name": "ZodNull schema should parse null and return null",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing undefined (undefined)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing 0 (number)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing 123 (number)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing  (string)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing string (string)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing true (boolean)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing false (boolean)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing [object Object] (object)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing [object Object] (object)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing  (object)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing  (object)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing NaN (number)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing Symbol(sym) (symbol)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema should throw ZodError when parsing () => {\n    } (function)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema safeParse(null) should succeed",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema safeParse(undefined) should fail with proper error shape",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema instance should be a ZodType",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull schema optional() should allow undefined but still reject non\u2011null",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "GTOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 1,
+        "errors_elsewhere": 0,
+        "categories": {
+          "constructor_called_without_new": 1
+        },
+        "categories_phase5_mapping": {
+          "other": 1
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 1
+        },
+        "codes": {
+          "TS2348": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 10,
+            "col": 10,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodNull, $ZodNullDef>' is not callable. Did you mean to include 'new'?"
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 11,
+        "passed": 1,
+        "failed": 10,
+        "skipped": 0,
+        "pass_rate": 0.0909,
+        "failure_kinds": {
+          "runtime_error": 10
+        },
+        "case_results": [
+          {
+            "name": "ZodNull.parse accepts exactly null",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull.parse rejects undefined and all non\u2011null values",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull.safeParse returns success for null",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull.safeParse returns failure for any non\u2011null value",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull.optional parses undefined when optional is applied",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull.optional still rejects non\u2011null, non\u2011undefined values",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull.default supplies null as default when input is undefined",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull.default throws at schema construction if default is not null",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodNull.default chaining optional() then default(null) works as expected",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull edge\u2011cases calling parse with no argument behaves like undefined",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          },
+          {
+            "name": "ZodNull edge\u2011cases schema instance is a ZodType (instanceof check)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot read properties of undefined (reading 'checks')\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/schemas.ts:179:37\n    at $ZodType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/experiment-proje"
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "COT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 7,
+        "errors_elsewhere": 0,
+        "categories": {
+          "constructor_called_without_new": 7
+        },
+        "categories_phase5_mapping": {
+          "other": 7
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 7
+        },
+        "codes": {
+          "TS2348": 7
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 97,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 105,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 116,
+            "col": 20,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 10,
+        "passed": 1,
+        "failed": 9,
+        "skipped": 0,
+        "pass_rate": 0.1,
+        "failure_kinds": {
+          "runtime_error": 6,
+          "assertion_failure": 3
+        },
+        "case_results": [
+          {
+            "name": "ZodMiniLazy \u2013 basic construction & core methods should be a callable constructor",
+            "status": "passed",
+            "failure_kind": null,
+            "error_name": null,
+            "failure_message": null
+          },
+          {
+            "name": "ZodMiniLazy \u2013 basic construction & core methods should create an instance when given a valid lazy definition",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot set property check of [object Module] which has only a getter\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/schemas.ts:51:10\n    at ZodMiniType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 basic construction & core methods instance should have a `parse` method that validates using the lazy schema",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot set property check of [object Module] which has only a getter\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/schemas.ts:51:10\n    at ZodMiniType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 basic construction & core methods instance should have a `safeParse` method that returns a result object",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot set property check of [object Module] which has only a getter\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/schemas.ts:51:10\n    at ZodMiniType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 basic construction & core methods instance should support chaining methods like `optional` and `nullable`",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot set property check of [object Module] which has only a getter\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/schemas.ts:51:10\n    at ZodMiniType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 edge cases & error handling should throw a clear error when constructed with a non\u2011object definition",
+            "status": "failed",
+            "failure_kind": "assertion_failure",
+            "error_name": "AssertionError",
+            "failure_message": "AssertionError: expected [Function] to throw error matching /definition must be an object/i but got 'Cannot read properties of null (readi\u2026'\n    at Proxy.<anonymous> (file:///Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/node_modules/.pnpm/@vitest+expect@2.1.9/node_modules/@vitest/expect/dist/index.js:1509:21)\n    at Proxy.<anonymous> (file:///Users/donggi/"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 edge cases & error handling should throw when the definition lacks a `lazy` function",
+            "status": "failed",
+            "failure_kind": "assertion_failure",
+            "error_name": "AssertionError",
+            "failure_message": "AssertionError: expected [Function] to throw error matching /lazy.*function/i but got 'Cannot set property check of [object \u2026'\n    at Proxy.<anonymous> (file:///Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/node_modules/.pnpm/@vitest+expect@2.1.9/node_modules/@vitest/expect/dist/index.js:1509:21)\n    at Proxy.<anonymous> (file:///Users/donggi/_projects/expe"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 edge cases & error handling should throw if the `lazy` property is not a function",
+            "status": "failed",
+            "failure_kind": "assertion_failure",
+            "error_name": "AssertionError",
+            "failure_message": "AssertionError: expected [Function] to throw error matching /lazy.*function/i but got 'Cannot set property check of [object \u2026'\n    at Proxy.<anonymous> (file:///Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/node_modules/.pnpm/@vitest+expect@2.1.9/node_modules/@vitest/expect/dist/index.js:1509:21)\n    at Proxy.<anonymous> (file:///Users/donggi/_projects/expe"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 edge cases & error handling should propagate errors thrown inside the lazy resolver",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot set property check of [object Module] which has only a getter\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/schemas.ts:51:10\n    at ZodMiniType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 edge cases & error handling should handle circular references without infinite recursion (basic sanity check)",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot set property check of [object Module] which has only a getter\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/schemas.ts:51:10\n    at ZodMiniType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/"
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "TOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 6,
+        "errors_elsewhere": 0,
+        "categories": {
+          "constructor_called_without_new": 6
+        },
+        "categories_phase5_mapping": {
+          "other": 6
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 6
+        },
+        "codes": {
+          "TS2348": 6
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 118,
+            "col": 18,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 138,
+            "col": 18,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 162,
+            "col": 18,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": false,
+        "load_error_message": null,
+        "runner_error_detail": null,
+        "cases": 5,
+        "passed": 0,
+        "failed": 5,
+        "skipped": 0,
+        "pass_rate": 0.0,
+        "failure_kinds": {
+          "runtime_error": 4,
+          "assertion_failure": 1
+        },
+        "case_results": [
+          {
+            "name": "ZodMiniLazy \u2013 comprehensive behaviour should lazily resolve to a string schema and parse correctly",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot set property check of [object Module] which has only a getter\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/schemas.ts:51:10\n    at ZodMiniType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 comprehensive behaviour should not invoke the lazy function during construction",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot set property check of [object Module] which has only a getter\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/schemas.ts:51:10\n    at ZodMiniType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 comprehensive behaviour should throw if the lazy function returns something that is not a schema",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot set property check of [object Module] which has only a getter\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/schemas.ts:51:10\n    at ZodMiniType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 comprehensive behaviour should throw during construction if `lazy` is not a function",
+            "status": "failed",
+            "failure_kind": "assertion_failure",
+            "error_name": "AssertionError",
+            "failure_message": "AssertionError: expected [Function] to throw error including '`lazy` must be a function returning a\u2026' but got 'Cannot set property check of [object \u2026'\n    at Proxy.<anonymous> (file:///Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/node_modules/.pnpm/@vitest+expect@2.1.9/node_modules/@vitest/expect/dist/index.js:1509:21)\n    at Proxy.<anonymous> (file:///Use"
+          },
+          {
+            "name": "ZodMiniLazy \u2013 comprehensive behaviour should handle circular lazy schemas without infinite recursion",
+            "status": "failed",
+            "failure_kind": "runtime_error",
+            "error_name": "TypeError",
+            "failure_message": "TypeError: Cannot set property check of [object Module] which has only a getter\n    at /Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/schemas.ts:51:10\n    at ZodMiniType.init (/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/core/core.ts:31:5)\n    at /Users/donggi/_projects/"
+          }
+        ]
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "GTOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 4,
+        "errors_elsewhere": 0,
+        "categories": {
+          "constructor_called_without_new": 4
+        },
+        "categories_phase5_mapping": {
+          "other": 4
+        },
+        "paper_layers": {
+          "constructor_called_without_new": 4
+        },
+        "codes": {
+          "TS2348": 4
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 97,
+            "col": 22,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 170,
+            "col": 21,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 181,
+            "col": 29,
+            "code": "TS2348",
+            "message": "Value of type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Cannot set property check of [object Module] which has only a getter",
+        "runner_error_detail": null,
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        },
+        "case_results": []
+      }
+    }
+  ]
+}

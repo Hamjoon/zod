@@ -1,0 +1,1 @@
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(10,10): error TS2348: Value of type '$constructor<ZodNull, $ZodNullDef>' is not callable. Did you mean to include 'new'?

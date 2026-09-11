@@ -1,0 +1,151 @@
+{
+  "seed": 20260904,
+  "python": "3.14.1",
+  "method": "sample-units.py: D3 pool and stratified random sample.\nPool = units kept by the token filter (results/units-selected.json) minus $constructor units whose\ninitializer is a separately defined identifier minus units without dev coverage data\n(dev-baseline/dev-coverage-units.json, has_coverage_data == false, line reading).\nSample: 2 core, 2 classic, 1 mini, drawn with Python random.Random(20260904).sample(sorted_ids, k) per stratum\nin the order core, classic, mini. Output: results/units-sampled.json.\nRun from the zod repo root: ../.venv/bin/python experiments/pilot-2026-09/scripts/sample-units.py",
+  "counts": {
+    "population": 233,
+    "kept_by_token_rule": 232,
+    "excluded_identifier_initializer": 4,
+    "excluded_no_coverage_data": 0,
+    "pool": 228,
+    "pool_by_stratum": {
+      "core": 93,
+      "classic": 68,
+      "mini": 67
+    }
+  },
+  "exclusions": {
+    "over_token_limit": [
+      "165-JSONSchemaGenerator"
+    ],
+    "identifier_initializer": [
+      "001-ZodError",
+      "002-ZodRealError",
+      "095-$ZodError",
+      "096-$ZodRealError"
+    ],
+    "no_coverage_data": []
+  },
+  "sampled": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "kind_label": "$constructor",
+      "loc": 21,
+      "unit_tokens": 186,
+      "prompt_tokens": {
+        "ZSL": 252,
+        "FSL": 2374,
+        "COT": 360,
+        "TOT": 315,
+        "GTOT": 440
+      },
+      "max_prompt_tokens": 2374,
+      "dev_line_pct": 100.0,
+      "dev_executable_lines": 7,
+      "dev_covered_lines": 7,
+      "dev_branch_pct": 100.0,
+      "dev_branches_total": 1,
+      "dev_branches_covered": 1
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "kind_label": "$constructor",
+      "loc": 159,
+      "unit_tokens": 1168,
+      "prompt_tokens": {
+        "ZSL": 1230,
+        "FSL": 3352,
+        "COT": 1336,
+        "TOT": 1295,
+        "GTOT": 1416
+      },
+      "max_prompt_tokens": 3352,
+      "dev_line_pct": 100.0,
+      "dev_executable_lines": 81,
+      "dev_covered_lines": 81,
+      "dev_branch_pct": 96.15,
+      "dev_branches_total": 52,
+      "dev_branches_covered": 50
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "kind_label": "$constructor",
+      "loc": 58,
+      "unit_tokens": 457,
+      "prompt_tokens": {
+        "ZSL": 516,
+        "FSL": 2638,
+        "COT": 622,
+        "TOT": 583,
+        "GTOT": 703
+      },
+      "max_prompt_tokens": 2638,
+      "dev_line_pct": 100.0,
+      "dev_executable_lines": 35,
+      "dev_covered_lines": 35,
+      "dev_branch_pct": 71.43,
+      "dev_branches_total": 7,
+      "dev_branches_covered": 5
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "kind_label": "$constructor",
+      "loc": 7,
+      "unit_tokens": 81,
+      "prompt_tokens": {
+        "ZSL": 140,
+        "FSL": 2262,
+        "COT": 246,
+        "TOT": 207,
+        "GTOT": 327
+      },
+      "max_prompt_tokens": 2262,
+      "dev_line_pct": 100.0,
+      "dev_executable_lines": 4,
+      "dev_covered_lines": 4,
+      "dev_branch_pct": 100.0,
+      "dev_branches_total": 1,
+      "dev_branches_covered": 1
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "kind_label": "$constructor",
+      "loc": 12,
+      "unit_tokens": 121,
+      "prompt_tokens": {
+        "ZSL": 182,
+        "FSL": 2304,
+        "COT": 289,
+        "TOT": 248,
+        "GTOT": 370
+      },
+      "max_prompt_tokens": 2304,
+      "dev_line_pct": 100.0,
+      "dev_executable_lines": 7,
+      "dev_covered_lines": 7,
+      "dev_branch_pct": 100.0,
+      "dev_branches_total": 1,
+      "dev_branches_covered": 1
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+--- week1/ZSL.txt
++++ week2/ZSL.txt
+@@ -1,3 +1,4 @@
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named {class_name}. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The {class_name} class is exported from `{module_specifier}` (path relative to the test file).
+ Here is the {class_name} class:
+ {source_code}
+--- week1/FSL.txt
++++ week2/FSL.txt
+@@ -5,5 +5,6 @@
+ {example_test_source}
+ 
+ As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named {class_name}. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The {class_name} class is exported from `{module_specifier}` (path relative to the test file).
+ Here is the {class_name} class:
+ {source_code}
+--- week1/COT.txt
++++ week2/COT.txt
+@@ -4,5 +4,6 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file ({class_name}.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
++The {class_name} class is exported from `{module_specifier}` (path relative to the test file).
+ Here is the {class_name} class:
+ {source_code}
+--- week1/TOT.txt
++++ week2/TOT.txt
+@@ -1,4 +1,5 @@
+ Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The {class_name} class is exported from `{module_specifier}` (path relative to the test file).
+ The TypeScript class is:
+ {source_code}
+ At the end they must propose one complete (including typical use cases, edge cases, and error scenarios) Vitest test file ({class_name}.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##
+--- week1/GTOT.txt
++++ week2/GTOT.txt
+@@ -4,6 +4,7 @@
+ - Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+ - Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+ - Merge all the individual test cases into a complete Vitest test file ({class_name}.test.ts) for the given TypeScript class.All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
++The {class_name} class is exported from `{module_specifier}` (path relative to the test file).
+ The TypeScript class is:
+ {source_code}
+ At the end they must propose one complete (including typical use cases, edge cases, and error scenarios) Vitest test file ({class_name}.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##

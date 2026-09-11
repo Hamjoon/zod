@@ -1,0 +1,2 @@
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(28,10): error TS2305: Module '"./regexes.js"' has no exported member 'regexes'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(29,10): error TS2305: Module '"./errors.js"' has no exported member 'errors'.

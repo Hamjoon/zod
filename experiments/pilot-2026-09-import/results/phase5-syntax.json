@@ -1,0 +1,92 @@
+[
+  {
+    "file": "experiments/pilot-2026-09-import/generated/038-ZodNull.COT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/038-ZodNull.GTOT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/038-ZodNull.TOT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/053-ZodEnum.COT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/053-ZodEnum.GTOT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/053-ZodEnum.TOT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/086-$ZodCheckUpperCase.GTOT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/086-$ZodCheckUpperCase.TOT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/098-$ZodType.COT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/098-$ZodType.GTOT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/098-$ZodType.TOT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/231-ZodMiniLazy.COT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/231-ZodMiniLazy.GTOT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/231-ZodMiniLazy.TOT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/086-$ZodCheckUpperCase.COT.test.ts",
+    "syntax_ok": true,
+    "error_count": 0,
+    "first_messages": []
+  }
+]

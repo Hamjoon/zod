@@ -1,0 +1,144 @@
+{
+  "tokenizer": {
+    "library": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base"
+  },
+  "units": {
+    "086-$ZodCheckUpperCase": {
+      "ZSL": {
+        "tokens": 276,
+        "sha256": "1e8204307f4b8219fd963f34166827a8be6a6c7cd2f2cbcca70847335fb2f141",
+        "chars": 1111
+      },
+      "FSL": {
+        "tokens": 2398,
+        "sha256": "a42e8944f09951d6e7426e94e7e1deef0a4af13e0d2a330b9c1522a414f11144",
+        "chars": 8768
+      },
+      "COT": {
+        "tokens": 384,
+        "sha256": "e8ff971784ecacf6ff1f3f73fcd14d8ba8c5d03ad6b11e2914cb4b45a02f05a4",
+        "chars": 1673
+      },
+      "TOT": {
+        "tokens": 339,
+        "sha256": "3f327bce16c1030826f07e1f79d3f6fb77801448ad700cce0499d4f66ecd4cd7",
+        "chars": 1430
+      },
+      "GTOT": {
+        "tokens": 464,
+        "sha256": "7f237753ce6d3a945c2f11e4eb1b88f01ba910ffa0277015ec71ce6a056f20ab",
+        "chars": 2082
+      }
+    },
+    "098-$ZodType": {
+      "ZSL": {
+        "tokens": 1252,
+        "sha256": "daf9b6b21cf71108fe100ec14032c8e3eb6162ea11486431e9e7d218586803da",
+        "chars": 4563
+      },
+      "FSL": {
+        "tokens": 3374,
+        "sha256": "1468b60e2db8a293fda9a87cd39e8ba78d39bf699ae46928120d7d46cecbb903",
+        "chars": 12220
+      },
+      "COT": {
+        "tokens": 1358,
+        "sha256": "6ce812936607e4173037b0e5f57fa67d380db4af0bdb14bc43f4dcf268961dd9",
+        "chars": 5115
+      },
+      "TOT": {
+        "tokens": 1317,
+        "sha256": "5ad040472ba6c26e18b776658c4f335db2152097cdba002fd772988e657fbcc4",
+        "chars": 4892
+      },
+      "GTOT": {
+        "tokens": 1438,
+        "sha256": "d1b260ddd293f9a781dc594f1b55e4ca7312e18baf0dfb049af8e677cc1477e3",
+        "chars": 5524
+      }
+    },
+    "053-ZodEnum": {
+      "ZSL": {
+        "tokens": 537,
+        "sha256": "ec59047ca78a169be788115a7949500133e1aece2f70495923ad5f86148cbe63",
+        "chars": 2039
+      },
+      "FSL": {
+        "tokens": 2659,
+        "sha256": "27c91e73091b6d6d44c37bd20ba8ff2f1443d9a53f4fd7b1cbd35f3cbd401705",
+        "chars": 9696
+      },
+      "COT": {
+        "tokens": 643,
+        "sha256": "737cefd9b295bb42bb7d124f1109e8adaa3e6a63af5d76c0cedd5b0ef9f5b44d",
+        "chars": 2590
+      },
+      "TOT": {
+        "tokens": 604,
+        "sha256": "506df4d2e1639b7cc2ab3ae6527c4f881aab6e7f63dcfdfe3a693b3d677285b4",
+        "chars": 2369
+      },
+      "GTOT": {
+        "tokens": 724,
+        "sha256": "21980476030219cdc8149227a1b235d34b8ddf2c136c45465481570e13ba7b9a",
+        "chars": 2999
+      }
+    },
+    "038-ZodNull": {
+      "ZSL": {
+        "tokens": 161,
+        "sha256": "89de6785acdb88bb1a33cf5cb75b10bfe48f3ddd1d475e30d484928e3ce8563f",
+        "chars": 629
+      },
+      "FSL": {
+        "tokens": 2283,
+        "sha256": "c330624883931dbb251981b34a9adf2f5761fb9e3d5803dbceef0f2114bb9650",
+        "chars": 8286
+      },
+      "COT": {
+        "tokens": 267,
+        "sha256": "2ff8b1c11ecdd0f2b85d09456c888a66f912372df73a3aeaf4a9147a782c2b24",
+        "chars": 1180
+      },
+      "TOT": {
+        "tokens": 228,
+        "sha256": "59ef743d4b6db3656465b491a0cbeefe813eed9152648b1a8cdc7997dc053444",
+        "chars": 959
+      },
+      "GTOT": {
+        "tokens": 348,
+        "sha256": "f9cedeb74351b59d711136cd88db5ffbcc20b48cb60ed3ddf58bc8a37ff00282",
+        "chars": 1589
+      }
+    },
+    "231-ZodMiniLazy": {
+      "ZSL": {
+        "tokens": 204,
+        "sha256": "1703b7a5b0f3871d3802c9c705cef73b0182fc8a66cfedfc98bd422928ed76b8",
+        "chars": 759
+      },
+      "FSL": {
+        "tokens": 2326,
+        "sha256": "03661a4cfe7f0f27c376e10a5e91920920d6cd3354d162010d159940626199b9",
+        "chars": 8416
+      },
+      "COT": {
+        "tokens": 311,
+        "sha256": "64316856d3533b46f0b05a57f8a602a73ec823c6b7df49832d910623577ab30b",
+        "chars": 1314
+      },
+      "TOT": {
+        "tokens": 270,
+        "sha256": "0936c22c6c79c977f83f65233ed94e16223d1d3ba9811080634966c936be717a",
+        "chars": 1085
+      },
+      "GTOT": {
+        "tokens": 392,
+        "sha256": "5adf1dba9be5a8ac8b35a9c4b383af4789e1b7010a4c77e91f76e1fb225c9124",
+        "chars": 1723
+      }
+    }
+  }
+}

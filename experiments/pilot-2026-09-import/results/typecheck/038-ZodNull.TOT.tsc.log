@@ -1,0 +1,4 @@
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(6,28): error TS2348: Value of type '$constructor<ZodNull, $ZodNullDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(41,59): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(47,20): error TS2339: Property 'errors' does not exist on type 'ZodError<unknown>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(70,43): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.

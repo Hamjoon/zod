@@ -1,0 +1,9 @@
+{
+  "extends": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/tsconfig.test.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-pilot-import/packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts"
+  ]
+}

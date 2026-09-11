@@ -1,0 +1,1580 @@
+[
+  {
+    "file": "experiments/pilot-2026-09-import/generated/038-ZodNull.COT.test.ts",
+    "test_count": 9,
+    "expect_calls": 20,
+    "file_loc": 147,
+    "assertion_roulette_tests": 6,
+    "assertion_roulette_share": 0.6667,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "should successfully parse `null`",
+        "line": 40,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "should throw a ZodError when parsing non\u2011null values (basic types)",
+        "line": 45,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "safeParse should succeed for `null` and fail for everything else",
+        "line": 53,
+        "expect_calls": 5,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "optional() should accept `undefined` in addition to `null`",
+        "line": 80,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "nullable() should return the same schema instance (no\u2011op)",
+        "line": 96,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "default() should supply a default when input is `undefined`",
+        "line": 112,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "should reject objects that masquerade as null (e.g., Object.create(null))",
+        "line": 125,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "should reject NaN (even though it is a number) and Infinity",
+        "line": 131,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "should reject functions and class instances",
+        "line": 137,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/038-ZodNull.GTOT.test.ts",
+    "test_count": 11,
+    "expect_calls": 16,
+    "file_loc": 142,
+    "assertion_roulette_tests": 5,
+    "assertion_roulette_share": 0.4545,
+    "magic_number_tests": 1,
+    "magic_number_share": 0.0909,
+    "tests": [
+      {
+        "name": "accepts exactly null",
+        "line": 17,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects undefined and all non\u2011null values",
+        "line": 22,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "returns success for null",
+        "line": 53,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "returns failure for any non\u2011null value",
+        "line": 62,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "parses undefined when optional is applied",
+        "line": 81,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "still rejects non\u2011null, non\u2011undefined values",
+        "line": 88,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "supplies null as default when input is undefined",
+        "line": 101,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "throws at schema construction if default is not null",
+        "line": 109,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [
+          "123"
+        ],
+        "assertion_roulette": false,
+        "magic_number": true
+      },
+      {
+        "name": "chaining optional() then default(null) works as expected",
+        "line": 116,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "calling parse with no argument behaves like undefined",
+        "line": 129,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "schema instance is a ZodType (instanceof check)",
+        "line": 135,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/038-ZodNull.TOT.test.ts",
+    "test_count": 6,
+    "expect_calls": 13,
+    "file_loc": 102,
+    "assertion_roulette_tests": 4,
+    "assertion_roulette_share": 0.6667,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "should parse null and return null",
+        "line": 12,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "`should throw ZodError when parsing ${String(val)} (${typeof",
+        "line": 39,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "safeParse(null) should succeed",
+        "line": 55,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "safeParse(undefined) should fail with proper error shape",
+        "line": 64,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "instance should be a ZodType",
+        "line": 78,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "optional() should allow undefined but still reject non\u2011null",
+        "line": 88,
+        "expect_calls": 4,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/053-ZodEnum.COT.test.ts",
+    "test_count": 13,
+    "expect_calls": 28,
+    "file_loc": 186,
+    "assertion_roulette_tests": 11,
+    "assertion_roulette_share": 0.8462,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "should expose the original enum mapping and options",
+        "line": 55,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extract should keep only the requested keys",
+        "line": 65,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extract with multiple keys should keep them in order of definition",
+        "line": 74,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exclude should remove the requested keys",
+        "line": 85,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exclude with multiple keys should remove all of them",
+        "line": 94,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extract with an empty array should produce an enum with no entries",
+        "line": 105,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exclude with an empty array should return an unchanged enum",
+        "line": 113,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extract should throw when a key does not exist in the enum",
+        "line": 124,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "exclude should throw when a key does not exist in the enum",
+        "line": 133,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "extract should accept a string as the second argument without breaking",
+        "line": 145,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exclude should accept a string as the second argument without breaking",
+        "line": 154,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extract should accept an object as the second argument (simulated)",
+        "line": 166,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exclude should accept an object as the second argument (simulated)",
+        "line": 177,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/053-ZodEnum.GTOT.test.ts",
+    "test_count": 10,
+    "expect_calls": 18,
+    "file_loc": 97,
+    "assertion_roulette_tests": 8,
+    "assertion_roulette_share": 0.8,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "extract \u2013 keeps only selected keys",
+        "line": 27,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exclude \u2013 removes selected keys",
+        "line": 35,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extract \u2013 empty array returns an enum with no entries",
+        "line": 44,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extract \u2013 duplicate keys are handled gracefully",
+        "line": 50,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extract \u2013 accepts a string as params without breaking",
+        "line": 56,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extract \u2013 throws when a non\u2011existent key is requested",
+        "line": 62,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "exclude \u2013 empty array returns a copy of the original enum",
+        "line": 72,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exclude \u2013 duplicate keys are ignored after first removal",
+        "line": 78,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exclude \u2013 accepts an object as params without breaking",
+        "line": 84,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exclude \u2013 throws when trying to remove a non\u2011existent key",
+        "line": 90,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/053-ZodEnum.TOT.test.ts",
+    "test_count": 11,
+    "expect_calls": 20,
+    "file_loc": 108,
+    "assertion_roulette_tests": 7,
+    "assertion_roulette_share": 0.6364,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "initialises `enum` and `options` from the definition",
+        "line": 18,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extracts a subset of keys (multiple keys)",
+        "line": 27,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extracts a subset of keys (single key)",
+        "line": 36,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "extract with an empty array returns an empty enum",
+        "line": 43,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "throws when a non\u2011existent key is supplied to extract",
+        "line": 50,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "accepts a string as the second argument (params) without breaking",
+        "line": 58,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "excludes a single key",
+        "line": 69,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "excludes multiple keys",
+        "line": 78,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exclude with an empty array returns an identical enum",
+        "line": 85,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "throws when a non\u2011existent key is supplied to exclude",
+        "line": 92,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "accepts an object as the second argument (params) without breaking",
+        "line": 100,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/086-$ZodCheckUpperCase.GTOT.test.ts",
+    "test_count": 14,
+    "expect_calls": 21,
+    "file_loc": 128,
+    "assertion_roulette_tests": 4,
+    "assertion_roulette_share": 0.2857,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "accepts a plain ASCII uppercase string",
+        "line": 24,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "accepts a single\u2011character uppercase string",
+        "line": 29,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects a mixed\u2011case string",
+        "line": 36,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects a fully lowercase string",
+        "line": 40,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects a string containing numbers",
+        "line": 44,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects a string containing symbols",
+        "line": 48,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects an empty string (pattern requires at least one character)",
+        "line": 55,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects whitespace\u2011only strings",
+        "line": 59,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects a string with leading/trailing spaces",
+        "line": 63,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "rejects non\u2011string primitives (number, boolean, null, undefined, object)",
+        "line": 68,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects Unicode uppercase letters if the default regex is ASCII\u2011only",
+        "line": 75,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "safeParse returns success:true for a valid uppercase string",
+        "line": 84,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "safeParse returns success:false for an invalid string",
+        "line": 92,
+        "expect_calls": 4,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "uses a custom pattern when provided via definition object",
+        "line": 109,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/086-$ZodCheckUpperCase.TOT.test.ts",
+    "test_count": 11,
+    "expect_calls": 18,
+    "file_loc": 179,
+    "assertion_roulette_tests": 3,
+    "assertion_roulette_share": 0.2727,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "assigns the default uppercase regex when no pattern is provided",
+        "line": 70,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "accepts plain ASCII uppercase strings",
+        "line": 78,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "accepts Unicode uppercase characters",
+        "line": 86,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects strings containing lowercase letters",
+        "line": 95,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects an empty string (no characters to be uppercase)",
+        "line": 104,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "accepts uppercase strings that contain numbers",
+        "line": 112,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "accepts uppercase strings that contain spaces and tabs",
+        "line": 120,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "accepts uppercase strings that contain symbols",
+        "line": 128,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "uses a custom pattern when supplied",
+        "line": 136,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "provides a safeParse method that returns success flag",
+        "line": 154,
+        "expect_calls": 4,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "exposes the expected internal structure",
+        "line": 167,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/098-$ZodType.COT.test.ts",
+    "test_count": 6,
+    "expect_calls": 12,
+    "file_loc": 223,
+    "assertion_roulette_tests": 4,
+    "assertion_roulette_share": 0.6667,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "creates a schema and validates synchronously when no checks are present",
+        "line": 44,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "runs a synchronous check and adds an issue when the check fails",
+        "line": 66,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "awaits an asynchronous check and propagates its issues",
+        "line": 99,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "throws $ZodAsyncError when an async check runs with ctx.async === false",
+        "line": 134,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "skips a check whose `when` predicate returns false",
+        "line": 163,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "`~standard.validate` returns a Promise when async checks are present",
+        "line": 195,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/098-$ZodType.GTOT.test.ts",
+    "test_count": 14,
+    "expect_calls": 21,
+    "file_loc": 237,
+    "assertion_roulette_tests": 6,
+    "assertion_roulette_share": 0.4286,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "validate() returns the value when no checks are present",
+        "line": 78,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "validate() returns issues when a synchronous failing check is attached",
+        "line": 84,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "validate() works with an async failing check when async is allowed",
+        "line": 94,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "skips a check when its `when` predicate returns false",
+        "line": 109,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "continues processing after a non\u2011aborting check adds an issue",
+        "line": 124,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "throws $ZodAsyncError when an async check runs in a sync context",
+        "line": 137,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "defers `run` assignment when no checks are present (deferred initializer)",
+        "line": 155,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "validates simple string without checks",
+        "line": 170,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "fails synchronously when a check adds an issue",
+        "line": 175,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "handles async checks correctly",
+        "line": 185,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "does not run a check whose `when` returns false",
+        "line": 195,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "throws $ZodAsyncError for async check in sync context",
+        "line": 203,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "processes multiple checks, preserving non\u2011aborting behavior",
+        "line": 215,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "supports deferred initializer when no checks are defined",
+        "line": 229,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/098-$ZodType.TOT.test.ts",
+    "test_count": 8,
+    "expect_calls": 29,
+    "file_loc": 385,
+    "assertion_roulette_tests": 7,
+    "assertion_roulette_share": 0.875,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "creates a deferred initializer when no checks are supplied",
+        "line": 120,
+        "expect_calls": 4,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "runs synchronous checks after parsing and aborts after the first issue",
+        "line": 145,
+        "expect_calls": 7,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "awaits asynchronous checks and propagates issues",
+        "line": 200,
+        "expect_calls": 4,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "skips a check when its `when` predicate returns false",
+        "line": 242,
+        "expect_calls": 5,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "throws $ZodAsyncError if an async check runs while ctx.async === false",
+        "line": 288,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "returns `{ value }` when safeParse succeeds",
+        "line": 316,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "returns `{ issues }` when safeParse fails",
+        "line": 338,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "falls back to safeParseAsync when safeParse throws",
+        "line": 358,
+        "expect_calls": 4,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/231-ZodMiniLazy.COT.test.ts",
+    "test_count": 10,
+    "expect_calls": 23,
+    "file_loc": 220,
+    "assertion_roulette_tests": 6,
+    "assertion_roulette_share": 0.6,
+    "magic_number_tests": 3,
+    "magic_number_share": 0.3,
+    "tests": [
+      {
+        "name": "should be a callable constructor",
+        "line": 92,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "should create an instance when given a valid lazy definition",
+        "line": 96,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "instance should have a `parse` method that validates using the lazy schema",
+        "line": 104,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [
+          "123"
+        ],
+        "assertion_roulette": true,
+        "magic_number": true
+      },
+      {
+        "name": "instance should have a `safeParse` method that returns a result object",
+        "line": 115,
+        "expect_calls": 5,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "instance should support chaining methods like `optional` and `nullable`",
+        "line": 128,
+        "expect_calls": 4,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "should throw a clear error when constructed with a non\u2011object definition",
+        "line": 146,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [
+          "42"
+        ],
+        "assertion_roulette": true,
+        "magic_number": true
+      },
+      {
+        "name": "should throw when the definition lacks a `lazy` function",
+        "line": 153,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "should throw if the `lazy` property is not a function",
+        "line": 158,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "should propagate errors thrown inside the lazy resolver",
+        "line": 164,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "should handle circular references without infinite recursion (basic sanity check)",
+        "line": 174,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [
+          "10",
+          "10",
+          "20",
+          "20"
+        ],
+        "assertion_roulette": true,
+        "magic_number": true
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/231-ZodMiniLazy.GTOT.test.ts",
+    "test_count": 11,
+    "expect_calls": 18,
+    "file_loc": 256,
+    "assertion_roulette_tests": 6,
+    "assertion_roulette_share": 0.5455,
+    "magic_number_tests": 2,
+    "magic_number_share": 0.1818,
+    "tests": [
+      {
+        "name": "should expose a `parse` method that validates correct input",
+        "line": 99,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "should expose a `parse` method that throws on invalid input",
+        "line": 103,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [
+          "123"
+        ],
+        "assertion_roulette": false,
+        "magic_number": true
+      },
+      {
+        "name": "should expose a `safeParse` method that returns success for valid data",
+        "line": 109,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "should expose a `safeParse` method that returns failure for invalid data",
+        "line": 117,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "should support `optional` chaining without altering validation",
+        "line": 126,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "should support `nullable` chaining without altering validation",
+        "line": 134,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "should support `default` and return the default when parsing undefined",
+        "line": 142,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "should throw if the lazy definition is not a function",
+        "line": 164,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [
+          "123"
+        ],
+        "assertion_roulette": false,
+        "magic_number": true
+      },
+      {
+        "name": "should throw if the definition function returns a non\u2011schema",
+        "line": 169,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "should correctly handle recursive lazy schemas",
+        "line": 176,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "should propagate errors thrown inside the definition function",
+        "line": 232,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/231-ZodMiniLazy.TOT.test.ts",
+    "test_count": 5,
+    "expect_calls": 11,
+    "file_loc": 274,
+    "assertion_roulette_tests": 3,
+    "assertion_roulette_share": 0.6,
+    "magic_number_tests": 3,
+    "magic_number_share": 0.6,
+    "tests": [
+      {
+        "name": "should lazily resolve to a string schema and parse correctly",
+        "line": 117,
+        "expect_calls": 4,
+        "expects_with_message": 0,
+        "magic_literals": [
+          "123"
+        ],
+        "assertion_roulette": true,
+        "magic_number": true
+      },
+      {
+        "name": "should not invoke the lazy function during construction",
+        "line": 136,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [
+          "2"
+        ],
+        "assertion_roulette": true,
+        "magic_number": true
+      },
+      {
+        "name": "should throw if the lazy function returns something that is not a schema",
+        "line": 161,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "should throw during construction if `lazy` is not a function",
+        "line": 177,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [
+          "123"
+        ],
+        "assertion_roulette": false,
+        "magic_number": true
+      },
+      {
+        "name": "should handle circular lazy schemas without infinite recursion",
+        "line": 185,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      }
+    ]
+  },
+  {
+    "file": "experiments/pilot-2026-09-import/generated/086-$ZodCheckUpperCase.COT.test.ts",
+    "test_count": 14,
+    "expect_calls": 29,
+    "file_loc": 202,
+    "assertion_roulette_tests": 7,
+    "assertion_roulette_share": 0.5,
+    "magic_number_tests": 0,
+    "magic_number_share": 0,
+    "tests": [
+      {
+        "name": "should expose the expected public methods",
+        "line": 50,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "accepts a fully uppercase ASCII string",
+        "line": 57,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects a mixed\u2011case ASCII string",
+        "line": 62,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects a fully lowercase ASCII string",
+        "line": 67,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "accepts an empty string (empty string matches the uppercase regex)",
+        "line": 72,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects non\u2011string values (number, boolean, object, null, undefined)",
+        "line": 78,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "uses the default uppercase regex when no custom pattern is supplied",
+        "line": 101,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "allows a custom pattern to override the default",
+        "line": 112,
+        "expect_calls": 4,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "correctly validates Unicode uppercase characters",
+        "line": 126,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "rejects strings that contain whitespace characters other than space",
+        "line": 134,
+        "expect_calls": 1,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": false,
+        "magic_number": false
+      },
+      {
+        "name": "safeParse returns a success result for valid input",
+        "line": 142,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "safeParse returns a failure result with proper error shape for invalid input",
+        "line": 151,
+        "expect_calls": 5,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "optional() creates a schema that also accepts undefined",
+        "line": 167,
+        "expect_calls": 3,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      },
+      {
+        "name": "behaves like a typical Zod string schema with an uppercase format constraint",
+        "line": 186,
+        "expect_calls": 2,
+        "expects_with_message": 0,
+        "magic_literals": [],
+        "assertion_roulette": true,
+        "magic_number": false
+      }
+    ]
+  }
+]

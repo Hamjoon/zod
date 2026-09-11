@@ -1,0 +1,9 @@
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(48,27): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(102,20): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(115,20): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(127,20): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(135,20): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(143,20): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(152,20): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(168,20): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(187,20): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?

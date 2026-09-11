@@ -1,0 +1,271 @@
+{
+  "rule": "run-coverage.py: Phase 6 (RQ5). For each structured extraction that loaded without error, copy it in place (D6),\nrun vitest with --coverage --coverage.reporter=json --coverage.include=<unit source file>, compute line/branch\ncoverage restricted to the unit's declaring statement range (same rule as the DEV baseline), then remove the copy.\nAlso records per (unit, technique): test cases, expect( calls, file LOC. Output: results/coverage/{unit}.{TECH}/ and\nresults/rq5-coverage.json. Run from the zod repo root.",
+  "rows": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/checks.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 175,
+      "expect_calls": 24,
+      "test_calls_static": 14,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/checks.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 131,
+      "expect_calls": 15,
+      "test_calls_static": 8,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 228,
+      "expect_calls": 12,
+      "test_calls_static": 7,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 96.15,
+        "executable_lines": 81,
+        "branches_total": 52
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 394,
+      "expect_calls": 23,
+      "test_calls_static": 9,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 96.15,
+        "executable_lines": 81,
+        "branches_total": 52
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 202,
+      "expect_calls": 11,
+      "test_calls_static": 6,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 96.15,
+        "executable_lines": 81,
+        "branches_total": 52
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 142,
+      "expect_calls": 20,
+      "test_calls_static": 11,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 71.43,
+        "executable_lines": 35,
+        "branches_total": 7
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 150,
+      "expect_calls": 24,
+      "test_calls_static": 11,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 71.43,
+        "executable_lines": 35,
+        "branches_total": 7
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 197,
+      "expect_calls": 37,
+      "test_calls_static": 16,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 71.43,
+        "executable_lines": 35,
+        "branches_total": 7
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 246,
+      "expect_calls": 33,
+      "test_calls_static": 15,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 102,
+      "expect_calls": 13,
+      "test_calls_static": 5,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 144,
+      "expect_calls": 23,
+      "test_calls_static": 16,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 205,
+      "expect_calls": 24,
+      "test_calls_static": 6,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 254,
+      "expect_calls": 13,
+      "test_calls_static": 6,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 177,
+      "expect_calls": 19,
+      "test_calls_static": 9,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    }
+  ]
+}

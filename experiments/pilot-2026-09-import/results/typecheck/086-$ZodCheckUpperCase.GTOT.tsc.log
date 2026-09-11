@@ -1,0 +1,2 @@
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(19,27): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(116,29): error TS2348: Value of type '$constructor<$ZodCheckUpperCase, $ZodCheckUpperCaseDef>' is not callable. Did you mean to include 'new'?

@@ -1,0 +1,930 @@
+{
+  "definitions": {
+    "syntax": "ts.createSourceFile parseDiagnostics empty",
+    "typecheck": "tsc --noEmit with a tsconfig extending packages/zod/tsconfig.test.json including only the in-place file; ok = exit 0 and no errors",
+    "execution": "vitest run with vitest.pilot.mts in place, one file at a time; pass_rate = passed/cases per file; pooled = sum passed / sum cases per technique",
+    "denominators": "per-technique counts are over the 5 sampled units; a unit with no structured extraction counts as not ok / 0 cases",
+    "typecheck_categories": "recomputed from tsc codes with the instruction mapping plus rulings R-02 and R-02b (TS2834 and TS2835 -> module_or_path_not_found); categories_phase5_mapping keeps the original Phase 5 mapping for audit"
+  },
+  "per_technique": {
+    "COT": {
+      "units": 5,
+      "structured_files": 5,
+      "syntax_ok": 5,
+      "tsc_ok": 0,
+      "tsc_errors_in_file_total": 15,
+      "tsc_categories_total": {
+        "module_or_path_not_found": 6,
+        "name_not_found": 3,
+        "other": 6
+      },
+      "files_loaded": 0,
+      "load_errors": 5,
+      "cases": 0,
+      "passed": 0,
+      "pass_rate_pooled": null,
+      "pass_rate_mean_per_file": null,
+      "failure_kinds_total": {
+        "load_error": 5
+      }
+    },
+    "TOT": {
+      "units": 5,
+      "structured_files": 4,
+      "syntax_ok": 4,
+      "tsc_ok": 0,
+      "tsc_errors_in_file_total": 29,
+      "tsc_categories_total": {
+        "module_or_path_not_found": 9,
+        "other": 10,
+        "property_does_not_exist": 10
+      },
+      "files_loaded": 0,
+      "load_errors": 4,
+      "cases": 0,
+      "passed": 0,
+      "pass_rate_pooled": null,
+      "pass_rate_mean_per_file": null,
+      "failure_kinds_total": {
+        "load_error": 4
+      }
+    },
+    "GTOT": {
+      "units": 5,
+      "structured_files": 5,
+      "syntax_ok": 5,
+      "tsc_ok": 0,
+      "tsc_errors_in_file_total": 15,
+      "tsc_categories_total": {
+        "module_or_path_not_found": 9,
+        "name_not_found": 3,
+        "other": 3
+      },
+      "files_loaded": 0,
+      "load_errors": 5,
+      "cases": 0,
+      "passed": 0,
+      "pass_rate_pooled": null,
+      "pass_rate_mean_per_file": null,
+      "failure_kinds_total": {
+        "load_error": 5
+      }
+    }
+  },
+  "rows": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "COT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 3,
+        "errors_elsewhere": 0,
+        "categories": {
+          "name_not_found": 3
+        },
+        "categories_phase5_mapping": {
+          "name_not_found": 3
+        },
+        "codes": {
+          "TS2304": 3
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 43,
+            "col": 27,
+            "code": "TS2304",
+            "message": "Cannot find name '$ZodCheckUpperCase'."
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 85,
+            "col": 27,
+            "code": "TS2304",
+            "message": "Cannot find name '$ZodCheckUpperCase'."
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 159,
+            "col": 26,
+            "code": "TS2304",
+            "message": "Cannot find name '$ZodCheckUpperCase'."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "$ZodCheckUpperCase is not defined",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "TOT",
+      "detected": true,
+      "extracted_structured": false,
+      "syntax": null,
+      "typecheck": null,
+      "execution": null,
+      "note": "not extracted as a structured file (Phase 4)"
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "GTOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 3,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 3
+        },
+        "categories_phase5_mapping": {
+          "other": 3
+        },
+        "codes": {
+          "TS2834": 2,
+          "TS2835": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 6,
+            "col": 36,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 7,
+            "col": 25,
+            "code": "TS2835",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './regexes.js'?"
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+            "line": 8,
+            "col": 44,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./$ZodCheckUpperCase (resolved id: ./$ZodCheckUpperCase) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "COT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 4,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 2,
+          "other": 2
+        },
+        "categories_phase5_mapping": {
+          "other": 4
+        },
+        "codes": {
+          "TS2834": 2,
+          "TS6133": 2
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 15,
+            "col": 26,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 112,
+            "col": 14,
+            "code": "TS6133",
+            "message": "'payload' is declared but its value is never read."
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 173,
+            "col": 45,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./$ZodType (resolved id: ./$ZodType) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/core/$ZodType.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "TOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 20,
+        "errors_elsewhere": 0,
+        "categories": {
+          "other": 5,
+          "module_or_path_not_found": 5,
+          "property_does_not_exist": 10
+        },
+        "categories_phase5_mapping": {
+          "other": 10,
+          "property_does_not_exist": 10
+        },
+        "codes": {
+          "TS6133": 2,
+          "TS2834": 2,
+          "TS2835": 3,
+          "TS2339": 10,
+          "TS7053": 3
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 39,
+            "col": 25,
+            "code": "TS6133",
+            "message": "'name' is declared but its value is never read."
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 129,
+            "col": 26,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 130,
+            "col": 22,
+            "code": "TS2835",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './core.js'?"
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./$ZodType (resolved id: ./$ZodType) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/core/$ZodType.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "GTOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 4,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 3,
+          "other": 1
+        },
+        "categories_phase5_mapping": {
+          "other": 4
+        },
+        "codes": {
+          "TS2834": 1,
+          "TS2835": 2,
+          "TS7006": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 2,
+            "col": 26,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 3,
+            "col": 22,
+            "code": "TS2835",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './core.js'?"
+          },
+          {
+            "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+            "line": 4,
+            "col": 29,
+            "code": "TS2835",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './checks.js'?"
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./$ZodType (resolved id: ./$ZodType) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/core/$ZodType.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "COT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 3,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 1,
+          "other": 2
+        },
+        "categories_phase5_mapping": {
+          "other": 3
+        },
+        "codes": {
+          "TS2834": 1,
+          "TS2578": 2
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 15,
+            "col": 25,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 113,
+            "col": 5,
+            "code": "TS2578",
+            "message": "Unused '@ts-expect-error' directive."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 120,
+            "col": 5,
+            "code": "TS2578",
+            "message": "Unused '@ts-expect-error' directive."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./ZodEnum (resolved id: ./ZodEnum) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodEnum.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "TOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 3,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 1,
+          "other": 2
+        },
+        "categories_phase5_mapping": {
+          "other": 3
+        },
+        "codes": {
+          "TS2834": 1,
+          "TS2578": 2
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 20,
+            "col": 25,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 95,
+            "col": 5,
+            "code": "TS2578",
+            "message": "Unused '@ts-expect-error' directive."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 145,
+            "col": 5,
+            "code": "TS2578",
+            "message": "Unused '@ts-expect-error' directive."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./ZodEnum (resolved id: ./ZodEnum) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodEnum.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "GTOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 1,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 1
+        },
+        "categories_phase5_mapping": {
+          "other": 1
+        },
+        "codes": {
+          "TS2834": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+            "line": 13,
+            "col": 25,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./ZodEnum (resolved id: ./ZodEnum) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodEnum.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "COT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 2,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 1,
+          "other": 1
+        },
+        "categories_phase5_mapping": {
+          "other": 2
+        },
+        "codes": {
+          "TS2834": 1,
+          "TS7006": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 21,
+            "col": 25,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 228,
+            "col": 34,
+            "code": "TS7006",
+            "message": "Parameter 'val' implicitly has an 'any' type."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./ZodNull (resolved id: ./ZodNull) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodNull.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "TOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 1,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 1
+        },
+        "categories_phase5_mapping": {
+          "other": 1
+        },
+        "codes": {
+          "TS2834": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 18,
+            "col": 44,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./ZodNull (resolved id: ./ZodNull) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodNull.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "GTOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 5,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 1,
+          "name_not_found": 3,
+          "other": 1
+        },
+        "categories_phase5_mapping": {
+          "other": 2,
+          "name_not_found": 3
+        },
+        "codes": {
+          "TS2834": 1,
+          "TS2304": 3,
+          "TS7006": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 2,
+            "col": 25,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 80,
+            "col": 23,
+            "code": "TS2304",
+            "message": "Cannot find name 'vi'."
+          },
+          {
+            "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+            "line": 87,
+            "col": 23,
+            "code": "TS2304",
+            "message": "Cannot find name 'vi'."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./ZodNull (resolved id: ./ZodNull) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/classic/ZodNull.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "COT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 3,
+        "errors_elsewhere": 0,
+        "categories": {
+          "other": 1,
+          "module_or_path_not_found": 2
+        },
+        "categories_phase5_mapping": {
+          "other": 3
+        },
+        "codes": {
+          "TS2683": 1,
+          "TS2834": 2
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 42,
+            "col": 16,
+            "code": "TS2683",
+            "message": "'this' implicitly has type 'any' because it does not have a type annotation."
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 77,
+            "col": 23,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 78,
+            "col": 29,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./ZodMiniLazy (resolved id: ./ZodMiniLazy) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "TOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 5,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 2,
+          "other": 3
+        },
+        "categories_phase5_mapping": {
+          "other": 5
+        },
+        "codes": {
+          "TS2834": 2,
+          "TS18046": 1,
+          "TS2698": 1,
+          "TS6133": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 16,
+            "col": 29,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 48,
+            "col": 35,
+            "code": "TS18046",
+            "message": "'original' is of type 'unknown'."
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 58,
+            "col": 5,
+            "code": "TS2698",
+            "message": "Spread types may only be created from object types."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "[vitest] There was an error when mocking a module. If you are using \"vi.mock\" factory, make sure there are no top level variables inside, since this call is hoisted to top of the file. Read more: https://vitest.dev/api/vi.html#vi-mock",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "GTOT",
+      "detected": true,
+      "extracted_structured": true,
+      "syntax": {
+        "ok": true,
+        "error_count": 0,
+        "first_messages": []
+      },
+      "typecheck": {
+        "ok": false,
+        "errors_in_file": 2,
+        "errors_elsewhere": 0,
+        "categories": {
+          "module_or_path_not_found": 1,
+          "other": 1
+        },
+        "categories_phase5_mapping": {
+          "other": 2
+        },
+        "codes": {
+          "TS2834": 1,
+          "TS7006": 1
+        },
+        "first_errors": [
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 26,
+            "col": 29,
+            "code": "TS2834",
+            "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+          },
+          {
+            "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+            "line": 162,
+            "col": 39,
+            "code": "TS7006",
+            "message": "Parameter 'val' implicitly has an 'any' type."
+          }
+        ]
+      },
+      "execution": {
+        "runner_error": false,
+        "load_error": true,
+        "load_error_message": "Failed to load url ./ZodMiniLazy (resolved id: ./ZodMiniLazy) in /Users/donggi/_projects/experiment-projects/zod-week1-sep-pilot/zod-pilot/packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts. Does the file exist?",
+        "cases": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "pass_rate": null,
+        "failure_kinds": {
+          "load_error": 1
+        }
+      }
+    }
+  ]
+}

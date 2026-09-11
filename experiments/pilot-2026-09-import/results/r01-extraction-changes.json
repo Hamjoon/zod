@@ -1,0 +1,16 @@
+{
+  "rule": "START and END markers count only when they are the sole non-whitespace content on their line, allowing **, __, or backtick decoration.",
+  "week1_scratch_root": "/private/tmp/zod-week1-r01-extraction-20260910",
+  "week1_responses_checked": 15,
+  "week1_changes": [],
+  "week2_responses_checked": 15,
+  "week2_changes": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "COT",
+      "before": {"extracted_chars": 7443, "extracted_loc": 184, "syntax_ok": false},
+      "after": {"extracted_chars": 8240, "extracted_loc": 201, "syntax_ok": true},
+      "extracted_bytes_changed": true
+    }
+  ]
+}

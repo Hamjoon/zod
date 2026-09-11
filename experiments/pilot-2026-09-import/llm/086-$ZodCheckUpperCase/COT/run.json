@@ -1,0 +1,18 @@
+{
+  "unit_id": "086-$ZodCheckUpperCase",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-10T10:30:15.477227+00:00",
+  "latency_s": 45.835,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "Mancer 2",
+  "response_id": "gen-1789036215-KTpgCEtKt7wGvEpwy30f",
+  "content_chars": 8290,
+  "content_empty": false,
+  "completion_tokens": 2332,
+  "prompt_tokens_reported": 451,
+  "error": null
+}
