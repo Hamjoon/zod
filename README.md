@@ -49,7 +49,7 @@ experiments/pilot-2026-09/                    : t로 checkout한 zod 위에 얹�
                                                 run-biome.py → smells.ts → build-matrix.py (공통: pilot_common.py)
 ```
 
-## 결과 한 줄 요약
+## 결과 요약
 
 15개 응답 모두 구분자를 지켰고 (MSR 15/15) 14개가 구조를 갖춘 test 파일로 추출됐지만 (CSR 14/15, strict 9/15)
 tsc 통과 0/14, 실행은 import 단계에서 14/14 실패 (모델이 class를 같은 디렉토리의 동명 모듈에서 import).
