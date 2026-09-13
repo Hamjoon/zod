@@ -57,7 +57,7 @@ experiments/pilot-2026-09-import/                  : t로 checkout한 zod 위에
                                                      recheck-dev-coverage.py, build-comparison.py (공통: pilot_common.py)
 ```
 
-## 결과 한 줄 요약
+## 결과 요약
 
 15개 파일 모두 CUT import가 해결됐고 (1주차 0/14) 11개 파일이 로드돼 119개 case 중 35개가 통과했다 (29.4%).
 tsc 통과는 여전히 0/15이며 오류 73건 중 45건이 class를 `new` 없이 호출한 TS2348이다. 통과한 35개 중 33개는 ZodEnum에서 나왔다.
