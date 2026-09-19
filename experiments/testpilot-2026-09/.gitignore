@@ -1,3 +1,6 @@
 wrappers/*/node_modules
 .snippet-docs/
 results/probe/coverage/
+docker/.env
+wrappers/zod/README.md
+results/gen-*/coverageData/
