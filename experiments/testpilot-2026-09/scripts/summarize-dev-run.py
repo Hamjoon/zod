@@ -16,10 +16,15 @@ def main():
    for c in previous:cases.append(dict(c,status='failed',message_first_line=(f.get('message','').strip().splitlines() or ['File load failure'])[0],file_load_failed=True))
   else:
    loaded+=1
+   occurrences=collections.Counter()
    for c in assertions:
-    message='\n'.join(c.get('failureMessages',[]));cases.append(dict(file=name,fullName=c['fullName'],status=c['status'],message_first_line=(message.strip().splitlines() or [''])[0]))
+    occurrences[c['fullName']]+=1
+    message='\n'.join(c.get('failureMessages',[]));cases.append(dict(file=name,fullName=c['fullName'],occurrence=occurrences[c['fullName']],status=c['status'],message_first_line=(message.strip().splitlines() or [''])[0]))
  counts=collections.Counter(c['status'] for c in cases);summary=dict(files=len(files),files_loaded=loaded,files_load_failed=failed,cases=len(cases),passed=counts['passed'],failed=counts['failed'],skipped=sum(v for k,v in counts.items() if k not in ('passed','failed')))
- assert len({(c['file'],c['fullName']) for c in cases})==len(cases),'Duplicate case identities'
+ assert len({(c['file'],c['fullName'],c['occurrence']) for c in cases})==len(cases),'Duplicate case identities'
+ if baseline:
+  identity=lambda c:(c['file'],c['fullName'],c['occurrence'])
+  assert {identity(c) for c in cases}=={identity(c) for c in baseline},'Case identities differ from frozen baseline'
  (out/'dev-cases.json').write_text(json.dumps(cases,indent=2)+'\n');(out/'dev-summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(a.release,json.dumps(summary))
  if a.release=='v4.0.5':assert (summary['files'],summary['cases'],summary['passed'])==(81,888,888),'Control gate failed'
 if __name__=='__main__':main()

@@ -1,0 +1,18 @@
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Startup Error [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯⎯[39m
+Error: Projects definition references a non-existing file or a directory: /work/zod-versions/v4.5.0/packages/zod/vitest.compile.config.ts
+    at resolveTestProjectConfigs (file:///work/zod-versions/v4.5.0/node_modules/.pnpm/vitest@4.1.5_@opentelemetry+api@1.9.0_@types+node@22.13.13_vite@7.3.2_@types+node@22.13_16a806e5e53cf775cc8de614dde74a84/node_modules/vitest/dist/chunks/cli-api.Cjt90eJu.js:11263:11)
+    at resolveProjects (file:///work/zod-versions/v4.5.0/node_modules/.pnpm/vitest@4.1.5_@opentelemetry+api@1.9.0_@types+node@22.13.13_vite@7.3.2_@types+node@22.13_16a806e5e53cf775cc8de614dde74a84/node_modules/vitest/dist/chunks/cli-api.Cjt90eJu.js:11065:70)
+    at Vitest.resolveProjects (file:///work/zod-versions/v4.5.0/node_modules/.pnpm/vitest@4.1.5_@opentelemetry+api@1.9.0_@types+node@22.13.13_vite@7.3.2_@types+node@22.13_16a806e5e53cf775cc8de614dde74a84/node_modules/vitest/dist/chunks/cli-api.Cjt90eJu.js:13282:36)
+    at Vitest._setServer (file:///work/zod-versions/v4.5.0/node_modules/.pnpm/vitest@4.1.5_@opentelemetry+api@1.9.0_@types+node@22.13.13_vite@7.3.2_@types+node@22.13_16a806e5e53cf775cc8de614dde74a84/node_modules/vitest/dist/chunks/cli-api.Cjt90eJu.js:13134:31)
+    at BasicMinimalPluginContext.handler (file:///work/zod-versions/v4.5.0/node_modules/.pnpm/vitest@4.1.5_@opentelemetry+api@1.9.0_@types+node@22.13.13_vite@7.3.2_@types+node@22.13_16a806e5e53cf775cc8de614dde74a84/node_modules/vitest/dist/chunks/cli-api.Cjt90eJu.js:14175:5)
+    at _createServer (file:///work/zod-versions/v4.5.0/node_modules/.pnpm/vite@7.3.2_@types+node@22.13.13_jiti@2.6.1_lightningcss@1.32.0_terser@5.39.0_tsx@4.19.3_yaml@2.8.3/node_modules/vite/dist/node/chunks/config.js:25606:86)
+    at createViteServer (file:///work/zod-versions/v4.5.0/node_modules/.pnpm/vitest@4.1.5_@opentelemetry+api@1.9.0_@types+node@22.13.13_vite@7.3.2_@types+node@22.13_16a806e5e53cf775cc8de614dde74a84/node_modules/vitest/dist/chunks/cli-api.Cjt90eJu.js:8818:17)
+    at createVitest (file:///work/zod-versions/v4.5.0/node_modules/.pnpm/vitest@4.1.5_@opentelemetry+api@1.9.0_@types+node@22.13.13_vite@7.3.2_@types+node@22.13_16a806e5e53cf775cc8de614dde74a84/node_modules/vitest/dist/chunks/cli-api.Cjt90eJu.js:14205:18)
+    at prepareVitest (file:///work/zod-versions/v4.5.0/node_modules/.pnpm/vitest@4.1.5_@opentelemetry+api@1.9.0_@types+node@22.13.13_vite@7.3.2_@types+node@22.13_16a806e5e53cf775cc8de614dde74a84/node_modules/vitest/dist/chunks/cli-api.Cjt90eJu.js:14572:14)
+    at startVitest (file:///work/zod-versions/v4.5.0/node_modules/.pnpm/vitest@4.1.5_@opentelemetry+api@1.9.0_@types+node@22.13.13_vite@7.3.2_@types+node@22.13_16a806e5e53cf775cc8de614dde74a84/node_modules/vitest/dist/chunks/cli-api.Cjt90eJu.js:14515:14)
+
+
+
+
+exit=1

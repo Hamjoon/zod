@@ -1,0 +1,18 @@
+{
+  "survival-llm-matrix.csv": 139,
+  "survival-dev-matrix.csv": 888,
+  "survival-pairs.csv": 54,
+  "v4.0.5": {
+    "files_passed": 81,
+    "files_failed": 0,
+    "cases_passed": 888,
+    "cases_failed": 0
+  },
+  "v4.1.0": {
+    "files_passed": 69,
+    "files_failed": 12,
+    "cases_passed": 871,
+    "cases_failed": 17
+  },
+  "prior_raw_artifacts_unchanged": true
+}

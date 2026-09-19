@@ -184,3 +184,74 @@ Ground rule 5 stop applied: unanticipated `AssertionError: Duplicate case identi
 - Finalization commands: `git commit` with prescribed Stage S subject and body explicitly recording the stop, then `git push origin experiment/2026-09-week3-testpilot-zod`, followed by `git status -sb`. The user-facing completion message records their outcome.
 
 - Commit 043638ab created and pushed successfully; status synchronized, only pre-existing Claude outputs/ untracked. Final tracked-artifact audit found global *.log ignore omitted seven build.log files from the directory add. Explicit `git add -f` adds all seven required logs; supplemental attributed commit preserves them without rewriting the pushed history.
+
+## Authorized continuation
+
+User requested reading the stopped handover and carrying out its work. Read handover and both helpers, branch synchronized at 1bc6cba9; pre-existing Claude outputs/ retained. D-15: fix case identity to (file, fullName, one-based occurrence) in summarizer and analysis, preserve all 888 cases and assert identical identity sets on later runs. Reprocess existing control JSON; do not rerun LLM or developer control.
+- Host `python3 experiments/testpilot-2026-09/scripts/summarize-dev-run.py --release v4.0.5 --out .../v4.0.5`: exit 0; 81 loaded files, 888 cases, 888 passed, no failed/skipped. Restored control dev-status from original execution log (6.212 seconds). Added continuation-only runner refusing to overwrite any dev-stdout.txt.
+- `docker compose run --rm tp python3 /work/zod/experiments/testpilot-2026-09/scripts/resume-survival-dev.py`: per-command outcomes follow.
+- Developer continuation: npx commands use npm_config_yes=false to prohibit implicit installation of a different Vitest (D-16). Existing release-local Vitest is used; missing runner means harness unavailable.
+- v4.1.0: tests directory diff exit=0, release=['classic/tests', 'core/tests', 'mini/tests'], baseline=['classic/tests', 'core/tests', 'mini/tests'].
+- v4.1.0: remove release tests directories; copy frozen tests; SHA256 mapping identical to baseline, 81 .test.ts files.
+- cwd `/work/zod-versions/v4.1.0/packages/zod`: `npx vitest run src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.1.0/dev-run.json` -> exit 1, 6.323s; `results/survival/v4.1.0/dev-stdout.txt`
+- cwd `/work/zod/experiments/testpilot-2026-09`: `python3 scripts/summarize-dev-run.py --release v4.1.0 --out /work/zod/experiments/testpilot-2026-09/results/survival/v4.1.0` -> exit 0, 0.022s; v4.1.0 {"files": 81, "files_loaded": 81, "files_load_failed": 0, "cases": 888, "passed": 871, "failed": 17, "skipped": 0}
+- v4.2.0: tests directory diff exit=0, release=['classic/tests', 'core/tests', 'mini/tests'], baseline=['classic/tests', 'core/tests', 'mini/tests'].
+- v4.2.0: remove release tests directories; copy frozen tests; SHA256 mapping identical to baseline, 81 .test.ts files.
+- cwd `/work/zod-versions/v4.2.0/packages/zod`: `npx vitest run src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.2.0/dev-run.json` -> exit 1, 0.475s; `results/survival/v4.2.0/dev-stdout.txt`
+- v4.2.0: dev harness failed; see dev-stdout.txt.
+- v4.3.0: tests directory diff exit=0, release=['classic/tests', 'core/tests', 'mini/tests'], baseline=['classic/tests', 'core/tests', 'mini/tests'].
+- v4.3.0: remove release tests directories; copy frozen tests; SHA256 mapping identical to baseline, 81 .test.ts files.
+- cwd `/work/zod-versions/v4.3.0/packages/zod`: `npx vitest run src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.3.0/dev-run.json` -> exit 1, 0.326s; `results/survival/v4.3.0/dev-stdout.txt`
+- v4.3.0: dev harness failed; see dev-stdout.txt.
+- v4.4.0: tests directory diff exit=0, release=['classic/tests', 'core/tests', 'mini/tests'], baseline=['classic/tests', 'core/tests', 'mini/tests'].
+- v4.4.0: remove release tests directories; copy frozen tests; SHA256 mapping identical to baseline, 81 .test.ts files.
+- cwd `/work/zod-versions/v4.4.0/packages/zod`: `npx vitest run src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.4.0/dev-run.json` -> exit 1, 0.344s; `results/survival/v4.4.0/dev-stdout.txt`
+- v4.4.0: dev harness failed; see dev-stdout.txt.
+- v4.5.0: tests directory diff exit=0, release=['classic/tests', 'core/tests', 'mini/tests'], baseline=['classic/tests', 'core/tests', 'mini/tests'].
+- v4.5.0: remove release tests directories; copy frozen tests; SHA256 mapping identical to baseline, 81 .test.ts files.
+- cwd `/work/zod-versions/v4.5.0/packages/zod`: `npx vitest run src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.5.0/dev-run.json` -> exit 1, 0.413s; `results/survival/v4.5.0/dev-stdout.txt`
+- v4.5.0: dev harness failed; see dev-stdout.txt.
+- v4.6.0: tests directory diff exit=0, release=['classic/tests', 'core/tests', 'mini/tests'], baseline=['classic/tests', 'core/tests', 'mini/tests'].
+- v4.6.0: remove release tests directories; copy frozen tests; SHA256 mapping identical to baseline, 81 .test.ts files.
+- cwd `/work/zod-versions/v4.6.0/packages/zod`: `npx vitest run src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.6.0/dev-run.json` -> exit 1, 0.419s; `results/survival/v4.6.0/dev-stdout.txt`
+- v4.6.0: dev harness failed; see dev-stdout.txt.
+- cwd `/work/zod/experiments/testpilot-2026-09`: `du -sh /work/zod-versions` -> exit 0, 26.491s; 2.3G	/work/zod-versions
+- `du -sh /work/zod-versions`: 2.3G	/work/zod-versions
+
+- Regression validation uses synthetic copies of recorded JSON, never executes zod tests: duplicate-name individual failure and whole-file load failure both passed. Initial third check exposed an unterminated string in new handover prose; corrected quote before running analyzer.
+- All six pending developer attempts completed. v4.1.0: 871 passed / 17 failed, 81 loaded files. v4.2.0–v4.4.0: Vitest startup error, no projects found. v4.5.0: Vitest startup error, missing referenced project path. v4.6.0: missing installed Vitest, npm refused implicit download. These follow the explicit dev-harness-failed path, not test failures; no configuration changes or retries made.
+
+## Computed per-release results
+
+| Release | Build | Probe | LLM P/F/load/timeout/other | Dev loaded/passed/failed | Wall seconds |
+| --- | --- | --- | --- | --- | --- |
+| v4.0.5 | ok | ok | 139/0/0/0/0 | 81/888/0 | 91.061 |
+| v4.1.0 | ok | ok | 139/0/0/0/0 | 81/871/17 | 66.353 |
+| v4.2.0 | ok | ok | 139/0/0/0/0 | unavailable | 68.761 |
+| v4.3.0 | ok | ok | 139/0/0/0/0 | unavailable | 70.317 |
+| v4.4.0 | ok | ok | 139/0/0/0/0 | unavailable | 67.1 |
+| v4.5.0 | ok | ok | 138/1/0/0/0 | unavailable | 82.99 |
+| v4.6.0 | failed | not-run | unavailable | unavailable | 0.564 |
+
+## Computed per-release results
+
+| Release | Build | Probe | LLM P/F/load/timeout/other | Dev loaded/passed/failed | Wall seconds |
+| --- | --- | --- | --- | --- | --- |
+| v4.0.5 | ok | ok | 139/0/0/0/0 | 81/888/0 | 91.061 |
+| v4.1.0 | ok | ok | 139/0/0/0/0 | 81/871/17 | 66.353 |
+| v4.2.0 | ok | ok | 139/0/0/0/0 | unavailable | 68.761 |
+| v4.3.0 | ok | ok | 139/0/0/0/0 | unavailable | 70.317 |
+| v4.4.0 | ok | ok | 139/0/0/0/0 | unavailable | 67.1 |
+| v4.5.0 | ok | ok | 138/1/0/0/0 | unavailable | 82.99 |
+| v4.6.0 | failed | not-run | unavailable | unavailable | 0.564 |
+
+- `python3 -B scripts/test-survival-analysis.py`: all 3 regression tests pass (synthetic fixture validation, no experiment tests rerun). `python3 -B scripts/analyze-survival.py`: exit 0; generated complete analysis of available observations, matrices, pair-map and final handover. Re-executed analysis after adding exact startup errors; no tests re-executed.
+- Host integrity audit: CSV row counts 139 LLM / 888 dev / 54 function pairs; all developer identity triples unique; 17 first-release developer failures and one LLM first break at v4.5.0; unavailable flags preserved; prior LLM raw outputs, original control dev JSON/stdout and generated tests unchanged vs 1bc6cba9. Details: results/survival/continuation-checks.json.
+
+{"survival-llm-matrix.csv": 139, "survival-dev-matrix.csv": 888, "survival-pairs.csv": 54, "v4.0.5": {"files_passed": 81, "files_failed": 0, "cases_passed": 888, "cases_failed": 0}, "v4.1.0": {"files_passed": 69, "files_failed": 12, "cases_passed": 871, "cases_failed": 17}, "prior_raw_artifacts_unchanged": true}
+
+## Continuation finalization
+
+- Final Docker wrapper probe: original target ../../../../../packages/zod, `4.0.5 object function`, scratch absent; exit 0. Export size after all attempts: 2.3G. testpilot2 remains clean and synchronized.
+- `git diff --check`: exit 0. All changed/new task files are under experiments/; pre-existing untracked Claude outputs/ untouched. The generated summary explicitly limits no-observed-break counts to available releases. Dev v4.1.0: 69 files passed / 12 files failed, 871 cases passed / 17 failed; control 81 files / 888 cases passed.
+- Commit/push continuation with required attribution; final remote synchronization is checked and reported to the user. No report or archive branch created.
