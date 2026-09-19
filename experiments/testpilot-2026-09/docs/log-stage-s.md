@@ -270,3 +270,99 @@ User requested reading the stopped handover and carrying out its work. Read hand
 | v4.5.0 | ok | ok | 138/1/0/0/0 | unavailable | 82.99 |
 | v4.6.0 | failed | not-run | unavailable | unavailable | 0.564 |
 - Final whitespace audit vs 1bc6cba9 passes after excluding verbatim dev-stdout.txt only. CSV parsed values unchanged by LF normalization. Main continuation commit de072430 pushed; supplemental formatting commit preserves raw evidence.
+
+## Continuation 2 (addendum 2)
+
+Read supplied addendum, current handover and command-log tail. Branch at 1fd2e532, synchronized; only pre-existing Claude outputs/ untracked. testpilot2 still 31c01799. No model calls or credentials read.
+- Step 1: moved v4.0.5 prior developer files to dev-attempt1/: dev-run.json, dev-stdout.txt, dev-status.json, dev-cases.json, dev-summary.json, tests-dirs-release.txt, tests-dirs-t.txt. LLM/build/devtest-diff files untouched.
+- Step 1: moved v4.1.0 prior developer files to dev-attempt1/: dev-run.json, dev-stdout.txt, dev-status.json, dev-cases.json, dev-summary.json, tests-dirs-release.txt, tests-dirs-t.txt. LLM/build/devtest-diff files untouched.
+- Step 1: moved v4.2.0 prior developer files to dev-attempt1/: dev-stdout.txt, dev-status.json, tests-dirs-release.txt, tests-dirs-t.txt. LLM/build/devtest-diff files untouched.
+- Step 1: moved v4.3.0 prior developer files to dev-attempt1/: dev-stdout.txt, dev-status.json, tests-dirs-release.txt, tests-dirs-t.txt. LLM/build/devtest-diff files untouched.
+- Step 1: moved v4.4.0 prior developer files to dev-attempt1/: dev-stdout.txt, dev-status.json, tests-dirs-release.txt, tests-dirs-t.txt. LLM/build/devtest-diff files untouched.
+- Step 1: moved v4.5.0 prior developer files to dev-attempt1/: dev-stdout.txt, dev-status.json, tests-dirs-release.txt, tests-dirs-t.txt. LLM/build/devtest-diff files untouched.
+- Step 1: moved v4.6.0 prior developer files to dev-attempt1/: dev-stdout.txt, dev-status.json, tests-dirs-release.txt, tests-dirs-t.txt. LLM/build/devtest-diff files untouched.
+- D-17: ignore nub packageManager project specification; use container pnpm. Container precondition: seven releases plus frozen snapshot, 81 .test.ts files.
+- v4.6.0 HUSKY=0 COREPACK_ENABLE_PROJECT_SPEC=0 `pnpm install --frozen-lockfile`: exit 1; appended build.log.
+- D-18: frozen install rejected; exact error retained in build.log; retry --no-frozen-lockfile.
+- v4.6.0 HUSKY=0 COREPACK_ENABLE_PROJECT_SPEC=0 `pnpm install --no-frozen-lockfile`: exit 1; appended build.log.
+- v4.6.0 environment `npx --no-install vitest --version`: exit 1; npm error npx canceled due to missing packages and no YES option: ["vitest@5.0.1"]
+npm notice
+npm notice New major version of npm available! 10.9.8 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-09-19T15_36_15_051Z-debug-0.log
+- v4.6.0 environment `node --version`: exit 0; v22.23.2
+- v4.6.0 environment `pnpm --version`: exit 0; 10.12.1
+- v4.6.0 build status: {"release": "v4.6.0", "install": false, "build": false, "probe": "not-run", "fallbacks": ["COREPACK_ENABLE_PROJECT_SPEC=0 (D-17)", "--no-frozen-lockfile (D-18)"], "error": "install failed: \u2009WARN\u2009 The \"workspaces\" field in package.json is not supported by pnpm. Create a \"pnpm-workspace.yaml\" file instead.\nLockfile is up to date, resolution step is skipped\n\u2009WARN\u2009 Broken lockfile: no entry for 'zod@4.5.4' in pnpm-lock.yaml\n\u2009ERR_PNPM_LOCKFILE_MISSING_DEPENDENCY\u2009 The lockfile is broken! Resolution step will be performed to fix it.\nProgress: resolved 0, reused 1, downloaded 0, added 0\n\n   \u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n   \u2502                                              \u2502\n   \u2502     Update available! 10.12.1 \u2192 12.4.2.      \u2502\n   \u2502     Changelog: https://pnpm.io/v/12.4.2      \u2502\n   \u2502   To update, run: corepack use pnpm@12.4.2   \u2502\n   \u2502                                              \u2502\n   \u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u2009ERR_PNPM_WORKSPACE_PKG_NOT_FOUND\u2009 In : \"zod@workspace:*\" is in the dependencies but no package named \"zod\" is present in the workspace\n\nThis error happened while installing a direct dependency of /work/zod-versions/v4.6.0\n\nPackages found in the workspace: \n", "exports": {"@zod/source": "./src/index.ts", "types": "./index.d.cts", "import": "./index.js", "require": "./index.cjs"}, "requireEntry": "./index.cjs", "entryExists": false, "wallSeconds": 1.877260585000002}
+- v4.0.5: replace all tests directories from frozen snapshot; SHA256 mapping identical, 81 test files; directory lists recorded.
+- D-19 v4.0.5: developer command from repository root with explicit project; fallback order per addendum.
+- v4.0.5: cwd `/work/zod-versions/v4.0.5` npm_config_yes=false `npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.0.5/dev-run.json` -> exit 0, 8.178s; appended dev-stdout.txt.
+- v4.0.5: `python3 /work/zod/experiments/testpilot-2026-09/scripts/summarize-dev-run.py --release v4.0.5 --out /work/zod/experiments/testpilot-2026-09/results/survival/v4.0.5` -> exit 1; Traceback (most recent call last):
+  File "/work/zod/experiments/testpilot-2026-09/scripts/summarize-dev-run.py", line 30, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/work/zod/experiments/testpilot-2026-09/scripts/summarize-dev-run.py", line 9, in main
+    data=json.loads((out/'dev-run.json').read_text());files=data['testResults'];assert len(files)==81, f'Expected 81 runtime files, found {len(files)}'
+                                                                                       ^^^^^^^^^^^^^^
+AssertionError: Expected 81 runtime files, found 162
+
+- Step 2: D-17 selected container pnpm 10.12.1 successfully. Frozen install failed: ERR_PNPM_LOCKFILE_MISSING_DEPENDENCY, missing zod@4.5.4. D-18 --no-frozen-lockfile also failed: ERR_PNPM_WORKSPACE_PKG_NOT_FOUND for zod@workspace:* (no pnpm workspace declaration). Exact outputs appended to build.log. Per explicit Step 2 fallback, stop v4.6.0 branch: no build, dev run, probe or LLM run; continue v4.0.5–v4.5.0. No workspace or manifest changes.
+- `docker compose run --rm tp bash -c 'set -e; for t in v4.0.5 v4.1.0 v4.2.0 v4.3.0 v4.4.0 v4.5.0; do python3 .../scripts/run-survival-dev.py --release "$t"; done'`: per-release outcomes follow; set -e enforces gates before later releases.
+
+- v4.0.5 root primary command exited 0 but included 162 files (runtime + typecheck) despite accepting --typecheck.enabled=false. Initial summarizer assertion: Expected 81 runtime files, found 162. D-20: apply the addendum's supplied runtime split rule to this existing JSON; exactly 81 unique baseline files have assertion durations and non-typecheck names/meta, so the split is unambiguous. Original JSON preserved as dev-run-unsplit.json; no test rerun. Runner now also applies this provided split when a successful primary command returns duplicate typecheck entries.
+- v4.0.5 gate after unambiguous runtime split: 81 files, 888 cases, 888 passed. Host summarizer exit 0; JSON postprocessing only. Continue at v4.1.0 without rerunning control.
+- v4.1.0: replace all tests directories from frozen snapshot; SHA256 mapping identical, 81 test files; directory lists recorded.
+- D-19 v4.1.0: developer command from repository root with explicit project; fallback order per addendum.
+- v4.1.0: cwd `/work/zod-versions/v4.1.0` npm_config_yes=false `npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.1.0/dev-run.json` -> exit 1, 8.775s; appended dev-stdout.txt.
+- D-20 v4.1.0: apply prescribed runtime/typecheck split; root command may emit typecheck entries even when the flag is accepted.
+- v4.1.0: split runtime JSON: 81 unique baseline files; all assertionResults.duration values non-null; name/projectName excludes typecheck; original retained in dev-run-unsplit.json.
+- v4.1.0: `python3 /work/zod/experiments/testpilot-2026-09/scripts/summarize-dev-run.py --release v4.1.0 --out /work/zod/experiments/testpilot-2026-09/results/survival/v4.1.0` -> exit 0; v4.1.0 {"files": 81, "files_loaded": 81, "files_load_failed": 0, "cases": 888, "passed": 871, "failed": 17, "skipped": 0}
+- v4.1.0 gate comparison: {"passed": 871, "failed": 17, "identicalFailingSet": true, "removed": [], "added": []}
+- v4.2.0: replace all tests directories from frozen snapshot; SHA256 mapping identical, 81 test files; directory lists recorded.
+- D-19 v4.2.0: developer command from repository root with explicit project; fallback order per addendum.
+- v4.2.0: cwd `/work/zod-versions/v4.2.0` npm_config_yes=false `npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.2.0/dev-run.json` -> exit 1, 11.729s; appended dev-stdout.txt.
+- D-20 v4.2.0: apply prescribed runtime/typecheck split; root command may emit typecheck entries even when the flag is accepted.
+- v4.2.0: Runtime/typecheck split ambiguous; 80 candidate entries.
+- v4.2.0: dev harness failed after fallbacks; exact errors retained.
+- v4.3.0: replace all tests directories from frozen snapshot; SHA256 mapping identical, 81 test files; directory lists recorded.
+- D-19 v4.3.0: developer command from repository root with explicit project; fallback order per addendum.
+- v4.3.0: cwd `/work/zod-versions/v4.3.0` npm_config_yes=false `npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.3.0/dev-run.json` -> exit 1, 13.509s; appended dev-stdout.txt.
+- D-20 v4.3.0: apply prescribed runtime/typecheck split; root command may emit typecheck entries even when the flag is accepted.
+- v4.3.0: Runtime/typecheck split ambiguous; 80 candidate entries.
+- v4.3.0: dev harness failed after fallbacks; exact errors retained.
+- v4.4.0: replace all tests directories from frozen snapshot; SHA256 mapping identical, 81 test files; directory lists recorded.
+- D-19 v4.4.0: developer command from repository root with explicit project; fallback order per addendum.
+- v4.4.0: cwd `/work/zod-versions/v4.4.0` npm_config_yes=false `npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.4.0/dev-run.json` -> exit 1, 13.267s; appended dev-stdout.txt.
+- D-20 v4.4.0: apply prescribed runtime/typecheck split; root command may emit typecheck entries even when the flag is accepted.
+- v4.4.0: Runtime/typecheck split ambiguous; 80 candidate entries.
+- v4.4.0: dev harness failed after fallbacks; exact errors retained.
+- v4.5.0: replace all tests directories from frozen snapshot; SHA256 mapping identical, 81 test files; directory lists recorded.
+- D-19 v4.5.0: developer command from repository root with explicit project; fallback order per addendum.
+- v4.5.0: cwd `/work/zod-versions/v4.5.0` npm_config_yes=false `npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.5.0/dev-run.json` -> exit 1, 11.783s; appended dev-stdout.txt.
+- D-20 v4.5.0: apply prescribed runtime/typecheck split; root command may emit typecheck entries even when the flag is accepted.
+- v4.5.0: Runtime/typecheck split ambiguous; 80 candidate entries.
+- v4.5.0: dev harness failed after fallbacks; exact errors retained.
+
+- Both root-command gates passed; v4.1.0 dev-attempt-compare.txt records 871/17 and identical failing set. All executed releases used primary --project zod command; no command fallback needed. Typecheck duplicates occurred despite the accepted flag. D-20 runtime projection was applied unambiguously at v4.0.5/v4.1.0.
+- v4.2.0–v4.5.0 root commands executed but supplied duration-based split selects only 80 of 81 files. classic/tests/json.test.ts runtime entry has fullName <anonymous>, status todo, meta {}, no duration; counterpart is meta.typecheck=true. This also changes the baseline case name/status, so no identity inferred. Under addendum split-validation failure path, mark harness failed and retain unsplit raw JSON; no test retries. Exact diagnostic added to dev-status.json for each release.
+
+## Computed per-release results
+
+| Release | Build | Probe | LLM P/F/load/timeout/other | Dev loaded/passed/failed | Wall seconds |
+| --- | --- | --- | --- | --- | --- |
+| v4.0.5 | ok | ok | 139/0/0/0/0 | 81/888/0 | 93.175 |
+| v4.1.0 | ok | ok | 139/0/0/0/0 | 81/871/17 | 68.867 |
+| v4.2.0 | ok | ok | 139/0/0/0/0 | unavailable | 80.02 |
+| v4.3.0 | ok | ok | 139/0/0/0/0 | unavailable | 83.589 |
+| v4.4.0 | ok | ok | 139/0/0/0/0 | unavailable | 80.071 |
+| v4.5.0 | ok | ok | 138/1/0/0/0 | unavailable | 94.381 |
+| v4.6.0 | failed | not-run | unavailable | unavailable | 1.877 |
+
+- Analysis script extended with ordered developer failure categories, individual failed-case lists grouped by file, and matched-function cross tables per release. Existing pair-map and unmatched list preserved; prior handover retained with appended Continuation 2. `python3 -B scripts/analyze-survival.py` exit 0; regression checks 3/3 pass.
+- Integrity verification (continuation2-checks.json): all dev-attempt1 files byte-identical to 1fd2e532 predecessors; LLM through v4.5.0 untouched; original v4.6.0 build log is a prefix of appended log; prior handover preserved; pair-map unchanged; exported source/config/lockfiles match tags; all frozen test copies still match snapshot; matrices 139/888/54 rows. v4.1.0 failures: 12 snapshot candidates and 5 assertions.
+
+## Continuation 2 finalization
+
+- Cleanup Docker command: readlink wrapper = ../../../../../packages/zod; Node package probe = 4.0.5; scratch-absent; du -sh /work/zod-versions = 2.3G; exit 0.
+- Stage only experiments/ work and explicitly force-add v4.6.0/build.log (global *.log ignore). Preserve raw output whitespace. Commit with prescribed subject and Codex trailer, push experiment branch, verify final synchronization. No report or archive branch.

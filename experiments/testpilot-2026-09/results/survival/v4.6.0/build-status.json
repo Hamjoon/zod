@@ -4,18 +4,17 @@
   "build": false,
   "probe": "not-run",
   "fallbacks": [
-    "--no-frozen-lockfile (mis-selected; D-13)",
-    "COREPACK_ENABLE_STRICT=0 (unsupported nub remains; D-14)"
+    "COREPACK_ENABLE_PROJECT_SPEC=0 (D-17)",
+    "--no-frozen-lockfile (D-18)"
   ],
-  "error": "Unsupported package manager specification (nub@0.8.3)",
-  "wallSeconds": 0.05725629200003368,
-  "buildExitCode": 1,
-  "requireEntry": "./index.cjs",
-  "entryExists": false,
+  "error": "install failed: \u2009WARN\u2009 The \"workspaces\" field in package.json is not supported by pnpm. Create a \"pnpm-workspace.yaml\" file instead.\nLockfile is up to date, resolution step is skipped\n\u2009WARN\u2009 Broken lockfile: no entry for 'zod@4.5.4' in pnpm-lock.yaml\n\u2009ERR_PNPM_LOCKFILE_MISSING_DEPENDENCY\u2009 The lockfile is broken! Resolution step will be performed to fix it.\nProgress: resolved 0, reused 1, downloaded 0, added 0\n\n   \u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n   \u2502                                              \u2502\n   \u2502     Update available! 10.12.1 \u2192 12.4.2.      \u2502\n   \u2502     Changelog: https://pnpm.io/v/12.4.2      \u2502\n   \u2502   To update, run: corepack use pnpm@12.4.2   \u2502\n   \u2502                                              \u2502\n   \u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u2009ERR_PNPM_WORKSPACE_PKG_NOT_FOUND\u2009 In : \"zod@workspace:*\" is in the dependencies but no package named \"zod\" is present in the workspace\n\nThis error happened while installing a direct dependency of /work/zod-versions/v4.6.0\n\nPackages found in the workspace: \n",
   "exports": {
     "@zod/source": "./src/index.ts",
     "types": "./index.d.cts",
     "import": "./index.js",
     "require": "./index.cjs"
-  }
+  },
+  "requireEntry": "./index.cjs",
+  "entryExists": false,
+  "wallSeconds": 1.877260585000002
 }

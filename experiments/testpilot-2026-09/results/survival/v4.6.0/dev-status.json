@@ -1,8 +1,9 @@
 {
   "release": "v4.6.0",
-  "vitestExitCode": 1,
-  "typecheckFlagAccepted": null,
-  "harness": "failed",
-  "wallSeconds": 0.507027334,
-  "error": "npm error npx canceled due to missing packages and no YES option: [\"vitest@5.0.1\"]"
+  "command": null,
+  "harness": "unavailable",
+  "fallbackUsed": null,
+  "vitestExitCode": null,
+  "wallSeconds": 0,
+  "error": "Not run: Step 2 D-18 install fallback failed with ERR_PNPM_WORKSPACE_PKG_NOT_FOUND; addendum says stop v4.6.0 branch and continue other releases."
 }

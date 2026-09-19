@@ -1,1 +1,1 @@
-NOT RUN: installation/build failed; Unsupported package manager specification (nub@0.8.3). This is unavailable, not a test failure.
+NOT RUN: Continuation 2 install failed after D-17/D-18; ERR_PNPM_WORKSPACE_PKG_NOT_FOUND. Build absent, no probe or LLM execution.

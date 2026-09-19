@@ -1,0 +1,8 @@
+{
+  "release": "v4.0.5",
+  "vitestExitCode": 0,
+  "typecheckFlagAccepted": true,
+  "harness": "ok",
+  "wallSeconds": 6.212,
+  "note": "Original successful control execution time from command log; raw JSON reprocessed, test not rerun."
+}

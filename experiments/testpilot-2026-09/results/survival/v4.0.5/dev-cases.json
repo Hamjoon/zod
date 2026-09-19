@@ -1,26 +1,5 @@
 [
   {
-    "file": "core/tests/index.test.ts",
-    "fullName": "test",
-    "occurrence": 1,
-    "status": "passed",
-    "message_first_line": ""
-  },
-  {
-    "file": "core/tests/index.test.ts",
-    "fullName": "test2",
-    "occurrence": 1,
-    "status": "passed",
-    "message_first_line": ""
-  },
-  {
-    "file": "core/tests/index.test.ts",
-    "fullName": "async validation",
-    "occurrence": 1,
-    "status": "passed",
-    "message_first_line": ""
-  },
-  {
     "file": "classic/tests/anyunknown.test.ts",
     "fullName": "check any inference",
     "occurrence": 1,
@@ -5658,6 +5637,27 @@
   {
     "file": "mini/tests/string.test.ts",
     "fullName": "z.jwt",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/index.test.ts",
+    "fullName": "test",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/index.test.ts",
+    "fullName": "test2",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/index.test.ts",
+    "fullName": "async validation",
     "occurrence": 1,
     "status": "passed",
     "message_first_line": ""

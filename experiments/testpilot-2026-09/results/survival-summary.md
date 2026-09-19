@@ -315,9 +315,6 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 
 | Dev file | Case | Occurrence | First break | Pass again |
 | --- | --- | --- | --- | --- |
-| core/tests/index.test.ts | test | 1 | never | False |
-| core/tests/index.test.ts | test2 | 1 | never | False |
-| core/tests/index.test.ts | async validation | 1 | never | False |
 | classic/tests/anyunknown.test.ts | check any inference | 1 | never | False |
 | classic/tests/anyunknown.test.ts | check unknown inference | 1 | never | False |
 | classic/tests/anyunknown.test.ts | check never inference | 1 | never | False |
@@ -1124,6 +1121,9 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | mini/tests/string.test.ts | z.base64 | 1 | never | False |
 | mini/tests/string.test.ts | z.e164 | 1 | never | False |
 | mini/tests/string.test.ts | z.jwt | 1 | never | False |
+| core/tests/index.test.ts | test | 1 | never | False |
+| core/tests/index.test.ts | test2 | 1 | never | False |
+| core/tests/index.test.ts | async validation | 1 | never | False |
 | core/tests/locales/be.test.ts | Belarusian localization pluralization rules array pluralization correctly pluralizes 1 array | 1 | never | False |
 | core/tests/locales/be.test.ts | Belarusian localization pluralization rules array pluralization correctly pluralizes 2 array | 1 | never | False |
 | core/tests/locales/be.test.ts | Belarusian localization pluralization rules array pluralization correctly pluralizes 5 array | 1 | never | False |
@@ -1228,23 +1228,23 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 
 ## Developer failures by file: v4.2.0
 
-Unavailable: developer harness failed before execution.
+Unavailable: no validated runtime-only developer result.
 
 ## Developer failures by file: v4.3.0
 
-Unavailable: developer harness failed before execution.
+Unavailable: no validated runtime-only developer result.
 
 ## Developer failures by file: v4.4.0
 
-Unavailable: developer harness failed before execution.
+Unavailable: no validated runtime-only developer result.
 
 ## Developer failures by file: v4.5.0
 
-Unavailable: developer harness failed before execution.
+Unavailable: no validated runtime-only developer result.
 
 ## Developer failures by file: v4.6.0
 
-Unavailable: developer harness failed before execution.
+Unavailable: no validated runtime-only developer result.
 
 ## Automatic file-name pairing
 
@@ -1360,12 +1360,232 @@ No exclusions; all 139 remain in the denominator.
 
 | Release | Install/build/env seconds | LLM seconds | Dev seconds | Total seconds |
 | --- | --- | --- | --- | --- |
-| v4.0.5 | 54.629 | 30.22 | 6.212 | 91.061 |
-| v4.1.0 | 33.954 | 25.962 | 6.436 | 66.353 |
-| v4.2.0 | 40.189 | 28.009 | 0.563 | 68.761 |
-| v4.3.0 | 39.627 | 30.278 | 0.413 | 70.317 |
-| v4.4.0 | 38.491 | 28.187 | 0.422 | 67.1 |
-| v4.5.0 | 53.668 | 28.831 | 0.491 | 82.99 |
-| v4.6.0 | 0.057 | 0 | 0.507 | 0.564 |
+| v4.0.5 | 54.629 | 30.22 | 8.327 | 93.175 |
+| v4.1.0 | 33.954 | 25.962 | 8.95 | 68.867 |
+| v4.2.0 | 40.189 | 28.009 | 11.821 | 80.02 |
+| v4.3.0 | 39.627 | 30.278 | 13.684 | 83.589 |
+| v4.4.0 | 38.491 | 28.187 | 13.393 | 80.071 |
+| v4.5.0 | 53.668 | 28.831 | 11.882 | 94.381 |
+| v4.6.0 | 1.877 | 0 | 0 | 1.877 |
 
-Sum of recorded per-release stages (not end-to-end wall time): 447.146 seconds.
+Sum of recorded per-release stages (not end-to-end wall time): 501.980 seconds.
+
+## Developer failure categories
+
+Ordered predicates: snapshot (Snapshot and mismatched), load (file_load_failed), assertion (starts AssertionError), other. Snapshot flags are candidates for manual review, not a final contract classification.
+
+| Release | Snapshot | Load | Assertion | Other |
+| --- | --- | --- | --- | --- |
+| v4.0.5 | 0 | 0 | 0 | 0 |
+| v4.1.0 | 12 | 0 | 5 | 0 |
+| v4.2.0 | unavailable | unavailable | unavailable | unavailable |
+| v4.3.0 | unavailable | unavailable | unavailable | unavailable |
+| v4.4.0 | unavailable | unavailable | unavailable | unavailable |
+| v4.5.0 | unavailable | unavailable | unavailable | unavailable |
+| v4.6.0 | unavailable | unavailable | unavailable | unavailable |
+
+### Failed developer cases grouped by file: v4.0.5
+
+| File | Case | Occurrence | Category | First message | Review flag |
+| --- | --- | --- | --- | --- | --- |
+
+### Matched-function cross table: v4.0.5
+
+Developer counts sum only the files in the unchanged automatic pairing map.
+
+| API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
+| --- | --- | --- | --- | --- |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | 21/0/0 |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | 2/0/0 |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | 7/0/0 |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | 8/0/0 |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | 6/0/0 |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | 9/0/0 |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | 2/0/0 |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | 17/0/0 |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | 11/0/0 |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | 34/0/0 |
+
+### Failed developer cases grouped by file: v4.1.0
+
+| File | Case | Occurrence | Category | First message | Review flag |
+| --- | --- | --- | --- | --- | --- |
+| classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 36` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 16` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+
+### Matched-function cross table: v4.1.0
+
+Developer counts sum only the files in the unchanged automatic pairing map.
+
+| API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
+| --- | --- | --- | --- | --- |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | 20/1/0 |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | 1/1/0 |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | 7/0/0 |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | 8/0/0 |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | 4/2/0 |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | 9/0/0 |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | 2/0/0 |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | 17/0/0 |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | 8/3/0 |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | 34/0/0 |
+
+### Failed developer cases grouped by file: v4.2.0
+
+| File | Case | Occurrence | Category | First message | Review flag |
+| --- | --- | --- | --- | --- | --- |
+
+### Matched-function cross table: v4.2.0
+
+Developer counts sum only the files in the unchanged automatic pairing map.
+
+| API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
+| --- | --- | --- | --- | --- |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | unavailable |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | unavailable |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | unavailable |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | unavailable |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | unavailable |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | unavailable |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | unavailable |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | unavailable |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | unavailable |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | unavailable |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | unavailable |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | unavailable |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | unavailable |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | unavailable |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | unavailable |
+
+### Failed developer cases grouped by file: v4.3.0
+
+| File | Case | Occurrence | Category | First message | Review flag |
+| --- | --- | --- | --- | --- | --- |
+
+### Matched-function cross table: v4.3.0
+
+Developer counts sum only the files in the unchanged automatic pairing map.
+
+| API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
+| --- | --- | --- | --- | --- |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | unavailable |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | unavailable |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | unavailable |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | unavailable |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | unavailable |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | unavailable |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | unavailable |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | unavailable |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | unavailable |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | unavailable |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | unavailable |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | unavailable |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | unavailable |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | unavailable |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | unavailable |
+
+### Failed developer cases grouped by file: v4.4.0
+
+| File | Case | Occurrence | Category | First message | Review flag |
+| --- | --- | --- | --- | --- | --- |
+
+### Matched-function cross table: v4.4.0
+
+Developer counts sum only the files in the unchanged automatic pairing map.
+
+| API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
+| --- | --- | --- | --- | --- |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | unavailable |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | unavailable |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | unavailable |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | unavailable |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | unavailable |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | unavailable |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | unavailable |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | unavailable |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | unavailable |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | unavailable |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | unavailable |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | unavailable |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | unavailable |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | unavailable |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | unavailable |
+
+### Failed developer cases grouped by file: v4.5.0
+
+| File | Case | Occurrence | Category | First message | Review flag |
+| --- | --- | --- | --- | --- | --- |
+
+### Matched-function cross table: v4.5.0
+
+Developer counts sum only the files in the unchanged automatic pairing map.
+
+| API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
+| --- | --- | --- | --- | --- |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | unavailable |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | unavailable |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | unavailable |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | unavailable |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | unavailable |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | unavailable |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | unavailable |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | unavailable |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | unavailable |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | unavailable |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | unavailable |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | unavailable |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | unavailable |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | unavailable |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | unavailable |
+
+### Failed developer cases grouped by file: v4.6.0
+
+| File | Case | Occurrence | Category | First message | Review flag |
+| --- | --- | --- | --- | --- | --- |
+
+### Matched-function cross table: v4.6.0
+
+Developer counts sum only the files in the unchanged automatic pairing map.
+
+| API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
+| --- | --- | --- | --- | --- |
+| zod.z.discriminatedUnion | 2 | unavailable | 21 | unavailable |
+| zod.z.file | 1 | unavailable | 2 | unavailable |
+| zod.z.readonly | 2 | unavailable | 7 | unavailable |
+| zod.z.map | 2 | unavailable | 8 | unavailable |
+| zod.z.date | 2 | unavailable | 3 | unavailable |
+| zod.z.tuple | 1 | unavailable | 6 | unavailable |
+| zod.z.array | 1 | unavailable | 9 | unavailable |
+| zod.z.nullable | 4 | unavailable | 3 | unavailable |
+| zod.z.prefault | 3 | unavailable | 2 | unavailable |
+| zod.z.catch | 2 | unavailable | 16 | unavailable |
+| zod.z.nonoptional | 3 | unavailable | 3 | unavailable |
+| zod.z.check | 4 | unavailable | 17 | unavailable |
+| zod.z.transform | 2 | unavailable | 16 | unavailable |
+| zod.z.preprocess | 4 | unavailable | 11 | unavailable |
+| zod.z.coerce.number | 1 | unavailable | 34 | unavailable |

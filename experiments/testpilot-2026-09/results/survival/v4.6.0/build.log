@@ -9,3 +9,34 @@ Unsupported package manager specification (nub@0.8.3)
 == exit=1
 Unsupported package manager specification (nub@0.8.3)
 == build exit=1
+== continuation 2 2026-09-19T15:36:14.306597+00:00 ['pnpm', 'install', '--frozen-lockfile']
+ WARN  The "workspaces" field in package.json is not supported by pnpm. Create a "pnpm-workspace.yaml" file instead.
+Lockfile is up to date, resolution step is skipped
+ ERR_PNPM_LOCKFILE_MISSING_DEPENDENCY  Broken lockfile: no entry for 'zod@4.5.4' in pnpm-lock.yaml
+
+This issue is probably caused by a badly resolved merge conflict.
+To fix the lockfile, run 'pnpm install --no-frozen-lockfile'.
+
+== exit=1
+== continuation 2 2026-09-19T15:36:14.993383+00:00 ['pnpm', 'install', '--no-frozen-lockfile']
+ WARN  The "workspaces" field in package.json is not supported by pnpm. Create a "pnpm-workspace.yaml" file instead.
+Lockfile is up to date, resolution step is skipped
+ WARN  Broken lockfile: no entry for 'zod@4.5.4' in pnpm-lock.yaml
+ ERR_PNPM_LOCKFILE_MISSING_DEPENDENCY  The lockfile is broken! Resolution step will be performed to fix it.
+Progress: resolved 0, reused 1, downloaded 0, added 0
+
+   ╭──────────────────────────────────────────────╮
+   │                                              │
+   │     Update available! 10.12.1 → 12.4.2.      │
+   │     Changelog: https://pnpm.io/v/12.4.2      │
+   │   To update, run: corepack use pnpm@12.4.2   │
+   │                                              │
+   ╰──────────────────────────────────────────────╯
+
+ ERR_PNPM_WORKSPACE_PKG_NOT_FOUND  In : "zod@workspace:*" is in the dependencies but no package named "zod" is present in the workspace
+
+This error happened while installing a direct dependency of /work/zod-versions/v4.6.0
+
+Packages found in the workspace: 
+
+== exit=1

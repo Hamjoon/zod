@@ -1,0 +1,69 @@
+{
+  "preservedPriorDevFiles": 34,
+  "llmThroughV450Unchanged": true,
+  "priorHandoverAndBuildLogPreserved": true,
+  "pairMapUnchanged": true,
+  "sourceIntegrity": [
+    {
+      "release": "v4.0.5",
+      "checkedFiles": 107,
+      "changed": []
+    },
+    {
+      "release": "v4.1.0",
+      "checkedFiles": 111,
+      "changed": []
+    },
+    {
+      "release": "v4.2.0",
+      "checkedFiles": 117,
+      "changed": []
+    },
+    {
+      "release": "v4.3.0",
+      "checkedFiles": 119,
+      "changed": []
+    },
+    {
+      "release": "v4.4.0",
+      "checkedFiles": 122,
+      "changed": []
+    },
+    {
+      "release": "v4.5.0",
+      "checkedFiles": 141,
+      "changed": []
+    },
+    {
+      "release": "v4.6.0",
+      "checkedFiles": 142,
+      "changed": []
+    }
+  ],
+  "allFrozenTestCopiesIdentical": true,
+  "survival-llm-matrix.csv": 139,
+  "survival-dev-matrix.csv": 888,
+  "survival-pairs.csv": 54,
+  "gates": {
+    "v4.0.5": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 888,
+      "failed": 0,
+      "skipped": 0
+    },
+    "v4.1.0": {
+      "passed": 871,
+      "failed": 17,
+      "identicalFailingSet": true,
+      "removed": [],
+      "added": []
+    }
+  },
+  "v410FailureCategories": {
+    "snapshot": 12,
+    "assertion": 5
+  }
+}

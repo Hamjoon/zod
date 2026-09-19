@@ -1,8 +1,23 @@
 {
   "release": "v4.3.0",
+  "harness": "failed",
+  "fallbackUsed": 0,
+  "attempts": [
+    {
+      "command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.3.0/dev-run.json",
+      "cwd": "/work/zod-versions/v4.3.0",
+      "fallback": 0,
+      "exitCode": 1,
+      "wallSeconds": 13.509130380999977
+    }
+  ],
+  "command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.3.0/dev-run.json",
+  "cwd": "/work/zod-versions/v4.3.0",
   "vitestExitCode": 1,
   "typecheckFlagAccepted": true,
-  "harness": "failed",
-  "wallSeconds": 0.412650124999999,
-  "error": "Error: No projects were found. Make sure your configuration is correct. The projects definition: ["
+  "typecheckFlagEffective": false,
+  "error": "Runtime/typecheck split validation failed: 80/81 duration-bearing runtime files. classic/tests/json.test.ts reports <anonymous> with status todo, meta {}, and no duration; its typecheck counterpart has meta.typecheck=true. No baseline identity or status inferred.",
+  "wallSeconds": 13.683886879999989,
+  "runtimeSplitCandidates": 80,
+  "runtimeSplitExpected": 81
 }

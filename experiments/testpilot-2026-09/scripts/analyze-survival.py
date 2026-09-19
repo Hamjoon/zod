@@ -19,6 +19,12 @@ def rebound(states,passing):
   if s!=passing:broken=True
   elif broken:return True
  return False
+def dev_category(c):
+ message=c.get('message_first_line','')
+ if 'Snapshot' in message and 'mismatched' in message:return 'snapshot'
+ if c.get('file_load_failed'):return 'load'
+ if message.startswith('AssertionError'):return 'assertion'
+ return 'other'
 def main():
  refs=load(D/'tags.json');tags=[r['tag'] for r in refs];later=tags[1:];S=load(R/'gen-n60-passing.json');sample=load(R/'api-sample-n60-s20260919.json');strata=dict(l.split('\t') for l in (R/'population-main.txt').read_text().splitlines())
  assert len(S)==139
@@ -64,15 +70,15 @@ def main():
  table(lines,['LLM test','API','First break','Pass again'],llm_break);table(lines,['Dev file','Case','Occurrence','First break','Pass again'],dev_break)
  for t in tags:
   if not dev[t]:
-   lines += [f'## Developer failures by file: {t}','','Unavailable: developer harness failed before execution.',''];continue
+   lines += [f'## Developer failures by file: {t}','','Unavailable: no validated runtime-only developer result.',''];continue
   lines += [f'## Developer failures by file: {t}',''];group=collections.defaultdict(list)
   for c in dev[t].values():
    if c['status']=='failed':group[c['file']].append(c)
   table(lines,['File','Failed cases','First message'],[[f,len(cs),cs[0]['message_first_line']] for f,cs in sorted(group.items())])
- files=sorted({k[0] for k in baseline});mapping={};unmatched=[];pair_rows=[]
+ files=sorted({k[0] for k in baseline});existing_map=optional(R/'pair-map.json',{});mapping={};unmatched=[];pair_rows=[]
  for api in funcs:
   name=api.split('.')[-1];kebab=re.sub(r'(?<!^)(?=[A-Z])','-',name).lower();names=list(dict.fromkeys([name,name.lower(),kebab,kebab+'s']))
-  matches=[f for f in files if Path(f).parent.as_posix() in ['classic/tests','core/tests','mini/tests'] and Path(f).name in [n+'.test.ts' for n in names]];mapping[api]=matches
+  matches=[f for f in files if Path(f).parent.as_posix() in ['classic/tests','core/tests','mini/tests'] and Path(f).name in [n+'.test.ts' for n in names]];matches=existing_map.get(api,matches);mapping[api]=matches
   if not matches:unmatched.append(api)
   count=sum(s['api']==api for s in S);keys=[k for k in baseline if k[0] in matches];row=[api,'; '.join(matches),count,len(keys)]
   for t in later:row += [survivors(t,api) if llm[t] else 'unavailable',sum(ds(t,k)=='passed' for k in keys) if matches and dev[t] else 'unmatched' if not matches else 'unavailable']
@@ -80,13 +86,41 @@ def main():
  (R/'pair-map.json').write_text(json.dumps(mapping,indent=2)+'\n');pair_header=['Function','Dev files','LLM baseline','Dev baseline',*[v for t in later for v in [t+' LLM survivors',t+' dev passed']]]
  writecsv('survival-pairs.csv',pair_header,pair_rows);lines+=['## Automatic file-name pairing','','Matches are filename-based; counts sum all exact/lowercase/kebab/plural matches across classic, core, and mini. This does not establish semantic equivalence between corpora.',''];table(lines,pair_header,pair_rows)
  lines+=['Functions with no automatic match:','',*[f'- `{api}`' for api in unmatched],'','## Flaky at t',''];flaky=[v for v in llm[tags[0]].values() if v['status']!='pass'];table(lines,['Test','Status','Error'],[[v['testName'],v['status'],v['err']] for v in flaky]);lines+=['No exclusions; all 139 remain in the denominator.','','## Measured wall times',''];table(lines,['Release','Install/build/env seconds','LLM seconds','Dev seconds','Total seconds'],wall);lines += [f"Sum of recorded per-release stages (not end-to-end wall time): {sum(r[-1] for r in wall):.3f} seconds.",'']
+ dev_category_rows=[];dev_candidates=[]
+ for t in tags:
+  counts=collections.Counter(dev_category(c) for c in dev[t].values() if c['status']=='failed')
+  dev_category_rows.append([t,*[counts[k] if dev[t] else 'unavailable' for k in ['snapshot','load','assertion','other']]])
+  for c in sorted(dev[t].values(),key=key):
+   if c['status']=='failed':dev_candidates.append([t,c['file'],c['fullName'],c['occurrence'],dev_category(c),c['message_first_line'],'likely non-contract assertion; manual review required' if dev_category(c)=='snapshot' else 'manual review required'])
+ lines+=['## Developer failure categories','','Ordered predicates: snapshot (Snapshot and mismatched), load (file_load_failed), assertion (starts AssertionError), other. Snapshot flags are candidates for manual review, not a final contract classification.',''];table(lines,['Release','Snapshot','Load','Assertion','Other'],dev_category_rows)
+ for t in tags:
+  lines += [f'### Failed developer cases grouped by file: {t}','']
+  table(lines,['File','Case','Occurrence','Category','First message','Review flag'],[r[1:] for r in dev_candidates if r[0]==t])
+  lines += [f'### Matched-function cross table: {t}','','Developer counts sum only the files in the unchanged automatic pairing map.','']
+  cross=[]
+  for api,matched in mapping.items():
+   if not matched:continue
+   ts=[v for v in S if v['api']==api];ks=[k for k in baseline if k[0] in matched]
+   lc=collections.Counter(ls(t,v['testName']) for v in ts);dc=collections.Counter(ds(t,k) for k in ks)
+   cross.append([api,len(ts),'/'.join(str(lc[k]) for k in ['pass','fail','load-error','timeout','other']) if llm[t] else 'unavailable',len(ks),'/'.join(str(v) for v in [dc['passed'],dc['failed'],sum(n for k,n in dc.items() if k not in ['passed','failed','unavailable'])]) if dev[t] else 'unavailable'])
+  table(lines,['API','LLM baseline','LLM pass/fail/load/timeout/other','Dev baseline','Dev passed/failed/skipped'],cross)
  (R/'survival-summary.md').write_text('\n'.join(lines))
- hand=['# Stage S handover','','All scheduled release attempts are recorded; survival is measurable only where the harness ran. Developer results exist only for v4.0.5 and v4.1.0; v4.2.0–v4.6.0 are unavailable. LLM results exist through v4.5.0; v4.6.0 is unavailable. No model calls; frozen generated tests and testpilot2 unchanged. No report or archive branch created.',''];table(hand,header,release_rows)
- hand+=['## Developer harness failures',''];table(hand,['Release','Startup error'],[[t,optional(D/t/'dev-status.json',{}).get('error','')] for t in tags if optional(D/t/'dev-status.json',{}).get('harness')=='failed'])
- hand+=['## Commands and deviations','','Validator: `/work/testpilot2/node_modules/.bin/nyc --cwd=$W --exclude=test-XXXXXX --reporter=json --report-dir=$coverageDir --temp-dir=$coverageDir /work/testpilot2/node_modules/.bin/mocha --full-trace --exit --allow-uncaught=false --reporter=json --reporter-option output=$reportFile -- $testFile`.','','Runner: `/work/testpilot2/node_modules/.bin/mocha --full-trace --exit --allow-uncaught=false --reporter=json --reporter-option output=/dev/stdout -- $W/test-s/$basename`.','','D-10 not needed: all tags found. D-11 removes nyc, as prescribed; identical Mocha flags, JSON destination changed to stdout; 5000 ms SIGKILL timeout. D-12 preserves a byte-identical frozen test-directory snapshot before the control replacement to avoid the instruction’s destructive self-copy. D-13 records an incorrectly selected no-frozen-lockfile retry at v4.6.0 (command text matched by the helper); no install or test occurred. D-14 records the corrected COREPACK_ENABLE_STRICT=0 fallback, which also fails with Unsupported package manager specification (nub@0.8.3). v4.6.0 build/probe are unavailable; no manager substitution or source edits made. D-15: continuation fixes the invalid helper uniqueness assumption using a one-based occurrence ordinal within each file/name; reprocessed the successful baseline JSON without rerunning tests. D-16: npm_config_yes=false prevents downloading an unpinned Vitest if the release-local runner is missing; v4.6.0 dev harness cannot start. v4.2.0 through v4.5.0 also fail during Vitest project configuration, before tests load; these are unavailable, not failed developer cases. Pre-existing untracked Claude outputs/ is retained as documented in Stage G.','','Vitest: `npx vitest run src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=$R/dev-run.json`, cwd each release packages/zod.','']
- table(hand,['Release','Install/build fallbacks','Vitest typecheck flag','Dev harness'],[[t,optional(D/t/'build-status.json',{}).get('fallbacks',[]),optional(D/t/'dev-status.json',{}).get('typecheckFlagAccepted'),optional(D/t/'dev-status.json',{}).get('harness')] for t in tags])
- control=optional(D/tags[0]/'dev-summary.json',{});hand += [f"Control: LLM {sum(v['status']=='pass' for v in llm[tags[0]].values())}/139; dev {control.get('files')} files, {control.get('passed')}/{control.get('cases')} passed.",''];table(hand,['Release','Install/build/env seconds','LLM seconds','Dev seconds','Total seconds'],wall);hand += [f"Recorded per-release stage total (excludes original setup, script work, corrective v4.6.0 commands, and cleanup): {sum(r[-1] for r in wall):.3f} seconds. See command log for setup and cleanup.",'','## Unmatched functions','',*[f'- `{api}`' for api in unmatched],'','## Manual second-pass questions','','Which failing assertions depend on error-message strings or internal structures instead of a public contract? The following are unclassified assertion-error candidates, selected only by the existing error predicate; inspect their unchanged sources manually.',''];table(hand,['Release','Test','API','Error text'],candidates);hand+=['## Cleanup and verification','','Wrapper restored to ../../../../../packages/zod and verified at 4.0.5; scratch test-s absent. Export trees and their node_modules retained outside the repository. Retained exports and snapshot occupy 2.3G after continuation. Integrity checks are recorded in docs/log-stage-s.md.','']
- (E/'docs/handover-stage-s.md').write_text('\n'.join(hand))
+ hand=['## Continuation 2','','The earlier sections above preserve the first attempts. This section records the addendum-2 commands and current results. Existing LLM runs through v4.5.0 were not rerun.',''];table(hand,header,release_rows)
+ hand += ['### Developer commands and gates','']
+ table(hand,['Release','Actual command','Working directory','Fallback','Runtime split','Harness'],[[t,(status:=optional(D/t/'dev-status.json',{})).get('command'),status.get('cwd'),status.get('fallbackUsed'),status.get('splitRule','none'),status.get('harness')] for t in tags])
+ table(hand,['Release','Unavailable reason'],[[t,(status:=optional(D/t/'dev-status.json',{})).get('error','')] for t in tags if optional(D/t/'dev-status.json',{}).get('harness')!='ok'])
+ control=optional(D/'v4.0.5/dev-summary.json',{});comparison=optional(D/'v4.1.0/dev-attempt-compare.txt',{})
+ hand += [f"Control gate: {control.get('files')} files, {control.get('cases')} cases, {control.get('passed')} passed.",f"v4.1.0 gate: {comparison.get('passed')} passed / {comparison.get('failed')} failed; failing identity set identical to dev-attempt1: {comparison.get('identicalFailingSet')}. Removed: {comparison.get('removed')}; added: {comparison.get('added')}.",'','### D-17–D-20 and v4.6.0','',
+ 'D-17: COREPACK_ENABLE_PROJECT_SPEC=0 bypassed nub@0.8.3 and used pnpm 10.12.1. Frozen install failed with ERR_PNPM_LOCKFILE_MISSING_DEPENDENCY (zod@4.5.4). D-18: --no-frozen-lockfile retry failed with ERR_PNPM_WORKSPACE_PKG_NOT_FOUND for zod@workspace:*. Per Step 2 fallback, the v4.6.0 branch stopped; no build, developer run, probe or LLM run was attempted after the failed install. All previous build log content retained.',
+ 'D-19: all executed developer commands use the release repository root and --project zod, with the addendum fallback sequence available. D-20: the primary command at v4.0.5 returned runtime plus typecheck results despite accepting the disabling flag. Applied the supplied unambiguous runtime split to that existing output, selecting entries with assertion durations, non-typecheck names and no meta.typecheck marker. Original JSON is preserved in dev-run-unsplit.json. The runner applies this rule whenever duplicate typecheck entries occur, without rerunning tests. No command without the disabling flag was needed unless explicitly listed in a release status. For split JSON, original aggregate reporter counters cover both modes; dev-summary.json contains the runtime totals.',
+ 'First developer attempts were moved intact to dev-attempt1/ for every release. No generated tests, testpilot2 files, or release source/configuration were edited.','']
+ table(hand,['Release','Install','Build','Probe','Fallbacks'],[[t,(status:=optional(D/t/'build-status.json',{})).get('install'),status.get('build'),status.get('probe'),status.get('fallbacks')] for t in tags])
+ hand+=['### Developer failure categories',''];table(hand,['Release','Snapshot','Load','Assertion','Other'],dev_category_rows)
+ hand+=['### Second-pass candidates','','LLM assertion failures (unclassified):',''];table(hand,['Release','Test','API','Error'],candidates)
+ hand+=['Developer failures grouped by release and file. Snapshot rows are flagged as likely non-contract assertions for manual review, not classified here.',''];table(hand,['Release','File','Case','Occurrence','Category','First message','Review flag'],dev_candidates)
+ hand+=['### Timing and cleanup',''];table(hand,['Release','Install/build/env seconds','LLM seconds','Dev seconds','Recorded total seconds'],wall)
+ hand += [f"Recorded per-release stage sum: {sum(r[-1] for r in wall):.3f} seconds. Earlier developer attempt timings remain in dev-attempt1; setup, script work and cleanup are outside this sum.",'','Wrapper target remains ../../../../../packages/zod; cleanup probe and export size are recorded in log-stage-s.md. No report or archive branch created.','']
+ handover=E/'docs/handover-stage-s.md';previous=handover.read_text().split('\n## Continuation 2\n',1)[0].rstrip();handover.write_text(previous+'\n\n'+'\n'.join(hand))
  with (E/'docs/log-stage-s.md').open('a') as f:
   rows=[];table(rows,['Release','Build','Probe','LLM P/F/load/timeout/other','Dev loaded/passed/failed','Wall seconds'],[[r[0],r[3],r[4],r[5],r[7],w[-1]] for r,w in zip(release_rows,wall)]);f.write('\n## Computed per-release results\n\n'+'\n'.join(rows))
  print(json.dumps({'releases':release_rows,'unmatched':unmatched,'wallSeconds':sum(r[-1] for r in wall)},indent=2))

@@ -1,7 +1,4 @@
 file,fullName,occurrence,status@v4.0.5,status@v4.1.0,status@v4.2.0,status@v4.3.0,status@v4.4.0,status@v4.5.0,status@v4.6.0,first_break
-core/tests/index.test.ts,test,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
-core/tests/index.test.ts,test2,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
-core/tests/index.test.ts,async validation,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
 classic/tests/anyunknown.test.ts,check any inference,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
 classic/tests/anyunknown.test.ts,check unknown inference,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
 classic/tests/anyunknown.test.ts,check never inference,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
@@ -808,6 +805,9 @@ mini/tests/string.test.ts,z.ipv6,1,passed,passed,unavailable,unavailable,unavail
 mini/tests/string.test.ts,z.base64,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
 mini/tests/string.test.ts,z.e164,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
 mini/tests/string.test.ts,z.jwt,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
+core/tests/index.test.ts,test,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
+core/tests/index.test.ts,test2,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
+core/tests/index.test.ts,async validation,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
 core/tests/locales/be.test.ts,Belarusian localization pluralization rules array pluralization correctly pluralizes 1 array,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
 core/tests/locales/be.test.ts,Belarusian localization pluralization rules array pluralization correctly pluralizes 2 array,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
 core/tests/locales/be.test.ts,Belarusian localization pluralization rules array pluralization correctly pluralizes 5 array,1,passed,passed,unavailable,unavailable,unavailable,unavailable,unavailable,
