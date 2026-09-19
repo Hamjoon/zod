@@ -1,0 +1,33 @@
+let mocha = require('mocha');
+let assert = require('assert');
+let zod = require('zod');
+
+describe('test zod', function() {
+    it('test zod.z.check', function(done) {
+        // Define a simple custom check function
+        const customFn = function(value) {
+            // For testing purposes, just return true for any input
+            return true;
+        };
+
+        // Invoke the zod.z.check method with the custom function
+        const result = zod.z.check(customFn);
+
+        // Verify that the result is an object
+        assert.ok(result, 'zod.z.check should return an object');
+
+        // Verify that the internal _zod.check property is set to the provided function
+        assert.ok(result._zod, 'Result should have a _zod property');
+        assert.strictEqual(result._zod.check, customFn, 'The _zod.check property should reference the original function');
+
+        // The original implementation does not set a `check` property on the returned object.
+        // If you need to identify the type of check, you can add it manually here:
+        // result.check = "custom";
+
+        // Optionally, ensure that the returned object has the expected type identifier.
+        // Since the library does not provide it, we simply verify that the property is undefined.
+        assert.strictEqual(result.check, undefined, 'The check type should be undefined (no explicit type set by zod)');
+
+        done();
+    });
+});

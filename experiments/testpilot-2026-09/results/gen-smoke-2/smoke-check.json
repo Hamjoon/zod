@@ -1,0 +1,32 @@
+{
+  "requestFailures": 0,
+  "prompts": 11,
+  "refinerPrompts": 9,
+  "eligiblePrompts": 8,
+  "requireFirst": 8,
+  "notRequireFirst": [],
+  "tests": 11,
+  "passes": 7,
+  "invalidSyntax": 0,
+  "syntaxRecords": [],
+  "stats": {
+    "nrTests": 11,
+    "nrPasses": 7,
+    "nrFailures": 4,
+    "nrPending": 0,
+    "nrOther": 0,
+    "snippetExtractionTime": 369.67162499999995,
+    "codexQueryTime": 0,
+    "totalTime": 162209.691865
+  },
+  "metaData": {
+    "packageName": "zod",
+    "useDocSnippets": true,
+    "useCodeSnippets": false,
+    "numSnippets": 3,
+    "snippetLength": 20,
+    "numCompletions": 1
+  },
+  "gatePassed": true,
+  "fixBIndicated": false
+}

@@ -5,7 +5,7 @@ EXP=/work/zod/experiments/testpilot-2026-09
 W=$EXP/wrappers/zod
 condition="$1"
 case "$condition" in
-  gen-smoke) API="$EXP/results/api-smoke-2.json" ;;
+  gen-smoke|gen-smoke-2|gen-smoke-3) API="$EXP/results/api-smoke-2.json" ;;
   gen-n60) API="$EXP/results/api-sample-n60-s20260919.json" ;;
   *) exit 2 ;;
 esac
