@@ -1,0 +1,36 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-19T15:03:22.636Z",
+    "end": "2026-09-19T15:03:22.638Z",
+    "duration": 2
+  },
+  "tests": [
+    {
+      "title": "test zod.string.min",
+      "fullTitle": "test zod test zod.string.min",
+      "file": "/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_227.js",
+      "duration": 2,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "test zod.string.min",
+      "fullTitle": "test zod test zod.string.min",
+      "file": "/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_227.js",
+      "duration": 2,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ]
+}

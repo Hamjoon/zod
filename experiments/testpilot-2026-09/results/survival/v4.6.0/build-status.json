@@ -1,0 +1,21 @@
+{
+  "release": "v4.6.0",
+  "install": false,
+  "build": false,
+  "probe": "not-run",
+  "fallbacks": [
+    "--no-frozen-lockfile (mis-selected; D-13)",
+    "COREPACK_ENABLE_STRICT=0 (unsupported nub remains; D-14)"
+  ],
+  "error": "Unsupported package manager specification (nub@0.8.3)",
+  "wallSeconds": 0.05725629200003368,
+  "buildExitCode": 1,
+  "requireEntry": "./index.cjs",
+  "entryExists": false,
+  "exports": {
+    "@zod/source": "./src/index.ts",
+    "types": "./index.d.cts",
+    "import": "./index.js",
+    "require": "./index.cjs"
+  }
+}

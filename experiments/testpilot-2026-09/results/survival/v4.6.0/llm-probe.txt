@@ -1,0 +1,1 @@
+NOT RUN: installation/build failed; Unsupported package manager specification (nub@0.8.3). This is unavailable, not a test failure.
