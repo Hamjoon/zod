@@ -9,7 +9,7 @@ def table(lines,header,rows):
  for row in rows:lines.append('| '+' | '.join(str(x).replace('|','\\|').replace('\n',' ') for x in row)+' |')
  lines.append('')
 def writecsv(name,headers,rows):
- with (R/name).open('w',newline='') as f:w=csv.writer(f);w.writerow(headers);w.writerows(rows)
+ with (R/name).open('w',newline='') as f:w=csv.writer(f,lineterminator="\n");w.writerow(headers);w.writerows(rows)
 def key(c):return c['file'],c['fullName'],c['occurrence']
 def firstbreak(states,passing):return next((t for t,s in states if s not in (passing,'unavailable')),'')
 def rebound(states,passing):

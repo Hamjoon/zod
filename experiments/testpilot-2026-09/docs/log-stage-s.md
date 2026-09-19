@@ -255,3 +255,18 @@ User requested reading the stopped handover and carrying out its work. Read hand
 - Final Docker wrapper probe: original target ../../../../../packages/zod, `4.0.5 object function`, scratch absent; exit 0. Export size after all attempts: 2.3G. testpilot2 remains clean and synchronized.
 - `git diff --check`: exit 0. All changed/new task files are under experiments/; pre-existing untracked Claude outputs/ untouched. The generated summary explicitly limits no-observed-break counts to available releases. Dev v4.1.0: 69 files passed / 12 files failed, 871 cases passed / 17 failed; control 81 files / 888 cases passed.
 - Commit/push continuation with required attribution; final remote synchronization is checked and reported to the user. No report or archive branch created.
+
+- Staged whitespace audit additionally found CSV CRLF row endings and verbatim Vitest stdout whitespace. Preserve raw stdout exactly; change CSV writer to explicit LF and regenerate derived analysis. The prior unstaged check did not cover newly staged CSVs. Final scoped whitespace check excludes only raw dev-stdout.txt evidence.
+
+## Computed per-release results
+
+| Release | Build | Probe | LLM P/F/load/timeout/other | Dev loaded/passed/failed | Wall seconds |
+| --- | --- | --- | --- | --- | --- |
+| v4.0.5 | ok | ok | 139/0/0/0/0 | 81/888/0 | 91.061 |
+| v4.1.0 | ok | ok | 139/0/0/0/0 | 81/871/17 | 66.353 |
+| v4.2.0 | ok | ok | 139/0/0/0/0 | unavailable | 68.761 |
+| v4.3.0 | ok | ok | 139/0/0/0/0 | unavailable | 70.317 |
+| v4.4.0 | ok | ok | 139/0/0/0/0 | unavailable | 67.1 |
+| v4.5.0 | ok | ok | 138/1/0/0/0 | unavailable | 82.99 |
+| v4.6.0 | failed | not-run | unavailable | unavailable | 0.564 |
+- Final whitespace audit vs 1bc6cba9 passes after excluding verbatim dev-stdout.txt only. CSV parsed values unchanged by LF normalization. Main continuation commit de072430 pushed; supplemental formatting commit preserves raw evidence.
