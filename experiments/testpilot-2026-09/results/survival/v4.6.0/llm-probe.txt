@@ -1,1 +1,1 @@
-NOT RUN: addendum 3 installation failed in packages/docs postinstall: nub: not found. No build, probe or LLM execution.
+4.6.0 object function

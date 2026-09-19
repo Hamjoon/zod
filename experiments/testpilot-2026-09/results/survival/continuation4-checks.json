@@ -1,0 +1,21 @@
+{
+  "earlierReleaseArtifactsUnchanged": 1785,
+  "devSummary": {
+    "files": 81,
+    "files_loaded": 81,
+    "files_load_failed": 0,
+    "cases": 888,
+    "passed": 834,
+    "failed": 53,
+    "skipped": 1
+  },
+  "llmResults": 139,
+  "llmRawFiles": 278,
+  "identitiesMatchBaseline": true,
+  "priorHandoverPreserved": true,
+  "priorBuildLogAndEnvPreserved": true,
+  "resolvedLockUnchanged": true,
+  "frozenTestsUnchanged": true,
+  "sourceFilesChecked": 142,
+  "sourceChanges": []
+}

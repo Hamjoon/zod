@@ -452,3 +452,282 @@ Developer failures by release and file. Snapshot rows are likely non-contract as
 Recorded stage sum: 544.430 seconds; v4.2.0–v4.5.0 developer times belong to the earlier runs, not new executions. Setup, reprocessing and cleanup are excluded.
 
 Cleanup verification and export size are recorded in log-stage-s.md. No report or archive branch created.
+
+## Continuation 4
+
+Only v4.6.0 was executed in this addendum. Developer and LLM artifacts for v4.0.5–v4.5.0 remain unchanged.
+
+| Tag | Commit | Date | Build | Probe | LLM P/F/load/timeout/other | LLM survival | Dev loaded/passed/failed/skipped | Dev survival | Dev A/M/D |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| v4.0.5 | 45afab0f846dffd591362b6f770017507eb185b5 | 2025-07-10 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/888/0/0 | 888/888 (100.00%) | 0/0/0 |
+| v4.1.0 | 2ca716d6313dcfab425d3555ac8bf85929bc57a4 | 2025-08-23 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/871/17/0 | 871/888 (98.09%) | 5/36/0 |
+| v4.2.0 | dcef9734f55fc1c8e73795a2be80c60fa7a4a568 | 2025-12-14 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/868/19/1 | 868/888 (97.75%) | 16/42/0 |
+| v4.3.0 | 1899684fc34d149ebb5d6f9fd95a588e94f27053 | 2025-12-30 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/864/23/1 | 864/888 (97.30%) | 20/49/0 |
+| v4.4.0 | d05f026e9e6eae0e1e6c2efbf11c89007ca40494 | 2026-04-29 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/853/34/1 | 853/888 (96.06%) | 27/51/0 |
+| v4.5.0 | 0a69bcb3d9554c6ec382ea9ba6b43c2421f3fa78 | 2026-08-28 | ok | ok | 138/1/0/0/0 | 138/139 (99.28%) | 81/838/49/1 | 838/888 (94.37%) | 49/61/0 |
+| v4.6.0 | 1c51cbe0fe23d09f8d520b31487d50a01588fae5 | 2026-09-09 | ok | ok | 138/1/0/0/0 | 138/139 (99.28%) | 81/834/53/1 | 834/888 (93.92%) | 55/62/0 |
+
+### D-24 / D-25 and dependency provenance
+
+D-24: pnpm install --no-frozen-lockfile --ignore-scripts under HUSKY=0 COREPACK_ENABLE_PROJECT_SPEC=0 skips the nub-based docs postinstall and husky prepare. nub was not installed.
+D-25: npx --no-install zshy --project tsconfig.build.json was run directly inside packages/zod. The root pnpm build and package postbuild (stub package.json writer and biome formatting) were not run. The required index.cjs, index.js and index.d.cts were produced directly, and the CommonJS entry was probed.
+The v4.6.0 dependency set is the addendum 3 resolution (D-22), not a claim of the original release dependency environment. The resolved lockfile remains recorded in results/survival/v4.6.0/pnpm-lock.resolved.yaml.
+
+| Package | Resolved version |
+| --- | --- |
+| vitest | 4.1.5 |
+| typescript | 5.5.4 |
+| zshy | 0.8.0 |
+| @biomejs/biome | 1.9.4 |
+
+| Install | Build | Probe | Lockfile changed | Fallbacks | Error |
+| --- | --- | --- | --- | --- | --- |
+| True | True | ok | False | ['COREPACK_ENABLE_PROJECT_SPEC=0 (D-17)', 'pnpm-workspace.yaml + --no-frozen-lockfile (D-22)', '--ignore-scripts (D-24)', 'direct zshy build; no postbuild (D-25)'] |  |
+
+| Developer command | Harness | Runtime split | Error |
+| --- | --- | --- | --- |
+| npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.6.0/dev-run.json | ok | meta.typecheck |  |
+
+| v4.6.0 corpus | Passed | Failed | Skipped/load-error | Timeout | Total |
+| --- | --- | --- | --- | --- | --- |
+| Developer | 834 | 53 | 1 | n/a | 888 |
+| LLM | 138 | 1 | 0 | 0 | 139 |
+
+D-21 meta.typecheck splitting and D-15 occurrence identities remain in force. The 81-file / 888-case identity gate and 139-result / 278-raw-file LLM checks are recorded in log-stage-s.md. Todo remains skipped and neither a break nor a survival.
+
+### Developer failure categories
+
+| Release | Snapshot | Load | Assertion | Other |
+| --- | --- | --- | --- | --- |
+| v4.0.5 | 0 | 0 | 0 | 0 |
+| v4.1.0 | 12 | 0 | 5 | 0 |
+| v4.2.0 | 13 | 0 | 6 | 0 |
+| v4.3.0 | 14 | 0 | 7 | 2 |
+| v4.4.0 | 20 | 0 | 10 | 4 |
+| v4.5.0 | 34 | 0 | 12 | 3 |
+| v4.6.0 | 34 | 0 | 16 | 3 |
+
+### Second-pass candidates
+
+LLM assertion failures remain unclassified:
+
+| Release | Test | API | Error |
+| --- | --- | --- | --- |
+| v4.5.0 | test_353.js | zod.z.parse | Got unwanted exception. Actual message: "[   {     "origin": "string",     "code": "invalid_format",     "format": "datetime",     "pattern": "/^(?:(?:\\d\\d[2468][048]\|\\d\\d[13579][26]\|\\d\\d0[48]\|[02468][048]00\|[13579][26]00)-02-29\|\\d{4}-(?:(?:0[13578]\|1[02])-(?:0[1-9]\|[12]\\d\|3[01])\|(?:0[469]\|1 |
+| v4.6.0 | test_353.js | zod.z.parse | Got unwanted exception. Actual message: "[   {     "origin": "string",     "code": "invalid_format",     "format": "datetime",     "pattern": "/^(?:(?:\\d\\d[2468][048]\|\\d\\d[13579][26]\|\\d\\d0[48]\|[02468][048]00\|[13579][26]00)-02-29\|\\d{4}-(?:(?:0[13578]\|1[02])-(?:0[1-9]\|[12]\\d\|3[01])\|(?:0[469]\|1 |
+
+Developer failures by release and file; snapshot rows are flagged as likely non-contract assertion candidates for manual review, not classified here.
+
+| Release | File | Case | Occurrence | Category | First message | Review flag |
+| --- | --- | --- | --- | --- | --- | --- |
+| v4.1.0 | classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 2` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.1.0 | classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| v4.1.0 | classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.1.0 | classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.1.0 | classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| v4.1.0 | classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 36` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 16` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 2` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.1.0 | classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 2` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.2.0 | classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| v4.2.0 | classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.2.0 | classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.2.0 | classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| v4.2.0 | classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 17` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.2.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | snapshot | Error: Snapshot `template literal parsing - failure - issue format 4` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 15` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 2` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.2.0 | classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 2` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.3.0 | classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| v4.3.0 | classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.3.0 | classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.3.0 | classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| v4.3.0 | classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 17` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.3.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | snapshot | Error: Snapshot `template literal parsing - failure - issue format 4` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/to-json-schema.test.ts | override: do not run on references | 1 | assertion | AssertionError: expected 12 to be 6 // Object.is equality | manual review required |
+| v4.3.0 | classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 12` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 2` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/to-json-schema.test.ts | z.file() | 1 | snapshot | Error: Snapshot `z.file() 3` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+| v4.3.0 | core/tests/locales/en.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function | manual review required |
+| v4.3.0 | core/tests/locales/tr.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function | manual review required |
+| v4.4.0 | classic/tests/catch.test.ts | enum | 1 | other | ZodError: [ | manual review required |
+| v4.4.0 | classic/tests/catch.test.ts | native enum | 1 | other | ZodError: [ | manual review required |
+| v4.4.0 | classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 2` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/function.test.ts | input validation error | 1 | snapshot | Error: Snapshot `input validation error 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/intersection.test.ts | object intersection: strict | 1 | assertion | AssertionError: expected true to deeply equal false | manual review required |
+| v4.4.0 | classic/tests/optional.test.ts | optionality | 1 | assertion | AssertionError: expected undefined to deeply equal 'optional' | manual review required |
+| v4.4.0 | classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.4.0 | classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| v4.4.0 | classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.4.0 | classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.4.0 | classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| v4.4.0 | classic/tests/string.test.ts | cuid | 1 | snapshot | Error: Snapshot `cuid 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 17` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - basic cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.4.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.4.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | snapshot | Error: Snapshot `template literal parsing - failure - issue format 2` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/to-json-schema.test.ts | describe with id | 1 | snapshot | Error: Snapshot `describe with id 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/to-json-schema.test.ts | extract schemas with id | 1 | snapshot | Error: Snapshot `extract schemas with id 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/to-json-schema.test.ts | override: do not run on references | 1 | assertion | AssertionError: expected 12 to be 6 // Object.is equality | manual review required |
+| v4.4.0 | classic/tests/to-json-schema.test.ts | overwrite id | 1 | snapshot | Error: Snapshot `overwrite id 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 12` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 2` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/to-json-schema.test.ts | top-level readonly | 1 | snapshot | Error: Snapshot `top-level readonly 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/to-json-schema.test.ts | z.file() | 1 | snapshot | Error: Snapshot `z.file() 3` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+| v4.4.0 | core/tests/locales/en.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function | manual review required |
+| v4.4.0 | core/tests/locales/tr.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function | manual review required |
+| v4.5.0 | classic/tests/array.test.ts | array length | 1 | snapshot | Error: Snapshot `array length 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 2` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/datetime.test.ts | datetime parsing with local and offset | 1 | other | ZodError: [ | manual review required |
+| v4.5.0 | classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/error.test.ts | dont short circuit on continuable errors | 1 | snapshot | Error: Snapshot `dont short circuit on continuable errors 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/error.test.ts | error serialization | 1 | snapshot | Error: Snapshot `error serialization 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/error.test.ts | z.config customError  | 1 | snapshot | Error: Snapshot `z.config customError  1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/function.test.ts | input validation error | 1 | snapshot | Error: Snapshot `input validation error 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/intersection.test.ts | object intersection: strict | 1 | assertion | AssertionError: expected true to deeply equal false | manual review required |
+| v4.5.0 | classic/tests/lazy.test.ts | opt passthrough | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| v4.5.0 | classic/tests/number.test.ts | .finite() validation | 1 | snapshot | Error: Snapshot `.finite() validation 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/number.test.ts | Infinity validation | 1 | snapshot | Error: Snapshot `Infinity validation 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/optional.test.ts | optionality | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| v4.5.0 | classic/tests/optional.test.ts | pipe optionality | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| v4.5.0 | classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.5.0 | classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| v4.5.0 | classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.5.0 | classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.5.0 | classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| v4.5.0 | classic/tests/string.test.ts | cuid | 1 | snapshot | Error: Snapshot `cuid 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/string.test.ts | ulid | 1 | snapshot | Error: Snapshot `ulid 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 17` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - basic cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.5.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.5.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | snapshot | Error: Snapshot `template literal parsing - failure - issue format 2` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | describe with id | 1 | snapshot | Error: Snapshot `describe with id 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | extract schemas with id | 1 | snapshot | Error: Snapshot `extract schemas with id 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | flatten simple intersections | 1 | snapshot | Error: Snapshot `flatten simple intersections 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | override execution order | 1 | snapshot | Error: Snapshot `override execution order 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | override: do not run on references | 1 | assertion | AssertionError: expected 12 to be 6 // Object.is equality | manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | overwrite id | 1 | snapshot | Error: Snapshot `overwrite id 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | toJSONSchema intersections | 1 | snapshot | Error: Snapshot `toJSONSchema > intersections 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 10` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 2` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | toJSONSchema string patterns | 1 | snapshot | Error: Snapshot `toJSONSchema > string patterns 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | toJSONSchema tuple | 1 | snapshot | Error: Snapshot `toJSONSchema > tuple 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | toJSONSchema unions | 1 | snapshot | Error: Snapshot `toJSONSchema > unions 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | top-level readonly | 1 | snapshot | Error: Snapshot `top-level readonly 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/to-json-schema.test.ts | z.file() | 1 | snapshot | Error: Snapshot `z.file() 3` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | classic/tests/validations.test.ts | string length | 1 | snapshot | Error: Snapshot `string length 1` mismatched | likely non-contract assertion; manual review required |
+| v4.5.0 | core/tests/locales/en.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function | manual review required |
+| v4.5.0 | core/tests/locales/tr.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function | manual review required |
+| v4.6.0 | classic/tests/array.test.ts | array length | 1 | snapshot | Error: Snapshot `array length 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/datetime.test.ts | datetime parsing with local and offset | 1 | other | ZodError: [ | manual review required |
+| v4.6.0 | classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/error.test.ts | dont short circuit on continuable errors | 1 | snapshot | Error: Snapshot `dont short circuit on continuable errors 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/error.test.ts | error serialization | 1 | snapshot | Error: Snapshot `error serialization 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/error.test.ts | z.config customError  | 1 | snapshot | Error: Snapshot `z.config customError  1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/function.test.ts | input validation error | 1 | snapshot | Error: Snapshot `input validation error 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/intersection.test.ts | object intersection: strict | 1 | assertion | AssertionError: expected true to deeply equal false | manual review required |
+| v4.6.0 | classic/tests/lazy.test.ts | opt passthrough | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| v4.6.0 | classic/tests/number.test.ts | .finite() validation | 1 | snapshot | Error: Snapshot `.finite() validation 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/number.test.ts | Infinity validation | 1 | snapshot | Error: Snapshot `Infinity validation 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/optional.test.ts | optionality | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| v4.6.0 | classic/tests/optional.test.ts | pipe optionality | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| v4.6.0 | classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| v4.6.0 | classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.6.0 | classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| v4.6.0 | classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| v4.6.0 | classic/tests/string.test.ts | cuid | 1 | snapshot | Error: Snapshot `cuid 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/string.test.ts | ulid | 1 | snapshot | Error: Snapshot `ulid 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 17` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - basic cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.6.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| v4.6.0 | classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | snapshot | Error: Snapshot `template literal parsing - failure - issue format 2` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | describe with id | 1 | snapshot | Error: Snapshot `describe with id 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | extract schemas with id | 1 | snapshot | Error: Snapshot `extract schemas with id 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | flatten simple intersections | 1 | snapshot | Error: Snapshot `flatten simple intersections 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | override execution order | 1 | snapshot | Error: Snapshot `override execution order 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | override: do not run on references | 1 | assertion | AssertionError: expected 12 to be 6 // Object.is equality | manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | overwrite id | 1 | snapshot | Error: Snapshot `overwrite id 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | toJSONSchema intersections | 1 | snapshot | Error: Snapshot `toJSONSchema > intersections 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 9` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | toJSONSchema string patterns | 1 | snapshot | Error: Snapshot `toJSONSchema > string patterns 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | toJSONSchema tuple | 1 | snapshot | Error: Snapshot `toJSONSchema > tuple 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | toJSONSchema unions | 1 | snapshot | Error: Snapshot `toJSONSchema > unions 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | top-level readonly | 1 | snapshot | Error: Snapshot `top-level readonly 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/to-json-schema.test.ts | z.file() | 1 | snapshot | Error: Snapshot `z.file() 3` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | classic/tests/validations.test.ts | string length | 1 | snapshot | Error: Snapshot `string length 1` mismatched | likely non-contract assertion; manual review required |
+| v4.6.0 | core/tests/locales/en.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function | manual review required |
+| v4.6.0 | core/tests/locales/tr.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function | manual review required |
+| v4.6.0 | mini/tests/computed.test.ts | array size | 1 | assertion | AssertionError: expected undefined to deeply equal 5 | manual review required |
+| v4.6.0 | mini/tests/computed.test.ts | int32 format | 1 | assertion | AssertionError: expected undefined to deeply equal 'int32' | manual review required |
+| v4.6.0 | mini/tests/computed.test.ts | int64 format | 1 | assertion | AssertionError: expected undefined to deeply equal 'int64' | manual review required |
+| v4.6.0 | mini/tests/computed.test.ts | min/max | 1 | assertion | AssertionError: expected undefined to deeply equal 7 | manual review required |
+| v4.6.0 | mini/tests/computed.test.ts | multipleOf | 1 | assertion | AssertionError: expected undefined to deeply equal 5 | manual review required |
+
+### Recorded wall times and cleanup
+
+| Release | Install/build/env seconds | LLM seconds | Developer seconds | Recorded total seconds |
+| --- | --- | --- | --- | --- |
+| v4.0.5 | 54.629 | 30.22 | 8.327 | 93.175 |
+| v4.1.0 | 33.954 | 25.962 | 8.95 | 68.867 |
+| v4.2.0 | 40.189 | 28.009 | 11.821 | 80.02 |
+| v4.3.0 | 39.627 | 30.278 | 13.684 | 83.589 |
+| v4.4.0 | 38.491 | 28.187 | 13.393 | 80.071 |
+| v4.5.0 | 53.668 | 28.831 | 11.882 | 94.381 |
+| v4.6.0 | 8.386 | 30.036 | 12.496 | 50.918 |
+
+Recorded stage sum: 551.021 seconds. Earlier-release times belong to their original executions; setup, reprocessing, earlier failed v4.6.0 attempts and cleanup are excluded.
+
+Wrapper restored to ../../../../../packages/zod and verified at 4.0.5; no test-s remains. Export size and final integrity verification are recorded in log-stage-s.md. No report or archive branch created.

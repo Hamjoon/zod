@@ -1,9 +1,21 @@
 {
   "release": "v4.6.0",
-  "command": null,
-  "harness": "unavailable",
-  "fallbackUsed": null,
-  "vitestExitCode": null,
-  "wallSeconds": 0,
-  "error": "Not run: addendum 3 installation failed in packages/docs postinstall (nub: not found). No applicable prescribed fallback."
+  "harness": "ok",
+  "fallbackUsed": 0,
+  "attempts": [
+    {
+      "command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.6.0/dev-run.json",
+      "cwd": "/work/zod-versions/v4.6.0",
+      "fallback": 0,
+      "exitCode": 1,
+      "wallSeconds": 12.337490172999999
+    }
+  ],
+  "command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.6.0/dev-run.json",
+  "cwd": "/work/zod-versions/v4.6.0",
+  "vitestExitCode": 1,
+  "typecheckFlagAccepted": true,
+  "runtimeSplit": "meta.typecheck",
+  "typecheckFlagEffective": false,
+  "wallSeconds": 12.496082797
 }

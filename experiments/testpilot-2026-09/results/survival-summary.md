@@ -10,74 +10,74 @@ All tests are frozen at v4.0.5. LLM denominator is 139; developer denominator is
 | v4.3.0 | 1899684fc34d149ebb5d6f9fd95a588e94f27053 | 2025-12-30 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/864/23/1 | 864/888 (97.30%) | 20/49/0 |
 | v4.4.0 | d05f026e9e6eae0e1e6c2efbf11c89007ca40494 | 2026-04-29 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/853/34/1 | 853/888 (96.06%) | 27/51/0 |
 | v4.5.0 | 0a69bcb3d9554c6ec382ea9ba6b43c2421f3fa78 | 2026-08-28 | ok | ok | 138/1/0/0/0 | 138/139 (99.28%) | 81/838/49/1 | 838/888 (94.37%) | 49/61/0 |
-| v4.6.0 | 1c51cbe0fe23d09f8d520b31487d50a01588fae5 | 2026-09-09 | failed | not-run | unavailable | unavailable | unavailable | unavailable | 55/62/0 |
+| v4.6.0 | 1c51cbe0fe23d09f8d520b31487d50a01588fae5 | 2026-09-09 | ok | ok | 138/1/0/0/0 | 138/139 (99.28%) | 81/834/53/1 | 834/888 (93.92%) | 55/62/0 |
 
 ## Per stratum
 
 | Stratum | Tests in S | v4.0.5 | v4.1.0 | v4.2.0 | v4.3.0 | v4.4.0 | v4.5.0 | v4.6.0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| S | 88 | 88/88 (100.00%) | 88/88 (100.00%) | 88/88 (100.00%) | 88/88 (100.00%) | 88/88 (100.00%) | 88/88 (100.00%) | unavailable |
-| C | 36 | 36/36 (100.00%) | 36/36 (100.00%) | 36/36 (100.00%) | 36/36 (100.00%) | 36/36 (100.00%) | 36/36 (100.00%) | unavailable |
-| Q | 15 | 15/15 (100.00%) | 15/15 (100.00%) | 15/15 (100.00%) | 15/15 (100.00%) | 15/15 (100.00%) | 14/15 (93.33%) | unavailable |
+| S | 88 | 88/88 (100.00%) | 88/88 (100.00%) | 88/88 (100.00%) | 88/88 (100.00%) | 88/88 (100.00%) | 88/88 (100.00%) | 88/88 (100.00%) |
+| C | 36 | 36/36 (100.00%) | 36/36 (100.00%) | 36/36 (100.00%) | 36/36 (100.00%) | 36/36 (100.00%) | 36/36 (100.00%) | 36/36 (100.00%) |
+| Q | 15 | 15/15 (100.00%) | 15/15 (100.00%) | 15/15 (100.00%) | 15/15 (100.00%) | 15/15 (100.00%) | 14/15 (93.33%) | 14/15 (93.33%) |
 
 ## Per function
 
 | Function | Tests in S | v4.1.0 | v4.2.0 | v4.3.0 | v4.4.0 | v4.5.0 | v4.6.0 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| zod.z.discriminatedUnion | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.file | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.nullish | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.readonly | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.map | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.cidrv4 | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.cidrv6 | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.strictObject | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.date | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.base64 | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.tuple | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.guid | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.nanoid | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.uuidv6 | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.array | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.int64 | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.any | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.ulid | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.nullable | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.never | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.email | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.looseObject | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.symbol | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.uuidv7 | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.uuid | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.prefault | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.cuid2 | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.unknown | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.uint32 | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.keyof | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.catch | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.nonoptional | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.boolean | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.check | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.uppercase | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.minLength | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.negative | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.gte | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.endsWith | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.multipleOf | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.lt | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.trim | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.transform | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.positive | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.overwrite | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
-| zod.z.preprocess | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.nonpositive | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.iso.duration | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.safeParse | 4 | 4 | 4 | 4 | 4 | 4 | unavailable |
-| zod.z.parseAsync | 3 | 3 | 3 | 3 | 3 | 3 | unavailable |
-| zod.z.coerce.number | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.coerce.boolean | 1 | 1 | 1 | 1 | 1 | 1 | unavailable |
-| zod.z.parse | 3 | 3 | 3 | 3 | 3 | 2 | unavailable |
-| zod.z.iso.time | 2 | 2 | 2 | 2 | 2 | 2 | unavailable |
+| zod.z.discriminatedUnion | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.file | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.nullish | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.readonly | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.map | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.cidrv4 | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.cidrv6 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.strictObject | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.date | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.base64 | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.tuple | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.guid | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.nanoid | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.uuidv6 | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.array | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.int64 | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.any | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.ulid | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.nullable | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.never | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.email | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.looseObject | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.symbol | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.uuidv7 | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.uuid | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.prefault | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.cuid2 | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.unknown | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.uint32 | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.keyof | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.catch | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.nonoptional | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.boolean | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.check | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.uppercase | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.minLength | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.negative | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.gte | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.endsWith | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.multipleOf | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.lt | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.trim | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.transform | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.positive | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.overwrite | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| zod.z.preprocess | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.nonpositive | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.iso.duration | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.safeParse | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+| zod.z.parseAsync | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| zod.z.coerce.number | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.coerce.boolean | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| zod.z.parse | 3 | 3 | 3 | 3 | 3 | 2 | 2 |
+| zod.z.iso.time | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
 
 ## LLM failures: v4.0.5
 
@@ -160,7 +160,17 @@ All tests are frozen at v4.0.5. LLM denominator is 139; developer denominator is
 
 ## LLM failures: v4.6.0
 
-Unavailable: no LLM execution for this release.
+| Category | Count |
+| --- | --- |
+| assertion | 1 |
+| file-system | 0 |
+| correctness | 0 |
+| timeout | 0 |
+| other | 0 |
+
+| Error first line | Count |
+| --- | --- |
+| Got unwanted exception. | 1 |
 
 ## First breaks and returns to passing
 
@@ -169,7 +179,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | Corpus | No observed break (available releases only) | Break then pass again |
 | --- | --- | --- |
 | LLM | 138 | 0 |
-| Dev | 837 | 2 |
+| Dev | 832 | 3 |
 
 | LLM test | API | First break | Pass again |
 | --- | --- | --- | --- |
@@ -724,7 +734,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/pickomit.test.ts | nonstrict inference | 1 | never | False |
 | classic/tests/pickomit.test.ts | nonstrict parsing - pass | 1 | never | False |
 | classic/tests/pickomit.test.ts | nonstrict parsing - fail | 1 | never | False |
-| classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | v4.1.0 | False |
+| classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | v4.1.0 | True |
 | classic/tests/pipe.test.ts | string to number pipe | 1 | never | False |
 | classic/tests/pipe.test.ts | string to number pipe async | 1 | never | False |
 | classic/tests/pipe.test.ts | string with default fallback | 1 | never | False |
@@ -1005,11 +1015,11 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | mini/tests/checks.test.ts | z.uppercase | 1 | never | False |
 | mini/tests/checks.test.ts | z.overwrite | 1 | never | False |
 | mini/tests/checks.test.ts | abort early | 1 | never | False |
-| mini/tests/computed.test.ts | min/max | 1 | never | False |
-| mini/tests/computed.test.ts | multipleOf | 1 | never | False |
-| mini/tests/computed.test.ts | int64 format | 1 | never | False |
-| mini/tests/computed.test.ts | int32 format | 1 | never | False |
-| mini/tests/computed.test.ts | array size | 1 | never | False |
+| mini/tests/computed.test.ts | min/max | 1 | v4.6.0 | False |
+| mini/tests/computed.test.ts | multipleOf | 1 | v4.6.0 | False |
+| mini/tests/computed.test.ts | int64 format | 1 | v4.6.0 | False |
+| mini/tests/computed.test.ts | int32 format | 1 | v4.6.0 | False |
+| mini/tests/computed.test.ts | array size | 1 | v4.6.0 | False |
 | mini/tests/error.test.ts | no locale by default | 1 | never | False |
 | mini/tests/error.test.ts | error inheritance | 1 | never | False |
 | mini/tests/functions.test.ts | z.function | 1 | never | False |
@@ -1315,7 +1325,31 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 
 ## Developer failures by file: v4.6.0
 
-Unavailable: no validated runtime-only developer result.
+| File | Failed cases | First message |
+| --- | --- | --- |
+| classic/tests/array.test.ts | 1 | Error: Snapshot `array length 1` mismatched |
+| classic/tests/continuability.test.ts | 1 | Error: Snapshot `continuability 1` mismatched |
+| classic/tests/datetime.test.ts | 1 | ZodError: [ |
+| classic/tests/discriminated-unions.test.ts | 1 | Error: Snapshot `invalid discriminator value 1` mismatched |
+| classic/tests/error.test.ts | 3 | Error: Snapshot `z.config customError  1` mismatched |
+| classic/tests/file.test.ts | 1 | Error: Snapshot `failing validations 1` mismatched |
+| classic/tests/function.test.ts | 1 | Error: Snapshot `input validation error 1` mismatched |
+| classic/tests/intersection.test.ts | 1 | AssertionError: expected true to deeply equal false |
+| classic/tests/lazy.test.ts | 1 | AssertionError: expected 'defaulted' to deeply equal 'optional' |
+| classic/tests/number.test.ts | 2 | Error: Snapshot `Infinity validation 1` mismatched |
+| classic/tests/optional.test.ts | 2 | AssertionError: expected 'defaulted' to deeply equal 'optional' |
+| classic/tests/pipe.test.ts | 1 | Error: Snapshot `continue on non-fatal errors 1` mismatched |
+| classic/tests/preprocess.test.ts | 3 | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 |
+| classic/tests/set.test.ts | 1 | Error: Snapshot `min/max 1` mismatched |
+| classic/tests/string.test.ts | 3 | AssertionError: expected { success: true, …(1) } to match object { success: false } |
+| classic/tests/template-literal.test.ts | 4 | AssertionError: expected [Function] to throw an error |
+| classic/tests/to-json-schema.test.ts | 15 | Error: Snapshot `toJSONSchema > primitive types 9` mismatched |
+| classic/tests/tuple.test.ts | 2 | Error: Snapshot `successful validation 2` mismatched |
+| classic/tests/union.test.ts | 1 | Error: Snapshot `return errors from both union arms 1` mismatched |
+| classic/tests/validations.test.ts | 1 | Error: Snapshot `string length 1` mismatched |
+| core/tests/locales/en.test.ts | 1 | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function |
+| core/tests/locales/tr.test.ts | 1 | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function |
+| mini/tests/computed.test.ts | 5 | AssertionError: expected undefined to deeply equal 7 |
 
 ## Automatic file-name pairing
 
@@ -1323,60 +1357,60 @@ Matches are filename-based; counts sum all exact/lowercase/kebab/plural matches 
 
 | Function | Dev files | LLM baseline | Dev baseline | v4.1.0 LLM survivors | v4.1.0 dev passed | v4.1.0 dev skipped | v4.2.0 LLM survivors | v4.2.0 dev passed | v4.2.0 dev skipped | v4.3.0 LLM survivors | v4.3.0 dev passed | v4.3.0 dev skipped | v4.4.0 LLM survivors | v4.4.0 dev passed | v4.4.0 dev skipped | v4.5.0 LLM survivors | v4.5.0 dev passed | v4.5.0 dev skipped | v4.6.0 LLM survivors | v4.6.0 dev passed | v4.6.0 dev skipped |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| zod.z.discriminatedUnion | classic/tests/discriminated-unions.test.ts | 2 | 21 | 2 | 20 | 0 | 2 | 20 | 0 | 2 | 20 | 0 | 2 | 20 | 0 | 2 | 20 | 0 | unavailable | unavailable | unavailable |
-| zod.z.file | classic/tests/file.test.ts | 1 | 2 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | unavailable | unavailable | unavailable |
-| zod.z.nullish |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.readonly | classic/tests/readonly.test.ts | 2 | 7 | 2 | 7 | 0 | 2 | 7 | 0 | 2 | 7 | 0 | 2 | 7 | 0 | 2 | 7 | 0 | unavailable | unavailable | unavailable |
-| zod.z.map | classic/tests/map.test.ts | 2 | 8 | 2 | 8 | 0 | 2 | 8 | 0 | 2 | 8 | 0 | 2 | 8 | 0 | 2 | 8 | 0 | unavailable | unavailable | unavailable |
-| zod.z.cidrv4 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.cidrv6 |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.strictObject |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.date | classic/tests/date.test.ts | 2 | 3 | 2 | 3 | 0 | 2 | 3 | 0 | 2 | 3 | 0 | 2 | 3 | 0 | 2 | 3 | 0 | unavailable | unavailable | unavailable |
-| zod.z.base64 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.tuple | classic/tests/tuple.test.ts | 1 | 6 | 1 | 4 | 0 | 1 | 4 | 0 | 1 | 4 | 0 | 1 | 4 | 0 | 1 | 4 | 0 | unavailable | unavailable | unavailable |
-| zod.z.guid |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.nanoid |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.uuidv6 |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.array | classic/tests/array.test.ts | 1 | 9 | 1 | 9 | 0 | 1 | 9 | 0 | 1 | 9 | 0 | 1 | 9 | 0 | 1 | 8 | 0 | unavailable | unavailable | unavailable |
-| zod.z.int64 |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.any |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.ulid |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.nullable | classic/tests/nullable.test.ts | 4 | 3 | 4 | 3 | 0 | 4 | 3 | 0 | 4 | 3 | 0 | 4 | 3 | 0 | 4 | 3 | 0 | unavailable | unavailable | unavailable |
-| zod.z.never |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.email |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.looseObject |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.symbol |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.uuidv7 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.uuid |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.prefault | classic/tests/prefault.test.ts | 3 | 2 | 3 | 2 | 0 | 3 | 2 | 0 | 3 | 2 | 0 | 3 | 2 | 0 | 3 | 2 | 0 | unavailable | unavailable | unavailable |
-| zod.z.cuid2 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.unknown |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.uint32 |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.keyof |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.catch | classic/tests/catch.test.ts | 2 | 16 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 14 | 0 | 2 | 16 | 0 | unavailable | unavailable | unavailable |
-| zod.z.nonoptional | classic/tests/nonoptional.test.ts | 3 | 3 | 3 | 3 | 0 | 3 | 3 | 0 | 3 | 3 | 0 | 3 | 3 | 0 | 3 | 3 | 0 | unavailable | unavailable | unavailable |
-| zod.z.boolean |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.check | mini/tests/checks.test.ts | 4 | 17 | 4 | 17 | 0 | 4 | 17 | 0 | 4 | 17 | 0 | 4 | 17 | 0 | 4 | 17 | 0 | unavailable | unavailable | unavailable |
-| zod.z.uppercase |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.minLength |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.negative |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.gte |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.endsWith |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.multipleOf |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.lt |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.trim |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.transform | classic/tests/transform.test.ts | 2 | 16 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | unavailable | unavailable | unavailable |
-| zod.z.positive |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.overwrite |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.preprocess | classic/tests/preprocess.test.ts | 4 | 11 | 4 | 8 | 0 | 4 | 8 | 0 | 4 | 8 | 0 | 4 | 8 | 0 | 4 | 8 | 0 | unavailable | unavailable | unavailable |
-| zod.z.nonpositive |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.iso.duration |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.safeParse |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.parseAsync |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.coerce.number | classic/tests/number.test.ts; mini/tests/number.test.ts | 1 | 34 | 1 | 34 | 0 | 1 | 34 | 0 | 1 | 34 | 0 | 1 | 34 | 0 | 1 | 32 | 0 | unavailable | unavailable | unavailable |
-| zod.z.coerce.boolean |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.parse |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
-| zod.z.iso.time |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.discriminatedUnion | classic/tests/discriminated-unions.test.ts | 2 | 21 | 2 | 20 | 0 | 2 | 20 | 0 | 2 | 20 | 0 | 2 | 20 | 0 | 2 | 20 | 0 | 2 | 20 | 0 |
+| zod.z.file | classic/tests/file.test.ts | 1 | 2 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 |
+| zod.z.nullish |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched |
+| zod.z.readonly | classic/tests/readonly.test.ts | 2 | 7 | 2 | 7 | 0 | 2 | 7 | 0 | 2 | 7 | 0 | 2 | 7 | 0 | 2 | 7 | 0 | 2 | 7 | 0 |
+| zod.z.map | classic/tests/map.test.ts | 2 | 8 | 2 | 8 | 0 | 2 | 8 | 0 | 2 | 8 | 0 | 2 | 8 | 0 | 2 | 8 | 0 | 2 | 8 | 0 |
+| zod.z.cidrv4 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched |
+| zod.z.cidrv6 |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched |
+| zod.z.strictObject |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched |
+| zod.z.date | classic/tests/date.test.ts | 2 | 3 | 2 | 3 | 0 | 2 | 3 | 0 | 2 | 3 | 0 | 2 | 3 | 0 | 2 | 3 | 0 | 2 | 3 | 0 |
+| zod.z.base64 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched |
+| zod.z.tuple | classic/tests/tuple.test.ts | 1 | 6 | 1 | 4 | 0 | 1 | 4 | 0 | 1 | 4 | 0 | 1 | 4 | 0 | 1 | 4 | 0 | 1 | 4 | 0 |
+| zod.z.guid |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.nanoid |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched |
+| zod.z.uuidv6 |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.array | classic/tests/array.test.ts | 1 | 9 | 1 | 9 | 0 | 1 | 9 | 0 | 1 | 9 | 0 | 1 | 9 | 0 | 1 | 8 | 0 | 1 | 8 | 0 |
+| zod.z.int64 |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.any |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched |
+| zod.z.ulid |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched |
+| zod.z.nullable | classic/tests/nullable.test.ts | 4 | 3 | 4 | 3 | 0 | 4 | 3 | 0 | 4 | 3 | 0 | 4 | 3 | 0 | 4 | 3 | 0 | 4 | 3 | 0 |
+| zod.z.never |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched |
+| zod.z.email |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched |
+| zod.z.looseObject |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.symbol |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.uuidv7 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched |
+| zod.z.uuid |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched |
+| zod.z.prefault | classic/tests/prefault.test.ts | 3 | 2 | 3 | 2 | 0 | 3 | 2 | 0 | 3 | 2 | 0 | 3 | 2 | 0 | 3 | 2 | 0 | 3 | 2 | 0 |
+| zod.z.cuid2 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched |
+| zod.z.unknown |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched |
+| zod.z.uint32 |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.keyof |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched |
+| zod.z.catch | classic/tests/catch.test.ts | 2 | 16 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 14 | 0 | 2 | 16 | 0 | 2 | 16 | 0 |
+| zod.z.nonoptional | classic/tests/nonoptional.test.ts | 3 | 3 | 3 | 3 | 0 | 3 | 3 | 0 | 3 | 3 | 0 | 3 | 3 | 0 | 3 | 3 | 0 | 3 | 3 | 0 |
+| zod.z.boolean |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.check | mini/tests/checks.test.ts | 4 | 17 | 4 | 17 | 0 | 4 | 17 | 0 | 4 | 17 | 0 | 4 | 17 | 0 | 4 | 17 | 0 | 4 | 17 | 0 |
+| zod.z.uppercase |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched |
+| zod.z.minLength |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched |
+| zod.z.negative |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.gte |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched |
+| zod.z.endsWith |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.multipleOf |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.lt |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.trim |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched |
+| zod.z.transform | classic/tests/transform.test.ts | 2 | 16 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 |
+| zod.z.positive |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched |
+| zod.z.overwrite |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched |
+| zod.z.preprocess | classic/tests/preprocess.test.ts | 4 | 11 | 4 | 8 | 0 | 4 | 8 | 0 | 4 | 8 | 0 | 4 | 8 | 0 | 4 | 8 | 0 | 4 | 8 | 0 |
+| zod.z.nonpositive |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.iso.duration |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched |
+| zod.z.safeParse |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched |
+| zod.z.parseAsync |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched |
+| zod.z.coerce.number | classic/tests/number.test.ts; mini/tests/number.test.ts | 1 | 34 | 1 | 34 | 0 | 1 | 34 | 0 | 1 | 34 | 0 | 1 | 34 | 0 | 1 | 32 | 0 | 1 | 32 | 0 |
+| zod.z.coerce.boolean |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched |
+| zod.z.parse |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched |
+| zod.z.iso.time |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched |
 
 Functions with no automatic match:
 
@@ -1437,9 +1471,9 @@ No exclusions; all 139 remain in the denominator.
 | v4.3.0 | 39.627 | 30.278 | 13.684 | 83.589 |
 | v4.4.0 | 38.491 | 28.187 | 13.393 | 80.071 |
 | v4.5.0 | 53.668 | 28.831 | 11.882 | 94.381 |
-| v4.6.0 | 44.327 | 0 | 0 | 44.327 |
+| v4.6.0 | 8.386 | 30.036 | 12.496 | 50.918 |
 
-Sum of recorded per-release stages (not end-to-end wall time): 544.430 seconds.
+Sum of recorded per-release stages (not end-to-end wall time): 551.021 seconds.
 
 ## Developer failure categories
 
@@ -1453,7 +1487,7 @@ Ordered predicates: snapshot (Snapshot and mismatched), load (file_load_failed),
 | v4.3.0 | 14 | 0 | 7 | 2 |
 | v4.4.0 | 20 | 0 | 10 | 4 |
 | v4.5.0 | 34 | 0 | 12 | 3 |
-| v4.6.0 | unavailable | unavailable | unavailable | unavailable |
+| v4.6.0 | 34 | 0 | 16 | 3 |
 
 ### Failed developer cases grouped by file: v4.0.5
 
@@ -1763,6 +1797,59 @@ Developer counts sum only the files in the unchanged automatic pairing map.
 
 | File | Case | Occurrence | Category | First message | Review flag |
 | --- | --- | --- | --- | --- | --- |
+| classic/tests/array.test.ts | array length | 1 | snapshot | Error: Snapshot `array length 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/datetime.test.ts | datetime parsing with local and offset | 1 | other | ZodError: [ | manual review required |
+| classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/error.test.ts | dont short circuit on continuable errors | 1 | snapshot | Error: Snapshot `dont short circuit on continuable errors 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/error.test.ts | error serialization | 1 | snapshot | Error: Snapshot `error serialization 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/error.test.ts | z.config customError  | 1 | snapshot | Error: Snapshot `z.config customError  1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/function.test.ts | input validation error | 1 | snapshot | Error: Snapshot `input validation error 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/intersection.test.ts | object intersection: strict | 1 | assertion | AssertionError: expected true to deeply equal false | manual review required |
+| classic/tests/lazy.test.ts | opt passthrough | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| classic/tests/number.test.ts | .finite() validation | 1 | snapshot | Error: Snapshot `.finite() validation 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/number.test.ts | Infinity validation | 1 | snapshot | Error: Snapshot `Infinity validation 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/optional.test.ts | optionality | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| classic/tests/optional.test.ts | pipe optionality | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| classic/tests/string.test.ts | cuid | 1 | snapshot | Error: Snapshot `cuid 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/string.test.ts | ulid | 1 | snapshot | Error: Snapshot `ulid 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 17` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - basic cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | snapshot | Error: Snapshot `template literal parsing - failure - issue format 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | describe with id | 1 | snapshot | Error: Snapshot `describe with id 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | extract schemas with id | 1 | snapshot | Error: Snapshot `extract schemas with id 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | flatten simple intersections | 1 | snapshot | Error: Snapshot `flatten simple intersections 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | override execution order | 1 | snapshot | Error: Snapshot `override execution order 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | override: do not run on references | 1 | assertion | AssertionError: expected 12 to be 6 // Object.is equality | manual review required |
+| classic/tests/to-json-schema.test.ts | overwrite id | 1 | snapshot | Error: Snapshot `overwrite id 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema intersections | 1 | snapshot | Error: Snapshot `toJSONSchema > intersections 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 9` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema string patterns | 1 | snapshot | Error: Snapshot `toJSONSchema > string patterns 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema tuple | 1 | snapshot | Error: Snapshot `toJSONSchema > tuple 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema unions | 1 | snapshot | Error: Snapshot `toJSONSchema > unions 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | top-level readonly | 1 | snapshot | Error: Snapshot `top-level readonly 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | z.file() | 1 | snapshot | Error: Snapshot `z.file() 3` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/validations.test.ts | string length | 1 | snapshot | Error: Snapshot `string length 1` mismatched | likely non-contract assertion; manual review required |
+| core/tests/locales/en.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function | manual review required |
+| core/tests/locales/tr.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function | manual review required |
+| mini/tests/computed.test.ts | array size | 1 | assertion | AssertionError: expected undefined to deeply equal 5 | manual review required |
+| mini/tests/computed.test.ts | int32 format | 1 | assertion | AssertionError: expected undefined to deeply equal 'int32' | manual review required |
+| mini/tests/computed.test.ts | int64 format | 1 | assertion | AssertionError: expected undefined to deeply equal 'int64' | manual review required |
+| mini/tests/computed.test.ts | min/max | 1 | assertion | AssertionError: expected undefined to deeply equal 7 | manual review required |
+| mini/tests/computed.test.ts | multipleOf | 1 | assertion | AssertionError: expected undefined to deeply equal 5 | manual review required |
 
 ### Matched-function cross table: v4.6.0
 
@@ -1770,18 +1857,18 @@ Developer counts sum only the files in the unchanged automatic pairing map.
 
 | API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
 | --- | --- | --- | --- | --- |
-| zod.z.discriminatedUnion | 2 | unavailable | 21 | unavailable |
-| zod.z.file | 1 | unavailable | 2 | unavailable |
-| zod.z.readonly | 2 | unavailable | 7 | unavailable |
-| zod.z.map | 2 | unavailable | 8 | unavailable |
-| zod.z.date | 2 | unavailable | 3 | unavailable |
-| zod.z.tuple | 1 | unavailable | 6 | unavailable |
-| zod.z.array | 1 | unavailable | 9 | unavailable |
-| zod.z.nullable | 4 | unavailable | 3 | unavailable |
-| zod.z.prefault | 3 | unavailable | 2 | unavailable |
-| zod.z.catch | 2 | unavailable | 16 | unavailable |
-| zod.z.nonoptional | 3 | unavailable | 3 | unavailable |
-| zod.z.check | 4 | unavailable | 17 | unavailable |
-| zod.z.transform | 2 | unavailable | 16 | unavailable |
-| zod.z.preprocess | 4 | unavailable | 11 | unavailable |
-| zod.z.coerce.number | 1 | unavailable | 34 | unavailable |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | 20/1/0 |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | 1/1/0 |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | 7/0/0 |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | 8/0/0 |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | 4/2/0 |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | 8/1/0 |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | 2/0/0 |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | 17/0/0 |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | 8/3/0 |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | 32/2/0 |

@@ -405,3 +405,49 @@ Read supplied addendum and Continuation 2 handover; branch synchronized at 98ef5
 - Final cleanup Docker command: original wrapper target ../../../../../packages/zod; package probe 4.0.5; scratch-absent; export size 2.3G; exit 0.
 - CSV validation: 888 developer cases / 139 LLM tests / 54 function pairs, each row matches its header, including new skipped columns.
 - Stage experiments/ files only, force-add v4.6.0/build.log, commit with prescribed subject and Codex attribution, push and confirm status. No report or archive branch. v4.6.0 remains blocked by missing nub in install lifecycle, not represented as test failure.
+
+## Continuation 4 (addendum 4)
+
+Read addendum and Continuation 3 handover. Branch synchronized at 0cfc947d; only pre-existing Claude outputs/ untracked. Earlier developer/LLM results are complete through v4.5.0 and untouched. D-24 disables lifecycle scripts; D-25 runs the underlying zshy build directly, with no postbuild stub writer or formatting. No nub installation, model calls or credentials read.
+- `docker compose run --rm tp python3 .../scripts/build-survival-v460-addendum4.py`: command outcomes follow.
+- v4.6.0 HUSKY=0 COREPACK_ENABLE_PROJECT_SPEC=0 cwd `/work/zod-versions/v4.6.0` `pnpm install --no-frozen-lockfile --ignore-scripts`: exit 0; appended build.log.
+- v4.6.0 HUSKY=0 COREPACK_ENABLE_PROJECT_SPEC=0 cwd `/work/zod-versions/v4.6.0/packages/zod` `npx --no-install zshy --project tsconfig.build.json`: exit 0; appended build.log.
+- Resolved lockfile comparison: identical to addendum 3 resolution.
+- environment `npx --no-install zshy --version`: exit 1; »  ❌ unknown or unexpected option: --version
+Use --help for usage information
+- environment `node --version`: exit 0; v22.23.2
+- environment `pnpm --version`: exit 0; 10.12.1
+- v4.6.0 HUSKY=0 COREPACK_ENABLE_PROJECT_SPEC=0 cwd `/work/zod-versions/v4.6.0/packages/zod` `node -e console.log(require('./package.json').exports['.']); const z=require('./index.cjs'); console.log(typeof z.z, typeof z.z.string, require('./package.json').version)`: exit 0; appended build.log.
+- v4.6.0: replace all tests directories from frozen snapshot; SHA256 mapping identical, 81 test files; directory lists recorded.
+- D-19 v4.6.0: developer command from repository root with explicit project; fallback order per addendum.
+- v4.6.0: cwd `/work/zod-versions/v4.6.0` npm_config_yes=false `npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.6.0/dev-run.json` -> exit 1, 12.337s; appended dev-stdout.txt.
+- D-21 v4.6.0: runtime entries exclude only those with any assertion meta.typecheck=true; 81 runtime entries; raw JSON unchanged.
+- v4.6.0: `python3 /work/zod/experiments/testpilot-2026-09/scripts/summarize-dev-run.py --release v4.6.0 --out /work/zod/experiments/testpilot-2026-09/results/survival/v4.6.0` -> exit 0; v4.6.0 {"files": 81, "files_loaded": 81, "files_load_failed": 0, "cases": 888, "passed": 834, "failed": 53, "skipped": 1}
+- cwd `/work/zod/experiments/testpilot-2026-09` `python3 scripts/run-survival-dev.py --release v4.6.0` -> exit 0, 12.560s; {"release": "v4.6.0", "harness": "ok", "fallbackUsed": 0, "attempts": [{"command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.6.0/dev-run.json", "cwd": "/work/zod-versions/v4.6.0", "fallback": 0, "exitCode": 1, "wallSeconds": 12.337490172999999}], "command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.6.0/dev-run.json", "cwd": "/work/zod-versions/v4.6.0", "vitestExitCode": 1, "typecheckFlagAccepted": true, "runtimeSplit": "meta.typecheck", "typecheckFlagEffective": false, "wallSeconds": 12.496082797}
+- Wrapper original target: ../../../../../packages/zod
+- cwd `/work/zod/experiments/testpilot-2026-09/wrappers/zod` `node -e const z=require('zod'); console.log(require('zod/package.json').version, typeof z.z, typeof z.z.string)` -> exit 0, 0.066s; 4.6.0 object function
+- cwd `/work/zod/experiments/testpilot-2026-09` `python3 scripts/run-survival-llm.py --release v4.6.0 --out results/survival/v4.6.0` -> exit 0, 30.070s; v4.6.0 pass=138 / fail=1 / load-error=0 / timeout=0 / other=0 wall=30.036s
+- v4.6.0 LLM: 139 entries, 278 raw files verified.
+- cwd `/work/zod/experiments/testpilot-2026-09/wrappers/zod` `node -e console.log(require('zod/package.json').version)` -> exit 0, 0.017s; 4.0.5
+- Original wrapper restored, 4.0.5 probe verified, scratch absent.
+
+## Computed per-release results
+
+| Release | Build | Probe | LLM P/F/load/timeout/other | Dev loaded/passed/failed/skipped | Wall seconds |
+| --- | --- | --- | --- | --- | --- |
+| v4.0.5 | ok | ok | 139/0/0/0/0 | 81/888/0/0 | 93.175 |
+| v4.1.0 | ok | ok | 139/0/0/0/0 | 81/871/17/0 | 68.867 |
+| v4.2.0 | ok | ok | 139/0/0/0/0 | 81/868/19/1 | 80.02 |
+| v4.3.0 | ok | ok | 139/0/0/0/0 | 81/864/23/1 | 83.589 |
+| v4.4.0 | ok | ok | 139/0/0/0/0 | 81/853/34/1 | 80.071 |
+| v4.5.0 | ok | ok | 138/1/0/0/0 | 81/838/49/1 | 94.381 |
+| v4.6.0 | ok | ok | 138/1/0/0/0 | 81/834/53/1 | 50.918 |
+
+- `python3 -B scripts/test-survival-analysis.py`: all 4 checks pass. `python3 -B scripts/analyze-survival.py`: exit 0; regenerated full release table, developer categories and second-pass candidates including v4.6.0; appended Continuation 4 without changing prior sections.
+- zshy does not implement --version (environment inspection printed unknown option); its version was confirmed by reading node_modules/zshy/package.json in Docker and appended to env.txt: 0.8.0. Build runner updated to use package metadata for this inspection. No extra build or tests executed.
+- Final artifact validation (continuation4-checks.json): earlier-release artifacts unchanged; 139 LLM rows/278 raw files match frozen manifest and Mocha output; 81 dev files/888 case identities match baseline; 834 passed/53 failed/1 skipped; resolved lock identical to D-22; frozen tests and release source/config/package manifests unchanged; prior handover/log content preserved.
+
+## Continuation 4 finalization
+
+- Cleanup Docker probe: wrapper target ../../../../../packages/zod; version 4.0.5; scratch-absent; du -sh /work/zod-versions = 2.3G; exit 0. All seven release time points now have validated LLM and developer results.
+- Stage experiments/ work only, force-add v4.6.0/build.log, preserve raw-output whitespace; commit with prescribed subject and Codex trailer, push experiment branch and verify synchronization. No report or archive branch.

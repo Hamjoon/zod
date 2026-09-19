@@ -1,14 +1,15 @@
 {
   "release": "v4.6.0",
-  "install": false,
-  "build": false,
-  "probe": "not-run",
+  "install": true,
+  "build": true,
+  "probe": "ok",
   "fallbacks": [
     "COREPACK_ENABLE_PROJECT_SPEC=0 (D-17)",
-    "pnpm-workspace.yaml + --no-frozen-lockfile (D-22)"
+    "pnpm-workspace.yaml + --no-frozen-lockfile (D-22)",
+    "--ignore-scripts (D-24)",
+    "direct zshy build; no postbuild (D-25)"
   ],
-  "error": "packages/docs postinstall: sh: 1: nub: not found; ELIFECYCLE Command failed.",
-  "stage": "install failed",
+  "stage": "built",
   "resolvedVersions": {
     "vitest": "4.1.5",
     "typescript": "5.5.4",
@@ -22,7 +23,8 @@
     "require": "./index.cjs"
   },
   "requireEntry": "./index.cjs",
-  "entryExists": false,
-  "wallSeconds": 44.326501269999994,
-  "fallbackAssessment": "D-23 not applicable: missing nub executable in lifecycle script, not a package-manager feature unavailable in pnpm 10.12.1."
+  "entryExists": true,
+  "wallSeconds": 8.385717420999999,
+  "buildExitCode": 0,
+  "resolvedLockChanged": false
 }

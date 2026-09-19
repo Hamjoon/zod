@@ -101,3 +101,80 @@ packages/docs postinstall: sh: 1: nub: not found
  ELIFECYCLE  Command failed.
 
 == exit=1
+== addendum 4 2026-09-19T16:03:17.556865+00:00 cwd=/work/zod-versions/v4.6.0 ['pnpm', 'install', '--no-frozen-lockfile', '--ignore-scripts']
+Scope: all 9 workspace projects
+Lockfile is up to date, resolution step is skipped
+Already up to date
+
+   ╭──────────────────────────────────────────────╮
+   │                                              │
+   │     Update available! 10.12.1 → 12.4.2.      │
+   │     Changelog: https://pnpm.io/v/12.4.2      │
+   │   To update, run: corepack use pnpm@12.4.2   │
+   │                                              │
+   ╰──────────────────────────────────────────────╯
+
+
+Done in 1.1s using pnpm v10.12.1
+
+== exit=0
+== addendum 4 2026-09-19T16:03:23.989894+00:00 cwd=/work/zod-versions/v4.6.0/packages/zod ['npx', '--no-install', 'zshy', '--project', 'tsconfig.build.json']
+   ╔═══════════════════════════════════════════════╗
+   ║ zshy » the bundler-free TypeScript build tool ║
+   ╚═══════════════════════════════════════════════╝
+»  Starting build...
+»  Detected project root: /work/zod-versions/v4.6.0/packages/zod
+»  Reading package.json from ./package.json
+»  Reading tsconfig from ./tsconfig.build.json
+»  You're building your code to the project root. This means your compiled files will be generated alongside your source files.
+   Ensure that your "files" in package.json does not include TypeScript source files, or your users may experience .d.ts resolution issues in some environments:
+     "files": ["**/*.js", "**/*.mjs", "**/*.cjs", "**/*.d.ts", "**/*.d.mts", "**/*.d.cts"]
+»  Determining entrypoints...
+   ╔════════════════════╤═════════════════════════════════╗
+   ║ Subpath            │ Entrypoint                      ║
+   ╟────────────────────┼─────────────────────────────────╢
+   ║ "zod"              │ ./src/index.ts                  ║
+   ║ "zod/mini"         │ ./src/mini/index.ts             ║
+   ║ "zod/compile"      │ ./src/compile.ts                ║
+   ║ "zod/locales"      │ ./src/locales/index.ts          ║
+   ║ "zod/v3"           │ ./src/v3/index.ts               ║
+   ║ "zod/v4"           │ ./src/v4/index.ts               ║
+   ║ "zod/v4-mini"      │ ./src/v4-mini/index.ts          ║
+   ║ "zod/v4/mini"      │ ./src/v4/mini/index.ts          ║
+   ║ "zod/v4/core"      │ ./src/v4/core/index.ts          ║
+   ║ "zod/v4/locales"   │ ./src/v4/locales/index.ts       ║
+   ║ "zod/v4/locales/*" │ ./src/v4/locales/* (63 matches) ║
+   ╚════════════════════╧═════════════════════════════════╝
+»  Resolved build paths:
+   ╔══════════╤═══════════════╗
+   ║ Location │ Resolved path ║
+   ╟──────────┼───────────────╢
+   ║ rootDir  │ ./src         ║
+   ║ outDir   │ .             ║
+   ╚══════════╧═══════════════╝
+»  Package is an ES module (package.json#/type is "module")
+»  Skipping cleanup of outDir as it contains source files
+»  Skipping cleanup of declarationDir as it contains source files
+»  Building CJS... (rewriting .ts -> .cjs/.d.cts)
+»  Building ESM...
+»  Updating package.json...
+»  Updating jsr.json...
+»  Reading jsr.json from ./jsr.json
+»  Build complete! ✅
+npm notice
+npm notice New major version of npm available! 10.9.8 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice
+
+== exit=0
+== addendum 4 2026-09-19T16:03:24.631171+00:00 cwd=/work/zod-versions/v4.6.0/packages/zod ['node', '-e', "console.log(require('./package.json').exports['.']); const z=require('./index.cjs'); console.log(typeof z.z, typeof z.z.string, require('./package.json').version)"]
+{
+  '@zod/source': './src/index.ts',
+  types: './index.d.cts',
+  import: './index.js',
+  require: './index.cjs'
+}
+object function 4.6.0
+
+== exit=0
