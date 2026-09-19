@@ -182,3 +182,5 @@ Ground rule 5 stop applied: unanticipated `AssertionError: Duplicate case identi
 
 - `git add` explicit Stage S experiment paths; staged 1,722 files, including all recorded raw outputs and draft helpers. `git diff --cached --check`: exit 0.
 - Finalization commands: `git commit` with prescribed Stage S subject and body explicitly recording the stop, then `git push origin experiment/2026-09-week3-testpilot-zod`, followed by `git status -sb`. The user-facing completion message records their outcome.
+
+- Commit 043638ab created and pushed successfully; status synchronized, only pre-existing Claude outputs/ untracked. Final tracked-artifact audit found global *.log ignore omitted seven build.log files from the directory add. Explicit `git add -f` adds all seven required logs; supplemental attributed commit preserves them without rewriting the pushed history.

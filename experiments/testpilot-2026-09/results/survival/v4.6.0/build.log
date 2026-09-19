@@ -1,0 +1,11 @@
+== 2026-09-19T15:02:08.202088+00:00 ['pnpm', 'install', '--frozen-lockfile']
+Unsupported package manager specification (nub@0.8.3)
+== exit=1 wall=0.030s
+== 2026-09-19T15:02:08.233285+00:00 ['pnpm', 'install', '--no-frozen-lockfile']
+Unsupported package manager specification (nub@0.8.3)
+== exit=1 wall=0.025s
+== corrective prescribed fallback: HUSKY=0 COREPACK_ENABLE_STRICT=0 pnpm install --frozen-lockfile
+Unsupported package manager specification (nub@0.8.3)
+== exit=1
+Unsupported package manager specification (nub@0.8.3)
+== build exit=1
