@@ -7,3 +7,5 @@ Commit date: requested zod hash has author-local commit date July 10; July 11 in
 Tracked-status checks permit the running experiment log itself to be modified; upstream zod tracked files must remain unchanged.
 
 D-02: Husky activated during install and blocked commit/push on untracked experiment logs. Addendum authorizes clone-local `git config core.hooksPath /dev/null`; applied without modifying tracked hook files. User separately authorized leaving `Claude outputs/` untracked.
+
+D-03: Step 7 CommonJS .js probe failed in zod ESM scope; no authorized fallback. See handover.

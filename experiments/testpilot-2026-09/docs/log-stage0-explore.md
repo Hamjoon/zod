@@ -686,3 +686,262 @@ git -C zod-testpilot add experiments/testpilot-2026-09 && git -C zod-testpilot d
 ```
 
 ```text
+experiments/testpilot-2026-09/.gitignore
+experiments/testpilot-2026-09/docs/build-testpilot2.txt
+experiments/testpilot-2026-09/docs/build-zod.txt
+experiments/testpilot-2026-09/docs/handover-stage0-explore.md
+experiments/testpilot-2026-09/docs/ignored-files-stage0.txt
+experiments/testpilot-2026-09/docs/install-zod.txt
+experiments/testpilot-2026-09/docs/log-stage0-explore.md
+experiments/testpilot-2026-09/docs/run-notes.md
+experiments/testpilot-2026-09/docs/testpilot2-help.txt
+experiments/testpilot-2026-09/wrappers/zod-mini/index.js
+experiments/testpilot-2026-09/wrappers/zod-mini/package.json
+[experiment/2026-09-week3-testpilot-zod 0fa5f8a7] Add zod-mini wrapper, experiment gitignore and stage 0 logs
+ 11 files changed, 83685 insertions(+)
+ create mode 100644 experiments/testpilot-2026-09/.gitignore
+ create mode 100644 experiments/testpilot-2026-09/docs/build-testpilot2.txt
+ create mode 100644 experiments/testpilot-2026-09/docs/build-zod.txt
+ create mode 100644 experiments/testpilot-2026-09/docs/handover-stage0-explore.md
+ create mode 100644 experiments/testpilot-2026-09/docs/ignored-files-stage0.txt
+ create mode 100644 experiments/testpilot-2026-09/docs/install-zod.txt
+ create mode 100644 experiments/testpilot-2026-09/docs/run-notes.md
+ create mode 100644 experiments/testpilot-2026-09/docs/testpilot2-help.txt
+ create mode 100644 experiments/testpilot-2026-09/wrappers/zod-mini/index.js
+ create mode 100644 experiments/testpilot-2026-09/wrappers/zod-mini/package.json
+0fa5f8a7 Add zod-mini wrapper, experiment gitignore and stage 0 logs
+6d07ec54 Add Docker environment for TestPilot-on-zod (Node 22.23.2)
+b1a2f115 Add experiment skeleton for TestPilot-on-zod (stage 0)
+45afab0f 4.0.5
+
+```
+Exit: 0; wall seconds: 0.168
++ ls /work/testpilot2/dist/exploreAPI.js /work/testpilot2/benchmark/run.js /work/zod/packages/zod/index.cjs /work/zod/packages/zod/mini/index.cjs
+/work/testpilot2/benchmark/run.js
+/work/testpilot2/dist/exploreAPI.js
+/work/zod/packages/zod/index.cjs
+/work/zod/packages/zod/mini/index.cjs
++ node -e 'console.log(require.resolve("mocha", {paths:["/work/zod/packages/zod"]}))'
+/work/zod/node_modules/.pnpm/mocha@10.8.2/node_modules/mocha/index.js
++ COMMON=(--responses "$EXP/mock/prompts.json" --strictResponses false --template "$TP/templates/template-singletest.hb" --retryTemplate "$TP/templates/retry-template.hb" --snippets doc --numSnippets all --snippetLength 20 --numCompletions 5 --temperatures 0.0 --maxTokens 1000)
++ cd /work/testpilot2
++ test '!' -e /work/zod/packages/zod/.snippet-docs
++ test '!' -e /work/zod/experiments/testpilot-2026-09/wrappers/zod-mini/.snippet-docs
++ run main-native /work/zod/packages/zod
++ local condition=main-native package=/work/zod/packages/zod start end rc
++ test '!' -e /work/zod/experiments/testpilot-2026-09/results/explore-main-native
+++ date +%s.%N
++ start=1789811898.541032921
++ set +e
++ node benchmark/run.js --outputDir /work/zod/experiments/testpilot-2026-09/results/explore-main-native --package /work/zod/packages/zod --responses /work/zod/experiments/testpilot-2026-09/mock/prompts.json --strictResponses false --template /work/testpilot2/templates/template-singletest.hb --retryTemplate /work/testpilot2/templates/retry-template.hb --snippets doc --numSnippets all --snippetLength 20 --numCompletions 5 --temperatures 0.0 --maxTokens 1000
++ rc=0
++ set -e
+++ date +%s.%N
++ end=1789811899.209874838
++ python3 -c 'import sys,json; print(json.dumps(dict(condition=sys.argv[1],seconds=float(sys.argv[3])-float(sys.argv[2]),exit=int(sys.argv[4]))))' main-native 1789811898.541032921 1789811899.209874838 0
++ tail -8 /work/zod/experiments/testpilot-2026-09/results/explore-main-native.stdout.txt
+
+Provide your answer as a fenced code block 
+```
+<unit test>
+```
+0 passed, 0 failed, 0 pending, 0 other
+API coverage:
+0% statement coverage
++ test 0 -eq 0
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-main-native/api.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-main-native/snippetMap.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-main-native/prompts.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-main-native/prompts
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-main-native/report.json
++ jq -e '.stats.nrTests == 0' /work/zod/experiments/testpilot-2026-09/results/explore-main-native/report.json
+true
++ run mini-native /work/zod/experiments/testpilot-2026-09/wrappers/zod-mini
++ local condition=mini-native package=/work/zod/experiments/testpilot-2026-09/wrappers/zod-mini start end rc
++ test '!' -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-native
+++ date +%s.%N
++ start=1789811899.271658838
++ set +e
++ node benchmark/run.js --outputDir /work/zod/experiments/testpilot-2026-09/results/explore-mini-native --package /work/zod/experiments/testpilot-2026-09/wrappers/zod-mini --responses /work/zod/experiments/testpilot-2026-09/mock/prompts.json --strictResponses false --template /work/testpilot2/templates/template-singletest.hb --retryTemplate /work/testpilot2/templates/retry-template.hb --snippets doc --numSnippets all --snippetLength 20 --numCompletions 5 --temperatures 0.0 --maxTokens 1000
++ rc=0
++ set -e
+++ date +%s.%N
++ end=1789811899.862215588
++ python3 -c 'import sys,json; print(json.dumps(dict(condition=sys.argv[1],seconds=float(sys.argv[3])-float(sys.argv[2]),exit=int(sys.argv[4]))))' mini-native 1789811899.271658838 1789811899.862215588 0
++ tail -8 /work/zod/experiments/testpilot-2026-09/results/explore-mini-native.stdout.txt
+
+Provide your answer as a fenced code block 
+```
+<unit test>
+```
+0 passed, 0 failed, 0 pending, 0 other
+API coverage:
+0% statement coverage
++ test 0 -eq 0
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-native/api.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-native/snippetMap.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-native/prompts.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-native/prompts
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-native/report.json
++ jq -e '.stats.nrTests == 0' /work/zod/experiments/testpilot-2026-09/results/explore-mini-native/report.json
+true
++ cd /work/zod
++ find packages/zod -name '*.md' -not -path '*/node_modules/*' -not -path '*/.snippet-docs/*'
++ python3 -
+/work/zod/packages/zod/.snippet-docs 19
+/work/zod/experiments/testpilot-2026-09/wrappers/zod-mini/.snippet-docs 19
++ cat /work/zod/experiments/testpilot-2026-09/results/native-doc-files.txt
+packages/zod/README.md
++ cd /work/testpilot2
++ run main-docs /work/zod/packages/zod
++ local condition=main-docs package=/work/zod/packages/zod start end rc
++ test '!' -e /work/zod/experiments/testpilot-2026-09/results/explore-main-docs
+++ date +%s.%N
++ start=1789811899.960790755
++ set +e
++ node benchmark/run.js --outputDir /work/zod/experiments/testpilot-2026-09/results/explore-main-docs --package /work/zod/packages/zod --responses /work/zod/experiments/testpilot-2026-09/mock/prompts.json --strictResponses false --template /work/testpilot2/templates/template-singletest.hb --retryTemplate /work/testpilot2/templates/retry-template.hb --snippets doc --numSnippets all --snippetLength 20 --numCompletions 5 --temperatures 0.0 --maxTokens 1000
++ rc=0
++ set -e
+++ date +%s.%N
++ end=1789811900.832457881
++ python3 -c 'import sys,json; print(json.dumps(dict(condition=sys.argv[1],seconds=float(sys.argv[3])-float(sys.argv[2]),exit=int(sys.argv[4]))))' main-docs 1789811899.960790755 1789811900.832457881 0
++ tail -8 /work/zod/experiments/testpilot-2026-09/results/explore-main-docs.stdout.txt
+
+Provide your answer as a fenced code block 
+```
+<unit test>
+```
+0 passed, 0 failed, 0 pending, 0 other
+API coverage:
+0% statement coverage
++ test 0 -eq 0
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-main-docs/api.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-main-docs/snippetMap.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-main-docs/prompts.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-main-docs/prompts
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-main-docs/report.json
++ jq -e '.stats.nrTests == 0' /work/zod/experiments/testpilot-2026-09/results/explore-main-docs/report.json
+true
++ run mini-docs /work/zod/experiments/testpilot-2026-09/wrappers/zod-mini
++ local condition=mini-docs package=/work/zod/experiments/testpilot-2026-09/wrappers/zod-mini start end rc
++ test '!' -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-docs
+++ date +%s.%N
++ start=1789811900.867305422
++ set +e
++ node benchmark/run.js --outputDir /work/zod/experiments/testpilot-2026-09/results/explore-mini-docs --package /work/zod/experiments/testpilot-2026-09/wrappers/zod-mini --responses /work/zod/experiments/testpilot-2026-09/mock/prompts.json --strictResponses false --template /work/testpilot2/templates/template-singletest.hb --retryTemplate /work/testpilot2/templates/retry-template.hb --snippets doc --numSnippets all --snippetLength 20 --numCompletions 5 --temperatures 0.0 --maxTokens 1000
++ rc=0
++ set -e
+++ date +%s.%N
++ end=1789811901.636232631
++ python3 -c 'import sys,json; print(json.dumps(dict(condition=sys.argv[1],seconds=float(sys.argv[3])-float(sys.argv[2]),exit=int(sys.argv[4]))))' mini-docs 1789811900.867305422 1789811901.636232631 0
++ tail -8 /work/zod/experiments/testpilot-2026-09/results/explore-mini-docs.stdout.txt
+
+Provide your answer as a fenced code block 
+```
+<unit test>
+```
+0 passed, 0 failed, 0 pending, 0 other
+API coverage:
+0% statement coverage
++ test 0 -eq 0
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-docs/api.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-docs/snippetMap.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-docs/prompts.json
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-docs/prompts
++ for f in api.json snippetMap.json prompts.json prompts report.json
++ test -e /work/zod/experiments/testpilot-2026-09/results/explore-mini-docs/report.json
++ jq -e '.stats.nrTests == 0' /work/zod/experiments/testpilot-2026-09/results/explore-mini-docs/report.json
+true
++ node /work/testpilot2/dist/exploreAPI.js /work/zod/packages/zod
++ node /work/testpilot2/dist/exploreAPI.js /work/zod/experiments/testpilot-2026-09/wrappers/zod-mini
++ rm -rf /work/zod/packages/zod/.snippet-docs /work/zod/experiments/testpilot-2026-09/wrappers/zod-mini/.snippet-docs /work/zod/experiments/testpilot-2026-09/wrappers/zod-mini/README.md
++ git -C /work/zod status --porcelain
+ M experiments/testpilot-2026-09/docs/log-stage0-explore.md
+?? "Claude outputs/"
+?? experiments/testpilot-2026-09/results/
+?? experiments/testpilot-2026-09/scripts/
++ mkdir -p /work/zod/packages/zod/tests-probe /work/zod/experiments/testpilot-2026-09/results/probe
++ cp /work/zod/experiments/testpilot-2026-09/scripts/probe-test.js /work/zod/packages/zod/tests-probe/
++ cd /work/zod/packages/zod
+++ date +%s.%N
++ start=1789811939.942856968
++ set +e
++ /work/testpilot2/node_modules/.bin/nyc --cwd=/work/zod/packages/zod --exclude=tests-probe --reporter=json --report-dir=/work/zod/experiments/testpilot-2026-09/results/probe/coverage --temp-dir=/work/zod/experiments/testpilot-2026-09/results/probe/coverage /work/testpilot2/node_modules/.bin/mocha --full-trace --exit --allow-uncaught=false --reporter=json --reporter-option output=/work/zod/experiments/testpilot-2026-09/results/probe/report.json -- tests-probe/probe-test.js
+
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and '/work/zod/packages/zod/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///work/zod/packages/zod/tests-probe/probe-test.js:1:13
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)
+    at async formattedImport (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:7:14)
+    at async exports.requireOrImport (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:38:28)
+    at async exports.loadFilesAsync (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:91:20)
+    at async singleRun (/work/testpilot2/node_modules/mocha/lib/cli/run-helpers.js:125:3)
+    at async exports.handler (/work/testpilot2/node_modules/mocha/lib/cli/run.js:370:5)
++ rc=1
++ set -e
+++ date +%s.%N
++ end=1789811940.462398510
++ python3 -c 'import json,sys,pathlib; print(json.dumps(dict(exit=int(sys.argv[1]),seconds=float(sys.argv[3])-float(sys.argv[2]),coverageBytes=pathlib.Path(sys.argv[4]).stat().st_size)))' 1 1789811939.942856968 1789811940.462398510 /work/zod/experiments/testpilot-2026-09/results/probe/coverage/coverage-final.json
++ cat /work/zod/experiments/testpilot-2026-09/results/probe/timing.json
+{"exit": 1, "seconds": 0.5195415019989014, "coverageBytes": 3}
++ jq .stats /work/zod/experiments/testpilot-2026-09/results/probe/report.json
+jq: error: Could not open file /work/zod/experiments/testpilot-2026-09/results/probe/report.json: No such file or directory
+
+## 2026-09-19T19:00:13.057533
+
+```sh
+git -C zod-testpilot status --short; git -C zod-testpilot diff --exit-code -- . ":(exclude)experiments"; git -C testpilot2 status --short; git -C zod-testpilot log -1 --format="%H %s"
+```
+
+```text
+ M experiments/testpilot-2026-09/docs/log-stage0-explore.md
+?? "Claude outputs/"
+?? experiments/testpilot-2026-09/results/
+?? experiments/testpilot-2026-09/scripts/
+0fa5f8a72111d607449a2b66c8d1afbfc52a623e Add zod-mini wrapper, experiment gitignore and stage 0 logs
+
+```
+Exit: 0; wall seconds: 0.209
+
+Created scripts/explore.sh, scripts/probe-test.js, scripts/probe.sh; executed both shell scripts in Docker (commands and outcomes traced above). Inspected JSON structures with Python for handover reporting. Raw/native function counts agree for both entries. Probe failed due ESM/CommonJS mismatch, followed by missing report.json; stopped under ground rule 4 and rewrote handover. No fallback attempted.
+
+## 2026-09-19T19:00:33.055114
+
+```sh
+git -C zod-testpilot check-ignore -v packages/zod/tests-probe/probe-test.js; git -C zod-testpilot status --short --untracked-files=normal; du -sh zod-testpilot/experiments/testpilot-2026-09/results
+```
+
+```text
+packages/zod/.gitignore:1:**/*.js	packages/zod/tests-probe/probe-test.js
+ M experiments/testpilot-2026-09/docs/handover-stage0-explore.md
+ M experiments/testpilot-2026-09/docs/log-stage0-explore.md
+ M experiments/testpilot-2026-09/docs/run-notes.md
+?? "Claude outputs/"
+?? experiments/testpilot-2026-09/results/
+?? experiments/testpilot-2026-09/scripts/
+ 14M	zod-testpilot/experiments/testpilot-2026-09/results
+
+```
+Exit: 0; wall seconds: 0.045
+
+Prepared complete experiment file inventory; staging only experiments/testpilot-2026-09, excluding ignored coverage and wrapper node_modules. Final preservation commit and push follow; results recorded in final response and git state.

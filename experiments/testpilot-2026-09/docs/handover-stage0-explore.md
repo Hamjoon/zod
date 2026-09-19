@@ -1,100 +1,69 @@
-# Stage 0 / exploration handover — stopped at Step 4
+# Stage 0 / exploration handover — stopped at Step 7
 
-## Status and blocker
+## Status
 
-Stages 0–3 completed, and the Step 4 wrapper loaded successfully. The Step 4 commit failed with exit 1:
+Steps 0–6 completed. All four mock exploration runs succeeded with `stats.nrTests = 0`. Step 7 failed before loading a test because the prescribed CommonJS `.js` probe is inside a package with `"type": "module"`. Ground rule 4 requires stopping on an unanticipated error without a specified fallback. No `.cjs` rename, package metadata change, or harness modification was attempted. Step 8 summary script, detailed API summary/CSV, and prompt examples have not been produced. No LLM calls or generation occurred.
+
+## Exact blocker
 
 ```text
-ERROR: untracked files present
-husky - pre-commit script failed (code 1)
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and '/work/zod/packages/zod/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///work/zod/packages/zod/tests-probe/probe-test.js:1:13
 ```
 
-The untracked files were the required build logs, run notes, and runner help output under the experiment directory. `pnpm install` ran `husky` in its prepare script, activating the repository pre-commit hook after the first two commits. `.husky/pre-commit` rejects any untracked files, then runs `pnpm check:semver` and `lint-staged --verbose`.
-
-Ground rule 4 says: “If a step fails for a reason this document did not anticipate, record the exact error, apply the fallback given for that step, and if there is none, stop and write the handover.” No Step 4 commit-hook fallback is provided. Therefore no hook bypass, retry of the wrapper commit, exploration, probe, or generation was attempted. Final artifact commit is also not attempted pending a permitted hook workflow. Pushing the existing successful commits was attempted at session end, but the pre-push hook also rejected untracked files (exit 1). Nothing was pushed; all session work remains local.
+Full stack and exact commands are in [log-stage0-explore.md](log-stage0-explore.md). Probe process exit 1; wall time 0.519541502 s; coverage-final.json is 3 bytes (empty coverage object). Mocha did not produce report.json, so passes/failures are unavailable. The logging script then exited 2 because `jq` could not open the absent report. This timing cannot establish instrumentation headroom: no test loaded. The probe copy remains untracked at `packages/zod/tests-probe/probe-test.js` because execution stopped before cleanup. Coverage remains ignored and will not be committed.
 
 ## Revisions and environment
 
 - zod base: `45afab0f846dffd591362b6f770017507eb185b5`.
-- zod current committed HEAD: `6d07ec5451f65a7c03bc00464b2978a0a11735a8` (Docker environment).
-- skeleton commit: `b1a2f11516ff3118e0cb3a5de783e8bc670f5cdf`.
-- branch: `experiment/2026-09-week3-testpilot-zod`.
-- testpilot2: `79c3b626edb541ca9eaf31c6994f40d1c7d5d042`, clean; origin `https://github.com/Hamjoon/testpilot2`.
-- Docker image `testpilot-zod:latest`: Node v22.23.2, npm 10.9.8, pnpm 10.12.1. No Node 20/18 attempts needed.
-- zod commit date is `2025-07-10 15:35:06 -0700`, July 11 in Asia/Seoul; hash matches exactly.
+- Last completed setup commit: `0fa5f8a7` (wrapper, gitignore, stage 0 logs); prior setup commits `b1a2f115` and `6d07ec54`.
+- Branch: `experiment/2026-09-week3-testpilot-zod`.
+- testpilot2: `79c3b626edb541ca9eaf31c6994f40d1c7d5d042`, clean.
+- Node v22.23.2 / npm 10.9.8 / pnpm 10.12.1. No Node fallback required.
+- zod hash matches; its recorded date July 10 15:35:06 -0700 is July 11 in Seoul.
 
-## Build results
+Both builds passed. Testpilot2 dependencies verified with npm ls; no missing dependencies. zod postbuild biome checked 244 files with no fixes. Main export check: `function function function 210`; mini and wrapper: `function 209`. Upstream tracked files remain unchanged.
 
-Testpilot2 `npm run build` passed; all four required runner/explorer/mocha/nyc files exist. `npm ls --depth=0` passed without missing dependencies. Its package-lock.json was unchanged and the requested restore was performed. No src, benchmark, or template source was edited. Full help was saved with `--responses` supplied even to `--help`.
+Built doc-comment marker counts: index.cjs **0**, v4/classic/schemas.cjs **3**, v4/core/schemas.cjs **1**, mini/index.cjs **0**. Explorer-attached nonempty docComment counts appear in the table below.
 
-Zod `pnpm install --frozen-lockfile` and `pnpm build` passed, including biome postbuild (244 files, no fixes). Main entry: `function function function 210`; direct mini entry: `function 209`; wrapper: `function 209`. All three required index.cjs files exist. No upstream zod tracked file changed.
+Mocha resolves to `/work/zod/node_modules/.pnpm/mocha@10.8.2/node_modules/mocha/index.js` from the zod package directory.
 
-Doc-comment marker counts:
+## Exploration results
 
-| File | Count |
-| --- | ---: |
-| index.cjs | 0 |
-| v4/classic/schemas.cjs | 3 |
-| v4/core/schemas.cjs | 1 |
-| mini/index.cjs | 0 |
+| Condition | Wall seconds | Functions | Functions with snippets | Prompt files | With docComment | Raw functions |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| main-native | 0.669 | 569 | 16 | 569 | 0 | 569 |
+| mini-native | 0.591 | 563 | 0 | 563 | 0 | 563 |
+| main-docs | 0.872 | 569 | 149 | 569 | 0 | 569 |
+| mini-docs | 0.769 | 563 | 149 | 563 | 0 | 563 |
 
-D-01: installed mocha@10 (resolved 10.8.2) at workspace root, then restored package.json and pnpm-lock.yaml. Resolution from package directory: `/work/zod/node_modules/.pnpm/mocha@10.8.2/node_modules/mocha/index.js`.
+Snippet coverage joins snippetMap by the final component of each access path, matching its function-name keys. Both raw explorers agree with native api.json lengths. Each run has api.json, snippetMap.json, prompts.json, prompts/, report.json, and a sibling stdout.txt. All reports show zero tests. Prompt provenance inspected so far is empty (`[]`), denoting base prompts; no completion or test-outcome refinement occurred.
 
-## Exploration, cross-check, and probe
+Native main documentation contains only packages/zod/README.md. Mini-native ran with no wrapper Markdown files. Both docs conditions added 19 website .md/.mdx copies converted to .md; mini-docs also received the package README. All temporary docs copies and wrapper README were removed afterward. Source document lists and exact timings are in results/. No extraction retry was needed.
 
-All four exploration conditions are **not run**. Function counts, snippet counts, prompt counts and timings are unavailable. Raw explorer cross-checks, harness probe (passes/failures, timing, coverage size), API summary, CSV and prompt examples are unavailable. No docs copies or tests-probe directory were created. No LLM API was called, and no LLM endpoint or authentication environment variable was set.
+Preliminary main API inspection: 569 functions, 6 marked constructors; most frequent signatures `(def)` (161), `(inst, def)` (160), `(params)` (60). This does not replace the pending full Step 8 summary.
 
-## Files and local state
+## Deviations and unexpected events
 
-Committed by this session:
+- D-01: installed mocha@10 at workspace root, then restored package.json and pnpm-lock.yaml; local modules retained.
+- D-02 (what happened): pnpm prepare activated Husky hooks, which rejected untracked experiment logs during commit/push. The addendum authorized clone-local `git config core.hooksPath /dev/null`, now applied and verified. No tracked hook/config source changed.
+- User explicitly authorized leaving `Claude outputs/` untracked and untouched after the addendum status check found it.
+- D-03/blocker: prescribed `.js` CommonJS probe conflicts with zod's ESM package scope. No fallback authorized.
+- Earlier sandbox DNS/Docker denials were retried with required escalation. No pre-existing Docker containers were removed. Dependency warnings were recorded without upgrades.
 
-- `experiments/testpilot-2026-09/mock/prompts.json`
-- `experiments/testpilot-2026-09/mock/prompts/.gitkeep`
-- `experiments/testpilot-2026-09/docs/log-stage0-explore.md` (initial version; updated version remains modified)
-- `experiments/testpilot-2026-09/docker/Dockerfile`
-- `experiments/testpilot-2026-09/docker/compose.yml`
+## File inventory and publication
 
-Staged, not committed:
+Committed setup files are the mock fixtures, Docker files, wrapper source/package.json, experiment .gitignore, and stage 0 docs/logs. This session's exploration results, execution scripts, updated docs, and probe timing are to be committed under experiments/ only. `committed-files-stage0.txt` beside this handover lists every experiment file included in the resulting branch state. The final artifact commit hash is available in git log (not embedded in its own contents).
 
-- `experiments/testpilot-2026-09/.gitignore`
-- `experiments/testpilot-2026-09/wrappers/zod-mini/index.js`
-- `experiments/testpilot-2026-09/wrappers/zod-mini/package.json`
-
-Untracked nonignored files (including this handover):
-
-- `experiments/testpilot-2026-09/docs/build-testpilot2.txt`
-- `experiments/testpilot-2026-09/docs/build-zod.txt`
-- `experiments/testpilot-2026-09/docs/install-zod.txt`
-- `experiments/testpilot-2026-09/docs/run-notes.md`
-- `experiments/testpilot-2026-09/docs/testpilot2-help.txt`
-- `experiments/testpilot-2026-09/docs/handover-stage0-explore.md`
-
-Ignored local artifacts include installed workspace node_modules, zod built outputs, docs postinstall-generated outputs, Husky generated support files, and `wrappers/zod-mini/node_modules/zod` symlink. A complete per-file ignored inventory is stored beside this handover as `ignored-files-stage0.txt`; that inventory itself is an additional untracked nonignored file. No coverage output exists. Host-only logging helper: `/private/tmp/testpilot-zod-stage0-log.py`.
-
-## Other observations
-
-Sandbox DNS/socket/builder-state denials were retried with tool-required escalation; they succeeded. Docker warned about pre-existing orphan containers; none were removed. npm reported 24 dependency vulnerabilities; no dependency upgrade was attempted. pnpm warned about ignored dependency build scripts; both requested builds nevertheless passed. Running tracked-status checks show the experiment log modified, so upstream cleanliness was separately verified excluding experiments.
+Nonignored untracked outside experiments/: `Claude outputs/` (user-owned, untouched). The failed fixture `packages/zod/tests-probe/probe-test.js` remains locally as an ignored file. The initial full ignored-file inventory is in ignored-files-stage0.txt; ignored local artifacts include dependency directories, build outputs, wrapper node_modules symlink and probe coverage. No coverage JSON is staged. No generated tests exist.
 
 ## Questions for Gary / continuation
 
-1. What commit-hook workflow is permitted? Staging all experiment logs before committing would address the first hook check; subsequent hook checks need to run in Docker under the all-Node-work-in-Docker constraint. No bypass is assumed.
-2. Should `$constructor`-pattern functions be excluded from the sampling population? Exploration evidence is pending.
-3. Should website docs be included for generation snippets? Native/docs comparison is pending.
-4. Does the single-test template need a doc-comment slot? Built files contain some markers, but explorer-attached counts are pending.
-5. Will nyc leave enough headroom under the 5-second validator limit? Probe timing is pending.
+1. What CommonJS test-loading adaptation is permitted for the actual validator? A `.cjs` probe or a test-directory package.json may address module scope, but the generation harness must use the same approved arrangement. Neither was attempted.
+2. Should `$constructor`-pattern functions, including `(inst, def)`, be excluded from sampling?
+3. Should website documentation be used for generation snippets?
+4. Should the single-test template receive a doc-comment slot given the attached-comment counts above?
+5. After the module issue is resolved, does a successful nyc probe leave enough headroom under the 5 s limit? Current failed-probe timing cannot answer this.
 
-After the hook blocker is resolved, resume at Step 4 commit, then run native conditions before creating website docs copies. Continue to require `--responses` on every runner invocation and unused output directories. Do not start generation.
-
-## Push attempt
-
-`git push -u origin experiment/2026-09-week3-testpilot-zod` failed with `ERROR: untracked files present`, `husky - pre-push script failed (code 1)`, and `error: failed to push some refs to 'https://github.com/Hamjoon/zod.git'`. No hook bypass or retry was attempted.
-
-## Addendum resume attempt — 2026-09-19
-
-The supplied addendum authorizes disabling this clone's hooks with `git config core.hooksPath /dev/null`, resolving the previous hook-policy blocker. However, the initial status check now reports an additional untracked path outside `experiments/`:
-
-```text
-?? "Claude outputs/"
-```
-
-The addendum explicitly requires stopping when any such path appears. Work stopped before changing hook configuration or creating a commit. `Claude outputs/` was left untouched and is an additional untracked path beyond the earlier inventory. No exploration, probe, model calls, or push occurred in this resume attempt. Continuation requires instructions allowing this directory to remain untracked, or removal of the outside-experiment status entry by the user.
+Resume at Step 7 under an approved fallback, then complete Steps 8–9. Preserve existing exploration directories; never pass an existing output directory to the runner. Do not start generation.
