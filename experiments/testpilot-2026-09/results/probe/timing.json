@@ -1,1 +1,8 @@
-{"exit": 1, "seconds": 0.5195415019989014, "coverageBytes": 3}
+{
+  "exit": 0,
+  "seconds": 0.9070475830000007,
+  "coverageBytes": 467,
+  "coverageFiles": [
+    "/work/zod/experiments/testpilot-2026-09/wrappers/zod/index.js"
+  ]
+}

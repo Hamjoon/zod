@@ -945,3 +945,368 @@ packages/zod/.gitignore:1:**/*.js	packages/zod/tests-probe/probe-test.js
 Exit: 0; wall seconds: 0.045
 
 Prepared complete experiment file inventory; staging only experiments/testpilot-2026-09, excluding ignored coverage and wrapper node_modules. Final preservation commit and push follow; results recorded in final response and git state.
+
+Read Addendum 2. Created main CommonJS wrapper and relative zod symlink as specified. Continuing Steps 7a–9; no model calls.
++ cd /work/zod/experiments/testpilot-2026-09/wrappers/zod
++ ls -l node_modules/zod
+lrwxr-xr-x 1 root root 27 Sep 19 11:01 node_modules/zod -> ../../../../../packages/zod
++ node -e 'const z=require("."); console.log(typeof z.string,typeof z.z.string,Object.keys(z).length)'
+function function 210
++ node -e 'console.log(require.resolve("mocha",{paths:[process.cwd()]}))'
+/work/zod/node_modules/.pnpm/mocha@10.8.2/node_modules/mocha/index.js
++ test '!' -e /work/zod/packages/zod/.snippet-docs
++ test '!' -e /work/zod/experiments/testpilot-2026-09/results/explore-mainwrap-native
++ cd /work/testpilot2
++ node benchmark/run.js --outputDir /work/zod/experiments/testpilot-2026-09/results/explore-mainwrap-native --package /work/zod/experiments/testpilot-2026-09/wrappers/zod --responses /work/zod/experiments/testpilot-2026-09/mock/prompts.json --strictResponses false --template /work/testpilot2/templates/template-singletest.hb --retryTemplate /work/testpilot2/templates/retry-template.hb --snippets doc --numSnippets all --snippetLength 20 --numCompletions 5 --temperatures 0.0 --maxTokens 1000
+
+real	0m0.733s
+user	0m0.388s
+sys	0m0.084s
++ jq .stats /work/zod/experiments/testpilot-2026-09/results/explore-mainwrap-native/report.json
+{
+  "nrTests": 0,
+  "nrPasses": 0,
+  "nrFailures": 0,
+  "nrPending": 0,
+  "nrOther": 0,
+  "codexQueryTime": 0,
+  "totalTime": 210.20779199999998
+}
+['/work/testpilot2/node_modules/.bin/nyc', '--cwd=/work/zod/experiments/testpilot-2026-09/wrappers/zod', '--exclude=tests-probe', '--reporter=json', '--report-dir=/work/zod/experiments/testpilot-2026-09/results/probe/coverage', '--temp-dir=/work/zod/experiments/testpilot-2026-09/results/probe/coverage', '/work/testpilot2/node_modules/.bin/mocha', '--full-trace', '--exit', '--allow-uncaught=false', '--reporter=json', '--reporter-option', 'output=/work/zod/experiments/testpilot-2026-09/results/probe/report.json', '--', 'tests-probe/probe-test.js']
+{'exit': 0, 'seconds': 0.9070475830000007, 'coverageBytes': 467, 'coverageFiles': ['/work/zod/experiments/testpilot-2026-09/wrappers/zod/index.js']} {'suites': 1, 'tests': 1, 'passes': 1, 'pending': 0, 'failures': 0, 'start': '2026-09-19T11:02:16.378Z', 'end': '2026-09-19T11:02:16.379Z', 'duration': 1}
+['/work/testpilot2/node_modules/.bin/nyc', '--cwd=/work/zod/experiments/testpilot-2026-09/wrappers/zod', '--exclude=tests-probe', '--reporter=json', '--report-dir=/work/zod/experiments/testpilot-2026-09/results/probe/coverage', '--temp-dir=/work/zod/experiments/testpilot-2026-09/results/probe/coverage', '/work/testpilot2/node_modules/.bin/mocha', '--full-trace', '--exit', '--allow-uncaught=false', '--reporter=json', '--reporter-option', 'output=/work/zod/experiments/testpilot-2026-09/results/probe/report-fail.json', '--', 'tests-probe/probe-fail.js']
+{'exit': 1, 'seconds': 0.3907694580000012, 'coverageBytes': 467, 'coverageFiles': ['/work/zod/experiments/testpilot-2026-09/wrappers/zod/index.js']} {'suites': 1, 'tests': 1, 'passes': 0, 'pending': 0, 'failures': 1, 'start': '2026-09-19T11:02:16.778Z', 'end': '2026-09-19T11:02:16.780Z', 'duration': 2}
+{'stack': "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'abc' !== 'xyz'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/tests-probe/probe-fail.js:7:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)", 'message': "Expected values to be strictly equal:\n\n'abc' !== 'xyz'\n", 'generatedMessage': True, 'name': 'AssertionError', 'code': 'ERR_ASSERTION', 'actual': 'abc', 'expected': 'xyz', 'operator': 'strictEqual', 'diff': 'simple'}
+
+## 2026-09-19T20:02:57.087046
+
+```sh
+python3 zod-testpilot/experiments/testpilot-2026-09/scripts/sample-api.py
+```
+
+```text
+Main population: 124 outside: 445 strata: {'S': 74, 'C': 35, 'Q': 15}
+zod.z.iso.datetime	Q
+zod.z.iso.date	Q
+zod.z.iso.time	Q
+zod.z.iso.duration	Q
+zod.z.coerce.string	Q
+zod.z.coerce.number	Q
+zod.z.coerce.boolean	Q
+zod.z.coerce.bigint	Q
+zod.z.coerce.date	Q
+zod.z.stringbool	S
+zod.z.string	S
+zod.z.email	S
+zod.z.guid	S
+zod.z.uuid	S
+zod.z.uuidv4	S
+zod.z.uuidv6	S
+zod.z.uuidv7	S
+zod.z.url	S
+zod.z.emoji	S
+zod.z.nanoid	S
+zod.z.cuid	S
+zod.z.cuid2	S
+zod.z.ulid	S
+zod.z.xid	S
+zod.z.ksuid	S
+zod.z.ipv4	S
+zod.z.ipv6	S
+zod.z.cidrv4	S
+zod.z.cidrv6	S
+zod.z.base64	S
+zod.z.base64url	S
+zod.z.e164	S
+zod.z.jwt	S
+zod.z.stringFormat	C
+zod.z.number	S
+zod.z.int	S
+zod.z.float32	S
+zod.z.float64	S
+zod.z.int32	S
+zod.z.uint32	S
+zod.z.boolean	S
+zod.z.bigint	S
+zod.z.int64	S
+zod.z.uint64	S
+zod.z.symbol	S
+zod.z.undefined	S
+zod.z.null	S
+zod.z.any	S
+zod.z.unknown	S
+zod.z.never	S
+zod.z.void	S
+zod.z.date	S
+zod.z.array	S
+zod.z.keyof	S
+zod.z.object	S
+zod.z.strictObject	S
+zod.z.looseObject	S
+zod.z.union	S
+zod.z.discriminatedUnion	S
+zod.z.intersection	S
+zod.z.tuple	S
+zod.z.record	S
+zod.z.partialRecord	S
+zod.z.map	S
+zod.z.set	S
+zod.z.enum	S
+zod.z.nativeEnum	S
+zod.z.literal	S
+zod.z.file	S
+zod.z.transform	C
+zod.z.optional	S
+zod.z.nullable	S
+zod.z.nullish	S
+zod.z.prefault	S
+zod.z.nonoptional	S
+zod.z.success	S
+zod.z.catch	S
+zod.z.nan	S
+zod.z.pipe	S
+zod.z.readonly	S
+zod.z.templateLiteral	S
+zod.z.lazy	S
+zod.z.promise	S
+zod.z.check	C
+zod.z.custom	C
+zod.z.refine	C
+zod.z.superRefine	C
+zod.z.instanceof	S
+zod.z.json	S
+zod.z.preprocess	C
+zod.z.lt	C
+zod.z.lte	C
+zod.z.gt	C
+zod.z.gte	C
+zod.z.positive	C
+zod.z.negative	C
+zod.z.nonpositive	C
+zod.z.nonnegative	C
+zod.z.multipleOf	C
+zod.z.maxSize	C
+zod.z.minSize	C
+zod.z.size	C
+zod.z.maxLength	C
+zod.z.minLength	C
+zod.z.length	C
+zod.z.regex	C
+zod.z.lowercase	C
+zod.z.uppercase	C
+zod.z.includes	C
+zod.z.startsWith	C
+zod.z.endsWith	C
+zod.z.property	C
+zod.z.mime	C
+zod.z.overwrite	C
+zod.z.normalize	C
+zod.z.trim	C
+zod.z.toLowerCase	C
+zod.z.toUpperCase	C
+zod.z.parse	Q
+zod.z.parseAsync	Q
+zod.z.safeParse	Q
+zod.z.safeParseAsync	Q
+zod.z.setErrorMap	Q
+zod.z.getErrorMap	Q
+Allocation: {'S': 36, 'C': 17, 'Q': 7}
+accessPath	stratum	signature	implLength	snippets_docs
+zod.z.discriminatedUnion	S	(discriminator, options, params)	272	5
+zod.z.number	S	(params)	79	168
+zod.z.file	S	(params)	73	5
+zod.z.nullish	S	(innerType)	73	7
+zod.z.readonly	S	(innerType)	133	6
+zod.z.map	S	(keyType, valueType, params)	213	6
+zod.z.cidrv4	S	(params)	79	5
+zod.z.cidrv6	S	(params)	79	5
+zod.z.strictObject	S	(shape, params)	319	3
+zod.z.date	S	(params)	73	78
+zod.z.base64	S	(params)	79	2
+zod.z.tuple	S	(items, _paramsOrRest, _params)	365	8
+zod.z.guid	S	(params)	73	2
+zod.z.nanoid	S	(params)	79	3
+zod.z.uuidv6	S	(params)	77	1
+zod.z.array	S	(element, params)	94	35
+zod.z.int64	S	(params)	83	3
+zod.z.any	S	()	56	3
+zod.z.ulid	S	(params)	73	3
+zod.z.templateLiteral	S	(parts, params)	196	3
+zod.z.nullable	S	(innerType)	133	12
+zod.z.ksuid	S	(params)	76	0
+zod.z.never	S	(params)	76	1
+zod.z.email	S	(params)	76	17
+zod.z.looseObject	S	(shape, params)	320	2
+zod.z.symbol	S	(params)	79	4
+zod.z.uuidv7	S	(params)	77	2
+zod.z.uuid	S	(params)	73	22
+zod.z.prefault	S	(innerType, defaultValue)	274	3
+zod.z.cuid2	S	(params)	76	3
+zod.z.unknown	S	()	68	5
+zod.z.uint32	S	(params)	85	1
+zod.z.keyof	S	(schema)	107	3
+zod.z.catch	S	(innerType, catchValue)	225	6
+zod.z.nonoptional	S	(innerType, params)	202	1
+zod.z.boolean	S	(params)	82	30
+zod.z.check	C	(fn)	174	27
+zod.z.uppercase	C	(params)	184	3
+zod.z.minLength	C	(minimum, params)	178	10
+zod.z.negative	C	(params)	57	8
+zod.z.gte	C	(value, params)	197	8
+zod.z.size	C	(size, params)	169	5
+zod.z.endsWith	C	(suffix, params)	206	4
+zod.z.property	C	(property, schema, params)	200	0
+zod.z.multipleOf	C	(value, params)	177	8
+zod.z.maxSize	C	(maximum, params)	172	4
+zod.z.lt	C	(value, params)	191	8
+zod.z.trim	C	()	68	9
+zod.z.transform	C	(fn)	122	27
+zod.z.positive	C	(params)	57	9
+zod.z.overwrite	C	(tx)	118	2
+zod.z.preprocess	C	(fn, schema)	75	1
+zod.z.nonpositive	C	(params)	61	8
+zod.z.iso.duration	Q	(params)	91	3
+zod.z.safeParse	Q	(schema, value, _ctx)	500	60
+zod.z.parseAsync	Q	(schema, value, _ctx, params)	498	14
+zod.z.coerce.number	Q	(params)	86	168
+zod.z.coerce.boolean	Q	(params)	89	30
+zod.z.parse	Q	(schema, value, _ctx, _params)	517	250
+zod.z.iso.time	Q	(params)	79	16
+{
+  "main": {
+    "population": 124,
+    "outside": 445,
+    "strata": {
+      "S": 74,
+      "C": 35,
+      "Q": 15
+    }
+  },
+  "mini": {
+    "population": 127,
+    "outside": 436,
+    "strata": {
+      "Q": 13,
+      "S": 81,
+      "C": 33
+    },
+    "identicalImplementation": 30,
+    "specific": 97
+  },
+  "seed": 20260919,
+  "allocation": {
+    "S": 36,
+    "C": 17,
+    "Q": 7
+  }
+}
+
+```
+Exit: 0; wall seconds: 0.067
+
+## 2026-09-19T20:04:10.914355
+
+```sh
+python3 zod-testpilot/experiments/testpilot-2026-09/scripts/summarize-api.py
+```
+
+```text
+{
+  "main": {
+    "functions": 569,
+    "constructors": 6,
+    "async": 4,
+    "docComments": 0,
+    "snippets_native": 16,
+    "snippets_docs": 149,
+    "rawFunctions": 569
+  },
+  "mini": {
+    "functions": 563,
+    "constructors": 6,
+    "async": 2,
+    "docComments": 0,
+    "snippets_native": 0,
+    "snippets_docs": 149,
+    "rawFunctions": 563
+  }
+}
+CSV rows: 1132 prompt examples: 3
+
+```
+Exit: 0; wall seconds: 0.229
+
+## 2026-09-19T20:04:34.798039
+
+```sh
+python3 - <<'PY'
+from pathlib import Path
+import subprocess,hashlib,json
+p=Path("zod-testpilot/experiments/testpilot-2026-09"); names=["population-main.json","population-main.txt","api-sample-n60-s20260919.json","api-sample-n60-s20260919.txt","population-mini-specific.txt","population-stats.json"]
+before={n:(p/"results"/n).read_bytes() for n in names}
+subprocess.run(["python3",str(p/"scripts/sample-api.py")],check=True,stdout=subprocess.DEVNULL)
+assert all(before[n]==(p/"results"/n).read_bytes() for n in names)
+evidence={"byteIdentical":True,"sha256":{n:hashlib.sha256(b).hexdigest() for n,b in before.items()}}
+(p/"results/sample-reproducibility.json").write_text(json.dumps(evidence,indent=2)+"\n"); print(json.dumps(evidence,indent=2))
+a=json.loads((p/"results/explore-mainwrap-native/api.json").read_text()); b=json.loads((p/"results/explore-main-native/api.json").read_text()); assert len(a)==len(b)==569 and {f["accessPath"] for f in a}=={f["accessPath"] for f in b}
+for e in ("main","mini"):
+ d=json.loads((p/f"results/explore-{e}-docs/snippetMap.json").read_text()); d=dict(d); print(e,"string",len(d["string"]),"parse",len(d["parse"]))
+PY
+```
+
+```text
+{
+  "byteIdentical": true,
+  "sha256": {
+    "population-main.json": "530b39f52feedc65cf7a7ebb97520fc037e6d0b89386263691a90b7a8a664500",
+    "population-main.txt": "8588eb1b569d0048427875259afcc439f84c55efc15343d564a006f39c36b96a",
+    "api-sample-n60-s20260919.json": "82d902eb9bb729ef4f2c2ceba06e2c12a36e2ad1d8935701f744df98b95ada68",
+    "api-sample-n60-s20260919.txt": "8a3a0e722ed54bcb0ea3cf67271f3a7c7ff4ae42b6658730a4ca81d0110f9066",
+    "population-mini-specific.txt": "2f85d97e7cd249b52e87b415a64442ff0b6305c3e91aaca36d9d2c24a96a99ca",
+    "population-stats.json": "2b2345b1da52c38dae13c655d263ec6dd5ba5aafd589d06fdb91f062b3cf9423"
+  }
+}
+main string 807 parse 250
+mini string 807 parse 125
+
+```
+Exit: 0; wall seconds: 0.188
+/work/zod/experiments/testpilot-2026-09/results/explore-main-docs/api.json
+569
+/work/zod/experiments/testpilot-2026-09/results/explore-main-native/api.json
+569
+/work/zod/experiments/testpilot-2026-09/results/explore-mainwrap-native/api.json
+569
+/work/zod/experiments/testpilot-2026-09/results/explore-mini-docs/api.json
+563
+/work/zod/experiments/testpilot-2026-09/results/explore-mini-native/api.json
+563
+
+Addendum 2 complete. Created wrapper, probe-wrapper.py, sample-api.py, summarize-api.py. Wrapper compare: 569 identical access paths. Probes returned expected 0/1 and assertions verified. Sample repeated byte-identically (six output files), hashes saved. All five jq API counts match summary. Updated full handover, run notes and inventories. One Docker socket sandbox denial retried successfully via escalation. No generation started.
+
+## 2026-09-19T20:06:14.917061
+
+```sh
+git -C zod-testpilot diff --exit-code -- . ":(exclude)experiments"; git -C testpilot2 status --short; git -C zod-testpilot config --get core.hooksPath; python3 - <<'PY'
+from pathlib import Path
+import json,csv
+p=Path("zod-testpilot/experiments/testpilot-2026-09"); r=p/"results"
+for d in r.glob("explore-*"):
+ if d.is_dir():
+  for f in ["api.json","snippetMap.json","prompts.json","prompts","report.json"]: assert (d/f).exists(),(d,f)
+  assert json.loads((d/"report.json").read_text())["stats"]["nrTests"]==0
+sample=json.loads((r/"api-sample-n60-s20260919.json").read_text()); assert len(sample)==60 and all(set(f)=={"accessPath","descriptor","packageName"} for f in sample)
+assert len(list(csv.DictReader((r/"api-functions.csv").open())))==1132
+for path in [p/"wrappers/zod/tests-probe",p/"wrappers/zod-mini/.snippet-docs",Path("zod-testpilot/packages/zod/tests-probe"),Path("zod-testpilot/packages/zod/.snippet-docs")]: assert not path.exists(),path
+files=sorted(str(f.relative_to(p.parents[1])) for f in p.rglob("*") if f.is_file() and "node_modules" not in f.parts and "coverage" not in f.parts)
+(p/"docs/committed-files-stage0.txt").write_text("\n".join(files)+"\n")
+print("PASS: artifacts, population sample format, 1132 CSV rows, cleanup, and inventory")
+PY
+```
+
+```text
+/dev/null
+PASS: artifacts, population sample format, 1132 CSV rows, cleanup, and inventory
+
+```
+Exit: 0; wall seconds: 0.124

@@ -1,0 +1,28 @@
+{
+  "main": {
+    "population": 124,
+    "outside": 445,
+    "strata": {
+      "S": 74,
+      "C": 35,
+      "Q": 15
+    }
+  },
+  "mini": {
+    "population": 127,
+    "outside": 436,
+    "strata": {
+      "Q": 13,
+      "S": 81,
+      "C": 33
+    },
+    "identicalImplementation": 30,
+    "specific": 97
+  },
+  "seed": 20260919,
+  "allocation": {
+    "S": 36,
+    "C": 17,
+    "Q": 7
+  }
+}
