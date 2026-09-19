@@ -1,0 +1,1 @@
+It looks like the code snippet you want to fix didn’t come through. Could you please paste the code that’s causing the “Invalid syntax” error? Once I have the code, I can modify it to make the test pass.

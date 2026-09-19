@@ -1,0 +1,24 @@
+[
+  {
+    "accessPath": "zod.z.discriminatedUnion",
+    "descriptor": {
+      "type": "function",
+      "signature": "(discriminator, options, params)",
+      "implementation": "function discriminatedUnion(discriminator, options, params) {\n    // const [options, params] = args;\n    return new exports.ZodDiscriminatedUnion({\n        type: \"union\",\n        options,\n        discriminator,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.check",
+    "descriptor": {
+      "type": "function",
+      "signature": "(fn)",
+      "implementation": "function check(fn) {\n    const ch = new core.$ZodCheck({\n        check: \"custom\",\n        // ...util.normalizeParams(params),\n    });\n    ch._zod.check = fn;\n    return ch;\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  }
+]
