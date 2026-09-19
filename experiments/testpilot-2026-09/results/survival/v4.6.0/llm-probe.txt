@@ -1,1 +1,1 @@
-NOT RUN: Continuation 2 install failed after D-17/D-18; ERR_PNPM_WORKSPACE_PKG_NOT_FOUND. Build absent, no probe or LLM execution.
+NOT RUN: addendum 3 installation failed in packages/docs postinstall: nub: not found. No build, probe or LLM execution.

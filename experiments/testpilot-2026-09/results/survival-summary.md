@@ -2,14 +2,14 @@
 
 All tests are frozen at v4.0.5. LLM denominator is 139; developer denominator is 888 runtime cases. Harness failures are unavailable, never test failures. Developer file-load failures inherit the baseline cases as failed. Test-file A/M/D counts describe ignored upstream edits only.
 
-| Tag | Commit | Date | Build | Probe | LLM P/F/load/timeout/other | LLM survival | Dev loaded/passed/failed | Dev survival | Dev A/M/D |
+| Tag | Commit | Date | Build | Probe | LLM P/F/load/timeout/other | LLM survival | Dev loaded/passed/failed/skipped | Dev survival | Dev A/M/D |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| v4.0.5 | 45afab0f846dffd591362b6f770017507eb185b5 | 2025-07-10 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/888/0 | 888/888 (100.00%) | 0/0/0 |
-| v4.1.0 | 2ca716d6313dcfab425d3555ac8bf85929bc57a4 | 2025-08-23 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/871/17 | 871/888 (98.09%) | 5/36/0 |
-| v4.2.0 | dcef9734f55fc1c8e73795a2be80c60fa7a4a568 | 2025-12-14 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | unavailable | unavailable | 16/42/0 |
-| v4.3.0 | 1899684fc34d149ebb5d6f9fd95a588e94f27053 | 2025-12-30 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | unavailable | unavailable | 20/49/0 |
-| v4.4.0 | d05f026e9e6eae0e1e6c2efbf11c89007ca40494 | 2026-04-29 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | unavailable | unavailable | 27/51/0 |
-| v4.5.0 | 0a69bcb3d9554c6ec382ea9ba6b43c2421f3fa78 | 2026-08-28 | ok | ok | 138/1/0/0/0 | 138/139 (99.28%) | unavailable | unavailable | 49/61/0 |
+| v4.0.5 | 45afab0f846dffd591362b6f770017507eb185b5 | 2025-07-10 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/888/0/0 | 888/888 (100.00%) | 0/0/0 |
+| v4.1.0 | 2ca716d6313dcfab425d3555ac8bf85929bc57a4 | 2025-08-23 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/871/17/0 | 871/888 (98.09%) | 5/36/0 |
+| v4.2.0 | dcef9734f55fc1c8e73795a2be80c60fa7a4a568 | 2025-12-14 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/868/19/1 | 868/888 (97.75%) | 16/42/0 |
+| v4.3.0 | 1899684fc34d149ebb5d6f9fd95a588e94f27053 | 2025-12-30 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/864/23/1 | 864/888 (97.30%) | 20/49/0 |
+| v4.4.0 | d05f026e9e6eae0e1e6c2efbf11c89007ca40494 | 2026-04-29 | ok | ok | 139/0/0/0/0 | 139/139 (100.00%) | 81/853/34/1 | 853/888 (96.06%) | 27/51/0 |
+| v4.5.0 | 0a69bcb3d9554c6ec382ea9ba6b43c2421f3fa78 | 2026-08-28 | ok | ok | 138/1/0/0/0 | 138/139 (99.28%) | 81/838/49/1 | 838/888 (94.37%) | 49/61/0 |
 | v4.6.0 | 1c51cbe0fe23d09f8d520b31487d50a01588fae5 | 2026-09-09 | failed | not-run | unavailable | unavailable | unavailable | unavailable | 55/62/0 |
 
 ## Per stratum
@@ -164,12 +164,12 @@ Unavailable: no LLM execution for this release.
 
 ## First breaks and returns to passing
 
-Developer identity is file + fullName + one-based occurrence in the frozen declaration order. All available runs must preserve the baseline identities. Unavailable releases are not evidence of survival; never-break counts mean no observed break in available runs. First breaks include the control; non-passing baseline observations are retained. A return to passing is any later pass following a non-pass.
+Developer identity is file + fullName + one-based occurrence in the frozen declaration order. All available runs must preserve the baseline identities. Unavailable releases are not evidence of survival; never-break counts mean no observed break in available runs. Todo is neither a break nor a survival and is ignored in rebound transitions. First breaks include the control; non-passing baseline observations are retained. A return to passing is any later pass following a non-pass.
 
 | Corpus | No observed break (available releases only) | Break then pass again |
 | --- | --- | --- |
 | LLM | 138 | 0 |
-| Dev | 871 | 0 |
+| Dev | 837 | 2 |
 
 | LLM test | API | First break | Pass again |
 | --- | --- | --- | --- |
@@ -320,7 +320,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/anyunknown.test.ts | check never inference | 1 | never | False |
 | classic/tests/array.test.ts | type inference | 1 | never | False |
 | classic/tests/array.test.ts | array min/max | 1 | never | False |
-| classic/tests/array.test.ts | array length | 1 | never | False |
+| classic/tests/array.test.ts | array length | 1 | v4.5.0 | False |
 | classic/tests/array.test.ts | array.nonempty() | 1 | never | False |
 | classic/tests/array.test.ts | array.nonempty().max() | 1 | never | False |
 | classic/tests/array.test.ts | parse empty array in nonempty | 1 | never | False |
@@ -377,8 +377,8 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/catch.test.ts | removeCatch | 1 | never | False |
 | classic/tests/catch.test.ts | nested | 1 | never | False |
 | classic/tests/catch.test.ts | chained catch | 1 | never | False |
-| classic/tests/catch.test.ts | native enum | 1 | never | False |
-| classic/tests/catch.test.ts | enum | 1 | never | False |
+| classic/tests/catch.test.ts | native enum | 1 | v4.4.0 | True |
+| classic/tests/catch.test.ts | enum | 1 | v4.4.0 | True |
 | classic/tests/catch.test.ts | reported issues with nested usage | 1 | never | False |
 | classic/tests/catch.test.ts | catch error | 1 | never | False |
 | classic/tests/catch.test.ts | ctx.input | 1 | never | False |
@@ -406,7 +406,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/datetime.test.ts | datetime parsing with offset and precision 4 | 1 | never | False |
 | classic/tests/datetime.test.ts | datetime offset normalization | 1 | never | False |
 | classic/tests/datetime.test.ts | datetime parsing with local option | 1 | never | False |
-| classic/tests/datetime.test.ts | datetime parsing with local and offset | 1 | never | False |
+| classic/tests/datetime.test.ts | datetime parsing with local and offset | 1 | v4.5.0 | False |
 | classic/tests/datetime.test.ts | date parsing | 1 | never | False |
 | classic/tests/datetime.test.ts | time parsing | 1 | never | False |
 | classic/tests/datetime.test.ts | duration | 1 | never | False |
@@ -499,12 +499,12 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/error.test.ts | inferFlattenedErrors | 1 | never | False |
 | classic/tests/error.test.ts | schema-bound error map | 1 | never | False |
 | classic/tests/error.test.ts | bound error map overrides contextual | 1 | never | False |
-| classic/tests/error.test.ts | z.config customError  | 1 | never | False |
+| classic/tests/error.test.ts | z.config customError  | 1 | v4.5.0 | False |
 | classic/tests/error.test.ts | empty string error message | 1 | never | False |
-| classic/tests/error.test.ts | dont short circuit on continuable errors | 1 | never | False |
+| classic/tests/error.test.ts | dont short circuit on continuable errors | 1 | v4.5.0 | False |
 | classic/tests/error.test.ts | string error params | 1 | never | False |
 | classic/tests/error.test.ts | error inheritance | 1 | never | False |
-| classic/tests/error.test.ts | error serialization | 1 | never | False |
+| classic/tests/error.test.ts | error serialization | 1 | v4.5.0 | False |
 | classic/tests/file.test.ts | passing validations | 1 | never | False |
 | classic/tests/file.test.ts | failing validations | 1 | v4.1.0 | False |
 | classic/tests/firstparty.test.ts | first party switch | 1 | never | False |
@@ -516,7 +516,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/function.test.ts | args method | 1 | never | False |
 | classic/tests/function.test.ts | function inference 2 | 1 | never | False |
 | classic/tests/function.test.ts | valid function run | 1 | never | False |
-| classic/tests/function.test.ts | input validation error | 1 | never | False |
+| classic/tests/function.test.ts | input validation error | 1 | v4.4.0 | False |
 | classic/tests/function.test.ts | array inputs | 1 | never | False |
 | classic/tests/function.test.ts | output validation error | 1 | never | False |
 | classic/tests/function.test.ts | function with async refinements | 1 | never | False |
@@ -586,7 +586,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/instanceof.test.ts | instanceof fatal | 1 | never | False |
 | classic/tests/intersection.test.ts | object intersection | 1 | never | False |
 | classic/tests/intersection.test.ts | object intersection: loose | 1 | never | False |
-| classic/tests/intersection.test.ts | object intersection: strict | 1 | never | False |
+| classic/tests/intersection.test.ts | object intersection: strict | 1 | v4.4.0 | False |
 | classic/tests/intersection.test.ts | deep intersection | 1 | never | False |
 | classic/tests/intersection.test.ts | deep intersection of arrays | 1 | never | False |
 | classic/tests/intersection.test.ts | invalid intersection types | 1 | never | False |
@@ -595,7 +595,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/intersection.test.ts | invalid object merge | 1 | never | False |
 | classic/tests/intersection.test.ts | invalid deep merge of object and array combination | 1 | never | False |
 | classic/tests/json.test.ts | <anonymous> | 1 | never | False |
-| classic/tests/lazy.test.ts | opt passthrough | 1 | never | False |
+| classic/tests/lazy.test.ts | opt passthrough | 1 | v4.5.0 | False |
 | classic/tests/lazy.test.ts | schema getter | 1 | never | False |
 | classic/tests/lazy.test.ts | lazy proxy | 1 | never | False |
 | classic/tests/lazy.test.ts | recursion with z.lazy | 1 | never | False |
@@ -632,7 +632,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/nullable.test.ts | z.null | 1 | never | False |
 | classic/tests/number.test.ts | z.number() basic validation | 1 | never | False |
 | classic/tests/number.test.ts | NaN validation | 1 | never | False |
-| classic/tests/number.test.ts | Infinity validation | 1 | never | False |
+| classic/tests/number.test.ts | Infinity validation | 1 | v4.5.0 | False |
 | classic/tests/number.test.ts | .gt() validation | 1 | never | False |
 | classic/tests/number.test.ts | .gte() validation | 1 | never | False |
 | classic/tests/number.test.ts | .min() validation | 1 | never | False |
@@ -647,7 +647,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/number.test.ts | .multipleOf() with positive divisor | 1 | never | False |
 | classic/tests/number.test.ts | .multipleOf() with negative divisor | 1 | never | False |
 | classic/tests/number.test.ts | .step() validation | 1 | never | False |
-| classic/tests/number.test.ts | .finite() validation | 1 | never | False |
+| classic/tests/number.test.ts | .finite() validation | 1 | v4.5.0 | False |
 | classic/tests/number.test.ts | .safe() validation | 1 | never | False |
 | classic/tests/number.test.ts | min value getters | 1 | never | False |
 | classic/tests/number.test.ts | max value getters | 1 | never | False |
@@ -702,8 +702,8 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/object.test.ts | index signature in shape | 1 | never | False |
 | classic/tests/optional.test.ts | .optional() | 1 | never | False |
 | classic/tests/optional.test.ts | unwrap | 1 | never | False |
-| classic/tests/optional.test.ts | optionality | 1 | never | False |
-| classic/tests/optional.test.ts | pipe optionality | 1 | never | False |
+| classic/tests/optional.test.ts | optionality | 1 | v4.4.0 | False |
+| classic/tests/optional.test.ts | pipe optionality | 1 | v4.5.0 | False |
 | classic/tests/optional.test.ts | pipe optionality inside objects | 1 | never | False |
 | classic/tests/partial.test.ts | shallow inference | 1 | never | False |
 | classic/tests/partial.test.ts | shallow partial parse | 1 | never | False |
@@ -863,9 +863,9 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/string.test.ts | bad uuid | 1 | v4.1.0 | False |
 | classic/tests/string.test.ts | good guid | 1 | never | False |
 | classic/tests/string.test.ts | bad guid | 1 | never | False |
-| classic/tests/string.test.ts | cuid | 1 | never | False |
+| classic/tests/string.test.ts | cuid | 1 | v4.4.0 | False |
 | classic/tests/string.test.ts | cuid2 | 1 | never | False |
-| classic/tests/string.test.ts | ulid | 1 | never | False |
+| classic/tests/string.test.ts | ulid | 1 | v4.5.0 | False |
 | classic/tests/string.test.ts | xid | 1 | never | False |
 | classic/tests/string.test.ts | ksuid | 1 | never | False |
 | classic/tests/string.test.ts | regex | 1 | never | False |
@@ -888,21 +888,21 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/template-literal.test.ts | template literal type inference | 1 | never | False |
 | classic/tests/template-literal.test.ts | template literal unsupported args | 1 | never | False |
 | classic/tests/template-literal.test.ts | template literal parsing - success - basic cases | 1 | never | False |
-| classic/tests/template-literal.test.ts | template literal parsing - failure - basic cases | 1 | never | False |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - basic cases | 1 | v4.4.0 | False |
 | classic/tests/template-literal.test.ts | regexes | 1 | v4.1.0 | False |
 | classic/tests/template-literal.test.ts | template literal parsing - success - complex cases | 1 | never | False |
-| classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | never | False |
-| classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | never | False |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | v4.2.0 | False |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | v4.2.0 | False |
 | classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | v4.1.0 | False |
 | classic/tests/to-json-schema.test.ts | toJSONSchema unsupported schema types | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | v4.1.0 | False |
-| classic/tests/to-json-schema.test.ts | toJSONSchema string patterns | 1 | never | False |
+| classic/tests/to-json-schema.test.ts | toJSONSchema string patterns | 1 | v4.5.0 | False |
 | classic/tests/to-json-schema.test.ts | toJSONSchema number constraints | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | toJSONSchema arrays | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | toJSONSchema unions | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | toJSONSchema intersections | 1 | never | False |
+| classic/tests/to-json-schema.test.ts | toJSONSchema unions | 1 | v4.5.0 | False |
+| classic/tests/to-json-schema.test.ts | toJSONSchema intersections | 1 | v4.5.0 | False |
 | classic/tests/to-json-schema.test.ts | toJSONSchema record | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | toJSONSchema tuple | 1 | never | False |
+| classic/tests/to-json-schema.test.ts | toJSONSchema tuple | 1 | v4.5.0 | False |
 | classic/tests/to-json-schema.test.ts | toJSONSchema promise | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | toJSONSchema lazy | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | toJSONSchema enum | 1 | never | False |
@@ -918,26 +918,26 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/to-json-schema.test.ts | toJSONSchema recursive interface schemas | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | toJSONSchema mutually recursive interface schemas | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | override | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | override: do not run on references | 1 | never | False |
+| classic/tests/to-json-schema.test.ts | override: do not run on references | 1 | v4.3.0 | False |
 | classic/tests/to-json-schema.test.ts | override with refs | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | override execution order | 1 | never | False |
+| classic/tests/to-json-schema.test.ts | override execution order | 1 | v4.5.0 | False |
 | classic/tests/to-json-schema.test.ts | override with path | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | pipe | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | passthrough schemas | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | extract schemas with id | 1 | never | False |
+| classic/tests/to-json-schema.test.ts | extract schemas with id | 1 | v4.4.0 | False |
 | classic/tests/to-json-schema.test.ts | unrepresentable literal values are ignored | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | describe with id | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | overwrite id | 1 | never | False |
+| classic/tests/to-json-schema.test.ts | describe with id | 1 | v4.4.0 | False |
+| classic/tests/to-json-schema.test.ts | overwrite id | 1 | v4.4.0 | False |
 | classic/tests/to-json-schema.test.ts | overwrite descriptions | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | top-level readonly | 1 | never | False |
+| classic/tests/to-json-schema.test.ts | top-level readonly | 1 | v4.4.0 | False |
 | classic/tests/to-json-schema.test.ts | basic registry | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | _ref | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | defaults/prefaults | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | input type | 1 | v4.1.0 | False |
 | classic/tests/to-json-schema.test.ts | examples on pipe | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | use output type for preprocess | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | flatten simple intersections | 1 | never | False |
-| classic/tests/to-json-schema.test.ts | z.file() | 1 | never | False |
+| classic/tests/to-json-schema.test.ts | flatten simple intersections | 1 | v4.5.0 | False |
+| classic/tests/to-json-schema.test.ts | z.file() | 1 | v4.3.0 | False |
 | classic/tests/to-json-schema.test.ts | custom toJSONSchema | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | cycle detection - root | 1 | never | False |
 | classic/tests/to-json-schema.test.ts | cycle detection - mutual recursion | 1 | never | False |
@@ -971,7 +971,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | classic/tests/union.test.ts | readonly union | 1 | never | False |
 | classic/tests/union.test.ts | union inferred types | 1 | never | False |
 | classic/tests/union.test.ts | union values | 1 | never | False |
-| classic/tests/validations.test.ts | string length | 1 | never | False |
+| classic/tests/validations.test.ts | string length | 1 | v4.5.0 | False |
 | classic/tests/validations.test.ts | string min/max | 1 | never | False |
 | classic/tests/validations.test.ts | string max | 1 | never | False |
 | classic/tests/validations.test.ts | number min | 1 | never | False |
@@ -1162,7 +1162,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | core/tests/locales/be.test.ts | Belarusian localization pluralization rules handles negative numbers correctly | 1 | never | False |
 | core/tests/locales/be.test.ts | Belarusian localization pluralization rules handles zero correctly | 1 | never | False |
 | core/tests/locales/be.test.ts | Belarusian localization pluralization rules handles bigint values correctly | 1 | never | False |
-| core/tests/locales/en.test.ts | parsedType | 1 | never | False |
+| core/tests/locales/en.test.ts | parsedType | 1 | v4.3.0 | False |
 | core/tests/locales/ru.test.ts | Russian localization pluralization rules array pluralization correctly pluralizes 1 array | 1 | never | False |
 | core/tests/locales/ru.test.ts | Russian localization pluralization rules array pluralization correctly pluralizes 2 array | 1 | never | False |
 | core/tests/locales/ru.test.ts | Russian localization pluralization rules array pluralization correctly pluralizes 5 array | 1 | never | False |
@@ -1201,7 +1201,7 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 | core/tests/locales/ru.test.ts | Russian localization pluralization rules handles negative numbers correctly | 1 | never | False |
 | core/tests/locales/ru.test.ts | Russian localization pluralization rules handles zero correctly | 1 | never | False |
 | core/tests/locales/ru.test.ts | Russian localization pluralization rules handles bigint values correctly | 1 | never | False |
-| core/tests/locales/tr.test.ts | parsedType | 1 | never | False |
+| core/tests/locales/tr.test.ts | parsedType | 1 | v4.3.0 | False |
 | core/tests/locales/tr.test.ts | locales - tr | 1 | never | False |
 
 ## Developer failures by file: v4.0.5
@@ -1228,19 +1228,90 @@ Developer identity is file + fullName + one-based occurrence in the frozen decla
 
 ## Developer failures by file: v4.2.0
 
-Unavailable: no validated runtime-only developer result.
+| File | Failed cases | First message |
+| --- | --- | --- |
+| classic/tests/continuability.test.ts | 1 | Error: Snapshot `continuability 2` mismatched |
+| classic/tests/discriminated-unions.test.ts | 1 | Error: Snapshot `invalid discriminator value 1` mismatched |
+| classic/tests/file.test.ts | 1 | Error: Snapshot `failing validations 1` mismatched |
+| classic/tests/pickomit.test.ts | 1 | AssertionError: expected [Function] to throw an error |
+| classic/tests/pipe.test.ts | 1 | Error: Snapshot `continue on non-fatal errors 1` mismatched |
+| classic/tests/preprocess.test.ts | 3 | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 |
+| classic/tests/set.test.ts | 1 | Error: Snapshot `min/max 1` mismatched |
+| classic/tests/string.test.ts | 1 | AssertionError: expected { success: true, …(1) } to match object { success: false } |
+| classic/tests/template-literal.test.ts | 3 | Error: Snapshot `regexes 17` mismatched |
+| classic/tests/to-json-schema.test.ts | 3 | Error: Snapshot `toJSONSchema > primitive types 15` mismatched |
+| classic/tests/tuple.test.ts | 2 | Error: Snapshot `successful validation 2` mismatched |
+| classic/tests/union.test.ts | 1 | Error: Snapshot `return errors from both union arms 1` mismatched |
 
 ## Developer failures by file: v4.3.0
 
-Unavailable: no validated runtime-only developer result.
+| File | Failed cases | First message |
+| --- | --- | --- |
+| classic/tests/continuability.test.ts | 1 | Error: Snapshot `continuability 2` mismatched |
+| classic/tests/discriminated-unions.test.ts | 1 | Error: Snapshot `invalid discriminator value 1` mismatched |
+| classic/tests/file.test.ts | 1 | Error: Snapshot `failing validations 1` mismatched |
+| classic/tests/pickomit.test.ts | 1 | AssertionError: expected [Function] to throw an error |
+| classic/tests/pipe.test.ts | 1 | Error: Snapshot `continue on non-fatal errors 1` mismatched |
+| classic/tests/preprocess.test.ts | 3 | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 |
+| classic/tests/set.test.ts | 1 | Error: Snapshot `min/max 1` mismatched |
+| classic/tests/string.test.ts | 1 | AssertionError: expected { success: true, …(1) } to match object { success: false } |
+| classic/tests/template-literal.test.ts | 3 | Error: Snapshot `regexes 17` mismatched |
+| classic/tests/to-json-schema.test.ts | 5 | Error: Snapshot `toJSONSchema > primitive types 12` mismatched |
+| classic/tests/tuple.test.ts | 2 | Error: Snapshot `successful validation 2` mismatched |
+| classic/tests/union.test.ts | 1 | Error: Snapshot `return errors from both union arms 1` mismatched |
+| core/tests/locales/en.test.ts | 1 | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function |
+| core/tests/locales/tr.test.ts | 1 | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function |
 
 ## Developer failures by file: v4.4.0
 
-Unavailable: no validated runtime-only developer result.
+| File | Failed cases | First message |
+| --- | --- | --- |
+| classic/tests/catch.test.ts | 2 | ZodError: [ |
+| classic/tests/continuability.test.ts | 1 | Error: Snapshot `continuability 2` mismatched |
+| classic/tests/discriminated-unions.test.ts | 1 | Error: Snapshot `invalid discriminator value 1` mismatched |
+| classic/tests/file.test.ts | 1 | Error: Snapshot `failing validations 1` mismatched |
+| classic/tests/function.test.ts | 1 | Error: Snapshot `input validation error 1` mismatched |
+| classic/tests/intersection.test.ts | 1 | AssertionError: expected true to deeply equal false |
+| classic/tests/optional.test.ts | 1 | AssertionError: expected undefined to deeply equal 'optional' |
+| classic/tests/pickomit.test.ts | 1 | AssertionError: expected [Function] to throw an error |
+| classic/tests/pipe.test.ts | 1 | Error: Snapshot `continue on non-fatal errors 1` mismatched |
+| classic/tests/preprocess.test.ts | 3 | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 |
+| classic/tests/set.test.ts | 1 | Error: Snapshot `min/max 1` mismatched |
+| classic/tests/string.test.ts | 2 | AssertionError: expected { success: true, …(1) } to match object { success: false } |
+| classic/tests/template-literal.test.ts | 4 | AssertionError: expected [Function] to throw an error |
+| classic/tests/to-json-schema.test.ts | 9 | Error: Snapshot `toJSONSchema > primitive types 12` mismatched |
+| classic/tests/tuple.test.ts | 2 | Error: Snapshot `successful validation 2` mismatched |
+| classic/tests/union.test.ts | 1 | Error: Snapshot `return errors from both union arms 1` mismatched |
+| core/tests/locales/en.test.ts | 1 | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function |
+| core/tests/locales/tr.test.ts | 1 | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function |
 
 ## Developer failures by file: v4.5.0
 
-Unavailable: no validated runtime-only developer result.
+| File | Failed cases | First message |
+| --- | --- | --- |
+| classic/tests/array.test.ts | 1 | Error: Snapshot `array length 1` mismatched |
+| classic/tests/continuability.test.ts | 1 | Error: Snapshot `continuability 2` mismatched |
+| classic/tests/datetime.test.ts | 1 | ZodError: [ |
+| classic/tests/discriminated-unions.test.ts | 1 | Error: Snapshot `invalid discriminator value 1` mismatched |
+| classic/tests/error.test.ts | 3 | Error: Snapshot `z.config customError  1` mismatched |
+| classic/tests/file.test.ts | 1 | Error: Snapshot `failing validations 1` mismatched |
+| classic/tests/function.test.ts | 1 | Error: Snapshot `input validation error 1` mismatched |
+| classic/tests/intersection.test.ts | 1 | AssertionError: expected true to deeply equal false |
+| classic/tests/lazy.test.ts | 1 | AssertionError: expected 'defaulted' to deeply equal 'optional' |
+| classic/tests/number.test.ts | 2 | Error: Snapshot `Infinity validation 1` mismatched |
+| classic/tests/optional.test.ts | 2 | AssertionError: expected 'defaulted' to deeply equal 'optional' |
+| classic/tests/pickomit.test.ts | 1 | AssertionError: expected [Function] to throw an error |
+| classic/tests/pipe.test.ts | 1 | Error: Snapshot `continue on non-fatal errors 1` mismatched |
+| classic/tests/preprocess.test.ts | 3 | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 |
+| classic/tests/set.test.ts | 1 | Error: Snapshot `min/max 1` mismatched |
+| classic/tests/string.test.ts | 3 | AssertionError: expected { success: true, …(1) } to match object { success: false } |
+| classic/tests/template-literal.test.ts | 4 | AssertionError: expected [Function] to throw an error |
+| classic/tests/to-json-schema.test.ts | 15 | Error: Snapshot `toJSONSchema > primitive types 10` mismatched |
+| classic/tests/tuple.test.ts | 2 | Error: Snapshot `successful validation 2` mismatched |
+| classic/tests/union.test.ts | 1 | Error: Snapshot `return errors from both union arms 1` mismatched |
+| classic/tests/validations.test.ts | 1 | Error: Snapshot `string length 1` mismatched |
+| core/tests/locales/en.test.ts | 1 | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function |
+| core/tests/locales/tr.test.ts | 1 | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function |
 
 ## Developer failures by file: v4.6.0
 
@@ -1250,62 +1321,62 @@ Unavailable: no validated runtime-only developer result.
 
 Matches are filename-based; counts sum all exact/lowercase/kebab/plural matches across classic, core, and mini. This does not establish semantic equivalence between corpora.
 
-| Function | Dev files | LLM baseline | Dev baseline | v4.1.0 LLM survivors | v4.1.0 dev passed | v4.2.0 LLM survivors | v4.2.0 dev passed | v4.3.0 LLM survivors | v4.3.0 dev passed | v4.4.0 LLM survivors | v4.4.0 dev passed | v4.5.0 LLM survivors | v4.5.0 dev passed | v4.6.0 LLM survivors | v4.6.0 dev passed |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| zod.z.discriminatedUnion | classic/tests/discriminated-unions.test.ts | 2 | 21 | 2 | 20 | 2 | unavailable | 2 | unavailable | 2 | unavailable | 2 | unavailable | unavailable | unavailable |
-| zod.z.file | classic/tests/file.test.ts | 1 | 2 | 1 | 1 | 1 | unavailable | 1 | unavailable | 1 | unavailable | 1 | unavailable | unavailable | unavailable |
-| zod.z.nullish |  | 4 | 0 | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | unavailable | unmatched |
-| zod.z.readonly | classic/tests/readonly.test.ts | 2 | 7 | 2 | 7 | 2 | unavailable | 2 | unavailable | 2 | unavailable | 2 | unavailable | unavailable | unavailable |
-| zod.z.map | classic/tests/map.test.ts | 2 | 8 | 2 | 8 | 2 | unavailable | 2 | unavailable | 2 | unavailable | 2 | unavailable | unavailable | unavailable |
-| zod.z.cidrv4 |  | 4 | 0 | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | unavailable | unmatched |
-| zod.z.cidrv6 |  | 1 | 0 | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | unavailable | unmatched |
-| zod.z.strictObject |  | 2 | 0 | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | unavailable | unmatched |
-| zod.z.date | classic/tests/date.test.ts | 2 | 3 | 2 | 3 | 2 | unavailable | 2 | unavailable | 2 | unavailable | 2 | unavailable | unavailable | unavailable |
-| zod.z.base64 |  | 4 | 0 | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | unavailable | unmatched |
-| zod.z.tuple | classic/tests/tuple.test.ts | 1 | 6 | 1 | 4 | 1 | unavailable | 1 | unavailable | 1 | unavailable | 1 | unavailable | unavailable | unavailable |
-| zod.z.guid |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.nanoid |  | 2 | 0 | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | unavailable | unmatched |
-| zod.z.uuidv6 |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.array | classic/tests/array.test.ts | 1 | 9 | 1 | 9 | 1 | unavailable | 1 | unavailable | 1 | unavailable | 1 | unavailable | unavailable | unavailable |
-| zod.z.int64 |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.any |  | 4 | 0 | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | unavailable | unmatched |
-| zod.z.ulid |  | 4 | 0 | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | unavailable | unmatched |
-| zod.z.nullable | classic/tests/nullable.test.ts | 4 | 3 | 4 | 3 | 4 | unavailable | 4 | unavailable | 4 | unavailable | 4 | unavailable | unavailable | unavailable |
-| zod.z.never |  | 2 | 0 | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | unavailable | unmatched |
-| zod.z.email |  | 2 | 0 | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | unavailable | unmatched |
-| zod.z.looseObject |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.symbol |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.uuidv7 |  | 4 | 0 | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | unavailable | unmatched |
-| zod.z.uuid |  | 2 | 0 | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | unavailable | unmatched |
-| zod.z.prefault | classic/tests/prefault.test.ts | 3 | 2 | 3 | 2 | 3 | unavailable | 3 | unavailable | 3 | unavailable | 3 | unavailable | unavailable | unavailable |
-| zod.z.cuid2 |  | 4 | 0 | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | unavailable | unmatched |
-| zod.z.unknown |  | 4 | 0 | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | unavailable | unmatched |
-| zod.z.uint32 |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.keyof |  | 1 | 0 | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | unavailable | unmatched |
-| zod.z.catch | classic/tests/catch.test.ts | 2 | 16 | 2 | 16 | 2 | unavailable | 2 | unavailable | 2 | unavailable | 2 | unavailable | unavailable | unavailable |
-| zod.z.nonoptional | classic/tests/nonoptional.test.ts | 3 | 3 | 3 | 3 | 3 | unavailable | 3 | unavailable | 3 | unavailable | 3 | unavailable | unavailable | unavailable |
-| zod.z.boolean |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.check | mini/tests/checks.test.ts | 4 | 17 | 4 | 17 | 4 | unavailable | 4 | unavailable | 4 | unavailable | 4 | unavailable | unavailable | unavailable |
-| zod.z.uppercase |  | 1 | 0 | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | unavailable | unmatched |
-| zod.z.minLength |  | 1 | 0 | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | unavailable | unmatched |
-| zod.z.negative |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.gte |  | 1 | 0 | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | unavailable | unmatched |
-| zod.z.endsWith |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.multipleOf |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.lt |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.trim |  | 4 | 0 | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | unavailable | unmatched |
-| zod.z.transform | classic/tests/transform.test.ts | 2 | 16 | 2 | 16 | 2 | unavailable | 2 | unavailable | 2 | unavailable | 2 | unavailable | unavailable | unavailable |
-| zod.z.positive |  | 2 | 0 | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | unavailable | unmatched |
-| zod.z.overwrite |  | 2 | 0 | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | unavailable | unmatched |
-| zod.z.preprocess | classic/tests/preprocess.test.ts | 4 | 11 | 4 | 8 | 4 | unavailable | 4 | unavailable | 4 | unavailable | 4 | unavailable | unavailable | unavailable |
-| zod.z.nonpositive |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.iso.duration |  | 1 | 0 | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | unavailable | unmatched |
-| zod.z.safeParse |  | 4 | 0 | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | 4 | unmatched | unavailable | unmatched |
-| zod.z.parseAsync |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | unavailable | unmatched |
-| zod.z.coerce.number | classic/tests/number.test.ts; mini/tests/number.test.ts | 1 | 34 | 1 | 34 | 1 | unavailable | 1 | unavailable | 1 | unavailable | 1 | unavailable | unavailable | unavailable |
-| zod.z.coerce.boolean |  | 1 | 0 | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | 1 | unmatched | unavailable | unmatched |
-| zod.z.parse |  | 3 | 0 | 3 | unmatched | 3 | unmatched | 3 | unmatched | 3 | unmatched | 2 | unmatched | unavailable | unmatched |
-| zod.z.iso.time |  | 2 | 0 | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | 2 | unmatched | unavailable | unmatched |
+| Function | Dev files | LLM baseline | Dev baseline | v4.1.0 LLM survivors | v4.1.0 dev passed | v4.1.0 dev skipped | v4.2.0 LLM survivors | v4.2.0 dev passed | v4.2.0 dev skipped | v4.3.0 LLM survivors | v4.3.0 dev passed | v4.3.0 dev skipped | v4.4.0 LLM survivors | v4.4.0 dev passed | v4.4.0 dev skipped | v4.5.0 LLM survivors | v4.5.0 dev passed | v4.5.0 dev skipped | v4.6.0 LLM survivors | v4.6.0 dev passed | v4.6.0 dev skipped |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| zod.z.discriminatedUnion | classic/tests/discriminated-unions.test.ts | 2 | 21 | 2 | 20 | 0 | 2 | 20 | 0 | 2 | 20 | 0 | 2 | 20 | 0 | 2 | 20 | 0 | unavailable | unavailable | unavailable |
+| zod.z.file | classic/tests/file.test.ts | 1 | 2 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | unavailable | unavailable | unavailable |
+| zod.z.nullish |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.readonly | classic/tests/readonly.test.ts | 2 | 7 | 2 | 7 | 0 | 2 | 7 | 0 | 2 | 7 | 0 | 2 | 7 | 0 | 2 | 7 | 0 | unavailable | unavailable | unavailable |
+| zod.z.map | classic/tests/map.test.ts | 2 | 8 | 2 | 8 | 0 | 2 | 8 | 0 | 2 | 8 | 0 | 2 | 8 | 0 | 2 | 8 | 0 | unavailable | unavailable | unavailable |
+| zod.z.cidrv4 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.cidrv6 |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.strictObject |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.date | classic/tests/date.test.ts | 2 | 3 | 2 | 3 | 0 | 2 | 3 | 0 | 2 | 3 | 0 | 2 | 3 | 0 | 2 | 3 | 0 | unavailable | unavailable | unavailable |
+| zod.z.base64 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.tuple | classic/tests/tuple.test.ts | 1 | 6 | 1 | 4 | 0 | 1 | 4 | 0 | 1 | 4 | 0 | 1 | 4 | 0 | 1 | 4 | 0 | unavailable | unavailable | unavailable |
+| zod.z.guid |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.nanoid |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.uuidv6 |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.array | classic/tests/array.test.ts | 1 | 9 | 1 | 9 | 0 | 1 | 9 | 0 | 1 | 9 | 0 | 1 | 9 | 0 | 1 | 8 | 0 | unavailable | unavailable | unavailable |
+| zod.z.int64 |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.any |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.ulid |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.nullable | classic/tests/nullable.test.ts | 4 | 3 | 4 | 3 | 0 | 4 | 3 | 0 | 4 | 3 | 0 | 4 | 3 | 0 | 4 | 3 | 0 | unavailable | unavailable | unavailable |
+| zod.z.never |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.email |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.looseObject |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.symbol |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.uuidv7 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.uuid |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.prefault | classic/tests/prefault.test.ts | 3 | 2 | 3 | 2 | 0 | 3 | 2 | 0 | 3 | 2 | 0 | 3 | 2 | 0 | 3 | 2 | 0 | unavailable | unavailable | unavailable |
+| zod.z.cuid2 |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.unknown |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.uint32 |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.keyof |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.catch | classic/tests/catch.test.ts | 2 | 16 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 14 | 0 | 2 | 16 | 0 | unavailable | unavailable | unavailable |
+| zod.z.nonoptional | classic/tests/nonoptional.test.ts | 3 | 3 | 3 | 3 | 0 | 3 | 3 | 0 | 3 | 3 | 0 | 3 | 3 | 0 | 3 | 3 | 0 | unavailable | unavailable | unavailable |
+| zod.z.boolean |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.check | mini/tests/checks.test.ts | 4 | 17 | 4 | 17 | 0 | 4 | 17 | 0 | 4 | 17 | 0 | 4 | 17 | 0 | 4 | 17 | 0 | unavailable | unavailable | unavailable |
+| zod.z.uppercase |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.minLength |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.negative |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.gte |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.endsWith |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.multipleOf |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.lt |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.trim |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.transform | classic/tests/transform.test.ts | 2 | 16 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | 2 | 16 | 0 | unavailable | unavailable | unavailable |
+| zod.z.positive |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.overwrite |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.preprocess | classic/tests/preprocess.test.ts | 4 | 11 | 4 | 8 | 0 | 4 | 8 | 0 | 4 | 8 | 0 | 4 | 8 | 0 | 4 | 8 | 0 | unavailable | unavailable | unavailable |
+| zod.z.nonpositive |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.iso.duration |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.safeParse |  | 4 | 0 | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | 4 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.parseAsync |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.coerce.number | classic/tests/number.test.ts; mini/tests/number.test.ts | 1 | 34 | 1 | 34 | 0 | 1 | 34 | 0 | 1 | 34 | 0 | 1 | 34 | 0 | 1 | 32 | 0 | unavailable | unavailable | unavailable |
+| zod.z.coerce.boolean |  | 1 | 0 | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | 1 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.parse |  | 3 | 0 | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 3 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
+| zod.z.iso.time |  | 2 | 0 | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | 2 | unmatched | unmatched | unavailable | unmatched | unmatched |
 
 Functions with no automatic match:
 
@@ -1366,9 +1437,9 @@ No exclusions; all 139 remain in the denominator.
 | v4.3.0 | 39.627 | 30.278 | 13.684 | 83.589 |
 | v4.4.0 | 38.491 | 28.187 | 13.393 | 80.071 |
 | v4.5.0 | 53.668 | 28.831 | 11.882 | 94.381 |
-| v4.6.0 | 1.877 | 0 | 0 | 1.877 |
+| v4.6.0 | 44.327 | 0 | 0 | 44.327 |
 
-Sum of recorded per-release stages (not end-to-end wall time): 501.980 seconds.
+Sum of recorded per-release stages (not end-to-end wall time): 544.430 seconds.
 
 ## Developer failure categories
 
@@ -1378,10 +1449,10 @@ Ordered predicates: snapshot (Snapshot and mismatched), load (file_load_failed),
 | --- | --- | --- | --- | --- |
 | v4.0.5 | 0 | 0 | 0 | 0 |
 | v4.1.0 | 12 | 0 | 5 | 0 |
-| v4.2.0 | unavailable | unavailable | unavailable | unavailable |
-| v4.3.0 | unavailable | unavailable | unavailable | unavailable |
-| v4.4.0 | unavailable | unavailable | unavailable | unavailable |
-| v4.5.0 | unavailable | unavailable | unavailable | unavailable |
+| v4.2.0 | 13 | 0 | 6 | 0 |
+| v4.3.0 | 14 | 0 | 7 | 2 |
+| v4.4.0 | 20 | 0 | 10 | 4 |
+| v4.5.0 | 34 | 0 | 12 | 3 |
 | v4.6.0 | unavailable | unavailable | unavailable | unavailable |
 
 ### Failed developer cases grouped by file: v4.0.5
@@ -1459,6 +1530,25 @@ Developer counts sum only the files in the unchanged automatic pairing map.
 
 | File | Case | Occurrence | Category | First message | Review flag |
 | --- | --- | --- | --- | --- | --- |
+| classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 17` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | snapshot | Error: Snapshot `template literal parsing - failure - issue format 4` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 15` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
 
 ### Matched-function cross table: v4.2.0
 
@@ -1466,26 +1556,49 @@ Developer counts sum only the files in the unchanged automatic pairing map.
 
 | API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
 | --- | --- | --- | --- | --- |
-| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | unavailable |
-| zod.z.file | 1 | 1/0/0/0/0 | 2 | unavailable |
-| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | unavailable |
-| zod.z.map | 2 | 2/0/0/0/0 | 8 | unavailable |
-| zod.z.date | 2 | 2/0/0/0/0 | 3 | unavailable |
-| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | unavailable |
-| zod.z.array | 1 | 1/0/0/0/0 | 9 | unavailable |
-| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | unavailable |
-| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | unavailable |
-| zod.z.catch | 2 | 2/0/0/0/0 | 16 | unavailable |
-| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | unavailable |
-| zod.z.check | 4 | 4/0/0/0/0 | 17 | unavailable |
-| zod.z.transform | 2 | 2/0/0/0/0 | 16 | unavailable |
-| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | unavailable |
-| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | unavailable |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | 20/1/0 |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | 1/1/0 |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | 7/0/0 |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | 8/0/0 |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | 4/2/0 |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | 9/0/0 |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | 2/0/0 |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | 17/0/0 |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | 8/3/0 |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | 34/0/0 |
 
 ### Failed developer cases grouped by file: v4.3.0
 
 | File | Case | Occurrence | Category | First message | Review flag |
 | --- | --- | --- | --- | --- | --- |
+| classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 17` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | snapshot | Error: Snapshot `template literal parsing - failure - issue format 4` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | override: do not run on references | 1 | assertion | AssertionError: expected 12 to be 6 // Object.is equality | manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 12` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | z.file() | 1 | snapshot | Error: Snapshot `z.file() 3` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+| core/tests/locales/en.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function | manual review required |
+| core/tests/locales/tr.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function | manual review required |
 
 ### Matched-function cross table: v4.3.0
 
@@ -1493,26 +1606,60 @@ Developer counts sum only the files in the unchanged automatic pairing map.
 
 | API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
 | --- | --- | --- | --- | --- |
-| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | unavailable |
-| zod.z.file | 1 | 1/0/0/0/0 | 2 | unavailable |
-| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | unavailable |
-| zod.z.map | 2 | 2/0/0/0/0 | 8 | unavailable |
-| zod.z.date | 2 | 2/0/0/0/0 | 3 | unavailable |
-| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | unavailable |
-| zod.z.array | 1 | 1/0/0/0/0 | 9 | unavailable |
-| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | unavailable |
-| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | unavailable |
-| zod.z.catch | 2 | 2/0/0/0/0 | 16 | unavailable |
-| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | unavailable |
-| zod.z.check | 4 | 4/0/0/0/0 | 17 | unavailable |
-| zod.z.transform | 2 | 2/0/0/0/0 | 16 | unavailable |
-| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | unavailable |
-| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | unavailable |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | 20/1/0 |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | 1/1/0 |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | 7/0/0 |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | 8/0/0 |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | 4/2/0 |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | 9/0/0 |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | 2/0/0 |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | 17/0/0 |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | 8/3/0 |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | 34/0/0 |
 
 ### Failed developer cases grouped by file: v4.4.0
 
 | File | Case | Occurrence | Category | First message | Review flag |
 | --- | --- | --- | --- | --- | --- |
+| classic/tests/catch.test.ts | enum | 1 | other | ZodError: [ | manual review required |
+| classic/tests/catch.test.ts | native enum | 1 | other | ZodError: [ | manual review required |
+| classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/function.test.ts | input validation error | 1 | snapshot | Error: Snapshot `input validation error 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/intersection.test.ts | object intersection: strict | 1 | assertion | AssertionError: expected true to deeply equal false | manual review required |
+| classic/tests/optional.test.ts | optionality | 1 | assertion | AssertionError: expected undefined to deeply equal 'optional' | manual review required |
+| classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| classic/tests/string.test.ts | cuid | 1 | snapshot | Error: Snapshot `cuid 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 17` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - basic cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | snapshot | Error: Snapshot `template literal parsing - failure - issue format 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | describe with id | 1 | snapshot | Error: Snapshot `describe with id 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | extract schemas with id | 1 | snapshot | Error: Snapshot `extract schemas with id 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | override: do not run on references | 1 | assertion | AssertionError: expected 12 to be 6 // Object.is equality | manual review required |
+| classic/tests/to-json-schema.test.ts | overwrite id | 1 | snapshot | Error: Snapshot `overwrite id 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 12` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | top-level readonly | 1 | snapshot | Error: Snapshot `top-level readonly 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | z.file() | 1 | snapshot | Error: Snapshot `z.file() 3` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+| core/tests/locales/en.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function | manual review required |
+| core/tests/locales/tr.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function | manual review required |
 
 ### Matched-function cross table: v4.4.0
 
@@ -1520,26 +1667,75 @@ Developer counts sum only the files in the unchanged automatic pairing map.
 
 | API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
 | --- | --- | --- | --- | --- |
-| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | unavailable |
-| zod.z.file | 1 | 1/0/0/0/0 | 2 | unavailable |
-| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | unavailable |
-| zod.z.map | 2 | 2/0/0/0/0 | 8 | unavailable |
-| zod.z.date | 2 | 2/0/0/0/0 | 3 | unavailable |
-| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | unavailable |
-| zod.z.array | 1 | 1/0/0/0/0 | 9 | unavailable |
-| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | unavailable |
-| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | unavailable |
-| zod.z.catch | 2 | 2/0/0/0/0 | 16 | unavailable |
-| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | unavailable |
-| zod.z.check | 4 | 4/0/0/0/0 | 17 | unavailable |
-| zod.z.transform | 2 | 2/0/0/0/0 | 16 | unavailable |
-| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | unavailable |
-| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | unavailable |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | 20/1/0 |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | 1/1/0 |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | 7/0/0 |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | 8/0/0 |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | 4/2/0 |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | 9/0/0 |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | 2/0/0 |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | 14/2/0 |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | 17/0/0 |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | 8/3/0 |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | 34/0/0 |
 
 ### Failed developer cases grouped by file: v4.5.0
 
 | File | Case | Occurrence | Category | First message | Review flag |
 | --- | --- | --- | --- | --- | --- |
+| classic/tests/array.test.ts | array length | 1 | snapshot | Error: Snapshot `array length 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/continuability.test.ts | continuability | 1 | snapshot | Error: Snapshot `continuability 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/datetime.test.ts | datetime parsing with local and offset | 1 | other | ZodError: [ | manual review required |
+| classic/tests/discriminated-unions.test.ts | invalid discriminator value | 1 | snapshot | Error: Snapshot `invalid discriminator value 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/error.test.ts | dont short circuit on continuable errors | 1 | snapshot | Error: Snapshot `dont short circuit on continuable errors 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/error.test.ts | error serialization | 1 | snapshot | Error: Snapshot `error serialization 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/error.test.ts | z.config customError  | 1 | snapshot | Error: Snapshot `z.config customError  1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/file.test.ts | failing validations | 1 | snapshot | Error: Snapshot `failing validations 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/function.test.ts | input validation error | 1 | snapshot | Error: Snapshot `input validation error 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/intersection.test.ts | object intersection: strict | 1 | assertion | AssertionError: expected true to deeply equal false | manual review required |
+| classic/tests/lazy.test.ts | opt passthrough | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| classic/tests/number.test.ts | .finite() validation | 1 | snapshot | Error: Snapshot `.finite() validation 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/number.test.ts | Infinity validation | 1 | snapshot | Error: Snapshot `Infinity validation 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/optional.test.ts | optionality | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| classic/tests/optional.test.ts | pipe optionality | 1 | assertion | AssertionError: expected 'defaulted' to deeply equal 'optional' | manual review required |
+| classic/tests/pickomit.test.ts | pick/omit/required/partial - do not allow unknown keys | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/pipe.test.ts | continue on non-fatal errors | 1 | snapshot | Error: Snapshot `continue on non-fatal errors 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/preprocess.test.ts | perform transform with non-fatal issues | 1 | assertion | AssertionError: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | preprocess ctx.addIssue non-fatal by default | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/preprocess.test.ts | z.NEVER in preprocess | 1 | assertion | AssertionError: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1 | manual review required |
+| classic/tests/set.test.ts | min/max | 1 | snapshot | Error: Snapshot `min/max 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/string.test.ts | bad uuid | 1 | assertion | AssertionError: expected { success: true, …(1) } to match object { success: false } | manual review required |
+| classic/tests/string.test.ts | cuid | 1 | snapshot | Error: Snapshot `cuid 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/string.test.ts | ulid | 1 | snapshot | Error: Snapshot `ulid 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/template-literal.test.ts | regexes | 1 | snapshot | Error: Snapshot `regexes 17` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - basic cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - complex cases | 1 | assertion | AssertionError: expected [Function] to throw an error | manual review required |
+| classic/tests/template-literal.test.ts | template literal parsing - failure - issue format | 1 | snapshot | Error: Snapshot `template literal parsing - failure - issue format 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | describe with id | 1 | snapshot | Error: Snapshot `describe with id 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | extract schemas with id | 1 | snapshot | Error: Snapshot `extract schemas with id 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | flatten simple intersections | 1 | snapshot | Error: Snapshot `flatten simple intersections 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | input type | 1 | snapshot | Error: Snapshot `input type 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | override execution order | 1 | snapshot | Error: Snapshot `override execution order 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | override: do not run on references | 1 | assertion | AssertionError: expected 12 to be 6 // Object.is equality | manual review required |
+| classic/tests/to-json-schema.test.ts | overwrite id | 1 | snapshot | Error: Snapshot `overwrite id 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema intersections | 1 | snapshot | Error: Snapshot `toJSONSchema > intersections 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema primitive types | 1 | snapshot | Error: Snapshot `toJSONSchema > primitive types 10` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema string formats | 1 | snapshot | Error: Snapshot `toJSONSchema > string formats 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema string patterns | 1 | snapshot | Error: Snapshot `toJSONSchema > string patterns 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema tuple | 1 | snapshot | Error: Snapshot `toJSONSchema > tuple 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | toJSONSchema unions | 1 | snapshot | Error: Snapshot `toJSONSchema > unions 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | top-level readonly | 1 | snapshot | Error: Snapshot `top-level readonly 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/to-json-schema.test.ts | z.file() | 1 | snapshot | Error: Snapshot `z.file() 3` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | async validation | 1 | snapshot | Error: Snapshot `async validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/tuple.test.ts | successful validation | 1 | snapshot | Error: Snapshot `successful validation 2` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/union.test.ts | return errors from both union arms | 1 | snapshot | Error: Snapshot `return errors from both union arms 1` mismatched | likely non-contract assertion; manual review required |
+| classic/tests/validations.test.ts | string length | 1 | snapshot | Error: Snapshot `string length 1` mismatched | likely non-contract assertion; manual review required |
+| core/tests/locales/en.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_1__.parsedType) is not a function | manual review required |
+| core/tests/locales/tr.test.ts | parsedType | 1 | other | TypeError: (0 , __vite_ssr_import_2__.parsedType) is not a function | manual review required |
 
 ### Matched-function cross table: v4.5.0
 
@@ -1547,21 +1743,21 @@ Developer counts sum only the files in the unchanged automatic pairing map.
 
 | API | LLM baseline | LLM pass/fail/load/timeout/other | Dev baseline | Dev passed/failed/skipped |
 | --- | --- | --- | --- | --- |
-| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | unavailable |
-| zod.z.file | 1 | 1/0/0/0/0 | 2 | unavailable |
-| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | unavailable |
-| zod.z.map | 2 | 2/0/0/0/0 | 8 | unavailable |
-| zod.z.date | 2 | 2/0/0/0/0 | 3 | unavailable |
-| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | unavailable |
-| zod.z.array | 1 | 1/0/0/0/0 | 9 | unavailable |
-| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | unavailable |
-| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | unavailable |
-| zod.z.catch | 2 | 2/0/0/0/0 | 16 | unavailable |
-| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | unavailable |
-| zod.z.check | 4 | 4/0/0/0/0 | 17 | unavailable |
-| zod.z.transform | 2 | 2/0/0/0/0 | 16 | unavailable |
-| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | unavailable |
-| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | unavailable |
+| zod.z.discriminatedUnion | 2 | 2/0/0/0/0 | 21 | 20/1/0 |
+| zod.z.file | 1 | 1/0/0/0/0 | 2 | 1/1/0 |
+| zod.z.readonly | 2 | 2/0/0/0/0 | 7 | 7/0/0 |
+| zod.z.map | 2 | 2/0/0/0/0 | 8 | 8/0/0 |
+| zod.z.date | 2 | 2/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.tuple | 1 | 1/0/0/0/0 | 6 | 4/2/0 |
+| zod.z.array | 1 | 1/0/0/0/0 | 9 | 8/1/0 |
+| zod.z.nullable | 4 | 4/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.prefault | 3 | 3/0/0/0/0 | 2 | 2/0/0 |
+| zod.z.catch | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.nonoptional | 3 | 3/0/0/0/0 | 3 | 3/0/0 |
+| zod.z.check | 4 | 4/0/0/0/0 | 17 | 17/0/0 |
+| zod.z.transform | 2 | 2/0/0/0/0 | 16 | 16/0/0 |
+| zod.z.preprocess | 4 | 4/0/0/0/0 | 11 | 8/3/0 |
+| zod.z.coerce.number | 1 | 1/0/0/0/0 | 34 | 32/2/0 |
 
 ### Failed developer cases grouped by file: v4.6.0
 

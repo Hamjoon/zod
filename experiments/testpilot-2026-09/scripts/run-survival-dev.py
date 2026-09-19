@@ -25,25 +25,20 @@ def main():
  env=dict(os.environ,npm_config_yes='false');errors=[];state={'release':tag,'harness':'failed','fallbackUsed':None,'attempts':[]}
  log(f'- D-19 {tag}: developer command from repository root with explicit project; fallback order per addendum.')
  for fallback,cwd,cmd in attempts:
-  if fallback==2:log(f'- D-20 {tag}: no JSON in prior attempts; retry without typecheck.enabled flag, then identify runtime entries by durations and non-typecheck names.')
+  if fallback==2:log(f'- D-20 {tag}: no JSON in prior attempts; retry without typecheck.enabled flag, then identify runtime entries by meta.typecheck (D-21).')
   t=time.monotonic();p=subprocess.run(cmd,cwd=cwd,env=env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT);seconds=time.monotonic()-t
   with (out/'dev-stdout.txt').open('a') as f:f.write(f'== {"primary" if not fallback else "fallback "+str(fallback)} cwd={cwd}\n$ {" ".join(cmd)}\n{p.stdout}\n== exit={p.returncode}, wallSeconds={seconds:.3f}\n')
   state.update(command=' '.join(cmd),cwd=str(cwd),vitestExitCode=p.returncode,fallbackUsed=fallback,typecheckFlagAccepted=fallback!=2);state['attempts'].append(dict(command=state['command'],cwd=str(cwd),fallback=fallback,exitCode=p.returncode,wallSeconds=seconds))
   log(f'- {tag}: cwd `{cwd}` npm_config_yes=false `{state["command"]}` -> exit {p.returncode}, {seconds:.3f}s; appended dev-stdout.txt.')
   plain=re.sub(r'\x1b\[[0-9;]*m','',p.stdout);errors.append('\n'.join(l for l in plain.splitlines() if l.strip())[:1000])
   if not (out/'dev-run.json').exists():continue
-  if fallback==2 or len(load(out/'dev-run.json').get('testResults',[]))!=81:
-   log(f'- D-20 {tag}: apply prescribed runtime/typecheck split; root command may emit typecheck entries even when the flag is accepted.')
-   state['typecheckFlagEffective']=False
-   data=load(out/'dev-run.json');selected=[]
-   for f in data.get('testResults',[]):
-    assertions=f.get('assertionResults',[])
-    if assertions and all(c.get('duration') is not None and not c.get('meta',{}).get('typecheck') for c in assertions) and 'typecheck' not in (f.get('name','')+' '+str(f.get('projectName',''))).lower():selected.append(f)
-   expected={c['file'] for c in load(E/'results/survival/v4.0.5/dev-attempt1/dev-cases.json')}
-   names=[f.get('name','').split('/src/v4/')[-1] for f in selected]
-   if len(selected)!=81 or set(names)!=expected:
-    state['error']='Runtime/typecheck split ambiguous';log(f'- {tag}: {state["error"]}; {len(selected)} candidate entries.');break
-   shutil.copyfile(out/'dev-run.json',out/'dev-run-unsplit.json');data['testResults']=selected;write(out/'dev-run.json',data);state['splitRule']='81 unique baseline files; all assertionResults.duration values non-null; name/projectName excludes typecheck';log(f'- {tag}: split runtime JSON: {state["splitRule"]}; original retained in dev-run-unsplit.json.')
+  data=load(out/'dev-run.json')
+  valid=isinstance(data.get('testResults'),list) and all(isinstance(f.get('assertionResults'),list) and all(isinstance(c.get('meta'),dict) for c in f['assertionResults']) for f in data['testResults'])
+  if not valid:
+   state['error']='Unrecognized JSON shape: expected testResults[].assertionResults[] with meta objects';log(f'- {tag}: {state["error"]}; raw JSON retained.');break
+  runtime=[f for f in data['testResults'] if not any(c.get('meta',{}).get('typecheck') is True for c in f['assertionResults'])]
+  state['runtimeSplit']='meta.typecheck';state['typecheckFlagEffective']=len(runtime)==len(data['testResults'])
+  log(f'- D-21 {tag}: runtime entries exclude only those with any assertion meta.typecheck=true; {len(runtime)} runtime entries; raw JSON unchanged.')
   cmd=['python3',str(E/'scripts/summarize-dev-run.py'),'--release',tag,'--out',str(out)];s=subprocess.run(cmd,cwd=E,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
   log(f'- {tag}: `{" ".join(cmd)}` -> exit {s.returncode}; {s.stdout.strip()}')
   if s.returncode:

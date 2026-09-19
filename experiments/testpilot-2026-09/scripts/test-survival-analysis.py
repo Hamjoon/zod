@@ -33,9 +33,26 @@ class CaseIdentityTests(unittest.TestCase):
   self.assertEqual({identity(c) for c in cases},{identity(c) for c in self.baseline})
   self.assertEqual((summary['cases'],summary['files_load_failed'],summary['failed']),(888,1,count))
   self.assertEqual(summary['passed'],888-count)
+ def test_meta_split_keeps_todo_without_duration(self):
+  raw=copy.deepcopy(self.raw)
+  typecheck=copy.deepcopy(raw['testResults'])
+  for f in typecheck:
+   for c in f['assertionResults']:c['meta']={'typecheck':True};c['duration']=1
+  target=next(f for f in raw['testResults'] if f['name'].endswith('/classic/tests/json.test.ts'))
+  self.assertEqual(len(target['assertionResults']),1)
+  case=target['assertionResults'][0];case['status']='todo';case.pop('duration',None)
+  raw['testResults']+=typecheck
+  cases,summary=self.summarize(raw)
+  self.assertEqual((summary['files'],summary['cases'],summary['passed'],summary['failed'],summary['skipped']),(81,888,887,0,1))
+  todo=next(c for c in cases if c['file']=='classic/tests/json.test.ts')
+  self.assertEqual((todo['fullName'],todo['occurrence'],todo['status']),('<anonymous>',1,'todo'))
  def test_analysis_distinguishes_occurrences_and_ignores_unavailable(self):
   spec=importlib.util.spec_from_file_location('analysis',E/'scripts/analyze-survival.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
   self.assertEqual(len({m.key(c) for c in self.baseline}),888)
   self.assertEqual(m.firstbreak([('t','passed'),('t1','unavailable'),('t2','failed')],'passed'),'t2')
   self.assertTrue(m.rebound([('t','passed'),('t1','failed'),('t2','passed')],'passed'))
+  self.assertEqual(m.firstbreak([('t','passed'),('t1','todo'),('t2','passed')],'passed'),'')
+  self.assertFalse(m.rebound([('t','passed'),('t1','todo'),('t2','passed')],'passed'))
+  self.assertFalse(m.rebound([('t','failed'),('t1','todo')],'passed'))
+  self.assertTrue(m.rebound([('t','failed'),('t1','todo'),('t2','passed')],'passed'))
 if __name__=='__main__':unittest.main()

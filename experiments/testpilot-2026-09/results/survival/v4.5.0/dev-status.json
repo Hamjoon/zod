@@ -1,6 +1,6 @@
 {
   "release": "v4.5.0",
-  "harness": "failed",
+  "harness": "ok",
   "fallbackUsed": 0,
   "attempts": [
     {
@@ -16,8 +16,7 @@
   "vitestExitCode": 1,
   "typecheckFlagAccepted": true,
   "typecheckFlagEffective": false,
-  "error": "Runtime/typecheck split validation failed: 80/81 duration-bearing runtime files. classic/tests/json.test.ts reports <anonymous> with status todo, meta {}, and no duration; its typecheck counterpart has meta.typecheck=true. No baseline identity or status inferred.",
   "wallSeconds": 11.881741589,
-  "runtimeSplitCandidates": 80,
-  "runtimeSplitExpected": 81
+  "runtimeSplit": "meta.typecheck",
+  "reprocessedFromAddendum2": true
 }

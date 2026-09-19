@@ -5,5 +5,5 @@
   "fallbackUsed": null,
   "vitestExitCode": null,
   "wallSeconds": 0,
-  "error": "Not run: Step 2 D-18 install fallback failed with ERR_PNPM_WORKSPACE_PKG_NOT_FOUND; addendum says stop v4.6.0 branch and continue other releases."
+  "error": "Not run: addendum 3 installation failed in packages/docs postinstall (nub: not found). No applicable prescribed fallback."
 }

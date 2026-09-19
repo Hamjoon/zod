@@ -16,6 +16,7 @@
   "vitestExitCode": 1,
   "typecheckFlagAccepted": true,
   "typecheckFlagEffective": false,
-  "splitRule": "81 unique baseline files; all assertionResults.duration values non-null; name/projectName excludes typecheck",
-  "wallSeconds": 8.950379421000008
+  "wallSeconds": 8.950379421000008,
+  "runtimeSplit": "meta.typecheck",
+  "reprocessedFromAddendum2": true
 }

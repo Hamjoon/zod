@@ -17,6 +17,7 @@
   "typecheckFlagAccepted": true,
   "wallSeconds": 8.326691212000014,
   "postprocessInitialError": "Traceback (most recent call last):\n  File \"/work/zod/experiments/testpilot-2026-09/scripts/summarize-dev-run.py\", line 30, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/work/zod/experiments/testpilot-2026-09/scripts/summarize-dev-run.py\", line 9, in main\n    data=json.loads((out/'dev-run.json').read_text());files=data['testResults'];assert len(files)==81, f'Expected 81 runtime files, found {len(files)}'\n                                                                                       ^^^^^^^^^^^^^^\nAssertionError: Expected 81 runtime files, found 162\n",
-  "splitRule": "81 unique baseline files; assertion durations present, meta.typecheck false, non-typecheck names; raw aggregate counts retained in JSON, use dev-summary for runtime totals",
-  "typecheckFlagEffective": false
+  "typecheckFlagEffective": false,
+  "runtimeSplit": "meta.typecheck",
+  "reprocessedFromAddendum2": true
 }

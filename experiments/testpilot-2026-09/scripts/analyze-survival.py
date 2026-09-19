@@ -11,11 +11,11 @@ def table(lines,header,rows):
 def writecsv(name,headers,rows):
  with (R/name).open('w',newline='') as f:w=csv.writer(f,lineterminator="\n");w.writerow(headers);w.writerows(rows)
 def key(c):return c['file'],c['fullName'],c['occurrence']
-def firstbreak(states,passing):return next((t for t,s in states if s not in (passing,'unavailable')),'')
+def firstbreak(states,passing):return next((t for t,s in states if s not in (passing,'unavailable','todo')),'')
 def rebound(states,passing):
  broken=False
  for t,s in states:
-  if s=='unavailable':continue
+  if s in ('unavailable','todo'):continue
   if s!=passing:broken=True
   elif broken:return True
  return False
@@ -40,9 +40,9 @@ def main():
  release_rows=[];wall=[]
  for r in refs:
   t=r['tag'];b=optional(D/t/'build-status.json',{});d=optional(D/t/'dev-summary.json',{});counts=collections.Counter(v['status'] for v in llm[t].values());changes=collections.Counter(l.split()[0] for l in (D/t/'devtest-diff.txt').read_text().splitlines());l_ok=bool(llm[t]);d_ok=bool(d)
-  release_rows.append([t,r['commit'],r['date'],'ok' if b.get('build') else 'failed',b.get('probe','not-run'),'/'.join(str(counts[s]) for s in ['pass','fail','load-error','timeout','other']) if l_ok else 'unavailable',f"{counts['pass']}/139 ({counts['pass']/139:.2%})" if l_ok else 'unavailable',f"{d['files_loaded']}/{d['passed']}/{d['failed']}" if d_ok else 'unavailable',f"{d['passed']}/888 ({d['passed']/888:.2%})" if d_ok else 'unavailable','/'.join(str(changes[x]) for x in ['A','M','D'])])
+  release_rows.append([t,r['commit'],r['date'],'ok' if b.get('build') else 'failed',b.get('probe','not-run'),'/'.join(str(counts[s]) for s in ['pass','fail','load-error','timeout','other']) if l_ok else 'unavailable',f"{counts['pass']}/139 ({counts['pass']/139:.2%})" if l_ok else 'unavailable',f"{d['files_loaded']}/{d['passed']}/{d['failed']}/{d['skipped']}" if d_ok else 'unavailable',f"{d['passed']}/888 ({d['passed']/888:.2%})" if d_ok else 'unavailable','/'.join(str(changes[x]) for x in ['A','M','D'])])
   secs=[b.get('wallSeconds',0),optional(D/t/'llm-summary.json',{}).get('wallSeconds',0),optional(D/t/'dev-status.json',{}).get('wallSeconds',0)];wall.append([t,*[round(x,3) for x in secs],round(sum(secs),3)])
- header=['Tag','Commit','Date','Build','Probe','LLM P/F/load/timeout/other','LLM survival','Dev loaded/passed/failed','Dev survival','Dev A/M/D'];table(lines,header,release_rows)
+ header=['Tag','Commit','Date','Build','Probe','LLM P/F/load/timeout/other','LLM survival','Dev loaded/passed/failed/skipped','Dev survival','Dev A/M/D'];table(lines,header,release_rows)
  lines+=['## Per stratum',''];table(lines,['Stratum','Tests in S',*tags],[[s,len(ts:= [v for v in S if strata[v['api']]==s]),*[f"{sum(ls(t,v['testName'])=='pass' for v in ts)}/{len(ts)} ({sum(ls(t,v['testName'])=='pass' for v in ts)/len(ts):.2%})" if llm[t] else 'unavailable' for t in tags]] for s in ['S','C','Q']])
  lines+=['## Per function',''];table(lines,['Function','Tests in S',*later],[[api,sum(s['api']==api for s in S),*[survivors(t,api) if llm[t] else 'unavailable' for t in later]] for api in funcs])
  spec=importlib.util.spec_from_file_location('analyze_gen',E/'scripts/analyze-gen.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
@@ -66,7 +66,7 @@ def main():
   states=[(t,ds(t,k)) for t in tags];first=firstbreak(states,'passed');back=rebound(states,'passed');dev_matrix.append([*k,*[v for t,v in states],first]);dev_break.append([*k,first or 'never',back])
  writecsv('survival-llm-matrix.csv',['testName','api','stratum',*['status@'+t for t in tags],'first_break','err_at_first_break'],llm_matrix)
  writecsv('survival-dev-matrix.csv',['file','fullName','occurrence',*['status@'+t for t in tags],'first_break'],dev_matrix)
- lines+=['## First breaks and returns to passing','','Developer identity is file + fullName + one-based occurrence in the frozen declaration order. All available runs must preserve the baseline identities. Unavailable releases are not evidence of survival; never-break counts mean no observed break in available runs. First breaks include the control; non-passing baseline observations are retained. A return to passing is any later pass following a non-pass.',''];table(lines,['Corpus','No observed break (available releases only)','Break then pass again'],[['LLM',sum(r[2]=='never' for r in llm_break),sum(r[3] for r in llm_break)],['Dev',sum(r[3]=='never' for r in dev_break),sum(r[4] for r in dev_break)]])
+ lines+=['## First breaks and returns to passing','','Developer identity is file + fullName + one-based occurrence in the frozen declaration order. All available runs must preserve the baseline identities. Unavailable releases are not evidence of survival; never-break counts mean no observed break in available runs. Todo is neither a break nor a survival and is ignored in rebound transitions. First breaks include the control; non-passing baseline observations are retained. A return to passing is any later pass following a non-pass.',''];table(lines,['Corpus','No observed break (available releases only)','Break then pass again'],[['LLM',sum(r[2]=='never' for r in llm_break),sum(r[3] for r in llm_break)],['Dev',sum(r[3]=='never' for r in dev_break),sum(r[4] for r in dev_break)]])
  table(lines,['LLM test','API','First break','Pass again'],llm_break);table(lines,['Dev file','Case','Occurrence','First break','Pass again'],dev_break)
  for t in tags:
   if not dev[t]:
@@ -81,9 +81,9 @@ def main():
   matches=[f for f in files if Path(f).parent.as_posix() in ['classic/tests','core/tests','mini/tests'] and Path(f).name in [n+'.test.ts' for n in names]];matches=existing_map.get(api,matches);mapping[api]=matches
   if not matches:unmatched.append(api)
   count=sum(s['api']==api for s in S);keys=[k for k in baseline if k[0] in matches];row=[api,'; '.join(matches),count,len(keys)]
-  for t in later:row += [survivors(t,api) if llm[t] else 'unavailable',sum(ds(t,k)=='passed' for k in keys) if matches and dev[t] else 'unmatched' if not matches else 'unavailable']
+  for t in later:row += [survivors(t,api) if llm[t] else 'unavailable',sum(ds(t,k)=='passed' for k in keys) if matches and dev[t] else 'unmatched' if not matches else 'unavailable',sum(ds(t,k) not in ('passed','failed','unavailable') for k in keys) if matches and dev[t] else 'unmatched' if not matches else 'unavailable']
   pair_rows.append(row)
- (R/'pair-map.json').write_text(json.dumps(mapping,indent=2)+'\n');pair_header=['Function','Dev files','LLM baseline','Dev baseline',*[v for t in later for v in [t+' LLM survivors',t+' dev passed']]]
+ (R/'pair-map.json').write_text(json.dumps(mapping,indent=2)+'\n');pair_header=['Function','Dev files','LLM baseline','Dev baseline',*[v for t in later for v in [t+' LLM survivors',t+' dev passed',t+' dev skipped']]]
  writecsv('survival-pairs.csv',pair_header,pair_rows);lines+=['## Automatic file-name pairing','','Matches are filename-based; counts sum all exact/lowercase/kebab/plural matches across classic, core, and mini. This does not establish semantic equivalence between corpora.',''];table(lines,pair_header,pair_rows)
  lines+=['Functions with no automatic match:','',*[f'- `{api}`' for api in unmatched],'','## Flaky at t',''];flaky=[v for v in llm[tags[0]].values() if v['status']!='pass'];table(lines,['Test','Status','Error'],[[v['testName'],v['status'],v['err']] for v in flaky]);lines+=['No exclusions; all 139 remain in the denominator.','','## Measured wall times',''];table(lines,['Release','Install/build/env seconds','LLM seconds','Dev seconds','Total seconds'],wall);lines += [f"Sum of recorded per-release stages (not end-to-end wall time): {sum(r[-1] for r in wall):.3f} seconds.",'']
  dev_category_rows=[];dev_candidates=[]
@@ -105,23 +105,22 @@ def main():
    cross.append([api,len(ts),'/'.join(str(lc[k]) for k in ['pass','fail','load-error','timeout','other']) if llm[t] else 'unavailable',len(ks),'/'.join(str(v) for v in [dc['passed'],dc['failed'],sum(n for k,n in dc.items() if k not in ['passed','failed','unavailable'])]) if dev[t] else 'unavailable'])
   table(lines,['API','LLM baseline','LLM pass/fail/load/timeout/other','Dev baseline','Dev passed/failed/skipped'],cross)
  (R/'survival-summary.md').write_text('\n'.join(lines))
- hand=['## Continuation 2','','The earlier sections above preserve the first attempts. This section records the addendum-2 commands and current results. Existing LLM runs through v4.5.0 were not rerun.',''];table(hand,header,release_rows)
- hand += ['### Developer commands and gates','']
- table(hand,['Release','Actual command','Working directory','Fallback','Runtime split','Harness'],[[t,(status:=optional(D/t/'dev-status.json',{})).get('command'),status.get('cwd'),status.get('fallbackUsed'),status.get('splitRule','none'),status.get('harness')] for t in tags])
- table(hand,['Release','Unavailable reason'],[[t,(status:=optional(D/t/'dev-status.json',{})).get('error','')] for t in tags if optional(D/t/'dev-status.json',{}).get('harness')!='ok'])
- control=optional(D/'v4.0.5/dev-summary.json',{});comparison=optional(D/'v4.1.0/dev-attempt-compare.txt',{})
- hand += [f"Control gate: {control.get('files')} files, {control.get('cases')} cases, {control.get('passed')} passed.",f"v4.1.0 gate: {comparison.get('passed')} passed / {comparison.get('failed')} failed; failing identity set identical to dev-attempt1: {comparison.get('identicalFailingSet')}. Removed: {comparison.get('removed')}; added: {comparison.get('added')}.",'','### D-17–D-20 and v4.6.0','',
- 'D-17: COREPACK_ENABLE_PROJECT_SPEC=0 bypassed nub@0.8.3 and used pnpm 10.12.1. Frozen install failed with ERR_PNPM_LOCKFILE_MISSING_DEPENDENCY (zod@4.5.4). D-18: --no-frozen-lockfile retry failed with ERR_PNPM_WORKSPACE_PKG_NOT_FOUND for zod@workspace:*. Per Step 2 fallback, the v4.6.0 branch stopped; no build, developer run, probe or LLM run was attempted after the failed install. All previous build log content retained.',
- 'D-19: all executed developer commands use the release repository root and --project zod, with the addendum fallback sequence available. D-20: the primary command at v4.0.5 returned runtime plus typecheck results despite accepting the disabling flag. Applied the supplied unambiguous runtime split to that existing output, selecting entries with assertion durations, non-typecheck names and no meta.typecheck marker. Original JSON is preserved in dev-run-unsplit.json. The runner applies this rule whenever duplicate typecheck entries occur, without rerunning tests. No command without the disabling flag was needed unless explicitly listed in a release status. For split JSON, original aggregate reporter counters cover both modes; dev-summary.json contains the runtime totals.',
- 'First developer attempts were moved intact to dev-attempt1/ for every release. No generated tests, testpilot2 files, or release source/configuration were edited.','']
- table(hand,['Release','Install','Build','Probe','Fallbacks'],[[t,(status:=optional(D/t/'build-status.json',{})).get('install'),status.get('build'),status.get('probe'),status.get('fallbacks')] for t in tags])
- hand+=['### Developer failure categories',''];table(hand,['Release','Snapshot','Load','Assertion','Other'],dev_category_rows)
- hand+=['### Second-pass candidates','','LLM assertion failures (unclassified):',''];table(hand,['Release','Test','API','Error'],candidates)
- hand+=['Developer failures grouped by release and file. Snapshot rows are flagged as likely non-contract assertions for manual review, not classified here.',''];table(hand,['Release','File','Case','Occurrence','Category','First message','Review flag'],dev_candidates)
- hand+=['### Timing and cleanup',''];table(hand,['Release','Install/build/env seconds','LLM seconds','Dev seconds','Recorded total seconds'],wall)
- hand += [f"Recorded per-release stage sum: {sum(r[-1] for r in wall):.3f} seconds. Earlier developer attempt timings remain in dev-attempt1; setup, script work and cleanup are outside this sum.",'','Wrapper target remains ../../../../../packages/zod; cleanup probe and export size are recorded in log-stage-s.md. No report or archive branch created.','']
- handover=E/'docs/handover-stage-s.md';previous=handover.read_text().split('\n## Continuation 2\n',1)[0].rstrip();handover.write_text(previous+'\n\n'+'\n'.join(hand))
+ hand=['## Continuation 3','','D-21: a testResults entry is typecheck only when any assertion meta.typecheck is true; every other entry is runtime. No duration or name filtering. v4.2.0–v4.5.0 developer counts below come from the addendum 2 runs, reprocessed without rerunning tests. Controls were reprocessed from preserved unsplit JSON and their summaries are unchanged.',''];table(hand,header,release_rows)
+ hand+=['### Developer reprocessing and reporting',''];table(hand,['Release','Files','Cases','Passed','Failed','Skipped'],[[t,(d:=optional(D/t/'dev-summary.json',{})).get('files','unavailable'),d.get('cases','unavailable'),d.get('passed','unavailable'),d.get('failed','unavailable'),d.get('skipped','unavailable')] for t in tags])
+ hand+=['The assertion-free <anonymous> case in classic/tests/json.test.ts was reported passed by the earlier runner and todo by the later runner. Its unchanged baseline identity remains in all 888 cases; todo counts as skipped, neither passed nor failed, and neither a first break nor a survival/rebound. Survival remains passed / 888.','',
+ '### v4.6.0 dependency resolution and outcomes','',
+ 'D-22: added export-only pnpm-workspace.yaml mirroring package.json workspaces, and resolved dependencies afresh with --no-frozen-lockfile under HUSKY=0 COREPACK_ENABLE_PROJECT_SPEC=0. Resolved versions may differ from those originally tested by the release. The lockfile is retained as results/survival/v4.6.0/pnpm-lock.resolved.yaml.','']
+ b460=optional(D/'v4.6.0/build-status.json',{});d460=optional(D/'v4.6.0/dev-status.json',{})
+ table(hand,['Package','Resolved version'],list(b460.get('resolvedVersions',{}).items()))
+ table(hand,['Install','Build','Probe','Fallbacks','Error'],[[b460.get('install'),b460.get('build'),b460.get('probe'),b460.get('fallbacks'),b460.get('error','')]])
+ table(hand,['Developer command','Harness','Runtime split','Error'],[[d460.get('command'),d460.get('harness'),d460.get('runtimeSplit'),d460.get('error','')]])
+ hand += ['D-23 (newer pnpm) does not apply to the observed missing nub executable in packages/docs postinstall; this is not a missing pnpm feature. Installation did not complete, so no v4.6.0 build or new tests were attempted. Installed package metadata and the resolved lockfile are retained despite the lifecycle failure. Actual Vitest resolved to 4.1.5, not the addendum’s expected version 5. LLM outcome is shown in the release table; build failure skips that run. Earlier LLM runs through v4.5.0 were not repeated.','', '### Developer failure categories',''];table(hand,['Release','Snapshot','Load','Assertion','Other'],dev_category_rows)
+ hand+=['### Second-pass candidates','','LLM assertion failures remain unclassified:',''];table(hand,['Release','Test','API','Error'],candidates)
+ hand+=['Developer failures by release and file. Snapshot rows are likely non-contract assertion candidates, flagged for manual review rather than classified here.',''];table(hand,['Release','File','Case','Occurrence','Category','First message','Review flag'],dev_candidates)
+ hand+=['### Timing and cleanup',''];table(hand,['Release','Install/build/env seconds','LLM seconds','Recorded developer execution seconds','Recorded total seconds'],wall)
+ hand += [f"Recorded stage sum: {sum(r[-1] for r in wall):.3f} seconds; v4.2.0–v4.5.0 developer times belong to the earlier runs, not new executions. Setup, reprocessing and cleanup are excluded.",'','Cleanup verification and export size are recorded in log-stage-s.md. No report or archive branch created.','']
+ handover=E/'docs/handover-stage-s.md';previous=handover.read_text().split('\n## Continuation 3\n',1)[0].rstrip();handover.write_text(previous+'\n\n'+'\n'.join(hand))
  with (E/'docs/log-stage-s.md').open('a') as f:
-  rows=[];table(rows,['Release','Build','Probe','LLM P/F/load/timeout/other','Dev loaded/passed/failed','Wall seconds'],[[r[0],r[3],r[4],r[5],r[7],w[-1]] for r,w in zip(release_rows,wall)]);f.write('\n## Computed per-release results\n\n'+'\n'.join(rows))
+  rows=[];table(rows,['Release','Build','Probe','LLM P/F/load/timeout/other','Dev loaded/passed/failed/skipped','Wall seconds'],[[r[0],r[3],r[4],r[5],r[7],w[-1]] for r,w in zip(release_rows,wall)]);f.write('\n## Computed per-release results\n\n'+'\n'.join(rows))
  print(json.dumps({'releases':release_rows,'unmatched':unmatched,'wallSeconds':sum(r[-1] for r in wall)},indent=2))
 if __name__=='__main__':main()

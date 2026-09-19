@@ -366,3 +366,42 @@ AssertionError: Expected 81 runtime files, found 162
 
 - Cleanup Docker command: readlink wrapper = ../../../../../packages/zod; Node package probe = 4.0.5; scratch-absent; du -sh /work/zod-versions = 2.3G; exit 0.
 - Stage only experiments/ work and explicitly force-add v4.6.0/build.log (global *.log ignore). Preserve raw output whitespace. Commit with prescribed subject and Codex trailer, push experiment branch, verify final synchronization. No report or archive branch.
+
+## Continuation 3 (addendum 3)
+
+Read supplied addendum and Continuation 2 handover; branch synchronized at 98ef551e, only pre-existing Claude outputs/ untracked. D-21 replaces duration/name filtering with meta.typecheck only in runner and summarizer. Added --input to summarize preserved unsplit controls without rewriting raw JSON. json.test.ts baseline identity is already <anonymous>, occurrence 1; later todo status is retained as skipped, a runner reporting difference for an assertion-free case. No previous test runs will be repeated.
+- `python3 -B experiments/testpilot-2026-09/scripts/summarize-dev-run.py --release v4.0.5 --out experiments/testpilot-2026-09/results/survival/v4.0.5 --input experiments/testpilot-2026-09/results/survival/v4.0.5/dev-run-unsplit.json`: exit 0; {"files": 81, "files_loaded": 81, "files_load_failed": 0, "cases": 888, "passed": 888, "failed": 0, "skipped": 0}; expected counts and 888 baseline identity triples verified. Original attempts retained; no test execution.
+- `python3 -B experiments/testpilot-2026-09/scripts/summarize-dev-run.py --release v4.1.0 --out experiments/testpilot-2026-09/results/survival/v4.1.0 --input experiments/testpilot-2026-09/results/survival/v4.1.0/dev-run-unsplit.json`: exit 0; {"files": 81, "files_loaded": 81, "files_load_failed": 0, "cases": 888, "passed": 871, "failed": 17, "skipped": 0}; expected counts and 888 baseline identity triples verified. Original attempts retained; no test execution.
+- `python3 -B experiments/testpilot-2026-09/scripts/summarize-dev-run.py --release v4.2.0 --out experiments/testpilot-2026-09/results/survival/v4.2.0`: exit 0; {"files": 81, "files_loaded": 81, "files_load_failed": 0, "cases": 888, "passed": 868, "failed": 19, "skipped": 1}; expected counts and 888 baseline identity triples verified. Original attempts retained; no test execution.
+- `python3 -B experiments/testpilot-2026-09/scripts/summarize-dev-run.py --release v4.3.0 --out experiments/testpilot-2026-09/results/survival/v4.3.0`: exit 0; {"files": 81, "files_loaded": 81, "files_load_failed": 0, "cases": 888, "passed": 864, "failed": 23, "skipped": 1}; expected counts and 888 baseline identity triples verified. Original attempts retained; no test execution.
+- `python3 -B experiments/testpilot-2026-09/scripts/summarize-dev-run.py --release v4.4.0 --out experiments/testpilot-2026-09/results/survival/v4.4.0`: exit 0; {"files": 81, "files_loaded": 81, "files_load_failed": 0, "cases": 888, "passed": 853, "failed": 34, "skipped": 1}; expected counts and 888 baseline identity triples verified. Original attempts retained; no test execution.
+- `python3 -B experiments/testpilot-2026-09/scripts/summarize-dev-run.py --release v4.5.0 --out experiments/testpilot-2026-09/results/survival/v4.5.0`: exit 0; {"files": 81, "files_loaded": 81, "files_load_failed": 0, "cases": 888, "passed": 838, "failed": 49, "skipped": 1}; expected counts and 888 baseline identity triples verified. Original attempts retained; no test execution.
+- D-22: added export-only pnpm-workspace.yaml mirroring workspaces ["packages/*"]. Resolve dependencies afresh; record resolved lockfile and versions.
+- v4.6.0 HUSKY=0 COREPACK_ENABLE_PROJECT_SPEC=0 `pnpm install --no-frozen-lockfile`: exit 1; appended build.log.
+- Installation failed; exact error retained for fallback assessment. No automatic unrelated retry.
+- environment `node --version`: exit 0; v22.23.2
+- environment `pnpm --version`: exit 0; 10.12.1
+
+- `docker compose run --rm tp python3 .../scripts/build-survival-v460-addendum3.py`: added exact workspace pattern ["packages/*"], resolved dependencies and installed package links, then install exit 1: `packages/docs postinstall: sh: 1: nub: not found`, `ELIFECYCLE Command failed`. Full output appended to build.log. D-23 not applicable: missing executable, not a pnpm feature incompatibility. No build or test run attempted for v4.6.0; stop that branch under the no-fallback rule.
+- Recorded installed package versions despite incomplete lifecycle: vitest 4.1.5, typescript 5.5.4, zshy 0.8.0, @biomejs/biome 1.9.4; Node v22.23.2, pnpm 10.12.1. Newly resolved pnpm-lock.yaml copied to pnpm-lock.resolved.yaml. This differs from the addendum's Vitest 5 expectation; actual package metadata retained.
+
+## Computed per-release results
+
+| Release | Build | Probe | LLM P/F/load/timeout/other | Dev loaded/passed/failed/skipped | Wall seconds |
+| --- | --- | --- | --- | --- | --- |
+| v4.0.5 | ok | ok | 139/0/0/0/0 | 81/888/0/0 | 93.175 |
+| v4.1.0 | ok | ok | 139/0/0/0/0 | 81/871/17/0 | 68.867 |
+| v4.2.0 | ok | ok | 139/0/0/0/0 | 81/868/19/1 | 80.02 |
+| v4.3.0 | ok | ok | 139/0/0/0/0 | 81/864/23/1 | 83.589 |
+| v4.4.0 | ok | ok | 139/0/0/0/0 | 81/853/34/1 | 80.071 |
+| v4.5.0 | ok | ok | 138/1/0/0/0 | 81/838/49/1 | 94.381 |
+| v4.6.0 | failed | not-run | unavailable | unavailable | 44.327 |
+
+- `python3 -B scripts/test-survival-analysis.py`: all four regression checks pass, including meta-only split retaining a duration-less todo and todo-neutral first-break/rebound behavior. `python3 -B scripts/analyze-survival.py`: exit 0; regenerated tables/matrices with skipped totals and appended Continuation 3 handover.
+- Artifact audit (continuation3-checks.json): raw test artifacts and original attempts unchanged; control summaries unchanged; all 888 developer identities retained, json.test.ts has no first break; pair-map and earlier handover preserved; original build log retained; copied resolved lockfile matches export; source/config files unchanged except the authorized v4.6.0 lockfile resolution and workspace addition.
+
+## Continuation 3 finalization
+
+- Final cleanup Docker command: original wrapper target ../../../../../packages/zod; package probe 4.0.5; scratch-absent; export size 2.3G; exit 0.
+- CSV validation: 888 developer cases / 139 LLM tests / 54 function pairs, each row matches its header, including new skipped columns.
+- Stage experiments/ files only, force-add v4.6.0/build.log, commit with prescribed subject and Codex attribution, push and confirm status. No report or archive branch. v4.6.0 remains blocked by missing nub in install lifecycle, not represented as test failure.
