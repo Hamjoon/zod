@@ -1,0 +1,12 @@
+services:
+  tp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: testpilot-zod:latest
+    working_dir: /work
+    volumes:
+      - ../../..:/work/zod
+      - ../../../../testpilot2:/work/testpilot2
+    tty: true
+    stdin_open: true
