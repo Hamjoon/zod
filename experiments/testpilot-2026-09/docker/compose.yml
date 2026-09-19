@@ -10,5 +10,6 @@ services:
     volumes:
       - ../../..:/work/zod
       - ../../../../testpilot2:/work/testpilot2
+      - ../../../../zod-versions:/work/zod-versions
     tty: true
     stdin_open: true
