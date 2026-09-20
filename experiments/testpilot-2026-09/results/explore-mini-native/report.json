@@ -1,0 +1,55 @@
+{
+  "metaData": {
+    "packageName": "zod-mini",
+    "useDocSnippets": true,
+    "useCodeSnippets": false,
+    "numSnippets": "all",
+    "snippetLength": 20,
+    "numCompletions": 5
+  },
+  "nrUniqueSnippets": 0,
+  "stats": {
+    "nrTests": 0,
+    "nrPasses": 0,
+    "nrFailures": 0,
+    "nrPending": 0,
+    "nrOther": 0,
+    "codexQueryTime": 0,
+    "totalTime": 225.43816600000002
+  },
+  "tests": [],
+  "coverage": {
+    "total": {
+      "lines": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 0
+      },
+      "statements": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 0
+      },
+      "functions": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 0
+      },
+      "branches": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 0
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "release": "v4.6.0",
+  "vitestExitCode": 1,
+  "typecheckFlagAccepted": null,
+  "harness": "failed",
+  "wallSeconds": 0.507027334,
+  "error": "npm error npx canceled due to missing packages and no YES option: [\"vitest@5.0.1\"]"
+}

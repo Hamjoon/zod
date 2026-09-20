@@ -1,0 +1,23 @@
+{
+  "release": "v4.0.5",
+  "harness": "ok",
+  "fallbackUsed": 0,
+  "attempts": [
+    {
+      "command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.0.5/dev-run.json",
+      "cwd": "/work/zod-versions/v4.0.5",
+      "fallback": 0,
+      "exitCode": 0,
+      "wallSeconds": 8.178338961999998
+    }
+  ],
+  "command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.0.5/dev-run.json",
+  "cwd": "/work/zod-versions/v4.0.5",
+  "vitestExitCode": 0,
+  "typecheckFlagAccepted": true,
+  "wallSeconds": 8.326691212000014,
+  "postprocessInitialError": "Traceback (most recent call last):\n  File \"/work/zod/experiments/testpilot-2026-09/scripts/summarize-dev-run.py\", line 30, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/work/zod/experiments/testpilot-2026-09/scripts/summarize-dev-run.py\", line 9, in main\n    data=json.loads((out/'dev-run.json').read_text());files=data['testResults'];assert len(files)==81, f'Expected 81 runtime files, found {len(files)}'\n                                                                                       ^^^^^^^^^^^^^^\nAssertionError: Expected 81 runtime files, found 162\n",
+  "typecheckFlagEffective": false,
+  "runtimeSplit": "meta.typecheck",
+  "reprocessedFromAddendum2": true
+}

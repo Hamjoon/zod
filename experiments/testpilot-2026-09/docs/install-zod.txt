@@ -1,0 +1,100 @@
+Scope: all 7 workspace projects
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +953
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+   ╭──────────────────────────────────────────────╮
+   │                                              │
+   │     Update available! 10.12.1 → 12.4.2.      │
+   │     Changelog: https://pnpm.io/v/12.4.2      │
+   │   To update, run: corepack use pnpm@12.4.2   │
+   │                                              │
+   ╰──────────────────────────────────────────────╯
+
+Progress: resolved 953, reused 0, downloaded 17, added 16
+Progress: resolved 953, reused 0, downloaded 86, added 85
+Progress: resolved 953, reused 0, downloaded 157, added 131
+Progress: resolved 953, reused 0, downloaded 232, added 175
+Progress: resolved 953, reused 0, downloaded 287, added 229
+Progress: resolved 953, reused 0, downloaded 302, added 261
+Progress: resolved 953, reused 0, downloaded 325, added 294
+Progress: resolved 953, reused 0, downloaded 354, added 319
+Progress: resolved 953, reused 0, downloaded 405, added 334
+Progress: resolved 953, reused 0, downloaded 441, added 346
+Progress: resolved 953, reused 0, downloaded 484, added 375
+Progress: resolved 953, reused 0, downloaded 552, added 400
+Progress: resolved 953, reused 0, downloaded 626, added 432
+Progress: resolved 953, reused 0, downloaded 665, added 445
+Progress: resolved 953, reused 0, downloaded 697, added 476
+Progress: resolved 953, reused 0, downloaded 729, added 551
+Progress: resolved 953, reused 0, downloaded 776, added 594
+Progress: resolved 953, reused 0, downloaded 791, added 651
+Progress: resolved 953, reused 0, downloaded 815, added 672
+Progress: resolved 953, reused 0, downloaded 848, added 708
+Progress: resolved 953, reused 0, downloaded 884, added 735
+Progress: resolved 953, reused 0, downloaded 942, added 784
+Progress: resolved 953, reused 0, downloaded 945, added 810
+Progress: resolved 953, reused 0, downloaded 949, added 840
+Progress: resolved 953, reused 0, downloaded 949, added 905
+Progress: resolved 953, reused 0, downloaded 950, added 945
+Progress: resolved 953, reused 0, downloaded 950, added 947
+Progress: resolved 953, reused 0, downloaded 950, added 949
+Progress: resolved 953, reused 0, downloaded 951, added 949
+Progress: resolved 953, reused 0, downloaded 952, added 949
+Progress: resolved 953, reused 0, downloaded 952, added 950
+Progress: resolved 953, reused 0, downloaded 952, added 951
+Progress: resolved 953, reused 0, downloaded 952, added 952
+Progress: resolved 953, reused 0, downloaded 953, added 952
+Progress: resolved 953, reused 0, downloaded 953, added 953
+Progress: resolved 953, reused 0, downloaded 953, added 953, done
+
+devDependencies:
++ @arethetypeswrong/cli 0.17.4
++ @biomejs/biome 1.9.4
++ @types/benchmark 2.1.5
++ @types/node 20.17.30
++ @types/semver 7.7.0
++ @web-std/file 3.0.3
++ arktype 2.1.19
++ benchmark 2.1.4
++ chalk 5.4.1
++ console-table-printer 2.12.1
++ esbuild 0.25.5
++ execa 9.5.2
++ globby 14.1.0
++ husky 9.1.7
++ jsr 0.12.4
++ lint-staged 16.1.0
++ mitata 0.1.14
++ prettier 3.5.3
++ recheck 4.5.0
++ rolldown 1.0.0-beta.18
++ rollup 4.39.0
++ semver 7.7.2
++ supershy 1.0.0
++ tinybench 2.9.0
++ ts-morph 14.0.0
++ tsdown 0.12.8
++ tslib 2.8.1
++ tsx 4.19.3
++ typescript 5.5.4
++ vitest 2.1.9
++ zod 4.0.5 <- packages/zod
++ zod3 <- zod 3.24.3
++ zshy 0.0.14
+
+╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: @biomejs/biome, esbuild, sharp.                     │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+packages/docs postinstall$ fumadocs-mdx
+packages/docs postinstall: [MDX] types generated
+packages/docs postinstall: Done
+. prepare$ husky
+. prepare: Done
+Done in 46.2s using pnpm v10.12.1

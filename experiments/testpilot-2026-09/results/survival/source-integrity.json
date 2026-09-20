@@ -1,0 +1,37 @@
+[
+  {
+    "release": "v4.0.5",
+    "checkedFiles": 107,
+    "changed": []
+  },
+  {
+    "release": "v4.1.0",
+    "checkedFiles": 111,
+    "changed": []
+  },
+  {
+    "release": "v4.2.0",
+    "checkedFiles": 117,
+    "changed": []
+  },
+  {
+    "release": "v4.3.0",
+    "checkedFiles": 119,
+    "changed": []
+  },
+  {
+    "release": "v4.4.0",
+    "checkedFiles": 122,
+    "changed": []
+  },
+  {
+    "release": "v4.5.0",
+    "checkedFiles": 141,
+    "changed": []
+  },
+  {
+    "release": "v4.6.0",
+    "checkedFiles": 142,
+    "changed": []
+  }
+]

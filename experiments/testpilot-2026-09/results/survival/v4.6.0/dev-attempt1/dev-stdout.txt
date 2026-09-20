@@ -1,0 +1,4 @@
+npm error npx canceled due to missing packages and no YES option: ["vitest@5.0.1"]
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-09-19T15_22_01_993Z-debug-0.log
+
+exit=1

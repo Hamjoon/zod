@@ -1,0 +1,30 @@
+{
+  "release": "v4.6.0",
+  "install": true,
+  "build": true,
+  "probe": "ok",
+  "fallbacks": [
+    "COREPACK_ENABLE_PROJECT_SPEC=0 (D-17)",
+    "pnpm-workspace.yaml + --no-frozen-lockfile (D-22)",
+    "--ignore-scripts (D-24)",
+    "direct zshy build; no postbuild (D-25)"
+  ],
+  "stage": "built",
+  "resolvedVersions": {
+    "vitest": "4.1.5",
+    "typescript": "5.5.4",
+    "zshy": "0.8.0",
+    "@biomejs/biome": "1.9.4"
+  },
+  "exports": {
+    "@zod/source": "./src/index.ts",
+    "types": "./index.d.cts",
+    "import": "./index.js",
+    "require": "./index.cjs"
+  },
+  "requireEntry": "./index.cjs",
+  "entryExists": true,
+  "wallSeconds": 8.385717420999999,
+  "buildExitCode": 0,
+  "resolvedLockChanged": false
+}

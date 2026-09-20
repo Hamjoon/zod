@@ -1,0 +1,36 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-19T15:05:37.953Z",
+    "end": "2026-09-19T15:05:37.958Z",
+    "duration": 5
+  },
+  "tests": [
+    {
+      "title": "test zod loose object behavior",
+      "fullTitle": "test zod test zod loose object behavior",
+      "file": "/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_146.js",
+      "duration": 3,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "test zod loose object behavior",
+      "fullTitle": "test zod test zod loose object behavior",
+      "file": "/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_146.js",
+      "duration": 3,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ]
+}

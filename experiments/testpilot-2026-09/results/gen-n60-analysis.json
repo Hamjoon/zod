@@ -1,0 +1,77 @@
+{
+  "totals": {
+    "functions": 60,
+    "functionsWithTests": 60,
+    "functionsWithPasses": 54,
+    "prompts": 360,
+    "emptyCompletionPrompts": 0,
+    "multipleItPrompts": 0,
+    "tests": 360,
+    "statuses": {
+      "FAILED": 221,
+      "PASSED": 139
+    }
+  },
+  "perStratum": [
+    [
+      "S",
+      36,
+      208,
+      88,
+      "42.31%"
+    ],
+    [
+      "C",
+      17,
+      109,
+      36,
+      "33.03%"
+    ],
+    [
+      "Q",
+      7,
+      43,
+      15,
+      "34.88%"
+    ]
+  ],
+  "failureCategories": {
+    "assertion": 156,
+    "correctness": 54,
+    "other": 9,
+    "timeout": 2
+  },
+  "refinerPrompts": {
+    "Base": 60,
+    "FunctionBodyIncluder": 60,
+    "FunctionBodyIncluder+SnippetIncluder": 58,
+    "RetryWithError": 124,
+    "SnippetIncluder": 58
+  },
+  "refinerPassingTests": {
+    "Base": 23,
+    "FunctionBodyIncluder": 27,
+    "FunctionBodyIncluder+SnippetIncluder": 29,
+    "RetryWithError": 27,
+    "SnippetIncluder": 33
+  },
+  "metaData": {
+    "packageName": "zod",
+    "useDocSnippets": true,
+    "useCodeSnippets": false,
+    "numSnippets": 3,
+    "snippetLength": 20,
+    "numCompletions": 1
+  },
+  "stats": {
+    "nrTests": 360,
+    "nrPasses": 139,
+    "nrFailures": 221,
+    "nrPending": 0,
+    "nrOther": 0,
+    "snippetExtractionTime": 7792.188754,
+    "codexQueryTime": 0,
+    "totalTime": 5004856.916490001
+  },
+  "failedRequests": 0
+}

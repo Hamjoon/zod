@@ -1,0 +1,361 @@
+testName,api,stratum,status,promptIds,refiners,errMessage
+test_0.js,zod.z.discriminatedUnion,S,FAILED,[0],Base,The input did not match the regular expression /Expected string/. Input:
+test_1.js,zod.z.discriminatedUnion,S,PASSED,[1],FunctionBodyIncluder,
+test_2.js,zod.z.discriminatedUnion,S,FAILED,[2],FunctionBodyIncluder+SnippetIncluder,The input did not match the regular expression /Invalid discriminator value/. Input:
+test_3.js,zod.z.discriminatedUnion,S,FAILED,[3],RetryWithError,The input did not match the regular expression /Invalid discriminator value/. Input:
+test_4.js,zod.z.discriminatedUnion,S,FAILED,[4],RetryWithError,The input did not match the regular expression /Invalid discriminator value/. Input:
+test_5.js,zod.z.discriminatedUnion,S,PASSED,[5],SnippetIncluder,
+test_6.js,zod.z.number,S,FAILED,[6],Base,Cannot read properties of undefined (reading 'some')
+test_7.js,zod.z.number,S,FAILED,[7],FunctionBodyIncluder,The input did not match the regular expression /Expected number/. Input:
+test_8.js,zod.z.number,S,FAILED,[8],RetryWithError,The input did not match the regular expression /Number required/. Input:
+test_9.js,zod.z.number,S,FAILED,[9],FunctionBodyIncluder+SnippetIncluder,The input did not match the regular expression /Expected number/. Input:
+test_10.js,zod.z.number,S,FAILED,[10],RetryWithError,The input did not match the regular expression /expected integer/i. Input:
+test_11.js,zod.z.number,S,FAILED,[11],RetryWithError,Invalid syntax
+test_12.js,zod.z.number,S,FAILED,[12],SnippetIncluder,The input did not match the regular expression /Expected number/. Input:
+test_13.js,zod.z.number,S,FAILED,[13],RetryWithError,The input did not match the regular expression /Number must be finite/. Input:
+test_14.js,zod.z.file,S,FAILED,[14],Base,Got unwanted exception.
+test_15.js,zod.z.file,S,FAILED,[15],FunctionBodyIncluder,"The schema typeName should be ""ZodFile"""
+test_16.js,zod.z.file,S,FAILED,[16],RetryWithError,"The schema typeName should be ""ZodFile"""
+test_17.js,zod.z.file,S,FAILED,[17],FunctionBodyIncluder+SnippetIncluder,Expected values to be strictly deep-equal:
+test_18.js,zod.z.file,S,FAILED,[18],RetryWithError,zod.z.file(...).openapi is not a function
+test_19.js,zod.z.file,S,PASSED,[19],RetryWithError,
+test_20.js,zod.z.file,S,FAILED,[20],SnippetIncluder,Base file schema does not match expected
+test_21.js,zod.z.file,S,FAILED,[21],RetryWithError,Error: Cannot find module 'zod-to-json-schema'
+test_22.js,zod.z.nullish,S,FAILED,[22],Base,The input did not match the regular expression /Expected string/. Input:
+test_23.js,zod.z.nullish,S,FAILED,[23],FunctionBodyIncluder,should reject a number
+test_24.js,zod.z.nullish,S,PASSED,[24],RetryWithError,
+test_25.js,zod.z.nullish,S,PASSED,[25],FunctionBodyIncluder+SnippetIncluder,
+test_26.js,zod.z.nullish,S,PASSED,[26],RetryWithError,
+test_27.js,zod.z.nullish,S,PASSED,[27],SnippetIncluder,
+test_28.js,zod.z.readonly,S,PASSED,[28],Base,
+test_29.js,zod.z.readonly,S,PASSED,[29],FunctionBodyIncluder,
+test_30.js,zod.z.readonly,S,FAILED,[30],FunctionBodyIncluder+SnippetIncluder,Mutating a readonly object should throw
+test_31.js,zod.z.readonly,S,FAILED,[31],RetryWithError,Invalid syntax
+test_32.js,zod.z.readonly,S,FAILED,[32],SnippetIncluder,Missing expected exception (TypeError).
+test_33.js,zod.z.readonly,S,FAILED,[33],RetryWithError,Invalid syntax
+test_34.js,zod.z.map,S,FAILED,[34],Base,mapSchema.validate is not a function
+test_35.js,zod.z.map,S,FAILED,[35],FunctionBodyIncluder,Values have same structure but are not reference-equal:
+test_36.js,zod.z.map,S,FAILED,[36],RetryWithError,The input did not match the regular expression /Expected string/. Input:
+test_37.js,zod.z.map,S,PASSED,[37],FunctionBodyIncluder+SnippetIncluder,
+test_38.js,zod.z.map,S,FAILED,[38],RetryWithError,Invalid syntax
+test_39.js,zod.z.map,S,PASSED,[39],SnippetIncluder,
+test_40.js,zod.z.cidrv4,S,PASSED,[40],Base,
+test_41.js,zod.z.cidrv4,S,PASSED,[41],FunctionBodyIncluder,
+test_42.js,zod.z.cidrv4,S,PASSED,[42],FunctionBodyIncluder+SnippetIncluder,
+test_43.js,zod.z.cidrv4,S,PASSED,[43],SnippetIncluder,
+test_44.js,zod.z.cidrv6,S,PASSED,[44],Base,
+test_45.js,zod.z.cidrv6,S,FAILED,[45],FunctionBodyIncluder,Invalid CIDR should throw a ZodError
+test_46.js,zod.z.cidrv6,S,FAILED,[46],RetryWithError,Invalid syntax
+test_47.js,zod.z.cidrv6,S,FAILED,[47],FunctionBodyIncluder+SnippetIncluder,"Invalid CIDR ""2001:db8::"" did not throw"
+test_48.js,zod.z.cidrv6,S,FAILED,[48],RetryWithError,"Got unwanted exception: Valid CIDR ""2001:db8::"" threw an error"
+test_49.js,zod.z.cidrv6,S,FAILED,[49],SnippetIncluder,2001:db8::/64/64 should be recognized as an invalid IPv6 CIDR
+test_50.js,zod.z.cidrv6,S,FAILED,[50],RetryWithError,"Timeout of 2000ms exceeded. For async tests and hooks, ensure ""done()"" is called; if returning a Promise, ensure it resolves. (/path/to/test/test_50.js)"
+test_51.js,zod.z.strictObject,S,FAILED,[51],Base,Expected an error for missing required keys
+test_52.js,zod.z.strictObject,S,FAILED,[52],FunctionBodyIncluder,catchall should be ZodNever
+test_53.js,zod.z.strictObject,S,FAILED,[53],RetryWithError,catchall should be ZodNever
+test_54.js,zod.z.strictObject,S,PASSED,[54],FunctionBodyIncluder+SnippetIncluder,
+test_55.js,zod.z.strictObject,S,FAILED,[55],RetryWithError,Expected an error for missing required keys
+test_56.js,zod.z.strictObject,S,PASSED,[56],SnippetIncluder,
+test_57.js,zod.z.date,S,FAILED,[57],Base,Missing expected exception.
+test_58.js,zod.z.date,S,PASSED,[58],FunctionBodyIncluder,
+test_59.js,zod.z.date,S,FAILED,[59],FunctionBodyIncluder+SnippetIncluder,Cannot read properties of undefined (reading '0')
+test_60.js,zod.z.date,S,FAILED,[60],RetryWithError,Cannot read properties of undefined (reading '0')
+test_61.js,zod.z.date,S,PASSED,[61],RetryWithError,
+test_62.js,zod.z.date,S,FAILED,[62],SnippetIncluder,Cannot read properties of undefined (reading 'some')
+test_63.js,zod.z.date,S,FAILED,[63],RetryWithError,Invalid syntax
+test_64.js,zod.z.base64,S,PASSED,[64],Base,
+test_65.js,zod.z.base64,S,PASSED,[65],FunctionBodyIncluder,
+test_66.js,zod.z.base64,S,PASSED,[66],FunctionBodyIncluder+SnippetIncluder,
+test_67.js,zod.z.base64,S,PASSED,[67],SnippetIncluder,
+test_68.js,zod.z.tuple,S,PASSED,[68],Base,
+test_69.js,zod.z.tuple,S,FAILED,[69],FunctionBodyIncluder,The input did not match the regular expression /Expected number/. Input:
+test_70.js,zod.z.tuple,S,FAILED,[70],RetryWithError,The input did not match the regular expression /Expected number/. Input:
+test_71.js,zod.z.tuple,S,FAILED,[71],FunctionBodyIncluder+SnippetIncluder,Values have same structure but are not reference-equal:
+test_72.js,zod.z.tuple,S,FAILED,[72],RetryWithError,Expected values to be strictly equal:
+test_73.js,zod.z.tuple,S,FAILED,[73],SnippetIncluder,The input did not match the regular expression /Expected string/. Input:
+test_74.js,zod.z.tuple,S,FAILED,[74],RetryWithError,Expected values to be strictly equal:
+test_75.js,zod.z.guid,S,PASSED,[75],Base,
+test_76.js,zod.z.guid,S,PASSED,[76],FunctionBodyIncluder,
+test_77.js,zod.z.guid,S,PASSED,[77],FunctionBodyIncluder+SnippetIncluder,
+test_78.js,zod.z.guid,S,FAILED,[78],SnippetIncluder,"type should be ""string"""
+test_79.js,zod.z.guid,S,FAILED,[79],RetryWithError,typeName should be ZodString
+test_80.js,zod.z.nanoid,S,FAILED,[80],Base,Expected values to be strictly equal:
+test_81.js,zod.z.nanoid,S,FAILED,[81],FunctionBodyIncluder,nanoID should be a string
+test_82.js,zod.z.nanoid,S,FAILED,[82],RetryWithError,Error: Cannot find module 'nanoid'
+test_83.js,zod.z.nanoid,S,PASSED,[83],FunctionBodyIncluder+SnippetIncluder,
+test_84.js,zod.z.nanoid,S,FAILED,[84],RetryWithError,Error: Cannot find module 'nanoid'
+test_85.js,zod.z.nanoid,S,PASSED,[85],SnippetIncluder,
+test_86.js,zod.z.uuidv6,S,PASSED,[86],Base,
+test_87.js,zod.z.uuidv6,S,PASSED,[87],FunctionBodyIncluder,
+test_88.js,zod.z.uuidv6,S,FAILED,[88],FunctionBodyIncluder+SnippetIncluder,Invalid UUID version should throw
+test_89.js,zod.z.uuidv6,S,PASSED,[89],RetryWithError,
+test_90.js,zod.z.uuidv6,S,FAILED,[90],SnippetIncluder,Expected values to be strictly equal:
+test_91.js,zod.z.uuidv6,S,FAILED,[91],RetryWithError,Error: Cannot find module 'uuid'
+test_92.js,zod.z.array,S,FAILED,[92],Base,Non‑array input should trigger invalid_type_error
+test_93.js,zod.z.array,S,FAILED,[93],FunctionBodyIncluder,Cannot read properties of undefined (reading '0')
+test_94.js,zod.z.array,S,FAILED,[94],RetryWithError,Invalid syntax
+test_95.js,zod.z.array,S,FAILED,[95],FunctionBodyIncluder+SnippetIncluder,The input did not match the regular expression /Expected number/. Input:
+test_96.js,zod.z.array,S,FAILED,[96],RetryWithError,Cannot read properties of undefined (reading 'issues')
+test_97.js,zod.z.array,S,FAILED,[97],RetryWithError,Non‑array input should trigger invalid_type_error
+test_98.js,zod.z.array,S,PASSED,[98],SnippetIncluder,
+test_99.js,zod.z.int64,S,FAILED,[99],Base,Got unwanted exception: 0 should be valid
+test_100.js,zod.z.int64,S,PASSED,[100],FunctionBodyIncluder,
+test_101.js,zod.z.int64,S,FAILED,[101],FunctionBodyIncluder+SnippetIncluder,got too_small error
+test_102.js,zod.z.int64,S,PASSED,[102],RetryWithError,
+test_103.js,zod.z.int64,S,FAILED,[103],RetryWithError,value > max int64 should be invalid
+test_104.js,zod.z.int64,S,PASSED,[104],SnippetIncluder,
+test_105.js,zod.z.any,S,PASSED,[105],Base,
+test_106.js,zod.z.any,S,PASSED,[106],FunctionBodyIncluder,
+test_107.js,zod.z.any,S,PASSED,[107],FunctionBodyIncluder+SnippetIncluder,
+test_108.js,zod.z.any,S,PASSED,[108],SnippetIncluder,
+test_109.js,zod.z.ulid,S,PASSED,[109],Base,
+test_110.js,zod.z.ulid,S,PASSED,[110],FunctionBodyIncluder,
+test_111.js,zod.z.ulid,S,PASSED,[111],FunctionBodyIncluder+SnippetIncluder,
+test_112.js,zod.z.ulid,S,PASSED,[112],SnippetIncluder,
+test_113.js,zod.z.templateLiteral,S,FAILED,[113],Base,Got unwanted exception.
+test_114.js,zod.z.templateLiteral,S,FAILED,[114],FunctionBodyIncluder,[
+test_115.js,zod.z.templateLiteral,S,FAILED,[115],RetryWithError,[
+test_116.js,zod.z.templateLiteral,S,FAILED,[116],FunctionBodyIncluder+SnippetIncluder,Missing expected exception.
+test_117.js,zod.z.templateLiteral,S,FAILED,[117],RetryWithError,Missing expected exception.
+test_118.js,zod.z.templateLiteral,S,FAILED,[118],RetryWithError,z.string(...).templateLiteral is not a function
+test_119.js,zod.z.templateLiteral,S,FAILED,[119],SnippetIncluder,Missing expected exception.
+test_120.js,zod.z.templateLiteral,S,FAILED,[120],RetryWithError,Missing expected exception.
+test_121.js,zod.z.nullable,S,PASSED,[121],Base,
+test_122.js,zod.z.nullable,S,PASSED,[122],FunctionBodyIncluder,
+test_123.js,zod.z.nullable,S,PASSED,[123],FunctionBodyIncluder+SnippetIncluder,
+test_124.js,zod.z.nullable,S,PASSED,[124],SnippetIncluder,
+test_125.js,zod.z.ksuid,S,FAILED,[125],Base,KSUID should be a string
+test_126.js,zod.z.ksuid,S,FAILED,[126],FunctionBodyIncluder,ksuid should return a string
+test_127.js,zod.z.ksuid,S,FAILED,[127],RetryWithError,Error: Cannot find module 'ksuid'
+test_128.js,zod.z.ksuid,S,FAILED,[128],RetryWithError,KSUID should be 27 characters long
+test_129.js,zod.z.never,S,FAILED,[129],Base,Cannot read properties of undefined (reading '0')
+test_130.js,zod.z.never,S,FAILED,[130],FunctionBodyIncluder,Cannot read properties of undefined (reading '0')
+test_131.js,zod.z.never,S,FAILED,[131],RetryWithError,Cannot read properties of undefined (reading '0')
+test_132.js,zod.z.never,S,PASSED,[132],FunctionBodyIncluder+SnippetIncluder,
+test_133.js,zod.z.never,S,FAILED,[133],RetryWithError,TypeError: Cannot read properties of undefined (reading 'describe')
+test_134.js,zod.z.never,S,PASSED,[134],SnippetIncluder,
+test_135.js,zod.z.email,S,FAILED,[135],Base,test@example.com should be considered a valid email
+test_136.js,zod.z.email,S,PASSED,[136],FunctionBodyIncluder,
+test_137.js,zod.z.email,S,PASSED,[137],FunctionBodyIncluder+SnippetIncluder,
+test_138.js,zod.z.email,S,FAILED,[138],RetryWithError,Invalid syntax
+test_139.js,zod.z.email,S,FAILED,[139],SnippetIncluder,Schema should be a ZodString
+test_140.js,zod.z.email,S,FAILED,[140],RetryWithError,Schema should include an email check
+test_141.js,zod.z.looseObject,S,FAILED,[141],Base,The input did not match the regular expression /Required/. Input:
+test_142.js,zod.z.looseObject,S,FAILED,[142],FunctionBodyIncluder,schema shape should not be mutated by external changes
+test_143.js,zod.z.looseObject,S,PASSED,[143],RetryWithError,
+test_144.js,zod.z.looseObject,S,FAILED,[144],FunctionBodyIncluder+SnippetIncluder,Shape should contain the defined property
+test_145.js,zod.z.looseObject,S,FAILED,[145],RetryWithError,Shape should contain the defined property
+test_146.js,zod.z.looseObject,S,PASSED,[146],RetryWithError,
+test_147.js,zod.z.looseObject,S,PASSED,[147],SnippetIncluder,
+test_148.js,zod.z.symbol,S,FAILED,[148],Base,Cannot read properties of undefined (reading '0')
+test_149.js,zod.z.symbol,S,FAILED,[149],FunctionBodyIncluder,The input did not match the regular expression /Expected symbol/. Input:
+test_150.js,zod.z.symbol,S,PASSED,[150],RetryWithError,
+test_151.js,zod.z.symbol,S,PASSED,[151],FunctionBodyIncluder+SnippetIncluder,
+test_152.js,zod.z.symbol,S,FAILED,[152],RetryWithError,Invalid syntax
+test_153.js,zod.z.symbol,S,PASSED,[153],SnippetIncluder,
+test_154.js,zod.z.uuidv7,S,PASSED,[154],Base,
+test_155.js,zod.z.uuidv7,S,PASSED,[155],FunctionBodyIncluder,
+test_156.js,zod.z.uuidv7,S,PASSED,[156],FunctionBodyIncluder+SnippetIncluder,
+test_157.js,zod.z.uuidv7,S,PASSED,[157],SnippetIncluder,
+test_158.js,zod.z.uuid,S,PASSED,[158],Base,
+test_159.js,zod.z.uuid,S,PASSED,[159],FunctionBodyIncluder,
+test_160.js,zod.z.uuid,S,FAILED,[160],FunctionBodyIncluder+SnippetIncluder,Schema should contain a UUID check
+test_161.js,zod.z.uuid,S,FAILED,[161],RetryWithError,Schema should contain a UUID check
+test_162.js,zod.z.uuid,S,FAILED,[162],SnippetIncluder,uuidSchema should be a ZodString
+test_163.js,zod.z.uuid,S,FAILED,[163],RetryWithError,UUID check should be present in the schema
+test_164.js,zod.z.prefault,S,PASSED,[164],Base,
+test_165.js,zod.z.prefault,S,FAILED,[165],FunctionBodyIncluder,"type should be ""prefault"""
+test_166.js,zod.z.prefault,S,FAILED,[166],RetryWithError,"type should be ""prefault"""
+test_167.js,zod.z.prefault,S,PASSED,[167],FunctionBodyIncluder+SnippetIncluder,
+test_168.js,zod.z.prefault,S,PASSED,[168],SnippetIncluder,
+test_169.js,zod.z.cuid2,S,PASSED,[169],Base,
+test_170.js,zod.z.cuid2,S,PASSED,[170],FunctionBodyIncluder,
+test_171.js,zod.z.cuid2,S,PASSED,[171],FunctionBodyIncluder+SnippetIncluder,
+test_172.js,zod.z.cuid2,S,PASSED,[172],SnippetIncluder,
+test_173.js,zod.z.unknown,S,PASSED,[173],Base,
+test_174.js,zod.z.unknown,S,PASSED,[174],FunctionBodyIncluder,
+test_175.js,zod.z.unknown,S,PASSED,[175],FunctionBodyIncluder+SnippetIncluder,
+test_176.js,zod.z.unknown,S,PASSED,[176],SnippetIncluder,
+test_177.js,zod.z.uint32,S,PASSED,[177],Base,
+test_178.js,zod.z.uint32,S,PASSED,[178],FunctionBodyIncluder,
+test_179.js,zod.z.uint32,S,FAILED,[179],FunctionBodyIncluder+SnippetIncluder,The input did not match the regular expression /ZodError/. Input:
+test_180.js,zod.z.uint32,S,PASSED,[180],RetryWithError,
+test_181.js,zod.z.uint32,S,FAILED,[181],SnippetIncluder,-1 should be rejected
+test_182.js,zod.z.uint32,S,FAILED,[182],RetryWithError,-1 should be rejected
+test_183.js,zod.z.keyof,S,FAILED,[183],Base,Expected values to be strictly equal:
+test_184.js,zod.z.keyof,S,FAILED,[184],FunctionBodyIncluder,[
+test_185.js,zod.z.keyof,S,PASSED,[185],RetryWithError,
+test_186.js,zod.z.keyof,S,FAILED,[186],FunctionBodyIncluder+SnippetIncluder,Cannot read properties of undefined (reading 'sort')
+test_187.js,zod.z.keyof,S,FAILED,[187],RetryWithError,Invalid syntax
+test_188.js,zod.z.keyof,S,FAILED,[188],RetryWithError,keysEnum should be an instance of ZodEnum
+test_189.js,zod.z.keyof,S,FAILED,[189],SnippetIncluder,z.keyof(Dog) did not return a ZodEnum
+test_190.js,zod.z.keyof,S,FAILED,[190],RetryWithError,Invalid syntax
+test_191.js,zod.z.catch,S,PASSED,[191],Base,
+test_192.js,zod.z.catch,S,PASSED,[192],FunctionBodyIncluder,
+test_193.js,zod.z.catch,S,FAILED,[193],FunctionBodyIncluder+SnippetIncluder,ctx.error must be a ZodError
+test_194.js,zod.z.catch,S,FAILED,[194],RetryWithError,error must be a ZodError
+test_195.js,zod.z.catch,S,FAILED,[195],SnippetIncluder,The expression evaluated to a falsy value:
+test_196.js,zod.z.catch,S,FAILED,[196],RetryWithError,The expression evaluated to a falsy value:
+test_197.js,zod.z.nonoptional,S,FAILED,[197],Base,Cannot read properties of undefined (reading '0')
+test_198.js,zod.z.nonoptional,S,FAILED,[198],FunctionBodyIncluder,The input did not match the regular expression /Required/. Input:
+test_199.js,zod.z.nonoptional,S,PASSED,[199],RetryWithError,
+test_200.js,zod.z.nonoptional,S,PASSED,[200],FunctionBodyIncluder+SnippetIncluder,
+test_201.js,zod.z.nonoptional,S,FAILED,[201],RetryWithError,Cannot read properties of undefined (reading '0')
+test_202.js,zod.z.nonoptional,S,PASSED,[202],SnippetIncluder,
+test_203.js,zod.z.boolean,S,FAILED,[203],Base,The input did not match the regular expression /ZodError/. Input:
+test_204.js,zod.z.boolean,S,PASSED,[204],FunctionBodyIncluder,
+test_205.js,zod.z.boolean,S,PASSED,[205],FunctionBodyIncluder+SnippetIncluder,
+test_206.js,zod.z.boolean,S,FAILED,[206],RetryWithError,TypeError: Cannot read properties of undefined (reading 'describe')
+test_207.js,zod.z.boolean,S,PASSED,[207],SnippetIncluder,
+test_208.js,zod.z.check,C,FAILED,[208],Base,Missing expected exception.
+test_209.js,zod.z.check,C,PASSED,[209],FunctionBodyIncluder,
+test_210.js,zod.z.check,C,PASSED,[210],FunctionBodyIncluder+SnippetIncluder,
+test_211.js,zod.z.check,C,PASSED,[211],RetryWithError,
+test_212.js,zod.z.check,C,PASSED,[212],SnippetIncluder,
+test_213.js,zod.z.uppercase,C,FAILED,[213],Base,Expected values to be strictly equal:
+test_214.js,zod.z.uppercase,C,FAILED,[214],FunctionBodyIncluder,"check field should be ""string_format"""
+test_215.js,zod.z.uppercase,C,FAILED,[215],RetryWithError,"check field should be ""string_format"""
+test_216.js,zod.z.uppercase,C,FAILED,[216],FunctionBodyIncluder+SnippetIncluder,"check property should be ""string_format"""
+test_217.js,zod.z.uppercase,C,FAILED,[217],RetryWithError,Invalid syntax
+test_218.js,zod.z.uppercase,C,FAILED,[218],RetryWithError,Expected values to be strictly equal:
+test_219.js,zod.z.uppercase,C,PASSED,[219],SnippetIncluder,
+test_220.js,zod.z.minLength,C,FAILED,[220],Base,zod.z.string(...).minLength is not a function
+test_221.js,zod.z.minLength,C,FAILED,[221],FunctionBodyIncluder,check type should be 'min_length'
+test_222.js,zod.z.minLength,C,FAILED,[222],RetryWithError,check type should be 'min_length'
+test_223.js,zod.z.minLength,C,FAILED,[223],FunctionBodyIncluder+SnippetIncluder,Expected validation error for short string
+test_224.js,zod.z.minLength,C,FAILED,[224],RetryWithError,Invalid syntax
+test_225.js,zod.z.minLength,C,FAILED,[225],RetryWithError,Invalid syntax
+test_226.js,zod.z.minLength,C,FAILED,[226],SnippetIncluder,Got unwanted exception.
+test_227.js,zod.z.minLength,C,PASSED,[227],RetryWithError,
+test_228.js,zod.z.negative,C,FAILED,[228],Base,Got unwanted exception.
+test_229.js,zod.z.negative,C,FAILED,[229],FunctionBodyIncluder,-10 should be considered negative
+test_230.js,zod.z.negative,C,FAILED,[230],RetryWithError,Invalid syntax
+test_231.js,zod.z.negative,C,PASSED,[231],FunctionBodyIncluder+SnippetIncluder,
+test_232.js,zod.z.negative,C,PASSED,[232],RetryWithError,
+test_233.js,zod.z.negative,C,FAILED,[233],SnippetIncluder,Zero should be rejected
+test_234.js,zod.z.negative,C,PASSED,[234],RetryWithError,
+test_235.js,zod.z.gte,C,FAILED,[235],Base,Valid values threw an error: schema.parse is not a function
+test_236.js,zod.z.gte,C,FAILED,[236],FunctionBodyIncluder,check type should be 'greater_than'
+test_237.js,zod.z.gte,C,FAILED,[237],RetryWithError,check type should be 'greater_than'
+test_238.js,zod.z.gte,C,FAILED,[238],FunctionBodyIncluder+SnippetIncluder,4 should be rejected
+test_239.js,zod.z.gte,C,FAILED,[239],RetryWithError,Invalid syntax
+test_240.js,zod.z.gte,C,FAILED,[240],RetryWithError,Invalid syntax
+test_241.js,zod.z.gte,C,PASSED,[241],SnippetIncluder,
+test_242.js,zod.z.size,C,FAILED,[242],Base,Got unwanted exception.
+test_243.js,zod.z.size,C,FAILED,[243],FunctionBodyIncluder,"check property should be ""size_equals"""
+test_244.js,zod.z.size,C,FAILED,[244],RetryWithError,"check property should be ""size_equals"""
+test_245.js,zod.z.size,C,FAILED,[245],FunctionBodyIncluder+SnippetIncluder,check type should be size_equals
+test_246.js,zod.z.size,C,FAILED,[246],RetryWithError,Cannot read properties of undefined (reading 'checks')
+test_247.js,zod.z.size,C,FAILED,[247],RetryWithError,"The validation function is expected to return ""true"". Received undefined"
+test_248.js,zod.z.size,C,FAILED,[248],SnippetIncluder,Cannot read properties of undefined (reading 'some')
+test_249.js,zod.z.size,C,FAILED,[249],RetryWithError,Invalid syntax
+test_250.js,zod.z.endsWith,C,PASSED,[250],Base,
+test_251.js,zod.z.endsWith,C,FAILED,[251],FunctionBodyIncluder,check type should be string_format
+test_252.js,zod.z.endsWith,C,FAILED,[252],RetryWithError,Invalid syntax
+test_253.js,zod.z.endsWith,C,PASSED,[253],FunctionBodyIncluder+SnippetIncluder,
+test_254.js,zod.z.endsWith,C,FAILED,[254],SnippetIncluder,Cannot read properties of undefined (reading '0')
+test_255.js,zod.z.endsWith,C,PASSED,[255],RetryWithError,
+test_256.js,zod.z.property,C,FAILED,[256],Base,Got unwanted exception.
+test_257.js,zod.z.property,C,FAILED,[257],FunctionBodyIncluder,Check class $ZodCheckProperty should exist on zod.checks
+test_258.js,zod.z.property,C,FAILED,[258],RetryWithError,"Timeout of 2000ms exceeded. For async tests and hooks, ensure ""done()"" is called; if returning a Promise, ensure it resolves. (/path/to/test/test_258.js)"
+test_259.js,zod.z.property,C,FAILED,[259],RetryWithError,TypeError: Cannot read properties of undefined (reading 'describe')
+test_260.js,zod.z.multipleOf,C,FAILED,[260],Base,10 should be a multiple of 5
+test_261.js,zod.z.multipleOf,C,FAILED,[261],FunctionBodyIncluder,"check type should be ""multiple_of"""
+test_262.js,zod.z.multipleOf,C,PASSED,[262],RetryWithError,
+test_263.js,zod.z.multipleOf,C,PASSED,[263],FunctionBodyIncluder+SnippetIncluder,
+test_264.js,zod.z.multipleOf,C,FAILED,[264],RetryWithError,Invalid syntax
+test_265.js,zod.z.multipleOf,C,PASSED,[265],SnippetIncluder,
+test_266.js,zod.z.maxSize,C,FAILED,[266],Base,zod.z.instanceof(...).maxSize is not a function
+test_267.js,zod.z.maxSize,C,FAILED,[267],FunctionBodyIncluder,"check property should be ""max_size"""
+test_268.js,zod.z.maxSize,C,FAILED,[268],RetryWithError,"check property should be ""max_size"""
+test_269.js,zod.z.maxSize,C,FAILED,[269],FunctionBodyIncluder+SnippetIncluder,z is not defined
+test_270.js,zod.z.maxSize,C,FAILED,[270],RetryWithError,Invalid syntax
+test_271.js,zod.z.maxSize,C,FAILED,[271],RetryWithError,Uint8Array exceeding maxSize should throw a ZodError
+test_272.js,zod.z.maxSize,C,FAILED,[272],SnippetIncluder,Got unwanted exception.
+test_273.js,zod.z.maxSize,C,FAILED,[273],RetryWithError,The input did not match the regular expression /at most 5 characters/. Input:
+test_274.js,zod.z.lt,C,PASSED,[274],Base,
+test_275.js,zod.z.lt,C,FAILED,[275],FunctionBodyIncluder,"check type should be ""less_than"""
+test_276.js,zod.z.lt,C,PASSED,[276],RetryWithError,
+test_277.js,zod.z.lt,C,FAILED,[277],FunctionBodyIncluder+SnippetIncluder,check type should be 'less_than'
+test_278.js,zod.z.lt,C,FAILED,[278],RetryWithError,check type should be 'less_than'
+test_279.js,zod.z.lt,C,PASSED,[279],SnippetIncluder,
+test_280.js,zod.z.trim,C,FAILED,[280],Base,Missing expected exception.
+test_281.js,zod.z.trim,C,PASSED,[281],FunctionBodyIncluder,
+test_282.js,zod.z.trim,C,FAILED,[282],FunctionBodyIncluder+SnippetIncluder,The input did not match the regular expression /Required/. Input:
+test_283.js,zod.z.trim,C,PASSED,[283],RetryWithError,
+test_284.js,zod.z.trim,C,PASSED,[284],RetryWithError,
+test_285.js,zod.z.trim,C,PASSED,[285],SnippetIncluder,
+test_286.js,zod.z.transform,C,PASSED,[286],Base,
+test_287.js,zod.z.transform,C,PASSED,[287],FunctionBodyIncluder,
+test_288.js,zod.z.transform,C,FAILED,[288],FunctionBodyIncluder+SnippetIncluder,Pipe schema should reject short strings
+test_289.js,zod.z.transform,C,FAILED,[289],RetryWithError,Cannot read properties of undefined (reading 'length')
+test_290.js,zod.z.transform,C,FAILED,[290],SnippetIncluder,The input reported in the issue should be the original value
+test_291.js,zod.z.transform,C,FAILED,[291],RetryWithError,The input reported in the issue should be the original value
+test_292.js,zod.z.positive,C,FAILED,[292],Base,Got unwanted exception: Positive number 1 should be valid
+test_293.js,zod.z.positive,C,FAILED,[293],FunctionBodyIncluder,Missing expected exception: Zero should cause an error
+test_294.js,zod.z.positive,C,PASSED,[294],RetryWithError,
+test_295.js,zod.z.positive,C,PASSED,[295],FunctionBodyIncluder+SnippetIncluder,
+test_296.js,zod.z.positive,C,FAILED,[296],RetryWithError,Invalid syntax
+test_297.js,zod.z.positive,C,FAILED,[297],SnippetIncluder,Zero should be rejected by .positive()
+test_298.js,zod.z.positive,C,FAILED,[298],RetryWithError,TypeError: Cannot read properties of undefined (reading 'describe')
+test_299.js,zod.z.overwrite,C,FAILED,[299],Base,Result should equal the input transaction object
+test_300.js,zod.z.overwrite,C,FAILED,[300],FunctionBodyIncluder,Expected values to be strictly equal:
+test_301.js,zod.z.overwrite,C,FAILED,[301],RetryWithError,Expected check value to be 'overwrite' but got undefined
+test_302.js,zod.z.overwrite,C,PASSED,[302],FunctionBodyIncluder+SnippetIncluder,
+test_303.js,zod.z.overwrite,C,FAILED,[303],RetryWithError,Result (plain value) should equal the input transaction object
+test_304.js,zod.z.overwrite,C,PASSED,[304],SnippetIncluder,
+test_305.js,zod.z.preprocess,C,PASSED,[305],Base,
+test_306.js,zod.z.preprocess,C,PASSED,[306],FunctionBodyIncluder,
+test_307.js,zod.z.preprocess,C,PASSED,[307],FunctionBodyIncluder+SnippetIncluder,
+test_308.js,zod.z.preprocess,C,PASSED,[308],SnippetIncluder,
+test_309.js,zod.z.nonpositive,C,FAILED,[309],Base,Got unwanted exception: Expected 0 to be accepted
+test_310.js,zod.z.nonpositive,C,FAILED,[310],FunctionBodyIncluder,Expected values to be strictly equal:
+test_311.js,zod.z.nonpositive,C,PASSED,[311],RetryWithError,
+test_312.js,zod.z.nonpositive,C,FAILED,[312],FunctionBodyIncluder+SnippetIncluder,The input did not match the regular expression /Invalid/. Input:
+test_313.js,zod.z.nonpositive,C,PASSED,[313],RetryWithError,
+test_314.js,zod.z.nonpositive,C,PASSED,[314],RetryWithError,
+test_315.js,zod.z.nonpositive,C,FAILED,[315],SnippetIncluder,Positive numbers should be rejected
+test_316.js,zod.z.nonpositive,C,FAILED,[316],RetryWithError,Invalid syntax
+test_317.js,zod.z.iso.duration,Q,FAILED,[317],Base,Invalid duration should be rejected
+test_318.js,zod.z.iso.duration,Q,FAILED,[318],FunctionBodyIncluder,"Got unwanted exception: Valid ISO duration ""P1Y2M3W4DT5H6M7S"" threw an error"
+test_319.js,zod.z.iso.duration,Q,PASSED,[319],RetryWithError,
+test_320.js,zod.z.iso.duration,Q,FAILED,[320],FunctionBodyIncluder+SnippetIncluder,Expected values to be strictly equal:
+test_321.js,zod.z.iso.duration,Q,FAILED,[321],RetryWithError,schema should be a ZodString
+test_322.js,zod.z.iso.duration,Q,FAILED,[322],RetryWithError,Invalid duration should be rejected
+test_323.js,zod.z.iso.duration,Q,FAILED,[323],SnippetIncluder,"Expected ""P0.5Y"" to be valid"
+test_324.js,zod.z.iso.duration,Q,FAILED,[324],RetryWithError,"Expected ""P"" to be invalid"
+test_325.js,zod.z.safeParse,Q,PASSED,[325],Base,
+test_326.js,zod.z.safeParse,Q,PASSED,[326],FunctionBodyIncluder,
+test_327.js,zod.z.safeParse,Q,PASSED,[327],FunctionBodyIncluder+SnippetIncluder,
+test_328.js,zod.z.safeParse,Q,PASSED,[328],SnippetIncluder,
+test_329.js,zod.z.parseAsync,Q,FAILED,[329],Base,Cannot read properties of undefined (reading '0')
+test_330.js,zod.z.parseAsync,Q,PASSED,[330],FunctionBodyIncluder,
+test_331.js,zod.z.parseAsync,Q,PASSED,[331],FunctionBodyIncluder+SnippetIncluder,
+test_332.js,zod.z.parseAsync,Q,FAILED,[332],RetryWithError,Invalid syntax
+test_333.js,zod.z.parseAsync,Q,PASSED,[333],SnippetIncluder,
+test_334.js,zod.z.coerce.number,Q,FAILED,[334],Base,Missing expected exception (ZodError).
+test_335.js,zod.z.coerce.number,Q,PASSED,[335],FunctionBodyIncluder,
+test_336.js,zod.z.coerce.number,Q,FAILED,[336],FunctionBodyIncluder+SnippetIncluder,The input did not match the regular expression /Expected number/. Input:
+test_337.js,zod.z.coerce.number,Q,FAILED,[337],RetryWithError,TypeError: Cannot read properties of undefined (reading 'describe')
+test_338.js,zod.z.coerce.number,Q,FAILED,[338],RetryWithError,Missing expected exception (ZodError).
+test_339.js,zod.z.coerce.number,Q,FAILED,[339],SnippetIncluder,Non‑numeric string should throw
+test_340.js,zod.z.coerce.number,Q,FAILED,[340],RetryWithError,Non‑numeric string should throw
+test_341.js,zod.z.coerce.boolean,Q,FAILED,[341],Base,"Failed to coerce ""false"""
+test_342.js,zod.z.coerce.boolean,Q,FAILED,[342],FunctionBodyIncluder,Expected values to be strictly equal:
+test_343.js,zod.z.coerce.boolean,Q,FAILED,[343],RetryWithError,Invalid syntax
+test_344.js,zod.z.coerce.boolean,Q,FAILED,[344],FunctionBodyIncluder+SnippetIncluder,Expected values to be strictly equal:
+test_345.js,zod.z.coerce.boolean,Q,FAILED,[345],RetryWithError,Expected values to be strictly equal:
+test_346.js,zod.z.coerce.boolean,Q,PASSED,[346],RetryWithError,
+test_347.js,zod.z.coerce.boolean,Q,FAILED,[347],SnippetIncluder,Expected values to be strictly equal:
+test_348.js,zod.z.coerce.boolean,Q,FAILED,[348],RetryWithError,Expected values to be strictly equal:
+test_349.js,zod.z.parse,Q,PASSED,[349],Base,
+test_350.js,zod.z.parse,Q,PASSED,[350],FunctionBodyIncluder,
+test_351.js,zod.z.parse,Q,FAILED,[351],FunctionBodyIncluder+SnippetIncluder,"The validation function is expected to return ""true"". Received false"
+test_352.js,zod.z.parse,Q,FAILED,[352],RetryWithError,"The validation function is expected to return ""true"". Received false"
+test_353.js,zod.z.parse,Q,PASSED,[353],SnippetIncluder,
+test_354.js,zod.z.iso.time,Q,FAILED,[354],Base,"Got unwanted exception: Expected ""09:08:07Z"" to be accepted as a valid ISO time"
+test_355.js,zod.z.iso.time,Q,FAILED,[355],FunctionBodyIncluder,Invalid ISO time should throw a ZodError
+test_356.js,zod.z.iso.time,Q,FAILED,[356],RetryWithError,Invalid ISO time should throw a ZodError
+test_357.js,zod.z.iso.time,Q,PASSED,[357],FunctionBodyIncluder+SnippetIncluder,
+test_358.js,zod.z.iso.time,Q,FAILED,[358],RetryWithError,"Got unwanted exception: Expected ""09:08:07Z"" to be accepted as a valid ISO time"
+test_359.js,zod.z.iso.time,Q,PASSED,[359],SnippetIncluder,
