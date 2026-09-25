@@ -50,7 +50,7 @@ The developer results are identical to last week's at every release, case by cas
 - three `instanceof` tests from v4.3.0 (default error message);
 - two `partialRecord` tests from v4.5.0 (error-message regular expression);
 - one `partialRecord` test at v4.1.0 only, which passes again from v4.2.0;
-- `iso.date`, `emoji` and `toUpperCase` at v4.6.0.
+- `iso.date`, `emoji` and `toUpperCase` at v4.6.0 (the `iso.date` and `toUpperCase` tests replace `zod.z` with their own stub; see Observations).
 
 **Coverage, paper metrics** (passing tests; all tests still pass under nyc):
 
@@ -77,7 +77,12 @@ The developer results are identical to last week's at every release, case by cas
 ## 5. Observations
 
 1. **Last week's near-zero breakage of generated tests depended partly on the sample.** With all 124 functions, 3.0% of the generated tests fail at v4.6.0, against 6.0% of the developer cases. All the generated-test failures are in functions the 60-function sample did not include.
-2. **Generated tests also break on message text.** From the messages, five of the nine breaks are error-message wording and four are behaviour changes, one of them transient (v4.1.0 only). This is the same distinction as the snapshot failures in the developer suite. The manual contract / non-contract classification planned last week now has cases on both sides.
+2. **Most breaks of generated tests are not caused by a change in the tested behaviour.** Reading the nine failing tests gives three groups:
+   - Five assert on error-message text that changed, like most developer failures (snapshots).
+   - Two replace `zod.z` with their own stub, so they never tested zod. They broke only because v4.6.0 changed how zod exports `z`.
+   - Two reflect a real change: `emoji` stopped accepting digits-only strings at v4.6.0, and `partialRecord` crashed at v4.1.0 only.
+
+   So a generated test can pass at t without exercising the function it is named for.
 3. **Generated tests cover the API layer more and the core less than the developer suite.** They cover 92% against 75% of `classic` and 61% against 81% of `core`. This fits the shape of the tests seen last week: short, basic parse behaviour through the public functions. Leaving out the locale tables, which every test barely touches, line coverage is 68.5% for S124 and 79.7% for the developer suite.
 4. **Line-level change coverage does not separate the surviving tests.** 38% of the lines changed and almost every test runs through them (median 219 changed lines per test). So this cannot show whether a surviving test reached a behaviour change and missed it. That needs the lines changed by the commits that actually broke tests.
 5. **A single generation run is one sample.** The same prompts gave almost entirely different tests week to week, so survival and coverage figures of one run carry run-to-run variation that has not been measured.

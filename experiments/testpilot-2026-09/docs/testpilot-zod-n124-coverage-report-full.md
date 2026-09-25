@@ -123,14 +123,24 @@ Control at v4.0.5: LLM 266/266, developer 888/888.
 | run2 `test_117.js` | `emoji` | v4.6.0 | `Cannot read properties of undefined (reading 'some')` |
 | tail `test_50.js` | `toUpperCase` | v4.6.0 | strict equality: a `$ZodCheckOverwrite` object instead of `'Z'` |
 
-No manual classification has been done. From the messages alone, 5 look like changes in error-message text (the three `instanceof` tests and two `partialRecord` tests), and 4 look like behaviour changes:
+A first reading of the nine test files and their error messages (not yet a full manual classification) gives three groups.
 
-- `toUpperCase` now returns a check object instead of the transformed string;
-- `iso.date` no longer gives a Date;
-- `emoji` hits an internal `TypeError`;
-- one `partialRecord` test hits a `TypeError` at v4.1.0 only.
+**Error-message text (5).** The test matches the text of an error message, and the text changed while the accept/reject behaviour did not.
 
-The last looks like a v4.1.0 defect fixed in v4.2.0, but the cause has not been checked.
+- The three `instanceof` tests match the default message (`Input not instance of …`), whose wording changed at v4.3.0.
+- `test_370.js` and `test_371.js` match `/Invalid key/` and `/Invalid/` against the error for an unknown key. That error still occurs, but its message stopped matching at v4.5.0.
+
+**Behaviour of the tested function (2).**
+
+- `emoji` (`test_117.js`): at v4.0.5 the emoji check accepted a digits-only string (`'123'`), because `\p{Emoji_Component}` includes ASCII digits. At v4.6.0 the pattern requires an actual emoji anchor, and the source comment says so. So `'123'` is now rejected. That sends the test into a `catch` block written against the zod 3 API (`e.errors.some(…)`), which throws the `TypeError`. The trigger is a real change in what the function accepts. The test detects it only by accident, because its handling of the rejection is itself broken.
+- `partialRecord` (`test_366.js`): zod throws an internal `TypeError` at v4.1.0 only, and the test passes again from v4.2.0. It looks like a v4.1.0 defect fixed in v4.2.0. The cause has not been checked.
+
+**The test does not exercise zod (2).** `test_10.js` (`iso.date`) and `test_50.js` (`toUpperCase`) replace `zod.z` with an object of their own before asserting:
+
+- `test_10.js` sets it to a stub whose `iso.date` returns a JavaScript `Date`;
+- `test_50.js` sets it to the string `'z'` and checks `'z'.toUpperCase() === 'Z'`.
+
+At t they pass without calling zod. At v4.6.0 the main entry exports `z` differently (`export { z, z as default }` in `src/index.ts`). The errors show that the assignment then no longer takes effect and the real zod functions are called: `toUpperCase()` returns a `$ZodCheckOverwrite` object, and `iso.date(…)` returns a schema instead of a `Date`. These two breaks are caused by a change in the shape of zod's module export. They say nothing about the behaviour of `toUpperCase` or `iso.date`. Of all 266 passing tests, 3 assign to `zod.z`, and the third (`test_163.js`, `ipv6`) still passes.
 
 ### 4.4 Coverage: the paper's metrics (LLM corpora)
 
@@ -248,7 +258,12 @@ Deviations D-01 to D-25 from last week still apply.
 
 1. **More functions, similar pass rate, more coverage.** Going from 60 to 124 functions changed the test pass rate little (38.6% to 35.1%) and raised statement coverage from 39.2% to 46.4% over the same files.
 2. **The near-zero LLM breakage of last week depended partly on the sample.** With 124 functions, 8 of 266 LLM tests fail at v4.6.0 (3.0%), against 53 of 888 developer cases (6.0%). All 9 LLM tests that break at some release belong to functions last week did not sample. The LLM tests still break less often than the developer tests, but the gap is smaller than the 60-function sample suggested.
-3. **The LLM tests also break on message text.** Five of the nine breaks appear to be error-message wording (regular expressions or default messages), the kind of non-contract assertion that makes up most of the developer failures (snapshots). The other four appear to be behaviour changes, one of them transient (v4.1.0 only). The manual classification planned last week now has cases on both sides.
+3. **Most LLM breaks are not caused by a change in the tested behaviour.**
+   - Five of the nine breaks come from assertions on error-message text. This is the same kind of non-contract assertion that makes up most of the developer failures (snapshots).
+   - Two come from tests that replace `zod.z` with their own stub and so never tested zod. They broke when zod changed how it exports `z`.
+   - Two come from changes in what the tested function does: `emoji` stopped accepting digits-only strings, and `partialRecord` crashed at v4.1.0 only.
+
+   Test validity is therefore a separate issue from test survival: a generated test can pass at t without exercising the code it is named for.
 4. **Generation is not repeatable across weeks.** The same prompts, at temperature 0, gave almost entirely different tests (1 identical file of 373). A single generation run is one draw. Survival and coverage figures for a single run should be read as such, and stable estimates need repeated runs.
 5. **The LLM tests cover the API layer more and the core less.** S124 covers 92% of the `classic` lines against the developer suite's 75%, and 61% of the `core` lines against 81%. This fits last week's reading of the tests (short, basic parse behaviour through the public functions). They reach the public surface broadly but not the internal paths the developers test directly.
 6. **Coverage of changed lines does not explain survival at this granularity** (section 4.6). Almost every test executes changed code, because 38% of the executable lines changed. Separating "reached a behaviour change and missed it" from "never reached it" needs behaviour-level change sets.
