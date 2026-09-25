@@ -5,8 +5,10 @@ EXP=/work/zod/experiments/testpilot-2026-09
 W=$EXP/wrappers/zod
 condition="$1"
 case "$condition" in
-  gen-smoke|gen-smoke-2|gen-smoke-3) API="$EXP/results/api-smoke-2.json" ;;
+  gen-smoke|gen-smoke-2|gen-smoke-3|gen-smoke-4) API="$EXP/results/api-smoke-2.json" ;;
   gen-n60) API="$EXP/results/api-sample-n60-s20260919.json" ;;
+  gen-n124|gen-n124-run2) API="$EXP/results/population-main.json" ;;
+  gen-n124-tail) API="$EXP/results/api-n124-tail.json" ;;
   *) exit 2 ;;
 esac
 test ! -e "$EXP/results/$condition"
@@ -23,5 +25,6 @@ rc=$?
 set -e
 if test -d "$EXP/results/$condition"; then mv "/tmp/$condition.stdout.txt" "$EXP/results/$condition/stdout.txt"; fi
 end=$(date +%s)
-printf '%s exit=%s wallSeconds=%s\n' "$condition" "$rc" "$((end-start))" | tee -a "$EXP/docs/log-stage-g.md"
+case "$condition" in gen-n124|gen-n124-run2|gen-n124-tail|gen-smoke-3|gen-smoke-4) LOG="$EXP/docs/log-stage-g-n124.md" ;; *) LOG="$EXP/docs/log-stage-g.md" ;; esac
+printf '%s exit=%s wallSeconds=%s\n' "$condition" "$rc" "$((end-start))" | tee -a "$LOG"
 exit "$rc"

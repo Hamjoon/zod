@@ -1,0 +1,214 @@
+Warning: --strictResponses has no effect when not using --responses
+Using openai/gpt-oss-120b at https://openrouter.ai/api/v1/chat/completions with 3 attempts and NoRateLimiter
+Running experiment for zod
+Loading API from /work/zod/experiments/testpilot-2026-09/results/population-main.json
+Extracting snippets
+Generating tests
+test_0.js (for zod.z.iso.datetime at temperature 0, 3 snippets available): FAILED
+(node:9) [DEP0147] DeprecationWarning: In future versions of Node.js, fs.rmdir(path, { recursive: true }) will be removed. Use fs.rm(path, { recursive: true }) instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+test_1.js (for zod.z.iso.datetime at temperature 0, 3 snippets available): PASSED
+test_2.js (for zod.z.iso.datetime at temperature 0, 3 snippets available): PASSED
+test_3.js (for zod.z.iso.datetime at temperature 0, 3 snippets available): PASSED
+test_4.js (for zod.z.iso.datetime at temperature 0, 3 snippets available): FAILED
+test_5.js (for zod.z.iso.datetime at temperature 0, 3 snippets available): FAILED
+test_6.js (for zod.z.iso.date at temperature 0, 3 snippets available): FAILED
+test_7.js (for zod.z.iso.date at temperature 0, 3 snippets available): PASSED
+test_8.js (for zod.z.iso.date at temperature 0, 3 snippets available): FAILED
+test_9.js (for zod.z.iso.date at temperature 0, 3 snippets available): FAILED
+test_10.js (for zod.z.iso.date at temperature 0, 3 snippets available): FAILED
+test_11.js (for zod.z.iso.date at temperature 0, 3 snippets available): FAILED
+test_12.js (for zod.z.iso.date at temperature 0, 3 snippets available): PASSED
+test_13.js (for zod.z.iso.time at temperature 0, 3 snippets available): FAILED
+test_14.js (for zod.z.iso.time at temperature 0, 3 snippets available): FAILED
+test_15.js (for zod.z.iso.time at temperature 0, 3 snippets available): PASSED
+test_16.js (for zod.z.iso.time at temperature 0, 3 snippets available): PASSED
+test_17.js (for zod.z.iso.time at temperature 0, 3 snippets available): FAILED
+test_18.js (for zod.z.iso.time at temperature 0, 3 snippets available): PASSED
+test_19.js (for zod.z.iso.duration at temperature 0, 3 snippets available): FAILED
+test_20.js (for zod.z.iso.duration at temperature 0, 3 snippets available): PASSED
+test_21.js (for zod.z.iso.duration at temperature 0, 3 snippets available): FAILED
+test_22.js (for zod.z.iso.duration at temperature 0, 3 snippets available): FAILED
+test_23.js (for zod.z.iso.duration at temperature 0, 3 snippets available): FAILED
+test_24.js (for zod.z.iso.duration at temperature 0, 3 snippets available): FAILED
+test_25.js (for zod.z.iso.duration at temperature 0, 3 snippets available): PASSED
+test_26.js (for zod.z.coerce.string at temperature 0, 3 snippets available): FAILED
+test_27.js (for zod.z.coerce.string at temperature 0, 3 snippets available): FAILED
+test_28.js (for zod.z.coerce.string at temperature 0, 3 snippets available): FAILED
+test_29.js (for zod.z.coerce.string at temperature 0, 3 snippets available): FAILED
+Error parsing coverage report: Error: ENOENT: no such file or directory, open '/tmp/mocha-validatorQOwCAf/report.json'
+test_30.js (for zod.z.coerce.string at temperature 0, 3 snippets available): FAILED
+test_31.js (for zod.z.coerce.string at temperature 0, 3 snippets available): FAILED
+test_32.js (for zod.z.coerce.string at temperature 0, 3 snippets available): PASSED
+test_33.js (for zod.z.coerce.number at temperature 0, 3 snippets available): PASSED
+test_34.js (for zod.z.coerce.number at temperature 0, 3 snippets available): FAILED
+test_35.js (for zod.z.coerce.number at temperature 0, 3 snippets available): FAILED
+test_36.js (for zod.z.coerce.number at temperature 0, 3 snippets available): PASSED
+test_37.js (for zod.z.coerce.number at temperature 0, 3 snippets available): FAILED
+test_38.js (for zod.z.coerce.number at temperature 0, 3 snippets available): PASSED
+test_39.js (for zod.z.coerce.boolean at temperature 0, 3 snippets available): FAILED
+test_40.js (for zod.z.coerce.boolean at temperature 0, 3 snippets available): FAILED
+test_41.js (for zod.z.coerce.boolean at temperature 0, 3 snippets available): FAILED
+test_42.js (for zod.z.coerce.boolean at temperature 0, 3 snippets available): FAILED
+Error parsing coverage report: Error: ENOENT: no such file or directory, open '/tmp/mocha-validatorznWmBG/report.json'
+test_43.js (for zod.z.coerce.boolean at temperature 0, 3 snippets available): FAILED
+test_44.js (for zod.z.coerce.boolean at temperature 0, 3 snippets available): PASSED
+test_45.js (for zod.z.coerce.boolean at temperature 0, 3 snippets available): FAILED
+test_46.js (for zod.z.coerce.boolean at temperature 0, 3 snippets available): PASSED
+test_47.js (for zod.z.coerce.bigint at temperature 0, 3 snippets available): FAILED
+test_48.js (for zod.z.coerce.bigint at temperature 0, 3 snippets available): FAILED
+test_49.js (for zod.z.coerce.bigint at temperature 0, 3 snippets available): FAILED
+test_50.js (for zod.z.coerce.bigint at temperature 0, 3 snippets available): FAILED
+test_51.js (for zod.z.coerce.bigint at temperature 0, 3 snippets available): FAILED
+test_52.js (for zod.z.coerce.bigint at temperature 0, 3 snippets available): FAILED
+test_53.js (for zod.z.coerce.bigint at temperature 0, 3 snippets available): FAILED
+test_54.js (for zod.z.coerce.bigint at temperature 0, 3 snippets available): FAILED
+test_55.js (for zod.z.coerce.date at temperature 0, 3 snippets available): FAILED
+test_56.js (for zod.z.coerce.date at temperature 0, 3 snippets available): PASSED
+test_57.js (for zod.z.coerce.date at temperature 0, 3 snippets available): FAILED
+test_58.js (for zod.z.coerce.date at temperature 0, 3 snippets available): PASSED
+test_59.js (for zod.z.coerce.date at temperature 0, 3 snippets available): FAILED
+test_60.js (for zod.z.coerce.date at temperature 0, 3 snippets available): FAILED
+test_61.js (for zod.z.coerce.date at temperature 0, 3 snippets available): FAILED
+test_62.js (for zod.z.stringbool at temperature 0, 3 snippets available): FAILED
+test_63.js (for zod.z.stringbool at temperature 0, 3 snippets available): FAILED
+test_64.js (for zod.z.stringbool at temperature 0, 3 snippets available): FAILED
+test_65.js (for zod.z.stringbool at temperature 0, 3 snippets available): PASSED
+test_66.js (for zod.z.stringbool at temperature 0, 3 snippets available): PASSED
+test_67.js (for zod.z.stringbool at temperature 0, 3 snippets available): PASSED
+test_68.js (for zod.z.string at temperature 0, 3 snippets available): FAILED
+test_69.js (for zod.z.string at temperature 0, 3 snippets available): FAILED
+test_70.js (for zod.z.string at temperature 0, 3 snippets available): FAILED
+test_71.js (for zod.z.string at temperature 0, 3 snippets available): FAILED
+test_72.js (for zod.z.string at temperature 0, 3 snippets available): PASSED
+test_73.js (for zod.z.string at temperature 0, 3 snippets available): PASSED
+test_74.js (for zod.z.string at temperature 0, 3 snippets available): FAILED
+test_75.js (for zod.z.string at temperature 0, 3 snippets available): FAILED
+test_76.js (for zod.z.email at temperature 0, 3 snippets available): FAILED
+test_77.js (for zod.z.email at temperature 0, 3 snippets available): FAILED
+test_78.js (for zod.z.email at temperature 0, 3 snippets available): PASSED
+test_79.js (for zod.z.email at temperature 0, 3 snippets available): FAILED
+test_80.js (for zod.z.email at temperature 0, 3 snippets available): FAILED
+test_81.js (for zod.z.email at temperature 0, 3 snippets available): PASSED
+test_82.js (for zod.z.email at temperature 0, 3 snippets available): FAILED
+test_83.js (for zod.z.email at temperature 0, 3 snippets available): FAILED
+test_84.js (for zod.z.guid at temperature 0, 2 snippets available): PASSED
+test_85.js (for zod.z.guid at temperature 0, 2 snippets available): FAILED
+test_86.js (for zod.z.guid at temperature 0, 2 snippets available): FAILED
+test_87.js (for zod.z.guid at temperature 0, 2 snippets available): FAILED
+test_88.js (for zod.z.guid at temperature 0, 2 snippets available): FAILED
+test_89.js (for zod.z.guid at temperature 0, 2 snippets available): FAILED
+test_90.js (for zod.z.guid at temperature 0, 2 snippets available): PASSED
+test_91.js (for zod.z.uuid at temperature 0, 3 snippets available): PASSED
+test_92.js (for zod.z.uuid at temperature 0, 3 snippets available): PASSED
+test_93.js (for zod.z.uuid at temperature 0, 3 snippets available): FAILED
+test_94.js (for zod.z.uuid at temperature 0, 3 snippets available): PASSED
+test_95.js (for zod.z.uuid at temperature 0, 3 snippets available): FAILED
+test_96.js (for zod.z.uuid at temperature 0, 3 snippets available): FAILED
+test_97.js (for zod.z.uuidv4 at temperature 0, 2 snippets available): PASSED
+test_98.js (for zod.z.uuidv4 at temperature 0, 2 snippets available): PASSED
+test_99.js (for zod.z.uuidv4 at temperature 0, 2 snippets available): PASSED
+test_100.js (for zod.z.uuidv4 at temperature 0, 2 snippets available): FAILED
+Error parsing coverage report: Error: ENOENT: no such file or directory, open '/tmp/mocha-validator5EYJSB/report.json'
+test_101.js (for zod.z.uuidv4 at temperature 0, 2 snippets available): FAILED
+test_102.js (for zod.z.uuidv6 at temperature 0, 1 snippets available): PASSED
+test_103.js (for zod.z.uuidv6 at temperature 0, 1 snippets available): PASSED
+test_104.js (for zod.z.uuidv6 at temperature 0, 1 snippets available): PASSED
+test_105.js (for zod.z.uuidv6 at temperature 0, 1 snippets available): FAILED
+test_106.js (for zod.z.uuidv6 at temperature 0, 1 snippets available): FAILED
+test_107.js (for zod.z.uuidv7 at temperature 0, 2 snippets available): PASSED
+test_108.js (for zod.z.uuidv7 at temperature 0, 2 snippets available): PASSED
+test_109.js (for zod.z.uuidv7 at temperature 0, 2 snippets available): PASSED
+test_110.js (for zod.z.uuidv7 at temperature 0, 2 snippets available): PASSED
+test_111.js (for zod.z.url at temperature 0, 3 snippets available): FAILED
+test_112.js (for zod.z.url at temperature 0, 3 snippets available): FAILED
+test_113.js (for zod.z.url at temperature 0, 3 snippets available): FAILED
+test_114.js (for zod.z.url at temperature 0, 3 snippets available): FAILED
+test_115.js (for zod.z.url at temperature 0, 3 snippets available): FAILED
+test_116.js (for zod.z.emoji at temperature 0, 3 snippets available): PASSED
+test_117.js (for zod.z.emoji at temperature 0, 3 snippets available): PASSED
+test_118.js (for zod.z.emoji at temperature 0, 3 snippets available): FAILED
+test_119.js (for zod.z.emoji at temperature 0, 3 snippets available): FAILED
+test_120.js (for zod.z.emoji at temperature 0, 3 snippets available): PASSED
+test_121.js (for zod.z.nanoid at temperature 0, 3 snippets available): FAILED
+test_122.js (for zod.z.nanoid at temperature 0, 3 snippets available): PASSED
+test_123.js (for zod.z.nanoid at temperature 0, 3 snippets available): PASSED
+Error parsing coverage report: Error: ENOENT: no such file or directory, open '/tmp/mocha-validatorgiF7RK/report.json'
+test_124.js (for zod.z.nanoid at temperature 0, 3 snippets available): FAILED
+test_125.js (for zod.z.nanoid at temperature 0, 3 snippets available): PASSED
+test_126.js (for zod.z.cuid at temperature 0, 3 snippets available): PASSED
+test_127.js (for zod.z.cuid at temperature 0, 3 snippets available): PASSED
+test_128.js (for zod.z.cuid at temperature 0, 3 snippets available): PASSED
+test_129.js (for zod.z.cuid at temperature 0, 3 snippets available): FAILED
+test_130.js (for zod.z.cuid at temperature 0, 3 snippets available): FAILED
+test_131.js (for zod.z.cuid2 at temperature 0, 3 snippets available): PASSED
+test_132.js (for zod.z.cuid2 at temperature 0, 3 snippets available): FAILED
+test_133.js (for zod.z.cuid2 at temperature 0, 3 snippets available): FAILED
+test_134.js (for zod.z.cuid2 at temperature 0, 3 snippets available): PASSED
+test_135.js (for zod.z.cuid2 at temperature 0, 3 snippets available): FAILED
+test_136.js (for zod.z.cuid2 at temperature 0, 3 snippets available): FAILED
+test_137.js (for zod.z.ulid at temperature 0, 3 snippets available): PASSED
+test_138.js (for zod.z.ulid at temperature 0, 3 snippets available): FAILED
+test_139.js (for zod.z.ulid at temperature 0, 3 snippets available): FAILED
+test_140.js (for zod.z.ulid at temperature 0, 3 snippets available): PASSED
+test_141.js (for zod.z.ulid at temperature 0, 3 snippets available): PASSED
+test_142.js (for zod.z.xid at temperature 0, 0 snippets available): FAILED
+test_143.js (for zod.z.xid at temperature 0, 0 snippets available): FAILED
+test_144.js (for zod.z.xid at temperature 0, 0 snippets available): FAILED
+Error parsing coverage report: Error: ENOENT: no such file or directory, open '/tmp/mocha-validatorQgJBaj/report.json'
+test_145.js (for zod.z.xid at temperature 0, 0 snippets available): FAILED
+test_146.js (for zod.z.ksuid at temperature 0, 0 snippets available): FAILED
+test_147.js (for zod.z.ksuid at temperature 0, 0 snippets available): FAILED
+Error parsing coverage report: Error: ENOENT: no such file or directory, open '/tmp/mocha-validatorIfIXbS/report.json'
+test_148.js (for zod.z.ksuid at temperature 0, 0 snippets available): FAILED
+test_149.js (for zod.z.ksuid at temperature 0, 0 snippets available): FAILED
+test_150.js (for zod.z.ipv4 at temperature 0, 3 snippets available): FAILED
+test_151.js (for zod.z.ipv4 at temperature 0, 3 snippets available): PASSED
+test_152.js (for zod.z.ipv4 at temperature 0, 3 snippets available): FAILED
+test_153.js (for zod.z.ipv4 at temperature 0, 3 snippets available): FAILED
+test_154.js (for zod.z.ipv4 at temperature 0, 3 snippets available): FAILED
+test_155.js (for zod.z.ipv4 at temperature 0, 3 snippets available): FAILED
+test_156.js (for zod.z.ipv4 at temperature 0, 3 snippets available): PASSED
+test_157.js (for zod.z.ipv6 at temperature 0, 3 snippets available): FAILED
+test_158.js (for zod.z.ipv6 at temperature 0, 3 snippets available): PASSED
+test_159.js (for zod.z.ipv6 at temperature 0, 3 snippets available): FAILED
+test_160.js (for zod.z.ipv6 at temperature 0, 3 snippets available): FAILED
+test_161.js (for zod.z.ipv6 at temperature 0, 3 snippets available): FAILED
+test_162.js (for zod.z.ipv6 at temperature 0, 3 snippets available): FAILED
+test_163.js (for zod.z.ipv6 at temperature 0, 3 snippets available): FAILED
+test_164.js (for zod.z.cidrv4 at temperature 0, 3 snippets available): FAILED
+test_165.js (for zod.z.cidrv4 at temperature 0, 3 snippets available): PASSED
+test_166.js (for zod.z.cidrv4 at temperature 0, 3 snippets available): PASSED
+test_167.js (for zod.z.cidrv4 at temperature 0, 3 snippets available): FAILED
+test_168.js (for zod.z.cidrv4 at temperature 0, 3 snippets available): PASSED
+test_169.js (for zod.z.cidrv6 at temperature 0, 3 snippets available): PASSED
+test_170.js (for zod.z.cidrv6 at temperature 0, 3 snippets available): PASSED
+test_171.js (for zod.z.cidrv6 at temperature 0, 3 snippets available): PASSED
+test_172.js (for zod.z.cidrv6 at temperature 0, 3 snippets available): FAILED
+test_173.js (for zod.z.cidrv6 at temperature 0, 3 snippets available): FAILED
+test_174.js (for zod.z.base64 at temperature 0, 2 snippets available): PASSED
+test_175.js (for zod.z.base64 at temperature 0, 2 snippets available): PASSED
+test_176.js (for zod.z.base64 at temperature 0, 2 snippets available): PASSED
+test_177.js (for zod.z.base64 at temperature 0, 2 snippets available): PASSED
+test_178.js (for zod.z.base64url at temperature 0, 3 snippets available): PASSED
+test_179.js (for zod.z.base64url at temperature 0, 3 snippets available): PASSED
+test_180.js (for zod.z.base64url at temperature 0, 3 snippets available): FAILED
+test_181.js (for zod.z.base64url at temperature 0, 3 snippets available): PASSED
+test_182.js (for zod.z.base64url at temperature 0, 3 snippets available): PASSED
+test_183.js (for zod.z.e164 at temperature 0, 1 snippets available): FAILED
+test_184.js (for zod.z.e164 at temperature 0, 1 snippets available): PASSED
+test_185.js (for zod.z.e164 at temperature 0, 1 snippets available): FAILED
+test_186.js (for zod.z.e164 at temperature 0, 1 snippets available): FAILED
+Error parsing coverage report: Error: ENOENT: no such file or directory, open '/tmp/mocha-validator2EOE4b/report.json'
+test_187.js (for zod.z.e164 at temperature 0, 1 snippets available): FAILED
+test_188.js (for zod.z.e164 at temperature 0, 1 snippets available): PASSED
+test_189.js (for zod.z.jwt at temperature 0, 1 snippets available): PASSED
+test_190.js (for zod.z.jwt at temperature 0, 1 snippets available): FAILED
+test_191.js (for zod.z.jwt at temperature 0, 1 snippets available): PASSED
+TypeError: Cannot read properties of null (reading 'split')
+    at Prompt.completeTest (/work/testpilot2/dist/promptCrafting.js:152:27)
+    at TestGenerator.validateCompletion (/work/testpilot2/dist/generateTests.js:76:33)
+    at TestGenerator.generateAndValidateTests (/work/testpilot2/dist/generateTests.js:57:51)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async runExperiment (/work/testpilot2/benchmark/run.js:38:9)
+    at async /work/testpilot2/benchmark/run.js:233:13

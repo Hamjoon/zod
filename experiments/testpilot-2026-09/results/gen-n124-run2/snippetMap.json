@@ -1,0 +1,881 @@
+[
+  [
+    "datetime",
+    [
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "z.object({ a: z.string() }).and(z.object({ b: z.number() })); // ❌\n\n// use z.intersection\nz.intersection(z.object({ a: z.string() }), z.object({ b: z.number() })); // ✅\n// or .extend() when possible\nz.object({ a: z.string() }).extend(z.object({ b: z.number() })); // ✅\n``` */}\n\n## `z.number()`\n\n### no infinite values\n\n`POSITIVE_INFINITY` and `NEGATIVE_INFINITY` are no longer considered valid values for `z.number()`.\n\n### `.safe()` no longer accepts floats\n\nIn Zod 3, `z.number().safe()` is deprecated. It now behaves identically to `.int()` (see below). Importantly, that means it no longer accepts floats.\n\n### `.int()` accepts safe integers only\n",
+      "const schema = z.string().datetime({ local: true });\nschema.parse(\"2020-01-01T00:00:00\"); // pass\nschema.parse(\"2020-01-01T00:00\"); // pass"
+    ]
+  ],
+  [
+    "date",
+    [
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "const dateSchema = z.coerce.date();\ntype DateSchema = z.infer<typeof dateSchema>;\n// type DateSchema = Date\n\n/* valid dates */\nconsole.log(dateSchema.safeParse(\"2023-01-10T00:00:00.000Z\").success); // true\nconsole.log(dateSchema.safeParse(\"2023-01-10\").success); // true\nconsole.log(dateSchema.safeParse(\"1/10/23\").success); // true\nconsole.log(dateSchema.safeParse(new Date(\"1/10/23\")).success); // true\n\n/* invalid dates */\nconsole.log(dateSchema.safeParse(\"2023-13-10\").success); // false\nconsole.log(dateSchema.safeParse(\"0000-00-00\").success); // false",
+      "Post.pick({ title: true })\nPost.partial();\nPost.extend({ publishDate: z.date() });"
+    ]
+  ],
+  [
+    "time",
+    [
+      "// Supported via `format`\nz.email(); // => { type: \"string\", format: \"email\" }\nz.iso.datetime(); // => { type: \"string\", format: \"date-time\" }\nz.iso.date(); // => { type: \"string\", format: \"date\" }\nz.iso.time(); // => { type: \"string\", format: \"time\" }\nz.iso.duration(); // => { type: \"string\", format: \"duration\" }\nz.ipv4(); // => { type: \"string\", format: \"ipv4\" }\nz.ipv6(); // => { type: \"string\", format: \"ipv6\" }\nz.uuid(); // => { type: \"string\", format: \"uuid\" }\nz.guid(); // => { type: \"string\", format: \"uuid\" }\nz.url(); // => { type: \"string\", format: \"uri\" }",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "const time = z.iso.time();\n\ntime.parse(\"03:15\"); // ✅\ntime.parse(\"03:15:00\"); // ✅\ntime.parse(\"03:15:00.9999999\"); // ✅ (arbitrary precision)"
+    ]
+  ],
+  [
+    "duration",
+    [
+      "z.email();\nz.uuid();\nz.url();\nz.emoji();         // validates a single emoji character\nz.base64();\nz.base64url();\nz.nanoid();\nz.cuid();\nz.cuid2();\nz.ulid();\nz.ipv4();\nz.ipv6();\nz.cidrv4();        // ipv4 CIDR block\nz.cidrv6();        // ipv6 CIDR block\nz.iso.date();\nz.iso.time();\nz.iso.datetime();\nz.iso.duration();",
+      "// Supported via `format`\nz.email(); // => { type: \"string\", format: \"email\" }\nz.iso.datetime(); // => { type: \"string\", format: \"date-time\" }\nz.iso.date(); // => { type: \"string\", format: \"date\" }\nz.iso.time(); // => { type: \"string\", format: \"time\" }\nz.iso.duration(); // => { type: \"string\", format: \"duration\" }\nz.ipv4(); // => { type: \"string\", format: \"ipv4\" }\nz.ipv6(); // => { type: \"string\", format: \"ipv6\" }\nz.uuid(); // => { type: \"string\", format: \"uuid\" }\nz.guid(); // => { type: \"string\", format: \"uuid\" }\nz.url(); // => { type: \"string\", format: \"uri\" }",
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();"
+    ]
+  ],
+  [
+    "string",
+    [
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "import * as z from \"zod\";\n``` */}\n\n<Callout>\n**Note** — Zod 3 exported a number of undocumented quasi-internal utility types and functions that are not considered part of the public API. Changes to those are not documented here.\n</Callout>\n\n## Error customization\n\nZod 4 standardizes the APIs for error customization under a single, unified `error` param. Previously Zod's error customization APIs were fragmented and inconsistent. This is cleaned up in Zod 4. \n\n### deprecates `message`\n\nReplaces `message` with `error`. The `message` parameter is still supported but deprecated.\n\n<Tabs groupId=\"error-message\" items={[\"Zod 4\", \"Zod 3\"]} persist>\n<Tab value=\"Zod 4\">\n```ts\nz.string().min(5, { error: \"Too short.\" });",
+      "inferSchema(z.string());\n// => ZodType<string>"
+    ]
+  ],
+  [
+    "number",
+    [
+      "const stringOrNumber = z.string().or(z.number());\n``` */}\n\n{/* **Optional string validation:**\n\nTo validate an optional form input, you can union the desired string validation with an empty string [literal](#literals).\n\nThis example validates an input that is optional but needs to contain a [valid URL](#strings):\n\n```ts\nconst optionalUrl = z.union([z.string().url().nullish(), z.literal(\"\")]);\n\nconsole.log(optionalUrl.safeParse(undefined).success); // true\nconsole.log(optionalUrl.safeParse(null).success); // true\nconsole.log(optionalUrl.safeParse(\"\").success); // true\nconsole.log(optionalUrl.safeParse(\"https://zod.dev\").success); // true\nconsole.log(optionalUrl.safeParse(\"not a valid url\").success); // false",
+      "z.object({ a: z.string() }).and(z.object({ b: z.number() })); // ❌\n\n// use z.intersection\nz.intersection(z.object({ a: z.string() }), z.object({ b: z.number() })); // ✅\n// or .extend() when possible\nz.object({ a: z.string() }).extend(z.object({ b: z.number() })); // ✅\n``` */}\n\n## `z.number()`\n\n### no infinite values\n\n`POSITIVE_INFINITY` and `NEGATIVE_INFINITY` are no longer considered valid values for `z.number()`.\n\n### `.safe()` no longer accepts floats\n\nIn Zod 3, `z.number().safe()` is deprecated. It now behaves identically to `.int()` (see below). Importantly, that means it no longer accepts floats.\n\n### `.int()` accepts safe integers only\n",
+      "z.number().overwrite(val => val ** 2).max(100);\n// => ZodNumber"
+    ]
+  ],
+  [
+    "boolean",
+    [
+      "const schema = z.coerce.boolean(); // Boolean(input)\n\nschema.parse(\"tuna\"); // => true\nschema.parse(\"true\"); // => true\nschema.parse(\"false\"); // => true\nschema.parse(1); // => true\nschema.parse([]); // => true\n\nschema.parse(0); // => false\nschema.parse(\"\"); // => false\nschema.parse(undefined); // => false\nschema.parse(null); // => false",
+      "const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);\ntype Literal = z.infer<typeof literalSchema>;\ntype Json = Literal | { [key: string]: Json } | Json[];\nconst jsonSchema: z.ZodType<Json> = z.lazy(() =>\n  z.union([literalSchema, z.array(jsonSchema), z.record(jsonSchema)])\n);\n\njsonSchema.parse(data);",
+      "z.boolean().parse(true); // => true\nz.boolean().parse(false); // => false"
+    ]
+  ],
+  [
+    "bigint",
+    [
+      "import * as z from \"zod/v3\";\n\n// primitive values\nz.string();\nz.number();\nz.bigint();\nz.boolean();\nz.date();\nz.symbol();\n\n// empty types\nz.undefined();\nz.null();\nz.void(); // accepts undefined\n\n// catch-all types\n// allows any value\nz.any();\nz.unknown();\n",
+      "z.bigint().gt(5n);\nz.bigint().gte(5n); // alias `.min(5n)`\nz.bigint().lt(5n);\nz.bigint().lte(5n); // alias `.max(5n)`\n\nz.bigint().positive(); // > 0n\nz.bigint().nonnegative(); // >= 0n\nz.bigint().negative(); // < 0n\nz.bigint().nonpositive(); // <= 0n\n\nz.bigint().multipleOf(5n); // Evenly divisible by 5n.",
+      "z.toJSONSchema(z.bigint());\n// => throws Error"
+    ]
+  ],
+  [
+    "stringbool",
+    [
+      "const strbool = z.stringbool();\n\nstrbool.parse(\"true\")         // => true\nstrbool.parse(\"1\")            // => true\nstrbool.parse(\"yes\")          // => true\nstrbool.parse(\"on\")           // => true\nstrbool.parse(\"y\")            // => true\nstrbool.parse(\"enabled\")      // => true\n\nstrbool.parse(\"false\");       // => false\nstrbool.parse(\"0\");           // => false\nstrbool.parse(\"no\");          // => false\nstrbool.parse(\"off\");         // => false\nstrbool.parse(\"n\");           // => false\nstrbool.parse(\"disabled\");    // => false\n\nstrbool.parse(/* anything else */); // ZodError<[{ code: \"invalid_value\" }]>",
+      "// these are the defaults\nz.stringbool({\n  truthy: [\"true\", \"1\", \"yes\", \"on\", \"y\", \"enabled\"],\n  falsy: [\"false\", \"0\", \"no\", \"off\", \"n\", \"disabled\"],\n});",
+      "z.stringbool({\n  case: \"sensitive\"\n});"
+    ]
+  ],
+  [
+    "email",
+    [
+      "// Supported via `format`\nz.email(); // => { type: \"string\", format: \"email\" }\nz.iso.datetime(); // => { type: \"string\", format: \"date-time\" }\nz.iso.date(); // => { type: \"string\", format: \"date\" }\nz.iso.time(); // => { type: \"string\", format: \"time\" }\nz.iso.duration(); // => { type: \"string\", format: \"duration\" }\nz.ipv4(); // => { type: \"string\", format: \"ipv4\" }\nz.ipv6(); // => { type: \"string\", format: \"ipv6\" }\nz.uuid(); // => { type: \"string\", format: \"uuid\" }\nz.guid(); // => { type: \"string\", format: \"uuid\" }\nz.url(); // => { type: \"string\", format: \"uri\" }",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "z.string().email(); // ❌ deprecated\nz.email(); // ✅ "
+    ]
+  ],
+  [
+    "guid",
+    [
+      "// Supported via `format`\nz.email(); // => { type: \"string\", format: \"email\" }\nz.iso.datetime(); // => { type: \"string\", format: \"date-time\" }\nz.iso.date(); // => { type: \"string\", format: \"date\" }\nz.iso.time(); // => { type: \"string\", format: \"time\" }\nz.iso.duration(); // => { type: \"string\", format: \"duration\" }\nz.ipv4(); // => { type: \"string\", format: \"ipv4\" }\nz.ipv6(); // => { type: \"string\", format: \"ipv6\" }\nz.uuid(); // => { type: \"string\", format: \"uuid\" }\nz.guid(); // => { type: \"string\", format: \"uuid\" }\nz.url(); // => { type: \"string\", format: \"uri\" }",
+      "z.uuid(); // RFC 4122 compliant UUID\nz.guid(); // any 8-4-4-4-12 hex pattern"
+    ]
+  ],
+  [
+    "uuid",
+    [
+      "// Supported via `format`\nz.email(); // => { type: \"string\", format: \"email\" }\nz.iso.datetime(); // => { type: \"string\", format: \"date-time\" }\nz.iso.date(); // => { type: \"string\", format: \"date\" }\nz.iso.time(); // => { type: \"string\", format: \"time\" }\nz.iso.duration(); // => { type: \"string\", format: \"duration\" }\nz.ipv4(); // => { type: \"string\", format: \"ipv4\" }\nz.ipv6(); // => { type: \"string\", format: \"ipv6\" }\nz.uuid(); // => { type: \"string\", format: \"uuid\" }\nz.guid(); // => { type: \"string\", format: \"uuid\" }\nz.url(); // => { type: \"string\", format: \"uri\" }",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "z.uuid(); // RFC 4122 compliant UUID\nz.guid(); // any 8-4-4-4-12 hex pattern"
+    ]
+  ],
+  [
+    "uuidv4",
+    [
+      "// supports \"v1\", \"v2\", \"v3\", \"v4\", \"v5\", \"v6\", \"v7\", \"v8\"\nz.uuid({ version: \"v4\" });\n\n// for convenience\nz.uuidv4();\nz.uuidv6();\nz.uuidv7();",
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();"
+    ]
+  ],
+  [
+    "uuidv6",
+    [
+      "// supports \"v1\", \"v2\", \"v3\", \"v4\", \"v5\", \"v6\", \"v7\", \"v8\"\nz.uuid({ version: \"v4\" });\n\n// for convenience\nz.uuidv4();\nz.uuidv6();\nz.uuidv7();"
+    ]
+  ],
+  [
+    "uuidv7",
+    [
+      "// supports \"v1\", \"v2\", \"v3\", \"v4\", \"v5\", \"v6\", \"v7\", \"v8\"\nz.uuid({ version: \"v4\" });\n\n// for convenience\nz.uuidv4();\nz.uuidv6();\nz.uuidv7();",
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();"
+    ]
+  ],
+  [
+    "url",
+    [
+      "// Supported via `format`\nz.email(); // => { type: \"string\", format: \"email\" }\nz.iso.datetime(); // => { type: \"string\", format: \"date-time\" }\nz.iso.date(); // => { type: \"string\", format: \"date\" }\nz.iso.time(); // => { type: \"string\", format: \"time\" }\nz.iso.duration(); // => { type: \"string\", format: \"duration\" }\nz.ipv4(); // => { type: \"string\", format: \"ipv4\" }\nz.ipv6(); // => { type: \"string\", format: \"ipv6\" }\nz.uuid(); // => { type: \"string\", format: \"uuid\" }\nz.guid(); // => { type: \"string\", format: \"uuid\" }\nz.url(); // => { type: \"string\", format: \"uri\" }",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "const schema = z.url({ protocol: /^https$/ });\n\nschema.parse(\"https://example.com\"); // ✅\nschema.parse(\"http://example.com\"); // ❌"
+    ]
+  ],
+  [
+    "emoji",
+    [
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "z.base64url();\nz.cuid();\nz.regex();\nz.emoji();\nz.nanoid();\nz.cuid2();\nz.ulid();\nz.cidrv4();\nz.cidrv6();"
+    ]
+  ],
+  [
+    "nanoid",
+    [
+      "z.email();\nz.uuid();\nz.url();\nz.emoji();         // validates a single emoji character\nz.base64();\nz.base64url();\nz.nanoid();\nz.cuid();\nz.cuid2();\nz.ulid();\nz.ipv4();\nz.ipv6();\nz.cidrv4();        // ipv4 CIDR block\nz.cidrv6();        // ipv6 CIDR block\nz.iso.date();\nz.iso.time();\nz.iso.datetime();\nz.iso.duration();",
+      "z.base64url();\nz.cuid();\nz.regex();\nz.emoji();\nz.nanoid();\nz.cuid2();\nz.ulid();\nz.cidrv4();\nz.cidrv6();",
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n"
+    ]
+  ],
+  [
+    "cuid",
+    [
+      "z.email();\nz.uuid();\nz.url();\nz.emoji();         // validates a single emoji character\nz.base64();\nz.base64url();\nz.nanoid();\nz.cuid();\nz.cuid2();\nz.ulid();\nz.ipv4();\nz.ipv6();\nz.cidrv4();        // ipv4 CIDR block\nz.cidrv6();        // ipv6 CIDR block\nz.iso.date();\nz.iso.time();\nz.iso.datetime();\nz.iso.duration();",
+      "z.base64url();\nz.cuid();\nz.regex();\nz.emoji();\nz.nanoid();\nz.cuid2();\nz.ulid();\nz.cidrv4();\nz.cidrv6();",
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n"
+    ]
+  ],
+  [
+    "cuid2",
+    [
+      "z.email();\nz.uuid();\nz.url();\nz.emoji();         // validates a single emoji character\nz.base64();\nz.base64url();\nz.nanoid();\nz.cuid();\nz.cuid2();\nz.ulid();\nz.ipv4();\nz.ipv6();\nz.cidrv4();        // ipv4 CIDR block\nz.cidrv6();        // ipv6 CIDR block\nz.iso.date();\nz.iso.time();\nz.iso.datetime();\nz.iso.duration();",
+      "z.base64url();\nz.cuid();\nz.regex();\nz.emoji();\nz.nanoid();\nz.cuid2();\nz.ulid();\nz.cidrv4();\nz.cidrv6();",
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n"
+    ]
+  ],
+  [
+    "ulid",
+    [
+      "z.email();\nz.uuid();\nz.url();\nz.emoji();         // validates a single emoji character\nz.base64();\nz.base64url();\nz.nanoid();\nz.cuid();\nz.cuid2();\nz.ulid();\nz.ipv4();\nz.ipv6();\nz.cidrv4();        // ipv4 CIDR block\nz.cidrv6();        // ipv6 CIDR block\nz.iso.date();\nz.iso.time();\nz.iso.datetime();\nz.iso.duration();",
+      "z.base64url();\nz.cuid();\nz.regex();\nz.emoji();\nz.nanoid();\nz.cuid2();\nz.ulid();\nz.cidrv4();\nz.cidrv6();",
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n"
+    ]
+  ],
+  [
+    "xid",
+    []
+  ],
+  [
+    "ksuid",
+    []
+  ],
+  [
+    "ipv4",
+    [
+      "// Supported via `format`\nz.email(); // => { type: \"string\", format: \"email\" }\nz.iso.datetime(); // => { type: \"string\", format: \"date-time\" }\nz.iso.date(); // => { type: \"string\", format: \"date\" }\nz.iso.time(); // => { type: \"string\", format: \"time\" }\nz.iso.duration(); // => { type: \"string\", format: \"duration\" }\nz.ipv4(); // => { type: \"string\", format: \"ipv4\" }\nz.ipv6(); // => { type: \"string\", format: \"ipv6\" }\nz.uuid(); // => { type: \"string\", format: \"uuid\" }\nz.guid(); // => { type: \"string\", format: \"uuid\" }\nz.url(); // => { type: \"string\", format: \"uri\" }",
+      "z.string().ip() // ❌\nz.ipv4() // ✅\nz.ipv6() // ✅",
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();"
+    ]
+  ],
+  [
+    "ipv6",
+    [
+      "// Supported via `format`\nz.email(); // => { type: \"string\", format: \"email\" }\nz.iso.datetime(); // => { type: \"string\", format: \"date-time\" }\nz.iso.date(); // => { type: \"string\", format: \"date\" }\nz.iso.time(); // => { type: \"string\", format: \"time\" }\nz.iso.duration(); // => { type: \"string\", format: \"duration\" }\nz.ipv4(); // => { type: \"string\", format: \"ipv4\" }\nz.ipv6(); // => { type: \"string\", format: \"ipv6\" }\nz.uuid(); // => { type: \"string\", format: \"uuid\" }\nz.guid(); // => { type: \"string\", format: \"uuid\" }\nz.url(); // => { type: \"string\", format: \"uri\" }",
+      "z.string().ip() // ❌\nz.ipv4() // ✅\nz.ipv6() // ✅",
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();"
+    ]
+  ],
+  [
+    "cidrv4",
+    [
+      "z.email();\nz.uuid();\nz.url();\nz.emoji();         // validates a single emoji character\nz.base64();\nz.base64url();\nz.nanoid();\nz.cuid();\nz.cuid2();\nz.ulid();\nz.ipv4();\nz.ipv6();\nz.cidrv4();        // ipv4 CIDR block\nz.cidrv6();        // ipv6 CIDR block\nz.iso.date();\nz.iso.time();\nz.iso.datetime();\nz.iso.duration();",
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();",
+      "z.string().cidr() // ❌\nz.cidrv4() // ✅\nz.cidrv6() // ✅"
+    ]
+  ],
+  [
+    "cidrv6",
+    [
+      "z.email();\nz.uuid();\nz.url();\nz.emoji();         // validates a single emoji character\nz.base64();\nz.base64url();\nz.nanoid();\nz.cuid();\nz.cuid2();\nz.ulid();\nz.ipv4();\nz.ipv6();\nz.cidrv4();        // ipv4 CIDR block\nz.cidrv6();        // ipv6 CIDR block\nz.iso.date();\nz.iso.time();\nz.iso.datetime();\nz.iso.duration();",
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();",
+      "z.string().cidr() // ❌\nz.cidrv4() // ✅\nz.cidrv6() // ✅"
+    ]
+  ],
+  [
+    "base64",
+    [
+      "z.email();\nz.uuid();\nz.url();\nz.emoji();         // validates a single emoji character\nz.base64();\nz.base64url();\nz.nanoid();\nz.cuid();\nz.cuid2();\nz.ulid();\nz.ipv4();\nz.ipv6();\nz.cidrv4();        // ipv4 CIDR block\nz.cidrv6();        // ipv6 CIDR block\nz.iso.date();\nz.iso.time();\nz.iso.datetime();\nz.iso.duration();",
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();"
+    ]
+  ],
+  [
+    "base64url",
+    [
+      "z.email();\nz.uuid();\nz.url();\nz.emoji();         // validates a single emoji character\nz.base64();\nz.base64url();\nz.nanoid();\nz.cuid();\nz.cuid2();\nz.ulid();\nz.ipv4();\nz.ipv6();\nz.cidrv4();        // ipv4 CIDR block\nz.cidrv6();        // ipv6 CIDR block\nz.iso.date();\nz.iso.time();\nz.iso.datetime();\nz.iso.duration();",
+      "z.base64url();\nz.cuid();\nz.regex();\nz.emoji();\nz.nanoid();\nz.cuid2();\nz.ulid();\nz.cidrv4();\nz.cidrv6();",
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();"
+    ]
+  ],
+  [
+    "e164",
+    [
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();"
+    ]
+  ],
+  [
+    "jwt",
+    [
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();"
+    ]
+  ],
+  [
+    "stringFormat",
+    []
+  ],
+  [
+    "int",
+    [
+      "z.number().gt(5);\nz.number().gte(5); // alias .min(5)\nz.number().lt(5);\nz.number().lte(5); // alias .max(5)\n\nz.number().int(); // value must be an integer\n\nz.number().positive(); //     > 0\nz.number().nonnegative(); //  >= 0\nz.number().negative(); //     < 0\nz.number().nonpositive(); //  <= 0\n\nz.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)\n\nz.number().finite(); // value must be finite, not Infinity or -Infinity\nz.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER",
+      "z.object({ a: z.string() }).and(z.object({ b: z.number() })); // ❌\n\n// use z.intersection\nz.intersection(z.object({ a: z.string() }), z.object({ b: z.number() })); // ✅\n// or .extend() when possible\nz.object({ a: z.string() }).extend(z.object({ b: z.number() })); // ✅\n``` */}\n\n## `z.number()`\n\n### no infinite values\n\n`POSITIVE_INFINITY` and `NEGATIVE_INFINITY` are no longer considered valid values for `z.number()`.\n\n### `.safe()` no longer accepts floats\n\nIn Zod 3, `z.number().safe()` is deprecated. It now behaves identically to `.int()` (see below). Importantly, that means it no longer accepts floats.\n\n### `.int()` accepts safe integers only\n",
+      "z.int();     // restricts to safe integer range\nz.int32();   // restrict to int32 range"
+    ]
+  ],
+  [
+    "float32",
+    [
+      "// number\nz.number(); // => { type: \"number\" }\nz.float32(); // => { type: \"number\", exclusiveMinimum: ..., exclusiveMaximum: ... }\nz.float64(); // => { type: \"number\", exclusiveMinimum: ..., exclusiveMaximum: ... }\n\n// integer\nz.int(); // => { type: \"integer\" }\nz.int32(); // => { type: \"integer\", exclusiveMinimum: ..., exclusiveMaximum: ... }",
+      "z.int();      // [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER],\nz.float32();  // [-3.4028234663852886e38, 3.4028234663852886e38]\nz.float64();  // [-1.7976931348623157e308, 1.7976931348623157e308]\nz.int32();    // [-2147483648, 2147483647]\nz.uint32();   // [0, 4294967295]"
+    ]
+  ],
+  [
+    "float64",
+    [
+      "// number\nz.number(); // => { type: \"number\" }\nz.float32(); // => { type: \"number\", exclusiveMinimum: ..., exclusiveMaximum: ... }\nz.float64(); // => { type: \"number\", exclusiveMinimum: ..., exclusiveMaximum: ... }\n\n// integer\nz.int(); // => { type: \"integer\" }\nz.int32(); // => { type: \"integer\", exclusiveMinimum: ..., exclusiveMaximum: ... }",
+      "z.int();      // [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER],\nz.float32();  // [-3.4028234663852886e38, 3.4028234663852886e38]\nz.float64();  // [-1.7976931348623157e308, 1.7976931348623157e308]\nz.int32();    // [-2147483648, 2147483647]\nz.uint32();   // [0, 4294967295]"
+    ]
+  ],
+  [
+    "int32",
+    [
+      "z.int();     // restricts to safe integer range\nz.int32();   // restrict to int32 range",
+      "// number\nz.number(); // => { type: \"number\" }\nz.float32(); // => { type: \"number\", exclusiveMinimum: ..., exclusiveMaximum: ... }\nz.float64(); // => { type: \"number\", exclusiveMinimum: ..., exclusiveMaximum: ... }\n\n// integer\nz.int(); // => { type: \"integer\" }\nz.int32(); // => { type: \"integer\", exclusiveMinimum: ..., exclusiveMaximum: ... }",
+      "z.int();      // [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER],\nz.float32();  // [-3.4028234663852886e38, 3.4028234663852886e38]\nz.float64();  // [-1.7976931348623157e308, 1.7976931348623157e308]\nz.int32();    // [-2147483648, 2147483647]\nz.uint32();   // [0, 4294967295]"
+    ]
+  ],
+  [
+    "uint32",
+    [
+      "z.int();      // [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER],\nz.float32();  // [-3.4028234663852886e38, 3.4028234663852886e38]\nz.float64();  // [-1.7976931348623157e308, 1.7976931348623157e308]\nz.int32();    // [-2147483648, 2147483647]\nz.uint32();   // [0, 4294967295]"
+    ]
+  ],
+  [
+    "int64",
+    [
+      "z.int64({\n  error: (issue) => {\n    // override too_big error message\n    if (issue.code === \"too_big\") {\n      return { message: `Value must be <${issue.maximum}` };\n    }\n\n    //  defer to default\n    return undefined;\n  },\n});",
+      "z.bigint(); // ❌\nz.int64(); // ❌\nz.symbol(); // ❌\nz.void(); // ❌\nz.date(); // ❌\nz.map(); // ❌\nz.set(); // ❌\nz.transform(); // ❌\nz.nan(); // ❌\nz.custom(); // ❌",
+      "z.int64();    // [-9223372036854775808n, 9223372036854775807n]\nz.uint64();   // [0n, 18446744073709551615n]"
+    ]
+  ],
+  [
+    "uint64",
+    [
+      "z.int64();    // [-9223372036854775808n, 9223372036854775807n]\nz.uint64();   // [0n, 18446744073709551615n]"
+    ]
+  ],
+  [
+    "symbol",
+    [
+      "const Keys = z.union([z.string(), z.number(), z.symbol()]);\nconst AnyObject = z.record(Keys, z.unknown());\n// Record<string | number | symbol, unknown>",
+      "import * as z from \"zod/v3\";\n\n// primitive values\nz.string();\nz.number();\nz.bigint();\nz.boolean();\nz.date();\nz.symbol();\n\n// empty types\nz.undefined();\nz.null();\nz.void(); // accepts undefined\n\n// catch-all types\n// allows any value\nz.any();\nz.unknown();\n",
+      "import * as z from \"zod\";\n\n// primitive types\nz.string();\nz.number();\nz.bigint();\nz.boolean();\nz.symbol();\nz.undefined();\nz.null();"
+    ]
+  ],
+  [
+    "undefined",
+    [
+      "import * as z from \"zod\";\n\n// primitive types\nz.string();\nz.number();\nz.bigint();\nz.boolean();\nz.symbol();\nz.undefined();\nz.null();",
+      "import * as z from \"zod/v3\";\n\n// primitive values\nz.string();\nz.number();\nz.bigint();\nz.boolean();\nz.date();\nz.symbol();\n\n// empty types\nz.undefined();\nz.null();\nz.void(); // accepts undefined\n\n// catch-all types\n// allows any value\nz.any();\nz.unknown();\n",
+      "z.null();\nz.undefined();\nz.void(); // equivalent to z.undefined()"
+    ]
+  ],
+  [
+    "null",
+    [
+      "const jsonSchema = z.lazy(() => {\n  return z.union([\n    z.string(params), \n    z.number(), \n    z.boolean(), \n    z.null(), \n    z.array(jsonSchema), \n    z.record(z.string(), jsonSchema)\n  ]);\n});",
+      "const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);\ntype Literal = z.infer<typeof literalSchema>;\ntype Json = Literal | { [key: string]: Json } | Json[];\nconst jsonSchema: z.ZodType<Json> = z.lazy(() =>\n  z.union([literalSchema, z.array(jsonSchema), z.record(jsonSchema)])\n);\n\njsonSchema.parse(data);",
+      "z.null();\nz.undefined();\nz.void(); // equivalent to z.undefined()"
+    ]
+  ],
+  [
+    "any",
+    [
+      "// allows any values\nz.any(); // inferred type: `any`\nz.unknown(); // inferred type: `unknown`",
+      "import * as z from \"zod/v3\";\n\n// primitive values\nz.string();\nz.number();\nz.bigint();\nz.boolean();\nz.date();\nz.symbol();\n\n// empty types\nz.undefined();\nz.null();\nz.void(); // accepts undefined\n\n// catch-all types\n// allows any value\nz.any();\nz.unknown();\n",
+      "const mySchema = z.object({\n  a: z.any(),\n  b: z.unknown()\n});\n// Zod 3: { a?: any; b?: unknown };\n// Zod 4: { a: any; b: unknown };"
+    ]
+  ],
+  [
+    "unknown",
+    [
+      "import * as z from \"zod/v3\";\n\n// primitive values\nz.string();\nz.number();\nz.bigint();\nz.boolean();\nz.date();\nz.symbol();\n\n// empty types\nz.undefined();\nz.null();\nz.void(); // accepts undefined\n\n// catch-all types\n// allows any value\nz.any();\nz.unknown();\n",
+      "const mySchema = z.unknown().refine((val): val is string => {\n  return typeof val === \"string\"\n});\n\ntype MySchema = z.infer<typeof mySchema>; \n// Zod 3: `string`\n// Zod 4: still `unknown`",
+      "// allows any values\nz.any(); // inferred type: `any`\nz.unknown(); // inferred type: `unknown`"
+    ]
+  ],
+  [
+    "never",
+    [
+      "const Keys = z.enum([\"id\", \"name\", \"email\"]).or(z.never()); \nconst Person = z.partialRecord(Keys, z.string());\n// { id?: string; name?: string; email?: string }"
+    ]
+  ],
+  [
+    "void",
+    [
+      "z.null();\nz.undefined();\nz.void(); // equivalent to z.undefined()",
+      "z.bigint(); // ❌\nz.int64(); // ❌\nz.symbol(); // ❌\nz.void(); // ❌\nz.date(); // ❌\nz.map(); // ❌\nz.set(); // ❌\nz.transform(); // ❌\nz.nan(); // ❌\nz.custom(); // ❌",
+      "import * as z from \"zod/v3\";\n\n// primitive values\nz.string();\nz.number();\nz.bigint();\nz.boolean();\nz.date();\nz.symbol();\n\n// empty types\nz.undefined();\nz.null();\nz.void(); // accepts undefined\n\n// catch-all types\n// allows any value\nz.any();\nz.unknown();\n"
+    ]
+  ],
+  [
+    "array",
+    [
+      "const isValidId = (id: string): id is `${string}/${string}` =>\n  id.split(\"/\").length === 2;\n\nconst baseSchema = z.object({\n  id: z.string().refine(isValidId),\n});\n\ntype Input = z.input<typeof baseSchema> & {\n  children: Input[];\n};\n\ntype Output = z.output<typeof baseSchema> & {\n  children: Output[];\n};\n\nconst schema: z.ZodType<Output, z.ZodTypeDef, Input> = baseSchema.extend({\n  children: z.lazy(() => schema.array()),\n});",
+      "const Strings = z.array(z.string()).superRefine((val, ctx) => {\n  if (val.length > 3) {\n    ctx.addIssue({\n      code: z.ZodIssueCode.too_big,\n      maximum: 3,\n      type: \"array\",\n      inclusive: true,\n      message: \"Too many items 😡\",\n    });\n  }\n\n  if (val.length !== new Set(val).size) {\n    ctx.addIssue({\n      code: z.ZodIssueCode.custom,\n      message: `No duplicates allowed.`,\n    });\n  }\n});",
+      "const stringArray = z.string().array(); // string[]\n\n// equivalent to\nz.array(z.string());"
+    ]
+  ],
+  [
+    "keyof",
+    [
+      "const keySchema = Dog.keyof();\n// => ZodEnum<[\"name\", \"age\"]>",
+      "const keySchema = z.keyof(Dog);\n// => ZodEnum<[\"name\", \"age\"]>",
+      "const keySchema = Dog.keyof();\nkeySchema; // ZodEnum<[\"name\", \"age\"]>"
+    ]
+  ],
+  [
+    "object",
+    [
+      "const schema = z\n  .object({\n    first: z.string(),\n    second: z.number(),\n  })\n  .nullable()\n  .superRefine((arg, ctx): arg is { first: string; second: number } => {\n    if (!arg) {\n      ctx.addIssue({\n        code: z.ZodIssueCode.custom, // customize your issue\n        message: \"object should exist\",\n      });\n    }\n\n    return z.NEVER; // The return value is not used, but we need to return something to satisfy the typing\n  })\n  // here, TS knows that arg is not null\n  .refine((arg) => arg.first === \"bob\", \"`first` is not `bob`!\");",
+      "z.object({ a: z.string() }).and(z.object({ b: z.number() })); // ❌\n\n// use z.intersection\nz.intersection(z.object({ a: z.string() }), z.object({ b: z.number() })); // ✅\n// or .extend() when possible\nz.object({ a: z.string() }).extend(z.object({ b: z.number() })); // ✅\n``` */}\n\n## `z.number()`\n\n### no infinite values\n\n`POSITIVE_INFINITY` and `NEGATIVE_INFINITY` are no longer considered valid values for `z.number()`.\n\n### `.safe()` no longer accepts floats\n\nIn Zod 3, `z.number().safe()` is deprecated. It now behaves identically to `.int()` (see below). Importantly, that means it no longer accepts floats.\n\n### `.int()` accepts safe integers only\n",
+      "const DogWithBreed = z.object({\n  ...Dog.shape,\n  breed: z.string(),\n});"
+    ]
+  ],
+  [
+    "strictObject",
+    [
+      "const StrictDog = z.strictObject({\n  name: z.string(),\n});\n\nStrictDog.parse({ name: \"Yeller\", extraKey: true });\n// ❌ throws",
+      "import * as z from \"zod\";\n\nconst schema = z.strictObject({\n  username: z.string(),\n  favoriteNumbers: z.array(z.number()),\n});",
+      "// Zod 3\nz.object({ name: z.string() }).strict();\nz.object({ name: z.string() }).passthrough();\n\n// Zod 4\nz.strictObject({ name: z.string() });\nz.looseObject({ name: z.string() });"
+    ]
+  ],
+  [
+    "looseObject",
+    [
+      "const LooseDog = z.looseObject({\n  name: z.string(),\n});\n\nDog.parse({ name: \"Yeller\", extraKey: true });\n// => { name: \"Yeller\", extraKey: true }",
+      "// Zod 3\nz.object({ name: z.string() }).strict();\nz.object({ name: z.string() }).passthrough();\n\n// Zod 4\nz.strictObject({ name: z.string() });\nz.looseObject({ name: z.string() });"
+    ]
+  ],
+  [
+    "union",
+    [
+      "const stringOrNumber = z.string().or(z.number());\n``` */}\n\n{/* **Optional string validation:**\n\nTo validate an optional form input, you can union the desired string validation with an empty string [literal](#literals).\n\nThis example validates an input that is optional but needs to contain a [valid URL](#strings):\n\n```ts\nconst optionalUrl = z.union([z.string().url().nullish(), z.literal(\"\")]);\n\nconsole.log(optionalUrl.safeParse(undefined).success); // true\nconsole.log(optionalUrl.safeParse(null).success); // true\nconsole.log(optionalUrl.safeParse(\"\").success); // true\nconsole.log(optionalUrl.safeParse(\"https://zod.dev\").success); // true\nconsole.log(optionalUrl.safeParse(\"not a valid url\").success); // false",
+      "const optionalUrl = z.union([z.string().url().nullish(), z.literal(\"\")]);\n\nconsole.log(optionalUrl.safeParse(undefined).success); // true\nconsole.log(optionalUrl.safeParse(null).success); // true\nconsole.log(optionalUrl.safeParse(\"\").success); // true\nconsole.log(optionalUrl.safeParse(\"https://zod.dev\").success); // true\nconsole.log(optionalUrl.safeParse(\"not a valid url\").success); // false",
+      "const stringOrNumber = z.string().or(z.number()); // string | number\n\n// equivalent to\nz.union([z.string(), z.number()]);"
+    ]
+  ],
+  [
+    "discriminatedUnion",
+    [
+      "const MyResult = z.discriminatedUnion(\"status\", [\n  // simple literal\n  z.object({ status: z.literal(\"aaa\"), data: z.string() }),\n  // union discriminator\n  z.object({ status: z.union([z.literal(\"bbb\"), z.literal(\"ccc\")]) }),\n  // pipe discriminator\n  z.object({ status: z.literal(\"fail\").transform(val => val.toUpperCase()) }),\n]);",
+      "const BaseError = z.object({ status: z.literal(\"failed\"), message: z.string() });\n\nconst MyResult = z.discriminatedUnion(\"status\", [\n  z.object({ status: z.literal(\"success\"), data: z.string() }),\n  z.discriminatedUnion(\"code\", [\n    BaseError.extend({ code: z.literal(400) }),\n    BaseError.extend({ code: z.literal(401) }),\n    BaseError.extend({ code: z.literal(500) })\n  ])\n]);",
+      "const MyResult = z.discriminatedUnion(\"status\", [\n  z.object({ status: z.literal(\"success\"), data: z.string() }),\n  z.object({ status: z.literal(\"failed\"), error: z.string() }),\n]);"
+    ]
+  ],
+  [
+    "intersection",
+    [
+      "const Person = z.object({ name: z.string() });\ntype Person = z.infer<typeof Person>;\n\nconst Employee = z.object({ role: z.string() });\ntype Employee = z.infer<typeof Employee>;\n\nconst EmployedPerson = z.intersection(Person, Employee);\ntype EmployedPerson = z.infer<typeof EmployedPerson>;\n// Person & Employee",
+      "z.object({ a: z.string() }).and(z.object({ b: z.number() })); // ❌\n\n// use z.intersection\nz.intersection(z.object({ a: z.string() }), z.object({ b: z.number() })); // ✅\n// or .extend() when possible\nz.object({ a: z.string() }).extend(z.object({ b: z.number() })); // ✅\n``` */}\n\n## `z.number()`\n\n### no infinite values\n\n`POSITIVE_INFINITY` and `NEGATIVE_INFINITY` are no longer considered valid values for `z.number()`.\n\n### `.safe()` no longer accepts floats\n\nIn Zod 3, `z.number().safe()` is deprecated. It now behaves identically to `.int()` (see below). Importantly, that means it no longer accepts floats.\n\n### `.int()` accepts safe integers only\n",
+      "const Person = z.object({\n  name: z.string(),\n});\n\nconst Employee = z.object({\n  role: z.string(),\n});\n\nconst EmployedPerson = z.intersection(Person, Employee);"
+    ]
+  ],
+  [
+    "tuple",
+    [
+      "const athleteSchema = z.tuple([\n  z.string(), // name\n  z.number(), // jersey number\n  z.object({\n    pointsScored: z.number(),\n  }), // statistics\n]);\n\ntype Athlete = z.infer<typeof athleteSchema>;\n// type Athlete = [string, number, { pointsScored: number }]",
+      "z.tuple([z.string()], z.string());\n// => [string, ...string[]]",
+      "z.array(z.string()).readonly();\n// readonly string[]\n\nz.tuple([z.string(), z.number()]).readonly();\n// readonly [string, number]\n\nz.map(z.string(), z.date()).readonly();\n// ReadonlyMap<string, Date>\n\nz.set(z.string()).readonly();\n// ReadonlySet<string>"
+    ]
+  ],
+  [
+    "record",
+    [
+      "const IdCache = z.record(z.string(), z.string());\ntype IdCache = z.infer<typeof IdCache>; // Record<string, string>\n\nIdCache.parse({\n  carlotta: \"77d2586b-9e8e-4ecf-8b21-ea7e0530eadd\",\n  jimmie: \"77d2586b-9e8e-4ecf-8b21-ea7e0530eadd\",\n});",
+      "const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);\ntype Literal = z.infer<typeof literalSchema>;\ntype Json = Literal | { [key: string]: Json } | Json[];\nconst jsonSchema: z.ZodType<Json> = z.lazy(() =>\n  z.union([literalSchema, z.array(jsonSchema), z.record(jsonSchema)])\n);\n\njsonSchema.parse(data);",
+      "const myRecord = z.record(z.enum([\"a\", \"b\", \"c\"]), z.number());\n// { a: number; b: number; c: number; }"
+    ]
+  ],
+  [
+    "partialRecord",
+    [
+      "const Keys = z.enum([\"id\", \"name\", \"email\"]).or(z.never()); \nconst Person = z.partialRecord(Keys, z.string());\n// { id?: string; name?: string; email?: string }",
+      "const myRecord = z.partialRecord(z.enum([\"a\", \"b\", \"c\"]), z.number());\n// { a?: number; b?: number; c?: number; }"
+    ]
+  ],
+  [
+    "map",
+    [
+      "z.bigint(); // ❌\nz.int64(); // ❌\nz.symbol(); // ❌\nz.void(); // ❌\nz.date(); // ❌\nz.map(); // ❌\nz.set(); // ❌\nz.transform(); // ❌\nz.nan(); // ❌\nz.custom(); // ❌",
+      "const stringNumberMap = z.map(z.string(), z.number());\n\ntype StringNumberMap = z.infer<typeof stringNumberMap>;\n// type StringNumberMap = Map<string, number>",
+      "z.array(z.string()).readonly();\n// readonly string[]\n\nz.tuple([z.string(), z.number()]).readonly();\n// readonly [string, number]\n\nz.map(z.string(), z.date()).readonly();\n// ReadonlyMap<string, Date>\n\nz.set(z.string()).readonly();\n// ReadonlySet<string>"
+    ]
+  ],
+  [
+    "set",
+    [
+      "z.string(\"Bad!\");\nz.string().min(5, \"Too short!\");\nz.uuid(\"Bad UUID!\");\nz.iso.date(\"Bad date!\");\nz.array(z.string(), \"Not an array!\");\nz.array(z.string()).min(5, \"Too few items!\");\nz.set(z.string(), \"Bad set!\");",
+      "z.array(z.string()).readonly();\n// readonly string[]\n\nz.tuple([z.string(), z.number()]).readonly();\n// readonly [string, number]\n\nz.map(z.string(), z.date()).readonly();\n// ReadonlyMap<string, Date>\n\nz.set(z.string()).readonly();\n// ReadonlySet<string>",
+      "const numberSet = z.set(z.number());\ntype NumberSet = z.infer<typeof numberSet>;\n// type NumberSet = Set<number>"
+    ]
+  ],
+  [
+    "enum",
+    [
+      "z.templateLiteral([ \"hi there\" ]);\n// `hi there`\n\nz.templateLiteral([ \"email: \", z.string() ]);\n// `email: ${string}`\n\nz.templateLiteral([ \"high\", z.literal(5) ]);\n// `high5`\n\nz.templateLiteral([ z.nullable(z.literal(\"grassy\")) ]);\n// `grassy` | `null`\n\nz.templateLiteral([ z.number(), z.enum([\"px\", \"em\", \"rem\"]) ]);\n// `${number}px` | `${number}em` | `${number}rem`",
+      "const hello = z.templateLiteral([\"hello, \", z.string()]);\n// `hello, ${string}`\n\nconst cssUnits = z.enum([\"px\", \"em\", \"rem\", \"%\"]);\nconst css = z.templateLiteral([z.number(), cssUnits]);\n// `${number}px` | `${number}em` | `${number}rem` | `${number}%`\n\nconst email = z.templateLiteral([\n  z.string().min(1),\n  \"@\",\n  z.string().max(64),\n]);\n// `${string}@${string}` (the min/max refinements are enforced!)",
+      "const fish = [\"Salmon\", \"Tuna\", \"Trout\"];\nconst FishEnum = z.enum(fish);"
+    ]
+  ],
+  [
+    "nativeEnum",
+    [
+      "enum Fruits {\n  Apple,\n  Banana,\n}\n\nconst FruitEnum = z.nativeEnum(Fruits);\ntype FruitEnum = z.infer<typeof FruitEnum>; // Fruits\n\nFruitEnum.parse(Fruits.Apple); // passes\nFruitEnum.parse(Fruits.Banana); // passes\nFruitEnum.parse(0); // passes\nFruitEnum.parse(1); // passes\nFruitEnum.parse(3); // fails",
+      "enum Fruits {\n  Apple = \"apple\",\n  Banana = \"banana\",\n  Cantaloupe, // you can mix numerical and string enums\n}\n\nconst FruitEnum = z.nativeEnum(Fruits);\ntype FruitEnum = z.infer<typeof FruitEnum>; // Fruits\n\nFruitEnum.parse(Fruits.Apple); // passes\nFruitEnum.parse(Fruits.Cantaloupe); // passes\nFruitEnum.parse(\"apple\"); // passes\nFruitEnum.parse(\"banana\"); // passes\nFruitEnum.parse(0); // passes\nFruitEnum.parse(\"Cantaloupe\"); // fails",
+      "const Fruits = {\n  Apple: \"apple\",\n  Banana: \"banana\",\n  Cantaloupe: 3,\n} as const;\n\nconst FruitEnum = z.nativeEnum(Fruits);\ntype FruitEnum = z.infer<typeof FruitEnum>; // \"apple\" | \"banana\" | 3\n\nFruitEnum.parse(\"apple\"); // passes\nFruitEnum.parse(\"banana\"); // passes\nFruitEnum.parse(3); // passes\nFruitEnum.parse(\"Cantaloupe\"); // fails"
+    ]
+  ],
+  [
+    "literal",
+    [
+      "const stringOrNumber = z.string().or(z.number());\n``` */}\n\n{/* **Optional string validation:**\n\nTo validate an optional form input, you can union the desired string validation with an empty string [literal](#literals).\n\nThis example validates an input that is optional but needs to contain a [valid URL](#strings):\n\n```ts\nconst optionalUrl = z.union([z.string().url().nullish(), z.literal(\"\")]);\n\nconsole.log(optionalUrl.safeParse(undefined).success); // true\nconsole.log(optionalUrl.safeParse(null).success); // true\nconsole.log(optionalUrl.safeParse(\"\").success); // true\nconsole.log(optionalUrl.safeParse(\"https://zod.dev\").success); // true\nconsole.log(optionalUrl.safeParse(\"not a valid url\").success); // false",
+      "const optionalUrl = z.union([z.string().url().nullish(), z.literal(\"\")]);\n\nconsole.log(optionalUrl.safeParse(undefined).success); // true\nconsole.log(optionalUrl.safeParse(null).success); // true\nconsole.log(optionalUrl.safeParse(\"\").success); // true\nconsole.log(optionalUrl.safeParse(\"https://zod.dev\").success); // true\nconsole.log(optionalUrl.safeParse(\"not a valid url\").success); // false",
+      "const colors = z.literal([\"red\", \"green\", \"blue\"]);\n\ncolors.parse(\"green\"); // ✅\ncolors.parse(\"yellow\"); // ❌"
+    ]
+  ],
+  [
+    "file",
+    [
+      "z.file();\n// => { type: \"string\", format: \"binary\", contentEncoding: \"binary\" }",
+      "z.file().min(1).max(1024 * 1024).mime(\"image/png\");\n// => {\n//   type: \"string\",\n//   format: \"binary\",\n//   contentEncoding: \"binary\",\n//   contentMediaType: \"image/png\",\n//   minLength: 1,\n//   maxLength: 1048576,\n// }",
+      "const fileSchema = z.file();\n\nfileSchema.min(10_000); // minimum .size (bytes)\nfileSchema.max(1_000_000); // maximum .size (bytes)\nfileSchema.mime([\"image/png\"]); // MIME type"
+    ]
+  ],
+  [
+    "transform",
+    [
+      "const MyResult = z.discriminatedUnion(\"status\", [\n  // simple literal\n  z.object({ status: z.literal(\"aaa\"), data: z.string() }),\n  // union discriminator\n  z.object({ status: z.union([z.literal(\"bbb\"), z.literal(\"ccc\")]) }),\n  // pipe discriminator\n  z.object({ status: z.literal(\"fail\").transform(val => val.toUpperCase()) }),\n]);",
+      "z.string()\n  .transform((val) => val.length)\n  .pipe(z.number().min(5));",
+      "const coercedInt = z.transform((val, ctx) => {\n  try {\n    const parsed = Number.parseInt(String(val));\n    return parsed;\n  } catch (e) {\n    ctx.issues.push({\n      code: \"custom\",\n      message: \"Not a number\",\n      input: val,\n    });\n\n    // this is a special constant with type `never`\n    // returning it lets you exit the transform without impacting the inferred return type\n    return z.NEVER;\n  }\n});"
+    ]
+  ],
+  [
+    "optional",
+    [
+      "  // all properties are required by default\n  const Person = z.object({\n    name: z.string(),\n    age: z.number(),\n  });\n\n  type Person = z.infer<typeof Person>;\n  // => { name: string; age: number; }\n  ```\nBy default, all properties are required. To make certain properties optional:\n\n<Tabs groupId=\"lib\" items={[\"Zod\", \"Zod Mini\"]}>\n<Tab value=\"Zod\">\n```ts z.object\nconst Dog = z.object({\n  name: z.string(),\n  age: z.number().optional(),\n});\n\nDog.parse({ name: \"Yeller\" }); // ✅",
+      "import * as z from \"zod\";\n\nconst mySchema = z.string();\n\n// parsing\nmySchema.parse(data);\nmySchema.safeParse(data);\nmySchema.parseAsync(data);\nmySchema.safeParseAsync(data);\n\n\n// refinements\nmySchema.refine(refinementFunc);\nmySchema.superRefine(refinementFunc); // deprecated, use `.check()`\nmySchema.overwrite(overwriteFunc);\n\n// wrappers\nmySchema.optional();\nmySchema.nonoptional();\nmySchema.nullable();",
+      "z.optional(z.string());\n// => { type: \"string\" }"
+    ]
+  ],
+  [
+    "nullable",
+    [
+      "const schema = z\n  .object({\n    first: z.string(),\n    second: z.number(),\n  })\n  .nullable()\n  .superRefine((arg, ctx): arg is { first: string; second: number } => {\n    if (!arg) {\n      ctx.addIssue({\n        code: z.ZodIssueCode.custom, // customize your issue\n        message: \"object should exist\",\n      });\n    }\n\n    return z.NEVER; // The return value is not used, but we need to return something to satisfy the typing\n  })\n  // here, TS knows that arg is not null\n  .refine((arg) => arg.first === \"bob\", \"`first` is not `bob`!\");",
+      "import * as z from \"zod\";\n\nconst mySchema = z.string();\n\n// parsing\nmySchema.parse(data);\nmySchema.safeParse(data);\nmySchema.parseAsync(data);\nmySchema.safeParseAsync(data);\n\n\n// refinements\nmySchema.refine(refinementFunc);\nmySchema.superRefine(refinementFunc); // deprecated, use `.check()`\nmySchema.overwrite(overwriteFunc);\n\n// wrappers\nmySchema.optional();\nmySchema.nonoptional();\nmySchema.nullable();",
+      "// regular Zod\nconst mySchema = z.string().optional().nullable();"
+    ]
+  ],
+  [
+    "nullish",
+    [
+      "const stringOrNumber = z.string().or(z.number());\n``` */}\n\n{/* **Optional string validation:**\n\nTo validate an optional form input, you can union the desired string validation with an empty string [literal](#literals).\n\nThis example validates an input that is optional but needs to contain a [valid URL](#strings):\n\n```ts\nconst optionalUrl = z.union([z.string().url().nullish(), z.literal(\"\")]);\n\nconsole.log(optionalUrl.safeParse(undefined).success); // true\nconsole.log(optionalUrl.safeParse(null).success); // true\nconsole.log(optionalUrl.safeParse(\"\").success); // true\nconsole.log(optionalUrl.safeParse(\"https://zod.dev\").success); // true\nconsole.log(optionalUrl.safeParse(\"not a valid url\").success); // false",
+      "const optionalUrl = z.union([z.string().url().nullish(), z.literal(\"\")]);\n\nconsole.log(optionalUrl.safeParse(undefined).success); // true\nconsole.log(optionalUrl.safeParse(null).success); // true\nconsole.log(optionalUrl.safeParse(\"\").success); // true\nconsole.log(optionalUrl.safeParse(\"https://zod.dev\").success); // true\nconsole.log(optionalUrl.safeParse(\"not a valid url\").success); // false",
+      "const nullishString = z.string().nullish(); // string | null | undefined\n\n// equivalent to\nz.string().nullable().optional();"
+    ]
+  ],
+  [
+    "prefault",
+    [
+      "z.string().transform(val => val.length).prefault(\"tuna\");\nschema.parse(undefined); // => 4",
+      "const a = z.string().trim().toUpperCase().prefault(\"  tuna  \");\na.parse(undefined); // => \"TUNA\"\n\nconst b = z.string().trim().toUpperCase().default(\"  tuna  \");\nb.parse(undefined); // => \"  tuna  \"",
+      "// Zod 3\nconst schema = z.string()\n  .transform(val => val.length)\n  .prefault(\"tuna\");\nschema.parse(undefined); // => 4"
+    ]
+  ],
+  [
+    "nonoptional",
+    [
+      "import * as z from \"zod\";\n\nconst mySchema = z.string();\n\n// parsing\nmySchema.parse(data);\nmySchema.safeParse(data);\nmySchema.parseAsync(data);\nmySchema.safeParseAsync(data);\n\n\n// refinements\nmySchema.refine(refinementFunc);\nmySchema.superRefine(refinementFunc); // deprecated, use `.check()`\nmySchema.overwrite(overwriteFunc);\n\n// wrappers\nmySchema.optional();\nmySchema.nonoptional();\nmySchema.nullable();"
+    ]
+  ],
+  [
+    "success",
+    []
+  ],
+  [
+    "catch",
+    [
+      "try {\n  Player.parse({ username: 42, xp: \"100\" });\n} catch(error){\n  if(error instanceof z.ZodError){\n    error.issues; \n    /* [\n      {\n        expected: 'string',\n        code: 'invalid_type',\n        path: [ 'username' ],\n        message: 'Invalid input: expected string'\n      },\n      {\n        expected: 'number',\n        code: 'invalid_type',\n        path: [ 'xp' ],\n        message: 'Invalid input: expected number'\n      }\n    ] */\n  }",
+      "const numberWithCatch = z.number().catch(42);\n\nnumberWithCatch.parse(5); // => 5\nnumberWithCatch.parse(\"tuna\"); // => 42",
+      "const numberWithRandomCatch = z.number().catch((ctx) => {\n  ctx.error; // the caught ZodError\n  return Math.random();\n});\n\nnumberWithRandomCatch.parse(\"sup\"); // => 0.4413456736055323\nnumberWithRandomCatch.parse(\"sup\"); // => 0.1871840107401901\nnumberWithRandomCatch.parse(\"sup\"); // => 0.7223408162401552"
+    ]
+  ],
+  [
+    "nan",
+    [
+      "z.nan().parse(NaN);              // ✅\nz.nan().parse(\"anything else\");  // ❌",
+      "z.bigint(); // ❌\nz.int64(); // ❌\nz.symbol(); // ❌\nz.void(); // ❌\nz.date(); // ❌\nz.map(); // ❌\nz.set(); // ❌\nz.transform(); // ❌\nz.nan(); // ❌\nz.custom(); // ❌",
+      "const isNaN = z.nan({\n  required_error: \"isNaN is required\",\n  invalid_type_error: \"isNaN must be 'not a number'\",\n});"
+    ]
+  ],
+  [
+    "pipe",
+    [
+      "const idToUser = z.pipe(\n  z.string(),\n  z.transform(async (id) => {\n    // fetch user from database\n    return db.getUserById(id); \n  }));\n\nconst user = await idToUser.parse(\"abc123\");",
+      "const mySchema = z.string().transform(val => val.length).pipe(z.number());\n// ZodPipe\n\nconst jsonSchema = z.toJSONSchema(mySchema); ",
+      "z.string()\n  .transform((val) => val.length)\n  .pipe(z.number().min(5));"
+    ]
+  ],
+  [
+    "readonly",
+    [
+      "const schema = z.object({ name: z.string() }).readonly();\ntype schema = z.infer<typeof schema>;\n// Readonly<{name: string}>\n\nconst result = schema.parse({ name: \"fido\" });\nresult.name = \"simba\"; // error",
+      "const ReadonlyUser = z.object({ name: z.string() }).readonly();\ntype ReadonlyUser = z.infer<typeof ReadonlyUser>;\n// Readonly<{ name: string }>",
+      "z.array(z.string()).readonly();\n// readonly string[]\n\nz.tuple([z.string(), z.number()]).readonly();\n// readonly [string, number]\n\nz.map(z.string(), z.date()).readonly();\n// ReadonlyMap<string, Date>\n\nz.set(z.string()).readonly();\n// ReadonlySet<string>"
+    ]
+  ],
+  [
+    "templateLiteral",
+    [
+      "const schema = z.templateLiteral([ \"hello, \", z.string(), \"!\" ]);\n// `hello, ${string}!`",
+      "z.templateLiteral([ \"hi there\" ]);\n// `hi there`\n\nz.templateLiteral([ \"email: \", z.string() ]);\n// `email: ${string}`\n\nz.templateLiteral([ \"high\", z.literal(5) ]);\n// `high5`\n\nz.templateLiteral([ z.nullable(z.literal(\"grassy\")) ]);\n// `grassy` | `null`\n\nz.templateLiteral([ z.number(), z.enum([\"px\", \"em\", \"rem\"]) ]);\n// `${number}px` | `${number}em` | `${number}rem`",
+      "const hello = z.templateLiteral([\"hello, \", z.string()]);\n// `hello, ${string}`\n\nconst cssUnits = z.enum([\"px\", \"em\", \"rem\", \"%\"]);\nconst css = z.templateLiteral([z.number(), cssUnits]);\n// `${number}px` | `${number}em` | `${number}rem` | `${number}%`\n\nconst email = z.templateLiteral([\n  z.string().min(1),\n  \"@\",\n  z.string().max(64),\n]);\n// `${string}@${string}` (the min/max refinements are enforced!)"
+    ]
+  ],
+  [
+    "lazy",
+    [
+      "const baseCategorySchema = z.object({\n  name: z.string(),\n});\n\ntype Category = z.infer<typeof baseCategorySchema> & {\n  subcategories: Category[];\n};\n\nconst categorySchema: z.ZodType<Category> = baseCategorySchema.extend({\n  subcategories: z.lazy(() => categorySchema.array()),\n});\n\ncategorySchema.parse({\n  name: \"People\",\n  subcategories: [\n    {\n      name: \"Politicians\",\n      subcategories: [\n        {\n          name: \"Presidents\",",
+      "const isValidId = (id: string): id is `${string}/${string}` =>\n  id.split(\"/\").length === 2;\n\nconst baseSchema = z.object({\n  id: z.string().refine(isValidId),\n});\n\ntype Input = z.input<typeof baseSchema> & {\n  children: Input[];\n};\n\ntype Output = z.output<typeof baseSchema> & {\n  children: Output[];\n};\n\nconst schema: z.ZodType<Output, z.ZodTypeDef, Input> = baseSchema.extend({\n  children: z.lazy(() => schema.array()),\n});",
+      "const jsonSchema = z.lazy(() => {\n  return z.union([\n    z.string(params), \n    z.number(), \n    z.boolean(), \n    z.null(), \n    z.array(jsonSchema), \n    z.record(z.string(), jsonSchema)\n  ]);\n});"
+    ]
+  ],
+  [
+    "promise",
+    [
+      "const stringPromise = z.string().promise(); // Promise<string>\n\n// equivalent to\nz.promise(z.string());"
+    ]
+  ],
+  [
+    "check",
+    [
+      "const schema = z\n  .object({\n    password: z.string().min(8),\n    confirmPassword: z.string(),\n    anotherField: z.string(),\n  })\n  .check(z.refine((data) => data.password === data.confirmPassword, {\n    message: \"Passwords do not match\",\n    path: [\"confirmPassword\"],\n    when(payload) { // [!code ++]\n      // no issues with `password` or `confirmPassword` // [!code ++]\n      return payload.issues.every((iss) => { // [!code ++]\n        const firstPathEl = iss.path?.[0]; // [!code ++]\n        return firstPathEl !== \"password\" && firstPathEl !== \"confirmPassword\"; // [!code ++]\n      }); // [!code ++]\n    },  // [!code ++]\n  }));\n\nschema.parse({\n  password: \"asdf\",",
+      "const UniqueStringArray = z.array(z.string()).check((ctx) => {\n  if (ctx.value.length > 3) {\n    ctx.issues.push({\n      code: \"too_big\",\n      maximum: 3,\n      origin: \"array\",\n      inclusive: true,\n      message: \"Too many items 😡\",\n      input: ctx.value\n    });\n  }\n\n  if (ctx.value.length !== new Set(ctx.value).size) {\n    ctx.issues.push({\n      code: \"custom\",\n      message: `No duplicates allowed.`,\n      input: ctx.value\n    });\n  }\n});",
+      "const myString = z.string().check(\n  z.refine((val) => val.length > 8, { error: \"Too short!\" })\n);"
+    ]
+  ],
+  [
+    "custom",
+    [
+      "z.bigint(); // ❌\nz.int64(); // ❌\nz.symbol(); // ❌\nz.void(); // ❌\nz.date(); // ❌\nz.map(); // ❌\nz.set(); // ❌\nz.transform(); // ❌\nz.nan(); // ❌\nz.custom(); // ❌"
+    ]
+  ],
+  [
+    "refine",
+    [
+      "const isValidId = (id: string): id is `${string}/${string}` =>\n  id.split(\"/\").length === 2;\n\nconst baseSchema = z.object({\n  id: z.string().refine(isValidId),\n});\n\ntype Input = z.input<typeof baseSchema> & {\n  children: Input[];\n};\n\ntype Output = z.output<typeof baseSchema> & {\n  children: Output[];\n};\n\nconst schema: z.ZodType<Output, z.ZodTypeDef, Input> = baseSchema.extend({\n  children: z.lazy(() => schema.array()),\n});",
+      "const schema = z\n  .object({\n    first: z.string(),\n    second: z.number(),\n  })\n  .nullable()\n  .superRefine((arg, ctx): arg is { first: string; second: number } => {\n    if (!arg) {\n      ctx.addIssue({\n        code: z.ZodIssueCode.custom, // customize your issue\n        message: \"object should exist\",\n      });\n    }\n\n    return z.NEVER; // The return value is not used, but we need to return something to satisfy the typing\n  })\n  // here, TS knows that arg is not null\n  .refine((arg) => arg.first === \"bob\", \"`first` is not `bob`!\");",
+      "z.string()\n  .refine(val => val.includes(\"@\"))\n  .min(5); // ✅"
+    ]
+  ],
+  [
+    "superRefine",
+    [
+      "const schema = z\n  .object({\n    first: z.string(),\n    second: z.number(),\n  })\n  .nullable()\n  .superRefine((arg, ctx): arg is { first: string; second: number } => {\n    if (!arg) {\n      ctx.addIssue({\n        code: z.ZodIssueCode.custom, // customize your issue\n        message: \"object should exist\",\n      });\n    }\n\n    return z.NEVER; // The return value is not used, but we need to return something to satisfy the typing\n  })\n  // here, TS knows that arg is not null\n  .refine((arg) => arg.first === \"bob\", \"`first` is not `bob`!\");",
+      "import * as z from \"zod\";\n\nconst mySchema = z.string();\n\n// parsing\nmySchema.parse(data);\nmySchema.safeParse(data);\nmySchema.parseAsync(data);\nmySchema.safeParseAsync(data);\n\n\n// refinements\nmySchema.refine(refinementFunc);\nmySchema.superRefine(refinementFunc); // deprecated, use `.check()`\nmySchema.overwrite(overwriteFunc);\n\n// wrappers\nmySchema.optional();\nmySchema.nonoptional();\nmySchema.nullable();",
+      "z.string().superRefine((val, ctx) => {\n  ctx.path; // ❌ no longer available\n});"
+    ]
+  ],
+  [
+    "instanceof",
+    [
+      "class Test {\n  name: string;\n}\n\nconst TestSchema = z.instanceof(Test);\n\nTestSchema.parse(new Test()); // ✅\nTestSchema.parse(\"whatever\"); // ❌",
+      "const myUnion = z.discriminatedUnion(\"status\", [\n  z.object({ status: z.literal(\"success\"), data: z.string() }),\n  z.object({ status: z.literal(\"failed\"), error: z.instanceof(Error) }),\n]);\n\nmyUnion.parse({ status: \"success\", data: \"yippie ki yay\" });",
+      "class Test {\n  name: string;\n}\n\nconst TestSchema = z.instanceof(Test);\n\nconst blob: any = \"whatever\";\nTestSchema.parse(new Test()); // passes\nTestSchema.parse(blob); // throws"
+    ]
+  ],
+  [
+    "json",
+    []
+  ],
+  [
+    "preprocess",
+    [
+      "const coercedInt = z.preprocess((val) => {\n  if (typeof val === \"string\") {\n    return Number.parseInt(val);\n  }\n  return val;\n}, z.int());"
+    ]
+  ],
+  [
+    "lt",
+    [
+      "z.number().gt(5);\nz.number().gte(5); // alias .min(5)\nz.number().lt(5);\nz.number().lte(5); // alias .max(5)\n\nz.number().int(); // value must be an integer\n\nz.number().positive(); //     > 0\nz.number().nonnegative(); //  >= 0\nz.number().negative(); //     < 0\nz.number().nonpositive(); //  <= 0\n\nz.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)\n\nz.number().finite(); // value must be finite, not Infinity or -Infinity\nz.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER",
+      "z.bigint().gt(5n);\nz.bigint().gte(5n); // alias `.min(5n)`\nz.bigint().lt(5n);\nz.bigint().lte(5n); // alias `.max(5n)`\n\nz.bigint().positive(); // > 0n\nz.bigint().nonnegative(); // >= 0n\nz.bigint().negative(); // < 0n\nz.bigint().nonpositive(); // <= 0n\n\nz.bigint().multipleOf(5n); // Evenly divisible by 5n.",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "lte",
+    [
+      "z.number().gt(5);\nz.number().gte(5); // alias .min(5)\nz.number().lt(5);\nz.number().lte(5); // alias .max(5)\n\nz.number().int(); // value must be an integer\n\nz.number().positive(); //     > 0\nz.number().nonnegative(); //  >= 0\nz.number().negative(); //     < 0\nz.number().nonpositive(); //  <= 0\n\nz.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)\n\nz.number().finite(); // value must be finite, not Infinity or -Infinity\nz.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER",
+      "z.bigint().gt(5n);\nz.bigint().gte(5n); // alias `.min(5n)`\nz.bigint().lt(5n);\nz.bigint().lte(5n); // alias `.max(5n)`\n\nz.bigint().positive(); // > 0n\nz.bigint().nonnegative(); // >= 0n\nz.bigint().negative(); // < 0n\nz.bigint().nonpositive(); // <= 0n\n\nz.bigint().multipleOf(5n); // Evenly divisible by 5n.",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "gt",
+    [
+      "z.number().gt(5);\nz.number().gte(5); // alias .min(5)\nz.number().lt(5);\nz.number().lte(5); // alias .max(5)\n\nz.number().int(); // value must be an integer\n\nz.number().positive(); //     > 0\nz.number().nonnegative(); //  >= 0\nz.number().negative(); //     < 0\nz.number().nonpositive(); //  <= 0\n\nz.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)\n\nz.number().finite(); // value must be finite, not Infinity or -Infinity\nz.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER",
+      "z.bigint().gt(5n);\nz.bigint().gte(5n); // alias `.min(5n)`\nz.bigint().lt(5n);\nz.bigint().lte(5n); // alias `.max(5n)`\n\nz.bigint().positive(); // > 0n\nz.bigint().nonnegative(); // >= 0n\nz.bigint().negative(); // < 0n\nz.bigint().nonpositive(); // <= 0n\n\nz.bigint().multipleOf(5n); // Evenly divisible by 5n.",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "gte",
+    [
+      "z.number().gt(5);\nz.number().gte(5); // alias .min(5)\nz.number().lt(5);\nz.number().lte(5); // alias .max(5)\n\nz.number().int(); // value must be an integer\n\nz.number().positive(); //     > 0\nz.number().nonnegative(); //  >= 0\nz.number().negative(); //     < 0\nz.number().nonpositive(); //  <= 0\n\nz.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)\n\nz.number().finite(); // value must be finite, not Infinity or -Infinity\nz.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER",
+      "z.bigint().gt(5n);\nz.bigint().gte(5n); // alias `.min(5n)`\nz.bigint().lt(5n);\nz.bigint().lte(5n); // alias `.max(5n)`\n\nz.bigint().positive(); // > 0n\nz.bigint().nonnegative(); // >= 0n\nz.bigint().negative(); // < 0n\nz.bigint().nonpositive(); // <= 0n\n\nz.bigint().multipleOf(5n); // Evenly divisible by 5n.",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "positive",
+    [
+      "z.number().gt(5);\nz.number().gte(5); // alias .min(5)\nz.number().lt(5);\nz.number().lte(5); // alias .max(5)\n\nz.number().int(); // value must be an integer\n\nz.number().positive(); //     > 0\nz.number().nonnegative(); //  >= 0\nz.number().negative(); //     < 0\nz.number().nonpositive(); //  <= 0\n\nz.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)\n\nz.number().finite(); // value must be finite, not Infinity or -Infinity\nz.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);",
+      "import * as z from \"zod\";\n\nconst schema = z.object({\n  name: z.string(),\n  age: z.number().int().positive(),\n  email: z.string().email(),\n});"
+    ]
+  ],
+  [
+    "negative",
+    [
+      "z.number().gt(5);\nz.number().gte(5); // alias .min(5)\nz.number().lt(5);\nz.number().lte(5); // alias .max(5)\n\nz.number().int(); // value must be an integer\n\nz.number().positive(); //     > 0\nz.number().nonnegative(); //  >= 0\nz.number().negative(); //     < 0\nz.number().nonpositive(); //  <= 0\n\nz.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)\n\nz.number().finite(); // value must be finite, not Infinity or -Infinity\nz.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER",
+      "z.bigint().gt(5n);\nz.bigint().gte(5n); // alias `.min(5n)`\nz.bigint().lt(5n);\nz.bigint().lte(5n); // alias `.max(5n)`\n\nz.bigint().positive(); // > 0n\nz.bigint().nonnegative(); // >= 0n\nz.bigint().negative(); // < 0n\nz.bigint().nonpositive(); // <= 0n\n\nz.bigint().multipleOf(5n); // Evenly divisible by 5n.",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "nonpositive",
+    [
+      "z.number().gt(5);\nz.number().gte(5); // alias .min(5)\nz.number().lt(5);\nz.number().lte(5); // alias .max(5)\n\nz.number().int(); // value must be an integer\n\nz.number().positive(); //     > 0\nz.number().nonnegative(); //  >= 0\nz.number().negative(); //     < 0\nz.number().nonpositive(); //  <= 0\n\nz.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)\n\nz.number().finite(); // value must be finite, not Infinity or -Infinity\nz.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER",
+      "z.bigint().gt(5n);\nz.bigint().gte(5n); // alias `.min(5n)`\nz.bigint().lt(5n);\nz.bigint().lte(5n); // alias `.max(5n)`\n\nz.bigint().positive(); // > 0n\nz.bigint().nonnegative(); // >= 0n\nz.bigint().negative(); // < 0n\nz.bigint().nonpositive(); // <= 0n\n\nz.bigint().multipleOf(5n); // Evenly divisible by 5n.",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "nonnegative",
+    [
+      "z.number().gt(5);\nz.number().gte(5); // alias .min(5)\nz.number().lt(5);\nz.number().lte(5); // alias .max(5)\n\nz.number().int(); // value must be an integer\n\nz.number().positive(); //     > 0\nz.number().nonnegative(); //  >= 0\nz.number().negative(); //     < 0\nz.number().nonpositive(); //  <= 0\n\nz.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)\n\nz.number().finite(); // value must be finite, not Infinity or -Infinity\nz.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER",
+      "z.bigint().gt(5n);\nz.bigint().gte(5n); // alias `.min(5n)`\nz.bigint().lt(5n);\nz.bigint().lte(5n); // alias `.max(5n)`\n\nz.bigint().positive(); // > 0n\nz.bigint().nonnegative(); // >= 0n\nz.bigint().negative(); // < 0n\nz.bigint().nonpositive(); // <= 0n\n\nz.bigint().multipleOf(5n); // Evenly divisible by 5n.",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "multipleOf",
+    [
+      "z.number().gt(5);\nz.number().gte(5); // alias .min(5)\nz.number().lt(5);\nz.number().lte(5); // alias .max(5)\n\nz.number().int(); // value must be an integer\n\nz.number().positive(); //     > 0\nz.number().nonnegative(); //  >= 0\nz.number().negative(); //     < 0\nz.number().nonpositive(); //  <= 0\n\nz.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)\n\nz.number().finite(); // value must be finite, not Infinity or -Infinity\nz.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER",
+      "z.bigint().gt(5n);\nz.bigint().gte(5n); // alias `.min(5n)`\nz.bigint().lt(5n);\nz.bigint().lte(5n); // alias `.max(5n)`\n\nz.bigint().positive(); // > 0n\nz.bigint().nonnegative(); // >= 0n\nz.bigint().negative(); // < 0n\nz.bigint().nonpositive(); // <= 0n\n\nz.bigint().multipleOf(5n); // Evenly divisible by 5n.",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "maxSize",
+    [
+      "z.set(z.string()).check(z.minSize(5)); // must contain 5 or more items\nz.set(z.string()).check(z.maxSize(5)); // must contain 5 or fewer items\nz.set(z.string()).check(z.size(5)); // must contain 5 items exactly",
+      "const fileSchema = z.file();\n\nfileSchema.check(\n  z.minSize(10_000), // minimum .size (bytes)\n  z.maxSize(1_000_000), // maximum .size (bytes)\n  z.mime(\"image/png\"), // MIME type\n  z.mime([\"image/png\", \"image/jpeg\"]); // multiple MIME types\n)",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "minSize",
+    [
+      "z.set(z.string()).check(z.minSize(5)); // must contain 5 or more items\nz.set(z.string()).check(z.maxSize(5)); // must contain 5 or fewer items\nz.set(z.string()).check(z.size(5)); // must contain 5 items exactly",
+      "const fileSchema = z.file();\n\nfileSchema.check(\n  z.minSize(10_000), // minimum .size (bytes)\n  z.maxSize(1_000_000), // maximum .size (bytes)\n  z.mime(\"image/png\"), // MIME type\n  z.mime([\"image/png\", \"image/jpeg\"]); // multiple MIME types\n)",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "size",
+    [
+      "z.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);\nz.length(value);\nz.regex(regex);\nz.lowercase();\nz.uppercase();\nz.includes(value);\nz.startsWith(value);",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);",
+      "z.set(z.string()).min(5); // must contain 5 or more items\nz.set(z.string()).max(5); // must contain 5 or fewer items\nz.set(z.string()).size(5); // must contain 5 items exactly"
+    ]
+  ],
+  [
+    "maxLength",
+    [
+      "z.string().check(z.maxLength(5));\nz.string().check(z.minLength(5));\nz.string().check(z.length(5));\nz.string().check(z.regex(/^[a-z]+$/));\nz.string().check(z.startsWith(\"aaa\"));\nz.string().check(z.endsWith(\"zzz\"));\nz.string().check(z.includes(\"---\"));\nz.string().check(z.uppercase());\nz.string().check(z.lowercase());",
+      "// regular Zod\nz.string().min(5).max(10).trim()\n\n// Zod Mini\nz.string().check(z.minLength(5), z.maxLength(10), z.trim());",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "minLength",
+    [
+      "z.string().check(z.maxLength(5));\nz.string().check(z.minLength(5));\nz.string().check(z.length(5));\nz.string().check(z.regex(/^[a-z]+$/));\nz.string().check(z.startsWith(\"aaa\"));\nz.string().check(z.endsWith(\"zzz\"));\nz.string().check(z.includes(\"---\"));\nz.string().check(z.uppercase());\nz.string().check(z.lowercase());",
+      "// regular Zod\nz.string().min(5).max(10).trim()\n\n// Zod Mini\nz.string().check(z.minLength(5), z.maxLength(10), z.trim());",
+      "import * as z from \"zod/mini\";\n\n// custom checks\nz.refine();\n\n// first-class checks\nz.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);"
+    ]
+  ],
+  [
+    "length",
+    [
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "z.string().array().min(5); // must contain 5 or more items\nz.string().array().max(5); // must contain 5 or fewer items\nz.string().array().length(5); // must contain 5 items exactly"
+    ]
+  ],
+  [
+    "regex",
+    [
+      "z.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);\nz.length(value);\nz.regex(regex);\nz.lowercase();\nz.uppercase();\nz.includes(value);\nz.startsWith(value);",
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n",
+      "z.base64url();\nz.cuid();\nz.regex();\nz.emoji();\nz.nanoid();\nz.cuid2();\nz.ulid();\nz.cidrv4();\nz.cidrv6();"
+    ]
+  ],
+  [
+    "lowercase",
+    [
+      "z.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);\nz.length(value);\nz.regex(regex);\nz.lowercase();\nz.uppercase();\nz.includes(value);\nz.startsWith(value);",
+      "z.email();\nz.uuidv4();\nz.uuidv7();\nz.uuidv8();\nz.ipv4();\nz.ipv6();\nz.cidrv4();\nz.cidrv6();\nz.url();\nz.e164();\nz.base64();\nz.base64url();\nz.jwt();\nz.ascii();\nz.utf8();\nz.lowercase();\nz.iso.date();\nz.iso.datetime();\nz.iso.duration();\nz.iso.time();",
+      "z.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().regex(/^[a-z]+$/);\nz.string().startsWith(\"aaa\");\nz.string().endsWith(\"zzz\");\nz.string().includes(\"---\");\nz.string().uppercase();\nz.string().lowercase();"
+    ]
+  ],
+  [
+    "uppercase",
+    [
+      "z.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().regex(/^[a-z]+$/);\nz.string().startsWith(\"aaa\");\nz.string().endsWith(\"zzz\");\nz.string().includes(\"---\");\nz.string().uppercase();\nz.string().lowercase();",
+      "z.string().check(z.maxLength(5));\nz.string().check(z.minLength(5));\nz.string().check(z.length(5));\nz.string().check(z.regex(/^[a-z]+$/));\nz.string().check(z.startsWith(\"aaa\"));\nz.string().check(z.endsWith(\"zzz\"));\nz.string().check(z.includes(\"---\"));\nz.string().check(z.uppercase());\nz.string().check(z.lowercase());",
+      "z.lt(value);\nz.lte(value); // alias: z.maximum()\nz.gt(value);\nz.gte(value); // alias: z.minimum()\nz.positive();\nz.negative();\nz.nonpositive();\nz.nonnegative();\nz.multipleOf(value);\nz.maxSize(value);\nz.minSize(value);\nz.size(value);\nz.maxLength(value);\nz.minLength(value);\nz.length(value);\nz.regex(regex);\nz.lowercase();\nz.uppercase();\nz.includes(value);\nz.startsWith(value);"
+    ]
+  ],
+  [
+    "includes",
+    [
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "z.string()\n  .refine(val => val.includes(\"@\"))\n  .min(5); // ✅"
+    ]
+  ],
+  [
+    "startsWith",
+    [
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "z.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().regex(/^[a-z]+$/);\nz.string().startsWith(\"aaa\");\nz.string().endsWith(\"zzz\");\nz.string().includes(\"---\");\nz.string().uppercase();\nz.string().lowercase();"
+    ]
+  ],
+  [
+    "endsWith",
+    [
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "z.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().regex(/^[a-z]+$/);\nz.string().startsWith(\"aaa\");\nz.string().endsWith(\"zzz\");\nz.string().includes(\"---\");\nz.string().uppercase();\nz.string().lowercase();"
+    ]
+  ],
+  [
+    "property",
+    []
+  ],
+  [
+    "mime",
+    [
+      "z.file().min(1).max(1024 * 1024).mime(\"image/png\");\n// => {\n//   type: \"string\",\n//   format: \"binary\",\n//   contentEncoding: \"binary\",\n//   contentMediaType: \"image/png\",\n//   minLength: 1,\n//   maxLength: 1048576,\n// }",
+      "const fileSchema = z.file();\n\nfileSchema.min(10_000); // minimum .size (bytes)\nfileSchema.max(1_000_000); // maximum .size (bytes)\nfileSchema.mime([\"image/png\"]); // MIME type",
+      "const fileSchema = z.file();\n\nfileSchema.min(10_000); // minimum .size (bytes)\nfileSchema.max(1_000_000); // maximum .size (bytes)\nfileSchema.mime(\"image/png\"); // MIME type\nfileSchema.mime([\"image/png\", \"image/jpeg\"]); // multiple MIME types"
+    ]
+  ],
+  [
+    "overwrite",
+    [
+      "import * as z from \"zod\";\n\nconst mySchema = z.string();\n\n// parsing\nmySchema.parse(data);\nmySchema.safeParse(data);\nmySchema.parseAsync(data);\nmySchema.safeParseAsync(data);\n\n\n// refinements\nmySchema.refine(refinementFunc);\nmySchema.superRefine(refinementFunc); // deprecated, use `.check()`\nmySchema.overwrite(overwriteFunc);\n\n// wrappers\nmySchema.optional();\nmySchema.nonoptional();\nmySchema.nullable();",
+      "z.number().overwrite(val => val ** 2).max(100);\n// => ZodNumber"
+    ]
+  ],
+  [
+    "normalize",
+    []
+  ],
+  [
+    "trim",
+    [
+      "const a = z.string().trim().toUpperCase().prefault(\"  tuna  \");\na.parse(undefined); // => \"TUNA\"\n\nconst b = z.string().trim().toUpperCase().default(\"  tuna  \");\nb.parse(undefined); // => \"  tuna  \"",
+      "import * as z from \"zod\";\n\nz.string()\n  .min(5)\n  .max(10)\n  .refine(val => val.includes(\"@\"))\n  .trim()",
+      "const computeTrimmedLength = MyFunction.implement((input) => {\n  // TypeScript knows input is a string!\n  return input.trim().length;\n});\n\ncomputeTrimmedLength(\"sandwich\"); // => 8\ncomputeTrimmedLength(\" asdf \"); // => 4"
+    ]
+  ],
+  [
+    "toLowerCase",
+    [
+      "const myString = z.string()\n  .refine((val) => val.length > 8, { error: \"Too short!\" })\n  .refine((val) => val === val.toLowerCase(), { error: \"Must be lowercase\" });\n  \n\nconst result = myString.safeParse(\"OH NO\");\nresult.error.issues;\n/* [\n  { \"code\": \"custom\", \"message\": \"Too short!\" },\n  { \"code\": \"custom\", \"message\": \"Must be lowercase\" }\n] */",
+      "const myString = z.string()\n  .refine((val) => val.length > 8, { error: \"Too short!\", abort: true })\n  .refine((val) => val === val.toLowerCase(), { error: \"Must be lowercase\", abort: true });\n\n\nconst result = myString.safeParse(\"OH NO\");\nresult.error!.issues;\n// => [{ \"code\": \"custom\", \"message\": \"Too short!\" }]",
+      "z.string()\n  .min(5)\n  .max(10)\n  .toLowerCase();"
+    ]
+  ],
+  [
+    "toUpperCase",
+    [
+      "const nameToGreeting = z\n  .string()\n  .transform((val) => val.toUpperCase())\n  .refine((val) => val.length > 15)\n  .transform((val) => `Hello ${val}`)\n  .refine((val) => val.indexOf(\"!\") === -1);",
+      "const MyResult = z.discriminatedUnion(\"status\", [\n  // simple literal\n  z.object({ status: z.literal(\"aaa\"), data: z.string() }),\n  // union discriminator\n  z.object({ status: z.union([z.literal(\"bbb\"), z.literal(\"ccc\")]) }),\n  // pipe discriminator\n  z.object({ status: z.literal(\"fail\").transform(val => val.toUpperCase()) }),\n]);",
+      "z.string().trim(); // trim whitespace\nz.string().toLowerCase(); // toLowerCase\nz.string().toUpperCase(); // toUpperCase"
+    ]
+  ],
+  [
+    "parse",
+    [
+      "const a = z.iso.datetime();\na.parse(\"2020-01-01T06:15Z\"); // ✅\na.parse(\"2020-01-01T06:15:00Z\"); // ✅\na.parse(\"2020-01-01T06:15:00.123Z\"); // ✅\n\nconst b = z.iso.datetime({ precision: -1 }); // minute precision (no seconds)\nb.parse(\"2020-01-01T06:15Z\"); // ✅\nb.parse(\"2020-01-01T06:15:00Z\"); // ❌\nb.parse(\"2020-01-01T06:15:00.123Z\"); // ❌\n\nconst c = z.iso.datetime({ precision: 0 }); // second precision only\nc.parse(\"2020-01-01T06:15Z\"); // ❌\nc.parse(\"2020-01-01T06:15:00Z\"); // ✅\nc.parse(\"2020-01-01T06:15:00.123Z\"); // ❌\n\nconst d = z.iso.datetime({ precision: 3 }); // millisecond precision only\nd.parse(\"2020-01-01T06:15Z\"); // ❌\nd.parse(\"2020-01-01T06:15:00Z\"); // ❌\nd.parse(\"2020-01-01T06:15:00.123Z\"); // ✅",
+      "const strbool = z.stringbool();\n\nstrbool.parse(\"true\")         // => true\nstrbool.parse(\"1\")            // => true\nstrbool.parse(\"yes\")          // => true\nstrbool.parse(\"on\")           // => true\nstrbool.parse(\"y\")            // => true\nstrbool.parse(\"enabled\")      // => true\n\nstrbool.parse(\"false\");       // => false\nstrbool.parse(\"0\");           // => false\nstrbool.parse(\"no\");          // => false\nstrbool.parse(\"off\");         // => false\nstrbool.parse(\"n\");           // => false\nstrbool.parse(\"disabled\");    // => false\n\nstrbool.parse(/* anything else */); // ZodError<[{ code: \"invalid_value\" }]>",
+      "Dog.parse({ name: \"Yeller\", extraKey: true });\n// => { name: \"Yeller\" }"
+    ]
+  ],
+  [
+    "parseAsync",
+    [
+      "import * as z from \"zod/v4/core\";\n\nconst schema = new z.$ZodString({ type: \"string\" });\nz.parse(schema, \"hello\");\nz.safeParse(schema, \"hello\");\nawait z.parseAsync(schema, \"hello\");\nawait z.safeParseAsync(schema, \"hello\");",
+      "import * as z from \"zod\";\n\nconst mySchema = z.string();\n\n// parsing\nmySchema.parse(data);\nmySchema.safeParse(data);\nmySchema.parseAsync(data);\nmySchema.safeParseAsync(data);\n\n\n// refinements\nmySchema.refine(refinementFunc);\nmySchema.superRefine(refinementFunc); // deprecated, use `.check()`\nmySchema.overwrite(overwriteFunc);\n\n// wrappers\nmySchema.optional();\nmySchema.nonoptional();\nmySchema.nullable();",
+      "const schema = z.string().refine(async (val) => val.length <= 8);\n\nawait schema.parseAsync(\"hello\");\n// => \"hello\""
+    ]
+  ],
+  [
+    "safeParse",
+    [
+      "const stringOrNumber = z.string().or(z.number());\n``` */}\n\n{/* **Optional string validation:**\n\nTo validate an optional form input, you can union the desired string validation with an empty string [literal](#literals).\n\nThis example validates an input that is optional but needs to contain a [valid URL](#strings):\n\n```ts\nconst optionalUrl = z.union([z.string().url().nullish(), z.literal(\"\")]);\n\nconsole.log(optionalUrl.safeParse(undefined).success); // true\nconsole.log(optionalUrl.safeParse(null).success); // true\nconsole.log(optionalUrl.safeParse(\"\").success); // true\nconsole.log(optionalUrl.safeParse(\"https://zod.dev\").success); // true\nconsole.log(optionalUrl.safeParse(\"not a valid url\").success); // false",
+      "const schema = z\n  .object({\n    password: z.string().min(8),\n    confirmPassword: z.string(),\n    anotherField: z.string(),\n  })\n  .refine((data) => data.password === data.confirmPassword, {\n    message: \"Passwords do not match\",\n    path: [\"confirmPassword\"],\n\n    // run if password & confirmPassword are valid\n    when(payload) { // [!code ++]\n      return schema // [!code ++]\n        .pick({ password: true, confirmPassword: true }) // [!code ++]\n        .safeParse(payload.value).success; // [!code ++]\n    },  // [!code ++]\n  });\n\nschema.parse({\n  password: \"asdf\",",
+      "const result = z.string().safeParse(12); \nresult.error! instanceof Error; // => false"
+    ]
+  ],
+  [
+    "safeParseAsync",
+    [
+      "import * as z from \"zod/v4/core\";\n\nconst schema = new z.$ZodString({ type: \"string\" });\nz.parse(schema, \"hello\");\nz.safeParse(schema, \"hello\");\nawait z.parseAsync(schema, \"hello\");\nawait z.safeParseAsync(schema, \"hello\");",
+      "import * as z from \"zod\";\n\nconst mySchema = z.string();\n\n// parsing\nmySchema.parse(data);\nmySchema.safeParse(data);\nmySchema.parseAsync(data);\nmySchema.safeParseAsync(data);\n\n\n// refinements\nmySchema.refine(refinementFunc);\nmySchema.superRefine(refinementFunc); // deprecated, use `.check()`\nmySchema.overwrite(overwriteFunc);\n\n// wrappers\nmySchema.optional();\nmySchema.nonoptional();\nmySchema.nullable();",
+      "const schema = z.string().refine(async (val) => val.length <= 8);\n\nawait schema.safeParseAsync(\"hello\");\n// => { success: true; data: \"hello\" }"
+    ]
+  ],
+  [
+    "setErrorMap",
+    []
+  ],
+  [
+    "getErrorMap",
+    []
+  ]
+]

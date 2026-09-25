@@ -1,0 +1,1366 @@
+[
+  {
+    "accessPath": "zod.z.iso.datetime",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function datetime(params) {\n    return core._isoDateTime(exports.ZodISODateTime, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.iso.date",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function date(params) {\n    return core._isoDate(exports.ZodISODate, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.iso.time",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function time(params) {\n    return core._isoTime(exports.ZodISOTime, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.iso.duration",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function duration(params) {\n    return core._isoDuration(exports.ZodISODuration, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.coerce.string",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function string(params) {\n    return core._coercedString(schemas.ZodString, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.coerce.number",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function number(params) {\n    return core._coercedNumber(schemas.ZodNumber, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.coerce.boolean",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function boolean(params) {\n    return core._coercedBoolean(schemas.ZodBoolean, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.coerce.bigint",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function bigint(params) {\n    return core._coercedBigint(schemas.ZodBigInt, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.coerce.date",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function date(params) {\n    return core._coercedDate(schemas.ZodDate, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.stringbool",
+    "descriptor": {
+      "type": "function",
+      "signature": "(...args)",
+      "implementation": "(...args) => core._stringbool({\n    Pipe: exports.ZodPipe,\n    Boolean: exports.ZodBoolean,\n    String: exports.ZodString,\n    Transform: exports.ZodTransform,\n}, ...args)",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.string",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function string(params) {\n    return core._string(exports.ZodString, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.email",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function email(params) {\n    return core._email(exports.ZodEmail, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.guid",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function guid(params) {\n    return core._guid(exports.ZodGUID, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.uuid",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function uuid(params) {\n    return core._uuid(exports.ZodUUID, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.uuidv4",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function uuidv4(params) {\n    return core._uuidv4(exports.ZodUUID, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.uuidv6",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function uuidv6(params) {\n    return core._uuidv6(exports.ZodUUID, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.uuidv7",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function uuidv7(params) {\n    return core._uuidv7(exports.ZodUUID, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.url",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function url(params) {\n    return core._url(exports.ZodURL, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.emoji",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function emoji(params) {\n    return core._emoji(exports.ZodEmoji, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.nanoid",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function nanoid(params) {\n    return core._nanoid(exports.ZodNanoID, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.cuid",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function cuid(params) {\n    return core._cuid(exports.ZodCUID, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.cuid2",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function cuid2(params) {\n    return core._cuid2(exports.ZodCUID2, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.ulid",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function ulid(params) {\n    return core._ulid(exports.ZodULID, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.xid",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function xid(params) {\n    return core._xid(exports.ZodXID, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.ksuid",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function ksuid(params) {\n    return core._ksuid(exports.ZodKSUID, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.ipv4",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function ipv4(params) {\n    return core._ipv4(exports.ZodIPv4, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.ipv6",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function ipv6(params) {\n    return core._ipv6(exports.ZodIPv6, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.cidrv4",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function cidrv4(params) {\n    return core._cidrv4(exports.ZodCIDRv4, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.cidrv6",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function cidrv6(params) {\n    return core._cidrv6(exports.ZodCIDRv6, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.base64",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function base64(params) {\n    return core._base64(exports.ZodBase64, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.base64url",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function base64url(params) {\n    return core._base64url(exports.ZodBase64URL, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.e164",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function e164(params) {\n    return core._e164(exports.ZodE164, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.jwt",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function jwt(params) {\n    return core._jwt(exports.ZodJWT, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.stringFormat",
+    "descriptor": {
+      "type": "function",
+      "signature": "(format, fnOrRegex, _params = {})",
+      "implementation": "function stringFormat(format, fnOrRegex, _params = {}) {\n    return core._stringFormat(exports.ZodCustomStringFormat, format, fnOrRegex, _params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.number",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function number(params) {\n    return core._number(exports.ZodNumber, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.int",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function int(params) {\n    return core._int(exports.ZodNumberFormat, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.float32",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function float32(params) {\n    return core._float32(exports.ZodNumberFormat, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.float64",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function float64(params) {\n    return core._float64(exports.ZodNumberFormat, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.int32",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function int32(params) {\n    return core._int32(exports.ZodNumberFormat, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.uint32",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function uint32(params) {\n    return core._uint32(exports.ZodNumberFormat, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.boolean",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function boolean(params) {\n    return core._boolean(exports.ZodBoolean, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.bigint",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function bigint(params) {\n    return core._bigint(exports.ZodBigInt, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.int64",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function int64(params) {\n    return core._int64(exports.ZodBigIntFormat, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.uint64",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function uint64(params) {\n    return core._uint64(exports.ZodBigIntFormat, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.symbol",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function symbol(params) {\n    return core._symbol(exports.ZodSymbol, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.undefined",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function _undefined(params) {\n    return core._undefined(exports.ZodUndefined, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.null",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function _null(params) {\n    return core._null(exports.ZodNull, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.any",
+    "descriptor": {
+      "type": "function",
+      "signature": "()",
+      "implementation": "function any() {\n    return core._any(exports.ZodAny);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.unknown",
+    "descriptor": {
+      "type": "function",
+      "signature": "()",
+      "implementation": "function unknown() {\n    return core._unknown(exports.ZodUnknown);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.never",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function never(params) {\n    return core._never(exports.ZodNever, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.void",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function _void(params) {\n    return core._void(exports.ZodVoid, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.date",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function date(params) {\n    return core._date(exports.ZodDate, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.array",
+    "descriptor": {
+      "type": "function",
+      "signature": "(element, params)",
+      "implementation": "function array(element, params) {\n    return core._array(exports.ZodArray, element, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.keyof",
+    "descriptor": {
+      "type": "function",
+      "signature": "(schema)",
+      "implementation": "function keyof(schema) {\n    const shape = schema._zod.def.shape;\n    return literal(Object.keys(shape));\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.object",
+    "descriptor": {
+      "type": "function",
+      "signature": "(shape, params)",
+      "implementation": "function object(shape, params) {\n    const def = {\n        type: \"object\",\n        get shape() {\n            index_js_1.util.assignProp(this, \"shape\", { ...shape });\n            return this.shape;\n        },\n        ...index_js_1.util.normalizeParams(params),\n    };\n    return new exports.ZodObject(def);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.strictObject",
+    "descriptor": {
+      "type": "function",
+      "signature": "(shape, params)",
+      "implementation": "function strictObject(shape, params) {\n    return new exports.ZodObject({\n        type: \"object\",\n        get shape() {\n            index_js_1.util.assignProp(this, \"shape\", { ...shape });\n            return this.shape;\n        },\n        catchall: never(),\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.looseObject",
+    "descriptor": {
+      "type": "function",
+      "signature": "(shape, params)",
+      "implementation": "function looseObject(shape, params) {\n    return new exports.ZodObject({\n        type: \"object\",\n        get shape() {\n            index_js_1.util.assignProp(this, \"shape\", { ...shape });\n            return this.shape;\n        },\n        catchall: unknown(),\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.union",
+    "descriptor": {
+      "type": "function",
+      "signature": "(options, params)",
+      "implementation": "function union(options, params) {\n    return new exports.ZodUnion({\n        type: \"union\",\n        options: options,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.discriminatedUnion",
+    "descriptor": {
+      "type": "function",
+      "signature": "(discriminator, options, params)",
+      "implementation": "function discriminatedUnion(discriminator, options, params) {\n    // const [options, params] = args;\n    return new exports.ZodDiscriminatedUnion({\n        type: \"union\",\n        options,\n        discriminator,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.intersection",
+    "descriptor": {
+      "type": "function",
+      "signature": "(left, right)",
+      "implementation": "function intersection(left, right) {\n    return new exports.ZodIntersection({\n        type: \"intersection\",\n        left: left,\n        right: right,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.tuple",
+    "descriptor": {
+      "type": "function",
+      "signature": "(items, _paramsOrRest, _params)",
+      "implementation": "function tuple(items, _paramsOrRest, _params) {\n    const hasRest = _paramsOrRest instanceof core.$ZodType;\n    const params = hasRest ? _params : _paramsOrRest;\n    const rest = hasRest ? _paramsOrRest : null;\n    return new exports.ZodTuple({\n        type: \"tuple\",\n        items: items,\n        rest,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.record",
+    "descriptor": {
+      "type": "function",
+      "signature": "(keyType, valueType, params)",
+      "implementation": "function record(keyType, valueType, params) {\n    return new exports.ZodRecord({\n        type: \"record\",\n        keyType,\n        valueType: valueType,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.partialRecord",
+    "descriptor": {
+      "type": "function",
+      "signature": "(keyType, valueType, params)",
+      "implementation": "function partialRecord(keyType, valueType, params) {\n    return new exports.ZodRecord({\n        type: \"record\",\n        keyType: union([keyType, never()]),\n        valueType: valueType,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.map",
+    "descriptor": {
+      "type": "function",
+      "signature": "(keyType, valueType, params)",
+      "implementation": "function map(keyType, valueType, params) {\n    return new exports.ZodMap({\n        type: \"map\",\n        keyType: keyType,\n        valueType: valueType,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.set",
+    "descriptor": {
+      "type": "function",
+      "signature": "(valueType, params)",
+      "implementation": "function set(valueType, params) {\n    return new exports.ZodSet({\n        type: \"set\",\n        valueType: valueType,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.enum",
+    "descriptor": {
+      "type": "function",
+      "signature": "(values, params)",
+      "implementation": "function _enum(values, params) {\n    const entries = Array.isArray(values) ? Object.fromEntries(values.map((v) => [v, v])) : values;\n    return new exports.ZodEnum({\n        type: \"enum\",\n        entries,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.nativeEnum",
+    "descriptor": {
+      "type": "function",
+      "signature": "(entries, params)",
+      "implementation": "function nativeEnum(entries, params) {\n    return new exports.ZodEnum({\n        type: \"enum\",\n        entries,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.literal",
+    "descriptor": {
+      "type": "function",
+      "signature": "(value, params)",
+      "implementation": "function literal(value, params) {\n    return new exports.ZodLiteral({\n        type: \"literal\",\n        values: Array.isArray(value) ? value : [value],\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.file",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function file(params) {\n    return core._file(exports.ZodFile, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.transform",
+    "descriptor": {
+      "type": "function",
+      "signature": "(fn)",
+      "implementation": "function transform(fn) {\n    return new exports.ZodTransform({\n        type: \"transform\",\n        transform: fn,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.optional",
+    "descriptor": {
+      "type": "function",
+      "signature": "(innerType)",
+      "implementation": "function optional(innerType) {\n    return new exports.ZodOptional({\n        type: \"optional\",\n        innerType: innerType,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.nullable",
+    "descriptor": {
+      "type": "function",
+      "signature": "(innerType)",
+      "implementation": "function nullable(innerType) {\n    return new exports.ZodNullable({\n        type: \"nullable\",\n        innerType: innerType,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.nullish",
+    "descriptor": {
+      "type": "function",
+      "signature": "(innerType)",
+      "implementation": "function nullish(innerType) {\n    return optional(nullable(innerType));\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.prefault",
+    "descriptor": {
+      "type": "function",
+      "signature": "(innerType, defaultValue)",
+      "implementation": "function prefault(innerType, defaultValue) {\n    return new exports.ZodPrefault({\n        type: \"prefault\",\n        innerType: innerType,\n        get defaultValue() {\n            return typeof defaultValue === \"function\" ? defaultValue() : defaultValue;\n        },\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.nonoptional",
+    "descriptor": {
+      "type": "function",
+      "signature": "(innerType, params)",
+      "implementation": "function nonoptional(innerType, params) {\n    return new exports.ZodNonOptional({\n        type: \"nonoptional\",\n        innerType: innerType,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.success",
+    "descriptor": {
+      "type": "function",
+      "signature": "(innerType)",
+      "implementation": "function success(innerType) {\n    return new exports.ZodSuccess({\n        type: \"success\",\n        innerType: innerType,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.catch",
+    "descriptor": {
+      "type": "function",
+      "signature": "(innerType, catchValue)",
+      "implementation": "function _catch(innerType, catchValue) {\n    return new exports.ZodCatch({\n        type: \"catch\",\n        innerType: innerType,\n        catchValue: (typeof catchValue === \"function\" ? catchValue : () => catchValue),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.nan",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function nan(params) {\n    return core._nan(exports.ZodNaN, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.pipe",
+    "descriptor": {
+      "type": "function",
+      "signature": "(in_, out)",
+      "implementation": "function pipe(in_, out) {\n    return new exports.ZodPipe({\n        type: \"pipe\",\n        in: in_,\n        out: out,\n        // ...util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.readonly",
+    "descriptor": {
+      "type": "function",
+      "signature": "(innerType)",
+      "implementation": "function readonly(innerType) {\n    return new exports.ZodReadonly({\n        type: \"readonly\",\n        innerType: innerType,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.templateLiteral",
+    "descriptor": {
+      "type": "function",
+      "signature": "(parts, params)",
+      "implementation": "function templateLiteral(parts, params) {\n    return new exports.ZodTemplateLiteral({\n        type: \"template_literal\",\n        parts,\n        ...index_js_1.util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.lazy",
+    "descriptor": {
+      "type": "function",
+      "signature": "(getter)",
+      "implementation": "function lazy(getter) {\n    return new exports.ZodLazy({\n        type: \"lazy\",\n        getter: getter,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.promise",
+    "descriptor": {
+      "type": "function",
+      "signature": "(innerType)",
+      "implementation": "function promise(innerType) {\n    return new exports.ZodPromise({\n        type: \"promise\",\n        innerType: innerType,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.check",
+    "descriptor": {
+      "type": "function",
+      "signature": "(fn)",
+      "implementation": "function check(fn) {\n    const ch = new core.$ZodCheck({\n        check: \"custom\",\n        // ...util.normalizeParams(params),\n    });\n    ch._zod.check = fn;\n    return ch;\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.custom",
+    "descriptor": {
+      "type": "function",
+      "signature": "(fn, _params)",
+      "implementation": "function custom(fn, _params) {\n    return core._custom(exports.ZodCustom, fn ?? (() => true), _params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.refine",
+    "descriptor": {
+      "type": "function",
+      "signature": "(fn, _params = {})",
+      "implementation": "function refine(fn, _params = {}) {\n    return core._refine(exports.ZodCustom, fn, _params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.superRefine",
+    "descriptor": {
+      "type": "function",
+      "signature": "(fn)",
+      "implementation": "function superRefine(fn) {\n    const ch = check((payload) => {\n        payload.addIssue = (issue) => {\n            if (typeof issue === \"string\") {\n                payload.issues.push(index_js_1.util.issue(issue, payload.value, ch._zod.def));\n            }\n            else {\n                // for Zod 3 backwards compatibility\n                const _issue = issue;\n                if (_issue.fatal)\n                    _issue.continue = false;\n                _issue.code ?? (_issue.code = \"custom\");\n                _issue.input ?? (_issue.input = payload.value);\n                _issue.inst ?? (_issue.inst = ch);\n                _issue.continue ?? (_issue.continue = !ch._zod.def.abort);\n                payload.issues.push(index_js_1.util.issue(_issue));\n            }\n        };\n        return fn(payload.value, payload);\n    });\n    return ch;\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.instanceof",
+    "descriptor": {
+      "type": "function",
+      "signature": "(cls, params = {\n    error: `Input not instance of ${cls.name}`,\n})",
+      "implementation": "function _instanceof(cls, params = {\n    error: `Input not instance of ${cls.name}`,\n}) {\n    const inst = new exports.ZodCustom({\n        type: \"custom\",\n        check: \"custom\",\n        fn: (data) => data instanceof cls,\n        abort: true,\n        ...index_js_1.util.normalizeParams(params),\n    });\n    inst._zod.bag.Class = cls;\n    return inst;\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.json",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function json(params) {\n    const jsonSchema = lazy(() => {\n        return union([string(params), number(), boolean(), _null(), array(jsonSchema), record(string(), jsonSchema)]);\n    });\n    return jsonSchema;\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.preprocess",
+    "descriptor": {
+      "type": "function",
+      "signature": "(fn, schema)",
+      "implementation": "function preprocess(fn, schema) {\n    return pipe(transform(fn), schema);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.lt",
+    "descriptor": {
+      "type": "function",
+      "signature": "(value, params)",
+      "implementation": "function _lt(value, params) {\n    return new checks.$ZodCheckLessThan({\n        check: \"less_than\",\n        ...util.normalizeParams(params),\n        value,\n        inclusive: false,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.lte",
+    "descriptor": {
+      "type": "function",
+      "signature": "(value, params)",
+      "implementation": "function _lte(value, params) {\n    return new checks.$ZodCheckLessThan({\n        check: \"less_than\",\n        ...util.normalizeParams(params),\n        value,\n        inclusive: true,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.gt",
+    "descriptor": {
+      "type": "function",
+      "signature": "(value, params)",
+      "implementation": "function _gt(value, params) {\n    return new checks.$ZodCheckGreaterThan({\n        check: \"greater_than\",\n        ...util.normalizeParams(params),\n        value,\n        inclusive: false,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.gte",
+    "descriptor": {
+      "type": "function",
+      "signature": "(value, params)",
+      "implementation": "function _gte(value, params) {\n    return new checks.$ZodCheckGreaterThan({\n        check: \"greater_than\",\n        ...util.normalizeParams(params),\n        value,\n        inclusive: true,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.positive",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function _positive(params) {\n    return _gt(0, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.negative",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function _negative(params) {\n    return _lt(0, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.nonpositive",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function _nonpositive(params) {\n    return _lte(0, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.nonnegative",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function _nonnegative(params) {\n    return _gte(0, params);\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.multipleOf",
+    "descriptor": {
+      "type": "function",
+      "signature": "(value, params)",
+      "implementation": "function _multipleOf(value, params) {\n    return new checks.$ZodCheckMultipleOf({\n        check: \"multiple_of\",\n        ...util.normalizeParams(params),\n        value,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.maxSize",
+    "descriptor": {
+      "type": "function",
+      "signature": "(maximum, params)",
+      "implementation": "function _maxSize(maximum, params) {\n    return new checks.$ZodCheckMaxSize({\n        check: \"max_size\",\n        ...util.normalizeParams(params),\n        maximum,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.minSize",
+    "descriptor": {
+      "type": "function",
+      "signature": "(minimum, params)",
+      "implementation": "function _minSize(minimum, params) {\n    return new checks.$ZodCheckMinSize({\n        check: \"min_size\",\n        ...util.normalizeParams(params),\n        minimum,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.size",
+    "descriptor": {
+      "type": "function",
+      "signature": "(size, params)",
+      "implementation": "function _size(size, params) {\n    return new checks.$ZodCheckSizeEquals({\n        check: \"size_equals\",\n        ...util.normalizeParams(params),\n        size,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.maxLength",
+    "descriptor": {
+      "type": "function",
+      "signature": "(maximum, params)",
+      "implementation": "function _maxLength(maximum, params) {\n    const ch = new checks.$ZodCheckMaxLength({\n        check: \"max_length\",\n        ...util.normalizeParams(params),\n        maximum,\n    });\n    return ch;\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.minLength",
+    "descriptor": {
+      "type": "function",
+      "signature": "(minimum, params)",
+      "implementation": "function _minLength(minimum, params) {\n    return new checks.$ZodCheckMinLength({\n        check: \"min_length\",\n        ...util.normalizeParams(params),\n        minimum,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.length",
+    "descriptor": {
+      "type": "function",
+      "signature": "(length, params)",
+      "implementation": "function _length(length, params) {\n    return new checks.$ZodCheckLengthEquals({\n        check: \"length_equals\",\n        ...util.normalizeParams(params),\n        length,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.regex",
+    "descriptor": {
+      "type": "function",
+      "signature": "(pattern, params)",
+      "implementation": "function _regex(pattern, params) {\n    return new checks.$ZodCheckRegex({\n        check: \"string_format\",\n        format: \"regex\",\n        ...util.normalizeParams(params),\n        pattern,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.lowercase",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function _lowercase(params) {\n    return new checks.$ZodCheckLowerCase({\n        check: \"string_format\",\n        format: \"lowercase\",\n        ...util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.uppercase",
+    "descriptor": {
+      "type": "function",
+      "signature": "(params)",
+      "implementation": "function _uppercase(params) {\n    return new checks.$ZodCheckUpperCase({\n        check: \"string_format\",\n        format: \"uppercase\",\n        ...util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.includes",
+    "descriptor": {
+      "type": "function",
+      "signature": "(includes, params)",
+      "implementation": "function _includes(includes, params) {\n    return new checks.$ZodCheckIncludes({\n        check: \"string_format\",\n        format: \"includes\",\n        ...util.normalizeParams(params),\n        includes,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.startsWith",
+    "descriptor": {
+      "type": "function",
+      "signature": "(prefix, params)",
+      "implementation": "function _startsWith(prefix, params) {\n    return new checks.$ZodCheckStartsWith({\n        check: \"string_format\",\n        format: \"starts_with\",\n        ...util.normalizeParams(params),\n        prefix,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.endsWith",
+    "descriptor": {
+      "type": "function",
+      "signature": "(suffix, params)",
+      "implementation": "function _endsWith(suffix, params) {\n    return new checks.$ZodCheckEndsWith({\n        check: \"string_format\",\n        format: \"ends_with\",\n        ...util.normalizeParams(params),\n        suffix,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.property",
+    "descriptor": {
+      "type": "function",
+      "signature": "(property, schema, params)",
+      "implementation": "function _property(property, schema, params) {\n    return new checks.$ZodCheckProperty({\n        check: \"property\",\n        property,\n        schema,\n        ...util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.mime",
+    "descriptor": {
+      "type": "function",
+      "signature": "(types, params)",
+      "implementation": "function _mime(types, params) {\n    return new checks.$ZodCheckMimeType({\n        check: \"mime_type\",\n        mime: types,\n        ...util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.overwrite",
+    "descriptor": {
+      "type": "function",
+      "signature": "(tx)",
+      "implementation": "function _overwrite(tx) {\n    return new checks.$ZodCheckOverwrite({\n        check: \"overwrite\",\n        tx,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.normalize",
+    "descriptor": {
+      "type": "function",
+      "signature": "(form)",
+      "implementation": "function _normalize(form) {\n    return _overwrite((input) => input.normalize(form));\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.trim",
+    "descriptor": {
+      "type": "function",
+      "signature": "()",
+      "implementation": "function _trim() {\n    return _overwrite((input) => input.trim());\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.toLowerCase",
+    "descriptor": {
+      "type": "function",
+      "signature": "()",
+      "implementation": "function _toLowerCase() {\n    return _overwrite((input) => input.toLowerCase());\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.toUpperCase",
+    "descriptor": {
+      "type": "function",
+      "signature": "()",
+      "implementation": "function _toUpperCase() {\n    return _overwrite((input) => input.toUpperCase());\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.parse",
+    "descriptor": {
+      "type": "function",
+      "signature": "(schema, value, _ctx, _params)",
+      "implementation": "(schema, value, _ctx, _params) => {\n    const ctx = _ctx ? Object.assign(_ctx, { async: false }) : { async: false };\n    const result = schema._zod.run({ value, issues: [] }, ctx);\n    if (result instanceof Promise) {\n        throw new core.$ZodAsyncError();\n    }\n    if (result.issues.length) {\n        const e = new (_params?.Err ?? _Err)(result.issues.map((iss) => util.finalizeIssue(iss, ctx, core.config())));\n        util.captureStackTrace(e, _params?.callee);\n        throw e;\n    }\n    return result.value;\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.parseAsync",
+    "descriptor": {
+      "type": "function",
+      "signature": "(schema, value, _ctx, params)",
+      "implementation": "async (schema, value, _ctx, params) => {\n    const ctx = _ctx ? Object.assign(_ctx, { async: true }) : { async: true };\n    let result = schema._zod.run({ value, issues: [] }, ctx);\n    if (result instanceof Promise)\n        result = await result;\n    if (result.issues.length) {\n        const e = new (params?.Err ?? _Err)(result.issues.map((iss) => util.finalizeIssue(iss, ctx, core.config())));\n        util.captureStackTrace(e, params?.callee);\n        throw e;\n    }\n    return result.value;\n}",
+      "isAsync": true,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.safeParse",
+    "descriptor": {
+      "type": "function",
+      "signature": "(schema, value, _ctx)",
+      "implementation": "(schema, value, _ctx) => {\n    const ctx = _ctx ? { ..._ctx, async: false } : { async: false };\n    const result = schema._zod.run({ value, issues: [] }, ctx);\n    if (result instanceof Promise) {\n        throw new core.$ZodAsyncError();\n    }\n    return result.issues.length\n        ? {\n            success: false,\n            error: new (_Err ?? errors.$ZodError)(result.issues.map((iss) => util.finalizeIssue(iss, ctx, core.config()))),\n        }\n        : { success: true, data: result.value };\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.safeParseAsync",
+    "descriptor": {
+      "type": "function",
+      "signature": "(schema, value, _ctx)",
+      "implementation": "async (schema, value, _ctx) => {\n    const ctx = _ctx ? Object.assign(_ctx, { async: true }) : { async: true };\n    let result = schema._zod.run({ value, issues: [] }, ctx);\n    if (result instanceof Promise)\n        result = await result;\n    return result.issues.length\n        ? {\n            success: false,\n            error: new _Err(result.issues.map((iss) => util.finalizeIssue(iss, ctx, core.config()))),\n        }\n        : { success: true, data: result.value };\n}",
+      "isAsync": true,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.setErrorMap",
+    "descriptor": {
+      "type": "function",
+      "signature": "(map)",
+      "implementation": "function setErrorMap(map) {\n    core.config({\n        customError: map,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.getErrorMap",
+    "descriptor": {
+      "type": "function",
+      "signature": "()",
+      "implementation": "function getErrorMap() {\n    return core.config().customError;\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  }
+]

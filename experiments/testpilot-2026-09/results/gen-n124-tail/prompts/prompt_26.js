@@ -1,0 +1,35 @@
+The test:
+```
+let mocha = require('mocha');
+let assert = require('assert');
+let zod = require('zod');
+
+describe('test zod', function() {
+    it('test zod.z.mime', function(done) {
+        // single MIME type
+        const singleSchema = zod.z.file().mime('image/png');
+        // the schema should expose the MIME type via its internal definition
+        assert.strictEqual(singleSchema._def.contentMediaType, 'image/png');
+
+        // multiple MIME types
+        const multiSchema = zod.z.file().mime(['image/png', 'image/jpeg']);
+        // when an array is supplied, the definition should store the array
+        assert.deepStrictEqual(multiSchema._def.contentMediaType, ['image/png', 'image/jpeg']);
+
+        done();
+    });
+});
+``` 
+failed with the following error message:
+```
+Expected values to be strictly equal:
++ actual - expected
+
++ undefined
+- 'image/png'
+  
+```
+
+Your task is to modify the above code to fix the test. 
+
+Provide your answer as a fenced code block.

@@ -1,0 +1,105 @@
+[
+  [
+    "startsWith",
+    [
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "z.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().regex(/^[a-z]+$/);\nz.string().startsWith(\"aaa\");\nz.string().endsWith(\"zzz\");\nz.string().includes(\"---\");\nz.string().uppercase();\nz.string().lowercase();"
+    ]
+  ],
+  [
+    "endsWith",
+    [
+      "// validations\nz.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().email();\nz.string().url();\nz.string().emoji();\nz.string().uuid();\nz.string().nanoid();\nz.string().cuid();\nz.string().cuid2();\nz.string().ulid();\nz.string().regex(regex);\nz.string().includes(string);\nz.string().startsWith(string);\nz.string().endsWith(string);\nz.string().datetime(); // ISO 8601; by default only `Z` timezone allowed\nz.string().ip(); // defaults to allow both IPv4 and IPv6\nz.string().cidr(); // defaults to allow both IPv4 and IPv6\n",
+      "z.string().min(5, { message: \"Must be 5 or more characters long\" });\nz.string().max(5, { message: \"Must be 5 or fewer characters long\" });\nz.string().length(5, { message: \"Must be exactly 5 characters long\" });\nz.string().email({ message: \"Invalid email address\" });\nz.string().url({ message: \"Invalid url\" });\nz.string().emoji({ message: \"Contains non-emoji characters\" });\nz.string().uuid({ message: \"Invalid UUID\" });\nz.string().includes(\"tuna\", { message: \"Must include tuna\" });\nz.string().startsWith(\"https://\", { message: \"Must provide secure URL\" });\nz.string().endsWith(\".com\", { message: \"Only .com domains allowed\" });\nz.string().datetime({ message: \"Invalid datetime string! Must be UTC.\" });\nz.string().date({ message: \"Invalid date string!\" });\nz.string().time({ message: \"Invalid time string!\" });\nz.string().ip({ message: \"Invalid IP address\" });\nz.string().cidr({ message: \"Invalid CIDR\" });",
+      "z.string().max(5);\nz.string().min(5);\nz.string().length(5);\nz.string().regex(/^[a-z]+$/);\nz.string().startsWith(\"aaa\");\nz.string().endsWith(\"zzz\");\nz.string().includes(\"---\");\nz.string().uppercase();\nz.string().lowercase();"
+    ]
+  ],
+  [
+    "property",
+    []
+  ],
+  [
+    "mime",
+    [
+      "z.file().min(1).max(1024 * 1024).mime(\"image/png\");\n// => {\n//   type: \"string\",\n//   format: \"binary\",\n//   contentEncoding: \"binary\",\n//   contentMediaType: \"image/png\",\n//   minLength: 1,\n//   maxLength: 1048576,\n// }",
+      "const fileSchema = z.file();\n\nfileSchema.min(10_000); // minimum .size (bytes)\nfileSchema.max(1_000_000); // maximum .size (bytes)\nfileSchema.mime([\"image/png\"]); // MIME type",
+      "const fileSchema = z.file();\n\nfileSchema.min(10_000); // minimum .size (bytes)\nfileSchema.max(1_000_000); // maximum .size (bytes)\nfileSchema.mime(\"image/png\"); // MIME type\nfileSchema.mime([\"image/png\", \"image/jpeg\"]); // multiple MIME types"
+    ]
+  ],
+  [
+    "overwrite",
+    [
+      "import * as z from \"zod\";\n\nconst mySchema = z.string();\n\n// parsing\nmySchema.parse(data);\nmySchema.safeParse(data);\nmySchema.parseAsync(data);\nmySchema.safeParseAsync(data);\n\n\n// refinements\nmySchema.refine(refinementFunc);\nmySchema.superRefine(refinementFunc); // deprecated, use `.check()`\nmySchema.overwrite(overwriteFunc);\n\n// wrappers\nmySchema.optional();\nmySchema.nonoptional();\nmySchema.nullable();",
+      "z.number().overwrite(val => val ** 2).max(100);\n// => ZodNumber"
+    ]
+  ],
+  [
+    "normalize",
+    []
+  ],
+  [
+    "trim",
+    [
+      "const a = z.string().trim().toUpperCase().prefault(\"  tuna  \");\na.parse(undefined); // => \"TUNA\"\n\nconst b = z.string().trim().toUpperCase().default(\"  tuna  \");\nb.parse(undefined); // => \"  tuna  \"",
+      "import * as z from \"zod\";\n\nz.string()\n  .min(5)\n  .max(10)\n  .refine(val => val.includes(\"@\"))\n  .trim()",
+      "const computeTrimmedLength = MyFunction.implement((input) => {\n  // TypeScript knows input is a string!\n  return input.trim().length;\n});\n\ncomputeTrimmedLength(\"sandwich\"); // => 8\ncomputeTrimmedLength(\" asdf \"); // => 4"
+    ]
+  ],
+  [
+    "toLowerCase",
+    [
+      "const myString = z.string()\n  .refine((val) => val.length > 8, { error: \"Too short!\" })\n  .refine((val) => val === val.toLowerCase(), { error: \"Must be lowercase\" });\n  \n\nconst result = myString.safeParse(\"OH NO\");\nresult.error.issues;\n/* [\n  { \"code\": \"custom\", \"message\": \"Too short!\" },\n  { \"code\": \"custom\", \"message\": \"Must be lowercase\" }\n] */",
+      "const myString = z.string()\n  .refine((val) => val.length > 8, { error: \"Too short!\", abort: true })\n  .refine((val) => val === val.toLowerCase(), { error: \"Must be lowercase\", abort: true });\n\n\nconst result = myString.safeParse(\"OH NO\");\nresult.error!.issues;\n// => [{ \"code\": \"custom\", \"message\": \"Too short!\" }]",
+      "z.string()\n  .min(5)\n  .max(10)\n  .toLowerCase();"
+    ]
+  ],
+  [
+    "toUpperCase",
+    [
+      "const nameToGreeting = z\n  .string()\n  .transform((val) => val.toUpperCase())\n  .refine((val) => val.length > 15)\n  .transform((val) => `Hello ${val}`)\n  .refine((val) => val.indexOf(\"!\") === -1);",
+      "const MyResult = z.discriminatedUnion(\"status\", [\n  // simple literal\n  z.object({ status: z.literal(\"aaa\"), data: z.string() }),\n  // union discriminator\n  z.object({ status: z.union([z.literal(\"bbb\"), z.literal(\"ccc\")]) }),\n  // pipe discriminator\n  z.object({ status: z.literal(\"fail\").transform(val => val.toUpperCase()) }),\n]);",
+      "z.string().trim(); // trim whitespace\nz.string().toLowerCase(); // toLowerCase\nz.string().toUpperCase(); // toUpperCase"
+    ]
+  ],
+  [
+    "parse",
+    [
+      "const a = z.iso.datetime();\na.parse(\"2020-01-01T06:15Z\"); // ✅\na.parse(\"2020-01-01T06:15:00Z\"); // ✅\na.parse(\"2020-01-01T06:15:00.123Z\"); // ✅\n\nconst b = z.iso.datetime({ precision: -1 }); // minute precision (no seconds)\nb.parse(\"2020-01-01T06:15Z\"); // ✅\nb.parse(\"2020-01-01T06:15:00Z\"); // ❌\nb.parse(\"2020-01-01T06:15:00.123Z\"); // ❌\n\nconst c = z.iso.datetime({ precision: 0 }); // second precision only\nc.parse(\"2020-01-01T06:15Z\"); // ❌\nc.parse(\"2020-01-01T06:15:00Z\"); // ✅\nc.parse(\"2020-01-01T06:15:00.123Z\"); // ❌\n\nconst d = z.iso.datetime({ precision: 3 }); // millisecond precision only\nd.parse(\"2020-01-01T06:15Z\"); // ❌\nd.parse(\"2020-01-01T06:15:00Z\"); // ❌\nd.parse(\"2020-01-01T06:15:00.123Z\"); // ✅",
+      "const strbool = z.stringbool();\n\nstrbool.parse(\"true\")         // => true\nstrbool.parse(\"1\")            // => true\nstrbool.parse(\"yes\")          // => true\nstrbool.parse(\"on\")           // => true\nstrbool.parse(\"y\")            // => true\nstrbool.parse(\"enabled\")      // => true\n\nstrbool.parse(\"false\");       // => false\nstrbool.parse(\"0\");           // => false\nstrbool.parse(\"no\");          // => false\nstrbool.parse(\"off\");         // => false\nstrbool.parse(\"n\");           // => false\nstrbool.parse(\"disabled\");    // => false\n\nstrbool.parse(/* anything else */); // ZodError<[{ code: \"invalid_value\" }]>",
+      "Dog.parse({ name: \"Yeller\", extraKey: true });\n// => { name: \"Yeller\" }"
+    ]
+  ],
+  [
+    "parseAsync",
+    [
+      "import * as z from \"zod/v4/core\";\n\nconst schema = new z.$ZodString({ type: \"string\" });\nz.parse(schema, \"hello\");\nz.safeParse(schema, \"hello\");\nawait z.parseAsync(schema, \"hello\");\nawait z.safeParseAsync(schema, \"hello\");",
+      "import * as z from \"zod\";\n\nconst mySchema = z.string();\n\n// parsing\nmySchema.parse(data);\nmySchema.safeParse(data);\nmySchema.parseAsync(data);\nmySchema.safeParseAsync(data);\n\n\n// refinements\nmySchema.refine(refinementFunc);\nmySchema.superRefine(refinementFunc); // deprecated, use `.check()`\nmySchema.overwrite(overwriteFunc);\n\n// wrappers\nmySchema.optional();\nmySchema.nonoptional();\nmySchema.nullable();",
+      "const schema = z.string().refine(async (val) => val.length <= 8);\n\nawait schema.parseAsync(\"hello\");\n// => \"hello\""
+    ]
+  ],
+  [
+    "safeParse",
+    [
+      "const stringOrNumber = z.string().or(z.number());\n``` */}\n\n{/* **Optional string validation:**\n\nTo validate an optional form input, you can union the desired string validation with an empty string [literal](#literals).\n\nThis example validates an input that is optional but needs to contain a [valid URL](#strings):\n\n```ts\nconst optionalUrl = z.union([z.string().url().nullish(), z.literal(\"\")]);\n\nconsole.log(optionalUrl.safeParse(undefined).success); // true\nconsole.log(optionalUrl.safeParse(null).success); // true\nconsole.log(optionalUrl.safeParse(\"\").success); // true\nconsole.log(optionalUrl.safeParse(\"https://zod.dev\").success); // true\nconsole.log(optionalUrl.safeParse(\"not a valid url\").success); // false",
+      "const schema = z\n  .object({\n    password: z.string().min(8),\n    confirmPassword: z.string(),\n    anotherField: z.string(),\n  })\n  .refine((data) => data.password === data.confirmPassword, {\n    message: \"Passwords do not match\",\n    path: [\"confirmPassword\"],\n\n    // run if password & confirmPassword are valid\n    when(payload) { // [!code ++]\n      return schema // [!code ++]\n        .pick({ password: true, confirmPassword: true }) // [!code ++]\n        .safeParse(payload.value).success; // [!code ++]\n    },  // [!code ++]\n  });\n\nschema.parse({\n  password: \"asdf\",",
+      "const result = z.string().safeParse(12); \nresult.error! instanceof Error; // => false"
+    ]
+  ],
+  [
+    "safeParseAsync",
+    [
+      "import * as z from \"zod/v4/core\";\n\nconst schema = new z.$ZodString({ type: \"string\" });\nz.parse(schema, \"hello\");\nz.safeParse(schema, \"hello\");\nawait z.parseAsync(schema, \"hello\");\nawait z.safeParseAsync(schema, \"hello\");",
+      "import * as z from \"zod\";\n\nconst mySchema = z.string();\n\n// parsing\nmySchema.parse(data);\nmySchema.safeParse(data);\nmySchema.parseAsync(data);\nmySchema.safeParseAsync(data);\n\n\n// refinements\nmySchema.refine(refinementFunc);\nmySchema.superRefine(refinementFunc); // deprecated, use `.check()`\nmySchema.overwrite(overwriteFunc);\n\n// wrappers\nmySchema.optional();\nmySchema.nonoptional();\nmySchema.nullable();",
+      "const schema = z.string().refine(async (val) => val.length <= 8);\n\nawait schema.safeParseAsync(\"hello\");\n// => { success: true; data: \"hello\" }"
+    ]
+  ],
+  [
+    "setErrorMap",
+    []
+  ],
+  [
+    "getErrorMap",
+    []
+  ]
+]

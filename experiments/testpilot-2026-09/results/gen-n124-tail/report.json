@@ -1,0 +1,1570 @@
+{
+  "metaData": {
+    "packageName": "zod",
+    "useDocSnippets": true,
+    "useCodeSnippets": false,
+    "numSnippets": 3,
+    "snippetLength": 20,
+    "numCompletions": 1
+  },
+  "nrUniqueSnippets": 26,
+  "stats": {
+    "nrTests": 86,
+    "nrPasses": 25,
+    "nrFailures": 61,
+    "nrPending": 0,
+    "nrOther": 0,
+    "snippetExtractionTime": 5332.550336,
+    "codexQueryTime": 0,
+    "totalTime": 1233569.325477
+  },
+  "tests": [
+    {
+      "testName": "test_0.js",
+      "api": "zod.z.startsWith",
+      "testFile": "test_0.js",
+      "promptIds": [
+        0
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: Cannot read properties of undefined (reading '0')\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_0.js:30:35)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Cannot read properties of undefined (reading '0')"
+      },
+      "coveredStatements": [],
+      "duration": 610.7007510000003
+    },
+    {
+      "testName": "test_1.js",
+      "api": "zod.z.startsWith",
+      "testFile": "test_1.js",
+      "promptIds": [
+        1
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: check type should be string_format\n+ actual - expected\n\n+ undefined\n- 'string_format'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_1.js:12:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "check type should be string_format\n+ actual - expected\n\n+ undefined\n- 'string_format'\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "string_format",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 590.0663749999949
+    },
+    {
+      "testName": "test_2.js",
+      "api": "zod.z.startsWith",
+      "testFile": "test_2.js",
+      "promptIds": [
+        2
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: check type should be string_format\n+ actual - expected\n\n+ undefined\n- 'string_format'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_2.js:39:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "check type should be string_format\n+ actual - expected\n\n+ undefined\n- 'string_format'\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "string_format",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 556.7896250000049
+    },
+    {
+      "testName": "test_3.js",
+      "api": "zod.z.startsWith",
+      "testFile": "test_3.js",
+      "promptIds": [
+        3
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_4.js",
+      "api": "zod.z.startsWith",
+      "testFile": "test_4.js",
+      "promptIds": [
+        4
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_5.js",
+      "api": "zod.z.startsWith",
+      "testFile": "test_5.js",
+      "promptIds": [
+        5
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_6.js",
+      "api": "zod.z.startsWith",
+      "testFile": "test_6.js",
+      "promptIds": [
+        6
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_7.js",
+      "api": "zod.z.endsWith",
+      "testFile": "test_7.js",
+      "promptIds": [
+        7
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Invalid input/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"origin\": \"string\",\\n' +\n  '    \"code\": \"invalid_format\",\\n' +\n  '    \"format\": \"ends_with\",\\n' +\n  '    \"suffix\": \"world\",\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Invalid string: must end with \\\\\"world\\\\\"\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_7.js:12:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /Invalid input/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"origin\": \"string\",\\n' +\n  '    \"code\": \"invalid_format\",\\n' +\n  '    \"format\": \"ends_with\",\\n' +\n  '    \"suffix\": \"world\",\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Invalid string: must end with \\\\\"world\\\\\"\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"ends_with\",\n    \"suffix\": \"world\",\n    \"path\": [],\n    \"message\": \"Invalid string: must end with \\\"world\\\"\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 699.976376000006
+    },
+    {
+      "testName": "test_8.js",
+      "api": "zod.z.endsWith",
+      "testFile": "test_8.js",
+      "promptIds": [
+        8
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: check type should be string_format\n+ actual - expected\n\n+ undefined\n- 'string_format'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_8.js:12:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "check type should be string_format\n+ actual - expected\n\n+ undefined\n- 'string_format'\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "string_format",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 439.58445899997605
+    },
+    {
+      "testName": "test_9.js",
+      "api": "zod.z.endsWith",
+      "testFile": "test_9.js",
+      "promptIds": [
+        9
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: refinement should exist\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_9.js:30:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "refinement should exist",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": true,
+        "operator": "==",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 593.0720420000143
+    },
+    {
+      "testName": "test_10.js",
+      "api": "zod.z.endsWith",
+      "testFile": "test_10.js",
+      "promptIds": [
+        10
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: Cannot read properties of undefined (reading '0')\n    at Object.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_10.js:21:61)\n    at expectedException (node:assert:576:17)\n    at expectsError (node:assert:701:21)\n    at Function.throws (node:assert:757:3)\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_10.js:19:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Cannot read properties of undefined (reading '0')"
+      },
+      "coveredStatements": [],
+      "duration": 665.4416260000144
+    },
+    {
+      "testName": "test_11.js",
+      "api": "zod.z.endsWith",
+      "testFile": "test_11.js",
+      "promptIds": [
+        11
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 387.3508750000037
+    },
+    {
+      "testName": "test_12.js",
+      "api": "zod.z.endsWith",
+      "testFile": "test_12.js",
+      "promptIds": [
+        12
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected a ZodError indicating the string must end with \"world\"\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_12.js:14:12)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected a ZodError indicating the string must end with \"world\"",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"ends_with\",\n    \"suffix\": \"world\",\n    \"path\": [],\n    \"message\": \"Invalid string: must end with \\\"world\\\"\"\n  }\n]"
+        },
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 490.80408400000306
+    },
+    {
+      "testName": "test_13.js",
+      "api": "zod.z.endsWith",
+      "testFile": "test_13.js",
+      "promptIds": [
+        13
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: Cannot read properties of undefined (reading '0')\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_13.js:16:35)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Cannot read properties of undefined (reading '0')"
+      },
+      "coveredStatements": [],
+      "duration": 390.9796259999857
+    },
+    {
+      "testName": "test_14.js",
+      "api": "zod.z.endsWith",
+      "testFile": "test_14.js",
+      "promptIds": [
+        14
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Validation type should be endsWith\n+ actual - expected\n\n+ undefined\n- 'endsWith'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_14.js:20:14)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Validation type should be endsWith\n+ actual - expected\n\n+ undefined\n- 'endsWith'\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "endsWith",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 676.5532090000052
+    },
+    {
+      "testName": "test_15.js",
+      "api": "zod.z.property",
+      "testFile": "test_15.js",
+      "promptIds": [
+        15
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Got unwanted exception.\nActual message: \"ageSchema.parse is not a function\"\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_15.js:11:16)\n    at callFn (/work/testpilot2/node_modules/mocha/lib/runnable.js:366:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:354:5)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Got unwanted exception.\nActual message: \"ageSchema.parse is not a function\"",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {},
+        "operator": "doesNotThrow",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 429.07399999999325
+    },
+    {
+      "testName": "test_16.js",
+      "api": "zod.z.property",
+      "testFile": "test_16.js",
+      "promptIds": [
+        16
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'property'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_16.js:19:16)\n    at callFn (/work/testpilot2/node_modules/mocha/lib/runnable.js:366:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:354:5)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'property'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "property",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 491.6599999999744
+    },
+    {
+      "testName": "test_17.js",
+      "api": "zod.z.property",
+      "testFile": "test_17.js",
+      "promptIds": [
+        17
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'property'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_17.js:48:12)\n    at callFn (/work/testpilot2/node_modules/mocha/lib/runnable.js:366:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:354:5)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'property'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "property",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 663.1738759999862
+    },
+    {
+      "testName": "test_18.js",
+      "api": "zod.z.property",
+      "testFile": "test_18.js",
+      "promptIds": [
+        18
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Required/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"expected\": \"number\",\\n' +\n  '    \"code\": \"invalid_type\",\\n' +\n  '    \"path\": [\\n' +\n  '      \"age\"\\n' +\n  '    ],\\n' +\n  '    \"message\": \"Invalid input: expected number, received undefined\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_18.js:16:12)\n    at callFn (/work/testpilot2/node_modules/mocha/lib/runnable.js:366:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:354:5)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /Required/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"expected\": \"number\",\\n' +\n  '    \"code\": \"invalid_type\",\\n' +\n  '    \"path\": [\\n' +\n  '      \"age\"\\n' +\n  '    ],\\n' +\n  '    \"message\": \"Invalid input: expected number, received undefined\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"age\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 531.6756670000032
+    },
+    {
+      "testName": "test_19.js",
+      "api": "zod.z.mime",
+      "testFile": "test_19.js",
+      "promptIds": [
+        19
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ $ZodCheckMimeType {}\n- 'text/plain'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_19.js:8:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ $ZodCheckMimeType {}\n- 'text/plain'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {},
+        "expected": "text/plain",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 556.742249999952
+    },
+    {
+      "testName": "test_20.js",
+      "api": "zod.z.mime",
+      "testFile": "test_20.js",
+      "promptIds": [
+        20
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'mime_type'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_20.js:15:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'mime_type'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "mime_type",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 668.9223759999732
+    },
+    {
+      "testName": "test_21.js",
+      "api": "zod.z.mime",
+      "testFile": "test_21.js",
+      "promptIds": [
+        21
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'mime_type'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_21.js:45:12)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'mime_type'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "mime_type",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 547.3199589999858
+    },
+    {
+      "testName": "test_22.js",
+      "api": "zod.z.mime",
+      "testFile": "test_22.js",
+      "promptIds": [
+        22
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: check flag should be mime_type\n+ actual - expected\n\n+ undefined\n- 'mime_type'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_22.js:9:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "check flag should be mime_type\n+ actual - expected\n\n+ undefined\n- 'mime_type'\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "mime_type",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 679.5926669999608
+    },
+    {
+      "testName": "test_23.js",
+      "api": "zod.z.mime",
+      "testFile": "test_23.js",
+      "promptIds": [
+        23
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: check flag should be mime_type\n+ actual - expected\n\n+ undefined\n- 'mime_type'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_23.js:46:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "check flag should be mime_type\n+ actual - expected\n\n+ undefined\n- 'mime_type'\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "mime_type",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 494.6504999999888
+    },
+    {
+      "testName": "test_24.js",
+      "api": "zod.z.mime",
+      "testFile": "test_24.js",
+      "promptIds": [
+        24
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: simpleSchema.parse is not a function\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_24.js:9:37)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "simpleSchema.parse is not a function"
+      },
+      "coveredStatements": [],
+      "duration": 538.324626000016
+    },
+    {
+      "testName": "test_25.js",
+      "api": "zod.z.mime",
+      "testFile": "test_25.js",
+      "promptIds": [
+        25
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'image/png'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_25.js:10:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'image/png'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "image/png",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 478.5238750000135
+    },
+    {
+      "testName": "test_26.js",
+      "api": "zod.z.mime",
+      "testFile": "test_26.js",
+      "promptIds": [
+        26
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "\nError: Cannot find module 'zod-file'\nRequire stack:\n- /path/to/test/test_26.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)\n    at Function._load (node:internal/modules/cjs/loader:1216:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)\n    at Module.require (node:internal/modules/cjs/loader:1527:12)\n    at require (node:internal/modules/helpers:147:16)\n    at Object.<anonymous> (/path/to/test/test_26.js:7:1)\n    at Module._compile (node:internal/modules/cjs/loader:1781:14)\n    at Module.replacementCompile (/work/testpilot2/node_modules/append-transform/index.js:60:13)\n    at node:internal/modules/cjs/loader:1913:10\n    at Object.<anonymous> (/work/testpilot2/node_modules/append-transform/index.js:64:4)\n    at Module.load (node:internal/modules/cjs/loader:1505:32)\n    at Function._load (node:internal/modules/cjs/loader:1309:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)\n    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:335:3)\n    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:235:7)\n    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)\n    at async formattedImport (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:7:14)\n    at async exports.requireOrImport (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:38:28)\n    at async exports.loadFilesAsync (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:91:20)\n    at async singleRun (/work/testpilot2/node_modules/mocha/lib/cli/run-helpers.js:125:3)\n    at async exports.handler (/work/testpilot2/node_modules/mocha/lib/cli/run.js:370:5)\n"
+      },
+      "coveredStatements": [],
+      "duration": 433.8145829999703
+    },
+    {
+      "testName": "test_27.js",
+      "api": "zod.z.overwrite",
+      "testFile": "test_27.js",
+      "promptIds": [
+        27
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 805.8736679999856
+    },
+    {
+      "testName": "test_28.js",
+      "api": "zod.z.overwrite",
+      "testFile": "test_28.js",
+      "promptIds": [
+        28
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: check property should be \"overwrite\"\n+ actual - expected\n\n+ undefined\n- 'overwrite'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_28.js:16:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "check property should be \"overwrite\"\n+ actual - expected\n\n+ undefined\n- 'overwrite'\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "overwrite",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 432.98354200000176
+    },
+    {
+      "testName": "test_29.js",
+      "api": "zod.z.overwrite",
+      "testFile": "test_29.js",
+      "promptIds": [
+        29
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: tx property should reference the original transaction object\n+ actual - expected\n\n+ undefined\n- {\n-   data: 'sample',\n-   id: 123\n- }\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_29.js:17:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "tx property should reference the original transaction object\n+ actual - expected\n\n+ undefined\n- {\n-   data: 'sample',\n-   id: 123\n- }\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": {
+          "id": 123,
+          "data": "sample"
+        },
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 398.7555000000284
+    },
+    {
+      "testName": "test_30.js",
+      "api": "zod.z.overwrite",
+      "testFile": "test_30.js",
+      "promptIds": [
+        30
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: 3 should be doubled to 6 and fail max(5)\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_30.js:27:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "3 should be doubled to 6 and fail max(5)",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"origin\": \"number\",\n    \"code\": \"too_big\",\n    \"maximum\": 5,\n    \"inclusive\": true,\n    \"path\": [],\n    \"message\": \"Too big: expected number to be <=5\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 380.95704200002365
+    },
+    {
+      "testName": "test_31.js",
+      "api": "zod.z.overwrite",
+      "testFile": "test_31.js",
+      "promptIds": [
+        31
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: 3 should be doubled to 6 and fail max(5)\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_31.js:30:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "3 should be doubled to 6 and fail max(5)",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"origin\": \"number\",\n    \"code\": \"too_big\",\n    \"maximum\": 5,\n    \"inclusive\": true,\n    \"path\": [],\n    \"message\": \"Too big: expected number to be <=5\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 432.8341670000227
+    },
+    {
+      "testName": "test_32.js",
+      "api": "zod.z.overwrite",
+      "testFile": "test_32.js",
+      "promptIds": [
+        32
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 529.9776249999995
+    },
+    {
+      "testName": "test_33.js",
+      "api": "zod.z.normalize",
+      "testFile": "test_33.js",
+      "promptIds": [
+        33
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ $ZodCheckOverwrite {}\n- {\n-   age: 30,\n-   name: 'Alice'\n- }\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_33.js:26:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ $ZodCheckOverwrite {}\n- {\n-   age: 30,\n-   name: 'Alice'\n- }\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": "{}",
+        "expected": "{\n  \"age\": 30\n  \"name\": \"Alice\"\n}",
+        "operator": "deepStrictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 471.9196660000016
+    },
+    {
+      "testName": "test_34.js",
+      "api": "zod.z.normalize",
+      "testFile": "test_34.js",
+      "promptIds": [
+        34
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: normalizeFn is not a function\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_34.js:19:24)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "normalizeFn is not a function"
+      },
+      "coveredStatements": [],
+      "duration": 403.5649590000394
+    },
+    {
+      "testName": "test_35.js",
+      "api": "zod.z.normalize",
+      "testFile": "test_35.js",
+      "promptIds": [
+        35
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 393.8178750000079
+    },
+    {
+      "testName": "test_36.js",
+      "api": "zod.z.normalize",
+      "testFile": "test_36.js",
+      "promptIds": [
+        36
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ $ZodCheckOverwrite {}\n- {\n-   age: 30,\n-   name: 'Alice'\n- }\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_36.js:78:12)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ $ZodCheckOverwrite {}\n- {\n-   age: 30,\n-   name: 'Alice'\n- }\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": "{}",
+        "expected": "{\n  \"age\": 30\n  \"name\": \"Alice\"\n}",
+        "operator": "deepStrictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 437.36370799993165
+    },
+    {
+      "testName": "test_37.js",
+      "api": "zod.z.trim",
+      "testFile": "test_37.js",
+      "promptIds": [
+        37
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Expected string/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"expected\": \"string\",\\n' +\n  '    \"code\": \"invalid_type\",\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Invalid input: expected string, received number\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_37.js:19:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /Expected string/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"expected\": \"string\",\\n' +\n  '    \"code\": \"invalid_type\",\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Invalid input: expected string, received number\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [],\n    \"message\": \"Invalid input: expected string, received number\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 386.7142500000773
+    },
+    {
+      "testName": "test_38.js",
+      "api": "zod.z.trim",
+      "testFile": "test_38.js",
+      "promptIds": [
+        38
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: trimValidator is not a function\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_38.js:12:24)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "trimValidator is not a function"
+      },
+      "coveredStatements": [],
+      "duration": 428.72091600007843
+    },
+    {
+      "testName": "test_39.js",
+      "api": "zod.z.trim",
+      "testFile": "test_39.js",
+      "promptIds": [
+        39
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 435.157332999981
+    },
+    {
+      "testName": "test_40.js",
+      "api": "zod.z.trim",
+      "testFile": "test_40.js",
+      "promptIds": [
+        40
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 469.2722509999294
+    },
+    {
+      "testName": "test_41.js",
+      "api": "zod.z.trim",
+      "testFile": "test_41.js",
+      "promptIds": [
+        41
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "\nTypeError: Cannot read properties of undefined (reading 'describe')\n    at exports.describe (/work/zod/node_modules/.pnpm/mocha@10.8.2/node_modules/mocha/lib/mocha.js:111:26)\n    at Object.<anonymous> (/path/to/test/test_41.js:5:1)\n    at Module._compile (node:internal/modules/cjs/loader:1781:14)\n    at Module.replacementCompile (/work/testpilot2/node_modules/append-transform/index.js:60:13)\n    at node:internal/modules/cjs/loader:1913:10\n    at Object.<anonymous> (/work/testpilot2/node_modules/append-transform/index.js:64:4)\n    at Module.load (node:internal/modules/cjs/loader:1505:32)\n    at Function._load (node:internal/modules/cjs/loader:1309:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)\n    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:335:3)\n    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:235:7)\n    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)\n    at async formattedImport (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:7:14)\n    at async exports.requireOrImport (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:38:28)\n    at async exports.loadFilesAsync (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:91:20)\n    at async singleRun (/work/testpilot2/node_modules/mocha/lib/cli/run-helpers.js:125:3)\n    at async exports.handler (/work/testpilot2/node_modules/mocha/lib/cli/run.js:370:5)\n"
+      },
+      "coveredStatements": [],
+      "duration": 377.82037500001024
+    },
+    {
+      "testName": "test_42.js",
+      "api": "zod.z.trim",
+      "testFile": "test_42.js",
+      "promptIds": [
+        42
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /String must contain at least 3 character/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"origin\": \"string\",\\n' +\n  '    \"code\": \"too_small\",\\n' +\n  '    \"minimum\": 3,\\n' +\n  '    \"inclusive\": true,\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Too small: expected string to have >=3 characters\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_42.js:11:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /String must contain at least 3 character/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"origin\": \"string\",\\n' +\n  '    \"code\": \"too_small\",\\n' +\n  '    \"minimum\": 3,\\n' +\n  '    \"inclusive\": true,\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Too small: expected string to have >=3 characters\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"origin\": \"string\",\n    \"code\": \"too_small\",\n    \"minimum\": 3,\n    \"inclusive\": true,\n    \"path\": [],\n    \"message\": \"Too small: expected string to have >=3 characters\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 438.17866700002924
+    },
+    {
+      "testName": "test_43.js",
+      "api": "zod.z.trim",
+      "testFile": "test_43.js",
+      "promptIds": [
+        43
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: zod.string(...).default(...).trim is not a function\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_43.js:25:68)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "zod.string(...).default(...).trim is not a function"
+      },
+      "coveredStatements": [],
+      "duration": 397.2896259999834
+    },
+    {
+      "testName": "test_44.js",
+      "api": "zod.z.toLowerCase",
+      "testFile": "test_44.js",
+      "promptIds": [
+        44
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 469.655124999932
+    },
+    {
+      "testName": "test_45.js",
+      "api": "zod.z.toLowerCase",
+      "testFile": "test_45.js",
+      "promptIds": [
+        45
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: schema.parse is not a function\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_45.js:15:31)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "schema.parse is not a function"
+      },
+      "coveredStatements": [],
+      "duration": 411.16370899998583
+    },
+    {
+      "testName": "test_46.js",
+      "api": "zod.z.toLowerCase",
+      "testFile": "test_46.js",
+      "promptIds": [
+        46
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_47.js",
+      "api": "zod.z.toLowerCase",
+      "testFile": "test_47.js",
+      "promptIds": [
+        47
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 427.1557080000639
+    },
+    {
+      "testName": "test_48.js",
+      "api": "zod.z.toLowerCase",
+      "testFile": "test_48.js",
+      "promptIds": [
+        48
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Message should reflect min length\n+ actual - expected\n\n+ 'Too small: expected string to have >=5 characters'\n- 'String must contain at least 5 character(s)'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_48.js:23:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Message should reflect min length\n+ actual - expected\n\n+ 'Too small: expected string to have >=5 characters'\n- 'String must contain at least 5 character(s)'\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": "Too small: expected string to have >=5 characters",
+        "expected": "String must contain at least 5 character(s)",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 411.14020799996797
+    },
+    {
+      "testName": "test_49.js",
+      "api": "zod.z.toLowerCase",
+      "testFile": "test_49.js",
+      "promptIds": [
+        49
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 445.22608399996534
+    },
+    {
+      "testName": "test_50.js",
+      "api": "zod.z.toUpperCase",
+      "testFile": "test_50.js",
+      "promptIds": [
+        50
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 413.06808400002774
+    },
+    {
+      "testName": "test_51.js",
+      "api": "zod.z.toUpperCase",
+      "testFile": "test_51.js",
+      "promptIds": [
+        51
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: upper is not a function\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_51.js:8:28)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "upper is not a function"
+      },
+      "coveredStatements": [],
+      "duration": 468.1745420000516
+    },
+    {
+      "testName": "test_52.js",
+      "api": "zod.z.toUpperCase",
+      "testFile": "test_52.js",
+      "promptIds": [
+        52
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 378.6222500000149
+    },
+    {
+      "testName": "test_53.js",
+      "api": "zod.z.toUpperCase",
+      "testFile": "test_53.js",
+      "promptIds": [
+        53
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Expected string/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"expected\": \"string\",\\n' +\n  '    \"code\": \"invalid_type\",\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Invalid input: expected string, received number\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_53.js:15:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /Expected string/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"expected\": \"string\",\\n' +\n  '    \"code\": \"invalid_type\",\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Invalid input: expected string, received number\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [],\n    \"message\": \"Invalid input: expected string, received number\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 507.0867090000538
+    },
+    {
+      "testName": "test_54.js",
+      "api": "zod.z.toUpperCase",
+      "testFile": "test_54.js",
+      "promptIds": [
+        54
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 411.01700100000016
+    },
+    {
+      "testName": "test_55.js",
+      "api": "zod.z.toUpperCase",
+      "testFile": "test_55.js",
+      "promptIds": [
+        55
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 397.0661250000121
+    },
+    {
+      "testName": "test_56.js",
+      "api": "zod.z.parse",
+      "testFile": "test_56.js",
+      "promptIds": [
+        56
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 473.91954200004693
+    },
+    {
+      "testName": "test_57.js",
+      "api": "zod.z.parse",
+      "testFile": "test_57.js",
+      "promptIds": [
+        57
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected $ZodAsyncError for async schema\n+ actual - expected\n\n+ 'Error'\n- '$ZodAsyncError'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_57.js:32:20)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected $ZodAsyncError for async schema\n+ actual - expected\n\n+ 'Error'\n- '$ZodAsyncError'\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": "Error",
+        "expected": "$ZodAsyncError",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 425.1598750000121
+    },
+    {
+      "testName": "test_58.js",
+      "api": "zod.z.parse",
+      "testFile": "test_58.js",
+      "promptIds": [
+        58
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "\nTypeError: Cannot read properties of undefined (reading 'describe')\n    at exports.describe (/work/zod/node_modules/.pnpm/mocha@10.8.2/node_modules/mocha/lib/mocha.js:111:26)\n    at Object.<anonymous> (/path/to/test/test_58.js:5:1)\n    at Module._compile (node:internal/modules/cjs/loader:1781:14)\n    at Module.replacementCompile (/work/testpilot2/node_modules/append-transform/index.js:60:13)\n    at node:internal/modules/cjs/loader:1913:10\n    at Object.<anonymous> (/work/testpilot2/node_modules/append-transform/index.js:64:4)\n    at Module.load (node:internal/modules/cjs/loader:1505:32)\n    at Function._load (node:internal/modules/cjs/loader:1309:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)\n    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:335:3)\n    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:235:7)\n    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)\n    at async formattedImport (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:7:14)\n    at async exports.requireOrImport (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:38:28)\n    at async exports.loadFilesAsync (/work/testpilot2/node_modules/mocha/lib/nodejs/esm-utils.js:91:20)\n    at async singleRun (/work/testpilot2/node_modules/mocha/lib/cli/run-helpers.js:125:3)\n    at async exports.handler (/work/testpilot2/node_modules/mocha/lib/cli/run.js:370:5)\n"
+      },
+      "coveredStatements": [],
+      "duration": 434.2587920000078
+    },
+    {
+      "testName": "test_59.js",
+      "api": "zod.z.parse",
+      "testFile": "test_59.js",
+      "promptIds": [
+        59
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 422.86437500000466
+    },
+    {
+      "testName": "test_60.js",
+      "api": "zod.z.parse",
+      "testFile": "test_60.js",
+      "promptIds": [
+        60
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: datetime should be parsed to a Date object\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_60.js:10:9)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "datetime should be parsed to a Date object",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": "false",
+        "expected": "true",
+        "operator": "==",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 457.17524999997113
+    },
+    {
+      "testName": "test_61.js",
+      "api": "zod.z.parse",
+      "testFile": "test_61.js",
+      "promptIds": [
+        61
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_62.js",
+      "api": "zod.z.parseAsync",
+      "testFile": "test_62.js",
+      "promptIds": [
+        62
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: Cannot read properties of undefined (reading 'map')\n    at /work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_62.js:31:47",
+        "message": "Cannot read properties of undefined (reading 'map')"
+      },
+      "coveredStatements": [],
+      "duration": 596.7965009999461
+    },
+    {
+      "testName": "test_63.js",
+      "api": "zod.z.parseAsync",
+      "testFile": "test_63.js",
+      "promptIds": [
+        63
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 563.8789589999942
+    },
+    {
+      "testName": "test_64.js",
+      "api": "zod.z.parseAsync",
+      "testFile": "test_64.js",
+      "promptIds": [
+        64
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: Cannot read properties of undefined (reading '0')\n    at /work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_64.js:27:46",
+        "message": "Cannot read properties of undefined (reading '0')"
+      },
+      "coveredStatements": [],
+      "duration": 413.18987400003243
+    },
+    {
+      "testName": "test_65.js",
+      "api": "zod.z.parseAsync",
+      "testFile": "test_65.js",
+      "promptIds": [
+        65
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: Cannot read properties of undefined (reading '0')\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_65.js:28:19)",
+        "message": "Cannot read properties of undefined (reading '0')"
+      },
+      "coveredStatements": [],
+      "duration": 499.3924170000246
+    },
+    {
+      "testName": "test_66.js",
+      "api": "zod.z.parseAsync",
+      "testFile": "test_66.js",
+      "promptIds": [
+        66
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 393.66166699992027
+    },
+    {
+      "testName": "test_67.js",
+      "api": "zod.z.parseAsync",
+      "testFile": "test_67.js",
+      "promptIds": [
+        67
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 417.5388340000063
+    },
+    {
+      "testName": "test_68.js",
+      "api": "zod.z.safeParse",
+      "testFile": "test_68.js",
+      "promptIds": [
+        68
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 407.13320800010115
+    },
+    {
+      "testName": "test_69.js",
+      "api": "zod.z.safeParse",
+      "testFile": "test_69.js",
+      "promptIds": [
+        69
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: should throw a ZodAsyncError for async schemas\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_69.js:29:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "should throw a ZodAsyncError for async schemas",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 422.44020800001454
+    },
+    {
+      "testName": "test_70.js",
+      "api": "zod.z.safeParse",
+      "testFile": "test_70.js",
+      "promptIds": [
+        70
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: should throw a ZodError (internal ZodAsyncError) for async schemas\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_70.js:28:12)\n    at callFn (/work/testpilot2/node_modules/mocha/lib/runnable.js:366:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:354:5)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "should throw a ZodError (internal ZodAsyncError) for async schemas",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 406.2807080000639
+    },
+    {
+      "testName": "test_71.js",
+      "api": "zod.z.safeParse",
+      "testFile": "test_71.js",
+      "promptIds": [
+        71
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: async schemas should throw $ZodAsyncError when using safeParse\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_71.js:23:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "async schemas should throw $ZodAsyncError when using safeParse",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 419.6437919999007
+    },
+    {
+      "testName": "test_72.js",
+      "api": "zod.z.safeParse",
+      "testFile": "test_72.js",
+      "promptIds": [
+        72
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_73.js",
+      "api": "zod.z.safeParse",
+      "testFile": "test_73.js",
+      "promptIds": [
+        73
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_74.js",
+      "api": "zod.z.safeParse",
+      "testFile": "test_74.js",
+      "promptIds": [
+        74
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_75.js",
+      "api": "zod.z.safeParseAsync",
+      "testFile": "test_75.js",
+      "promptIds": [
+        75
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 487.7007080001058
+    },
+    {
+      "testName": "test_76.js",
+      "api": "zod.z.safeParseAsync",
+      "testFile": "test_76.js",
+      "promptIds": [
+        76
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 492.0417080000043
+    },
+    {
+      "testName": "test_77.js",
+      "api": "zod.z.safeParseAsync",
+      "testFile": "test_77.js",
+      "promptIds": [
+        77
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 441.2087089999113
+    },
+    {
+      "testName": "test_78.js",
+      "api": "zod.z.safeParseAsync",
+      "testFile": "test_78.js",
+      "promptIds": [
+        78
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 421.9563749998342
+    },
+    {
+      "testName": "test_79.js",
+      "api": "zod.z.setErrorMap",
+      "testFile": "test_79.js",
+      "promptIds": [
+        79
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 413.09324999991804
+    },
+    {
+      "testName": "test_80.js",
+      "api": "zod.z.setErrorMap",
+      "testFile": "test_80.js",
+      "promptIds": [
+        80
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: Cannot read properties of undefined (reading '0')\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_80.js:26:40)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Cannot read properties of undefined (reading '0')"
+      },
+      "coveredStatements": [],
+      "duration": 439.12362500000745
+    },
+    {
+      "testName": "test_81.js",
+      "api": "zod.z.setErrorMap",
+      "testFile": "test_81.js",
+      "promptIds": [
+        81
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_82.js",
+      "api": "zod.z.getErrorMap",
+      "testFile": "test_82.js",
+      "promptIds": [
+        82
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'undefined'\n- 'function'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_82.js:9:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'undefined'\n- 'function'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": "undefined",
+        "expected": "function",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 520.9761250000447
+    },
+    {
+      "testName": "test_83.js",
+      "api": "zod.z.getErrorMap",
+      "testFile": "test_83.js",
+      "promptIds": [
+        83
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: zod.z.getDefaultErrorMap is not a function\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_83.js:22:31)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "zod.z.getDefaultErrorMap is not a function"
+      },
+      "coveredStatements": [],
+      "duration": 438.6161250001751
+    },
+    {
+      "testName": "test_84.js",
+      "api": "zod.z.getErrorMap",
+      "testFile": "test_84.js",
+      "promptIds": [
+        84
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 495.9741670000367
+    },
+    {
+      "testName": "test_85.js",
+      "api": "zod.z.getErrorMap",
+      "testFile": "test_85.js",
+      "promptIds": [
+        85
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'undefined'\n- 'function'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-HfeMhg/test_85.js:11:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'undefined'\n- 'function'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": "undefined",
+        "expected": "function",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": []
+    }
+  ],
+  "coverage": {
+    "total": {
+      "lines": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "statements": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "functions": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branches": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": "Unknown"
+      }
+    },
+    "/work/zod/experiments/testpilot-2026-09/wrappers/zod/index.js": {
+      "lines": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "functions": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "statements": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branches": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      }
+    }
+  }
+}

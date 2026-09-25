@@ -1,0 +1,167 @@
+[
+  {
+    "accessPath": "zod.z.startsWith",
+    "descriptor": {
+      "type": "function",
+      "signature": "(prefix, params)",
+      "implementation": "function _startsWith(prefix, params) {\n    return new checks.$ZodCheckStartsWith({\n        check: \"string_format\",\n        format: \"starts_with\",\n        ...util.normalizeParams(params),\n        prefix,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.endsWith",
+    "descriptor": {
+      "type": "function",
+      "signature": "(suffix, params)",
+      "implementation": "function _endsWith(suffix, params) {\n    return new checks.$ZodCheckEndsWith({\n        check: \"string_format\",\n        format: \"ends_with\",\n        ...util.normalizeParams(params),\n        suffix,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.property",
+    "descriptor": {
+      "type": "function",
+      "signature": "(property, schema, params)",
+      "implementation": "function _property(property, schema, params) {\n    return new checks.$ZodCheckProperty({\n        check: \"property\",\n        property,\n        schema,\n        ...util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.mime",
+    "descriptor": {
+      "type": "function",
+      "signature": "(types, params)",
+      "implementation": "function _mime(types, params) {\n    return new checks.$ZodCheckMimeType({\n        check: \"mime_type\",\n        mime: types,\n        ...util.normalizeParams(params),\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.overwrite",
+    "descriptor": {
+      "type": "function",
+      "signature": "(tx)",
+      "implementation": "function _overwrite(tx) {\n    return new checks.$ZodCheckOverwrite({\n        check: \"overwrite\",\n        tx,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.normalize",
+    "descriptor": {
+      "type": "function",
+      "signature": "(form)",
+      "implementation": "function _normalize(form) {\n    return _overwrite((input) => input.normalize(form));\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.trim",
+    "descriptor": {
+      "type": "function",
+      "signature": "()",
+      "implementation": "function _trim() {\n    return _overwrite((input) => input.trim());\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.toLowerCase",
+    "descriptor": {
+      "type": "function",
+      "signature": "()",
+      "implementation": "function _toLowerCase() {\n    return _overwrite((input) => input.toLowerCase());\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.toUpperCase",
+    "descriptor": {
+      "type": "function",
+      "signature": "()",
+      "implementation": "function _toUpperCase() {\n    return _overwrite((input) => input.toUpperCase());\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.parse",
+    "descriptor": {
+      "type": "function",
+      "signature": "(schema, value, _ctx, _params)",
+      "implementation": "(schema, value, _ctx, _params) => {\n    const ctx = _ctx ? Object.assign(_ctx, { async: false }) : { async: false };\n    const result = schema._zod.run({ value, issues: [] }, ctx);\n    if (result instanceof Promise) {\n        throw new core.$ZodAsyncError();\n    }\n    if (result.issues.length) {\n        const e = new (_params?.Err ?? _Err)(result.issues.map((iss) => util.finalizeIssue(iss, ctx, core.config())));\n        util.captureStackTrace(e, _params?.callee);\n        throw e;\n    }\n    return result.value;\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.parseAsync",
+    "descriptor": {
+      "type": "function",
+      "signature": "(schema, value, _ctx, params)",
+      "implementation": "async (schema, value, _ctx, params) => {\n    const ctx = _ctx ? Object.assign(_ctx, { async: true }) : { async: true };\n    let result = schema._zod.run({ value, issues: [] }, ctx);\n    if (result instanceof Promise)\n        result = await result;\n    if (result.issues.length) {\n        const e = new (params?.Err ?? _Err)(result.issues.map((iss) => util.finalizeIssue(iss, ctx, core.config())));\n        util.captureStackTrace(e, params?.callee);\n        throw e;\n    }\n    return result.value;\n}",
+      "isAsync": true,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.safeParse",
+    "descriptor": {
+      "type": "function",
+      "signature": "(schema, value, _ctx)",
+      "implementation": "(schema, value, _ctx) => {\n    const ctx = _ctx ? { ..._ctx, async: false } : { async: false };\n    const result = schema._zod.run({ value, issues: [] }, ctx);\n    if (result instanceof Promise) {\n        throw new core.$ZodAsyncError();\n    }\n    return result.issues.length\n        ? {\n            success: false,\n            error: new (_Err ?? errors.$ZodError)(result.issues.map((iss) => util.finalizeIssue(iss, ctx, core.config()))),\n        }\n        : { success: true, data: result.value };\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.safeParseAsync",
+    "descriptor": {
+      "type": "function",
+      "signature": "(schema, value, _ctx)",
+      "implementation": "async (schema, value, _ctx) => {\n    const ctx = _ctx ? Object.assign(_ctx, { async: true }) : { async: true };\n    let result = schema._zod.run({ value, issues: [] }, ctx);\n    if (result instanceof Promise)\n        result = await result;\n    return result.issues.length\n        ? {\n            success: false,\n            error: new _Err(result.issues.map((iss) => util.finalizeIssue(iss, ctx, core.config()))),\n        }\n        : { success: true, data: result.value };\n}",
+      "isAsync": true,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.setErrorMap",
+    "descriptor": {
+      "type": "function",
+      "signature": "(map)",
+      "implementation": "function setErrorMap(map) {\n    core.config({\n        customError: map,\n    });\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  },
+  {
+    "accessPath": "zod.z.getErrorMap",
+    "descriptor": {
+      "type": "function",
+      "signature": "()",
+      "implementation": "function getErrorMap() {\n    return core.config().customError;\n}",
+      "isAsync": false,
+      "isConstructor": false
+    },
+    "packageName": "zod"
+  }
+]

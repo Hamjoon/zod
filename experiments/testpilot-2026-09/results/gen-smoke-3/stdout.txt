@@ -1,0 +1,26 @@
+Warning: --strictResponses has no effect when not using --responses
+Using openai/gpt-oss-120b at https://openrouter.ai/api/v1/chat/completions with 3 attempts and NoRateLimiter
+Running experiment for zod
+Loading API from /work/zod/experiments/testpilot-2026-09/results/api-smoke-2.json
+Extracting snippets
+Generating tests
+test_0.js (for zod.z.discriminatedUnion at temperature 0, 3 snippets available): FAILED
+(node:9) [DEP0147] DeprecationWarning: In future versions of Node.js, fs.rmdir(path, { recursive: true }) will be removed. Use fs.rm(path, { recursive: true }) instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+test_1.js (for zod.z.discriminatedUnion at temperature 0, 3 snippets available): FAILED
+test_2.js (for zod.z.discriminatedUnion at temperature 0, 3 snippets available): FAILED
+test_3.js (for zod.z.discriminatedUnion at temperature 0, 3 snippets available): PASSED
+test_4.js (for zod.z.discriminatedUnion at temperature 0, 3 snippets available): PASSED
+test_5.js (for zod.z.discriminatedUnion at temperature 0, 3 snippets available): FAILED
+test_6.js (for zod.z.discriminatedUnion at temperature 0, 3 snippets available): FAILED
+test_7.js (for zod.z.check at temperature 0, 3 snippets available): FAILED
+test_8.js (for zod.z.check at temperature 0, 3 snippets available): PASSED
+test_9.js (for zod.z.check at temperature 0, 3 snippets available): PASSED
+test_10.js (for zod.z.check at temperature 0, 3 snippets available): FAILED
+test_11.js (for zod.z.check at temperature 0, 3 snippets available): FAILED
+test_12.js (for zod.z.check at temperature 0, 3 snippets available): FAILED
+4 passed, 9 failed, 0 pending, 0 other
+API coverage:
+  zod.z.discriminatedUnion: [31m✗test_0.js[0m, [31m✗test_1.js[0m, [31m✗test_2.js[0m, [32m✓test_3.js[0m, [32m✓test_4.js[0m, [31m✗test_5.js[0m, [31m✗test_6.js[0m
+  zod.z.check: [31m✗test_7.js[0m, [32m✓test_8.js[0m, [32m✓test_9.js[0m, [31m✗test_10.js[0m, [31m✗test_11.js[0m, [31m✗test_12.js[0m
+100% statement coverage

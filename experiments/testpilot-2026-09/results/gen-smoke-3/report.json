@@ -1,0 +1,315 @@
+{
+  "metaData": {
+    "packageName": "zod",
+    "useDocSnippets": true,
+    "useCodeSnippets": false,
+    "numSnippets": 3,
+    "snippetLength": 20,
+    "numCompletions": 1
+  },
+  "nrUniqueSnippets": 6,
+  "stats": {
+    "nrTests": 13,
+    "nrPasses": 4,
+    "nrFailures": 9,
+    "nrPending": 0,
+    "nrOther": 0,
+    "snippetExtractionTime": 350.781167,
+    "codexQueryTime": 0,
+    "totalTime": 318865.92239599995
+  },
+  "tests": [
+    {
+      "testName": "test_0.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_0.js",
+      "promptIds": [
+        0
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Invalid discriminator value/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"code\": \"invalid_union\",\\n' +\n  '    \"errors\": [],\\n' +\n  '    \"note\": \"No matching discriminator\",\\n' +\n  '    \"path\": [\\n' +\n  '      \"kind\"\\n' +\n  '    ],\\n' +\n  '    \"message\": \"Invalid input\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-yU66DA/test_0.js:32:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /Invalid discriminator value/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"code\": \"invalid_union\",\\n' +\n  '    \"errors\": [],\\n' +\n  '    \"note\": \"No matching discriminator\",\\n' +\n  '    \"path\": [\\n' +\n  '      \"kind\"\\n' +\n  '    ],\\n' +\n  '    \"message\": \"Invalid input\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"code\": \"invalid_union\",\n    \"errors\": [],\n    \"note\": \"No matching discriminator\",\n    \"path\": [\n      \"kind\"\n    ],\n    \"message\": \"Invalid input\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 479.3743750000003
+    },
+    {
+      "testName": "test_1.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_1.js",
+      "promptIds": [
+        1
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   undefined,\n+   undefined\n-   'cat',\n-   'dog'\n  ]\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-yU66DA/test_1.js:26:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   undefined,\n+   undefined\n-   'cat',\n-   'dog'\n  ]\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": "[\n  [undefined]\n  [undefined]\n]",
+        "expected": "[\n  \"cat\"\n  \"dog\"\n]",
+        "operator": "deepStrictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 457.42837500000314
+    },
+    {
+      "testName": "test_2.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_2.js",
+      "promptIds": [
+        2
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: opt._def.shape is not a function\n    at /work/zod/experiments/testpilot-2026-09/wrappers/zod/test-yU66DA/test_2.js:26:68\n    at Array.map (<anonymous>)\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-yU66DA/test_2.js:26:48)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "opt._def.shape is not a function"
+      },
+      "coveredStatements": [],
+      "duration": 634.8538339999941
+    },
+    {
+      "testName": "test_3.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_3.js",
+      "promptIds": [
+        3
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 565.8682079999999
+    },
+    {
+      "testName": "test_4.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_4.js",
+      "promptIds": [
+        4
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 406.29275000002235
+    },
+    {
+      "testName": "test_5.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_5.js",
+      "promptIds": [
+        5
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Invalid discriminator value/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"code\": \"invalid_union\",\\n' +\n  '    \"errors\": [],\\n' +\n  '    \"note\": \"No matching discriminator\",\\n' +\n  '    \"path\": [\\n' +\n  '      \"status\"\\n' +\n  '    ],\\n' +\n  '    \"message\": \"Invalid input\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-yU66DA/test_5.js:22:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /Invalid discriminator value/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"code\": \"invalid_union\",\\n' +\n  '    \"errors\": [],\\n' +\n  '    \"note\": \"No matching discriminator\",\\n' +\n  '    \"path\": [\\n' +\n  '      \"status\"\\n' +\n  '    ],\\n' +\n  '    \"message\": \"Invalid input\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"code\": \"invalid_union\",\n    \"errors\": [],\n    \"note\": \"No matching discriminator\",\n    \"path\": [\n      \"status\"\n    ],\n    \"message\": \"Invalid input\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 490.7149169999757
+    },
+    {
+      "testName": "test_6.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_6.js",
+      "promptIds": [
+        6
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Required/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"expected\": \"string\",\\n' +\n  '    \"code\": \"invalid_type\",\\n' +\n  '    \"path\": [\\n' +\n  '      \"data\"\\n' +\n  '    ],\\n' +\n  '    \"message\": \"Invalid input: expected string, received undefined\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-yU66DA/test_6.js:65:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /Required/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"expected\": \"string\",\\n' +\n  '    \"code\": \"invalid_type\",\\n' +\n  '    \"path\": [\\n' +\n  '      \"data\"\\n' +\n  '    ],\\n' +\n  '    \"message\": \"Invalid input: expected string, received undefined\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"data\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 487.1508750000212
+    },
+    {
+      "testName": "test_7.js",
+      "api": "zod.z.check",
+      "testFile": "test_7.js",
+      "promptIds": [
+        7
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Missing expected exception.\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-yU66DA/test_7.js:7:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Missing expected exception.",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 393.77029200000106
+    },
+    {
+      "testName": "test_8.js",
+      "api": "zod.z.check",
+      "testFile": "test_8.js",
+      "promptIds": [
+        8
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 423.51170800000546
+    },
+    {
+      "testName": "test_9.js",
+      "api": "zod.z.check",
+      "testFile": "test_9.js",
+      "promptIds": [
+        9
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 377.63595799999894
+    },
+    {
+      "testName": "test_10.js",
+      "api": "zod.z.check",
+      "testFile": "test_10.js",
+      "promptIds": [
+        10
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: zod.function(...).args is not a function\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-yU66DA/test_10.js:10:14)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "zod.function(...).args is not a function"
+      },
+      "coveredStatements": [],
+      "duration": 385.3045829999901
+    },
+    {
+      "testName": "test_11.js",
+      "api": "zod.z.check",
+      "testFile": "test_11.js",
+      "promptIds": [
+        11
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "TypeError: Cannot read properties of undefined (reading 'some')\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-yU66DA/test_11.js:45:29)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Cannot read properties of undefined (reading 'some')"
+      },
+      "coveredStatements": [],
+      "duration": 415.40983300001244
+    },
+    {
+      "testName": "test_12.js",
+      "api": "zod.z.check",
+      "testFile": "test_12.js",
+      "promptIds": [
+        12
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    }
+  ],
+  "coverage": {
+    "total": {
+      "lines": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "statements": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "functions": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branches": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": "Unknown"
+      }
+    },
+    "/work/zod/experiments/testpilot-2026-09/wrappers/zod/index.js": {
+      "lines": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "functions": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "statements": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branches": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      }
+    }
+  }
+}

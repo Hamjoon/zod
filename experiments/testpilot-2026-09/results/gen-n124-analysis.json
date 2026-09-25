@@ -1,0 +1,93 @@
+{
+  "totals": {
+    "functions": 124,
+    "functionsWithTests": 124,
+    "functionsWithPasses": 112,
+    "prompts": 763,
+    "emptyCompletionPrompts": 7,
+    "multipleItPrompts": 1,
+    "tests": 757,
+    "statuses": {
+      "PASSED": 266,
+      "FAILED": 491
+    }
+  },
+  "perStratum": [
+    [
+      "S",
+      74,
+      438,
+      172,
+      "39.27%"
+    ],
+    [
+      "C",
+      35,
+      231,
+      57,
+      "24.68%"
+    ],
+    [
+      "Q",
+      15,
+      88,
+      37,
+      "42.05%"
+    ]
+  ],
+  "failureCategories": {
+    "correctness": 140,
+    "assertion": 331,
+    "other": 17,
+    "timeout": 3
+  },
+  "refinerPrompts": {
+    "Base": 124,
+    "FunctionBodyIncluder": 124,
+    "FunctionBodyIncluder+SnippetIncluder": 115,
+    "RetryWithError": 285,
+    "SnippetIncluder": 115
+  },
+  "refinerPassingTests": {
+    "Base": 49,
+    "FunctionBodyIncluder": 47,
+    "FunctionBodyIncluder+SnippetIncluder": 50,
+    "RetryWithError": 78,
+    "SnippetIncluder": 42
+  },
+  "metaData": {
+    "packageName": "zod",
+    "useDocSnippets": true,
+    "useCodeSnippets": false,
+    "numSnippets": 3,
+    "snippetLength": 20,
+    "numCompletions": 1
+  },
+  "stats": {
+    "gen-n124-run2": {
+      "nrTests": 671,
+      "nrPasses": 241,
+      "nrFailures": 430,
+      "nrPending": 0,
+      "nrOther": 0,
+      "snippetExtractionTime": 29220.868555,
+      "codexQueryTime": 0,
+      "totalTime": 18063350.78643
+    },
+    "gen-n124-tail": {
+      "nrTests": 86,
+      "nrPasses": 25,
+      "nrFailures": 61,
+      "nrPending": 0,
+      "nrOther": 0,
+      "snippetExtractionTime": 5332.550336,
+      "codexQueryTime": 0,
+      "totalTime": 1233569.325477
+    }
+  },
+  "failedRequests": 0,
+  "nullCompletions": {
+    "gen-n124-run2": 7,
+    "gen-n124-tail": 0
+  }
+}

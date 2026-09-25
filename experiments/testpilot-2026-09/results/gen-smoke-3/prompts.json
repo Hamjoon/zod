@@ -1,0 +1,279 @@
+{
+  "metaData": {
+    "packageName": "zod",
+    "useDocSnippets": true,
+    "useCodeSnippets": false,
+    "numSnippets": 3,
+    "snippetLength": 20,
+    "numCompletions": 1
+  },
+  "prompts": [
+    {
+      "id": 0,
+      "file": "prompt_0.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\n\ndescribe('test zod', function() {\n    it('test zod.z.discriminatedUnion', function(done) {\n        // Define two object schemas that share the discriminator key \"kind\"\n        const ShapeA = zod.z.object({\n            kind: zod.z.literal('a'),\n            foo: zod.z.string()\n        });\n\n        const ShapeB = zod.z.object({\n            kind: zod.z.literal('b'),\n            bar: zod.z.number()\n        });\n\n        // Create the discriminated union schema\n        const Union = zod.z.discriminatedUnion('kind', [ShapeA, ShapeB]);\n\n        // ---- Positive cases -------------------------------------------------\n        // Valid instance of ShapeA\n        const a = { kind: 'a', foo: 'hello' };\n        assert.deepStrictEqual(Union.parse(a), a);\n\n        // Valid instance of ShapeB\n        const b = { kind: 'b', bar: 42 };\n        assert.deepStrictEqual(Union.parse(b), b);\n\n        // ---- Negative cases -------------------------------------------------\n        // Missing discriminator key\n        assert.throws(\n            () => Union.parse({ foo: 'missing kind' }),\n            /Invalid discriminator value/\n        );\n\n        // Discriminator value not covered by any option\n        assert.throws(\n            () => Union.parse({ kind: 'c', foo: 'unknown kind' }),\n            /Invalid discriminator value/\n        );\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_0.js"
+      ],
+      "provenance": []
+    },
+    {
+      "id": 1,
+      "file": "prompt_1.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\n\ndescribe('test zod', function() {\n    it('test zod.z.discriminatedUnion', function(done) {\n        // Define two object schemas that share the same discriminator key\n        const Cat = zod.object({\n            type: zod.literal('cat'),\n            meow: zod.string()\n        });\n        const Dog = zod.object({\n            type: zod.literal('dog'),\n            bark: zod.string()\n        });\n\n        // Create a discriminated union schema\n        const Pet = zod.discriminatedUnion('type', [Cat, Dog]);\n\n        // ---- Internal definition checks ----\n        // The discriminator key should be stored correctly\n        assert.strictEqual(Pet._def.discriminator, 'type');\n\n        // The options should contain the literal values we supplied\n        const literalValues = Pet._def.options.map(opt => opt._def.shape.type._def.value);\n        assert.deepStrictEqual(literalValues.sort(), ['cat', 'dog']);\n\n        // ---- Valid parsing ----\n        const parsedCat = Pet.parse({ type: 'cat', meow: 'purr' });\n        assert.deepStrictEqual(parsedCat, { type: 'cat', meow: 'purr' });\n\n        const parsedDog = Pet.parse({ type: 'dog', bark: 'woof' });\n        assert.deepStrictEqual(parsedDog, { type: 'dog', bark: 'woof' });\n\n        // ---- Invalid parsing ----\n        // Wrong shape for a known discriminator value\n        assert.throws(\n            () => Pet.parse({ type: 'cat', bark: 'woof' }),\n            /Expected string/\n        );\n\n        // Unknown discriminator value\n        assert.throws(\n            () => Pet.parse({ type: 'bird', chirp: 'tweet' }),\n            /Invalid discriminator value/\n        );\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_1.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 0,
+          "test": 0,
+          "refiner": "FunctionBodyIncluder"
+        },
+        {
+          "originalPrompt": 4,
+          "test": 4,
+          "refiner": "FunctionBodyIncluder"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "file": "prompt_2.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\n\ndescribe('test zod', function() {\n    it('test zod.z.discriminatedUnion', function(done) {\n        // Define two object schemas that share the same discriminator key\n        const Cat = zod.object({\n            type: zod.literal('cat'),\n            meow: zod.string()\n        });\n        const Dog = zod.object({\n            type: zod.literal('dog'),\n            bark: zod.string()\n        });\n\n        // Create a discriminated union schema\n        const Pet = zod.discriminatedUnion('type', [Cat, Dog]);\n\n        // ---- Internal definition checks ----\n        // The discriminator key should be stored correctly\n        assert.strictEqual(Pet._def.discriminator, 'type');\n\n        // The options should contain the literal values we supplied\n        // In Zod v3 the shape is a function, so we need to call it to get the actual shape object\n        const literalValues = Pet._def.options.map(opt => opt._def.shape().type._def.value);\n        assert.deepStrictEqual(literalValues.sort(), ['cat', 'dog']);\n\n        // ---- Valid parsing ----\n        const parsedCat = Pet.parse({ type: 'cat', meow: 'purr' });\n        assert.deepStrictEqual(parsedCat, { type: 'cat', meow: 'purr' });\n\n        const parsedDog = Pet.parse({ type: 'dog', bark: 'woof' });\n        assert.deepStrictEqual(parsedDog, { type: 'dog', bark: 'woof' });\n\n        // ---- Invalid parsing ----\n        // Wrong shape for a known discriminator value\n        assert.throws(\n            () => Pet.parse({ type: 'cat', bark: 'woof' }),\n            /Expected string/\n        );\n\n        // Unknown discriminator value\n        assert.throws(\n            () => Pet.parse({ type: 'bird', chirp: 'tweet' }),\n            /Invalid discriminator value/\n        );\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_2.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 1,
+          "test": 1,
+          "refiner": "RetryWithError"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "file": "prompt_3.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\ndescribe('test zod', function() {\n    it('test zod.z.discriminatedUnion', function(done) {\n        // 1️⃣ Simple discriminated union with literal discriminators\n        const Simple = zod.discriminatedUnion('status', [\n            zod.object({ status: zod.literal('success'), data: zod.string() }),\n            zod.object({ status: zod.literal('failed'), error: zod.string() })\n        ]);\n\n        // valid parses\n        assert.deepStrictEqual(\n            Simple.parse({ status: 'success', data: 'ok' }),\n            { status: 'success', data: 'ok' }\n        );\n        assert.deepStrictEqual(\n            Simple.parse({ status: 'failed', error: 'boom' }),\n            { status: 'failed', error: 'boom' }\n        );\n\n        // invalid discriminator value should throw\n        assert.throws(() => Simple.parse({ status: 'unknown', data: 'x' }));\n\n        // 2️⃣ Discriminator that itself is a union of literals\n        const UnionDisc = zod.discriminatedUnion('status', [\n            zod.object({ status: zod.literal('aaa'), data: zod.string() }),\n            zod.object({ status: zod.union([zod.literal('bbb'), zod.literal('ccc')]) })\n        ]);\n\n        assert.deepStrictEqual(\n            UnionDisc.parse({ status: 'aaa', data: 'test' }),\n            { status: 'aaa', data: 'test' }\n        );\n        assert.deepStrictEqual(\n            UnionDisc.parse({ status: 'bbb' }),\n            { status: 'bbb' }\n        );\n        assert.deepStrictEqual(\n            UnionDisc.parse({ status: 'ccc' }),\n            { status: 'ccc' }\n        );\n        assert.throws(() => UnionDisc.parse({ status: 'ddd' }));\n\n        // 3️⃣ Nested discriminated unions\n        const BaseError = zod.object({\n            status: zod.literal('failed'),\n            message: zod.string()\n        });\n\n        const Nested = zod.discriminatedUnion('status', [\n            zod.object({ status: zod.literal('success'), data: zod.string() }),\n            zod.discriminatedUnion('code', [\n                BaseError.extend({ code: zod.literal(400) }),\n                BaseError.extend({ code: zod.literal(401) }),\n                BaseError.extend({ code: zod.literal(500) })\n            ])\n        ]);\n\n        // valid parses for both branches\n        assert.deepStrictEqual(\n            Nested.parse({ status: 'success', data: 'ok' }),\n            { status: 'success', data: 'ok' }\n        );\n        assert.deepStrictEqual(\n            Nested.parse({ status: 'failed', message: 'bad', code: 400 }),\n            { status: 'failed', message: 'bad', code: 400 }\n        );\n\n        // invalid code should throw\n        assert.throws(() => Nested.parse({ status: 'failed', message: 'bad', code: 402 }));\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_3.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 2,
+          "test": 2,
+          "refiner": "SnippetIncluder"
+        },
+        {
+          "originalPrompt": 1,
+          "test": 1,
+          "refiner": "SnippetIncluder"
+        },
+        {
+          "originalPrompt": 5,
+          "test": 5,
+          "refiner": "FunctionBodyIncluder"
+        },
+        {
+          "originalPrompt": 6,
+          "test": 6,
+          "refiner": "FunctionBodyIncluder"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "file": "prompt_4.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\n\ndescribe('test zod', function() {\n    it('test zod.z.discriminatedUnion', function(done) {\n        // Define two object schemas that share the discriminator key \"kind\"\n        const ShapeA = zod.z.object({\n            kind: zod.z.literal('a'),\n            foo: zod.z.string()\n        });\n\n        const ShapeB = zod.z.object({\n            kind: zod.z.literal('b'),\n            bar: zod.z.number()\n        });\n\n        // Create the discriminated union schema\n        const Union = zod.z.discriminatedUnion('kind', [ShapeA, ShapeB]);\n\n        // ---- Positive cases -------------------------------------------------\n        // Valid instance of ShapeA\n        const a = { kind: 'a', foo: 'hello' };\n        assert.deepStrictEqual(Union.parse(a), a);\n\n        // Valid instance of ShapeB\n        const b = { kind: 'b', bar: 42 };\n        assert.deepStrictEqual(Union.parse(b), b);\n\n        // ---- Negative cases -------------------------------------------------\n        // Missing discriminator key\n        assert.throws(\n            () => Union.parse({ foo: 'missing kind' }),\n            /Invalid input/\n        );\n\n        // Discriminator value not covered by any option\n        assert.throws(\n            () => Union.parse({ kind: 'c', foo: 'unknown kind' }),\n            /Invalid input/\n        );\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_4.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 0,
+          "test": 0,
+          "refiner": "RetryWithError"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "file": "prompt_5.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\ndescribe('test zod', function() {\n    it('test zod.z.discriminatedUnion', function(done) {\n        // Example #1 – simple literals, union and transformed discriminator\n        const MyResult1 = zod.z.discriminatedUnion(\"status\", [\n            // simple literal\n            zod.z.object({ status: zod.z.literal(\"aaa\"), data: zod.z.string() }),\n            // union discriminator (no extra fields)\n            zod.z.object({ status: zod.z.union([zod.z.literal(\"bbb\"), zod.z.literal(\"ccc\")]) }),\n            // pipe discriminator with transform\n            zod.z.object({ status: zod.z.literal(\"fail\").transform(val => val.toUpperCase()) })\n        ]);\n\n        // valid cases\n        assert.deepStrictEqual(MyResult1.parse({ status: \"aaa\", data: \"hello\" }), { status: \"aaa\", data: \"hello\" });\n        assert.deepStrictEqual(MyResult1.parse({ status: \"bbb\" }), { status: \"bbb\" });\n        assert.deepStrictEqual(MyResult1.parse({ status: \"fail\" }), { status: \"FAIL\" });\n\n        // invalid case – unknown discriminator\n        assert.throws(() => MyResult1.parse({ status: \"unknown\" }), /Invalid discriminator value/);\n\n        // Example #2 – nested discriminated unions\n        const BaseError = zod.z.object({ status: zod.z.literal(\"failed\"), message: zod.z.string() });\n        const MyResult2 = zod.z.discriminatedUnion(\"status\", [\n            zod.z.object({ status: zod.z.literal(\"success\"), data: zod.z.string() }),\n            zod.z.discriminatedUnion(\"code\", [\n                BaseError.extend({ code: zod.z.literal(400) }),\n                BaseError.extend({ code: zod.z.literal(401) }),\n                BaseError.extend({ code: zod.z.literal(500) })\n            ])\n        ]);\n\n        // valid success case\n        assert.deepStrictEqual(MyResult2.parse({ status: \"success\", data: \"ok\" }), { status: \"success\", data: \"ok\" });\n        // valid error cases\n        assert.deepStrictEqual(\n            MyResult2.parse({ status: \"failed\", message: \"Bad request\", code: 400 }),\n            { status: \"failed\", message: \"Bad request\", code: 400 }\n        );\n        assert.deepStrictEqual(\n            MyResult2.parse({ status: \"failed\", message: \"Unauthorized\", code: 401 }),\n            { status: \"failed\", message: \"Unauthorized\", code: 401 }\n        );\n\n        // invalid nested discriminator\n        assert.throws(() => MyResult2.parse({ status: \"failed\", message: \"Oops\", code: 999 }), /Invalid discriminator value/);\n\n        // Example #3 – simple discriminated union with two branches\n        const MyResult3 = zod.z.discriminatedUnion(\"status\", [\n            zod.z.object({ status: zod.z.literal(\"success\"), data: zod.z.string() }),\n            zod.z.object({ status: zod.z.literal(\"failed\"), error: zod.z.string() })\n        ]);\n\n        // valid branches\n        assert.deepStrictEqual(MyResult3.parse({ status: \"success\", data: \"all good\" }), { status: \"success\", data: \"all good\" });\n        assert.deepStrictEqual(MyResult3.parse({ status: \"failed\", error: \"something broke\" }), { status: \"failed\", error: \"something broke\" });\n\n        // invalid branch – missing required field\n        assert.throws(() => MyResult3.parse({ status: \"success\" }), /Required/);\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_5.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 4,
+          "test": 4,
+          "refiner": "SnippetIncluder"
+        },
+        {
+          "originalPrompt": 0,
+          "test": 0,
+          "refiner": "SnippetIncluder"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "file": "prompt_6.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\n\ndescribe('test zod', function () {\n    it('test zod.z.discriminatedUnion', function (done) {\n        // Example #1 – simple literals, union and transformed discriminator\n        const MyResult1 = zod.z.discriminatedUnion('status', [\n            // simple literal\n            zod.z.object({ status: zod.z.literal('aaa'), data: zod.z.string() }),\n            // union discriminator (no extra fields)\n            zod.z.object({ status: zod.z.union([zod.z.literal('bbb'), zod.z.literal('ccc')]) }),\n            // pipe discriminator with transform\n            zod.z.object({ status: zod.z.literal('fail').transform(val => val.toUpperCase()) })\n        ]);\n\n        // valid cases\n        assert.deepStrictEqual(MyResult1.parse({ status: 'aaa', data: 'hello' }), { status: 'aaa', data: 'hello' });\n        assert.deepStrictEqual(MyResult1.parse({ status: 'bbb' }), { status: 'bbb' });\n        assert.deepStrictEqual(MyResult1.parse({ status: 'fail' }), { status: 'FAIL' });\n\n        // invalid case – unknown discriminator\n        // Zod's error message for a missing discriminator contains \"No matching discriminator\"\n        assert.throws(() => MyResult1.parse({ status: 'unknown' }), /No matching discriminator/);\n\n        // Example #2 – nested discriminated unions\n        const BaseError = zod.z.object({ status: zod.z.literal('failed'), message: zod.z.string() });\n        const MyResult2 = zod.z.discriminatedUnion('status', [\n            zod.z.object({ status: zod.z.literal('success'), data: zod.z.string() }),\n            zod.z.discriminatedUnion('code', [\n                BaseError.extend({ code: zod.z.literal(400) }),\n                BaseError.extend({ code: zod.z.literal(401) }),\n                BaseError.extend({ code: zod.z.literal(500) })\n            ])\n        ]);\n\n        // valid success case\n        assert.deepStrictEqual(MyResult2.parse({ status: 'success', data: 'ok' }), { status: 'success', data: 'ok' });\n        // valid error cases\n        assert.deepStrictEqual(\n            MyResult2.parse({ status: 'failed', message: 'Bad request', code: 400 }),\n            { status: 'failed', message: 'Bad request', code: 400 }\n        );\n        assert.deepStrictEqual(\n            MyResult2.parse({ status: 'failed', message: 'Unauthorized', code: 401 }),\n            { status: 'failed', message: 'Unauthorized', code: 401 }\n        );\n\n        // invalid nested discriminator\n        // Again, Zod reports \"No matching discriminator\" for the inner union\n        assert.throws(() => MyResult2.parse({ status: 'failed', message: 'Oops', code: 999 }), /No matching discriminator/);\n\n        // Example #3 – simple discriminated union with two branches\n        const MyResult3 = zod.z.discriminatedUnion('status', [\n            zod.z.object({ status: zod.z.literal('success'), data: zod.z.string() }),\n            zod.z.object({ status: zod.z.literal('failed'), error: zod.z.string() })\n        ]);\n\n        // valid branches\n        assert.deepStrictEqual(MyResult3.parse({ status: 'success', data: 'all good' }), { status: 'success', data: 'all good' });\n        assert.deepStrictEqual(MyResult3.parse({ status: 'failed', error: 'something broke' }), { status: 'failed', error: 'something broke' });\n\n        // invalid branch – missing required field\n        // Zod throws a \"Required\" error when a required field is missing\n        assert.throws(() => MyResult3.parse({ status: 'success' }), /Required/);\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_6.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 5,
+          "test": 5,
+          "refiner": "RetryWithError"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "file": "prompt_7.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\ndescribe('test zod', function() {\n    it('test zod.z.check', function(done) {\n        // Should throw when the argument is not a function\n        assert.throws(() => {\n            zod.z.check(123);\n        }, /function/);\n\n        // When a proper function is supplied, it should return a function\n        // that behaves like the original.\n        const original = (a, b) => a + b;\n        const checked = zod.z.check(original);\n        assert.strictEqual(typeof checked, 'function');\n        assert.strictEqual(checked(2, 3), 5);\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_7.js"
+      ],
+      "provenance": []
+    },
+    {
+      "id": 8,
+      "file": "prompt_8.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\n\ndescribe('test zod', function() {\n    it('test zod.z.check', function(done) {\n        // a simple custom validation function\n        const fn = (value) => value === 42;\n\n        // invoke the function under test\n        const result = zod.z.check(fn);\n\n        // basic sanity checks\n        assert.ok(result, 'Result should be truthy');\n        assert.ok(result._zod, 'Result should have a _zod property');\n\n        // the custom function should be stored correctly\n        assert.strictEqual(result._zod.check, fn, 'The stored check function should be the one provided');\n\n        // ensure the stored function behaves as expected\n        assert.strictEqual(result._zod.check(42), true, 'Check should return true for 42');\n        assert.strictEqual(result._zod.check(7), false, 'Check should return false for non‑42 values');\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_8.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 7,
+          "test": 7,
+          "refiner": "FunctionBodyIncluder"
+        },
+        {
+          "originalPrompt": 10,
+          "test": 10,
+          "refiner": "FunctionBodyIncluder"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "file": "prompt_9.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\n\ndescribe('test zod', function() {\n    it('test zod.z.check', function(done) {\n        // Create a schema for an array of strings with a custom check\n        const UniqueStringArray = zod.z\n            .array(zod.z.string())\n            .check((ctx) => {\n                // Disallow more than 3 items\n                if (ctx.value.length > 3) {\n                    ctx.issues.push({\n                        code: \"too_big\",\n                        maximum: 3,\n                        origin: \"array\",\n                        inclusive: true,\n                        message: \"Too many items 😡\",\n                        input: ctx.value\n                    });\n                }\n                // Disallow duplicate values\n                if (ctx.value.length !== new Set(ctx.value).size) {\n                    ctx.issues.push({\n                        code: \"custom\",\n                        message: \"No duplicates allowed.\",\n                        input: ctx.value\n                    });\n                }\n            });\n\n        // 1. Valid array (no issues)\n        const validResult = UniqueStringArray.safeParse(['a', 'b', 'c']);\n        assert.strictEqual(validResult.success, true, 'Valid array should pass');\n\n        // 2. Duplicate values should produce a \"custom\" issue\n        const dupResult = UniqueStringArray.safeParse(['a', 'b', 'a']);\n        assert.strictEqual(dupResult.success, false, 'Array with duplicates should fail');\n        assert(\n            dupResult.error.issues.some(issue => issue.code === \"custom\"),\n            'Duplicate error should have code \"custom\"'\n        );\n\n        // 3. Too many items should produce a \"too_big\" issue\n        const bigResult = UniqueStringArray.safeParse(['a', 'b', 'c', 'd']);\n        assert.strictEqual(bigResult.success, false, 'Array with too many items should fail');\n        assert(\n            bigResult.error.issues.some(issue => issue.code === \"too_big\"),\n            'Too many items error should have code \"too_big\"'\n        );\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_9.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 8,
+          "test": 8,
+          "refiner": "SnippetIncluder"
+        },
+        {
+          "originalPrompt": 11,
+          "test": 11,
+          "refiner": "FunctionBodyIncluder"
+        },
+        {
+          "originalPrompt": 12,
+          "test": 12,
+          "refiner": "FunctionBodyIncluder"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "file": "prompt_10.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\n\ndescribe('test zod', function () {\n    it('test zod function schema', function (done) {\n        // Zod validates functions via the `z.function()` schema.\n        // When a non‑function is supplied, parsing should throw an error.\n        const fnSchema = zod.function()\n            .args(zod.any(), zod.any())   // accept any two arguments\n            .returns(zod.any());          // return any type\n\n        // Should throw when the argument is not a function\n        assert.throws(() => {\n            fnSchema.parse(123);\n        }, /function/);\n\n        // When a proper function is supplied, it should return the same function\n        // (i.e., behave like the original).\n        const original = (a, b) => a + b;\n        const checked = fnSchema.parse(original);\n        assert.strictEqual(typeof checked, 'function');\n        assert.strictEqual(checked(2, 3), 5);\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_10.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 7,
+          "test": 7,
+          "refiner": "RetryWithError"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "file": "prompt_11.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\n\ndescribe('test zod', function() {\n    it('test zod.z.check', function(done) {\n        // ---- Example 1: cross‑field validation with .check ----\n        const schema = zod.object({\n            password: zod.string().min(8),\n            confirmPassword: zod.string(),\n            anotherField: zod.string()\n        }).check(\n            zod.refine((data) => data.password === data.confirmPassword, {\n                message: \"Passwords do not match\",\n                path: [\"confirmPassword\"],\n                // only run the check when there are no issues on the two fields\n                when(payload) {\n                    return payload.issues.every(iss => {\n                        const first = iss.path?.[0];\n                        return first !== \"password\" && first !== \"confirmPassword\";\n                    });\n                }\n            })\n        );\n\n        // valid data – should parse without throwing\n        assert.doesNotThrow(() => {\n            schema.parse({\n                password: \"strongPass123\",\n                confirmPassword: \"strongPass123\",\n                anotherField: \"ok\"\n            });\n        }, \"Valid data should not throw\");\n\n        // mismatched passwords – should throw with the custom message\n        try {\n            schema.parse({\n                password: \"strongPass123\",\n                confirmPassword: \"differentPass\",\n                anotherField: \"ok\"\n            });\n            assert.fail(\"Mismatched passwords should have thrown\");\n        } catch (e) {\n            // Zod throws a ZodError; ensure the custom issue is present\n            assert(e.errors.some(issue => issue.message === \"Passwords do not match\"),\n                \"Expected custom 'Passwords do not match' issue\");\n        }\n\n        // ---- Example 2: array custom check ----\n        const UniqueStringArray = zod.array(zod.string()).check((ctx) => {\n            if (ctx.value.length > 3) {\n                ctx.issues.push({\n                    code: \"too_big\",\n                    maximum: 3,\n                    origin: \"array\",\n                    inclusive: true,\n                    message: \"Too many items 😡\",\n                    input: ctx.value\n                });\n            }\n            if (ctx.value.length !== new Set(ctx.value).size) {\n                ctx.issues.push({\n                    code: \"custom\",\n                    message: `No duplicates allowed.`,\n                    input: ctx.value\n                });\n            }\n        });\n\n        // valid array\n        assert.doesNotThrow(() => {\n            UniqueStringArray.parse([\"a\", \"b\", \"c\"]);\n        }, \"Valid unique array should not throw\");\n\n        // too many items\n        try {\n            UniqueStringArray.parse([\"a\", \"b\", \"c\", \"d\"]);\n            assert.fail(\"Array with too many items should have thrown\");\n        } catch (e) {\n            assert(e.errors.some(issue => issue.code === \"too_big\" && issue.message.includes(\"Too many items\")),\n                \"Expected 'too_big' issue for oversized array\");\n        }\n\n        // duplicate items\n        try {\n            UniqueStringArray.parse([\"a\", \"b\", \"a\"]);\n            assert.fail(\"Array with duplicates should have thrown\");\n        } catch (e) {\n            assert(e.errors.some(issue => issue.code === \"custom\" && issue.message.includes(\"No duplicates\")),\n                \"Expected 'custom' issue for duplicate values\");\n        }\n\n        // ---- Example 3: string refinement via .check ----\n        const myString = zod.string().check(\n            zod.refine((val) => val.length > 8, { error: \"Too short!\" })\n        );\n\n        // valid string\n        assert.doesNotThrow(() => {\n            myString.parse(\"this is long enough\");\n        }, \"Valid long string should not throw\");\n\n        // short string\n        try {\n            myString.parse(\"short\");\n            assert.fail(\"Short string should have thrown\");\n        } catch (e) {\n            assert(e.errors.some(issue => issue.message === \"Too short!\"),\n                \"Expected custom 'Too short!' message\");\n        }\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_11.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 10,
+          "test": 10,
+          "refiner": "SnippetIncluder"
+        },
+        {
+          "originalPrompt": 7,
+          "test": 7,
+          "refiner": "SnippetIncluder"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "file": "prompt_12.js",
+      "temperature": 0,
+      "completions": [
+        "```javascript\n// ---------------------------------------------------------------\n// Fixed test – uses the public Zod API (refine / superRefine)\n// ---------------------------------------------------------------\nlet mocha = require('mocha');\nlet assert = require('assert');\nlet zod = require('zod');\n\ndescribe('test zod', function () {\n    it('test zod.z.check (fixed)', function (done) {\n        // -----------------------------------------------------------\n        // Example 1: cross‑field validation (using .refine)\n        // -----------------------------------------------------------\n        const schema = zod\n            .object({\n                password: zod.string().min(8),\n                confirmPassword: zod.string(),\n                anotherField: zod.string(),\n            })\n            // simple cross‑field check – Zod will run this after the\n            // individual field checks, so we don't need a custom `when`\n            .refine(\n                (data) => data.password === data.confirmPassword,\n                {\n                    message: \"Passwords do not match\",\n                    path: [\"confirmPassword\"],\n                }\n            );\n\n        // valid data – should parse without throwing\n        assert.doesNotThrow(() => {\n            schema.parse({\n                password: \"strongPass123\",\n                confirmPassword: \"strongPass123\",\n                anotherField: \"ok\",\n            });\n        }, \"Valid data should not throw\");\n\n        // mismatched passwords – should throw with the custom message\n        try {\n            schema.parse({\n                password: \"strongPass123\",\n                confirmPassword: \"differentPass\",\n                anotherField: \"ok\",\n            });\n            assert.fail(\"Mismatched passwords should have thrown\");\n        } catch (e) {\n            // Zod throws a ZodError; ensure the custom issue is present\n            assert(\n                e.errors.some((issue) => issue.message === \"Passwords do not match\"),\n                \"Expected custom 'Passwords do not match' issue\"\n            );\n        }\n\n        // -----------------------------------------------------------\n        // Example 2: array custom check (using .superRefine)\n        // -----------------------------------------------------------\n        const UniqueStringArray = zod.array(zod.string()).superRefine((arr, ctx) => {\n            // too many items\n            if (arr.length > 3) {\n                ctx.addIssue({\n                    code: \"too_big\",\n                    maximum: 3,\n                    inclusive: true,\n                    message: \"Too many items 😡\",\n                    path: [], // top‑level issue\n                });\n            }\n            // duplicate items\n            if (arr.length !== new Set(arr).size) {\n                ctx.addIssue({\n                    code: \"custom\",\n                    message: \"No duplicates allowed.\",\n                    path: [], // top‑level issue\n                });\n            }\n        });\n\n        // valid array\n        assert.doesNotThrow(() => {\n            UniqueStringArray.parse([\"a\", \"b\", \"c\"]);\n        }, \"Valid unique array should not throw\");\n\n        // too many items\n        try {\n            UniqueStringArray.parse([\"a\", \"b\", \"c\", \"d\"]);\n            assert.fail(\"Array with too many items should have thrown\");\n        } catch (e) {\n            assert(\n                e.errors.some(\n                    (issue) => issue.code === \"too_big\" && issue.message.includes(\"Too many items\")\n                ),\n                \"Expected 'too_big' issue for oversized array\"\n            );\n        }\n\n        // duplicate items\n        try {\n            UniqueStringArray.parse([\"a\", \"b\", \"a\"]);\n            assert.fail(\"Array with duplicates should have thrown\");\n        } catch (e) {\n            assert(\n                e.errors.some(\n                    (issue) => issue.code === \"custom\" && issue.message.includes(\"No duplicates\")\n                ),\n                \"Expected 'custom' issue for duplicate values\"\n            );\n        }\n\n        // -----------------------------------------------------------\n        // Example 3: string refinement via .refine\n        // -----------------------------------------------------------\n        const myString = zod.string().refine(\n            (val) => val.length > 8,\n            { message: \"Too short!\" }\n        );\n\n        // valid string\n        assert.doesNotThrow(() => {\n            myString.parse(\"this is long enough\");\n        }, \"Valid long string should not throw\");\n\n        // short string\n        try {\n            myString.parse(\"short\");\n            assert.fail(\"Short string should have thrown\");\n        } catch (e) {\n            assert(\n                e.errors.some((issue) => issue.message === \"Too short!\"),\n                \"Expected custom 'Too short!' message\"\n            );\n        }\n\n        done();\n    });\n});\n```"
+      ],
+      "tests": [
+        "test_12.js"
+      ],
+      "provenance": [
+        {
+          "originalPrompt": 11,
+          "test": 11,
+          "refiner": "RetryWithError"
+        }
+      ]
+    }
+  ]
+}
