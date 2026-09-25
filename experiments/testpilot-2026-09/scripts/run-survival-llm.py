@@ -4,11 +4,12 @@ from pathlib import Path
 E=Path(__file__).resolve().parents[1]
 W=E/'wrappers/zod'
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--release',required=True);ap.add_argument('--out',required=True);a=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--release',required=True);ap.add_argument('--out',required=True);ap.add_argument('--passing',default='results/gen-n60-passing.json',help='passing list, relative to the experiment directory');ap.add_argument('--tests',default='results/gen-n60/tests',help='test directory for entries without a run field');a=ap.parse_args()
  out=Path(a.out).resolve();raw=out/'llm-raw';raw.mkdir(parents=True,exist_ok=False);scratch=W/'test-s';scratch.mkdir();start=time.monotonic();results=[]
  try:
-  for entry in json.loads((E/'results/gen-n60-passing.json').read_text()):
-   source=E/'results/gen-n60/tests'/Path(entry['testFile']).name;dest=scratch/source.name
+  for entry in json.loads((E/a.passing).read_text()):
+   # D-31: an entry with a run field (two-run n124 result) lives in results/<run>/tests and is keyed <run>__<testName>
+   source=(E/'results'/entry['run']/'tests' if 'run' in entry else E/a.tests)/Path(entry['testFile']).name;dest=scratch/source.name;rawname=(entry['run']+'__' if 'run' in entry else '')+entry['testName']
    dest.write_bytes(source.read_bytes().replace(b"require('zod')",b"require('..')"))
    # Keep validator's Mocha arguments, including output option, while also receiving JSON on stdout.
    report=Path('/dev/stdout')
@@ -19,7 +20,7 @@ def main():
    except subprocess.TimeoutExpired:
     timeout=True;os.killpg(proc.pid,signal.SIGKILL);stdout,stderr=proc.communicate()
    elapsed=(time.monotonic()-t)*1000
-   (raw/(entry['testName']+'.stdout.json')).write_bytes(stdout);(raw/(entry['testName']+'.stderr.txt')).write_bytes(stderr)
+   (raw/(rawname+'.stdout.json')).write_bytes(stdout);(raw/(rawname+'.stderr.txt')).write_bytes(stderr)
    status='other';err='';stack='';code=None
    if timeout:status='timeout';err='Process killed at 5000 ms'
    else:

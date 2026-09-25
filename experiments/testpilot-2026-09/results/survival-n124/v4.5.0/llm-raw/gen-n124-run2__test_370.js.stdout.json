@@ -1,0 +1,60 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-25T03:26:36.761Z",
+    "end": "2026-09-25T03:26:36.766Z",
+    "duration": 5
+  },
+  "tests": [
+    {
+      "title": "test zod.z.partialRecord",
+      "fullTitle": "test zod test zod.z.partialRecord",
+      "file": "/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_370.js",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Invalid key/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"code\": \"unrecognized_keys\",\\n' +\n  '    \"keys\": [\\n' +\n  '      \"d\"\\n' +\n  '    ],\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Unrecognized key: \\\\\"d\\\\\"\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_370.js:34:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /Invalid key/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"code\": \"unrecognized_keys\",\\n' +\n  '    \"keys\": [\\n' +\n  '      \"d\"\\n' +\n  '    ],\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Unrecognized key: \\\\\"d\\\\\"\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"code\": \"unrecognized_keys\",\n    \"keys\": [\n      \"d\"\n    ],\n    \"path\": [],\n    \"message\": \"Unrecognized key: \\\"d\\\"\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "test zod.z.partialRecord",
+      "fullTitle": "test zod test zod.z.partialRecord",
+      "file": "/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_370.js",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Invalid key/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"code\": \"unrecognized_keys\",\\n' +\n  '    \"keys\": [\\n' +\n  '      \"d\"\\n' +\n  '    ],\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Unrecognized key: \\\\\"d\\\\\"\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_370.js:34:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /Invalid key/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"code\": \"unrecognized_keys\",\\n' +\n  '    \"keys\": [\\n' +\n  '      \"d\"\\n' +\n  '    ],\\n' +\n  '    \"path\": [],\\n' +\n  '    \"message\": \"Unrecognized key: \\\\\"d\\\\\"\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"code\": \"unrecognized_keys\",\n    \"keys\": [\n      \"d\"\n    ],\n    \"path\": [],\n    \"message\": \"Unrecognized key: \\\"d\\\"\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      }
+    }
+  ],
+  "passes": []
+}

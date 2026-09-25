@@ -4,11 +4,13 @@ from pathlib import Path
 E=Path('/work/zod/experiments/testpilot-2026-09');V=Path('/work/zod-versions')
 def load(p):return json.loads(p.read_text())
 def write(p,data):p.write_text(json.dumps(data,indent=2)+'\n')
+LOG='docs/log-stage-s.md'
 def log(s):
- with (E/'docs/log-stage-s.md').open('a') as f:f.write(s+'\n')
+ with (E/LOG).open('a') as f:f.write(s+'\n')
 def hashes(root):return {str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in root.rglob('*') if p.is_file() and 'tests' in p.relative_to(root).parts}
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--release',required=True);a=ap.parse_args();tag=a.release;root=V/tag;out=E/'results/survival'/tag;snapshot=V/'frozen-v4.0.5-tests';src=root/'packages/zod/src/v4';start=time.monotonic()
+ global LOG
+ ap=argparse.ArgumentParser();ap.add_argument('--release',required=True);ap.add_argument('--out-root',default='results/survival');ap.add_argument('--log',default='docs/log-stage-s.md');a=ap.parse_args();LOG=a.log;default=a.out_root=='results/survival';tag=a.release;root=V/tag;out=E/a.out_root/tag;snapshot=V/'frozen-v4.0.5-tests';src=root/'packages/zod/src/v4';start=time.monotonic()
  assert tag in [r['tag'] for r in load(E/'results/survival/tags.json')]
  assert not (out/'dev-stdout.txt').exists(),f'Refusing to overwrite {tag} attempt'
  dirs=sorted(p.relative_to(snapshot) for p in snapshot.rglob('tests') if p.is_dir());current=sorted(p.relative_to(src) for p in src.rglob('tests') if p.is_dir())
@@ -39,7 +41,7 @@ def main():
   runtime=[f for f in data['testResults'] if not any(c.get('meta',{}).get('typecheck') is True for c in f['assertionResults'])]
   state['runtimeSplit']='meta.typecheck';state['typecheckFlagEffective']=len(runtime)==len(data['testResults'])
   log(f'- D-21 {tag}: runtime entries exclude only those with any assertion meta.typecheck=true; {len(runtime)} runtime entries; raw JSON unchanged.')
-  cmd=['python3',str(E/'scripts/summarize-dev-run.py'),'--release',tag,'--out',str(out)];s=subprocess.run(cmd,cwd=E,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+  cmd=['python3',str(E/'scripts/summarize-dev-run.py'),'--release',tag,'--out',str(out)]+([] if default else ['--out-root',a.out_root]);s=subprocess.run(cmd,cwd=E,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
   log(f'- {tag}: `{" ".join(cmd)}` -> exit {s.returncode}; {s.stdout.strip()}')
   if s.returncode:
    state['error']=s.stdout;state['wallSeconds']=time.monotonic()-start;write(out/'dev-status.json',state);raise RuntimeError(s.stdout)
@@ -50,7 +52,8 @@ def main():
   assert state['harness']=='ok',f'{tag} gate: no developer result'
   summary=load(out/'dev-summary.json')
   if tag=='v4.0.5':assert (summary['files'],summary['cases'],summary['passed'])==(81,888,888);log('- v4.0.5 gate passed: 81 files / 888 cases / 888 passed.')
-  else:
+  elif default:
+   # the v4.1.0 comparison against dev-attempt1 belongs to last week's continuation history
    identity=lambda c:(c['file'],c['fullName'],c['occurrence'])
    before={identity(c) for c in load(out/'dev-attempt1/dev-cases.json') if c['status']=='failed'};after={identity(c) for c in load(out/'dev-cases.json') if c['status']=='failed'}
    comparison={'passed':summary['passed'],'failed':summary['failed'],'identicalFailingSet':before==after,'removed':sorted(before-after),'added':sorted(after-before)}

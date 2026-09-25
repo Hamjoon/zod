@@ -5,9 +5,9 @@ E=Path(__file__).resolve().parents[1]
 def normalize(p):
  marker='/src/v4/';assert marker in p,p;return p.split(marker,1)[1]
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--release',required=True);ap.add_argument('--out',required=True);ap.add_argument('--input',help='Read preserved unsplit JSON without changing it');a=ap.parse_args();out=Path(a.out)
+ ap=argparse.ArgumentParser();ap.add_argument('--release',required=True);ap.add_argument('--out',required=True);ap.add_argument('--input',help='Read preserved unsplit JSON without changing it');ap.add_argument('--out-root',default='results/survival',help='result root holding the v4.0.5 baseline, relative to the experiment directory');a=ap.parse_args();out=Path(a.out)
  data=json.loads((Path(a.input) if a.input else out/'dev-run.json').read_text());files=[f for f in data['testResults'] if not any(c.get('meta',{}).get('typecheck') is True for c in f['assertionResults'])];assert len(files)==81, f'Expected 81 runtime files, found {len(files)}'
- baseline=[] if a.release=='v4.0.5' else json.loads((E/'results/survival/v4.0.5/dev-cases.json').read_text())
+ baseline=[] if a.release=='v4.0.5' else json.loads((E/a.out_root/'v4.0.5/dev-cases.json').read_text())
  cases=[];loaded=0;failed=0
  for f in files:
   name=normalize(f['name']);assertions=f.get('assertionResults',[])
