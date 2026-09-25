@@ -1,0 +1,13 @@
+{
+  "release": "v4.0.5",
+  "cwd": "/work/zod-versions/v4.0.5-cov",
+  "command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/coverage/dev/v4.0.5/dev-run.json --coverage.enabled=true --coverage.provider=istanbul --coverage.all=false --coverage.include=packages/zod/src/** --coverage.reporter=json --coverage.reporter=json-summary --coverage.reportsDirectory=/work/coverage-raw/dev/vitest",
+  "week3Command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.0.5/dev-run.json",
+  "vitestExitCode": 0,
+  "wallSeconds": 14.291872339000065,
+  "reportsDirectory": "/work/coverage-raw/dev/vitest",
+  "coverageFiles": [
+    "coverage-final.json",
+    "coverage-summary.json"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "builtFilesOriginal": 360,
+  "builtFilesCopy": 360,
+  "onlyInOriginal": [],
+  "onlyInCopy": [],
+  "gate1": {
+    "codeFiles": 180,
+    "withValidMapReference": 180,
+    "failures": []
+  },
+  "gate2": {
+    "compared": 360,
+    "identical": 360,
+    "sourceMappingUrlLinesRemoved": 180,
+    "failures": []
+  },
+  "gate3": {
+    "files": 243,
+    "identical": true,
+    "differing": []
+  },
+  "otherFilesDiffering": [
+    "tsconfig.build.json"
+  ],
+  "mapSourcesPerMap": {
+    "min": 1,
+    "max": 1
+  },
+  "passed": true
+}
