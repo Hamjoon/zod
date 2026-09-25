@@ -650,3 +650,5 @@ Exit: 0; wall seconds: 0.56
 ## Step 5: handover and commit
 
 Handover written: `docs/handover-stage-s-n124.md`. Committing the edited and new scripts, this log, the handover, `results/survival-n124/` in full and `results/survival-n124-*`, all under `experiments/testpilot-2026-09/` only. The push and final status follow in the next commit.
+
+Pushed `31b96e6f` to `origin/experiment/2026-09-week4-testpilot-zod`; `git status -sb`: in sync with origin, only `Claude outputs/` untracked. Coverage stage not started.
