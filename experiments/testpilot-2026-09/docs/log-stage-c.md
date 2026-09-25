@@ -935,3 +935,5 @@ Exit: 0; wall seconds: 0.147
 ## Step 7: handover and commit
 
 Handover written: `docs/handover-stage-c.md`. Committing the new scripts, this log, the handover, `results/coverage/` (with `git add -f`, because the zod root `.gitignore` rule `coverage` matches it), `results/coverage-summary.md` and the `results/coverage-*.csv` files. The push record follows in the next commit.
+
+Pushed `5d9f5d8c` to `origin/experiment/2026-09-week4-testpilot-zod`; `git status -sb`: in sync, only `Claude outputs/` untracked. 41 files committed (24 under `results/coverage/`), all additions, none over 20 MB. The raw per-test maps stay in `$ROOT/coverage-raw/` (not committed).
