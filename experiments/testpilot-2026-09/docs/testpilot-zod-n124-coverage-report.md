@@ -21,7 +21,7 @@ This week we repeated last week's experiment on all 124 user-callable functions 
 - **Coverage:** measured at t over a fixed file set D, the 63 TypeScript files that `require('zod')` loads (8 in the public API layer `classic`, 14 in `core`, 40 locale message files, one index).
   - Generated tests are measured with nyc, as testpilot2's own validator does. They run on a copy of v4.0.5 rebuilt with source maps, whose JavaScript is byte-identical to the original apart from the source-map comment, so coverage is reported on the TypeScript source.
   - The developer suite is measured with vitest's Istanbul provider.
-  - The two routes count statements differently, so the two corpora are compared at line level.
+  - The two routes count statements and branches differently, so the two corpora are compared on the lines (4537) and branch paths (3481) that both measurements count.
 
 ## 4. Results
 
@@ -54,25 +54,28 @@ The developer results are identical to last week's at every release, case by cas
 
 **Coverage, paper metrics** (passing tests; all tests still pass under nyc):
 
-| Over D | Loading only | S124 (266 tests) | S60 (last week's 139) | Developer suite (reference) |
-|---|---:|---:|---:|---:|
-| Statements | 15.2% | 46.4% | 39.2% | 59.7% |
-| Branches | 0.2% | 20.0% | 15.4% | 35.4% |
+| Over D | Loading only | S124 (266 tests) | S60 (last week's 139) |
+|---|---:|---:|---:|
+| Statements | 15.2% | 46.4% | 39.2% |
+| Branches | 0.2% | 20.0% | 15.4% |
 
 - Uniquely contributing tests (covering a statement no other test covers): 16.2% of S124, 20.1% of S60.
 - Per-function statement coverage has median 100% (17 of 124 functions at 0%), because most public functions are one-statement wrappers around `core`.
 - For reference, the paper reports median statement coverage 70.2%, branch 52.8% and uniquely contributing tests 10.5%, on 25 other packages with a different model and tool version.
 
-**Line level against the developer suite** (5070 executable lines):
+**Against the developer suite.** The two measurements differ in which lines and branches they count, so the comparison uses only the lines (4537) and branch paths (3481) that both count:
 
-| Area | Lines | S124 | Developer suite |
+| | Basis | S124 | Developer suite |
 |---|---:|---:|---:|
-| `classic` (public API layer) | 740 | 92.2% | 75.3% |
-| `core` (schemas, checks, parsing) | 2462 | 61.4% | 81.2% |
-| `locales` (40 message tables) | 1864 | 10.7% | 8.9% |
-| All of D | 5070 | 47.3% | 53.7% |
+| Lines: `classic` (public API layer) | 566 | 90.5% | 97.7% |
+| Lines: `core` (schemas, checks, parsing) | 2224 | 57.8% | 89.3% |
+| Lines: `locales` (40 message tables) | 1747 | 4.7% | 9.4% |
+| Lines: all | 4537 | 41.4% | 59.6% |
+| Branch paths: all | 3481 | 18.0% | 35.4% |
 
-**Code changed by later releases.** Of the 5070 executable lines of v4.0.5, 1946 (38%) were modified or deleted by v4.6.0. At t, S124 executed 727 of them and the developer suite 1221. 265 of the 266 S124 tests executed at least one of these lines, and the remaining one never loads zod. 257 of the 265 survived v4.6.0.
+Of the 1880 lines S124 covers, 1868 are also covered by the developer suite.
+
+**Code changed by later releases.** Of these 4537 lines, 1907 (42%) were modified or deleted by v4.6.0. At t, S124 executed 694 of them and the developer suite 1216. 265 of the 266 S124 tests executed at least one of these lines; the remaining one never loads zod. 257 of the 265 survived v4.6.0.
 
 ## 5. Observations
 
@@ -83,8 +86,8 @@ The developer results are identical to last week's at every release, case by cas
    - Two reflect a real change: `emoji` stopped accepting digits-only strings at v4.6.0, and `partialRecord` crashed at v4.1.0 only.
 
    So a generated test can pass at t without exercising the function it is named for.
-3. **Generated tests cover the API layer more and the core less than the developer suite.** They cover 92% against 75% of `classic` and 61% against 81% of `core`. This fits the shape of the tests seen last week: short, basic parse behaviour through the public functions. Leaving out the locale tables, which every test barely touches, line coverage is 68.5% for S124 and 79.7% for the developer suite.
-4. **Line-level change coverage does not separate the surviving tests.** 38% of the lines changed and almost every test runs through them (median 219 changed lines per test). So this cannot show whether a surviving test reached a behaviour change and missed it. That needs the lines changed by the commits that actually broke tests.
+3. **Generated tests come close to the developer suite in the API layer and fall far behind in the core.** They cover 90.5% against 97.7% of `classic` and 57.8% against 89.3% of `core`, and almost every line they cover is also covered by the developer suite. This fits the shape of the tests seen last week: short, basic parse behaviour through the public functions. Leaving out the locale tables, which every test barely touches, line coverage is 64.4% for S124 and 91.0% for the developer suite.
+4. **Line-level change coverage does not separate the surviving tests.** 42% of the lines changed and almost every test runs through them (median 186 changed lines per test). So this cannot show whether a surviving test reached a behaviour change and missed it. That needs the lines changed by the commits that actually broke tests.
 5. **A single generation run is one sample.** The same prompts gave almost entirely different tests week to week, so survival and coverage figures of one run carry run-to-run variation that has not been measured.
 
 ## 6. Limitations

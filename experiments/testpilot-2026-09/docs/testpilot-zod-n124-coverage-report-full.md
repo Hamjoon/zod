@@ -45,7 +45,7 @@ Last week's report (section 2) describes everything below, and none of it change
 - **LLM corpora:** each passing test is run as testpilot2's validator runs it (`nyc … mocha …`, same arguments). The only change is nyc's `--cwd`, set to the coverage build's package directory instead of the wrapper, so that zod's files are instrumented (D-34). This is what made last week's measurement cover only the wrapper's one-line `index.js`. nyc remaps the coverage of the built `.cjs` to `packages/zod/src/**/*.ts`. Both sets were measured: S124 (266 tests) and last week's S60 (139 tests).
 - **Developer corpus:** last week's exact vitest command with the Istanbul coverage provider (`@vitest/coverage-istanbul` 2.1.9, installed in the coverage copy only), on the TypeScript source.
 - **Denominator D:** the 63 `src/**/*.ts` files loaded by `require('zod')`, from testpilot2's own loading-coverage measurement (`benchmark/package_stats.ts`). D contains `src/index.ts`, 8 files in `v4/classic/`, 14 in `v4/core/`, and all 40 files in `v4/locales/`. The locales index that the main entry loads imports every locale. D has no test file.
-- **Measurement routes:** the two corpora are measured by different routes (nyc on built JavaScript remapped to source, and vitest-istanbul on source), so their statement, branch and function counts are not interchangeable. The cross-corpus comparison is at line level: a line is executable if a statement starts on it in either map, and covered by a corpus if one of that corpus's covered statements starts on it.
+- **Measurement routes:** the two corpora are measured by different routes (nyc on built JavaScript remapped to source, and vitest-istanbul on source), so their statement, branch and function counts are not interchangeable. The cross-corpus comparison is at line level, on the **shared executable lines**: lines on which a statement starts in both maps (4537 lines). A line is covered by a corpus if one of that corpus's covered statements starts on it. Lines that only one route sees as executable are left out, because the other corpus cannot cover them by construction (section 4.5). Branches are compared the same way, on the branch points present in both maps (matched by file, line, branch type and number of paths).
 
 ## 3. Protocol
 
@@ -182,41 +182,52 @@ Most public zod functions are one-statement wrappers around `core` (for example,
 
 Developer suite over D, in its own measurement route: statements 59.65% (3033/5084), branches 35.40% (1234/3485), functions 73.33% (795/1084), lines 59.76% (2721/4553). This is context. The LLM corpora target 124 (or 60) public functions of one entry point, while the developer suite targets the whole package, so a gap at package level is expected.
 
-Line level (5070 executable lines):
+Line level, on the 4537 shared executable lines:
 
 | | LLM | Developer | Both | LLM only | Developer only | Neither |
 |---|---:|---:|---:|---:|---:|---:|
-| S124 vs developer | 2396 (47.26%) | 2721 (53.67%) | 1868 | 528 | 853 | 1821 |
-| S60 vs developer | 2034 (40.12%) | 2721 (53.67%) | 1510 | 524 | 1211 | 1825 |
+| S124 vs developer | 1880 (41.4%) | 2705 (59.6%) | 1868 | 12 | 837 | 1820 |
+| S60 vs developer | 1518 (33.5%) | 2705 (59.6%) | 1510 | 8 | 1195 | 1824 |
 
-87 of the "LLM only" lines are in four files that only re-export (`index.ts`, `classic/checks.ts`, `core/index.ts`, `locales/index.ts`). In the TypeScript source these files have no statements. The CommonJS build turns them into getter code, which only the LLM measurement sees. Without those files, S124 covers 441 lines that the developer suite does not, and S60 covers 437.
+Branch paths, on the 1520 branch points present in both maps (3481 paths; matched by file, start line, branch type and number of paths; 1520 of the developer map's 1522 branch points match):
 
-By source area (S124 against the developer suite; lines from `coverage-lines-s124-vs-dev.csv`):
+| Area | Shared branch paths | S124 | S60 | Developer |
+|---|---:|---:|---:|---:|
+| `v4/classic` | 81 | 61 (75.3%) | | 73 (90.1%) |
+| `v4/core` | 1285 | 519 (40.4%) | | 1046 (81.4%) |
+| `v4/locales` | 2115 | 47 (2.2%) | | 112 (5.3%) |
+| All | 3481 | 627 (18.0%) | 492 (14.1%) | 1231 (35.4%) |
 
-| Area | Executable lines | S124 | Developer | Both | S124 only | Developer only |
+On its own map S124 reaches 20.03% of branch paths (726/3623). The 142 paths only the CommonJS measurement sees account for the difference. The developer figure is unchanged (1234/3485 on its own map).
+
+By source area (S124 against the developer suite, shared lines):
+
+| Area | Shared executable lines | S124 | Developer | Both | S124 only | Developer only |
 |---|---:|---:|---:|---:|---:|---:|
-| `v4/classic` (public API layer) | 740 | 682 (92.2%) | 557 (75.3%) | 504 | 178 | 53 |
-| `v4/core` (schemas, checks, parsing) | 2462 | 1511 (61.4%) | 1999 (81.2%) | 1282 | 229 | 717 |
-| `v4/locales` (40 message tables) | 1864 | 199 (10.7%) | 165 (8.9%) | 82 | 117 | 83 |
+| `v4/classic` (public API layer) | 566 | 512 (90.5%) | 553 (97.7%) | 504 | 8 | 49 |
+| `v4/core` (schemas, checks, parsing) | 2224 | 1286 (57.8%) | 1987 (89.3%) | 1282 | 4 | 705 |
+| `v4/locales` (40 message tables) | 1747 | 82 (4.7%) | 165 (9.4%) | 82 | 0 | 83 |
 
-- The locale files are 37% of the executable lines. Each test normally reaches only the English messages, which keeps every package-level figure low.
-- Leaving out the locales, S124 covers 68.5% of lines (2197/3206) and the developer suite 79.7% (2556/3206).
-- In `classic`, the 178 "S124 only" lines include the 29 re-export lines of `checks.ts`. Some of the rest may come from the different measurement routes, which have not been separated line by line.
+- On the shared lines, the developer suite covers more in every area. The gap is small in the public API layer (7.2 pp) and large in `core` (31.5 pp).
+- Almost every line S124 covers is also covered by the developer suite: 1868 of 1880. At t the generated tests add almost no line the developer suite does not already execute.
+- The locale files are 39% of the shared lines, and tests normally reach only the English messages, which keeps every package-level figure low. Leaving out the locales, S124 covers 64.4% of the shared lines (1798/2790) and the developer suite 91.0% (2540/2790).
+
+**Why the shared lines, and a correction.** The two routes do not agree on which lines are executable. The LLM map has 5054 lines with statements, the developer map 4553, and the union is 5070. The 517 lines that only the LLM map has (and 16 that only the developer map has) come from the CommonJS build, which produces statements the TypeScript instrumentation does not see (for example the getter code of the re-export files `index.ts`, `classic/checks.ts`, `core/index.ts` and `locales/index.ts`, and 170 lines in `classic`). The first version of this analysis (`coverage-summary.md`, part C) used the union. On the union the developer suite cannot cover those 517 lines by construction, and the LLM corpora cover many of them. The result was a misleading picture: S124 92.2% against the developer suite's 75.3% in `classic`, and 528 "LLM only" lines. On the shared lines, the "LLM only" lines drop to 12 and the `classic` comparison reverses. The union figures remain in `coverage-summary.md` and `coverage-lines-<set>-vs-dev.csv`; the shared-line figures above were computed from the committed merged maps (`results/coverage/<set>/coverage-final.json`) with the same line rule.
 
 ### 4.6 Coverage of code changed by later releases
 
-Changed lines are the old-side lines of `git diff -U0 v4.0.5 <tag> -- packages/zod/src` (lines of v4.0.5 modified or deleted by that release) in files of D, test files excluded, restricted to executable lines. Coverage is at t.
+Changed lines are the old-side lines of `git diff -U0 v4.0.5 <tag> -- packages/zod/src` (lines of v4.0.5 modified or deleted by that release) in files of D, test files excluded, restricted to the shared executable lines of section 4.5. Coverage is at t. (The union-based version of this table is in `coverage-changed-lines.csv`.)
 
-| Release | Changed executable lines | S124 | Developer | Both | S124 only | Developer only | Neither | S60 |
+| Release | Changed shared lines | S124 | Developer | Both | S124 only | Developer only | Neither | S60 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| v4.1.0 | 239 | 133 | 208 | 118 | 15 | 90 | 16 | 117 |
-| v4.2.0 | 829 | 211 | 611 | 184 | 27 | 427 | 191 | 162 |
-| v4.3.0 | 1311 | 230 | 644 | 203 | 27 | 441 | 640 | 180 |
-| v4.4.0 | 1475 | 353 | 796 | 326 | 27 | 470 | 652 | 295 |
-| v4.5.0 | 1829 | 634 | 1110 | 596 | 38 | 514 | 681 | 561 |
-| v4.6.0 | 1946 | 727 | 1221 | 689 | 38 | 532 | 687 | 633 |
+| v4.1.0 | 224 | 118 | 208 | 118 | 0 | 90 | 16 | 102 |
+| v4.2.0 | 803 | 187 | 610 | 184 | 3 | 426 | 190 | 138 |
+| v4.3.0 | 1285 | 206 | 643 | 203 | 3 | 440 | 639 | 156 |
+| v4.4.0 | 1447 | 329 | 793 | 326 | 3 | 467 | 651 | 271 |
+| v4.5.0 | 1791 | 601 | 1106 | 596 | 5 | 510 | 680 | 528 |
+| v4.6.0 | 1907 | 694 | 1216 | 689 | 5 | 527 | 686 | 600 |
 
-Per S124 test, whether it executed at least one line changed by v4.6.0, crossed with its status at v4.6.0:
+Per S124 test, whether it executed at least one shared line changed by v4.6.0, crossed with its status at v4.6.0 (the same counts result on the union):
 
 | Set | Executed changed code, survived | Executed changed code, broke | Did not, survived | Did not, broke |
 |---|---:|---:|---:|---:|
@@ -225,7 +236,7 @@ Per S124 test, whether it executed at least one line changed by v4.6.0, crossed 
 
 The one S124 test that executed no changed line is `test_84.js`, which never loads zod.
 
-**This cross-tabulation does not separate the tests.** By v4.6.0, 1946 of the 5070 executable lines (38%) had been modified or deleted, including much of the parsing path in `core`. So almost any test that parses executes changed lines. The median S124 test executes 219 of them, and 265 of the 266 tests execute at least 50. A modified line is also not necessarily a behaviour change: refactoring, renaming and moved code count too. The table therefore cannot say whether a surviving test reached a behaviour change and missed it. That needs the lines that actually changed behaviour, for example the lines changed by the commits that broke a developer case. Finding those commits needs bisection (section 8).
+**This cross-tabulation does not separate the tests.** By v4.6.0, 1907 of the 4537 shared lines (42%) had been modified or deleted, including much of the parsing path in `core`. So almost any test that parses executes changed lines. The median S124 test executes 186 of them, and 265 of the 266 tests execute at least 50. A modified line is also not necessarily a behaviour change: refactoring, renaming and moved code count too. The table therefore cannot say whether a surviving test reached a behaviour change and missed it. That needs the lines that actually changed behaviour, for example the lines changed by the commits that broke a developer case. Finding those commits needs bisection (section 8).
 
 ## 5. Deviations and defects this week
 
@@ -265,8 +276,8 @@ Deviations D-01 to D-25 from last week still apply.
 
    Test validity is therefore a separate issue from test survival: a generated test can pass at t without exercising the code it is named for.
 4. **Generation is not repeatable across weeks.** The same prompts, at temperature 0, gave almost entirely different tests (1 identical file of 373). A single generation run is one draw. Survival and coverage figures for a single run should be read as such, and stable estimates need repeated runs.
-5. **The LLM tests cover the API layer more and the core less.** S124 covers 92% of the `classic` lines against the developer suite's 75%, and 61% of the `core` lines against 81%. This fits last week's reading of the tests (short, basic parse behaviour through the public functions). They reach the public surface broadly but not the internal paths the developers test directly.
-6. **Coverage of changed lines does not explain survival at this granularity** (section 4.6). Almost every test executes changed code, because 38% of the executable lines changed. Separating "reached a behaviour change and missed it" from "never reached it" needs behaviour-level change sets.
+5. **The LLM tests cover close to the developer suite in the API layer and far less in the core.** On the lines both measurements see, S124 covers 90.5% of `classic` against the developer suite's 97.7%, and 57.8% of `core` against 89.3%. Almost every line S124 covers is also covered by the developer suite (1868 of 1880). This fits last week's reading of the tests (short, basic parse behaviour through the public functions): they reach the public functions but few of the internal paths. An earlier comparison on the union of executable lines had shown the reverse for `classic`; that came from lines only the CommonJS measurement sees (section 4.5).
+6. **Coverage of changed lines does not explain survival at this granularity** (section 4.6). Almost every test executes changed code, because 42% of the shared executable lines changed. Separating "reached a behaviour change and missed it" from "never reached it" needs behaviour-level change sets.
 
 ## 7. Limitations
 
