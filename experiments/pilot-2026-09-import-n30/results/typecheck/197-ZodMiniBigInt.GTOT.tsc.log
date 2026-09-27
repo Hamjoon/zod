@@ -1,0 +1,1 @@
+packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts(100,20): error TS17006: An unary expression with the '-' operator is not allowed in the left-hand side of an exponentiation expression. Consider enclosing the expression in parentheses.

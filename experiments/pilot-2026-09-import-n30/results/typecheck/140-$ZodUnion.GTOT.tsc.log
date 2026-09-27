@@ -1,0 +1,2 @@
+packages/zod/src/v4/core/$ZodUnion.pilot.test.ts(53,22): error TS6133: 'ctx' is declared but its value is never read.
+packages/zod/src/v4/core/$ZodUnion.pilot.test.ts(77,3): error TS2348: Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?

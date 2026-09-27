@@ -1,0 +1,18 @@
+{
+  "unit_id": "117-$ZodIPv6",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:23:19.910891+00:00",
+  "latency_s": 30.071,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DeepInfra",
+  "response_id": "gen-1790335400-YN657YXbEavfj7KJviNm",
+  "content_chars": 7880,
+  "content_empty": false,
+  "completion_tokens": 2913,
+  "prompt_tokens_reported": 524,
+  "error": null
+}

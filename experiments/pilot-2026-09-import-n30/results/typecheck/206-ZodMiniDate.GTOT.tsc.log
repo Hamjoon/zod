@@ -1,0 +1,28 @@
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(9,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(15,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(23,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(28,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(34,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(39,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(39,41): error TS7006: Parameter 'd' implicitly has an 'any' type.
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(47,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(47,44): error TS7006: Parameter 'd' implicitly has an 'any' type.
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(54,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(66,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(71,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(76,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(81,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(86,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(92,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(100,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(106,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(113,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(121,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(127,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(134,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(143,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(143,41): error TS7006: Parameter 'd' implicitly has an 'any' type.
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(150,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(158,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(166,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts(173,20): error TS2348: Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?

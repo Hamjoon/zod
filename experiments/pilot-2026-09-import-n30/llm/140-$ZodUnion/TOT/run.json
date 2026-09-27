@@ -1,0 +1,18 @@
+{
+  "unit_id": "140-$ZodUnion",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:26:41.438056+00:00",
+  "latency_s": 151.329,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DekaLLM",
+  "response_id": "gen-1790335601-W0dUeITbvXbqWWAzwbj1",
+  "content_chars": 9209,
+  "content_empty": false,
+  "completion_tokens": 3527,
+  "prompt_tokens_reported": 927,
+  "error": null
+}

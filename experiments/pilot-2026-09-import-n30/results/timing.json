@@ -1,0 +1,254 @@
+{
+  "method": "build-timing.py: Phase 8 (D10b). Built only from results/phase-times.jsonl and per-file timing fields already recorded:\nlatency_s (phase3-runs.json), tsc_seconds (phase5-typecheck.json), seconds (phase5-tests.json), coverage_seconds\n(rq5-coverage.json). Reports the wall-clock duration of each phase with review waiting time shown separately; per step\nthe number of files, total seconds, mean and maximum seconds per file (for steps timed as a whole: total / files, no\nmaximum); and the total machine time of the run (sum of phase durations, review waits excluded).\nOutput: results/timing.json and results/timing.md. Run from the zod repo root.",
+  "phases": [
+    {
+      "phase": "phase1",
+      "start": "2026-09-25T20:07:09+09:00",
+      "end": "2026-09-25T20:12:56+09:00",
+      "seconds": 347.0
+    },
+    {
+      "phase": "phase2",
+      "start": "2026-09-25T20:13:34+09:00",
+      "end": "2026-09-25T20:15:45+09:00",
+      "seconds": 131.0
+    },
+    {
+      "phase": "phase3",
+      "start": "2026-09-25T20:18:51+09:00",
+      "end": "2026-09-25T21:25:20+09:00",
+      "seconds": 3989.0
+    },
+    {
+      "phase": "phase4",
+      "start": "2026-09-25T21:26:05+09:00",
+      "end": "2026-09-25T21:26:05+09:00",
+      "seconds": 0.0
+    },
+    {
+      "phase": "phase5",
+      "start": "2026-09-25T21:26:56+09:00",
+      "end": "2026-09-25T21:31:09+09:00",
+      "seconds": 253.0
+    },
+    {
+      "phase": "phase6",
+      "start": "2026-09-25T21:31:09+09:00",
+      "end": "2026-09-25T21:32:32+09:00",
+      "seconds": 83.0
+    },
+    {
+      "phase": "phase7",
+      "start": "2026-09-25T21:32:32+09:00",
+      "end": "2026-09-25T21:33:07+09:00",
+      "seconds": 35.0
+    },
+    {
+      "phase": "phase8",
+      "start": "2026-09-25T21:34:04+09:00",
+      "end": "2026-09-25T21:34:49+09:00",
+      "seconds": 45.0
+    }
+  ],
+  "review_waits": [
+    {
+      "after": "phase2-stop",
+      "stop": "2026-09-25T20:15:45+09:00",
+      "resume": "2026-09-25T20:18:37+09:00",
+      "seconds": 172.0
+    }
+  ],
+  "steps": [
+    {
+      "phase": "phase1",
+      "step": "clone",
+      "wall_seconds": 19.0
+    },
+    {
+      "phase": "phase1",
+      "step": "pnpm-install",
+      "wall_seconds": 5.0
+    },
+    {
+      "phase": "phase1",
+      "step": "archive-extract",
+      "wall_seconds": 0.0
+    },
+    {
+      "phase": "phase1",
+      "step": "step1-copy",
+      "wall_seconds": 47.0
+    },
+    {
+      "phase": "phase1",
+      "step": "step2-dev-check",
+      "wall_seconds": 7.0
+    },
+    {
+      "phase": "phase1",
+      "step": "step3-coverage-provider",
+      "wall_seconds": 11.0
+    },
+    {
+      "phase": "phase1",
+      "step": "step4-env",
+      "wall_seconds": 26.0
+    },
+    {
+      "phase": "phase1",
+      "step": "step5-sample",
+      "wall_seconds": 0.0
+    },
+    {
+      "phase": "phase1",
+      "step": "step6-unit-text",
+      "wall_seconds": 2.0
+    },
+    {
+      "phase": "phase1",
+      "step": "step7-export",
+      "wall_seconds": 0.0
+    },
+    {
+      "phase": "phase1",
+      "step": "step8-dev-coverage-recheck",
+      "wall_seconds": 24.0
+    },
+    {
+      "phase": "phase2",
+      "step": "template-hash-check",
+      "wall_seconds": 1.0
+    },
+    {
+      "phase": "phase2",
+      "step": "render-write",
+      "wall_seconds": 0.0
+    },
+    {
+      "phase": "phase2",
+      "step": "prompt-checks",
+      "wall_seconds": 0.0
+    },
+    {
+      "phase": "phase3",
+      "step": "generation",
+      "wall_seconds": 3975.0,
+      "files": 90,
+      "per_file_source": "recorded per file",
+      "total_file_seconds": 6364.8,
+      "mean_s": 70.72,
+      "max_s": 1640.48
+    },
+    {
+      "phase": "phase4",
+      "step": "extraction",
+      "wall_seconds": 0.0,
+      "files": 90,
+      "per_file_source": "step timed as a whole (wall / files)",
+      "total_file_seconds": null,
+      "mean_s": 0.0,
+      "max_s": null
+    },
+    {
+      "phase": "phase5",
+      "step": "syntax",
+      "wall_seconds": 2.0,
+      "files": 85,
+      "per_file_source": "step timed as a whole (wall / files)",
+      "total_file_seconds": null,
+      "mean_s": 0.02,
+      "max_s": null
+    },
+    {
+      "phase": "phase5",
+      "step": "typecheck",
+      "wall_seconds": 93.0,
+      "files": 85,
+      "per_file_source": "recorded per file",
+      "total_file_seconds": 93.5,
+      "mean_s": 1.1,
+      "max_s": 1.6
+    },
+    {
+      "phase": "phase5",
+      "step": "tests",
+      "wall_seconds": 63.0,
+      "files": 85,
+      "per_file_source": "recorded per file",
+      "total_file_seconds": 63.1,
+      "mean_s": 0.74,
+      "max_s": 1.1
+    },
+    {
+      "phase": "phase5",
+      "step": "import-audit",
+      "wall_seconds": 21.0,
+      "files": 85,
+      "per_file_source": "step timed as a whole (wall / files)",
+      "total_file_seconds": null,
+      "mean_s": 0.25,
+      "max_s": null
+    },
+    {
+      "phase": "phase6",
+      "step": "coverage",
+      "wall_seconds": 64.0,
+      "files": 67,
+      "per_file_source": "recorded per file",
+      "total_file_seconds": 64.0,
+      "mean_s": 0.96,
+      "max_s": 1.5
+    },
+    {
+      "phase": "phase7",
+      "step": "biome",
+      "wall_seconds": 19.0,
+      "files": 166,
+      "per_file_source": "step timed as a whole (wall / files)",
+      "total_file_seconds": null,
+      "mean_s": 0.11,
+      "max_s": null
+    },
+    {
+      "phase": "phase7",
+      "step": "smells-llm",
+      "wall_seconds": 1.0,
+      "files": 85,
+      "per_file_source": "step timed as a whole (wall / files)",
+      "total_file_seconds": null,
+      "mean_s": 0.01,
+      "max_s": null
+    },
+    {
+      "phase": "phase7",
+      "step": "smells-dev",
+      "wall_seconds": 1.0,
+      "files": 81,
+      "per_file_source": "step timed as a whole (wall / files)",
+      "total_file_seconds": null,
+      "mean_s": 0.01,
+      "max_s": null
+    },
+    {
+      "phase": "phase7",
+      "step": "build-matrix",
+      "wall_seconds": 0.0
+    },
+    {
+      "phase": "phase8",
+      "step": "overlap-comparison",
+      "wall_seconds": 0.0
+    },
+    {
+      "phase": "phase8",
+      "step": "timing",
+      "wall_seconds": 0.0
+    }
+  ],
+  "machine_seconds_total": 4883.0,
+  "review_wait_seconds_total": 172.0,
+  "notes": [
+    "phase3 generation ran at concurrency 2, so the sum of per-call latencies exceeds the step's wall time",
+    "per-file seconds for typecheck, tests and coverage include npx/tsc/vitest start-up for each file"
+  ]
+}

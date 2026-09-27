@@ -1,0 +1,277 @@
+{
+  "check": "top-level `export const <class_name>:` (kind b) or `export class <class_name>` (kind a) in the unit source file at t",
+  "ok": 30,
+  "total": 30,
+  "rows": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 930,
+      "ok": true
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 172,
+      "ok": true
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 1438,
+      "ok": true
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 930,
+      "ok": true
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 1443,
+      "ok": true
+    },
+    {
+      "unit_id": "117-$ZodIPv6",
+      "class_name": "$ZodIPv6",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 711,
+      "ok": true
+    },
+    {
+      "unit_id": "088-$ZodCheckStartsWith",
+      "class_name": "$ZodCheckStartsWith",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 1000,
+      "ok": true
+    },
+    {
+      "unit_id": "140-$ZodUnion",
+      "class_name": "$ZodUnion",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 1938,
+      "ok": true
+    },
+    {
+      "unit_id": "087-$ZodCheckIncludes",
+      "class_name": "$ZodCheckIncludes",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 955,
+      "ok": true
+    },
+    {
+      "unit_id": "130-$ZodSymbol",
+      "class_name": "$ZodSymbol",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 1205,
+      "ok": true
+    },
+    {
+      "unit_id": "147-$ZodEnum",
+      "class_name": "$ZodEnum",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 2736,
+      "ok": true
+    },
+    {
+      "unit_id": "159-$ZodPipe",
+      "class_name": "$ZodPipe",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 3439,
+      "ok": true
+    },
+    {
+      "unit_id": "153-$ZodDefault",
+      "class_name": "$ZodDefault",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 3081,
+      "ok": true
+    },
+    {
+      "unit_id": "105-$ZodEmoji",
+      "class_name": "$ZodEmoji",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 493,
+      "ok": true
+    },
+    {
+      "unit_id": "137-$ZodDate",
+      "class_name": "$ZodDate",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 1461,
+      "ok": true
+    },
+    {
+      "unit_id": "055-ZodFile",
+      "class_name": "ZodFile",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 1553,
+      "ok": true
+    },
+    {
+      "unit_id": "013-ZodUUID",
+      "class_name": "ZodUUID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 418,
+      "ok": true
+    },
+    {
+      "unit_id": "036-ZodSymbol",
+      "class_name": "ZodSymbol",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 904,
+      "ok": true
+    },
+    {
+      "unit_id": "062-ZodSuccess",
+      "class_name": "ZodSuccess",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 1756,
+      "ok": true
+    },
+    {
+      "unit_id": "003-ZodISODateTime",
+      "class_name": "ZodISODateTime",
+      "file": "packages/zod/src/v4/classic/iso.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 15,
+      "ok": true
+    },
+    {
+      "unit_id": "021-ZodKSUID",
+      "class_name": "ZodKSUID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 546,
+      "ok": true
+    },
+    {
+      "unit_id": "058-ZodNullable",
+      "class_name": "ZodNullable",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 1644,
+      "ok": true
+    },
+    {
+      "unit_id": "168-ZodMiniISODate",
+      "class_name": "ZodMiniISODate",
+      "file": "packages/zod/src/v4/mini/iso.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 23,
+      "ok": true
+    },
+    {
+      "unit_id": "210-ZodMiniDiscriminatedUnion",
+      "class_name": "ZodMiniDiscriminatedUnion",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 910,
+      "ok": true
+    },
+    {
+      "unit_id": "197-ZodMiniBigInt",
+      "class_name": "ZodMiniBigInt",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 520,
+      "ok": true
+    },
+    {
+      "unit_id": "206-ZodMiniDate",
+      "class_name": "ZodMiniDate",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 675,
+      "ok": true
+    },
+    {
+      "unit_id": "205-ZodMiniVoid",
+      "class_name": "ZodMiniVoid",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 657,
+      "ok": true
+    },
+    {
+      "unit_id": "232-ZodMiniPromise",
+      "class_name": "ZodMiniPromise",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 1466,
+      "ok": true
+    },
+    {
+      "unit_id": "211-ZodMiniIntersection",
+      "class_name": "ZodMiniIntersection",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 938,
+      "ok": true
+    },
+    {
+      "unit_id": "181-ZodMiniCUID2",
+      "class_name": "ZodMiniCUID2",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "kind": "b",
+      "expected_kind": "b",
+      "line": 237,
+      "ok": true
+    }
+  ]
+}

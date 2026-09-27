@@ -1,0 +1,19 @@
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(21,10): error TS2305: Module '"./errors.js"' has no exported member 'errors'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(52,26): error TS2339: Property 'parse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(53,26): error TS2339: Property 'safeParse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(54,26): error TS2339: Property 'check' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(60,25): error TS2339: Property 'parse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(61,19): error TS2339: Property 'parse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(67,25): error TS2339: Property 'parse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(72,27): error TS2339: Property 'safeParse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(81,27): error TS2339: Property 'safeParse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(90,19): error TS2339: Property 'check' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(95,19): error TS2339: Property 'check' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(138,27): error TS2339: Property 'safeParse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(149,27): error TS2339: Property 'safeParse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(160,27): error TS2339: Property 'safeParse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(171,27): error TS2339: Property 'safeParse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(180,27): error TS2339: Property 'safeParse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(197,27): error TS2339: Property 'safeParse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(207,27): error TS2339: Property 'safeParse' does not exist on type '$ZodCheckUpperCase'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(218,14): error TS2339: Property 'parse' does not exist on type '$ZodCheckUpperCase'.

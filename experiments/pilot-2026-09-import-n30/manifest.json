@@ -1,0 +1,584 @@
+{
+  "experiment": "pilot-2026-09-import-n30",
+  "instructions_issued": "2026-09-25",
+  "model": "openai/gpt-oss-120b",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "temperature": 0,
+  "request_shape": "one user message, no system message, no max_tokens, one call per (unit x technique), no retries",
+  "anchor_commit": "45afab0f846dffd591362b6f770017507eb185b5",
+  "anchor_tag": "v4.0.5",
+  "week2_archive_commit": "39950c5d2c93b99ef274f7f03f7aafdf8eac404b",
+  "week2_experiment_commit": "2ffee7eca2f6dcec3aea5353a939c20a4973a960",
+  "units": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "origin": "week2",
+      "dir": "core",
+      "class_name": "$ZodCheckUpperCase",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+      "module_specifier": "./checks.js"
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "origin": "week2",
+      "dir": "core",
+      "class_name": "$ZodType",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "origin": "week2",
+      "dir": "classic",
+      "class_name": "ZodEnum",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "origin": "week2",
+      "dir": "classic",
+      "class_name": "ZodNull",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "origin": "week2",
+      "dir": "mini",
+      "class_name": "ZodMiniLazy",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "test_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "117-$ZodIPv6",
+      "origin": "added",
+      "dir": "core",
+      "class_name": "$ZodIPv6",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "088-$ZodCheckStartsWith",
+      "origin": "added",
+      "dir": "core",
+      "class_name": "$ZodCheckStartsWith",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+      "module_specifier": "./checks.js"
+    },
+    {
+      "unit_id": "140-$ZodUnion",
+      "origin": "added",
+      "dir": "core",
+      "class_name": "$ZodUnion",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "087-$ZodCheckIncludes",
+      "origin": "added",
+      "dir": "core",
+      "class_name": "$ZodCheckIncludes",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+      "module_specifier": "./checks.js"
+    },
+    {
+      "unit_id": "130-$ZodSymbol",
+      "origin": "added",
+      "dir": "core",
+      "class_name": "$ZodSymbol",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "147-$ZodEnum",
+      "origin": "added",
+      "dir": "core",
+      "class_name": "$ZodEnum",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "159-$ZodPipe",
+      "origin": "added",
+      "dir": "core",
+      "class_name": "$ZodPipe",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "153-$ZodDefault",
+      "origin": "added",
+      "dir": "core",
+      "class_name": "$ZodDefault",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "105-$ZodEmoji",
+      "origin": "added",
+      "dir": "core",
+      "class_name": "$ZodEmoji",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "137-$ZodDate",
+      "origin": "added",
+      "dir": "core",
+      "class_name": "$ZodDate",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "test_path": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "055-ZodFile",
+      "origin": "added",
+      "dir": "classic",
+      "class_name": "ZodFile",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "013-ZodUUID",
+      "origin": "added",
+      "dir": "classic",
+      "class_name": "ZodUUID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "036-ZodSymbol",
+      "origin": "added",
+      "dir": "classic",
+      "class_name": "ZodSymbol",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "062-ZodSuccess",
+      "origin": "added",
+      "dir": "classic",
+      "class_name": "ZodSuccess",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "003-ZodISODateTime",
+      "origin": "added",
+      "dir": "classic",
+      "class_name": "ZodISODateTime",
+      "file": "packages/zod/src/v4/classic/iso.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+      "module_specifier": "./iso.js"
+    },
+    {
+      "unit_id": "021-ZodKSUID",
+      "origin": "added",
+      "dir": "classic",
+      "class_name": "ZodKSUID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "058-ZodNullable",
+      "origin": "added",
+      "dir": "classic",
+      "class_name": "ZodNullable",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "test_path": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "168-ZodMiniISODate",
+      "origin": "added",
+      "dir": "mini",
+      "class_name": "ZodMiniISODate",
+      "file": "packages/zod/src/v4/mini/iso.ts",
+      "test_path": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+      "module_specifier": "./iso.js"
+    },
+    {
+      "unit_id": "210-ZodMiniDiscriminatedUnion",
+      "origin": "added",
+      "dir": "mini",
+      "class_name": "ZodMiniDiscriminatedUnion",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "test_path": "packages/zod/src/v4/mini/ZodMiniDiscriminatedUnion.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "197-ZodMiniBigInt",
+      "origin": "added",
+      "dir": "mini",
+      "class_name": "ZodMiniBigInt",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "test_path": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "206-ZodMiniDate",
+      "origin": "added",
+      "dir": "mini",
+      "class_name": "ZodMiniDate",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "test_path": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "205-ZodMiniVoid",
+      "origin": "added",
+      "dir": "mini",
+      "class_name": "ZodMiniVoid",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "test_path": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "232-ZodMiniPromise",
+      "origin": "added",
+      "dir": "mini",
+      "class_name": "ZodMiniPromise",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "test_path": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "211-ZodMiniIntersection",
+      "origin": "added",
+      "dir": "mini",
+      "class_name": "ZodMiniIntersection",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "test_path": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    },
+    {
+      "unit_id": "181-ZodMiniCUID2",
+      "origin": "added",
+      "dir": "mini",
+      "class_name": "ZodMiniCUID2",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "test_path": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+      "module_specifier": "./schemas.js"
+    }
+  ],
+  "d3_sample": {
+    "method": "five week-2 units (random.Random(20260904)) + seeded stratified draw of 25 from the rest of the week-2 pool",
+    "seeds": {
+      "week2": 20260904,
+      "added": 20260925
+    },
+    "quota": {
+      "total": {
+        "core": 12,
+        "classic": 9,
+        "mini": 9
+      },
+      "week2": {
+        "core": 2,
+        "classic": 2,
+        "mini": 1
+      },
+      "added": {
+        "core": 10,
+        "classic": 7,
+        "mini": 8
+      }
+    },
+    "pool": {
+      "population": 233,
+      "kept_by_token_rule": 232,
+      "excluded_identifier_initializer": 4,
+      "excluded_no_coverage_data": 0,
+      "pool": 228,
+      "pool_by_stratum": {
+        "core": 93,
+        "classic": 68,
+        "mini": 67
+      }
+    },
+    "file": "results/units-sampled.json"
+  },
+  "techniques": {
+    "sent": [
+      "COT",
+      "TOT",
+      "GTOT"
+    ],
+    "rendered_only": [
+      "ZSL",
+      "FSL"
+    ],
+    "provisional": {
+      "ZSL": true,
+      "FSL": true,
+      "COT": false,
+      "TOT": false,
+      "GTOT": false
+    }
+  },
+  "calls_planned": 90,
+  "template_sha256": {
+    "ZSL": "4983535691d0fa62e444b0fdb12458efa187520b7d2a454db3d9bed4681d969e",
+    "FSL": "88e5ab4739b81ce67f9a2d436312a98c29bad19087343ece0af01697c64439c6",
+    "COT": "8816fc94616f54988bd1cdcb026bdfcced153ae683ffc0dc46e92d1b4a9d9783",
+    "TOT": "5d2f751d18736c75b61f59b9c7207c8b69cf8850a98b7d480b58d01c28acdc4a",
+    "GTOT": "e6d66bd25118a4de0d662ddd4fda5872bb31a6c23e4e0544bb661b9734efe201"
+  },
+  "template_sha256_equal_to_week2": true,
+  "d1_line": "The {class_name} class is exported from `{module_specifier}` (path relative to the test file).",
+  "d1_module_specifier_rule": "./ + base name of the unit's source file without .ts + .js",
+  "d2_example": {
+    "class_name": "$ZodRegistry",
+    "source_file": "packages/zod/src/v4/core/registries.ts",
+    "test_file": "packages/zod/src/v4/classic/tests/registries.test.ts",
+    "import_line_added_to_example": false
+  },
+  "d5_rules": {
+    "R-01": "an extraction marker counts only when it stands alone on its line (decoration allowed: **, __, backtick)",
+    "R-02": "coverage run with --coverage.reportOnFailure=true, so files with failing cases are measured",
+    "R-03": "TS2348 is its own category (constructor called without new); TS2459 sits with TS2305; AST count of calls to the class under test with and without new",
+    "source": "week-2 rulings (W2 run-notes R-01, R-02, R-03), fixed in advance; already implemented in the copied week-2 scripts"
+  },
+  "d8_test_placement": "packages/zod/src/v4/<dir>/<class_name>.pilot.test.ts; copied only for checks and removed afterwards",
+  "d9_concurrency": 2,
+  "prompt_token_counts_file": "results/prompt-tokens.json",
+  "prompt_token_counts": {
+    "086-$ZodCheckUpperCase": {
+      "ZSL": 276,
+      "FSL": 2398,
+      "COT": 384,
+      "TOT": 339,
+      "GTOT": 464
+    },
+    "098-$ZodType": {
+      "ZSL": 1252,
+      "FSL": 3374,
+      "COT": 1358,
+      "TOT": 1317,
+      "GTOT": 1438
+    },
+    "053-ZodEnum": {
+      "ZSL": 537,
+      "FSL": 2659,
+      "COT": 643,
+      "TOT": 604,
+      "GTOT": 724
+    },
+    "038-ZodNull": {
+      "ZSL": 161,
+      "FSL": 2283,
+      "COT": 267,
+      "TOT": 228,
+      "GTOT": 348
+    },
+    "231-ZodMiniLazy": {
+      "ZSL": 204,
+      "FSL": 2326,
+      "COT": 311,
+      "TOT": 270,
+      "GTOT": 392
+    },
+    "117-$ZodIPv6": {
+      "ZSL": 363,
+      "FSL": 2485,
+      "COT": 470,
+      "TOT": 427,
+      "GTOT": 550
+    },
+    "088-$ZodCheckStartsWith": {
+      "ZSL": 427,
+      "FSL": 2549,
+      "COT": 535,
+      "TOT": 490,
+      "GTOT": 615
+    },
+    "140-$ZodUnion": {
+      "ZSL": 795,
+      "FSL": 2917,
+      "COT": 901,
+      "TOT": 860,
+      "GTOT": 981
+    },
+    "087-$ZodCheckIncludes": {
+      "ZSL": 442,
+      "FSL": 2564,
+      "COT": 549,
+      "TOT": 506,
+      "GTOT": 629
+    },
+    "130-$ZodSymbol": {
+      "ZSL": 322,
+      "FSL": 2444,
+      "COT": 428,
+      "TOT": 387,
+      "GTOT": 508
+    },
+    "147-$ZodEnum": {
+      "ZSL": 492,
+      "FSL": 2614,
+      "COT": 598,
+      "TOT": 557,
+      "GTOT": 678
+    },
+    "159-$ZodPipe": {
+      "ZSL": 534,
+      "FSL": 2656,
+      "COT": 640,
+      "TOT": 599,
+      "GTOT": 720
+    },
+    "153-$ZodDefault": {
+      "ZSL": 600,
+      "FSL": 2722,
+      "COT": 706,
+      "TOT": 665,
+      "GTOT": 786
+    },
+    "105-$ZodEmoji": {
+      "ZSL": 213,
+      "FSL": 2335,
+      "COT": 319,
+      "TOT": 278,
+      "GTOT": 399
+    },
+    "137-$ZodDate": {
+      "ZSL": 447,
+      "FSL": 2569,
+      "COT": 553,
+      "TOT": 512,
+      "GTOT": 633
+    },
+    "055-ZodFile": {
+      "ZSL": 308,
+      "FSL": 2430,
+      "COT": 414,
+      "TOT": 375,
+      "GTOT": 495
+    },
+    "013-ZodUUID": {
+      "ZSL": 182,
+      "FSL": 2304,
+      "COT": 288,
+      "TOT": 249,
+      "GTOT": 369
+    },
+    "036-ZodSymbol": {
+      "ZSL": 159,
+      "FSL": 2281,
+      "COT": 265,
+      "TOT": 226,
+      "GTOT": 346
+    },
+    "062-ZodSuccess": {
+      "ZSL": 203,
+      "FSL": 2325,
+      "COT": 309,
+      "TOT": 270,
+      "GTOT": 390
+    },
+    "003-ZodISODateTime": {
+      "ZSL": 188,
+      "FSL": 2310,
+      "COT": 296,
+      "TOT": 253,
+      "GTOT": 377
+    },
+    "021-ZodKSUID": {
+      "ZSL": 193,
+      "FSL": 2315,
+      "COT": 300,
+      "TOT": 259,
+      "GTOT": 381
+    },
+    "058-ZodNullable": {
+      "ZSL": 208,
+      "FSL": 2330,
+      "COT": 314,
+      "TOT": 275,
+      "GTOT": 395
+    },
+    "168-ZodMiniISODate": {
+      "ZSL": 194,
+      "FSL": 2316,
+      "COT": 302,
+      "TOT": 259,
+      "GTOT": 383
+    },
+    "210-ZodMiniDiscriminatedUnion": {
+      "ZSL": 232,
+      "FSL": 2354,
+      "COT": 342,
+      "TOT": 295,
+      "GTOT": 423
+    },
+    "197-ZodMiniBigInt": {
+      "ZSL": 216,
+      "FSL": 2338,
+      "COT": 324,
+      "TOT": 281,
+      "GTOT": 405
+    },
+    "206-ZodMiniDate": {
+      "ZSL": 197,
+      "FSL": 2319,
+      "COT": 304,
+      "TOT": 263,
+      "GTOT": 385
+    },
+    "205-ZodMiniVoid": {
+      "ZSL": 191,
+      "FSL": 2313,
+      "COT": 298,
+      "TOT": 257,
+      "GTOT": 379
+    },
+    "232-ZodMiniPromise": {
+      "ZSL": 204,
+      "FSL": 2326,
+      "COT": 311,
+      "TOT": 270,
+      "GTOT": 392
+    },
+    "211-ZodMiniIntersection": {
+      "ZSL": 220,
+      "FSL": 2342,
+      "COT": 327,
+      "TOT": 286,
+      "GTOT": 408
+    },
+    "181-ZodMiniCUID2": {
+      "ZSL": 214,
+      "FSL": 2336,
+      "COT": 323,
+      "TOT": 278,
+      "GTOT": 404
+    }
+  },
+  "prompt_token_max": 3374,
+  "token_limit": 4096,
+  "tokenizer": {
+    "library": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base"
+  }
+}

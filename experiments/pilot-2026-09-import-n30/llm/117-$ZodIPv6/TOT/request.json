@@ -1,0 +1,10 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.\nThe $ZodIPv6 class is exported from `./schemas.js` (path relative to the test file).\nThe TypeScript class is:\nexport interface $ZodIPv6Def extends $ZodStringFormatDef<\"ipv6\"> {\n  version?: \"v6\";\n}\n\nexport interface $ZodIPv6Internals extends $ZodStringFormatInternals<\"ipv6\"> {\n  def: $ZodIPv6Def;\n}\n\nexport interface $ZodIPv6 extends $ZodType {\n  _zod: $ZodIPv6Internals;\n}\n\nexport const $ZodIPv6: core.$constructor<$ZodIPv6> = /*@__PURE__*/ core.$constructor(\"$ZodIPv6\", (inst, def): void => {\n  def.pattern ??= regexes.ipv6;\n  $ZodStringFormat.init(inst, def);\n\n  inst._zod.onattach.push((inst) => {\n    const bag = inst._zod.bag as $ZodStringInternals<unknown>[\"bag\"];\n    bag.format = `ipv6`;\n  });\n\n  inst._zod.check = (payload) => {\n    try {\n      new URL(`http://[${payload.value}]`);\n      // return;\n    } catch {\n      payload.issues.push({\n        code: \"invalid_format\",\n        format: \"ipv6\",\n        input: payload.value,\n        inst,\n        continue: !def.abort,\n      });\n    }\n  };\n});\nAt the end they must propose one complete (including typical use cases, edge cases, and error scenarios) Vitest test file ($ZodIPv6.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##"
+    }
+  ]
+}

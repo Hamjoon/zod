@@ -1,0 +1,194 @@
+{
+  "check": "SHA-256 of source_text, results/units-all.json (week 2) vs results/units-all-recheck.json (re-derived at t)",
+  "anchor_commit_recheck": "45afab0f846dffd591362b6f770017507eb185b5",
+  "matched": 31,
+  "total": 31,
+  "rows": [
+    {
+      "unit": "086-$ZodCheckUpperCase",
+      "sha256_week2": "a5325a2b456be8fbc892462e6fc01d3e7e661987cb3e39ba69d6a7240147284d",
+      "sha256_recheck": "a5325a2b456be8fbc892462e6fc01d3e7e661987cb3e39ba69d6a7240147284d",
+      "match": true
+    },
+    {
+      "unit": "098-$ZodType",
+      "sha256_week2": "64f5e08fd09d8f60f851c16af00bddfaf3a0ce873f856a0cc44d157ff15eb0b3",
+      "sha256_recheck": "64f5e08fd09d8f60f851c16af00bddfaf3a0ce873f856a0cc44d157ff15eb0b3",
+      "match": true
+    },
+    {
+      "unit": "053-ZodEnum",
+      "sha256_week2": "b00a18fcc0c1a55a3d3a79ef8bd128bdf13b306f1577fe5bbc4f70ba630c5735",
+      "sha256_recheck": "b00a18fcc0c1a55a3d3a79ef8bd128bdf13b306f1577fe5bbc4f70ba630c5735",
+      "match": true
+    },
+    {
+      "unit": "038-ZodNull",
+      "sha256_week2": "1553a569e1aac7c2daa0469a0c1f15aec3af8c6a53a3b2e49c087e15ad68e897",
+      "sha256_recheck": "1553a569e1aac7c2daa0469a0c1f15aec3af8c6a53a3b2e49c087e15ad68e897",
+      "match": true
+    },
+    {
+      "unit": "231-ZodMiniLazy",
+      "sha256_week2": "289ebd61a723cae92bb521bc51e0f3320f508ad3270a76aaed75da94b2337db0",
+      "sha256_recheck": "289ebd61a723cae92bb521bc51e0f3320f508ad3270a76aaed75da94b2337db0",
+      "match": true
+    },
+    {
+      "unit": "117-$ZodIPv6",
+      "sha256_week2": "03b4105b056fd40c2fcbf81d35fb607634bd6e589c78e11959b2b67a2d3067a1",
+      "sha256_recheck": "03b4105b056fd40c2fcbf81d35fb607634bd6e589c78e11959b2b67a2d3067a1",
+      "match": true
+    },
+    {
+      "unit": "088-$ZodCheckStartsWith",
+      "sha256_week2": "1a7277ff615df63a1af08d3bb4490400220b1dcd2e804713f2bbf031f8ffb643",
+      "sha256_recheck": "1a7277ff615df63a1af08d3bb4490400220b1dcd2e804713f2bbf031f8ffb643",
+      "match": true
+    },
+    {
+      "unit": "140-$ZodUnion",
+      "sha256_week2": "73246efb93e7adc998c000f852b1233a3544bf4faa580639611f9fb42129a5cd",
+      "sha256_recheck": "73246efb93e7adc998c000f852b1233a3544bf4faa580639611f9fb42129a5cd",
+      "match": true
+    },
+    {
+      "unit": "087-$ZodCheckIncludes",
+      "sha256_week2": "f57cb3a54d32b4588026d19698ceb897002067986a78b4d3571ac7cd3b9f116c",
+      "sha256_recheck": "f57cb3a54d32b4588026d19698ceb897002067986a78b4d3571ac7cd3b9f116c",
+      "match": true
+    },
+    {
+      "unit": "130-$ZodSymbol",
+      "sha256_week2": "ddb998d5bc490e7527b28bf314c9a7f6868f69d71ef90bee0f7b9c5373f5d764",
+      "sha256_recheck": "ddb998d5bc490e7527b28bf314c9a7f6868f69d71ef90bee0f7b9c5373f5d764",
+      "match": true
+    },
+    {
+      "unit": "147-$ZodEnum",
+      "sha256_week2": "01786d2e884d15cae3ef23a32f9708618fbf1d32ddb96247a3010c6283b8f5e9",
+      "sha256_recheck": "01786d2e884d15cae3ef23a32f9708618fbf1d32ddb96247a3010c6283b8f5e9",
+      "match": true
+    },
+    {
+      "unit": "159-$ZodPipe",
+      "sha256_week2": "c5d9bedcb064ca384eb0c1a31ff8617071e1fdd918876700e0ce9052655c7352",
+      "sha256_recheck": "c5d9bedcb064ca384eb0c1a31ff8617071e1fdd918876700e0ce9052655c7352",
+      "match": true
+    },
+    {
+      "unit": "153-$ZodDefault",
+      "sha256_week2": "a27ad174e7e5bf4836a25a25f17916b8023b7a4f8425602c3493a6ae3ca6d8c9",
+      "sha256_recheck": "a27ad174e7e5bf4836a25a25f17916b8023b7a4f8425602c3493a6ae3ca6d8c9",
+      "match": true
+    },
+    {
+      "unit": "105-$ZodEmoji",
+      "sha256_week2": "e29458a14923c26778138ac7b721b269219d0900ab10a4d92f3cceeb095ead61",
+      "sha256_recheck": "e29458a14923c26778138ac7b721b269219d0900ab10a4d92f3cceeb095ead61",
+      "match": true
+    },
+    {
+      "unit": "137-$ZodDate",
+      "sha256_week2": "21ef5083f0695057b3ad06a0484f4ecdf4e77fdc656187346e400a70949e70f0",
+      "sha256_recheck": "21ef5083f0695057b3ad06a0484f4ecdf4e77fdc656187346e400a70949e70f0",
+      "match": true
+    },
+    {
+      "unit": "055-ZodFile",
+      "sha256_week2": "3719334c96459b4b16d5d4c2ae83cbd874dae160112c61508755a6489a1dde81",
+      "sha256_recheck": "3719334c96459b4b16d5d4c2ae83cbd874dae160112c61508755a6489a1dde81",
+      "match": true
+    },
+    {
+      "unit": "013-ZodUUID",
+      "sha256_week2": "0aa42a8e6b3248a63cec0ff75ee3c5ec9b2a1dbe0f3c79db1ab1b302d1ab464b",
+      "sha256_recheck": "0aa42a8e6b3248a63cec0ff75ee3c5ec9b2a1dbe0f3c79db1ab1b302d1ab464b",
+      "match": true
+    },
+    {
+      "unit": "036-ZodSymbol",
+      "sha256_week2": "2e0868b60812a783309771b926b119dafd3f0fd70622e27773dd7412249dbb7d",
+      "sha256_recheck": "2e0868b60812a783309771b926b119dafd3f0fd70622e27773dd7412249dbb7d",
+      "match": true
+    },
+    {
+      "unit": "062-ZodSuccess",
+      "sha256_week2": "36c9cf1745a9f5ddc35fcf843e78437bfe93594ae6796b0decda3f24093c49a2",
+      "sha256_recheck": "36c9cf1745a9f5ddc35fcf843e78437bfe93594ae6796b0decda3f24093c49a2",
+      "match": true
+    },
+    {
+      "unit": "003-ZodISODateTime",
+      "sha256_week2": "d6f7008569cfe78c4673010d2336b74ac6116004450cdedc14b46346d21f87d7",
+      "sha256_recheck": "d6f7008569cfe78c4673010d2336b74ac6116004450cdedc14b46346d21f87d7",
+      "match": true
+    },
+    {
+      "unit": "021-ZodKSUID",
+      "sha256_week2": "5382a1129155e6dd55815fdd15699e9c00566ac828bebfd1926023ba08ae2410",
+      "sha256_recheck": "5382a1129155e6dd55815fdd15699e9c00566ac828bebfd1926023ba08ae2410",
+      "match": true
+    },
+    {
+      "unit": "058-ZodNullable",
+      "sha256_week2": "033d984fa314539cfd9afe4b65253ff19b71a13922f3f4d866a0a936116cbbb9",
+      "sha256_recheck": "033d984fa314539cfd9afe4b65253ff19b71a13922f3f4d866a0a936116cbbb9",
+      "match": true
+    },
+    {
+      "unit": "168-ZodMiniISODate",
+      "sha256_week2": "684a69183292ee3699220ecebaf371b9e9ce7d99ec1c2d2291ad990ab6f687e0",
+      "sha256_recheck": "684a69183292ee3699220ecebaf371b9e9ce7d99ec1c2d2291ad990ab6f687e0",
+      "match": true
+    },
+    {
+      "unit": "210-ZodMiniDiscriminatedUnion",
+      "sha256_week2": "1aa048e6700e026fbc11b1c23c7eadfd2d777f8f00a637d90ac02377323ae63b",
+      "sha256_recheck": "1aa048e6700e026fbc11b1c23c7eadfd2d777f8f00a637d90ac02377323ae63b",
+      "match": true
+    },
+    {
+      "unit": "197-ZodMiniBigInt",
+      "sha256_week2": "2264b4b944a1c5f2206893896587babc48fcbb72d9da24122946d86cb9d2d168",
+      "sha256_recheck": "2264b4b944a1c5f2206893896587babc48fcbb72d9da24122946d86cb9d2d168",
+      "match": true
+    },
+    {
+      "unit": "206-ZodMiniDate",
+      "sha256_week2": "461e59582ffa494ed5cec69cc60c168f80edde751f83a387a44472c06fffca3a",
+      "sha256_recheck": "461e59582ffa494ed5cec69cc60c168f80edde751f83a387a44472c06fffca3a",
+      "match": true
+    },
+    {
+      "unit": "205-ZodMiniVoid",
+      "sha256_week2": "d0625d39be53981b16abd69025b3f1aed42409a5456a9c258225bdf80b8775e9",
+      "sha256_recheck": "d0625d39be53981b16abd69025b3f1aed42409a5456a9c258225bdf80b8775e9",
+      "match": true
+    },
+    {
+      "unit": "232-ZodMiniPromise",
+      "sha256_week2": "ee2d5960a082b175fe1ac3709e1d45f127ee746813e7098da7ce6c8acac4c45d",
+      "sha256_recheck": "ee2d5960a082b175fe1ac3709e1d45f127ee746813e7098da7ce6c8acac4c45d",
+      "match": true
+    },
+    {
+      "unit": "211-ZodMiniIntersection",
+      "sha256_week2": "375760b9947761ed1cc688a8070f5666712029d84a1c3b302595ba4d56e201be",
+      "sha256_recheck": "375760b9947761ed1cc688a8070f5666712029d84a1c3b302595ba4d56e201be",
+      "match": true
+    },
+    {
+      "unit": "181-ZodMiniCUID2",
+      "sha256_week2": "a31c83c8467fe1b842eb948af05346736a28ae18b522373e3f386d9d2d78771e",
+      "sha256_recheck": "a31c83c8467fe1b842eb948af05346736a28ae18b522373e3f386d9d2d78771e",
+      "match": true
+    },
+    {
+      "unit": "example:$ZodRegistry",
+      "sha256_week2": "80b4c10e316ff964c724f73c47f2fb5638d786af222c96e56733a2c86d954bcd",
+      "sha256_recheck": "80b4c10e316ff964c724f73c47f2fb5638d786af222c96e56733a2c86d954bcd",
+      "match": true
+    }
+  ]
+}

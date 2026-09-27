@@ -1,0 +1,18 @@
+{
+  "unit_id": "013-ZodUUID",
+  "technique": "GTOT",
+  "timestamp_utc": "2026-09-25T11:40:18.402804+00:00",
+  "latency_s": 114.146,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "AkashML",
+  "response_id": "gen-1790336420-wO55aA4CjhixCnankwNj",
+  "content_chars": 14359,
+  "content_empty": false,
+  "completion_tokens": 4185,
+  "prompt_tokens_reported": 436,
+  "error": null
+}

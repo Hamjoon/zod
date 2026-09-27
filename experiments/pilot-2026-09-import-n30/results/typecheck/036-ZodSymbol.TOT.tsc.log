@@ -1,0 +1,9 @@
+packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts(27,20): error TS2348: Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts(37,20): error TS2348: Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts(61,20): error TS2348: Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts(69,20): error TS2348: Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts(78,20): error TS2348: Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts(89,20): error TS2348: Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts(90,8): error TS7006: Parameter 'sym' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts(107,20): error TS2348: Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts(123,20): error TS2348: Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?

@@ -1,0 +1,18 @@
+{
+  "unit_id": "105-$ZodEmoji",
+  "technique": "GTOT",
+  "timestamp_utc": "2026-09-25T11:34:28.122687+00:00",
+  "latency_s": 42.347,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "CoreWeave",
+  "response_id": "gen-1790336070-10vPIYl5YzR5vJdsGZVg",
+  "content_chars": 3127,
+  "content_empty": false,
+  "completion_tokens": 1598,
+  "prompt_tokens_reported": 466,
+  "error": null
+}

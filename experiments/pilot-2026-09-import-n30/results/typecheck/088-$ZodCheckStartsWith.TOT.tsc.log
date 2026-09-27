@@ -1,0 +1,20 @@
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(49,43): error TS2345: Argument of type '{ readonly prefix: "hello"; }' is not assignable to parameter of type '$ZodCheckStartsWithDef'.
+  Type '{ readonly prefix: "hello"; }' is missing the following properties from type '$ZodCheckStartsWithDef': check, format
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(62,43): error TS2345: Argument of type '{ readonly prefix: "a.*+?^${}()|[]\\"; }' is not assignable to parameter of type '$ZodCheckStartsWithDef'.
+  Type '{ readonly prefix: "a.*+?^${}()|[]\\"; }' is missing the following properties from type '$ZodCheckStartsWithDef': check, format
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(77,43): error TS2345: Argument of type '{ readonly prefix: "test"; }' is not assignable to parameter of type '$ZodCheckStartsWithDef'.
+  Type '{ readonly prefix: "test"; }' is missing the following properties from type '$ZodCheckStartsWithDef': check, format
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(86,44): error TS2345: Argument of type '{ _zod: { bag: Record<string, unknown>; }; }' is not assignable to parameter of type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>'.
+  Property '"~standard"' is missing in type '{ _zod: { bag: Record<string, unknown>; }; }' but required in type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>'.
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(102,43): error TS2345: Argument of type '{ prefix: string; }' is not assignable to parameter of type '$ZodCheckStartsWithDef'.
+  Type '{ prefix: string; }' is missing the following properties from type '$ZodCheckStartsWithDef': check, format
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(106,22): error TS2345: Argument of type '{ value: string; issues: Array<Record<string, unknown>>; }' is not assignable to parameter of type 'ParsePayload<string>'.
+  Types of property 'issues' are incompatible.
+    Type 'Record<string, unknown>[]' is not assignable to type '({ [x: string]: any; readonly input: Record<string, unknown>; readonly code: "unrecognized_keys"; readonly keys: string[]; readonly message?: string | undefined; readonly path?: PropertyKey[] | undefined; readonly inst?: $ZodType<...> | $ZodCheck<...>; readonly continue?: boolean | undefined; } | ... 9 more ... | { ...'.
+      Type 'Record<string, unknown>' is not assignable to type '{ [x: string]: any; readonly input: Record<string, unknown>; readonly code: "unrecognized_keys"; readonly keys: string[]; readonly message?: string | undefined; readonly path?: PropertyKey[] | undefined; readonly inst?: $ZodType<...> | $ZodCheck<...>; readonly continue?: boolean | undefined; } | ... 9 more ... | { ....'.
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(118,43): error TS2345: Argument of type '{ prefix: string; abort: false; }' is not assignable to parameter of type '$ZodCheckStartsWithDef'.
+  Type '{ prefix: string; abort: false; }' is missing the following properties from type '$ZodCheckStartsWithDef': check, format
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(121,22): error TS2345: Argument of type '{ value: string; issues: Array<Record<string, unknown>>; }' is not assignable to parameter of type 'ParsePayload<string>'.
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(138,43): error TS2345: Argument of type '{ prefix: string; abort: true; }' is not assignable to parameter of type '$ZodCheckStartsWithDef'.
+  Type '{ prefix: string; abort: true; }' is missing the following properties from type '$ZodCheckStartsWithDef': check, format
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(141,22): error TS2345: Argument of type '{ value: string; issues: Array<Record<string, unknown>>; }' is not assignable to parameter of type 'ParsePayload<string>'.

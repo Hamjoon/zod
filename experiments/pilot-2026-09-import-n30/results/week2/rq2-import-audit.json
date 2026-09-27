@@ -1,0 +1,3074 @@
+{
+  "definition": "TypeScript compiler API resolution using packages/zod/tsconfig.test.json options; generated content is hosted virtually at its D6 in-place path.",
+  "summary": {
+    "week1": {
+      "files": 14,
+      "cut_import_counts": {
+        "absent": 1,
+        "present_unresolved": 13
+      },
+      "non_cut_imports_total": 26,
+      "non_cut_imports_unresolved": 4,
+      "non_cut_named_imports_not_exported": 6,
+      "relative_non_cut_with_js": 0,
+      "relative_non_cut_without_js": 10,
+      "files_with_cut_calls_without_new": 6,
+      "cut_calls_without_new": 44,
+      "files_using_new_on_cut": 2,
+      "cut_new_expressions": 2
+    },
+    "week2": {
+      "files": 15,
+      "cut_import_counts": {
+        "given_specifier_resolves": 15
+      },
+      "non_cut_imports_total": 23,
+      "non_cut_imports_unresolved": 1,
+      "non_cut_named_imports_not_exported": 5,
+      "relative_non_cut_with_js": 4,
+      "relative_non_cut_without_js": 3,
+      "files_with_cut_calls_without_new": 10,
+      "cut_calls_without_new": 52,
+      "files_using_new_on_cut": 3,
+      "cut_new_expressions": 13
+    }
+  },
+  "rows": [
+    {
+      "run": "week1",
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "technique": "COT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/086-$ZodCheckUpperCase.COT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+      "given_specifier": "./checks.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "absent",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [],
+        "calls_without_new": 0,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "technique": "GTOT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/086-$ZodCheckUpperCase.GTOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+      "given_specifier": "./checks.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./$ZodCheckUpperCase",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodCheckUpperCase",
+              "local": "$ZodCheckUpperCase",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./regexes",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "regexes",
+              "local": "regexes",
+              "type_only": false,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/regexes.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./$ZodCheckUpperCase",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodCheckUpperCaseDef",
+              "local": "$ZodCheckUpperCaseDef",
+              "type_only": true,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 3,
+        "resolved": 2,
+        "unresolved": 1,
+        "named_imports_not_exported": 1,
+        "named_imports_not_exported_details": [
+          {
+            "specifier": "./regexes",
+            "imported": "regexes",
+            "local": "regexes"
+          }
+        ],
+        "relative_with_js": 0,
+        "relative_without_js": 2
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "$ZodCheckUpperCase"
+        ],
+        "calls_without_new": 8,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "technique": "COT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/098-$ZodType.COT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./$ZodType",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodType",
+              "local": "$ZodType",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [
+        {
+          "kind": "await_import",
+          "specifier": "./$ZodType",
+          "resolves": false,
+          "resolved_file": null,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "$ZodType"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "technique": "GTOT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/098-$ZodType.GTOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./$ZodType",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodType",
+              "local": "$ZodType",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./core",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "core",
+              "local": "core",
+              "type_only": false,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/core.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./checks",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "checks",
+              "local": "checks",
+              "type_only": true,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/checks.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 3,
+        "resolved": 3,
+        "unresolved": 0,
+        "named_imports_not_exported": 2,
+        "named_imports_not_exported_details": [
+          {
+            "specifier": "./core",
+            "imported": "core",
+            "local": "core"
+          },
+          {
+            "specifier": "./checks",
+            "imported": "checks",
+            "local": "checks"
+          }
+        ],
+        "relative_with_js": 0,
+        "relative_without_js": 2
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "$ZodType"
+        ],
+        "calls_without_new": 6,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "technique": "TOT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/098-$ZodType.TOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "vi",
+              "local": "vi",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "beforeEach",
+              "local": "beforeEach",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./$ZodType",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodType",
+              "local": "$ZodType",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./core",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "core",
+              "local": "core",
+              "type_only": false,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/core.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./util",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "util",
+              "local": "util",
+              "type_only": false,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/util.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./checks",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "checks",
+              "local": "checks",
+              "type_only": false,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/checks.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./safeParse",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "safeParse",
+              "local": "safeParse",
+              "type_only": false,
+              "exported": null
+            },
+            {
+              "kind": "named",
+              "imported": "safeParseAsync",
+              "local": "safeParseAsync",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [
+        {
+          "kind": "vi.mock",
+          "specifier": "./core",
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/core.ts",
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "vi.mock",
+          "specifier": "./util",
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/util.ts",
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "vi.mock",
+          "specifier": "./checks",
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/checks.ts",
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "vi.mock",
+          "specifier": "./errors",
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/errors.ts",
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "vi.mock",
+          "specifier": "./safeParse",
+          "resolves": false,
+          "resolved_file": null,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "vi.mock",
+          "specifier": "./version",
+          "resolves": false,
+          "resolved_file": null,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 5,
+        "resolved": 4,
+        "unresolved": 1,
+        "named_imports_not_exported": 3,
+        "named_imports_not_exported_details": [
+          {
+            "specifier": "./core",
+            "imported": "core",
+            "local": "core"
+          },
+          {
+            "specifier": "./util",
+            "imported": "util",
+            "local": "util"
+          },
+          {
+            "specifier": "./checks",
+            "imported": "checks",
+            "local": "checks"
+          }
+        ],
+        "relative_with_js": 0,
+        "relative_without_js": 4
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "$ZodType"
+        ],
+        "calls_without_new": 9,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "technique": "COT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/053-ZodEnum.COT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./ZodEnum",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodEnum",
+              "local": "ZodEnum",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodEnum"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "technique": "GTOT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/053-ZodEnum.GTOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./ZodEnum",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodEnum",
+              "local": "ZodEnum",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodEnum"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 1
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "technique": "TOT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/053-ZodEnum.TOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./ZodEnum",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodEnum",
+              "local": "ZodEnum",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodEnum"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 1
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "technique": "COT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/038-ZodNull.COT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./ZodNull",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodNull",
+              "local": "ZodNull",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodNull"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "technique": "GTOT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/038-ZodNull.GTOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./ZodNull",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodNull",
+              "local": "ZodNull",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "zod",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodError",
+              "local": "ZodError",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/index.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 2,
+        "resolved": 2,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodNull"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "technique": "TOT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/038-ZodNull.TOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./ZodNull",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodNull",
+              "local": "ZodNull",
+              "type_only": false,
+              "exported": null
+            },
+            {
+              "kind": "named",
+              "imported": "ZodError",
+              "local": "ZodError",
+              "type_only": false,
+              "exported": null
+            },
+            {
+              "kind": "named",
+              "imported": "ZodType",
+              "local": "ZodType",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodNull"
+        ],
+        "calls_without_new": 6,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "technique": "COT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/231-ZodMiniLazy.COT.test.ts",
+      "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "vi",
+              "local": "vi",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "beforeEach",
+              "local": "beforeEach",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./core",
+          "imported_names": [
+            {
+              "kind": "namespace",
+              "imported": "*",
+              "local": "core",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./ZodMiniLazy",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodMiniLazy",
+              "local": "ZodMiniLazy",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [
+        {
+          "kind": "vi.mock",
+          "specifier": "./core",
+          "resolves": false,
+          "resolved_file": null,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 2,
+        "resolved": 1,
+        "unresolved": 1,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 1
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodMiniLazy"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "technique": "GTOT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/231-ZodMiniLazy.GTOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "zod",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "z",
+              "local": "z",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/index.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./ZodMiniLazy",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodMiniLazy",
+              "local": "ZodMiniLazy",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 2,
+        "resolved": 2,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodMiniLazy"
+        ],
+        "calls_without_new": 9,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week1",
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "technique": "TOT",
+      "generated_file": "/Users/donggi/_projects/experiment-projects/zod-week2-sep-pilot-import/zod-week1-archive/experiments/pilot-2026-09/generated/231-ZodMiniLazy.TOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "vi",
+              "local": "vi",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "beforeEach",
+              "local": "beforeEach",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "afterEach",
+              "local": "afterEach",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./ZodMiniLazy",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodMiniLazy",
+              "local": "ZodMiniLazy",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./ZodMiniLazy",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "core",
+              "local": "core",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [
+        {
+          "kind": "vi.mock",
+          "specifier": "./ZodMiniLazy",
+          "resolves": false,
+          "resolved_file": null,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "cut_import": "present_unresolved",
+      "non_cut_imports": {
+        "total": 2,
+        "resolved": 1,
+        "unresolved": 1,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 1
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodMiniLazy"
+        ],
+        "calls_without_new": 6,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "technique": "COT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/086-$ZodCheckUpperCase.COT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+      "given_specifier": "./checks.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./checks.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodCheckUpperCase",
+              "local": "$ZodCheckUpperCase",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/checks.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "$ZodCheckUpperCase"
+        ],
+        "calls_without_new": 9,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "technique": "GTOT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/086-$ZodCheckUpperCase.GTOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+      "given_specifier": "./checks.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./checks.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodCheckUpperCase",
+              "local": "$ZodCheckUpperCase",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/checks.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "$ZodCheckUpperCase"
+        ],
+        "calls_without_new": 2,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "technique": "TOT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/086-$ZodCheckUpperCase.TOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+      "given_specifier": "./checks.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "beforeEach",
+              "local": "beforeEach",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./checks.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodCheckUpperCase",
+              "local": "$ZodCheckUpperCase",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/checks.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        },
+        {
+          "kind": "static",
+          "specifier": "./regexes.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "regexes",
+              "local": "regexes",
+              "type_only": false,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/regexes.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": true
+        },
+        {
+          "kind": "static",
+          "specifier": "./errors.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "errors",
+              "local": "errors",
+              "type_only": false,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/errors.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 3,
+        "resolved": 3,
+        "unresolved": 0,
+        "named_imports_not_exported": 2,
+        "named_imports_not_exported_details": [
+          {
+            "specifier": "./regexes.js",
+            "imported": "regexes",
+            "local": "regexes"
+          },
+          {
+            "specifier": "./errors.js",
+            "imported": "errors",
+            "local": "errors"
+          }
+        ],
+        "relative_with_js": 2,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "$ZodCheckUpperCase"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "technique": "COT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/098-$ZodType.COT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodType",
+              "local": "$ZodType",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "$ZodType"
+        ],
+        "calls_without_new": 6,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "technique": "GTOT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/098-$ZodType.GTOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodType",
+              "local": "$ZodType",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodTypeInternals",
+              "local": "$ZodTypeInternals",
+              "type_only": true,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": true
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "core",
+              "local": "core",
+              "type_only": false,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 3,
+        "resolved": 3,
+        "unresolved": 0,
+        "named_imports_not_exported": 1,
+        "named_imports_not_exported_details": [
+          {
+            "specifier": "./schemas.js",
+            "imported": "core",
+            "local": "core"
+          }
+        ],
+        "relative_with_js": 2,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "$ZodType"
+        ],
+        "calls_without_new": 1,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "technique": "TOT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/098-$ZodType.TOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "vi",
+              "local": "vi",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "beforeEach",
+              "local": "beforeEach",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "$ZodType",
+              "local": "$ZodType",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        },
+        {
+          "kind": "static",
+          "specifier": "./core",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "core",
+              "local": "core",
+              "type_only": false,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/core.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./util",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "util",
+              "local": "util",
+              "type_only": false,
+              "exported": false
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/util.ts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./safeParse",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "safeParse",
+              "local": "safeParse",
+              "type_only": false,
+              "exported": null
+            },
+            {
+              "kind": "named",
+              "imported": "safeParseAsync",
+              "local": "safeParseAsync",
+              "type_only": false,
+              "exported": null
+            }
+          ],
+          "resolves": false,
+          "resolved_file": null,
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [
+        {
+          "kind": "vi.mock",
+          "specifier": "./schemas.js",
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/schemas.ts",
+          "relative": true,
+          "ends_in_js": true
+        },
+        {
+          "kind": "vi.mock",
+          "specifier": "./core",
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/core.ts",
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "vi.mock",
+          "specifier": "./util",
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/util.ts",
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "vi.mock",
+          "specifier": "./checks",
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/core/checks.ts",
+          "relative": true,
+          "ends_in_js": false
+        },
+        {
+          "kind": "vi.mock",
+          "specifier": "./safeParse",
+          "resolves": false,
+          "resolved_file": null,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 4,
+        "resolved": 3,
+        "unresolved": 1,
+        "named_imports_not_exported": 2,
+        "named_imports_not_exported_details": [
+          {
+            "specifier": "./core",
+            "imported": "core",
+            "local": "core"
+          },
+          {
+            "specifier": "./util",
+            "imported": "util",
+            "local": "util"
+          }
+        ],
+        "relative_with_js": 0,
+        "relative_without_js": 3
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "$ZodType"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "technique": "COT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/053-ZodEnum.COT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodEnum",
+              "local": "ZodEnum",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/classic/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodEnum"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 1
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "technique": "GTOT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/053-ZodEnum.GTOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodEnum",
+              "local": "ZodEnum",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/classic/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodEnum"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 1
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "technique": "TOT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/053-ZodEnum.TOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodEnum",
+              "local": "ZodEnum",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/classic/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodEnum"
+        ],
+        "calls_without_new": 0,
+        "new_expressions": 11
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "technique": "COT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/038-ZodNull.COT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodNull",
+              "local": "ZodNull",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/classic/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodNull"
+        ],
+        "calls_without_new": 9,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "technique": "GTOT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/038-ZodNull.GTOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "test",
+              "local": "test",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodNull",
+              "local": "ZodNull",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/classic/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodNull"
+        ],
+        "calls_without_new": 1,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "technique": "TOT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/038-ZodNull.TOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodNull",
+              "local": "ZodNull",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/classic/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        },
+        {
+          "kind": "static",
+          "specifier": "zod",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodError",
+              "local": "ZodError",
+              "type_only": true,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/index.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 2,
+        "resolved": 2,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodNull"
+        ],
+        "calls_without_new": 1,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "technique": "COT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/231-ZodMiniLazy.COT.test.ts",
+      "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodMiniLazy",
+              "local": "ZodMiniLazy",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/mini/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodMiniLazy"
+        ],
+        "calls_without_new": 11,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "technique": "GTOT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/231-ZodMiniLazy.GTOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodMiniLazy",
+              "local": "ZodMiniLazy",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/mini/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodMiniLazy"
+        ],
+        "calls_without_new": 5,
+        "new_expressions": 0
+      }
+    },
+    {
+      "run": "week2",
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "technique": "TOT",
+      "generated_file": "experiments/pilot-2026-09-import/generated/231-ZodMiniLazy.TOT.test.ts",
+      "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+      "given_specifier": "./schemas.js",
+      "static_imports": [
+        {
+          "kind": "static",
+          "specifier": "vitest",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "describe",
+              "local": "describe",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "it",
+              "local": "it",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "expect",
+              "local": "expect",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "vi",
+              "local": "vi",
+              "type_only": false,
+              "exported": true
+            },
+            {
+              "kind": "named",
+              "imported": "beforeEach",
+              "local": "beforeEach",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "node_modules/.pnpm/vitest@2.1.9_@types+node@20.17.30_lightningcss@1.29.3_terser@5.39.0/node_modules/vitest/index.d.cts",
+          "module_exports_class_under_test": false,
+          "imports_class_under_test": false,
+          "relative": false,
+          "ends_in_js": false
+        },
+        {
+          "kind": "static",
+          "specifier": "./schemas.js",
+          "imported_names": [
+            {
+              "kind": "named",
+              "imported": "ZodMiniLazy",
+              "local": "ZodMiniLazy",
+              "type_only": false,
+              "exported": true
+            }
+          ],
+          "resolves": true,
+          "resolved_file": "packages/zod/src/v4/mini/schemas.ts",
+          "module_exports_class_under_test": true,
+          "imports_class_under_test": true,
+          "relative": true,
+          "ends_in_js": true
+        }
+      ],
+      "dynamic_modules": [
+        {
+          "kind": "vi.mock",
+          "specifier": "./core",
+          "resolves": false,
+          "resolved_file": null,
+          "relative": true,
+          "ends_in_js": false
+        }
+      ],
+      "cut_import": "given_specifier_resolves",
+      "non_cut_imports": {
+        "total": 1,
+        "resolved": 1,
+        "unresolved": 0,
+        "named_imports_not_exported": 0,
+        "named_imports_not_exported_details": [],
+        "relative_with_js": 0,
+        "relative_without_js": 0
+      },
+      "duplicate_imported_names": [],
+      "cut_constructor_usage": {
+        "bindings": [
+          "ZodMiniLazy"
+        ],
+        "calls_without_new": 7,
+        "new_expressions": 0
+      }
+    }
+  ]
+}

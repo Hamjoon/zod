@@ -1,0 +1,18 @@
+{
+  "unit_id": "053-ZodEnum",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:21:07.738694+00:00",
+  "latency_s": 49.86,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "AkashML",
+  "response_id": "gen-1790335267-1kGWLLSH0HKTfUvaKc0t",
+  "content_chars": 7668,
+  "content_empty": false,
+  "completion_tokens": 1998,
+  "prompt_tokens_reported": 671,
+  "error": null
+}

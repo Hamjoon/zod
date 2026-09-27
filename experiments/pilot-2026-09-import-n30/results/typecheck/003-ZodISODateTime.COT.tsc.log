@@ -1,0 +1,19 @@
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(58,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(62,33): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(66,35): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(74,35): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(82,35): error TS2339: Property 'optional' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(89,35): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(96,35): error TS2339: Property 'default' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(105,35): error TS2339: Property 'catch' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(114,35): error TS2339: Property 'transform' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(122,35): error TS2339: Property 'refine' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(123,8): error TS7006: Parameter 's' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(135,35): error TS2339: Property 'superRefine' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(135,48): error TS7006: Parameter 'val' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(135,53): error TS7006: Parameter 'ctx' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(176,64): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(179,22): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(245,35): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(271,6): error TS2339: Property 'optional' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(274,17): error TS7006: Parameter 's' implicitly has an 'any' type.

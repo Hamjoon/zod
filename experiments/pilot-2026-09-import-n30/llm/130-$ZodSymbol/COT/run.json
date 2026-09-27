@@ -1,0 +1,18 @@
+{
+  "unit_id": "130-$ZodSymbol",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:29:47.212279+00:00",
+  "latency_s": 15.465,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DeepInfra",
+  "response_id": "gen-1790335789-aESYjMwvKTAy65nfjNX3",
+  "content_chars": 4274,
+  "content_empty": false,
+  "completion_tokens": 1668,
+  "prompt_tokens_reported": 482,
+  "error": null
+}

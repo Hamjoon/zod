@@ -1,0 +1,1 @@
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(21,27): error TS2348: Value of type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>' is not callable. Did you mean to include 'new'?

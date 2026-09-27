@@ -1,0 +1,2 @@
+packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts(39,16): error TS2552: Cannot find name '$ZodCheckIncludesDef'. Did you mean '$ZodCheckIncludes'?
+packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts(50,3): error TS2348: Value of type '$constructor<$ZodCheckIncludes, $ZodCheckIncludesDef>' is not callable. Did you mean to include 'new'?

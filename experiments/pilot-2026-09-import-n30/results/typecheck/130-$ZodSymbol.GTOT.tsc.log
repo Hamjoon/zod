@@ -1,0 +1,7 @@
+packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts(18,18): error TS2348: Value of type '$constructor<$ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts(46,18): error TS2348: Value of type '$constructor<$ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts(68,24): error TS2339: Property 'expected' does not exist on type '$ZodIssue'.
+  Property 'expected' does not exist on type '$ZodIssueUnrecognizedKeys'.
+packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts(70,24): error TS2339: Property 'inst' does not exist on type '$ZodIssue'.
+  Property 'inst' does not exist on type '$ZodIssueUnrecognizedKeys'.
+packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts(80,18): error TS2348: Value of type '$constructor<$ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?

@@ -1,0 +1,47 @@
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(30,20): error TS6133: 'name' is declared but its value is never read.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(77,21): error TS2554: Expected 0 arguments, but got 2.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(146,36): error TS2345: Argument of type '{ type: string; innerType: { _zod: { run: Mock<Procedure>; }; }; defaultValue: number; }' is not assignable to parameter of type '$ZodDefaultDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Types of property 'type' are incompatible.
+    Type 'string' is not assignable to type '"default"'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(149,38): error TS2345: Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: undefined; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(153,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(165,36): error TS2345: Argument of type '{ type: string; innerType: { _zod: { run: Mock<Procedure>; }; }; defaultValue: string; }' is not assignable to parameter of type '$ZodDefaultDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Types of property 'type' are incompatible.
+    Type 'string' is not assignable to type '"default"'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(168,38): error TS2345: Argument of type '{ value: string; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: string; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(181,36): error TS2345: Argument of type '{ type: string; innerType: { _zod: { run: Mock<Procedure>; }; }; defaultValue: string; }' is not assignable to parameter of type '$ZodDefaultDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Types of property 'type' are incompatible.
+    Type 'string' is not assignable to type '"default"'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(184,44): error TS2345: Argument of type '{ value: string; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: string; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(211,34): error TS2345: Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: undefined; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(212,34): error TS2345: Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: undefined; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(214,15): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(215,15): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(229,36): error TS2345: Argument of type '{ type: string; innerType: { _zod: { run: Mock<() => never>; }; }; defaultValue: string; }' is not assignable to parameter of type '$ZodDefaultDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Types of property 'type' are incompatible.
+    Type 'string' is not assignable to type '"default"'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(232,36): error TS2345: Argument of type '{ value: string; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: string; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(242,36): error TS2345: Argument of type '{ type: string; innerType: { _zod: { run: Mock<Procedure>; }; }; defaultValue: string; }' is not assignable to parameter of type '$ZodDefaultDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Types of property 'type' are incompatible.
+    Type 'string' is not assignable to type '"default"'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(245,36): error TS2345: Argument of type '{ value: string; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: string; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(256,36): error TS2345: Argument of type '{ type: string; innerType: { _zod: { run: Mock<Procedure>; }; }; defaultValue: string; }' is not assignable to parameter of type '$ZodDefaultDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Types of property 'type' are incompatible.
+    Type 'string' is not assignable to type '"default"'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(259,38): error TS2345: Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: undefined; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(263,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(279,36): error TS2345: Argument of type '{ type: string; innerType: { _zod: { run: Mock<Procedure>; values: { a: number; b: number; }; }; }; defaultValue: number; }' is not assignable to parameter of type '$ZodDefaultDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Types of property 'type' are incompatible.
+    Type 'string' is not assignable to type '"default"'.

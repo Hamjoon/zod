@@ -1,0 +1,18 @@
+{
+  "unit_id": "062-ZodSuccess",
+  "technique": "GTOT",
+  "timestamp_utc": "2026-09-25T11:43:01.355080+00:00",
+  "latency_s": 49.333,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DeepInfra",
+  "response_id": "gen-1790336583-4tEcvmArHOjjH5qMxQgP",
+  "content_chars": 7388,
+  "content_empty": false,
+  "completion_tokens": 2155,
+  "prompt_tokens_reported": 444,
+  "error": null
+}

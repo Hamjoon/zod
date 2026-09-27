@@ -1,0 +1,22 @@
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(21,10): error TS2348: Value of type '$constructor<ZodMiniString<unknown>, $ZodStringDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(28,38): error TS2345: Argument of type '() => any' is not assignable to parameter of type '$ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(60,33): error TS2339: Property 'optional' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(66,33): error TS2339: Property 'nullable' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(72,36): error TS2339: Property 'default' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(82,34): error TS2339: Property 'describe' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(90,23): error TS2339: Property 'is' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(91,23): error TS2339: Property 'is' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(106,37): error TS2345: Argument of type '() => any' is not assignable to parameter of type '$ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(111,37): error TS2345: Argument of type '() => any' is not assignable to parameter of type '$ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(116,37): error TS2345: Argument of type '() => never' is not assignable to parameter of type '$ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(127,40): error TS2558: Expected 0 type arguments, but got 1.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(128,14): error TS2348: Value of type '$constructor<ZodMiniString<unknown>, $ZodStringDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(129,21): error TS7006: Parameter 'name' implicitly has an 'any' type.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(132,11): error TS2348: Value of type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(147,36): error TS2345: Argument of type '() => any' is not assignable to parameter of type '$ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(148,8): error TS2339: Property 'optional' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(158,36): error TS2345: Argument of type '() => any' is not assignable to parameter of type '$ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(159,8): error TS2339: Property 'default' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(167,40): error TS2345: Argument of type '() => any' is not assignable to parameter of type '$ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(167,66): error TS2339: Property 'default' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(181,34): error TS2345: Argument of type '() => any' is not assignable to parameter of type '$ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.

@@ -1,0 +1,18 @@
+{
+  "unit_id": "058-ZodNullable",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:46:50.485920+00:00",
+  "latency_s": 67.841,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "CoreWeave",
+  "response_id": "gen-1790336812-7YCVn0XjOJZHsTIIXb7f",
+  "content_chars": 9239,
+  "content_empty": false,
+  "completion_tokens": 2408,
+  "prompt_tokens_reported": 342,
+  "error": null
+}

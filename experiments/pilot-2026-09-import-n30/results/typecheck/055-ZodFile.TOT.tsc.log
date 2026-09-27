@@ -1,0 +1,20 @@
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(50,30): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(53,26): error TS2339: Property 'errors' does not exist on type 'ZodError<unknown>'.
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(53,38): error TS7006: Parameter 'd' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(64,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(70,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(77,26): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(83,30): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(100,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(106,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(113,26): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(121,30): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(138,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(144,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(152,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(158,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(176,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(196,23): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(197,23): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(210,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodFile.pilot.test.ts(216,22): error TS2348: Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?

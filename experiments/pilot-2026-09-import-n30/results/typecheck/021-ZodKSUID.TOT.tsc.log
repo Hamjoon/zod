@@ -1,0 +1,6 @@
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(49,29): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(58,29): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(71,29): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(84,29): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(122,29): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(135,31): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.

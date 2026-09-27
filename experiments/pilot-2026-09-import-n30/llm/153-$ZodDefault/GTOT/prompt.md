@@ -1,0 +1,61 @@
+Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class.To comprehensively test all methods in the following class named $ZodDefault they must following these steps:
+- Extract and list all the public methods including their signatures
+- For each methods, generate a basic Vitest test case that checks the method's functionality
+- Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+- Generate Vitest test cases that specifically test for the identified edge cases and exceptions
+- Merge all the individual test cases into a complete Vitest test file ($ZodDefault.test.ts) for the given TypeScript class.All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
+The $ZodDefault class is exported from `./schemas.js` (path relative to the test file).
+The TypeScript class is:
+////////////////////////////////////////////
+////////////////////////////////////////////
+//////////                        //////////
+//////////      $ZodDefault       //////////
+//////////                        //////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+export interface $ZodDefaultDef<T extends SomeType = $ZodType> extends $ZodTypeDef {
+  type: "default";
+  innerType: T;
+  /** The default value. May be a getter. */
+  defaultValue: util.NoUndefined<core.output<T>>;
+}
+
+export interface $ZodDefaultInternals<T extends SomeType = $ZodType>
+  extends $ZodTypeInternals<util.NoUndefined<core.output<T>>, core.input<T> | undefined> {
+  def: $ZodDefaultDef<T>;
+  optin: "optional";
+  optout?: "optional" | undefined; // required
+  isst: never;
+  values: T["_zod"]["values"];
+}
+
+export interface $ZodDefault<T extends SomeType = $ZodType> extends $ZodType {
+  _zod: $ZodDefaultInternals<T>;
+}
+
+export const $ZodDefault: core.$constructor<$ZodDefault> = /*@__PURE__*/ core.$constructor(
+  "$ZodDefault",
+  (inst, def) => {
+    $ZodType.init(inst, def);
+
+    // inst._zod.qin = "true";
+    inst._zod.optin = "optional";
+    util.defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+
+    inst._zod.parse = (payload, ctx) => {
+      if (payload.value === undefined) {
+        payload.value = def.defaultValue;
+        /**
+         * $ZodDefault always returns the default value immediately.
+         * It doesn't pass the default value into the validator ("prefault"). There's no reason to pass the default value through validation. The validity of the default is enforced by TypeScript statically. Otherwise, it's the responsibility of the user to ensure the default is valid. In the case of pipes with divergent in/out types, you can specify the default on the `in` schema of your ZodPipe to set a "prefault" for the pipe.   */
+        return payload;
+      }
+      const result = def.innerType._zod.run(payload, ctx);
+      if (result instanceof Promise) {
+        return result.then((result) => handleDefaultResult(result, def));
+      }
+      return handleDefaultResult(result, def);
+    };
+  }
+);
+At the end they must propose one complete (including typical use cases, edge cases, and error scenarios) Vitest test file ($ZodDefault.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##

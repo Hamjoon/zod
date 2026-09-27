@@ -1,0 +1,10 @@
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(8,10): error TS2554: Expected 1 arguments, but got 0.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(70,39): error TS2339: Property 'optional' does not exist on type 'ZodMiniVoid'.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(75,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(80,39): error TS2339: Property 'nullable' does not exist on type 'ZodMiniVoid'.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(93,39): error TS2339: Property 'default' does not exist on type 'ZodMiniVoid'.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(99,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(110,25): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'CheckFn<void> | $ZodCheck<void>'.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(112,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(118,27): error TS2345: Argument of type '{} | null' is not assignable to parameter of type 'CheckFn<void> | $ZodCheck<void>'.
+  Type 'null' is not assignable to type 'CheckFn<void> | $ZodCheck<void>'.

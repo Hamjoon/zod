@@ -1,0 +1,656 @@
+{
+  "definitions": "extract.py: Phase 4 (RQ1). Two-stage extraction of the test file from each model response.\n\nStage 1 (delimiter-first): the block between `###Test START##` and `###Test END##`, accepting 2 or 3 trailing\n`#` on either marker. If several marker pairs exist, each END marker is paired with the last START marker\nbefore it (innermost pair) and the longest resulting block is taken. If a markdown fence wraps the block,\nthe fence lines only are stripped.\nStage 2 (fallback, when no pair exists): among fenced code blocks, the single best candidate that\n(i) imports from `vitest`, (ii) contains `test(`, `it(` or `describe(`, (iii) has balanced curly braces;\nif several, the longest.\nRecords per (unit, technique): delimiters_found, detected (MSR: a block obtained by stage 1 or 2), method,\nextracted_structured (CSR: >=1 import, >=1 test(/it(, >=1 expect(, balanced curly braces, no fence lines,\nno HTML tags inside). Structured extractions are saved as generated/{unit_id}.{TECH}.test.ts; detected but\nunstructured blocks go to generated/_unstructured/ for audit only. Output: results/rq1-extraction.json.\nRun from the zod repo root: ../.venv/bin/python experiments/pilot-2026-09-import/scripts/extract.py",
+  "techniques_called": [
+    "COT",
+    "TOT",
+    "GTOT"
+  ],
+  "techniques_pending": [
+    "ZSL",
+    "FSL"
+  ],
+  "per_technique": {
+    "COT": {
+      "delimiters_found": {
+        "n": 5,
+        "k": 5,
+        "rate": 1.0
+      },
+      "MSR_detected": {
+        "n": 5,
+        "k": 5,
+        "rate": 1.0
+      },
+      "CSR_structured": {
+        "n": 5,
+        "k": 5,
+        "rate": 1.0
+      },
+      "CSR_structured_strict_no_marker_decoration": {
+        "n": 5,
+        "k": 2,
+        "rate": 0.4
+      }
+    },
+    "TOT": {
+      "delimiters_found": {
+        "n": 5,
+        "k": 5,
+        "rate": 1.0
+      },
+      "MSR_detected": {
+        "n": 5,
+        "k": 5,
+        "rate": 1.0
+      },
+      "CSR_structured": {
+        "n": 5,
+        "k": 5,
+        "rate": 1.0
+      },
+      "CSR_structured_strict_no_marker_decoration": {
+        "n": 5,
+        "k": 2,
+        "rate": 0.4
+      }
+    },
+    "GTOT": {
+      "delimiters_found": {
+        "n": 5,
+        "k": 5,
+        "rate": 1.0
+      },
+      "MSR_detected": {
+        "n": 5,
+        "k": 5,
+        "rate": 1.0
+      },
+      "CSR_structured": {
+        "n": 5,
+        "k": 5,
+        "rate": 1.0
+      },
+      "CSR_structured_strict_no_marker_decoration": {
+        "n": 5,
+        "k": 5,
+        "rate": 1.0
+      }
+    }
+  },
+  "pooled": {
+    "delimiters_found": {
+      "n": 15,
+      "k": 15,
+      "rate": 1.0
+    },
+    "MSR_detected": {
+      "n": 15,
+      "k": 15,
+      "rate": 1.0
+    },
+    "CSR_structured": {
+      "n": 15,
+      "k": 15,
+      "rate": 1.0
+    },
+    "CSR_structured_strict_no_marker_decoration": {
+      "n": 15,
+      "k": 9,
+      "rate": 0.6
+    }
+  },
+  "rows": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "technique": "COT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 8290,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 2,
+        "marker_decoration": [
+          "****"
+        ]
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": false,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 8240,
+      "extracted_loc": 201,
+      "saved_path": "generated/086-$ZodCheckUpperCase.COT.test.ts"
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "technique": "TOT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 7844,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 2,
+        "marker_decoration": [
+          "****"
+        ]
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": false,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 7794,
+      "extracted_loc": 178,
+      "saved_path": "generated/086-$ZodCheckUpperCase.TOT.test.ts"
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "technique": "GTOT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 5626,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 0,
+        "marker_decoration": []
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": true,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 5554,
+      "extracted_loc": 127,
+      "saved_path": "generated/086-$ZodCheckUpperCase.GTOT.test.ts"
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "technique": "COT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 9169,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 0,
+        "marker_decoration": []
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": true,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 7582,
+      "extracted_loc": 222,
+      "saved_path": "generated/098-$ZodType.COT.test.ts"
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "technique": "TOT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 13314,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 2,
+        "marker_decoration": [
+          "****"
+        ]
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": false,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 13262,
+      "extracted_loc": 384,
+      "saved_path": "generated/098-$ZodType.TOT.test.ts"
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "technique": "GTOT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 9509,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 0,
+        "marker_decoration": []
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": true,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 9152,
+      "extracted_loc": 236,
+      "saved_path": "generated/098-$ZodType.GTOT.test.ts"
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "technique": "COT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 7918,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 2,
+        "marker_decoration": []
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": true,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 7878,
+      "extracted_loc": 185,
+      "saved_path": "generated/053-ZodEnum.COT.test.ts"
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "technique": "TOT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 4328,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 2,
+        "marker_decoration": [
+          "****"
+        ]
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": false,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 4278,
+      "extracted_loc": 107,
+      "saved_path": "generated/053-ZodEnum.TOT.test.ts"
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "technique": "GTOT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 5816,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 0,
+        "marker_decoration": []
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": true,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 3837,
+      "extracted_loc": 96,
+      "saved_path": "generated/053-ZodEnum.GTOT.test.ts"
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "technique": "COT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 6188,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 2,
+        "marker_decoration": [
+          "****"
+        ]
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": false,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 6138,
+      "extracted_loc": 146,
+      "saved_path": "generated/038-ZodNull.COT.test.ts"
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "technique": "TOT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 4453,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 0,
+        "marker_decoration": []
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": true,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 3526,
+      "extracted_loc": 101,
+      "saved_path": "generated/038-ZodNull.TOT.test.ts"
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "technique": "GTOT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 8349,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 0,
+        "marker_decoration": []
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": true,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 5000,
+      "extracted_loc": 141,
+      "saved_path": "generated/038-ZodNull.GTOT.test.ts"
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "technique": "COT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 8351,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 2,
+        "marker_decoration": [
+          "****"
+        ]
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": false,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 8301,
+      "extracted_loc": 219,
+      "saved_path": "generated/231-ZodMiniLazy.COT.test.ts"
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "technique": "TOT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 11482,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 0,
+        "marker_decoration": []
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": true,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 11156,
+      "extracted_loc": 273,
+      "saved_path": "generated/231-ZodMiniLazy.TOT.test.ts"
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "technique": "GTOT",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "response_chars": 9211,
+      "response_empty": false,
+      "delimiters_found": true,
+      "stage1": {
+        "start_markers": 1,
+        "end_markers": 1,
+        "pairs": 1,
+        "fence_lines_stripped": 2,
+        "marker_decoration": []
+      },
+      "stage2": null,
+      "detected": true,
+      "method": "delimiter",
+      "extracted_structured": true,
+      "extracted_structured_strict": true,
+      "checks": {
+        "has_import": true,
+        "has_test_call": true,
+        "has_expect": true,
+        "braces_balanced": true,
+        "parens_balanced": true,
+        "brackets_balanced": true,
+        "no_fence_lines": true,
+        "no_html": true,
+        "structured": true
+      },
+      "extracted_chars": 9171,
+      "extracted_loc": 255,
+      "saved_path": "generated/231-ZodMiniLazy.GTOT.test.ts"
+    }
+  ]
+}

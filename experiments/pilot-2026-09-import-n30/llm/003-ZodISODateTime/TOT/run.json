@@ -1,0 +1,18 @@
+{
+  "unit_id": "003-ZodISODateTime",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:44:08.506978+00:00",
+  "latency_s": 38.459,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DeepInfra",
+  "response_id": "gen-1790336650-yKejANQpsXu69Hgc2Bno",
+  "content_chars": 5279,
+  "content_empty": false,
+  "completion_tokens": 1993,
+  "prompt_tokens_reported": 307,
+  "error": null
+}

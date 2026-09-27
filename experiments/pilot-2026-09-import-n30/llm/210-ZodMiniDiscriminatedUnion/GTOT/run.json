@@ -1,0 +1,18 @@
+{
+  "unit_id": "210-ZodMiniDiscriminatedUnion",
+  "technique": "GTOT",
+  "timestamp_utc": "2026-09-25T11:50:10.178197+00:00",
+  "latency_s": 23.238,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "Novita",
+  "response_id": "gen-1790337012-LH9Su7qgglMvlGsaNnjP",
+  "content_chars": 9153,
+  "content_empty": false,
+  "completion_tokens": 2774,
+  "prompt_tokens_reported": 492,
+  "error": null
+}

@@ -1,0 +1,4 @@
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(7,23): error TS2348: Value of type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(46,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(51,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(92,8): error TS7006: Parameter 'val' implicitly has an 'any' type.

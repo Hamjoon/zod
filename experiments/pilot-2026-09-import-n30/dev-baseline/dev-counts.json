@@ -1,0 +1,1030 @@
+{
+  "source": "dev-baseline/dev-run.json",
+  "split_rule": "assertionResults[*].meta.typecheck===true => typecheck half; else runtime half",
+  "json_top": {
+    "numTotalTestSuites": 196,
+    "numTotalTests": 1708,
+    "numPassedTests": 1708,
+    "numFailedTests": 0,
+    "success": true,
+    "testResults_entries": 162
+  },
+  "runtime": {
+    "files": 81,
+    "cases": 888,
+    "passed": 888,
+    "failed": 0,
+    "pending": 0,
+    "other": 0
+  },
+  "typecheck": {
+    "files": 81,
+    "cases": 820,
+    "passed": 820,
+    "failed": 0,
+    "pending": 0,
+    "other": 0
+  },
+  "distinct_test_files": 81,
+  "per_file": [
+    {
+      "file": "packages/zod/src/v4/classic/tests/anyunknown.test.ts",
+      "kind": "runtime",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/anyunknown.test.ts",
+      "kind": "typecheck",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/array.test.ts",
+      "kind": "runtime",
+      "cases": 9,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/array.test.ts",
+      "kind": "typecheck",
+      "cases": 9,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/assignability.test.ts",
+      "kind": "runtime",
+      "cases": 5,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/assignability.test.ts",
+      "kind": "typecheck",
+      "cases": 5,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/async-parsing.test.ts",
+      "kind": "runtime",
+      "cases": 23,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/async-parsing.test.ts",
+      "kind": "typecheck",
+      "cases": 23,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/async-refinements.test.ts",
+      "kind": "runtime",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/async-refinements.test.ts",
+      "kind": "typecheck",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/base.test.ts",
+      "kind": "runtime",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/base.test.ts",
+      "kind": "typecheck",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/bigint.test.ts",
+      "kind": "runtime",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/bigint.test.ts",
+      "kind": "typecheck",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/brand.test.ts",
+      "kind": "runtime",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/brand.test.ts",
+      "kind": "typecheck",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/catch.test.ts",
+      "kind": "runtime",
+      "cases": 16,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/catch.test.ts",
+      "kind": "typecheck",
+      "cases": 16,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/coalesce.test.ts",
+      "kind": "runtime",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/coalesce.test.ts",
+      "kind": "typecheck",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/coerce.test.ts",
+      "kind": "runtime",
+      "cases": 6,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/coerce.test.ts",
+      "kind": "typecheck",
+      "cases": 6,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/continuability.test.ts",
+      "kind": "runtime",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/continuability.test.ts",
+      "kind": "typecheck",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/custom.test.ts",
+      "kind": "runtime",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/custom.test.ts",
+      "kind": "typecheck",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/date.test.ts",
+      "kind": "runtime",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/date.test.ts",
+      "kind": "typecheck",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/datetime.test.ts",
+      "kind": "runtime",
+      "cases": 14,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/datetime.test.ts",
+      "kind": "typecheck",
+      "cases": 14,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/default.test.ts",
+      "kind": "runtime",
+      "cases": 13,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/default.test.ts",
+      "kind": "typecheck",
+      "cases": 13,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/description.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/description.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/discriminated-unions.test.ts",
+      "kind": "runtime",
+      "cases": 21,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/discriminated-unions.test.ts",
+      "kind": "typecheck",
+      "cases": 21,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/enum.test.ts",
+      "kind": "runtime",
+      "cases": 19,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/enum.test.ts",
+      "kind": "typecheck",
+      "cases": 19,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/error-utils.test.ts",
+      "kind": "runtime",
+      "cases": 12,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/error-utils.test.ts",
+      "kind": "typecheck",
+      "cases": 12,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/error.test.ts",
+      "kind": "runtime",
+      "cases": 27,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/error.test.ts",
+      "kind": "typecheck",
+      "cases": 27,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/file.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/file.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/firstparty.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/firstparty.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/function.test.ts",
+      "kind": "runtime",
+      "cases": 13,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/function.test.ts",
+      "kind": "typecheck",
+      "cases": 13,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/generics.test.ts",
+      "kind": "runtime",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/generics.test.ts",
+      "kind": "typecheck",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/index.test.ts",
+      "kind": "runtime",
+      "cases": 56,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/index.test.ts",
+      "kind": "typecheck",
+      "cases": 56,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/instanceof.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/instanceof.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/intersection.test.ts",
+      "kind": "runtime",
+      "cases": 10,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/intersection.test.ts",
+      "kind": "typecheck",
+      "cases": 10,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/json.test.ts",
+      "kind": "runtime",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/json.test.ts",
+      "kind": "typecheck",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/lazy.test.ts",
+      "kind": "runtime",
+      "cases": 9,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/lazy.test.ts",
+      "kind": "typecheck",
+      "cases": 9,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/literal.test.ts",
+      "kind": "runtime",
+      "cases": 9,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/literal.test.ts",
+      "kind": "typecheck",
+      "cases": 9,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/map.test.ts",
+      "kind": "runtime",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/map.test.ts",
+      "kind": "typecheck",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nan.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nan.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nested-refine.test.ts",
+      "kind": "runtime",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nested-refine.test.ts",
+      "kind": "typecheck",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nonoptional.test.ts",
+      "kind": "runtime",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nonoptional.test.ts",
+      "kind": "typecheck",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nullable.test.ts",
+      "kind": "runtime",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/nullable.test.ts",
+      "kind": "typecheck",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/number.test.ts",
+      "kind": "runtime",
+      "cases": 25,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/number.test.ts",
+      "kind": "typecheck",
+      "cases": 25,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/object.test.ts",
+      "kind": "runtime",
+      "cases": 45,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/object.test.ts",
+      "kind": "typecheck",
+      "cases": 45,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/optional.test.ts",
+      "kind": "runtime",
+      "cases": 5,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/optional.test.ts",
+      "kind": "typecheck",
+      "cases": 5,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/partial.test.ts",
+      "kind": "runtime",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/partial.test.ts",
+      "kind": "typecheck",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/pickomit.test.ts",
+      "kind": "runtime",
+      "cases": 12,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/pickomit.test.ts",
+      "kind": "typecheck",
+      "cases": 12,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/pipe.test.ts",
+      "kind": "runtime",
+      "cases": 5,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/pipe.test.ts",
+      "kind": "typecheck",
+      "cases": 5,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/prefault.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/prefault.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/preprocess.test.ts",
+      "kind": "runtime",
+      "cases": 11,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/preprocess.test.ts",
+      "kind": "typecheck",
+      "cases": 11,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/primitive.test.ts",
+      "kind": "runtime",
+      "cases": 14,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/primitive.test.ts",
+      "kind": "typecheck",
+      "cases": 14,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/promise.test.ts",
+      "kind": "runtime",
+      "cases": 10,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/promise.test.ts",
+      "kind": "typecheck",
+      "cases": 10,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/prototypes.test.ts",
+      "kind": "runtime",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/prototypes.test.ts",
+      "kind": "typecheck",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/readonly.test.ts",
+      "kind": "runtime",
+      "cases": 7,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/readonly.test.ts",
+      "kind": "typecheck",
+      "cases": 7,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/record.test.ts",
+      "kind": "runtime",
+      "cases": 13,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/record.test.ts",
+      "kind": "typecheck",
+      "cases": 13,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/recursive-types.test.ts",
+      "kind": "runtime",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/recursive-types.test.ts",
+      "kind": "typecheck",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/refine.test.ts",
+      "kind": "runtime",
+      "cases": 15,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/refine.test.ts",
+      "kind": "typecheck",
+      "cases": 15,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/registries.test.ts",
+      "kind": "runtime",
+      "cases": 16,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/registries.test.ts",
+      "kind": "typecheck",
+      "cases": 16,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/set.test.ts",
+      "kind": "runtime",
+      "cases": 12,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/set.test.ts",
+      "kind": "typecheck",
+      "cases": 12,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/standard-schema.test.ts",
+      "kind": "runtime",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/standard-schema.test.ts",
+      "kind": "typecheck",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/string-formats.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/string-formats.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/string.test.ts",
+      "kind": "runtime",
+      "cases": 36,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/string.test.ts",
+      "kind": "typecheck",
+      "cases": 36,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/stringbool.test.ts",
+      "kind": "runtime",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/stringbool.test.ts",
+      "kind": "typecheck",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/template-literal.test.ts",
+      "kind": "runtime",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/template-literal.test.ts",
+      "kind": "typecheck",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/to-json-schema.test.ts",
+      "kind": "runtime",
+      "cases": 48,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/to-json-schema.test.ts",
+      "kind": "typecheck",
+      "cases": 48,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/transform.test.ts",
+      "kind": "runtime",
+      "cases": 16,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/transform.test.ts",
+      "kind": "typecheck",
+      "cases": 16,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/tuple.test.ts",
+      "kind": "runtime",
+      "cases": 6,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/tuple.test.ts",
+      "kind": "typecheck",
+      "cases": 6,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/union.test.ts",
+      "kind": "runtime",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/union.test.ts",
+      "kind": "typecheck",
+      "cases": 8,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/validations.test.ts",
+      "kind": "runtime",
+      "cases": 13,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/validations.test.ts",
+      "kind": "typecheck",
+      "cases": 13,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/void.test.ts",
+      "kind": "runtime",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/classic/tests/void.test.ts",
+      "kind": "typecheck",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/index.test.ts",
+      "kind": "runtime",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/index.test.ts",
+      "kind": "typecheck",
+      "cases": 3,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/be.test.ts",
+      "kind": "runtime",
+      "cases": 38,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/be.test.ts",
+      "kind": "typecheck",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/en.test.ts",
+      "kind": "runtime",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/en.test.ts",
+      "kind": "typecheck",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/ru.test.ts",
+      "kind": "runtime",
+      "cases": 38,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/ru.test.ts",
+      "kind": "typecheck",
+      "cases": 4,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/tr.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/core/tests/locales/tr.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/assignability.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/assignability.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/brand.test.ts",
+      "kind": "runtime",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/brand.test.ts",
+      "kind": "typecheck",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/checks.test.ts",
+      "kind": "runtime",
+      "cases": 17,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/checks.test.ts",
+      "kind": "typecheck",
+      "cases": 17,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/computed.test.ts",
+      "kind": "runtime",
+      "cases": 5,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/computed.test.ts",
+      "kind": "typecheck",
+      "cases": 5,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/error.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/error.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/functions.test.ts",
+      "kind": "runtime",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/functions.test.ts",
+      "kind": "typecheck",
+      "cases": 1,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/index.test.ts",
+      "kind": "runtime",
+      "cases": 56,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/index.test.ts",
+      "kind": "typecheck",
+      "cases": 56,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/number.test.ts",
+      "kind": "runtime",
+      "cases": 9,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/number.test.ts",
+      "kind": "typecheck",
+      "cases": 9,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/object.test.ts",
+      "kind": "runtime",
+      "cases": 11,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/object.test.ts",
+      "kind": "typecheck",
+      "cases": 11,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/prototypes.test.ts",
+      "kind": "runtime",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/prototypes.test.ts",
+      "kind": "typecheck",
+      "cases": 2,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/recursive-types.test.ts",
+      "kind": "runtime",
+      "cases": 6,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/recursive-types.test.ts",
+      "kind": "typecheck",
+      "cases": 6,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/string.test.ts",
+      "kind": "runtime",
+      "cases": 24,
+      "status": "passed"
+    },
+    {
+      "file": "packages/zod/src/v4/mini/tests/string.test.ts",
+      "kind": "typecheck",
+      "cases": 24,
+      "status": "passed"
+    }
+  ],
+  "static_counts": {
+    "scope": "packages/zod/src/v4/**/tests/**/*.test.ts (81 files)",
+    "test_or_it_call_occurrences_any_position": {
+      "regex": "\\b(test|it)\\(",
+      "value": 869
+    },
+    "test_or_it_call_occurrences_line_start": {
+      "regex": "^\\s*(test|it)\\(",
+      "value": 823
+    },
+    "commented_out_occurrences": {
+      "regex": "^\\s*//.*\\b(test|it)\\(",
+      "value": 45
+    },
+    "test_call_only": 861,
+    "it_call_only": 8,
+    "describe_calls": 43,
+    "each_calls": 0,
+    "instruction_expected": 868,
+    "note": "Instruction expected 868 static occurrences; regex \\b(test|it)\\( yields 869 (861 test( + 8 it(). No test.each/it.each/describe.each in v4 tests at t; the runtime-vs-static gap comes from tests registered inside loops/helpers and from commented-out test( lines counted statically. See run-notes O-02."
+  },
+  "dev_row": {
+    "files": 81,
+    "cases": 888,
+    "passed": 888,
+    "pass_rate": 1
+  }
+}

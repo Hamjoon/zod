@@ -1,0 +1,4 @@
+packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts(152,18): error TS2339: Property 'expected' does not exist on type 'never'.
+packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts(153,18): error TS2339: Property 'code' does not exist on type 'never'.
+packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts(154,18): error TS2339: Property 'input' does not exist on type 'never'.
+packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts(155,18): error TS2339: Property 'inst' does not exist on type 'never'.

@@ -1,0 +1,4107 @@
+[
+  {
+    "unit_id": "086-$ZodCheckUpperCase",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 10,
+    "errors_elsewhere": 0,
+    "categories": {
+      "module_or_export_not_found": 2,
+      "other": 8
+    },
+    "codes": {
+      "TS2305": 2,
+      "TS2554": 8
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 28,
+        "col": 10,
+        "code": "TS2305",
+        "message": "Module '\"./regexes.js\"' has no exported member 'regexes'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 29,
+        "col": 10,
+        "code": "TS2305",
+        "message": "Module '\"./errors.js\"' has no exported member 'errors'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 57,
+        "col": 20,
+        "code": "TS2554",
+        "message": "Expected 1 arguments, but got 0."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 67,
+        "col": 20,
+        "code": "TS2554",
+        "message": "Expected 1 arguments, but got 0."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 76,
+        "col": 20,
+        "code": "TS2554",
+        "message": "Expected 1 arguments, but got 0."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "086-$ZodCheckUpperCase",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 19,
+    "errors_elsewhere": 0,
+    "categories": {
+      "module_or_export_not_found": 1,
+      "property_does_not_exist": 18
+    },
+    "codes": {
+      "TS2305": 1,
+      "TS2339": 18
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 21,
+        "col": 10,
+        "code": "TS2305",
+        "message": "Module '\"./errors.js\"' has no exported member 'errors'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 52,
+        "col": 26,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$ZodCheckUpperCase'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 53,
+        "col": 26,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$ZodCheckUpperCase'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 54,
+        "col": 26,
+        "code": "TS2339",
+        "message": "Property 'check' does not exist on type '$ZodCheckUpperCase'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts",
+        "line": 60,
+        "col": 25,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$ZodCheckUpperCase'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "098-$ZodType",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 1
+    },
+    "codes": {
+      "TS2348": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 14,
+        "col": 23,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "098-$ZodType",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.6,
+    "tsc_ok": false,
+    "errors_in_file": 3,
+    "errors_elsewhere": 0,
+    "categories": {
+      "module_or_export_not_found": 3
+    },
+    "codes": {
+      "TS2834": 2,
+      "TS2835": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 106,
+        "col": 26,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 107,
+        "col": 32,
+        "code": "TS2835",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './core.js'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 108,
+        "col": 43,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "098-$ZodType",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 2,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 1,
+      "other": 1
+    },
+    "codes": {
+      "TS2348": 1,
+      "TS6133": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 44,
+        "col": 10,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodType.pilot.test.ts",
+        "line": 168,
+        "col": 18,
+        "code": "TS6133",
+        "message": "'payload' is declared but its value is never read."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "053-ZodEnum",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 2,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 2
+    },
+    "codes": {
+      "TS2578": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 105,
+        "col": 7,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 163,
+        "col": 7,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "053-ZodEnum",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 13,
+    "errors_elsewhere": 0,
+    "categories": {
+      "type_mismatch": 11,
+      "other": 2
+    },
+    "codes": {
+      "TS2345": 11,
+      "TS2578": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 35,
+        "col": 32,
+        "code": "TS2345",
+        "message": "Argument of type '{ entries: { readonly RED: \"red\"; readonly GREEN: \"green\"; readonly BLUE: \"blue\"; }; }' is not assignable to parameter of type '$ZodEnumDef<Readonly<Record<string, EnumValue>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 49,
+        "col": 32,
+        "code": "TS2345",
+        "message": "Argument of type '{ entries: { readonly RED: \"red\"; readonly GREEN: \"green\"; readonly BLUE: \"blue\"; }; }' is not assignable to parameter of type '$ZodEnumDef<Readonly<Record<string, EnumValue>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 65,
+        "col": 32,
+        "code": "TS2345",
+        "message": "Argument of type '{ entries: { readonly RED: \"red\"; readonly GREEN: \"green\"; readonly BLUE: \"blue\"; }; }' is not assignable to parameter of type '$ZodEnumDef<Readonly<Record<string, EnumValue>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 78,
+        "col": 32,
+        "code": "TS2345",
+        "message": "Argument of type '{ entries: { readonly RED: \"red\"; readonly GREEN: \"green\"; readonly BLUE: \"blue\"; }; }' is not assignable to parameter of type '$ZodEnumDef<Readonly<Record<string, EnumValue>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 89,
+        "col": 32,
+        "code": "TS2345",
+        "message": "Argument of type '{ entries: { readonly RED: \"red\"; readonly GREEN: \"green\"; readonly BLUE: \"blue\"; }; }' is not assignable to parameter of type '$ZodEnumDef<Readonly<Record<string, EnumValue>>>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "053-ZodEnum",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 3,
+    "errors_elsewhere": 0,
+    "categories": {
+      "type_mismatch": 1,
+      "other": 2
+    },
+    "codes": {
+      "TS2345": 1,
+      "TS2578": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 24,
+        "col": 22,
+        "code": "TS2345",
+        "message": "Argument of type '{ entries: { A: string; B: string; C: string; }; checks: never[]; }' is not assignable to parameter of type '$ZodEnumDef<Readonly<Record<string, EnumValue>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 96,
+        "col": 5,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodEnum.pilot.test.ts",
+        "line": 154,
+        "col": 5,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "038-ZodNull",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 1
+    },
+    "codes": {
+      "TS2348": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 25,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodNull, $ZodNullDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "038-ZodNull",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 2,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 2
+    },
+    "codes": {
+      "TS2348": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 25,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodNull, $ZodNullDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 63,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodNull, $ZodNullDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "231-ZodMiniLazy",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.6,
+    "tsc_ok": false,
+    "errors_in_file": 22,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 3,
+      "type_mismatch": 8,
+      "property_does_not_exist": 9,
+      "other": 2
+    },
+    "codes": {
+      "TS2348": 3,
+      "TS2345": 8,
+      "TS2339": 9,
+      "TS2558": 1,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 21,
+        "col": 10,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniString<unknown>, $ZodStringDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 28,
+        "col": 38,
+        "code": "TS2345",
+        "message": "Argument of type '() => any' is not assignable to parameter of type '$ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 60,
+        "col": 33,
+        "code": "TS2339",
+        "message": "Property 'optional' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 66,
+        "col": 33,
+        "code": "TS2339",
+        "message": "Property 'nullable' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 72,
+        "col": 36,
+        "code": "TS2339",
+        "message": "Property 'default' does not exist on type 'ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "231-ZodMiniLazy",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.4,
+    "tsc_ok": false,
+    "errors_in_file": 8,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 6,
+      "other": 2
+    },
+    "codes": {
+      "TS2348": 6,
+      "TS7022": 1,
+      "TS7024": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 41,
+        "col": 33,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodNumber, $ZodNumberDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 54,
+        "col": 31,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodString, $ZodStringDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 69,
+        "col": 9,
+        "code": "TS7022",
+        "message": "'Node' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 69,
+        "col": 21,
+        "code": "TS7024",
+        "message": "Function implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 70,
+        "col": 5,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodObject<$ZodLooseShape, $strip>, $ZodObjectDef<$ZodLooseShape>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "117-$ZodIPv6",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 5,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 5
+    },
+    "codes": {
+      "TS2348": 5
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 68,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 96,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 135,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 160,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 212,
+        "col": 52,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "117-$ZodIPv6",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.0,
+    "tsc_ok": false,
+    "errors_in_file": 3,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1,
+      "type_mismatch": 2
+    },
+    "codes": {
+      "TS2554": 1,
+      "TS2345": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 73,
+        "col": 14,
+        "code": "TS2554",
+        "message": "Expected 1 arguments, but got 0."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 121,
+        "col": 41,
+        "code": "TS2345",
+        "message": "Argument of type '{ abort: true; }' is not assignable to parameter of type '$ZodIPv6Def'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 124,
+        "col": 31,
+        "code": "TS2345",
+        "message": "Argument of type '{ value: unknown; issues: Array<{ code: string; format: string; input: unknown; inst: unknown; continue: boolean; }>; }' is not assignable to parameter of type 'ParsePayload<string>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "117-$ZodIPv6",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 10,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 9,
+      "other": 1
+    },
+    "codes": {
+      "TS2348": 9,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 16,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 22,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 29,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 30,
+        "col": 8,
+        "code": "TS7006",
+        "message": "Parameter 'val' implicitly has an 'any' type."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts",
+        "line": 46,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "088-$ZodCheckStartsWith",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+    "tsc_exit": 0,
+    "tsc_seconds": 1.0,
+    "tsc_ok": true,
+    "errors_in_file": 0,
+    "errors_elsewhere": 0,
+    "categories": {},
+    "codes": {},
+    "first_errors": [],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "088-$ZodCheckStartsWith",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 10,
+    "errors_elsewhere": 0,
+    "categories": {
+      "type_mismatch": 10
+    },
+    "codes": {
+      "TS2345": 10
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+        "line": 49,
+        "col": 43,
+        "code": "TS2345",
+        "message": "Argument of type '{ readonly prefix: \"hello\"; }' is not assignable to parameter of type '$ZodCheckStartsWithDef'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+        "line": 62,
+        "col": 43,
+        "code": "TS2345",
+        "message": "Argument of type '{ readonly prefix: \"a.*+?^${}()|[]\\\\\"; }' is not assignable to parameter of type '$ZodCheckStartsWithDef'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+        "line": 77,
+        "col": 43,
+        "code": "TS2345",
+        "message": "Argument of type '{ readonly prefix: \"test\"; }' is not assignable to parameter of type '$ZodCheckStartsWithDef'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+        "line": 86,
+        "col": 44,
+        "code": "TS2345",
+        "message": "Argument of type '{ _zod: { bag: Record<string, unknown>; }; }' is not assignable to parameter of type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+        "line": 102,
+        "col": 43,
+        "code": "TS2345",
+        "message": "Argument of type '{ prefix: string; }' is not assignable to parameter of type '$ZodCheckStartsWithDef'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "088-$ZodCheckStartsWith",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 3,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 2,
+      "name_not_found": 1
+    },
+    "codes": {
+      "TS2578": 1,
+      "TS18046": 1,
+      "TS2304": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+        "line": 110,
+        "col": 5,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+        "line": 150,
+        "col": 12,
+        "code": "TS18046",
+        "message": "'storedPattern' is of type 'unknown'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts",
+        "line": 150,
+        "col": 43,
+        "code": "TS2304",
+        "message": "Cannot find name 'prefix'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "140-$ZodUnion",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 13,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 13
+    },
+    "codes": {
+      "TS2348": 13
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 53,
+        "col": 19,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 62,
+        "col": 19,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 71,
+        "col": 19,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 83,
+        "col": 19,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 92,
+        "col": 19,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "140-$ZodUnion",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.0,
+    "tsc_ok": false,
+    "errors_in_file": 17,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1,
+      "constructor_called_without_new": 12,
+      "type_mismatch": 2,
+      "property_does_not_exist": 2
+    },
+    "codes": {
+      "TS2375": 1,
+      "TS2348": 12,
+      "TS2345": 2,
+      "TS2339": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 56,
+        "col": 5,
+        "code": "TS2375",
+        "message": "Type '{ optin: \"optional\" | undefined; optout: \"optional\" | undefined; values: Set<string | number | boolean | null> | undefined; pattern: RegExp | undefined; run: (payload: { value: unknown; issues: unknown[]; }, ctx: unknown) => MockParseResult | Promise<MockParseResult>; }' is not assignable to type '{ optin?: \"optional\"; optout?: \"optional\"; values?: Set<string | number | boolean | null>; pattern?: RegExp; run: (payload: { value: unknown; issues: unknown[]; }, ctx: unknown) => MockParseResult | Promise<...>; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 87,
+        "col": 19,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 95,
+        "col": 19,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 103,
+        "col": 19,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 111,
+        "col": 19,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "140-$ZodUnion",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 2,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1,
+      "constructor_called_without_new": 1
+    },
+    "codes": {
+      "TS6133": 1,
+      "TS2348": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 53,
+        "col": 22,
+        "code": "TS6133",
+        "message": "'ctx' is declared but its value is never read."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodUnion.pilot.test.ts",
+        "line": 77,
+        "col": 3,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodUnion<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>, $ZodUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "087-$ZodCheckIncludes",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.0,
+    "tsc_ok": false,
+    "errors_in_file": 17,
+    "errors_elsewhere": 0,
+    "categories": {
+      "type_mismatch": 13,
+      "property_does_not_exist": 2,
+      "other": 2
+    },
+    "codes": {
+      "TS2345": 13,
+      "TS2339": 2,
+      "TS18046": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+        "line": 81,
+        "col": 39,
+        "code": "TS2345",
+        "message": "Argument of type '{ includes: string; }' is not assignable to parameter of type '$ZodCheckIncludesDef'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+        "line": 112,
+        "col": 45,
+        "code": "TS2345",
+        "message": "Argument of type '{ includes: string; position: number; }' is not assignable to parameter of type '$ZodCheckIncludesDef'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+        "line": 118,
+        "col": 26,
+        "code": "TS2345",
+        "message": "Argument of type '{ value: string; issues: Array<{ origin: string; code: string; format: string; includes: string; input: string; inst: unknown; continue: boolean; }>; }' is not assignable to parameter of type 'ParsePayload<string>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+        "line": 123,
+        "col": 26,
+        "code": "TS2345",
+        "message": "Argument of type '{ value: string; issues: Array<{ origin: string; code: string; format: string; includes: string; input: string; inst: unknown; continue: boolean; }>; }' is not assignable to parameter of type 'ParsePayload<string>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+        "line": 128,
+        "col": 45,
+        "code": "TS2345",
+        "message": "Argument of type '{ includes: string; }' is not assignable to parameter of type '$ZodCheckIncludesDef'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "087-$ZodCheckIncludes",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+    "tsc_exit": 0,
+    "tsc_seconds": 0.9,
+    "tsc_ok": true,
+    "errors_in_file": 0,
+    "errors_elsewhere": 0,
+    "categories": {},
+    "codes": {},
+    "first_errors": [],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "087-$ZodCheckIncludes",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 2,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1,
+      "constructor_called_without_new": 1
+    },
+    "codes": {
+      "TS2552": 1,
+      "TS2348": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+        "line": 39,
+        "col": 16,
+        "code": "TS2552",
+        "message": "Cannot find name '$ZodCheckIncludesDef'. Did you mean '$ZodCheckIncludes'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodCheckIncludes.pilot.test.ts",
+        "line": 50,
+        "col": 3,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodCheckIncludes, $ZodCheckIncludesDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "130-$ZodSymbol",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 3,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 3
+    },
+    "codes": {
+      "TS2348": 3
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 45,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 55,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 81,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "130-$ZodSymbol",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 4,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 4
+    },
+    "codes": {
+      "TS2339": 4
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 152,
+        "col": 18,
+        "code": "TS2339",
+        "message": "Property 'expected' does not exist on type 'never'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 153,
+        "col": 18,
+        "code": "TS2339",
+        "message": "Property 'code' does not exist on type 'never'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 154,
+        "col": 18,
+        "code": "TS2339",
+        "message": "Property 'input' does not exist on type 'never'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 155,
+        "col": 18,
+        "code": "TS2339",
+        "message": "Property 'inst' does not exist on type 'never'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "130-$ZodSymbol",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 5,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 3,
+      "property_does_not_exist": 2
+    },
+    "codes": {
+      "TS2348": 3,
+      "TS2339": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 18,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 46,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 68,
+        "col": 24,
+        "code": "TS2339",
+        "message": "Property 'expected' does not exist on type '$ZodIssue'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 70,
+        "col": 24,
+        "code": "TS2339",
+        "message": "Property 'inst' does not exist on type '$ZodIssue'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodSymbol.pilot.test.ts",
+        "line": 80,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "147-$ZodEnum",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 27,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 18,
+      "other": 9
+    },
+    "codes": {
+      "TS2348": 18,
+      "TS2578": 9
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 71,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 77,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 82,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 91,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 96,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "147-$ZodEnum",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.0,
+    "tsc_ok": false,
+    "errors_in_file": 4,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 4
+    },
+    "codes": {
+      "TS2348": 4
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 53,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 98,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 143,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 191,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "147-$ZodEnum",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 9,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1,
+      "constructor_called_without_new": 8
+    },
+    "codes": {
+      "TS6133": 1,
+      "TS2348": 8
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 18,
+        "col": 26,
+        "code": "TS6133",
+        "message": "'T' is declared but its value is never read."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 47,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 60,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 83,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEnum.pilot.test.ts",
+        "line": 101,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "159-$ZodPipe",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 18,
+    "errors_elsewhere": 0,
+    "categories": {
+      "module_or_export_not_found": 1,
+      "name_not_found": 1,
+      "other": 9,
+      "type_mismatch": 7
+    },
+    "codes": {
+      "TS2834": 1,
+      "TS2304": 1,
+      "TS7006": 3,
+      "TS2345": 7,
+      "TS2353": 1,
+      "TS2554": 5
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 83,
+        "col": 34,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 125,
+        "col": 3,
+        "code": "TS2304",
+        "message": "Cannot find name 'beforeEach'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 127,
+        "col": 51,
+        "code": "TS7006",
+        "message": "Parameter 'left' implicitly has an 'any' type."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 127,
+        "col": 57,
+        "code": "TS7006",
+        "message": "Parameter 'def' implicitly has an 'any' type."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 127,
+        "col": 62,
+        "code": "TS7006",
+        "message": "Parameter 'ctx' implicitly has an 'any' type."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "159-$ZodPipe",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 9,
+    "errors_elsewhere": 0,
+    "categories": {
+      "module_or_export_not_found": 1,
+      "constructor_called_without_new": 2,
+      "other": 6
+    },
+    "codes": {
+      "TS2459": 1,
+      "TS2348": 2,
+      "TS7006": 6
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 25,
+        "col": 20,
+        "code": "TS2459",
+        "message": "Module '\"./schemas.js\"' declares 'handlePipeResult' locally, but it is not exported."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 79,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodPipe<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<...>>, $ZodType<...>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 98,
+        "col": 12,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodPipe<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<...>>, $ZodType<...>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 105,
+        "col": 28,
+        "code": "TS7006",
+        "message": "Parameter 'left' implicitly has an 'any' type."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 105,
+        "col": 34,
+        "code": "TS7006",
+        "message": "Parameter 'def' implicitly has an 'any' type."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "159-$ZodPipe",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 10,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 1,
+      "constructor_called_without_new": 9
+    },
+    "codes": {
+      "TS2339": 1,
+      "TS2348": 9
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 61,
+        "col": 36,
+        "code": "TS2339",
+        "message": "Property 'handlePipeResult' does not exist on type 'typeof import(\"/Users/donggi/_projects/experiment-projects/zod-pilot-import-n30/packages/zod/src/v4/core/schemas\", { with: { \"resolution-mode\": \"import\" } })'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 67,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodPipe<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<...>>, $ZodType<...>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 85,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodPipe<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<...>>, $ZodType<...>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 100,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodPipe<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<...>>, $ZodType<...>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodPipe.pilot.test.ts",
+        "line": 120,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodPipe<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<...>>, $ZodType<...>>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "153-$ZodDefault",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 21,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 2,
+      "type_mismatch": 15,
+      "property_does_not_exist": 4
+    },
+    "codes": {
+      "TS6133": 1,
+      "TS2554": 1,
+      "TS2345": 15,
+      "TS2339": 4
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 30,
+        "col": 20,
+        "code": "TS6133",
+        "message": "'name' is declared but its value is never read."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 77,
+        "col": 21,
+        "code": "TS2554",
+        "message": "Expected 0 arguments, but got 2."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 146,
+        "col": 36,
+        "code": "TS2345",
+        "message": "Argument of type '{ type: string; innerType: { _zod: { run: Mock<Procedure>; }; }; defaultValue: number; }' is not assignable to parameter of type '$ZodDefaultDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 149,
+        "col": 38,
+        "code": "TS2345",
+        "message": "Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 153,
+        "col": 19,
+        "code": "TS2339",
+        "message": "Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "153-$ZodDefault",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1
+    },
+    "codes": {
+      "TS6133": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 18,
+        "col": 22,
+        "code": "TS6133",
+        "message": "'payload' is declared but its value is never read."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "153-$ZodDefault",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 13,
+    "errors_elsewhere": 0,
+    "categories": {
+      "type_mismatch": 8,
+      "property_does_not_exist": 5
+    },
+    "codes": {
+      "TS2345": 8,
+      "TS2339": 5
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 25,
+        "col": 38,
+        "code": "TS2345",
+        "message": "Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 26,
+        "col": 19,
+        "code": "TS2339",
+        "message": "Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 33,
+        "col": 44,
+        "code": "TS2345",
+        "message": "Argument of type '{ value: number; }' is not assignable to parameter of type 'ParsePayload<any>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 57,
+        "col": 34,
+        "code": "TS2345",
+        "message": "Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDefault.pilot.test.ts",
+        "line": 58,
+        "col": 34,
+        "code": "TS2345",
+        "message": "Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "105-$ZodEmoji",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 4,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 1,
+      "other": 3
+    },
+    "codes": {
+      "TS2348": 1,
+      "TS2578": 2,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+        "line": 7,
+        "col": 23,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEmoji, $ZodStringFormatDef<\"emoji\">>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+        "line": 46,
+        "col": 5,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+        "line": 51,
+        "col": 5,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+        "line": 92,
+        "col": 8,
+        "code": "TS7006",
+        "message": "Parameter 'val' implicitly has an 'any' type."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "105-$ZodEmoji",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 1
+    },
+    "codes": {
+      "TS2348": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+        "line": 21,
+        "col": 27,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<$ZodEmoji, $ZodStringFormatDef<\"emoji\">>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "105-$ZodEmoji",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 12,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 12
+    },
+    "codes": {
+      "TS2339": 12
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+        "line": 26,
+        "col": 22,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<\"emoji\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+        "line": 31,
+        "col": 22,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<\"emoji\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+        "line": 36,
+        "col": 22,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<\"emoji\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+        "line": 41,
+        "col": 22,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<\"emoji\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts",
+        "line": 46,
+        "col": 22,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<\"emoji\">>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "137-$ZodDate",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 32,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1,
+      "type_mismatch": 9,
+      "property_does_not_exist": 22
+    },
+    "codes": {
+      "TS2379": 1,
+      "TS2345": 9,
+      "TS2339": 22
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+        "line": 10,
+        "col": 23,
+        "code": "TS2379",
+        "message": "Argument of type '{ type: \"date\"; coerce: boolean | undefined; }' is not assignable to parameter of type '$ZodDateDef' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+        "line": 26,
+        "col": 47,
+        "code": "TS2345",
+        "message": "Argument of type 'undefined' is not assignable to parameter of type 'ParseContextInternal<never>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+        "line": 28,
+        "col": 19,
+        "code": "TS2339",
+        "message": "Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+        "line": 29,
+        "col": 19,
+        "code": "TS2339",
+        "message": "Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+        "line": 37,
+        "col": 47,
+        "code": "TS2345",
+        "message": "Argument of type 'undefined' is not assignable to parameter of type 'ParseContextInternal<never>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "137-$ZodDate",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+    "tsc_exit": 0,
+    "tsc_seconds": 0.9,
+    "tsc_ok": true,
+    "errors_in_file": 0,
+    "errors_elsewhere": 0,
+    "categories": {},
+    "codes": {},
+    "first_errors": [],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "137-$ZodDate",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.9,
+    "tsc_ok": false,
+    "errors_in_file": 36,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 35,
+      "type_mismatch": 1
+    },
+    "codes": {
+      "TS2339": 35,
+      "TS2345": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+        "line": 19,
+        "col": 19,
+        "code": "TS2339",
+        "message": "Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+        "line": 20,
+        "col": 19,
+        "code": "TS2339",
+        "message": "Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+        "line": 27,
+        "col": 19,
+        "code": "TS2339",
+        "message": "Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+        "line": 28,
+        "col": 19,
+        "code": "TS2339",
+        "message": "Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/core/$ZodDate.pilot.test.ts",
+        "line": 37,
+        "col": 19,
+        "code": "TS2339",
+        "message": "Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "055-ZodFile",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+    "tsc_exit": 0,
+    "tsc_seconds": 1.2,
+    "tsc_ok": true,
+    "errors_in_file": 0,
+    "errors_elsewhere": 0,
+    "categories": {},
+    "codes": {},
+    "first_errors": [],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "055-ZodFile",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 20,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 2,
+      "property_does_not_exist": 1,
+      "constructor_called_without_new": 17
+    },
+    "codes": {
+      "TS1361": 1,
+      "TS2339": 1,
+      "TS7006": 1,
+      "TS2348": 17
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+        "line": 50,
+        "col": 30,
+        "code": "TS1361",
+        "message": "'ZodError' cannot be used as a value because it was imported using 'import type'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+        "line": 53,
+        "col": 26,
+        "code": "TS2339",
+        "message": "Property 'errors' does not exist on type 'ZodError<unknown>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+        "line": 53,
+        "col": 38,
+        "code": "TS7006",
+        "message": "Parameter 'd' implicitly has an 'any' type."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+        "line": 64,
+        "col": 22,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+        "line": 70,
+        "col": 22,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "055-ZodFile",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 18,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 12,
+      "other": 6
+    },
+    "codes": {
+      "TS2348": 12,
+      "TS1361": 6
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+        "line": 19,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+        "line": 27,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+        "line": 34,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+        "line": 41,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodFile.pilot.test.ts",
+        "line": 51,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodFile, $ZodFileDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "013-ZodUUID",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 14,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 13,
+      "other": 1
+    },
+    "codes": {
+      "TS2339": 13,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 67,
+        "col": 22,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 73,
+        "col": 28,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 79,
+        "col": 30,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 89,
+        "col": 30,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 93,
+        "col": 48,
+        "code": "TS7006",
+        "message": "Parameter 'i' implicitly has an 'any' type."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "013-ZodUUID",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 14,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 10,
+      "other": 4
+    },
+    "codes": {
+      "TS2339": 10,
+      "TS1361": 4
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 37,
+        "col": 28,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 39,
+        "col": 22,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 48,
+        "col": 26,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 49,
+        "col": 20,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 67,
+        "col": 28,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "013-ZodUUID",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 18,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 16,
+      "other": 2
+    },
+    "codes": {
+      "TS2339": 16,
+      "TS7006": 1,
+      "TS2578": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 12,
+        "col": 20,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 16,
+        "col": 28,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 22,
+        "col": 28,
+        "code": "TS2339",
+        "message": "Property 'optional' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 27,
+        "col": 28,
+        "code": "TS2339",
+        "message": "Property 'nullable' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodUUID.pilot.test.ts",
+        "line": 32,
+        "col": 28,
+        "code": "TS2339",
+        "message": "Property 'array' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "036-ZodSymbol",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 19,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 15,
+      "other": 3,
+      "property_does_not_exist": 1
+    },
+    "codes": {
+      "TS2348": 15,
+      "TS7006": 3,
+      "TS2339": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 12,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 17,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 25,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 31,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 40,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "036-ZodSymbol",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 9,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 8,
+      "other": 1
+    },
+    "codes": {
+      "TS2348": 8,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 27,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 37,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 61,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 69,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 78,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "036-ZodSymbol",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 10,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 9,
+      "other": 1
+    },
+    "codes": {
+      "TS2348": 9,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 54,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 97,
+        "col": 28,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 104,
+        "col": 28,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 112,
+        "col": 27,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSymbol.pilot.test.ts",
+        "line": 123,
+        "col": 23,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodSymbol, $ZodSymbolDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "062-ZodSuccess",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.4,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1
+    },
+    "codes": {
+      "TS2344": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+        "line": 31,
+        "col": 49,
+        "code": "TS2344",
+        "message": "Type 'T' does not satisfy the constraint 'SomeType'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "062-ZodSuccess",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 8,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1,
+      "module_or_export_not_found": 2,
+      "type_mismatch": 5
+    },
+    "codes": {
+      "TS6133": 1,
+      "TS2834": 2,
+      "TS2345": 5
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+        "line": 32,
+        "col": 31,
+        "code": "TS6133",
+        "message": "'name' is declared but its value is never read."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+        "line": 65,
+        "col": 31,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+        "line": 71,
+        "col": 30,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+        "line": 81,
+        "col": 37,
+        "code": "TS2345",
+        "message": "Argument of type '{ innerType: { foo: string; }; }' is not assignable to parameter of type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+        "line": 96,
+        "col": 37,
+        "code": "TS2345",
+        "message": "Argument of type '{ innerType: number; }' is not assignable to parameter of type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "062-ZodSuccess",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 2,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 2
+    },
+    "codes": {
+      "TS6133": 1,
+      "TS2698": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+        "line": 27,
+        "col": 20,
+        "code": "TS6133",
+        "message": "'name' is declared but its value is never read."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts",
+        "line": 60,
+        "col": 5,
+        "code": "TS2698",
+        "message": "Spread types may only be created from object types."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "003-ZodISODateTime",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.5,
+    "tsc_ok": false,
+    "errors_in_file": 19,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 15,
+      "other": 4
+    },
+    "codes": {
+      "TS2339": 15,
+      "TS7006": 4
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 58,
+        "col": 27,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 62,
+        "col": 33,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 66,
+        "col": 35,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 74,
+        "col": 35,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 82,
+        "col": 35,
+        "code": "TS2339",
+        "message": "Property 'optional' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "003-ZodISODateTime",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.6,
+    "tsc_ok": false,
+    "errors_in_file": 8,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 7,
+      "other": 1
+    },
+    "codes": {
+      "TS2348": 7,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 29,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 35,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 66,
+        "col": 22,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 108,
+        "col": 22,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 124,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "003-ZodISODateTime",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 25,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 23,
+      "other": 2
+    },
+    "codes": {
+      "TS2339": 23,
+      "TS7006": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 44,
+        "col": 35,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 51,
+        "col": 33,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 55,
+        "col": 36,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 64,
+        "col": 36,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts",
+        "line": 72,
+        "col": 36,
+        "code": "TS2339",
+        "message": "Property 'refine' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "021-ZodKSUID",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 39,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 23,
+      "other": 16
+    },
+    "codes": {
+      "TS2339": 23,
+      "TS1361": 14,
+      "TS7006": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 88,
+        "col": 29,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 94,
+        "col": 27,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 94,
+        "col": 57,
+        "code": "TS1361",
+        "message": "'ZodError' cannot be used as a value because it was imported using 'import type'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 99,
+        "col": 29,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 107,
+        "col": 29,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "021-ZodKSUID",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 6,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 6
+    },
+    "codes": {
+      "TS2339": 6
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 49,
+        "col": 29,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 58,
+        "col": 29,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 71,
+        "col": 29,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 84,
+        "col": 29,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 122,
+        "col": 29,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "021-ZodKSUID",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 16,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 16
+    },
+    "codes": {
+      "TS2339": 16
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 30,
+        "col": 27,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 31,
+        "col": 29,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 36,
+        "col": 27,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 40,
+        "col": 27,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts",
+        "line": 44,
+        "col": 27,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<\"ksuid\">>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "058-ZodNullable",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+    "tsc_exit": 0,
+    "tsc_seconds": 1.2,
+    "tsc_ok": true,
+    "errors_in_file": 0,
+    "errors_elsewhere": 0,
+    "categories": {},
+    "codes": {},
+    "first_errors": [],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "058-ZodNullable",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 10,
+    "errors_elsewhere": 0,
+    "categories": {
+      "type_mismatch": 7,
+      "other": 1,
+      "property_does_not_exist": 2
+    },
+    "codes": {
+      "TS2322": 4,
+      "TS2739": 1,
+      "TS2345": 3,
+      "TS2339": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+        "line": 106,
+        "col": 35,
+        "code": "TS2322",
+        "message": "Type '\"another\"' is not assignable to type '\"dummy\"'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+        "line": 123,
+        "col": 38,
+        "code": "TS2739",
+        "message": "Type 'DummyType' is missing the following properties from type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>': _zod, \"~standard\""
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+        "line": 132,
+        "col": 45,
+        "code": "TS2322",
+        "message": "Type 'DummyType' is not assignable to type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+        "line": 133,
+        "col": 43,
+        "code": "TS2345",
+        "message": "Argument of type '{ innerType: ZodNullable<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>; }' is not assignable to parameter of type '$ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+        "line": 138,
+        "col": 35,
+        "code": "TS2339",
+        "message": "Property 'unwrap' does not exist on type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "058-ZodNullable",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 5,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 5
+    },
+    "codes": {
+      "TS2348": 5
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+        "line": 25,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodNullable<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+        "line": 31,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodNullable<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+        "line": 37,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodNullable<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+        "line": 44,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodNullable<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNullable.pilot.test.ts",
+        "line": 56,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodNullable<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "168-ZodMiniISODate",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 8,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 8
+    },
+    "codes": {
+      "TS2339": 8
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 50,
+        "col": 21,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<\"date\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 51,
+        "col": 25,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<\"date\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 61,
+        "col": 35,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<\"date\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 67,
+        "col": 36,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<\"date\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 78,
+        "col": 33,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<\"date\">>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "168-ZodMiniISODate",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 16,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 14,
+      "other": 2
+    },
+    "codes": {
+      "TS2339": 14,
+      "TS2578": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 26,
+        "col": 35,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<\"date\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 35,
+        "col": 35,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<\"date\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 41,
+        "col": 33,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<\"date\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 49,
+        "col": 35,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<\"date\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 58,
+        "col": 33,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<\"date\">>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "168-ZodMiniISODate",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 0.6,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "module_or_export_not_found": 1
+    },
+    "codes": {
+      "TS2835": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts",
+        "line": 18,
+        "col": 32,
+        "code": "TS2835",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './iso.js'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "210-ZodMiniDiscriminatedUnion",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniDiscriminatedUnion.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 7,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1,
+      "module_or_export_not_found": 2,
+      "type_mismatch": 4
+    },
+    "codes": {
+      "TS6133": 1,
+      "TS2834": 2,
+      "TS2345": 4
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDiscriminatedUnion.pilot.test.ts",
+        "line": 49,
+        "col": 25,
+        "code": "TS6133",
+        "message": "'name' is declared but its value is never read."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDiscriminatedUnion.pilot.test.ts",
+        "line": 87,
+        "col": 22,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDiscriminatedUnion.pilot.test.ts",
+        "line": 88,
+        "col": 29,
+        "code": "TS2834",
+        "message": "Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDiscriminatedUnion.pilot.test.ts",
+        "line": 111,
+        "col": 52,
+        "code": "TS2345",
+        "message": "Argument of type '{}' is not assignable to parameter of type '$ZodDiscriminatedUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDiscriminatedUnion.pilot.test.ts",
+        "line": 128,
+        "col": 35,
+        "code": "TS2345",
+        "message": "Argument of type '{}' is not assignable to parameter of type '$ZodDiscriminatedUnionDef<readonly $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>[]>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "210-ZodMiniDiscriminatedUnion",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniDiscriminatedUnion.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1
+    },
+    "codes": {
+      "TS2352": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDiscriminatedUnion.pilot.test.ts",
+        "line": 43,
+        "col": 5,
+        "code": "TS2352",
+        "message": "Conversion of type '{ parse: null; safeParse: null; refine: null; superRefine: null; optional: null; nullable: null; array: null; catch: null; }' to type 'ExpectedMethods' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "197-ZodMiniBigInt",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 24,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 24
+    },
+    "codes": {
+      "TS2348": 24
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+        "line": 44,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+        "line": 57,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+        "line": 63,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+        "line": 71,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+        "line": 80,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "197-ZodMiniBigInt",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 4,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 3,
+      "other": 1
+    },
+    "codes": {
+      "TS2348": 3,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+        "line": 28,
+        "col": 30,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+        "line": 85,
+        "col": 22,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+        "line": 155,
+        "col": 42,
+        "code": "TS7006",
+        "message": "Parameter 'val' implicitly has an 'any' type."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+        "line": 165,
+        "col": 18,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "197-ZodMiniBigInt",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.0,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1
+    },
+    "codes": {
+      "TS17006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts",
+        "line": 100,
+        "col": 20,
+        "code": "TS17006",
+        "message": "An unary expression with the '-' operator is not allowed in the left-hand side of an exponentiation expression. Consider enclosing the expression in parentheses."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "206-ZodMiniDate",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 23,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 23
+    },
+    "codes": {
+      "TS2339": 23
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 80,
+        "col": 27,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 90,
+        "col": 31,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 93,
+        "col": 32,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 115,
+        "col": 27,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 122,
+        "col": 27,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "206-ZodMiniDate",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.0,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 1
+    },
+    "codes": {
+      "TS2348": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 25,
+        "col": 27,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "206-ZodMiniDate",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 28,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 25,
+      "other": 3
+    },
+    "codes": {
+      "TS2348": 25,
+      "TS7006": 3
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 9,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 15,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 23,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 28,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniDate.pilot.test.ts",
+        "line": 34,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniDate<unknown>, $ZodDateDef>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "205-ZodMiniVoid",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 9,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 4,
+      "property_does_not_exist": 3,
+      "type_mismatch": 2
+    },
+    "codes": {
+      "TS2554": 1,
+      "TS2339": 3,
+      "TS2578": 3,
+      "TS2345": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+        "line": 8,
+        "col": 10,
+        "code": "TS2554",
+        "message": "Expected 1 arguments, but got 0."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+        "line": 70,
+        "col": 39,
+        "code": "TS2339",
+        "message": "Property 'optional' does not exist on type 'ZodMiniVoid'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+        "line": 75,
+        "col": 5,
+        "code": "TS2578",
+        "message": "Unused '@ts-expect-error' directive."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+        "line": 80,
+        "col": 39,
+        "code": "TS2339",
+        "message": "Property 'nullable' does not exist on type 'ZodMiniVoid'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+        "line": 93,
+        "col": 39,
+        "code": "TS2339",
+        "message": "Property 'default' does not exist on type 'ZodMiniVoid'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "205-ZodMiniVoid",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 7,
+    "errors_elsewhere": 0,
+    "categories": {
+      "type_mismatch": 6,
+      "other": 1
+    },
+    "codes": {
+      "TS2345": 6,
+      "TS2578": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+        "line": 40,
+        "col": 36,
+        "code": "TS2345",
+        "message": "Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+        "line": 65,
+        "col": 34,
+        "code": "TS2345",
+        "message": "Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+        "line": 94,
+        "col": 34,
+        "code": "TS2345",
+        "message": "Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+        "line": 143,
+        "col": 34,
+        "code": "TS2345",
+        "message": "Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+        "line": 166,
+        "col": 34,
+        "code": "TS2345",
+        "message": "Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "205-ZodMiniVoid",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts",
+    "tsc_exit": 0,
+    "tsc_seconds": 1.0,
+    "tsc_ok": true,
+    "errors_in_file": 0,
+    "errors_elsewhere": 0,
+    "categories": {},
+    "codes": {},
+    "first_errors": [],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "232-ZodMiniPromise",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 27,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 22,
+      "other": 5
+    },
+    "codes": {
+      "TS2348": 22,
+      "TS7006": 3,
+      "TS2578": 2
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 66,
+        "col": 27,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniString<unknown>, $ZodStringDef>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 76,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPromiseDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 101,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPromiseDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 109,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPromiseDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 123,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPromiseDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "232-ZodMiniPromise",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 16,
+    "errors_elsewhere": 0,
+    "categories": {
+      "module_or_export_not_found": 1,
+      "constructor_called_without_new": 15
+    },
+    "codes": {
+      "TS2459": 1,
+      "TS2348": 15
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 22,
+        "col": 10,
+        "code": "TS2459",
+        "message": "Module '\"./schemas.js\"' declares 'core' locally, but it is not exported."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 33,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPromiseDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 47,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPromiseDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 54,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPromiseDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 66,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodPromiseDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "232-ZodMiniPromise",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 7,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 7
+    },
+    "codes": {
+      "TS2339": 7
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 77,
+        "col": 50,
+        "code": "TS2339",
+        "message": "Property 'optional' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 84,
+        "col": 50,
+        "code": "TS2339",
+        "message": "Property 'nullable' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 93,
+        "col": 50,
+        "code": "TS2339",
+        "message": "Property 'or' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 101,
+        "col": 50,
+        "code": "TS2339",
+        "message": "Property 'and' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts",
+        "line": 108,
+        "col": 50,
+        "code": "TS2339",
+        "message": "Property 'refine' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "211-ZodMiniIntersection",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 1,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 1
+    },
+    "codes": {
+      "TS2503": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 32,
+        "col": 19,
+        "code": "TS2503",
+        "message": "Cannot find namespace 'core'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "211-ZodMiniIntersection",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 12,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 4,
+      "module_or_export_not_found": 3,
+      "property_does_not_exist": 5
+    },
+    "codes": {
+      "TS2724": 4,
+      "TS2305": 3,
+      "TS2339": 5
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 12,
+        "col": 3,
+        "code": "TS2724",
+        "message": "'\"./schemas.js\"' has no exported member named 'ZodObject'. Did you mean 'object'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 13,
+        "col": 3,
+        "code": "TS2724",
+        "message": "'\"./schemas.js\"' has no exported member named 'ZodString'. Did you mean 'string'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 14,
+        "col": 3,
+        "code": "TS2724",
+        "message": "'\"./schemas.js\"' has no exported member named 'ZodNumber'. Did you mean 'number'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 15,
+        "col": 3,
+        "code": "TS2724",
+        "message": "'\"./schemas.js\"' has no exported member named 'ZodLiteral'. Did you mean 'literal'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 16,
+        "col": 3,
+        "code": "TS2305",
+        "message": "Module '\"./schemas.js\"' has no exported member 'ZodEnum'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "211-ZodMiniIntersection",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 10,
+    "errors_elsewhere": 0,
+    "categories": {
+      "other": 5,
+      "constructor_called_without_new": 5
+    },
+    "codes": {
+      "TS2724": 4,
+      "TS2348": 5,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 30,
+        "col": 10,
+        "code": "TS2724",
+        "message": "'\"./schemas.js\"' has no exported member named 'ZodString'. Did you mean 'string'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 30,
+        "col": 21,
+        "code": "TS2724",
+        "message": "'\"./schemas.js\"' has no exported member named 'ZodNumber'. Did you mean 'number'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 30,
+        "col": 32,
+        "code": "TS2724",
+        "message": "'\"./schemas.js\"' has no exported member named 'ZodObject'. Did you mean 'object'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 30,
+        "col": 43,
+        "code": "TS2724",
+        "message": "'\"./schemas.js\"' has no exported member named 'ZodLiteral'. Did you mean 'literal'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniIntersection.pilot.test.ts",
+        "line": 66,
+        "col": 29,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniIntersection<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodIntersectionDef<...>>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "181-ZodMiniCUID2",
+    "technique": "TOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.1,
+    "tsc_ok": false,
+    "errors_in_file": 10,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 10
+    },
+    "codes": {
+      "TS2339": 10
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+        "line": 50,
+        "col": 35,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<\"cuid2\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+        "line": 54,
+        "col": 33,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<\"cuid2\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+        "line": 65,
+        "col": 31,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<\"cuid2\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+        "line": 66,
+        "col": 31,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<\"cuid2\">>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+        "line": 82,
+        "col": 33,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<\"cuid2\">>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "181-ZodMiniCUID2",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 16,
+    "errors_elsewhere": 0,
+    "categories": {
+      "constructor_called_without_new": 10,
+      "other": 6
+    },
+    "codes": {
+      "TS2348": 10,
+      "TS1361": 5,
+      "TS7006": 1
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+        "line": 48,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<\"cuid2\">>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+        "line": 66,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<\"cuid2\">>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+        "line": 71,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<\"cuid2\">>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+        "line": 80,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<\"cuid2\">>' is not callable. Did you mean to include 'new'?"
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts",
+        "line": 85,
+        "col": 20,
+        "code": "TS2348",
+        "message": "Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<\"cuid2\">>' is not callable. Did you mean to include 'new'?"
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "038-ZodNull",
+    "technique": "COT",
+    "in_place_path": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.3,
+    "tsc_ok": false,
+    "errors_in_file": 16,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 16
+    },
+    "codes": {
+      "TS2339": 16
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 51,
+        "col": 28,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 58,
+        "col": 28,
+        "code": "TS2339",
+        "message": "Property 'parse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 63,
+        "col": 26,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 71,
+        "col": 26,
+        "code": "TS2339",
+        "message": "Property 'safeParse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'."
+      },
+      {
+        "file": "packages/zod/src/v4/classic/ZodNull.pilot.test.ts",
+        "line": 85,
+        "col": 28,
+        "code": "TS2339",
+        "message": "Property 'optional' does not exist on type '$constructor<ZodNull, $ZodNullDef>'."
+      }
+    ],
+    "other_files_with_errors": []
+  },
+  {
+    "unit_id": "231-ZodMiniLazy",
+    "technique": "GTOT",
+    "in_place_path": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+    "tsc_exit": 2,
+    "tsc_seconds": 1.2,
+    "tsc_ok": false,
+    "errors_in_file": 13,
+    "errors_elsewhere": 0,
+    "categories": {
+      "property_does_not_exist": 13
+    },
+    "codes": {
+      "TS2339": 13
+    },
+    "first_errors": [
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 69,
+        "col": 36,
+        "code": "TS2339",
+        "message": "Property 'create' does not exist on type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 83,
+        "col": 36,
+        "code": "TS2339",
+        "message": "Property 'create' does not exist on type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 89,
+        "col": 36,
+        "code": "TS2339",
+        "message": "Property 'create' does not exist on type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 95,
+        "col": 34,
+        "code": "TS2339",
+        "message": "Property 'create' does not exist on type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>'."
+      },
+      {
+        "file": "packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts",
+        "line": 104,
+        "col": 34,
+        "code": "TS2339",
+        "message": "Property 'create' does not exist on type '$constructor<ZodMiniLazy<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodLazyDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>'."
+      }
+    ],
+    "other_files_with_errors": []
+  }
+]

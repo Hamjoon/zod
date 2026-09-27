@@ -1,0 +1,10 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.\nThe ZodFile class is exported from `./schemas.js` (path relative to the test file).\nThe TypeScript class is:\n// ZodFile\nexport interface ZodFile extends _ZodType<core.$ZodFileInternals>, core.$ZodFile {\n  min(size: number, params?: string | core.$ZodCheckMinSizeParams): this;\n  max(size: number, params?: string | core.$ZodCheckMaxSizeParams): this;\n  mime(types: util.MimeTypes | Array<util.MimeTypes>, params?: string | core.$ZodCheckMimeTypeParams): this;\n}\n\nexport const ZodFile: core.$constructor<ZodFile> = /*@__PURE__*/ core.$constructor(\"ZodFile\", (inst, def) => {\n  core.$ZodFile.init(inst, def);\n  ZodType.init(inst, def);\n\n  inst.min = (size, params) => inst.check(core._minSize(size, params));\n  inst.max = (size, params) => inst.check(core._maxSize(size, params));\n  inst.mime = (types, params) => inst.check(core._mime(Array.isArray(types) ? types : [types], params));\n});\nAt the end they must propose one complete (including typical use cases, edge cases, and error scenarios) Vitest test file (ZodFile.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##"
+    }
+  ]
+}

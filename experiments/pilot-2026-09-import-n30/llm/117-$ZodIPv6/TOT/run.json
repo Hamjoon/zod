@@ -1,0 +1,18 @@
+{
+  "unit_id": "117-$ZodIPv6",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:23:49.989059+00:00",
+  "latency_s": 42.586,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "CoreWeave",
+  "response_id": "gen-1790335430-JIVCCrdS6wO0nvynKbbd",
+  "content_chars": 4525,
+  "content_empty": false,
+  "completion_tokens": 1943,
+  "prompt_tokens_reported": 494,
+  "error": null
+}

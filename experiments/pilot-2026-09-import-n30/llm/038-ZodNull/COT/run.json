@@ -1,0 +1,18 @@
+{
+  "unit_id": "038-ZodNull",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:21:48.521842+00:00",
+  "latency_s": 75.856,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DekaLLM",
+  "response_id": "gen-1790335308-T1LO3W0LX3CQmClxyi8J",
+  "content_chars": 7928,
+  "content_empty": false,
+  "completion_tokens": 2218,
+  "prompt_tokens_reported": 334,
+  "error": null
+}

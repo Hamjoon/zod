@@ -1,0 +1,13 @@
+packages/zod/src/v4/classic/ZodNullable.pilot.test.ts(106,35): error TS2322: Type '"another"' is not assignable to type '"dummy"'.
+packages/zod/src/v4/classic/ZodNullable.pilot.test.ts(123,38): error TS2739: Type 'DummyType' is missing the following properties from type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>': _zod, "~standard"
+packages/zod/src/v4/classic/ZodNullable.pilot.test.ts(132,45): error TS2322: Type 'DummyType' is not assignable to type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>'.
+packages/zod/src/v4/classic/ZodNullable.pilot.test.ts(133,43): error TS2345: Argument of type '{ innerType: ZodNullable<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>; }' is not assignable to parameter of type '$ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ innerType: ZodNullable<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>; }' but required in type '$ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/classic/ZodNullable.pilot.test.ts(138,35): error TS2339: Property 'unwrap' does not exist on type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>'.
+packages/zod/src/v4/classic/ZodNullable.pilot.test.ts(147,36): error TS2345: Argument of type '{}' is not assignable to parameter of type '$ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Type '{}' is missing the following properties from type '$ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>': type, innerType
+packages/zod/src/v4/classic/ZodNullable.pilot.test.ts(168,38): error TS2322: Type 'DummyType' is not assignable to type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>'.
+packages/zod/src/v4/classic/ZodNullable.pilot.test.ts(182,36): error TS2345: Argument of type '{ innerType: DummyType; customFlag: boolean; }' is not assignable to parameter of type '$ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ innerType: DummyType; customFlag: boolean; }' but required in type '$ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/classic/ZodNullable.pilot.test.ts(184,28): error TS2339: Property 'customFlag' does not exist on type '$ZodNullableDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/classic/ZodNullable.pilot.test.ts(193,38): error TS2322: Type 'DummyType' is not assignable to type '$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>'.

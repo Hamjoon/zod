@@ -1,0 +1,19 @@
+{
+  "n30": {
+    "files": 87,
+    "cut_import_counts": {
+      "given_specifier_resolves": 85,
+      "present_unresolved": 1,
+      "other_specifier_resolves": 1
+    },
+    "non_cut_imports_total": 111,
+    "non_cut_imports_unresolved": 4,
+    "non_cut_named_imports_not_exported": 8,
+    "relative_non_cut_with_js": 6,
+    "relative_non_cut_without_js": 5,
+    "files_with_cut_calls_without_new": 39,
+    "cut_calls_without_new": 296,
+    "files_using_new_on_cut": 22,
+    "cut_new_expressions": 142
+  }
+}

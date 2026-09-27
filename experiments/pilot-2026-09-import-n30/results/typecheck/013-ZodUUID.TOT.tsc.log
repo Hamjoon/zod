@@ -1,0 +1,14 @@
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(37,28): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(39,22): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(48,26): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(49,20): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(67,28): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(67,54): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(89,28): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(89,62): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(98,28): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(110,28): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(115,36): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(131,15): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(143,34): error TS2339: Property 'optional' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(153,65): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.

@@ -1,0 +1,72 @@
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(19,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(20,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(27,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(28,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(37,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(38,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(39,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(40,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(46,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(47,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(48,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(54,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(55,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(57,20): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(63,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(64,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(74,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(75,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(76,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(83,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(84,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(85,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(92,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(93,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(102,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(103,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(105,20): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(111,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(112,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(122,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(123,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(125,19): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(135,43): error TS2345: Argument of type 'MaybeAsync<ParsePayload<unknown>>' is not assignable to parameter of type 'ParsePayload<any>'.
+  Type 'Promise<ParsePayload<unknown>>' is missing the following properties from type 'ParsePayload<any>': value, issues
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(136,24): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(138,24): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDate.pilot.test.ts(139,24): error TS2339: Property 'issues' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'issues' does not exist on type 'Promise<ParsePayload<unknown>>'.

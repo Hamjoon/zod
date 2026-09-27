@@ -1,0 +1,2 @@
+packages/zod/src/v4/classic/ZodEnum.pilot.test.ts(105,7): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/classic/ZodEnum.pilot.test.ts(163,7): error TS2578: Unused '@ts-expect-error' directive.

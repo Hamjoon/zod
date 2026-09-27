@@ -1,0 +1,952 @@
+{
+  "method": "build-overlap-comparison.py: Phase 8 (D10a). The five units repeated from week 2, x COT, TOT, GTOT = 15 pairs.\nFor each pair, one row per run (week2, n30) with the measures below, read from recorded result files only:\nweek 2 from results/week2/ (import audit: rows with run == \"week2\") and results/week2-generated/ (the week-2\nextracted test files, copied from the week-2 archive commit); this run from results/ and generated/.\nPer pair: whether the extracted test files are byte-identical and, if not, the size of the unified diff in lines\n(difflib.unified_diff, n=3, all output lines including headers) and the added/removed line counts.\nOutput: results/comparison-week2-overlap.json and .md. Run from the zod repo root.",
+  "summary": {
+    "pairs": 15,
+    "identical_extracted_files": 0,
+    "pairs_without_both_files": 1,
+    "load_status_changed": 6,
+    "passed_count_changed": 5,
+    "new_use_changed": 2,
+    "calls_without_new_presence_changed": 5,
+    "pooled": {
+      "week2": {
+        "cases": 119,
+        "passed": 35,
+        "files_loaded": 11,
+        "tsc_ok": 0,
+        "structured": 15
+      },
+      "n30": {
+        "cases": 126,
+        "passed": 44,
+        "files_loaded": 10,
+        "tsc_ok": 0,
+        "structured": 14
+      }
+    },
+    "definitions": {
+      "load_status": "three states: loads, load error, no file (no structured extraction); changed if the state differs",
+      "passed_changed": "passed count differs, a pair side without a structured file counted as 0 passed (matrix convention)",
+      "new_use_changed": "whether the file has at least one `new <CUT>` expression differs between runs",
+      "calls_without_new_presence_changed": "whether the file has at least one call of the CUT without `new` differs between runs",
+      "unified_diff_lines": "number of lines of difflib.unified_diff(week2, n30, n=3), headers included"
+    }
+  },
+  "pairs": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "COT",
+      "week2": {
+        "provider": "Mancer 2",
+        "completion_tokens": 2332,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": false,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 9,
+        "tsc_codes": {
+          "TS2348": 9
+        },
+        "file_loads": false,
+        "cases": 0,
+        "passed": 0,
+        "unit_line_cov": null,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 9,
+        "cut_new_expressions": 0,
+        "biome_errors": 0,
+        "tests_ast": 14
+      },
+      "n30": {
+        "provider": "DekaLLM",
+        "completion_tokens": 2377,
+        "finish_reason": "stop",
+        "csr": false,
+        "csr_strict": false,
+        "syntax_ok": null,
+        "tsc_ok": null,
+        "tsc_errors_in_file": null,
+        "tsc_codes": null,
+        "file_loads": null,
+        "cases": null,
+        "passed": null,
+        "unit_line_cov": null,
+        "cut_import": null,
+        "cut_calls_without_new": null,
+        "cut_new_expressions": null,
+        "biome_errors": null,
+        "tests_ast": null
+      },
+      "extracted_file_identical": null,
+      "unified_diff_lines": null,
+      "diff_added_lines": null,
+      "diff_removed_lines": null,
+      "load_status": {
+        "week2": "load error",
+        "n30": "no file"
+      },
+      "load_status_changed": true,
+      "passed_changed": false,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": true
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "TOT",
+      "week2": {
+        "provider": "SiliconFlow",
+        "completion_tokens": 2184,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": false,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 2,
+        "tsc_codes": {
+          "TS2305": 2
+        },
+        "file_loads": true,
+        "cases": 11,
+        "passed": 0,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 0,
+        "biome_errors": 0,
+        "tests_ast": 11
+      },
+      "n30": {
+        "provider": "DekaLLM",
+        "completion_tokens": 2593,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 10,
+        "tsc_codes": {
+          "TS2305": 2,
+          "TS2554": 8
+        },
+        "file_loads": true,
+        "cases": 9,
+        "passed": 0,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 9,
+        "biome_errors": 0,
+        "tests_ast": 9
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 298,
+      "diff_added_lines": 118,
+      "diff_removed_lines": 141,
+      "load_status": {
+        "week2": "loads",
+        "n30": "loads"
+      },
+      "load_status_changed": false,
+      "passed_changed": false,
+      "new_use_changed": true,
+      "calls_without_new_presence_changed": false
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "GTOT",
+      "week2": {
+        "provider": "CoreWeave",
+        "completion_tokens": 1808,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 2,
+        "tsc_codes": {
+          "TS2348": 2
+        },
+        "file_loads": false,
+        "cases": 0,
+        "passed": 0,
+        "unit_line_cov": null,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 2,
+        "cut_new_expressions": 0,
+        "biome_errors": 1,
+        "tests_ast": 14
+      },
+      "n30": {
+        "provider": "CoreWeave",
+        "completion_tokens": 2566,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 19,
+        "tsc_codes": {
+          "TS2305": 1,
+          "TS2339": 18
+        },
+        "file_loads": true,
+        "cases": 21,
+        "passed": 0,
+        "unit_line_cov": 57.14,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 0,
+        "biome_errors": 1,
+        "tests_ast": 15
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 355,
+      "diff_added_lines": 225,
+      "diff_removed_lines": 123,
+      "load_status": {
+        "week2": "load error",
+        "n30": "loads"
+      },
+      "load_status_changed": true,
+      "passed_changed": false,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": true
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "COT",
+      "week2": {
+        "provider": "DeepInfra",
+        "completion_tokens": 3212,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 6,
+        "tsc_codes": {
+          "TS2348": 6
+        },
+        "file_loads": true,
+        "cases": 6,
+        "passed": 0,
+        "unit_line_cov": 8.64,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 6,
+        "cut_new_expressions": 0,
+        "biome_errors": 0,
+        "tests_ast": 6
+      },
+      "n30": {
+        "provider": "DeepInfra",
+        "completion_tokens": 3156,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 1,
+        "tsc_codes": {
+          "TS2348": 1
+        },
+        "file_loads": true,
+        "cases": 8,
+        "passed": 0,
+        "unit_line_cov": 8.64,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 1,
+        "cut_new_expressions": 0,
+        "biome_errors": 0,
+        "tests_ast": 8
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 420,
+      "diff_added_lines": 196,
+      "diff_removed_lines": 207,
+      "load_status": {
+        "week2": "loads",
+        "n30": "loads"
+      },
+      "load_status_changed": false,
+      "passed_changed": false,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": false
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "TOT",
+      "week2": {
+        "provider": "Google",
+        "completion_tokens": 3800,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": false,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 4,
+        "tsc_codes": {
+          "TS2835": 2,
+          "TS2834": 1,
+          "TS6133": 1
+        },
+        "file_loads": false,
+        "cases": 0,
+        "passed": 0,
+        "unit_line_cov": null,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 0,
+        "biome_errors": 1,
+        "tests_ast": 8
+      },
+      "n30": {
+        "provider": "Novita",
+        "completion_tokens": 3610,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 3,
+        "tsc_codes": {
+          "TS2834": 2,
+          "TS2835": 1
+        },
+        "file_loads": false,
+        "cases": 0,
+        "passed": 0,
+        "unit_line_cov": null,
+        "cut_import": "present_unresolved",
+        "cut_calls_without_new": 6,
+        "cut_new_expressions": 0,
+        "biome_errors": 0,
+        "tests_ast": 6
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 664,
+      "diff_added_lines": 278,
+      "diff_removed_lines": 344,
+      "load_status": {
+        "week2": "load error",
+        "n30": "load error"
+      },
+      "load_status_changed": false,
+      "passed_changed": false,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": true
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "GTOT",
+      "week2": {
+        "provider": "CoreWeave",
+        "completion_tokens": 2699,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 1,
+        "tsc_codes": {
+          "TS2459": 1
+        },
+        "file_loads": true,
+        "cases": 14,
+        "passed": 0,
+        "unit_line_cov": 8.64,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 1,
+        "cut_new_expressions": 0,
+        "biome_errors": 1,
+        "tests_ast": 14
+      },
+      "n30": {
+        "provider": "Mancer 2",
+        "completion_tokens": 2862,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 2,
+        "tsc_codes": {
+          "TS2348": 1,
+          "TS6133": 1
+        },
+        "file_loads": true,
+        "cases": 6,
+        "passed": 0,
+        "unit_line_cov": 33.33,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 1,
+        "cut_new_expressions": 0,
+        "biome_errors": 0,
+        "tests_ast": 6
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 479,
+      "diff_added_lines": 240,
+      "diff_removed_lines": 220,
+      "load_status": {
+        "week2": "loads",
+        "n30": "loads"
+      },
+      "load_status_changed": false,
+      "passed_changed": false,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": false
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "COT",
+      "week2": {
+        "provider": "Google",
+        "completion_tokens": 2239,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 2,
+        "tsc_codes": {
+          "TS2578": 2
+        },
+        "file_loads": true,
+        "cases": 13,
+        "passed": 12,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 1,
+        "biome_errors": 0,
+        "tests_ast": 13
+      },
+      "n30": {
+        "provider": "DeepInfra",
+        "completion_tokens": 2091,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": false,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 2,
+        "tsc_codes": {
+          "TS2578": 2
+        },
+        "file_loads": true,
+        "cases": 14,
+        "passed": 14,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 1,
+        "biome_errors": 0,
+        "tests_ast": 14
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 372,
+      "diff_added_lines": 184,
+      "diff_removed_lines": 166,
+      "load_status": {
+        "week2": "loads",
+        "n30": "loads"
+      },
+      "load_status_changed": false,
+      "passed_changed": true,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": false
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "TOT",
+      "week2": {
+        "provider": "DeepInfra",
+        "completion_tokens": 2418,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": false,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 14,
+        "tsc_codes": {
+          "TS2345": 12,
+          "TS2578": 2
+        },
+        "file_loads": true,
+        "cases": 11,
+        "passed": 11,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 11,
+        "biome_errors": 0,
+        "tests_ast": 11
+      },
+      "n30": {
+        "provider": "AkashML",
+        "completion_tokens": 1998,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 13,
+        "tsc_codes": {
+          "TS2345": 11,
+          "TS2578": 2
+        },
+        "file_loads": true,
+        "cases": 11,
+        "passed": 11,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 11,
+        "biome_errors": 0,
+        "tests_ast": 11
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 253,
+      "diff_added_lines": 143,
+      "diff_removed_lines": 79,
+      "load_status": {
+        "week2": "loads",
+        "n30": "loads"
+      },
+      "load_status_changed": false,
+      "passed_changed": false,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": false
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "GTOT",
+      "week2": {
+        "provider": "DigitalOcean",
+        "completion_tokens": 1872,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 2,
+        "tsc_codes": {
+          "TS2578": 2
+        },
+        "file_loads": true,
+        "cases": 10,
+        "passed": 10,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 1,
+        "biome_errors": 0,
+        "tests_ast": 10
+      },
+      "n30": {
+        "provider": "DeepInfra",
+        "completion_tokens": 2139,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 3,
+        "tsc_codes": {
+          "TS2345": 1,
+          "TS2578": 2
+        },
+        "file_loads": true,
+        "cases": 10,
+        "passed": 10,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 1,
+        "biome_errors": 0,
+        "tests_ast": 10
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 244,
+      "diff_added_lines": 145,
+      "diff_removed_lines": 71,
+      "load_status": {
+        "week2": "loads",
+        "n30": "loads"
+      },
+      "load_status_changed": false,
+      "passed_changed": false,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": false
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "COT",
+      "week2": {
+        "provider": "CoreWeave",
+        "completion_tokens": 1843,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": false,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 9,
+        "tsc_codes": {
+          "TS2348": 9
+        },
+        "file_loads": true,
+        "cases": 9,
+        "passed": 0,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 9,
+        "cut_new_expressions": 0,
+        "biome_errors": 2,
+        "tests_ast": 9
+      },
+      "n30": {
+        "provider": "DekaLLM",
+        "completion_tokens": 2218,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 16,
+        "tsc_codes": {
+          "TS2339": 16
+        },
+        "file_loads": true,
+        "cases": 16,
+        "passed": 5,
+        "unit_line_cov": 25.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 0,
+        "biome_errors": 1,
+        "tests_ast": 16
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 292,
+      "diff_added_lines": 143,
+      "diff_removed_lines": 108,
+      "load_status": {
+        "week2": "loads",
+        "n30": "loads"
+      },
+      "load_status_changed": false,
+      "passed_changed": true,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": true
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "TOT",
+      "week2": {
+        "provider": "BaseTen",
+        "completion_tokens": 1413,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 4,
+        "tsc_codes": {
+          "TS2348": 1,
+          "TS1361": 2,
+          "TS2339": 1
+        },
+        "file_loads": true,
+        "cases": 19,
+        "passed": 0,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 1,
+        "cut_new_expressions": 0,
+        "biome_errors": 2,
+        "tests_ast": 6
+      },
+      "n30": {
+        "provider": "DeepInfra",
+        "completion_tokens": 1689,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 1,
+        "tsc_codes": {
+          "TS2348": 1
+        },
+        "file_loads": false,
+        "cases": 0,
+        "passed": 0,
+        "unit_line_cov": null,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 1,
+        "cut_new_expressions": 0,
+        "biome_errors": 1,
+        "tests_ast": 7
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 191,
+      "diff_added_lines": 87,
+      "diff_removed_lines": 83,
+      "load_status": {
+        "week2": "loads",
+        "n30": "load error"
+      },
+      "load_status_changed": true,
+      "passed_changed": false,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": false
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "GTOT",
+      "week2": {
+        "provider": "Groq",
+        "completion_tokens": 2645,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 1,
+        "tsc_codes": {
+          "TS2348": 1
+        },
+        "file_loads": true,
+        "cases": 11,
+        "passed": 1,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 1,
+        "cut_new_expressions": 0,
+        "biome_errors": 2,
+        "tests_ast": 11
+      },
+      "n30": {
+        "provider": "CoreWeave",
+        "completion_tokens": 1963,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 2,
+        "tsc_codes": {
+          "TS2348": 2
+        },
+        "file_loads": false,
+        "cases": 0,
+        "passed": 0,
+        "unit_line_cov": null,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 2,
+        "cut_new_expressions": 0,
+        "biome_errors": 5,
+        "tests_ast": 10
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 278,
+      "diff_added_lines": 134,
+      "diff_removed_lines": 118,
+      "load_status": {
+        "week2": "loads",
+        "n30": "load error"
+      },
+      "load_status_changed": true,
+      "passed_changed": true,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": false
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "COT",
+      "week2": {
+        "provider": "CoreWeave",
+        "completion_tokens": 2207,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": false,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 7,
+        "tsc_codes": {
+          "TS2348": 7
+        },
+        "file_loads": true,
+        "cases": 10,
+        "passed": 1,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 11,
+        "cut_new_expressions": 0,
+        "biome_errors": 2,
+        "tests_ast": 10
+      },
+      "n30": {
+        "provider": "DigitalOcean",
+        "completion_tokens": 3541,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 22,
+        "tsc_codes": {
+          "TS2348": 3,
+          "TS2345": 8,
+          "TS2339": 9,
+          "TS2558": 1,
+          "TS7006": 1
+        },
+        "file_loads": true,
+        "cases": 17,
+        "passed": 3,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 1,
+        "cut_new_expressions": 10,
+        "biome_errors": 0,
+        "tests_ast": 17
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 382,
+      "diff_added_lines": 160,
+      "diff_removed_lines": 184,
+      "load_status": {
+        "week2": "loads",
+        "n30": "loads"
+      },
+      "load_status_changed": false,
+      "passed_changed": true,
+      "new_use_changed": true,
+      "calls_without_new_presence_changed": false
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "TOT",
+      "week2": {
+        "provider": "Novita",
+        "completion_tokens": 3210,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 6,
+        "tsc_codes": {
+          "TS2348": 6
+        },
+        "file_loads": true,
+        "cases": 5,
+        "passed": 0,
+        "unit_line_cov": 100.0,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 7,
+        "cut_new_expressions": 0,
+        "biome_errors": 2,
+        "tests_ast": 5
+      },
+      "n30": {
+        "provider": "Crusoe",
+        "completion_tokens": 1731,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 8,
+        "tsc_codes": {
+          "TS2348": 6,
+          "TS7022": 1,
+          "TS7024": 1
+        },
+        "file_loads": false,
+        "cases": 0,
+        "passed": 0,
+        "unit_line_cov": null,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 1,
+        "cut_new_expressions": 0,
+        "biome_errors": 1,
+        "tests_ast": 8
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 389,
+      "diff_added_lines": 113,
+      "diff_removed_lines": 246,
+      "load_status": {
+        "week2": "loads",
+        "n30": "load error"
+      },
+      "load_status_changed": true,
+      "passed_changed": false,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": false
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "GTOT",
+      "week2": {
+        "provider": "DeepInfra",
+        "completion_tokens": 2937,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 4,
+        "tsc_codes": {
+          "TS2348": 4
+        },
+        "file_loads": false,
+        "cases": 0,
+        "passed": 0,
+        "unit_line_cov": null,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 5,
+        "cut_new_expressions": 0,
+        "biome_errors": 0,
+        "tests_ast": 11
+      },
+      "n30": {
+        "provider": "Crusoe",
+        "completion_tokens": 2653,
+        "finish_reason": "stop",
+        "csr": true,
+        "csr_strict": true,
+        "syntax_ok": true,
+        "tsc_ok": false,
+        "tsc_errors_in_file": 13,
+        "tsc_codes": {
+          "TS2339": 13
+        },
+        "file_loads": true,
+        "cases": 14,
+        "passed": 1,
+        "unit_line_cov": 57.14,
+        "cut_import": "given_specifier_resolves",
+        "cut_calls_without_new": 0,
+        "cut_new_expressions": 0,
+        "biome_errors": 0,
+        "tests_ast": 14
+      },
+      "extracted_file_identical": false,
+      "unified_diff_lines": 416,
+      "diff_added_lines": 158,
+      "diff_removed_lines": 218,
+      "load_status": {
+        "week2": "load error",
+        "n30": "loads"
+      },
+      "load_status_changed": true,
+      "passed_changed": true,
+      "new_use_changed": false,
+      "calls_without_new_presence_changed": true
+    }
+  ]
+}

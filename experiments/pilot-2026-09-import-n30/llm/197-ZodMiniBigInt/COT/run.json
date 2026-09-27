@@ -1,0 +1,18 @@
+{
+  "unit_id": "197-ZodMiniBigInt",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:50:33.422127+00:00",
+  "latency_s": 115.311,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "CoreWeave",
+  "response_id": "gen-1790337035-s6van0Uok9mLHOHbqIvH",
+  "content_chars": 9204,
+  "content_empty": false,
+  "completion_tokens": 3191,
+  "prompt_tokens_reported": 391,
+  "error": null
+}

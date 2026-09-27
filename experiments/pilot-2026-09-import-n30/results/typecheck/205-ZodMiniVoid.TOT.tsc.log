@@ -1,0 +1,13 @@
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(40,36): error TS2345: Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'.
+  Property 'type' is missing in type '{}' but required in type '$ZodVoidDef'.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(65,34): error TS2345: Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'.
+  Property 'type' is missing in type '{}' but required in type '$ZodVoidDef'.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(94,34): error TS2345: Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'.
+  Property 'type' is missing in type '{}' but required in type '$ZodVoidDef'.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(143,34): error TS2345: Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'.
+  Property 'type' is missing in type '{}' but required in type '$ZodVoidDef'.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(166,34): error TS2345: Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'.
+  Property 'type' is missing in type '{}' but required in type '$ZodVoidDef'.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(188,36): error TS2345: Argument of type '{}' is not assignable to parameter of type '$ZodVoidDef'.
+  Property 'type' is missing in type '{}' but required in type '$ZodVoidDef'.
+packages/zod/src/v4/mini/ZodMiniVoid.pilot.test.ts(192,5): error TS2578: Unused '@ts-expect-error' directive.

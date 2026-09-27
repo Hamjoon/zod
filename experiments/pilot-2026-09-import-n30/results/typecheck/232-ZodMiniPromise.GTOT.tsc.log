@@ -1,0 +1,7 @@
+packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts(77,50): error TS2339: Property 'optional' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts(84,50): error TS2339: Property 'nullable' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts(93,50): error TS2339: Property 'or' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts(101,50): error TS2339: Property 'and' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts(108,50): error TS2339: Property 'refine' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts(167,50): error TS2339: Property 'or' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/mini/ZodMiniPromise.pilot.test.ts(175,50): error TS2339: Property 'refine' does not exist on type 'ZodMiniPromise<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.

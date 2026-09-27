@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`$ZodEmoji – edge‑case handling > rejects a lone zero‑width joiner 1`] = `[TypeError: Cannot read properties of undefined (reading 'pattern')]`;
+
+exports[`$ZodEmoji – edge‑case handling > rejects a surrogate pair that is not an emoji 1`] = `[TypeError: Cannot read properties of undefined (reading 'pattern')]`;
+
+exports[`$ZodEmoji – invalid strings > rejects an empty string 1`] = `[TypeError: Cannot read properties of undefined (reading 'pattern')]`;
+
+exports[`$ZodEmoji – invalid strings > rejects mixed text and emoji 1`] = `[TypeError: Cannot read properties of undefined (reading 'pattern')]`;
+
+exports[`$ZodEmoji – invalid strings > rejects numeric strings 1`] = `[TypeError: Cannot read properties of undefined (reading 'pattern')]`;
+
+exports[`$ZodEmoji – invalid strings > rejects plain ASCII text 1`] = `[TypeError: Cannot read properties of undefined (reading 'pattern')]`;
+
+exports[`$ZodEmoji – invalid strings > rejects whitespace only 1`] = `[TypeError: Cannot read properties of undefined (reading 'pattern')]`;

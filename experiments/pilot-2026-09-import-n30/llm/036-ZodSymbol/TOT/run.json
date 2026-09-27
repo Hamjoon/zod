@@ -1,0 +1,18 @@
+{
+  "unit_id": "036-ZodSymbol",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:42:12.558568+00:00",
+  "latency_s": 8.5,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "BaseTen",
+  "response_id": "gen-1790336534-CUWQPuV3i2k4UbrlrdmK",
+  "content_chars": 5317,
+  "content_empty": false,
+  "completion_tokens": 1803,
+  "prompt_tokens_reported": 304,
+  "error": null
+}

@@ -1,0 +1,3 @@
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(110,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(150,12): error TS18046: 'storedPattern' is of type 'unknown'.
+packages/zod/src/v4/core/$ZodCheckStartsWith.pilot.test.ts(150,43): error TS2304: Cannot find name 'prefix'.

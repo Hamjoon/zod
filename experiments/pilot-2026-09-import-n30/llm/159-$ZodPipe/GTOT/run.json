@@ -1,0 +1,18 @@
+{
+  "unit_id": "159-$ZodPipe",
+  "technique": "GTOT",
+  "timestamp_utc": "2026-09-25T11:31:55.703224+00:00",
+  "latency_s": 15.354,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "BaseTen",
+  "response_id": "gen-1790335917-qjw5zoLNoGb43cholImq",
+  "content_chars": 9182,
+  "content_empty": false,
+  "completion_tokens": 3241,
+  "prompt_tokens_reported": 798,
+  "error": null
+}

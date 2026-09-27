@@ -1,0 +1,16 @@
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(30,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(31,29): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(36,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(40,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(44,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(48,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(65,26): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(73,26): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(83,29): error TS2339: Property 'optional' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(90,29): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(98,29): error TS2339: Property 'default' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(113,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(117,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(118,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(123,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(128,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.

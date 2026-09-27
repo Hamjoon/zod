@@ -1,0 +1,10 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "user",
+      "content": "As a professional software tester who writes TypeScript test methods, generate Vitest test cases to comprehensively test all methods in the following class named ZodISODateTime by following these steps:\n- Extract and list all the public methods including their signatures\n- For each methods, generate a basic Vitest test case that checks the method's functionality\n- Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested\n- Generate Vitest test cases that specifically test for the identified edge cases and exceptions\n- Merge all the individual test cases into a complete Vitest test file (ZodISODateTime.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##\nThe ZodISODateTime class is exported from `./iso.js` (path relative to the test file).\nHere is the ZodISODateTime class:\nexport interface ZodISODateTime extends schemas.ZodStringFormat {\n  _zod: core.$ZodISODateTimeInternals;\n}\n\nexport const ZodISODateTime: core.$constructor<ZodISODateTime> = /*@__PURE__*/ core.$constructor(\n  \"ZodISODateTime\",\n  (inst, def) => {\n    core.$ZodISODateTime.init(inst, def);\n    schemas.ZodStringFormat.init(inst, def);\n  }\n);"
+    }
+  ]
+}

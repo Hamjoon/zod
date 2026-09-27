@@ -1,0 +1,18 @@
+{
+  "unit_id": "036-ZodSymbol",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:40:50.488019+00:00",
+  "latency_s": 126.896,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DekaLLM",
+  "response_id": "gen-1790336452-7R9GDVyRmibyPPF8V2Ac",
+  "content_chars": 7324,
+  "content_empty": false,
+  "completion_tokens": 2426,
+  "prompt_tokens_reported": 332,
+  "error": null
+}

@@ -1,0 +1,25 @@
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(44,35): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(51,33): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(55,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(64,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(72,36): error TS2339: Property 'refine' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(72,44): error TS7006: Parameter 'd' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(80,43): error TS2339: Property 'optional' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(89,43): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(99,46): error TS2339: Property 'default' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(116,33): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(124,33): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(130,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(137,38): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(143,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(149,33): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(156,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(161,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(166,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(176,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(181,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(187,35): error TS2339: Property 'parse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(195,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(206,35): error TS2339: Property 'refine' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(206,43): error TS7006: Parameter 'd' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(216,35): error TS2339: Property 'default' does not exist on type '$constructor<ZodISODateTime, $ZodISODateTimeDef>'.

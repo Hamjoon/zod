@@ -1,0 +1,18 @@
+{
+  "unit_id": "205-ZodMiniVoid",
+  "technique": "GTOT",
+  "timestamp_utc": "2026-09-25T11:53:00.904570+00:00",
+  "latency_s": 189.439,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DekaLLM",
+  "response_id": "gen-1790337182-iepwaHzsbRt1fceWCj7i",
+  "content_chars": 11258,
+  "content_empty": false,
+  "completion_tokens": 3120,
+  "prompt_tokens_reported": 446,
+  "error": null
+}

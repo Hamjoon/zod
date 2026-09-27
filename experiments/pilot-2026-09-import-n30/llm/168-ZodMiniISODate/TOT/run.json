@@ -1,0 +1,18 @@
+{
+  "unit_id": "168-ZodMiniISODate",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:47:35.968164+00:00",
+  "latency_s": 7.153,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "BaseTen",
+  "response_id": "gen-1790336858-eR4VFLzfN1bUDzMaYKnQ",
+  "content_chars": 5069,
+  "content_empty": false,
+  "completion_tokens": 1487,
+  "prompt_tokens_reported": 337,
+  "error": null
+}

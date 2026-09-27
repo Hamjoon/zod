@@ -1,0 +1,819 @@
+{
+  "tokenizer": {
+    "library": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base"
+  },
+  "units": {
+    "086-$ZodCheckUpperCase": {
+      "ZSL": {
+        "tokens": 276,
+        "sha256": "1e8204307f4b8219fd963f34166827a8be6a6c7cd2f2cbcca70847335fb2f141",
+        "chars": 1111
+      },
+      "FSL": {
+        "tokens": 2398,
+        "sha256": "a42e8944f09951d6e7426e94e7e1deef0a4af13e0d2a330b9c1522a414f11144",
+        "chars": 8768
+      },
+      "COT": {
+        "tokens": 384,
+        "sha256": "e8ff971784ecacf6ff1f3f73fcd14d8ba8c5d03ad6b11e2914cb4b45a02f05a4",
+        "chars": 1673
+      },
+      "TOT": {
+        "tokens": 339,
+        "sha256": "3f327bce16c1030826f07e1f79d3f6fb77801448ad700cce0499d4f66ecd4cd7",
+        "chars": 1430
+      },
+      "GTOT": {
+        "tokens": 464,
+        "sha256": "7f237753ce6d3a945c2f11e4eb1b88f01ba910ffa0277015ec71ce6a056f20ab",
+        "chars": 2082
+      }
+    },
+    "098-$ZodType": {
+      "ZSL": {
+        "tokens": 1252,
+        "sha256": "daf9b6b21cf71108fe100ec14032c8e3eb6162ea11486431e9e7d218586803da",
+        "chars": 4563
+      },
+      "FSL": {
+        "tokens": 3374,
+        "sha256": "1468b60e2db8a293fda9a87cd39e8ba78d39bf699ae46928120d7d46cecbb903",
+        "chars": 12220
+      },
+      "COT": {
+        "tokens": 1358,
+        "sha256": "6ce812936607e4173037b0e5f57fa67d380db4af0bdb14bc43f4dcf268961dd9",
+        "chars": 5115
+      },
+      "TOT": {
+        "tokens": 1317,
+        "sha256": "5ad040472ba6c26e18b776658c4f335db2152097cdba002fd772988e657fbcc4",
+        "chars": 4892
+      },
+      "GTOT": {
+        "tokens": 1438,
+        "sha256": "d1b260ddd293f9a781dc594f1b55e4ca7312e18baf0dfb049af8e677cc1477e3",
+        "chars": 5524
+      }
+    },
+    "053-ZodEnum": {
+      "ZSL": {
+        "tokens": 537,
+        "sha256": "ec59047ca78a169be788115a7949500133e1aece2f70495923ad5f86148cbe63",
+        "chars": 2039
+      },
+      "FSL": {
+        "tokens": 2659,
+        "sha256": "27c91e73091b6d6d44c37bd20ba8ff2f1443d9a53f4fd7b1cbd35f3cbd401705",
+        "chars": 9696
+      },
+      "COT": {
+        "tokens": 643,
+        "sha256": "737cefd9b295bb42bb7d124f1109e8adaa3e6a63af5d76c0cedd5b0ef9f5b44d",
+        "chars": 2590
+      },
+      "TOT": {
+        "tokens": 604,
+        "sha256": "506df4d2e1639b7cc2ab3ae6527c4f881aab6e7f63dcfdfe3a693b3d677285b4",
+        "chars": 2369
+      },
+      "GTOT": {
+        "tokens": 724,
+        "sha256": "21980476030219cdc8149227a1b235d34b8ddf2c136c45465481570e13ba7b9a",
+        "chars": 2999
+      }
+    },
+    "038-ZodNull": {
+      "ZSL": {
+        "tokens": 161,
+        "sha256": "89de6785acdb88bb1a33cf5cb75b10bfe48f3ddd1d475e30d484928e3ce8563f",
+        "chars": 629
+      },
+      "FSL": {
+        "tokens": 2283,
+        "sha256": "c330624883931dbb251981b34a9adf2f5761fb9e3d5803dbceef0f2114bb9650",
+        "chars": 8286
+      },
+      "COT": {
+        "tokens": 267,
+        "sha256": "2ff8b1c11ecdd0f2b85d09456c888a66f912372df73a3aeaf4a9147a782c2b24",
+        "chars": 1180
+      },
+      "TOT": {
+        "tokens": 228,
+        "sha256": "59ef743d4b6db3656465b491a0cbeefe813eed9152648b1a8cdc7997dc053444",
+        "chars": 959
+      },
+      "GTOT": {
+        "tokens": 348,
+        "sha256": "f9cedeb74351b59d711136cd88db5ffbcc20b48cb60ed3ddf58bc8a37ff00282",
+        "chars": 1589
+      }
+    },
+    "231-ZodMiniLazy": {
+      "ZSL": {
+        "tokens": 204,
+        "sha256": "1703b7a5b0f3871d3802c9c705cef73b0182fc8a66cfedfc98bd422928ed76b8",
+        "chars": 759
+      },
+      "FSL": {
+        "tokens": 2326,
+        "sha256": "03661a4cfe7f0f27c376e10a5e91920920d6cd3354d162010d159940626199b9",
+        "chars": 8416
+      },
+      "COT": {
+        "tokens": 311,
+        "sha256": "64316856d3533b46f0b05a57f8a602a73ec823c6b7df49832d910623577ab30b",
+        "chars": 1314
+      },
+      "TOT": {
+        "tokens": 270,
+        "sha256": "0936c22c6c79c977f83f65233ed94e16223d1d3ba9811080634966c936be717a",
+        "chars": 1085
+      },
+      "GTOT": {
+        "tokens": 392,
+        "sha256": "5adf1dba9be5a8ac8b35a9c4b383af4789e1b7010a4c77e91f76e1fb225c9124",
+        "chars": 1723
+      }
+    },
+    "117-$ZodIPv6": {
+      "ZSL": {
+        "tokens": 363,
+        "sha256": "b44621d632d553700c58755ba0f2f7b15ac80850d1eac480ec2df034a57f1055",
+        "chars": 1273
+      },
+      "FSL": {
+        "tokens": 2485,
+        "sha256": "02b1cf1eff53de33e5e0906db5b696c2e5280d8b6359235f14473efa6d47afda",
+        "chars": 8930
+      },
+      "COT": {
+        "tokens": 470,
+        "sha256": "5b9eb9eaf0e77b04afe88fb064e165944dcfcd2bed4dfb6b4900fa7f6fc81e01",
+        "chars": 1825
+      },
+      "TOT": {
+        "tokens": 427,
+        "sha256": "bd56b6b15384f038454aa76c3ba9f597d99fa801639bfe61aa6d92d33d4adbed",
+        "chars": 1602
+      },
+      "GTOT": {
+        "tokens": 550,
+        "sha256": "b0de73a42715c2737903987f600b93b5595a57142f858899cde9527c1cac52f9",
+        "chars": 2234
+      }
+    },
+    "088-$ZodCheckStartsWith": {
+      "ZSL": {
+        "tokens": 427,
+        "sha256": "e3bb0b5a668677cd03cce253b004373000c66da181b191f554f73348e8fbc6e2",
+        "chars": 1716
+      },
+      "FSL": {
+        "tokens": 2549,
+        "sha256": "016000a40624eccfd7f5148d92600dee5e07f5e1e894a29f9c34692f96d7723c",
+        "chars": 9373
+      },
+      "COT": {
+        "tokens": 535,
+        "sha256": "f00664ba89be8d2ca93471df71f9ab11d96df56dfe09d8f1d82826b77015e200",
+        "chars": 2279
+      },
+      "TOT": {
+        "tokens": 490,
+        "sha256": "ca1643f90e36f3ad362d676d4dcb404de254d3d092f76f924986e5d575de98cb",
+        "chars": 2034
+      },
+      "GTOT": {
+        "tokens": 615,
+        "sha256": "c543479f34cb11756e2de7d9e7fd4b9917e7f07c5ee9fa8366464e4b8456d4e7",
+        "chars": 2688
+      }
+    },
+    "140-$ZodUnion": {
+      "ZSL": {
+        "tokens": 795,
+        "sha256": "afc049832e01540367189f1f1fb9e7ad1748f103ac062be744d89de6d9f0aa9f",
+        "chars": 2990
+      },
+      "FSL": {
+        "tokens": 2917,
+        "sha256": "716cb0b94e2e16501760e239866cb71c994341e5ed2fd3c0e1bd716b6cae3318",
+        "chars": 10647
+      },
+      "COT": {
+        "tokens": 901,
+        "sha256": "84b26903e8a551716d1a6cffff9e6a74e7cb5249c90fa25583e707b628e66071",
+        "chars": 3543
+      },
+      "TOT": {
+        "tokens": 860,
+        "sha256": "c41702a6e35f43809dad69c4f981421992d3620c013da668dec80a35e38842cd",
+        "chars": 3318
+      },
+      "GTOT": {
+        "tokens": 981,
+        "sha256": "0bebcffbf50652a47d84eaba4294ba9b67ec51cdc93af75ff8d248df2e9fac3a",
+        "chars": 3952
+      }
+    },
+    "087-$ZodCheckIncludes": {
+      "ZSL": {
+        "tokens": 442,
+        "sha256": "ac124d01ec15825eceb92d082e852e8dc4aaff3d3696abaf27ab2347b8345d61",
+        "chars": 1840
+      },
+      "FSL": {
+        "tokens": 2564,
+        "sha256": "f1f6b09b50b67c45cfe6ab732f785eaf62b81d8e837ec57b3b0a39d4cbfb8299",
+        "chars": 9497
+      },
+      "COT": {
+        "tokens": 549,
+        "sha256": "714d923384b26996c5c2d5d397f32df90ee6a7e33e04e56444c667bc25f1023f",
+        "chars": 2401
+      },
+      "TOT": {
+        "tokens": 506,
+        "sha256": "acbe343130420553a7297c3d22beba60f5bf8acdfc274a271a78efdbe52d50bc",
+        "chars": 2160
+      },
+      "GTOT": {
+        "tokens": 629,
+        "sha256": "f3bb3962c98b5fa34560a42130790b690466318f8776f8a4952ed21dce9824c3",
+        "chars": 2810
+      }
+    },
+    "130-$ZodSymbol": {
+      "ZSL": {
+        "tokens": 322,
+        "sha256": "4b94525bfc607426c400cf248354fc1fc02cf115e6b3cabe19b41c06f08f1f46",
+        "chars": 1409
+      },
+      "FSL": {
+        "tokens": 2444,
+        "sha256": "90e6f45d7ce4a4adccc66e66c024c64b00e7845118c7332277042a56e244e1ea",
+        "chars": 9066
+      },
+      "COT": {
+        "tokens": 428,
+        "sha256": "d0fba83be203ba756fb9d7235be34af3bb18867d21d4a01da2b90cbe92919947",
+        "chars": 1963
+      },
+      "TOT": {
+        "tokens": 387,
+        "sha256": "1c65c94bc4742eb7047b4769cdc01d3774132fb68d5e007ad2bfeed01ac7ed42",
+        "chars": 1736
+      },
+      "GTOT": {
+        "tokens": 508,
+        "sha256": "b8dd2fae03c2a63c617dfb143b7273513d49652cfa8e8903f1d3b9018d590781",
+        "chars": 2372
+      }
+    },
+    "147-$ZodEnum": {
+      "ZSL": {
+        "tokens": 492,
+        "sha256": "3d752776f475374ef712c9b1f36498ce55696c97ebcee00f46e16ff842c486e5",
+        "chars": 1809
+      },
+      "FSL": {
+        "tokens": 2614,
+        "sha256": "3832fd5da4674fb5c487613faedd17e804c368ee3b37c078c6faafec74dc6740",
+        "chars": 9466
+      },
+      "COT": {
+        "tokens": 598,
+        "sha256": "ad78ea46d6becb0c9b4d13201ca66f2c841e1c1b4f17f1a2e80cc67d5e3ef5d2",
+        "chars": 2361
+      },
+      "TOT": {
+        "tokens": 557,
+        "sha256": "3d5b111391edd05568e2a7970ff92205cf3d23bb6241a19434859d038f66024e",
+        "chars": 2138
+      },
+      "GTOT": {
+        "tokens": 678,
+        "sha256": "c4ec99e4f96e16533908620ee7e6c210caee7d9b8692735f63f0676665e46444",
+        "chars": 2770
+      }
+    },
+    "159-$ZodPipe": {
+      "ZSL": {
+        "tokens": 534,
+        "sha256": "54ff353a8cbd2309d11ed726a02592aac215d65418bd429511ea7ea9c03c2e14",
+        "chars": 1978
+      },
+      "FSL": {
+        "tokens": 2656,
+        "sha256": "b040f4d1f6c95f5db742aef090cec2e59b85d879e71edfcf9f855294e2147b54",
+        "chars": 9635
+      },
+      "COT": {
+        "tokens": 640,
+        "sha256": "3ca56b0517e15c9624d720aa7b3062b4e307dfa33efbec98423774620a10fcd5",
+        "chars": 2530
+      },
+      "TOT": {
+        "tokens": 599,
+        "sha256": "a662fdcf7818e286a8dced37b03b8495dbf38438717ac84c63af48775595d99a",
+        "chars": 2307
+      },
+      "GTOT": {
+        "tokens": 720,
+        "sha256": "feb31efce4d3579d652842331b1be7d9c7824540e3700ce5d329576e316ae724",
+        "chars": 2939
+      }
+    },
+    "153-$ZodDefault": {
+      "ZSL": {
+        "tokens": 600,
+        "sha256": "d068aeed622d9f54dc3bacf3e55345c77cead5685b2c6e027b9ba6b39370561d",
+        "chars": 2554
+      },
+      "FSL": {
+        "tokens": 2722,
+        "sha256": "11625cac0a3037d61add9b927f58537caca667378937ad2bf7e8cd61c0a65c78",
+        "chars": 10211
+      },
+      "COT": {
+        "tokens": 706,
+        "sha256": "a514f5468d58a11505ae31e1b1934a15a6c79246333fe41c732bfd6ef0aa832b",
+        "chars": 3109
+      },
+      "TOT": {
+        "tokens": 665,
+        "sha256": "fa61ff993cea0865582c0ae6f611e76ba4567057c078659507e835c551474c61",
+        "chars": 2880
+      },
+      "GTOT": {
+        "tokens": 786,
+        "sha256": "71b09fe3fe602c10c1eaeb2580187037639312aba681d2148f1a8dbe678f2c59",
+        "chars": 3518
+      }
+    },
+    "105-$ZodEmoji": {
+      "ZSL": {
+        "tokens": 213,
+        "sha256": "b89dc736d94a87aed0c533ac07c9a8b6ae527fed86c31b23a38ecac40ad5dbff",
+        "chars": 820
+      },
+      "FSL": {
+        "tokens": 2335,
+        "sha256": "665f431ebf33d8d92b54b9eb780cf5d7598e147c51f24646ff5823250159f819",
+        "chars": 8477
+      },
+      "COT": {
+        "tokens": 319,
+        "sha256": "188df48786e8350bf1f5bccbe93d8657935f7175d6e6714f9b03866c52c0abda",
+        "chars": 1373
+      },
+      "TOT": {
+        "tokens": 278,
+        "sha256": "61557b52ed144b857573f7ac26a1be193a4706c8722056481878b0001bf399d9",
+        "chars": 1148
+      },
+      "GTOT": {
+        "tokens": 399,
+        "sha256": "2ac91d7ae05f1b2a1023394808973b7302d13dca3e3133e4b77c092074ca39d4",
+        "chars": 1782
+      }
+    },
+    "137-$ZodDate": {
+      "ZSL": {
+        "tokens": 447,
+        "sha256": "8bb0b2c9008a588e149d4164ef3665a84b7171d82d6fa6be4ab9c97018049d8c",
+        "chars": 1811
+      },
+      "FSL": {
+        "tokens": 2569,
+        "sha256": "971ba1c2b22e8f91c9b6adc5105ac855ef6ed11f5e02281cb8ebf618a9941e6a",
+        "chars": 9468
+      },
+      "COT": {
+        "tokens": 553,
+        "sha256": "20e83d434c50c9c5f4090d30a9f4e5b048c08d6f46923a56bd2329d411cd6cee",
+        "chars": 2363
+      },
+      "TOT": {
+        "tokens": 512,
+        "sha256": "d5225b0a135a8acb1b67870517c98679ebf1116b8378f1e8009c8ff0e81da12d",
+        "chars": 2140
+      },
+      "GTOT": {
+        "tokens": 633,
+        "sha256": "8b93511d87a5b6c877ccf5401f40099f83c1b96491a1c5ef7429b93e1fa14d6b",
+        "chars": 2772
+      }
+    },
+    "055-ZodFile": {
+      "ZSL": {
+        "tokens": 308,
+        "sha256": "0aef88a7ede51ad11779bdf264a95998bde3c9b5c6c311aaef1958a69f2a625d",
+        "chars": 1152
+      },
+      "FSL": {
+        "tokens": 2430,
+        "sha256": "e5fe58e244fe30ccedcfc0962a0905d25f807a664d9d421d0080a86196639899",
+        "chars": 8809
+      },
+      "COT": {
+        "tokens": 414,
+        "sha256": "9dca0a3ea0f4bc565aec5a88278485e2ee4b041576c75d539497e0921708daf8",
+        "chars": 1703
+      },
+      "TOT": {
+        "tokens": 375,
+        "sha256": "b7882f933d549e55d5b8d1f69fd5fa3db0bb12a4114f25a323d4ae97eb865234",
+        "chars": 1482
+      },
+      "GTOT": {
+        "tokens": 495,
+        "sha256": "23703d32c94c76bd394756d8d285e5e5e6857029f35bfa63db3883fe648bb9d7",
+        "chars": 2112
+      }
+    },
+    "013-ZodUUID": {
+      "ZSL": {
+        "tokens": 182,
+        "sha256": "5578598d6c5e38b248239930440d07786d6ca76a8026296796be8cb345a776ff",
+        "chars": 699
+      },
+      "FSL": {
+        "tokens": 2304,
+        "sha256": "234b9c2daa221f2fe9ab69d05e001adeb4135bbee8f3725686ea75d503243880",
+        "chars": 8356
+      },
+      "COT": {
+        "tokens": 288,
+        "sha256": "feb2aa8ecfd06fbb50edc08aa40b15a1c4d133d9a820569ddf5f29d4e2e637e0",
+        "chars": 1250
+      },
+      "TOT": {
+        "tokens": 249,
+        "sha256": "151c6797818b081f5e0dcfd6ea3817dd8602bad42b4653857a5eb761c81d6ee3",
+        "chars": 1029
+      },
+      "GTOT": {
+        "tokens": 369,
+        "sha256": "8373e911007ba63cd1e1e4863eb3ff16a56271e8507df49ad4b9050e19115d59",
+        "chars": 1659
+      }
+    },
+    "036-ZodSymbol": {
+      "ZSL": {
+        "tokens": 159,
+        "sha256": "4edb849d3bf50670bb0917fbe22c730dbb2b83004f36a477d23bd1900af467a7",
+        "chars": 646
+      },
+      "FSL": {
+        "tokens": 2281,
+        "sha256": "1be1589fb0635e09cfe94bdbbc66c045cd2754cdfe1305c266396a9ac6ca6be2",
+        "chars": 8303
+      },
+      "COT": {
+        "tokens": 265,
+        "sha256": "b14f0870b438e9cebc3ab2ee44061cb5e236dc6b56032d00aa121000df95f458",
+        "chars": 1199
+      },
+      "TOT": {
+        "tokens": 226,
+        "sha256": "19081210d1dc424c8d35028fe8abacb2e43abeae38277f2f015b032188801ee2",
+        "chars": 974
+      },
+      "GTOT": {
+        "tokens": 346,
+        "sha256": "ba186db699647b06883b4f6e8ca9f399458b31eaeb8b5683bdd6a02c809e9ba3",
+        "chars": 1608
+      }
+    },
+    "062-ZodSuccess": {
+      "ZSL": {
+        "tokens": 203,
+        "sha256": "3e1ce3c77e9eca4c0103052d0d8a1b407d796ae71811572d0172c0cddce5715b",
+        "chars": 794
+      },
+      "FSL": {
+        "tokens": 2325,
+        "sha256": "f3f68127b4a8f82c039f3f054fa2c11fde5162bc4ae71aef5f1e1a4f1428a611",
+        "chars": 8451
+      },
+      "COT": {
+        "tokens": 309,
+        "sha256": "7f8cd3428f0c58fef7b54503185dfb58b727cef9e0bbfd1b5dc7dcf0db166138",
+        "chars": 1348
+      },
+      "TOT": {
+        "tokens": 270,
+        "sha256": "26e164d54d71dad411ff3c98ec214b07d56e876148f2992ce7a36fd93e06413e",
+        "chars": 1121
+      },
+      "GTOT": {
+        "tokens": 390,
+        "sha256": "7d18a3211c2a4ce0a0df77ce6b751d1051969d73bd79b0afb5ef707892a75536",
+        "chars": 1757
+      }
+    },
+    "003-ZodISODateTime": {
+      "ZSL": {
+        "tokens": 188,
+        "sha256": "4c152f8ff728b3f793d56513f6ca507020308013b32a4dd6b89801980f5de34c",
+        "chars": 729
+      },
+      "FSL": {
+        "tokens": 2310,
+        "sha256": "e2970af4ca76269077bf31a7be56f03e5079b615dffab562646fd0318ddb5974",
+        "chars": 8386
+      },
+      "COT": {
+        "tokens": 296,
+        "sha256": "1a7c4657dc30eb048a29ec347149cd96806ab302f573f444c5f1cec2d5396c6b",
+        "chars": 1287
+      },
+      "TOT": {
+        "tokens": 253,
+        "sha256": "49d38eaafc1a2475a8c2940d778594f92fa94d7fe2c27f4051dea33e75376080",
+        "chars": 1052
+      },
+      "GTOT": {
+        "tokens": 377,
+        "sha256": "b69589044f6fd32ea0e2d2702e5d5f3599facd75b7bf054f2096d27a5ebb23b1",
+        "chars": 1696
+      }
+    },
+    "021-ZodKSUID": {
+      "ZSL": {
+        "tokens": 193,
+        "sha256": "eeb80f32728a262bb5cd4d1f5aa51339d02fc2ad2e1583f8711a07c819c12a3f",
+        "chars": 710
+      },
+      "FSL": {
+        "tokens": 2315,
+        "sha256": "6e12023343dc368abf1d7f23bd3a54f11c4e1bd9130c541e87aa4ae7ae9214a8",
+        "chars": 8367
+      },
+      "COT": {
+        "tokens": 300,
+        "sha256": "dac1a204b5a545725c6d44ff75ce036b22db502f49a39ca1b67277818215a08a",
+        "chars": 1262
+      },
+      "TOT": {
+        "tokens": 259,
+        "sha256": "ffc45b19609ac0113b23086eb3f96aff653615bba57ac7e481bb1f831313ea50",
+        "chars": 1039
+      },
+      "GTOT": {
+        "tokens": 381,
+        "sha256": "8b7a0b992b670b1a3a39c8210f5b5857fd3a563af7b60fe14da6df57cafac86c",
+        "chars": 1671
+      }
+    },
+    "058-ZodNullable": {
+      "ZSL": {
+        "tokens": 208,
+        "sha256": "d0546a2cb9f70bd28b5a8dfca9eedd64842e152ee6bcee085ee2e89c7891baed",
+        "chars": 819
+      },
+      "FSL": {
+        "tokens": 2330,
+        "sha256": "936a7c2713ff00a6d9ad22df9a1eb3d0a39d45cf9cd48ae07032b556b680fd5f",
+        "chars": 8476
+      },
+      "COT": {
+        "tokens": 314,
+        "sha256": "a5bd6114bf7ca12d80046bb3474c040c843daac6352865d25e924e66b44f1f51",
+        "chars": 1374
+      },
+      "TOT": {
+        "tokens": 275,
+        "sha256": "7179bf5a27366272c7af2afb975415f34b67afa8eab01355ac7612a2e67bf478",
+        "chars": 1145
+      },
+      "GTOT": {
+        "tokens": 395,
+        "sha256": "d38446c6702bd900ce1b68c3fc05783420a9af07079e7f2ad13fda3c0fec3875",
+        "chars": 1783
+      }
+    },
+    "168-ZodMiniISODate": {
+      "ZSL": {
+        "tokens": 194,
+        "sha256": "7a866a1b7cc7ea5861e2431e35ba6f7ea529f26fc505b209f6642eb9ab79d24b",
+        "chars": 746
+      },
+      "FSL": {
+        "tokens": 2316,
+        "sha256": "7e599f119fc0b54d2aeea5e86cc58f9f9c1917f61c0b993d379617b93fdb1ae0",
+        "chars": 8403
+      },
+      "COT": {
+        "tokens": 302,
+        "sha256": "5338acf0037e7b4cf7cb73f59b7f4160e7e30846952654e13899ff5eb3dcee02",
+        "chars": 1304
+      },
+      "TOT": {
+        "tokens": 259,
+        "sha256": "25470ed92a9cf2c60e031e884de342070a88f494281312d7263b2fe8f5ea3b6a",
+        "chars": 1069
+      },
+      "GTOT": {
+        "tokens": 383,
+        "sha256": "d3b4cf386c43deb737acf5d2b37a7f68b5c7b1d118924ffde273d3f83750662d",
+        "chars": 1713
+      }
+    },
+    "210-ZodMiniDiscriminatedUnion": {
+      "ZSL": {
+        "tokens": 232,
+        "sha256": "a893568fc9143c793f9ca75d8b544cfa71828856bda9896df5c8cae58813a392",
+        "chars": 914
+      },
+      "FSL": {
+        "tokens": 2354,
+        "sha256": "ce2ec65148e368e92a48e5782c8a781005f85028bf9ff980d69a2b7cdb992301",
+        "chars": 8571
+      },
+      "COT": {
+        "tokens": 342,
+        "sha256": "59653f16fa4892d6e0931a4b3c1703ac07852117f35917690baab8d1e34d1e14",
+        "chars": 1483
+      },
+      "TOT": {
+        "tokens": 295,
+        "sha256": "1c518442a7ae1a1bf5ae5b99a46f679bb10745bbe316bfd32e929d17c6f4907f",
+        "chars": 1226
+      },
+      "GTOT": {
+        "tokens": 423,
+        "sha256": "df11faafd670a2ed0e71271298a85320ba1f382f18053cb90105c5da5887e866",
+        "chars": 1892
+      }
+    },
+    "197-ZodMiniBigInt": {
+      "ZSL": {
+        "tokens": 216,
+        "sha256": "2d2fd58496aeebc267be86c88b40558edf32c3315ad3327d96cdd272f70352af",
+        "chars": 778
+      },
+      "FSL": {
+        "tokens": 2338,
+        "sha256": "e482a4c641f0b7ee2462fcd2b5c0e68918d8e355596be49d5d9bf7837d377199",
+        "chars": 8435
+      },
+      "COT": {
+        "tokens": 324,
+        "sha256": "c41ebcba9d1c3321a4c1b6d1d2b8a8157cca6b9aea0a7e6d7e89fad1e6639761",
+        "chars": 1335
+      },
+      "TOT": {
+        "tokens": 281,
+        "sha256": "a8e2bc8e64ac7e589a702e9cb34b7af6c2fca382f28f6705bf30c60264595f81",
+        "chars": 1102
+      },
+      "GTOT": {
+        "tokens": 405,
+        "sha256": "5c253a3300f79b734acd578a0d507dcb5e8c5b3cbec0a8e60305e28730995d54",
+        "chars": 1744
+      }
+    },
+    "206-ZodMiniDate": {
+      "ZSL": {
+        "tokens": 197,
+        "sha256": "ee200d6025b8969dd601cb5c993902988a0dd570b3cb8e4d0a46f8918e263424",
+        "chars": 736
+      },
+      "FSL": {
+        "tokens": 2319,
+        "sha256": "112776c45b638f6efc0800520d981fc0f17a8dc8a3296df48fa40f759233b709",
+        "chars": 8393
+      },
+      "COT": {
+        "tokens": 304,
+        "sha256": "907c377d694df0e2b45794491dd3ebc18c4b80cad8fcd7e4490e77f92adbab85",
+        "chars": 1291
+      },
+      "TOT": {
+        "tokens": 263,
+        "sha256": "0bab342365dc0ec3e1ef594079a6499aaa76f378b175445c090233e129998a47",
+        "chars": 1062
+      },
+      "GTOT": {
+        "tokens": 385,
+        "sha256": "65fc9f5067b3d52beca089e96ffe97ef60fa96d32e4baeb097346478ae1b2095",
+        "chars": 1700
+      }
+    },
+    "205-ZodMiniVoid": {
+      "ZSL": {
+        "tokens": 191,
+        "sha256": "77892242c33f341c2ec0e2e4a4f936be2e2e256bcd9a6616a45db30abb27a500",
+        "chars": 717
+      },
+      "FSL": {
+        "tokens": 2313,
+        "sha256": "3bfbfb6be57f42c4d86e55de21cc22cd6756a5310ae29ca7b00bce4e01b055b2",
+        "chars": 8374
+      },
+      "COT": {
+        "tokens": 298,
+        "sha256": "633daaa917284eac8f0373b441c0a8e952f6962f3a49f558ee002cc69430b770",
+        "chars": 1272
+      },
+      "TOT": {
+        "tokens": 257,
+        "sha256": "88f3cd8d3b5a75c83c454727982359ea6ae26331bcd06578d3ad0929c18e70f0",
+        "chars": 1043
+      },
+      "GTOT": {
+        "tokens": 379,
+        "sha256": "cfba347dd0f0de2345f1dea67beabba34536ff2e87281ecf3c64b8080ef69a10",
+        "chars": 1681
+      }
+    },
+    "232-ZodMiniPromise": {
+      "ZSL": {
+        "tokens": 204,
+        "sha256": "bbba5ee15289b6c72fa450fe187aff78e4b9bf2b908f9b322e7552e91cf32f80",
+        "chars": 792
+      },
+      "FSL": {
+        "tokens": 2326,
+        "sha256": "bbdb6720e2a927648616d444fb58617b60c23966dec79a2fc937bf42f9248117",
+        "chars": 8449
+      },
+      "COT": {
+        "tokens": 311,
+        "sha256": "15954f661249b9f61bc6ad29fb730694b270763f40d1df7b99d444d4ac9e29ee",
+        "chars": 1350
+      },
+      "TOT": {
+        "tokens": 270,
+        "sha256": "f5a4ac0ef5f54146f29b6cd460930613f5cdc13e632ac6b6b2d44725d47f8b20",
+        "chars": 1115
+      },
+      "GTOT": {
+        "tokens": 392,
+        "sha256": "2432a2ac5c3acde3078949cd505138e83d13d9df9c7a4c9ada2526484c4011fc",
+        "chars": 1759
+      }
+    },
+    "211-ZodMiniIntersection": {
+      "ZSL": {
+        "tokens": 220,
+        "sha256": "87e46fced334cf99577f480910cbe2eac0f23eb857e24f719cf550aadd4d87e1",
+        "chars": 891
+      },
+      "FSL": {
+        "tokens": 2342,
+        "sha256": "07ca33dd98e445d67ad67483532b966c5ae7b691a36632bfebcacd6ce878b550",
+        "chars": 8548
+      },
+      "COT": {
+        "tokens": 327,
+        "sha256": "9225d0fd70d8cb6d4adf2eef2a2f4299e750708cca7138a0e7412fc0729efd2e",
+        "chars": 1454
+      },
+      "TOT": {
+        "tokens": 286,
+        "sha256": "6b7e476cdb962637235a45c01fe6cbcf0e4b83bf210df23e8c714e0e46a39d15",
+        "chars": 1209
+      },
+      "GTOT": {
+        "tokens": 408,
+        "sha256": "28e26e646ce583fe743f0d7c9ceff11d829412f346a1de1ef63634e80cb36b3a",
+        "chars": 1863
+      }
+    },
+    "181-ZodMiniCUID2": {
+      "ZSL": {
+        "tokens": 214,
+        "sha256": "e3195b6db1c0b260316bb766ef3c232535d5c3f9c33e1d6cff00efd76327011f",
+        "chars": 738
+      },
+      "FSL": {
+        "tokens": 2336,
+        "sha256": "6dac07e82c5df28e51c09d9bd738e7226ddfdc4e5d3ffa03e2ba5cc1d9ba00ed",
+        "chars": 8395
+      },
+      "COT": {
+        "tokens": 323,
+        "sha256": "0fd48562234599af4eed7f9217ba98813f55c25fd9e88f0c2b81d88f12482338",
+        "chars": 1294
+      },
+      "TOT": {
+        "tokens": 278,
+        "sha256": "f23562b469e532bdf5e428209b24a9ddf3f0863983b80cc3f2d159d8f4fda81a",
+        "chars": 1063
+      },
+      "GTOT": {
+        "tokens": 404,
+        "sha256": "c4f856cb6633d9badb03f053c37e403721d675d3cbd170a8ab8d2445c992d489",
+        "chars": 1703
+      }
+    }
+  }
+}

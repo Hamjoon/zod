@@ -1,0 +1,14 @@
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(67,22): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(73,28): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(79,30): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(89,30): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(93,48): error TS7006: Parameter 'i' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(108,20): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(113,26): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(118,26): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(123,26): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(132,36): error TS2339: Property 'optional' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(139,36): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(147,35): error TS2339: Property 'default' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(158,28): error TS2339: Property 'optional' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(176,30): error TS2339: Property 'refine' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.

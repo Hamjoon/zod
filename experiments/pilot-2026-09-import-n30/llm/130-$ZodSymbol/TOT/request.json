@@ -1,0 +1,10 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Imagine three different experts in software testing who are tasked with developing comprehensive Vitest test cases for the following TypeScript class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.\nThe $ZodSymbol class is exported from `./schemas.js` (path relative to the test file).\nThe TypeScript class is:\n////////////////////////////////////////////\n////////////////////////////////////////////\n//////////                        //////////\n//////////       $ZodSymbol       //////////\n//////////                        //////////\n////////////////////////////////////////////\n////////////////////////////////////////////\nexport interface $ZodSymbolDef extends $ZodTypeDef {\n  type: \"symbol\";\n}\n\nexport interface $ZodSymbolInternals extends $ZodTypeInternals<symbol, symbol> {\n  def: $ZodSymbolDef;\n  isst: errors.$ZodIssueInvalidType;\n}\n\nexport interface $ZodSymbol extends $ZodType {\n  _zod: $ZodSymbolInternals;\n}\n\nexport const $ZodSymbol: core.$constructor<$ZodSymbol> = /*@__PURE__*/ core.$constructor(\"$ZodSymbol\", (inst, def) => {\n  $ZodType.init(inst, def);\n\n  inst._zod.parse = (payload, _ctx) => {\n    const input = payload.value;\n    if (typeof input === \"symbol\") return payload;\n    payload.issues.push({\n      expected: \"symbol\",\n      code: \"invalid_type\",\n      input,\n      inst,\n    });\n    return payload;\n  };\n});\nAt the end they must propose one complete (including typical use cases, edge cases, and error scenarios) Vitest test file ($ZodSymbol.test.ts) for the given TypeScript class. The complete Vitest test file must start with ###Test START## and finish with ###Test END##"
+    }
+  ]
+}

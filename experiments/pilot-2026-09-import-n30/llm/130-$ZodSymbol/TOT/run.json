@@ -1,0 +1,18 @@
+{
+  "unit_id": "130-$ZodSymbol",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:30:02.682241+00:00",
+  "latency_s": 35.849,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "Mancer 2",
+  "response_id": "gen-1790335804-l2LaTtxWQuIwuFufgTXU",
+  "content_chars": 6390,
+  "content_empty": false,
+  "completion_tokens": 1857,
+  "prompt_tokens_reported": 454,
+  "error": null
+}

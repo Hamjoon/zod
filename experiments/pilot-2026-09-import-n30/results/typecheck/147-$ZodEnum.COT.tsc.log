@@ -1,0 +1,27 @@
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(71,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(77,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(82,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(91,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(96,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(102,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(111,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(120,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(133,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(134,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(143,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(144,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(155,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(156,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(166,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(167,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(172,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(185,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(190,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(195,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(200,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(201,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(204,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(218,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(219,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(225,5): error TS2578: Unused '@ts-expect-error' directive.
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(239,20): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?

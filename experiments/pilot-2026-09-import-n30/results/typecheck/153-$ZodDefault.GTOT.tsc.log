@@ -1,0 +1,26 @@
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(25,38): error TS2345: Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: undefined; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(26,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(33,44): error TS2345: Argument of type '{ value: number; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: number; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(57,34): error TS2345: Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: undefined; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(58,34): error TS2345: Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: undefined; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(59,15): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(60,15): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(69,36): error TS2345: Argument of type '{ value: number; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: number; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(76,36): error TS2345: Argument of type '{ value: number; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: number; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(83,38): error TS2345: Argument of type '{ value: null; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: null; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(84,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(91,38): error TS2345: Argument of type '{ value: undefined; }' is not assignable to parameter of type 'ParsePayload<any>'.
+  Property 'issues' is missing in type '{ value: undefined; }' but required in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodDefault.pilot.test.ts(92,19): error TS2339: Property 'value' does not exist on type 'MaybeAsync<ParsePayload<unknown>>'.
+  Property 'value' does not exist on type 'Promise<ParsePayload<unknown>>'.

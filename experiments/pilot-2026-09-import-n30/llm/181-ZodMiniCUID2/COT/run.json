@@ -1,0 +1,18 @@
+{
+  "unit_id": "181-ZodMiniCUID2",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:57:43.799240+00:00",
+  "latency_s": 1640.485,
+  "http_status": 200,
+  "finish_reason": "length",
+  "native_finish_reason": "length",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "SiliconFlow",
+  "response_id": "gen-1790337465-OzFMf47v21cIx9wwaJFY",
+  "content_chars": 44522,
+  "content_empty": false,
+  "completion_tokens": 40951,
+  "prompt_tokens_reported": 390,
+  "error": null
+}

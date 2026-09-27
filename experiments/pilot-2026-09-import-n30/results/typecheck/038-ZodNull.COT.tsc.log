@@ -1,0 +1,16 @@
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(51,28): error TS2339: Property 'parse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(58,28): error TS2339: Property 'parse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(63,26): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(71,26): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(85,28): error TS2339: Property 'optional' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(92,28): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(99,28): error TS2339: Property 'default' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(110,28): error TS2339: Property 'describe' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(125,26): error TS2339: Property 'parse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(131,26): error TS2339: Property 'parse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(136,26): error TS2339: Property 'parse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(142,28): error TS2339: Property 'refine' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(149,28): error TS2339: Property 'refine' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(157,28): error TS2339: Property 'optional' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(166,28): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.
+packages/zod/src/v4/classic/ZodNull.pilot.test.ts(179,26): error TS2339: Property 'parse' does not exist on type '$constructor<ZodNull, $ZodNullDef>'.

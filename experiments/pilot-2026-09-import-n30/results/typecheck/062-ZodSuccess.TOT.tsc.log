@@ -1,0 +1,13 @@
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(32,31): error TS6133: 'name' is declared but its value is never read.
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(65,31): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(71,30): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(81,37): error TS2345: Argument of type '{ innerType: { foo: string; }; }' is not assignable to parameter of type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ innerType: { foo: string; }; }' but required in type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(96,37): error TS2345: Argument of type '{ innerType: number; }' is not assignable to parameter of type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ innerType: number; }' but required in type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(114,37): error TS2345: Argument of type '{ innerType: undefined; }' is not assignable to parameter of type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ innerType: undefined; }' but required in type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(124,37): error TS2345: Argument of type '{ innerType: string; }' is not assignable to parameter of type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ innerType: string; }' but required in type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(138,37): error TS2345: Argument of type '{ innerType: string; description: string; customFlag: boolean; }' is not assignable to parameter of type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ innerType: string; description: string; customFlag: boolean; }' but required in type '$ZodSuccessDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.

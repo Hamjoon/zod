@@ -1,0 +1,4 @@
+packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts(28,30): error TS2348: Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts(85,22): error TS2348: Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts(155,42): error TS7006: Parameter 'val' implicitly has an 'any' type.
+packages/zod/src/v4/mini/ZodMiniBigInt.pilot.test.ts(165,18): error TS2348: Value of type '$constructor<ZodMiniBigInt<unknown>, $ZodBigIntDef>' is not callable. Did you mean to include 'new'?

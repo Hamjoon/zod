@@ -1,0 +1,18 @@
+{
+  "unit_id": "088-$ZodCheckStartsWith",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:24:44.547060+00:00",
+  "latency_s": 112.499,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DekaLLM",
+  "response_id": "gen-1790335484-hA6088YecG1nUTxQiZol",
+  "content_chars": 6162,
+  "content_empty": false,
+  "completion_tokens": 2749,
+  "prompt_tokens_reported": 557,
+  "error": null
+}

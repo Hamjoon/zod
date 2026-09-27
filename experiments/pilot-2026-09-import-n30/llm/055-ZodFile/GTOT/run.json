@@ -1,0 +1,18 @@
+{
+  "unit_id": "055-ZodFile",
+  "technique": "GTOT",
+  "timestamp_utc": "2026-09-25T11:37:58.024140+00:00",
+  "latency_s": 84.861,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "AkashML",
+  "response_id": "gen-1790336280-hGlYnKRFX6zr0I5idWWs",
+  "content_chars": 7559,
+  "content_empty": false,
+  "completion_tokens": 2442,
+  "prompt_tokens_reported": 562,
+  "error": null
+}

@@ -1,0 +1,5 @@
+packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts(68,18): error TS2348: Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts(96,18): error TS2348: Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts(135,18): error TS2348: Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts(160,20): error TS2348: Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodIPv6.pilot.test.ts(212,52): error TS2348: Value of type '$constructor<$ZodIPv6, $ZodIPv6Def>' is not callable. Did you mean to include 'new'?

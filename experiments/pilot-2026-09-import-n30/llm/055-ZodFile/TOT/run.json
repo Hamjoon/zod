@@ -1,0 +1,18 @@
+{
+  "unit_id": "055-ZodFile",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:37:43.147001+00:00",
+  "latency_s": 144.254,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DekaLLM",
+  "response_id": "gen-1790336265-P5OAfPOYGfk8HH7TTT9P",
+  "content_chars": 8849,
+  "content_empty": false,
+  "completion_tokens": 2525,
+  "prompt_tokens_reported": 442,
+  "error": null
+}

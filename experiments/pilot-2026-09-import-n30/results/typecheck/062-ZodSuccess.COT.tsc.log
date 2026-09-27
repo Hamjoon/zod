@@ -1,0 +1,1 @@
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(31,49): error TS2344: Type 'T' does not satisfy the constraint 'SomeType'.

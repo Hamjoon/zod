@@ -1,0 +1,18 @@
+{
+  "unit_id": "211-ZodMiniIntersection",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:54:58.354137+00:00",
+  "latency_s": 87.043,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "CoreWeave",
+  "response_id": "gen-1790337300-36ki8QWF6uA8UYD2mIXR",
+  "content_chars": 12213,
+  "content_empty": false,
+  "completion_tokens": 3396,
+  "prompt_tokens_reported": 394,
+  "error": null
+}

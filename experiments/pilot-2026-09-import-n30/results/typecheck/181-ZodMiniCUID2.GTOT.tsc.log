@@ -1,0 +1,16 @@
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(48,20): error TS2348: Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(66,20): error TS2348: Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(71,20): error TS2348: Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(80,20): error TS2348: Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(85,20): error TS2348: Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(112,20): error TS2348: Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(113,59): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(117,20): error TS2348: Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(121,43): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(126,20): error TS2348: Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(127,74): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(131,20): error TS2348: Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(135,43): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(146,20): error TS2348: Value of type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(146,43): error TS7006: Parameter 'val' implicitly has an 'any' type.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(154,74): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.

@@ -1,0 +1,39 @@
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(88,29): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(94,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(94,57): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(99,29): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(107,29): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(110,43): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(115,29): error TS2339: Property 'optional' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(121,29): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(127,29): error TS2339: Property 'array' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(134,29): error TS2339: Property 'array' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(136,56): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(140,29): error TS2339: Property 'refine' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(140,37): error TS7006: Parameter 'val' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(146,50): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(150,29): error TS2339: Property 'transform' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(150,40): error TS7006: Parameter 'val' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(163,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(163,51): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(168,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(168,54): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(173,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(173,53): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(179,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(179,58): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(183,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(183,53): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(187,27): error TS2339: Property 'parse' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(187,58): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(191,29): error TS2339: Property 'optional' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(192,51): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(196,29): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(197,56): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(201,29): error TS2339: Property 'array' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(206,29): error TS2339: Property 'array' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(207,60): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(211,29): error TS2339: Property 'array' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(217,29): error TS2339: Property 'refine' does not exist on type '$constructor<ZodKSUID, $ZodStringFormatDef<"ksuid">>'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(221,32): error TS1361: 'ZodError' cannot be used as a value because it was imported using 'import type'.
+packages/zod/src/v4/classic/ZodKSUID.pilot.test.ts(223,18): error TS2339: Property 'errors' does not exist on type 'ZodError<unknown>'.

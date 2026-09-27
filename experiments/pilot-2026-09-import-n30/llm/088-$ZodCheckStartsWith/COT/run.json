@@ -1,0 +1,18 @@
+{
+  "unit_id": "088-$ZodCheckStartsWith",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:24:32.582803+00:00",
+  "latency_s": 11.96,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "Mancer 2",
+  "response_id": "gen-1790335472-8IAZGwWtO2dJbag94ftH",
+  "content_chars": 7983,
+  "content_empty": false,
+  "completion_tokens": 2453,
+  "prompt_tokens_reported": 602,
+  "error": null
+}

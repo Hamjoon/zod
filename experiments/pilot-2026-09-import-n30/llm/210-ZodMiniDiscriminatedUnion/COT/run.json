@@ -1,0 +1,18 @@
+{
+  "unit_id": "210-ZodMiniDiscriminatedUnion",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:47:58.331906+00:00",
+  "latency_s": 131.838,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DekaLLM",
+  "response_id": "gen-1790336880-HRsyEyu84Lra70ngBXKT",
+  "content_chars": 8331,
+  "content_empty": false,
+  "completion_tokens": 2430,
+  "prompt_tokens_reported": 409,
+  "error": null
+}

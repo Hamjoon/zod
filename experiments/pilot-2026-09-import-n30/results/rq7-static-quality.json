@@ -1,0 +1,1755 @@
+{
+  "rules": "results/smell-rules.md; biome 1.9.4 with biome.jsonc, LLM files linted at their in-place path",
+  "per_technique": {
+    "COT": {
+      "files": 28,
+      "biome_errors": 20,
+      "biome_warnings": 3,
+      "biome_categories": {
+        "lint/complexity/noForEach": 8,
+        "lint/complexity/noUselessThisAlias": 1,
+        "lint/correctness/noUnusedImports": 3,
+        "lint/correctness/noUnusedVariables": 3,
+        "lint/style/useNumberNamespace": 8
+      },
+      "tests_ast": 369,
+      "expect_calls": 610,
+      "assertion_roulette_tests": 155,
+      "assertion_roulette_share": 0.4201,
+      "magic_number_tests": 45,
+      "magic_number_share": 0.122
+    },
+    "TOT": {
+      "files": 29,
+      "biome_errors": 11,
+      "biome_warnings": 5,
+      "biome_categories": {
+        "lint/complexity/noForEach": 8,
+        "lint/correctness/noUnusedVariables": 5,
+        "lint/style/noInferrableTypes": 2,
+        "lint/style/useImportType": 1
+      },
+      "tests_ast": 281,
+      "expect_calls": 519,
+      "assertion_roulette_tests": 136,
+      "assertion_roulette_share": 0.484,
+      "magic_number_tests": 26,
+      "magic_number_share": 0.0925
+    },
+    "GTOT": {
+      "files": 30,
+      "biome_errors": 23,
+      "biome_warnings": 11,
+      "biome_categories": {
+        "lint/complexity/noForEach": 4,
+        "lint/complexity/noUselessEmptyExport": 3,
+        "lint/complexity/noUselessTypeConstraint": 1,
+        "lint/correctness/noUnusedImports": 6,
+        "lint/correctness/noUnusedVariables": 11,
+        "lint/style/useNumberNamespace": 5,
+        "lint/suspicious/noExportsInTest": 3,
+        "parse": 1
+      },
+      "tests_ast": 373,
+      "expect_calls": 606,
+      "assertion_roulette_tests": 171,
+      "assertion_roulette_share": 0.4584,
+      "magic_number_tests": 41,
+      "magic_number_share": 0.1099
+    },
+    "DEV": {
+      "files": 81,
+      "biome_errors": 0,
+      "biome_warnings": 0,
+      "biome_categories": {},
+      "tests_ast": 820,
+      "expect_calls": 2709,
+      "assertion_roulette_tests": 493,
+      "assertion_roulette_share": 0.6012,
+      "magic_number_tests": 213,
+      "magic_number_share": 0.2598
+    }
+  },
+  "per_file_llm": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "COT",
+      "biome": null,
+      "smells": null
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 9,
+        "expect_calls": 13,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.3333,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 156
+      }
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/correctness/noUnusedImports": 1
+        }
+      },
+      "smells": {
+        "test_count": 15,
+        "expect_calls": 26,
+        "assertion_roulette_tests": 10,
+        "assertion_roulette_share": 0.6667,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 230
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 8,
+        "assertion_roulette_tests": 0,
+        "assertion_roulette_share": 0,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.125,
+        "file_loc": 212
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 6,
+        "expect_calls": 14,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.8333,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 319
+      }
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 1,
+        "categories": {
+          "lint/correctness/noUnusedVariables": 1
+        }
+      },
+      "smells": {
+        "test_count": 6,
+        "expect_calls": 10,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.5,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 257
+      }
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 14,
+        "expect_calls": 19,
+        "assertion_roulette_tests": 4,
+        "assertion_roulette_share": 0.2857,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 204
+      }
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 11,
+        "expect_calls": 26,
+        "assertion_roulette_tests": 9,
+        "assertion_roulette_share": 0.8182,
+        "magic_number_tests": 2,
+        "magic_number_share": 0.1818,
+        "file_loc": 172
+      }
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 10,
+        "expect_calls": 20,
+        "assertion_roulette_tests": 8,
+        "assertion_roulette_share": 0.8,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 171
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "COT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/style/useNumberNamespace": 1
+        }
+      },
+      "smells": {
+        "test_count": 16,
+        "expect_calls": 27,
+        "assertion_roulette_tests": 7,
+        "assertion_roulette_share": 0.4375,
+        "magic_number_tests": 2,
+        "magic_number_share": 0.125,
+        "file_loc": 182
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "TOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 1
+        }
+      },
+      "smells": {
+        "test_count": 7,
+        "expect_calls": 10,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.4286,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 106
+      }
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 5,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 1,
+          "lint/complexity/noUselessEmptyExport": 1,
+          "lint/suspicious/noExportsInTest": 1,
+          "lint/style/useNumberNamespace": 2
+        }
+      },
+      "smells": {
+        "test_count": 10,
+        "expect_calls": 15,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.6,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 158
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 17,
+        "expect_calls": 29,
+        "assertion_roulette_tests": 9,
+        "assertion_roulette_share": 0.5294,
+        "magic_number_tests": 5,
+        "magic_number_share": 0.2941,
+        "file_loc": 196
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "TOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/style/useImportType": 1
+        }
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 15,
+        "assertion_roulette_tests": 4,
+        "assertion_roulette_share": 0.5,
+        "magic_number_tests": 3,
+        "magic_number_share": 0.375,
+        "file_loc": 141
+      }
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 1,
+        "categories": {
+          "lint/correctness/noUnusedVariables": 1
+        }
+      },
+      "smells": {
+        "test_count": 14,
+        "expect_calls": 24,
+        "assertion_roulette_tests": 7,
+        "assertion_roulette_share": 0.5,
+        "magic_number_tests": 2,
+        "magic_number_share": 0.1429,
+        "file_loc": 196
+      }
+    },
+    {
+      "unit_id": "117-$ZodIPv6",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 6,
+        "expect_calls": 18,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.8333,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 222
+      }
+    },
+    {
+      "unit_id": "117-$ZodIPv6",
+      "technique": "TOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 1
+        }
+      },
+      "smells": {
+        "test_count": 5,
+        "expect_calls": 8,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.6,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 132
+      }
+    },
+    {
+      "unit_id": "117-$ZodIPv6",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 16,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.625,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 90
+      }
+    },
+    {
+      "unit_id": "088-$ZodCheckStartsWith",
+      "technique": "COT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 1
+        }
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 15,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.75,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.125,
+        "file_loc": 187
+      }
+    },
+    {
+      "unit_id": "088-$ZodCheckStartsWith",
+      "technique": "TOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 2,
+        "categories": {
+          "lint/complexity/noForEach": 1,
+          "lint/correctness/noUnusedVariables": 2
+        }
+      },
+      "smells": {
+        "test_count": 6,
+        "expect_calls": 20,
+        "assertion_roulette_tests": 4,
+        "assertion_roulette_share": 0.6667,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 148
+      }
+    },
+    {
+      "unit_id": "088-$ZodCheckStartsWith",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 2,
+        "categories": {
+          "lint/correctness/noUnusedVariables": 2
+        }
+      },
+      "smells": {
+        "test_count": 11,
+        "expect_calls": 23,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.5455,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 153
+      }
+    },
+    {
+      "unit_id": "140-$ZodUnion",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 13,
+        "expect_calls": 21,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.4615,
+        "magic_number_tests": 3,
+        "magic_number_share": 0.2308,
+        "file_loc": 183
+      }
+    },
+    {
+      "unit_id": "140-$ZodUnion",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 12,
+        "expect_calls": 16,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.25,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 249
+      }
+    },
+    {
+      "unit_id": "140-$ZodUnion",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 2,
+        "warnings": 1,
+        "categories": {
+          "lint/complexity/noUselessTypeConstraint": 1,
+          "lint/correctness/noUnusedImports": 1,
+          "lint/correctness/noUnusedVariables": 1
+        }
+      },
+      "smells": {
+        "test_count": 13,
+        "expect_calls": 21,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.4615,
+        "magic_number_tests": 3,
+        "magic_number_share": 0.2308,
+        "file_loc": 286
+      }
+    },
+    {
+      "unit_id": "087-$ZodCheckIncludes",
+      "technique": "COT",
+      "biome": {
+        "errors": 2,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 2
+        }
+      },
+      "smells": {
+        "test_count": 9,
+        "expect_calls": 18,
+        "assertion_roulette_tests": 4,
+        "assertion_roulette_share": 0.4444,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 224
+      }
+    },
+    {
+      "unit_id": "087-$ZodCheckIncludes",
+      "technique": "TOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 1
+        }
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 18,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.75,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 246
+      }
+    },
+    {
+      "unit_id": "087-$ZodCheckIncludes",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 2,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 1,
+          "lint/correctness/noUnusedImports": 1
+        }
+      },
+      "smells": {
+        "test_count": 10,
+        "expect_calls": 16,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.6,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 159
+      }
+    },
+    {
+      "unit_id": "130-$ZodSymbol",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 13,
+        "expect_calls": 7,
+        "assertion_roulette_tests": 2,
+        "assertion_roulette_share": 0.1538,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 139
+      }
+    },
+    {
+      "unit_id": "130-$ZodSymbol",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 5,
+        "expect_calls": 19,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 1,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 167
+      }
+    },
+    {
+      "unit_id": "130-$ZodSymbol",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 21,
+        "assertion_roulette_tests": 4,
+        "assertion_roulette_share": 0.5,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.125,
+        "file_loc": 116
+      }
+    },
+    {
+      "unit_id": "147-$ZodEnum",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 18,
+        "expect_calls": 49,
+        "assertion_roulette_tests": 13,
+        "assertion_roulette_share": 0.7222,
+        "magic_number_tests": 5,
+        "magic_number_share": 0.2778,
+        "file_loc": 247
+      }
+    },
+    {
+      "unit_id": "147-$ZodEnum",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 15,
+        "expect_calls": 46,
+        "assertion_roulette_tests": 13,
+        "assertion_roulette_share": 0.8667,
+        "magic_number_tests": 3,
+        "magic_number_share": 0.2,
+        "file_loc": 211
+      }
+    },
+    {
+      "unit_id": "147-$ZodEnum",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 2,
+        "categories": {
+          "lint/correctness/noUnusedVariables": 2
+        }
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 27,
+        "assertion_roulette_tests": 8,
+        "assertion_roulette_share": 1,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.125,
+        "file_loc": 173
+      }
+    },
+    {
+      "unit_id": "159-$ZodPipe",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 7,
+        "expect_calls": 18,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.8571,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 306
+      }
+    },
+    {
+      "unit_id": "159-$ZodPipe",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 5,
+        "expect_calls": 19,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 1,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 204
+      }
+    },
+    {
+      "unit_id": "159-$ZodPipe",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/correctness/noUnusedImports": 1
+        }
+      },
+      "smells": {
+        "test_count": 9,
+        "expect_calls": 18,
+        "assertion_roulette_tests": 7,
+        "assertion_roulette_share": 0.7778,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.1111,
+        "file_loc": 206
+      }
+    },
+    {
+      "unit_id": "153-$ZodDefault",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 2,
+        "categories": {
+          "lint/correctness/noUnusedVariables": 2
+        }
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 17,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.75,
+        "magic_number_tests": 2,
+        "magic_number_share": 0.25,
+        "file_loc": 288
+      }
+    },
+    {
+      "unit_id": "153-$ZodDefault",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 1,
+        "categories": {
+          "lint/correctness/noUnusedVariables": 1
+        }
+      },
+      "smells": {
+        "test_count": 6,
+        "expect_calls": 14,
+        "assertion_roulette_tests": 4,
+        "assertion_roulette_share": 0.6667,
+        "magic_number_tests": 2,
+        "magic_number_share": 0.3333,
+        "file_loc": 154
+      }
+    },
+    {
+      "unit_id": "153-$ZodDefault",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 9,
+        "expect_calls": 10,
+        "assertion_roulette_tests": 1,
+        "assertion_roulette_share": 0.1111,
+        "magic_number_tests": 5,
+        "magic_number_share": 0.5556,
+        "file_loc": 105
+      }
+    },
+    {
+      "unit_id": "105-$ZodEmoji",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 13,
+        "expect_calls": 19,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.3846,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.0769,
+        "file_loc": 115
+      }
+    },
+    {
+      "unit_id": "105-$ZodEmoji",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 13,
+        "expect_calls": 13,
+        "assertion_roulette_tests": 0,
+        "assertion_roulette_share": 0,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 106
+      }
+    },
+    {
+      "unit_id": "105-$ZodEmoji",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 13,
+        "expect_calls": 16,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.2308,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 100
+      }
+    },
+    {
+      "unit_id": "137-$ZodDate",
+      "technique": "COT",
+      "biome": {
+        "errors": 3,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 1,
+          "lint/style/useNumberNamespace": 2
+        }
+      },
+      "smells": {
+        "test_count": 9,
+        "expect_calls": 29,
+        "assertion_roulette_tests": 9,
+        "assertion_roulette_share": 1,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.1111,
+        "file_loc": 152
+      }
+    },
+    {
+      "unit_id": "137-$ZodDate",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 7,
+        "expect_calls": 25,
+        "assertion_roulette_tests": 7,
+        "assertion_roulette_share": 1,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 196
+      }
+    },
+    {
+      "unit_id": "137-$ZodDate",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 2,
+        "warnings": 0,
+        "categories": {
+          "lint/style/useNumberNamespace": 2
+        }
+      },
+      "smells": {
+        "test_count": 13,
+        "expect_calls": 35,
+        "assertion_roulette_tests": 13,
+        "assertion_roulette_share": 1,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.0769,
+        "file_loc": 142
+      }
+    },
+    {
+      "unit_id": "055-ZodFile",
+      "technique": "COT",
+      "biome": {
+        "errors": 3,
+        "warnings": 0,
+        "categories": {
+          "lint/correctness/noUnusedImports": 1,
+          "lint/style/useNumberNamespace": 2
+        }
+      },
+      "smells": {
+        "test_count": 17,
+        "expect_calls": 17,
+        "assertion_roulette_tests": 0,
+        "assertion_roulette_share": 0,
+        "magic_number_tests": 3,
+        "magic_number_share": 0.1765,
+        "file_loc": 156
+      }
+    },
+    {
+      "unit_id": "055-ZodFile",
+      "technique": "TOT",
+      "biome": {
+        "errors": 2,
+        "warnings": 0,
+        "categories": {
+          "lint/style/noInferrableTypes": 2
+        }
+      },
+      "smells": {
+        "test_count": 17,
+        "expect_calls": 11,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.1765,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 222
+      }
+    },
+    {
+      "unit_id": "055-ZodFile",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/correctness/noUnusedImports": 1
+        }
+      },
+      "smells": {
+        "test_count": 12,
+        "expect_calls": 19,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.4167,
+        "magic_number_tests": 4,
+        "magic_number_share": 0.3333,
+        "file_loc": 112
+      }
+    },
+    {
+      "unit_id": "013-ZodUUID",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 13,
+        "expect_calls": 23,
+        "assertion_roulette_tests": 7,
+        "assertion_roulette_share": 0.5385,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.0769,
+        "file_loc": 190
+      }
+    },
+    {
+      "unit_id": "013-ZodUUID",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 18,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.625,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 156
+      }
+    },
+    {
+      "unit_id": "013-ZodUUID",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 16,
+        "expect_calls": 25,
+        "assertion_roulette_tests": 7,
+        "assertion_roulette_share": 0.4375,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 143
+      }
+    },
+    {
+      "unit_id": "036-ZodSymbol",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 15,
+        "expect_calls": 21,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.3333,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 135
+      }
+    },
+    {
+      "unit_id": "036-ZodSymbol",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 13,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.375,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 140
+      }
+    },
+    {
+      "unit_id": "036-ZodSymbol",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 13,
+        "expect_calls": 7,
+        "assertion_roulette_tests": 2,
+        "assertion_roulette_share": 0.1538,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 164
+      }
+    },
+    {
+      "unit_id": "062-ZodSuccess",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 10,
+        "expect_calls": 10,
+        "assertion_roulette_tests": 0,
+        "assertion_roulette_share": 0,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.1,
+        "file_loc": 119
+      }
+    },
+    {
+      "unit_id": "062-ZodSuccess",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 1,
+        "categories": {
+          "lint/correctness/noUnusedVariables": 1
+        }
+      },
+      "smells": {
+        "test_count": 6,
+        "expect_calls": 11,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.5,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 157
+      }
+    },
+    {
+      "unit_id": "062-ZodSuccess",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 1,
+        "categories": {
+          "lint/correctness/noUnusedVariables": 1
+        }
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 9,
+        "assertion_roulette_tests": 1,
+        "assertion_roulette_share": 0.125,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 171
+      }
+    },
+    {
+      "unit_id": "003-ZodISODateTime",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 28,
+        "expect_calls": 29,
+        "assertion_roulette_tests": 11,
+        "assertion_roulette_share": 0.3929,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.0357,
+        "file_loc": 299
+      }
+    },
+    {
+      "unit_id": "003-ZodISODateTime",
+      "technique": "TOT",
+      "biome": {
+        "errors": 2,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 2
+        }
+      },
+      "smells": {
+        "test_count": 7,
+        "expect_calls": 12,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.4286,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 149
+      }
+    },
+    {
+      "unit_id": "003-ZodISODateTime",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 3,
+        "categories": {
+          "lint/complexity/noForEach": 1,
+          "lint/correctness/noUnusedVariables": 3
+        }
+      },
+      "smells": {
+        "test_count": 23,
+        "expect_calls": 38,
+        "assertion_roulette_tests": 10,
+        "assertion_roulette_share": 0.4348,
+        "magic_number_tests": 3,
+        "magic_number_share": 0.1304,
+        "file_loc": 232
+      }
+    },
+    {
+      "unit_id": "021-ZodKSUID",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 22,
+        "expect_calls": 28,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.2727,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 231
+      }
+    },
+    {
+      "unit_id": "021-ZodKSUID",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 16,
+        "assertion_roulette_tests": 7,
+        "assertion_roulette_share": 0.875,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 144
+      }
+    },
+    {
+      "unit_id": "021-ZodKSUID",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 15,
+        "expect_calls": 26,
+        "assertion_roulette_tests": 8,
+        "assertion_roulette_share": 0.5333,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.0667,
+        "file_loc": 131
+      }
+    },
+    {
+      "unit_id": "058-ZodNullable",
+      "technique": "COT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/correctness/noUnusedImports": 1
+        }
+      },
+      "smells": {
+        "test_count": 8,
+        "expect_calls": 12,
+        "assertion_roulette_tests": 2,
+        "assertion_roulette_share": 0.25,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.125,
+        "file_loc": 204
+      }
+    },
+    {
+      "unit_id": "058-ZodNullable",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 1,
+        "categories": {
+          "lint/correctness/noUnusedVariables": 1
+        }
+      },
+      "smells": {
+        "test_count": 7,
+        "expect_calls": 12,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.4286,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 197
+      }
+    },
+    {
+      "unit_id": "058-ZodNullable",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 5,
+        "expect_calls": 7,
+        "assertion_roulette_tests": 1,
+        "assertion_roulette_share": 0.2,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 66
+      }
+    },
+    {
+      "unit_id": "168-ZodMiniISODate",
+      "technique": "COT",
+      "biome": {
+        "errors": 4,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 4
+        }
+      },
+      "smells": {
+        "test_count": 12,
+        "expect_calls": 13,
+        "assertion_roulette_tests": 4,
+        "assertion_roulette_share": 0.3333,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 184
+      }
+    },
+    {
+      "unit_id": "168-ZodMiniISODate",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 15,
+        "expect_calls": 16,
+        "assertion_roulette_tests": 1,
+        "assertion_roulette_share": 0.0667,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 130
+      }
+    },
+    {
+      "unit_id": "168-ZodMiniISODate",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 14,
+        "expect_calls": 16,
+        "assertion_roulette_tests": 2,
+        "assertion_roulette_share": 0.1429,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.0714,
+        "file_loc": 98
+      }
+    },
+    {
+      "unit_id": "210-ZodMiniDiscriminatedUnion",
+      "technique": "COT",
+      "biome": {
+        "errors": 2,
+        "warnings": 1,
+        "categories": {
+          "lint/correctness/noUnusedImports": 1,
+          "lint/correctness/noUnusedVariables": 1,
+          "lint/complexity/noUselessThisAlias": 1
+        }
+      },
+      "smells": {
+        "test_count": 6,
+        "expect_calls": 13,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.5,
+        "magic_number_tests": 2,
+        "magic_number_share": 0.3333,
+        "file_loc": 190
+      }
+    },
+    {
+      "unit_id": "210-ZodMiniDiscriminatedUnion",
+      "technique": "TOT",
+      "biome": null,
+      "smells": null
+    },
+    {
+      "unit_id": "210-ZodMiniDiscriminatedUnion",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 3,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 1,
+          "lint/complexity/noUselessEmptyExport": 1,
+          "lint/suspicious/noExportsInTest": 1
+        }
+      },
+      "smells": {
+        "test_count": 13,
+        "expect_calls": 18,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.3846,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 205
+      }
+    },
+    {
+      "unit_id": "197-ZodMiniBigInt",
+      "technique": "COT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/style/useNumberNamespace": 1
+        }
+      },
+      "smells": {
+        "test_count": 24,
+        "expect_calls": 43,
+        "assertion_roulette_tests": 8,
+        "assertion_roulette_share": 0.3333,
+        "magic_number_tests": 13,
+        "magic_number_share": 0.5417,
+        "file_loc": 241
+      }
+    },
+    {
+      "unit_id": "197-ZodMiniBigInt",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 16,
+        "expect_calls": 31,
+        "assertion_roulette_tests": 8,
+        "assertion_roulette_share": 0.5,
+        "magic_number_tests": 6,
+        "magic_number_share": 0.375,
+        "file_loc": 187
+      }
+    },
+    {
+      "unit_id": "197-ZodMiniBigInt",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "parse": 1
+        }
+      },
+      "smells": {
+        "test_count": 18,
+        "expect_calls": 27,
+        "assertion_roulette_tests": 8,
+        "assertion_roulette_share": 0.4444,
+        "magic_number_tests": 9,
+        "magic_number_share": 0.5,
+        "file_loc": 142
+      }
+    },
+    {
+      "unit_id": "206-ZodMiniDate",
+      "technique": "COT",
+      "biome": {
+        "errors": 2,
+        "warnings": 0,
+        "categories": {
+          "lint/style/useNumberNamespace": 2
+        }
+      },
+      "smells": {
+        "test_count": 14,
+        "expect_calls": 39,
+        "assertion_roulette_tests": 12,
+        "assertion_roulette_share": 0.8571,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 299
+      }
+    },
+    {
+      "unit_id": "206-ZodMiniDate",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 14,
+        "expect_calls": 26,
+        "assertion_roulette_tests": 8,
+        "assertion_roulette_share": 0.5714,
+        "magic_number_tests": 2,
+        "magic_number_share": 0.1429,
+        "file_loc": 150
+      }
+    },
+    {
+      "unit_id": "206-ZodMiniDate",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/style/useNumberNamespace": 1
+        }
+      },
+      "smells": {
+        "test_count": 25,
+        "expect_calls": 32,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.2,
+        "magic_number_tests": 3,
+        "magic_number_share": 0.12,
+        "file_loc": 179
+      }
+    },
+    {
+      "unit_id": "205-ZodMiniVoid",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 10,
+        "expect_calls": 20,
+        "assertion_roulette_tests": 7,
+        "assertion_roulette_share": 0.7,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 122
+      }
+    },
+    {
+      "unit_id": "205-ZodMiniVoid",
+      "technique": "TOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 1
+        }
+      },
+      "smells": {
+        "test_count": 14,
+        "expect_calls": 19,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.3571,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 197
+      }
+    },
+    {
+      "unit_id": "205-ZodMiniVoid",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 20,
+        "expect_calls": 26,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.25,
+        "magic_number_tests": 2,
+        "magic_number_share": 0.1,
+        "file_loc": 202
+      }
+    },
+    {
+      "unit_id": "232-ZodMiniPromise",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 21,
+        "expect_calls": 35,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.2381,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.0476,
+        "file_loc": 305
+      }
+    },
+    {
+      "unit_id": "232-ZodMiniPromise",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 15,
+        "expect_calls": 18,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.2,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.0667,
+        "file_loc": 169
+      }
+    },
+    {
+      "unit_id": "232-ZodMiniPromise",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 15,
+        "expect_calls": 25,
+        "assertion_roulette_tests": 8,
+        "assertion_roulette_share": 0.5333,
+        "magic_number_tests": 3,
+        "magic_number_share": 0.2,
+        "file_loc": 194
+      }
+    },
+    {
+      "unit_id": "211-ZodMiniIntersection",
+      "technique": "COT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 10,
+        "expect_calls": 13,
+        "assertion_roulette_tests": 3,
+        "assertion_roulette_share": 0.3,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.1,
+        "file_loc": 130
+      }
+    },
+    {
+      "unit_id": "211-ZodMiniIntersection",
+      "technique": "TOT",
+      "biome": {
+        "errors": 1,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noForEach": 1
+        }
+      },
+      "smells": {
+        "test_count": 14,
+        "expect_calls": 15,
+        "assertion_roulette_tests": 1,
+        "assertion_roulette_share": 0.0714,
+        "magic_number_tests": 7,
+        "magic_number_share": 0.5,
+        "file_loc": 212
+      }
+    },
+    {
+      "unit_id": "211-ZodMiniIntersection",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 3,
+        "warnings": 0,
+        "categories": {
+          "lint/complexity/noUselessEmptyExport": 1,
+          "lint/suspicious/noExportsInTest": 1,
+          "lint/correctness/noUnusedImports": 1
+        }
+      },
+      "smells": {
+        "test_count": 9,
+        "expect_calls": 18,
+        "assertion_roulette_tests": 6,
+        "assertion_roulette_share": 0.6667,
+        "magic_number_tests": 1,
+        "magic_number_share": 0.1111,
+        "file_loc": 174
+      }
+    },
+    {
+      "unit_id": "181-ZodMiniCUID2",
+      "technique": "COT",
+      "biome": null,
+      "smells": null
+    },
+    {
+      "unit_id": "181-ZodMiniCUID2",
+      "technique": "TOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 9,
+        "expect_calls": 25,
+        "assertion_roulette_tests": 9,
+        "assertion_roulette_share": 1,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 188
+      }
+    },
+    {
+      "unit_id": "181-ZodMiniCUID2",
+      "technique": "GTOT",
+      "biome": {
+        "errors": 0,
+        "warnings": 0,
+        "categories": {}
+      },
+      "smells": {
+        "test_count": 10,
+        "expect_calls": 15,
+        "assertion_roulette_tests": 5,
+        "assertion_roulette_share": 0.5,
+        "magic_number_tests": 0,
+        "magic_number_share": 0,
+        "file_loc": 157
+      }
+    }
+  ]
+}

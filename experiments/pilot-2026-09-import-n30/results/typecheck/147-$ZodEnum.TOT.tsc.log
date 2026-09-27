@@ -1,0 +1,4 @@
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(53,18): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(98,18): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(143,18): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodEnum.pilot.test.ts(191,18): error TS2348: Value of type '$constructor<$ZodEnum<Readonly<Record<string, EnumValue>>>, $ZodEnumDef<Readonly<Record<string, EnumValue>>>>' is not callable. Did you mean to include 'new'?

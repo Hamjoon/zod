@@ -1,0 +1,18 @@
+{
+  "unit_id": "159-$ZodPipe",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:31:04.459806+00:00",
+  "latency_s": 22.153,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "Novita",
+  "response_id": "gen-1790335866-qpRS2dpzBThcJLF4XNVO",
+  "content_chars": 11450,
+  "content_empty": false,
+  "completion_tokens": 3742,
+  "prompt_tokens_reported": 709,
+  "error": null
+}

@@ -1,0 +1,667 @@
+{
+  "coverage_file": "results/dev-coverage-recheck/coverage-final.json",
+  "rule": "unit_coverage from scripts/pilot_common.py",
+  "all_match": true,
+  "rows": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 81,
+        "covered_lines": 81,
+        "line_pct": 100.0,
+        "branches_total": 52,
+        "branches_covered": 50,
+        "branch_pct": 96.15
+      },
+      "current": {
+        "executable_lines": 81,
+        "covered_lines": 81,
+        "line_pct": 100.0,
+        "branches_total": 52,
+        "branches_covered": 50,
+        "branch_pct": 96.15
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 35,
+        "covered_lines": 35,
+        "line_pct": 100.0,
+        "branches_total": 7,
+        "branches_covered": 5,
+        "branch_pct": 71.43
+      },
+      "current": {
+        "executable_lines": 35,
+        "covered_lines": 35,
+        "line_pct": 100.0,
+        "branches_total": 7,
+        "branches_covered": 5,
+        "branch_pct": 71.43
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "117-$ZodIPv6",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 21,
+        "covered_lines": 21,
+        "line_pct": 100.0,
+        "branches_total": 4,
+        "branches_covered": 4,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 21,
+        "covered_lines": 21,
+        "line_pct": 100.0,
+        "branches_total": 4,
+        "branches_covered": 4,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "088-$ZodCheckStartsWith",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 25,
+        "covered_lines": 25,
+        "line_pct": 100.0,
+        "branches_total": 4,
+        "branches_covered": 4,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 25,
+        "covered_lines": 25,
+        "line_pct": 100.0,
+        "branches_total": 4,
+        "branches_covered": 4,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "140-$ZodUnion",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 46,
+        "covered_lines": 38,
+        "line_pct": 82.61,
+        "branches_total": 24,
+        "branches_covered": 21,
+        "branch_pct": 87.5
+      },
+      "current": {
+        "executable_lines": 46,
+        "covered_lines": 38,
+        "line_pct": 82.61,
+        "branches_total": 24,
+        "branches_covered": 21,
+        "branch_pct": 87.5
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "087-$ZodCheckIncludes",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 26,
+        "covered_lines": 26,
+        "line_pct": 100.0,
+        "branches_total": 8,
+        "branches_covered": 8,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 26,
+        "covered_lines": 26,
+        "line_pct": 100.0,
+        "branches_total": 8,
+        "branches_covered": 8,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "130-$ZodSymbol",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 14,
+        "covered_lines": 14,
+        "line_pct": 100.0,
+        "branches_total": 4,
+        "branches_covered": 4,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 14,
+        "covered_lines": 14,
+        "line_pct": 100.0,
+        "branches_total": 4,
+        "branches_covered": 4,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "147-$ZodEnum",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 24,
+        "covered_lines": 24,
+        "line_pct": 100.0,
+        "branches_total": 9,
+        "branches_covered": 9,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 24,
+        "covered_lines": 24,
+        "line_pct": 100.0,
+        "branches_total": 9,
+        "branches_covered": 9,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "159-$ZodPipe",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 14,
+        "covered_lines": 14,
+        "line_pct": 100.0,
+        "branches_total": 9,
+        "branches_covered": 9,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 14,
+        "covered_lines": 14,
+        "line_pct": 100.0,
+        "branches_total": 9,
+        "branches_covered": 9,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "153-$ZodDefault",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 19,
+        "covered_lines": 17,
+        "line_pct": 89.47,
+        "branches_total": 8,
+        "branches_covered": 7,
+        "branch_pct": 87.5
+      },
+      "current": {
+        "executable_lines": 19,
+        "covered_lines": 17,
+        "line_pct": 89.47,
+        "branches_total": 8,
+        "branches_covered": 7,
+        "branch_pct": 87.5
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "105-$ZodEmoji",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "137-$ZodDate",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 22,
+        "covered_lines": 22,
+        "line_pct": 100.0,
+        "branches_total": 10,
+        "branches_covered": 10,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 22,
+        "covered_lines": 22,
+        "line_pct": 100.0,
+        "branches_total": 10,
+        "branches_covered": 10,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "055-ZodFile",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 6,
+        "branches_covered": 6,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 6,
+        "branches_covered": 6,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "013-ZodUUID",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "036-ZodSymbol",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "062-ZodSuccess",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 5,
+        "covered_lines": 5,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 5,
+        "covered_lines": 5,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "003-ZodISODateTime",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "021-ZodKSUID",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "058-ZodNullable",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 8,
+        "covered_lines": 8,
+        "line_pct": 100.0,
+        "branches_total": 2,
+        "branches_covered": 2,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 8,
+        "covered_lines": 8,
+        "line_pct": 100.0,
+        "branches_total": 2,
+        "branches_covered": 2,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "168-ZodMiniISODate",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "210-ZodMiniDiscriminatedUnion",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "197-ZodMiniBigInt",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "206-ZodMiniDate",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "205-ZodMiniVoid",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "232-ZodMiniPromise",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "211-ZodMiniIntersection",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    },
+    {
+      "unit_id": "181-ZodMiniCUID2",
+      "week1_node": "v24.11.0",
+      "current_node": "v24.21.0",
+      "week1": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "current": {
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "matches": true
+    }
+  ]
+}

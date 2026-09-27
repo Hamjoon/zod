@@ -1,0 +1,4715 @@
+{
+  "source": "dev-baseline/coverage/coverage-final.json (dev suite at t, @vitest/coverage-v8 2.1.9)",
+  "rule": "dev-coverage-units.py: per-unit line and branch coverage of the dev suite at t, restricted to each\nunit's declaring statement line range (code_start_line..end_line of the class / $constructor statement;\ntype-only statements are not counted). Input: dev-baseline/coverage/coverage-final.json (istanbul-format\nJSON written by @vitest/coverage-v8), results/units-all.json. Output: dev-baseline/dev-coverage-units.json.\nLine rule: a statementMap entry counts as an executable line if its start line lies in the range; it is\ncovered if its counter s[id] > 0 (v8-to-istanbul emits one statement per non-empty source line).\nBranch rule: a branchMap entry belongs to the unit if its `line` lies in the range; each of its locations\nis one branch, covered if the matching b[id][i] > 0 (istanbul's convention).\nRun from the zod repo root: ../.venv/bin/python experiments/pilot-2026-09/scripts/dev-coverage-units.py",
+  "summary": {
+    "units": 233,
+    "file_not_in_coverage": 0,
+    "zero_executable_lines": 0,
+    "has_coverage_data_line_reading": 233,
+    "zero_branches_among_has_data": 13,
+    "population_files_missing_from_coverage": [],
+    "coverage_files_total": 103
+  },
+  "file_checks": {
+    "packages/zod/src/v4/core/schemas.ts": {
+      "file_lines": 3847,
+      "nonblank_lines": 3307,
+      "statementMap_entries": 1710,
+      "branchMap_entries": 642
+    },
+    "packages/zod/src/v4/classic/schemas.ts": {
+      "file_lines": 2046,
+      "nonblank_lines": 1809,
+      "statementMap_entries": 1055,
+      "branchMap_entries": 334
+    },
+    "packages/zod/src/v4/mini/schemas.ts": {
+      "file_lines": 1580,
+      "nonblank_lines": 1408,
+      "statementMap_entries": 936,
+      "branchMap_entries": 163
+    }
+  },
+  "example_unit": {
+    "unit_id": null,
+    "class_name": "$ZodRegistry",
+    "file": "packages/zod/src/v4/core/registries.ts",
+    "dir": "core",
+    "kind": "a",
+    "range": [
+      27,
+      79
+    ],
+    "range_lines": 53,
+    "file_in_coverage": true,
+    "executable_lines": 43,
+    "covered_lines": 39,
+    "line_pct": 90.7,
+    "branches_total": 16,
+    "branches_covered": 14,
+    "branch_pct": 87.5,
+    "has_coverage_data": true
+  },
+  "units": [
+    {
+      "unit_id": "001-ZodError",
+      "class_name": "ZodError",
+      "file": "packages/zod/src/v4/classic/errors.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        57,
+        57
+      ],
+      "range_lines": 1,
+      "file_in_coverage": true,
+      "executable_lines": 1,
+      "covered_lines": 1,
+      "line_pct": 100.0,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "002-ZodRealError",
+      "class_name": "ZodRealError",
+      "file": "packages/zod/src/v4/classic/errors.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        58,
+        60
+      ],
+      "range_lines": 3,
+      "file_in_coverage": true,
+      "executable_lines": 3,
+      "covered_lines": 3,
+      "line_pct": 100.0,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "003-ZodISODateTime",
+      "class_name": "ZodISODateTime",
+      "file": "packages/zod/src/v4/classic/iso.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        15,
+        21
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "004-ZodISODate",
+      "class_name": "ZodISODate",
+      "file": "packages/zod/src/v4/classic/iso.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        38,
+        41
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "005-ZodISOTime",
+      "class_name": "ZodISOTime",
+      "file": "packages/zod/src/v4/classic/iso.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        60,
+        63
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "006-ZodISODuration",
+      "class_name": "ZodISODuration",
+      "file": "packages/zod/src/v4/classic/iso.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        80,
+        86
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "007-ZodType",
+      "class_name": "ZodType",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        124,
+        204
+      ],
+      "range_lines": 81,
+      "file_in_coverage": true,
+      "executable_lines": 67,
+      "covered_lines": 67,
+      "line_pct": 100.0,
+      "branches_total": 33,
+      "branches_covered": 32,
+      "branch_pct": 96.97,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "008-_ZodString",
+      "class_name": "_ZodString",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        233,
+        259
+      ],
+      "range_lines": 27,
+      "file_in_coverage": true,
+      "executable_lines": 22,
+      "covered_lines": 22,
+      "line_pct": 100.0,
+      "branches_total": 16,
+      "branches_covered": 16,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "009-ZodString",
+      "class_name": "ZodString",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        334,
+        367
+      ],
+      "range_lines": 34,
+      "file_in_coverage": true,
+      "executable_lines": 31,
+      "covered_lines": 31,
+      "line_pct": 100.0,
+      "branches_total": 27,
+      "branches_covered": 27,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "010-ZodStringFormat",
+      "class_name": "ZodStringFormat",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        378,
+        384
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "011-ZodEmail",
+      "class_name": "ZodEmail",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        390,
+        394
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "012-ZodGUID",
+      "class_name": "ZodGUID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        404,
+        408
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "013-ZodUUID",
+      "class_name": "ZodUUID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        418,
+        422
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "014-ZodURL",
+      "class_name": "ZodURL",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        448,
+        452
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "015-ZodEmoji",
+      "class_name": "ZodEmoji",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        462,
+        466
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "016-ZodNanoID",
+      "class_name": "ZodNanoID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        476,
+        480
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "017-ZodCUID",
+      "class_name": "ZodCUID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        490,
+        494
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "018-ZodCUID2",
+      "class_name": "ZodCUID2",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        504,
+        508
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "019-ZodULID",
+      "class_name": "ZodULID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        518,
+        522
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "020-ZodXID",
+      "class_name": "ZodXID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        532,
+        536
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "021-ZodKSUID",
+      "class_name": "ZodKSUID",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        546,
+        550
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "022-ZodIPv4",
+      "class_name": "ZodIPv4",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        574,
+        578
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "023-ZodIPv6",
+      "class_name": "ZodIPv6",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        588,
+        592
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "024-ZodCIDRv4",
+      "class_name": "ZodCIDRv4",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        601,
+        604
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "025-ZodCIDRv6",
+      "class_name": "ZodCIDRv6",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        614,
+        617
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "026-ZodBase64",
+      "class_name": "ZodBase64",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        627,
+        631
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "027-ZodBase64URL",
+      "class_name": "ZodBase64URL",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        640,
+        647
+      ],
+      "range_lines": 8,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "028-ZodE164",
+      "class_name": "ZodE164",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        656,
+        660
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "029-ZodJWT",
+      "class_name": "ZodJWT",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        670,
+        674
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "030-ZodCustomStringFormat",
+      "class_name": "ZodCustomStringFormat",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        686,
+        693
+      ],
+      "range_lines": 8,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "031-ZodNumber",
+      "class_name": "ZodNumber",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        739,
+        769
+      ],
+      "range_lines": 31,
+      "file_in_coverage": true,
+      "executable_lines": 27,
+      "covered_lines": 27,
+      "line_pct": 100.0,
+      "branches_total": 26,
+      "branches_covered": 24,
+      "branch_pct": 92.31,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "032-ZodNumberFormat",
+      "class_name": "ZodNumberFormat",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        779,
+        785
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "033-ZodBoolean",
+      "class_name": "ZodBoolean",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        820,
+        823
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "034-ZodBigInt",
+      "class_name": "ZodBigInt",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        851,
+        873
+      ],
+      "range_lines": 23,
+      "file_in_coverage": true,
+      "executable_lines": 21,
+      "covered_lines": 21,
+      "line_pct": 100.0,
+      "branches_total": 15,
+      "branches_covered": 15,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "035-ZodBigIntFormat",
+      "class_name": "ZodBigIntFormat",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        884,
+        890
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "036-ZodSymbol",
+      "class_name": "ZodSymbol",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        904,
+        907
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "037-ZodUndefined",
+      "class_name": "ZodUndefined",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        915,
+        921
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "class_name": "ZodNull",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        930,
+        933
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "039-ZodAny",
+      "class_name": "ZodAny",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        942,
+        945
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "040-ZodUnknown",
+      "class_name": "ZodUnknown",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        953,
+        956
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "041-ZodNever",
+      "class_name": "ZodNever",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        964,
+        967
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "042-ZodVoid",
+      "class_name": "ZodVoid",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        975,
+        978
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "043-ZodDate",
+      "class_name": "ZodDate",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        997,
+        1007
+      ],
+      "range_lines": 11,
+      "file_in_coverage": true,
+      "executable_lines": 9,
+      "covered_lines": 9,
+      "line_pct": 100.0,
+      "branches_total": 7,
+      "branches_covered": 7,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "044-ZodArray",
+      "class_name": "ZodArray",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1025,
+        1036
+      ],
+      "range_lines": 12,
+      "file_in_coverage": true,
+      "executable_lines": 10,
+      "covered_lines": 10,
+      "line_pct": 100.0,
+      "branches_total": 5,
+      "branches_covered": 5,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "045-ZodObject",
+      "class_name": "ZodObject",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1127,
+        1148
+      ],
+      "range_lines": 22,
+      "file_in_coverage": true,
+      "executable_lines": 19,
+      "covered_lines": 19,
+      "line_pct": 100.0,
+      "branches_total": 13,
+      "branches_covered": 13,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "046-ZodUnion",
+      "class_name": "ZodUnion",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1205,
+        1209
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 5,
+      "covered_lines": 5,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "047-ZodDiscriminatedUnion",
+      "class_name": "ZodDiscriminatedUnion",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1228,
+        1234
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "048-ZodIntersection",
+      "class_name": "ZodIntersection",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1256,
+        1262
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "049-ZodTuple",
+      "class_name": "ZodTuple",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1283,
+        1291
+      ],
+      "range_lines": 9,
+      "file_in_coverage": true,
+      "executable_lines": 9,
+      "covered_lines": 9,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "050-ZodRecord",
+      "class_name": "ZodRecord",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1328,
+        1334
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 6,
+      "covered_lines": 6,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "051-ZodMap",
+      "class_name": "ZodMap",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1369,
+        1374
+      ],
+      "range_lines": 6,
+      "file_in_coverage": true,
+      "executable_lines": 6,
+      "covered_lines": 6,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "052-ZodSet",
+      "class_name": "ZodSet",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1399,
+        1407
+      ],
+      "range_lines": 9,
+      "file_in_coverage": true,
+      "executable_lines": 8,
+      "covered_lines": 8,
+      "line_pct": 100.0,
+      "branches_total": 5,
+      "branches_covered": 5,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "class_name": "ZodEnum",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1438,
+        1476
+      ],
+      "range_lines": 39,
+      "file_in_coverage": true,
+      "executable_lines": 35,
+      "covered_lines": 35,
+      "line_pct": 100.0,
+      "branches_total": 7,
+      "branches_covered": 5,
+      "branch_pct": 71.43,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "054-ZodLiteral",
+      "class_name": "ZodLiteral",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1517,
+        1529
+      ],
+      "range_lines": 13,
+      "file_in_coverage": true,
+      "executable_lines": 13,
+      "covered_lines": 13,
+      "line_pct": 100.0,
+      "branches_total": 3,
+      "branches_covered": 3,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "055-ZodFile",
+      "class_name": "ZodFile",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1553,
+        1560
+      ],
+      "range_lines": 8,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 6,
+      "branches_covered": 6,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "056-ZodTransform",
+      "class_name": "ZodTransform",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1570,
+        1604
+      ],
+      "range_lines": 35,
+      "file_in_coverage": true,
+      "executable_lines": 31,
+      "covered_lines": 31,
+      "line_pct": 100.0,
+      "branches_total": 10,
+      "branches_covered": 10,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "057-ZodOptional",
+      "class_name": "ZodOptional",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1621,
+        1629
+      ],
+      "range_lines": 9,
+      "file_in_coverage": true,
+      "executable_lines": 8,
+      "covered_lines": 8,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "058-ZodNullable",
+      "class_name": "ZodNullable",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1644,
+        1652
+      ],
+      "range_lines": 9,
+      "file_in_coverage": true,
+      "executable_lines": 8,
+      "covered_lines": 8,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "059-ZodDefault",
+      "class_name": "ZodDefault",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1674,
+        1680
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 6,
+      "covered_lines": 6,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "060-ZodPrefault",
+      "class_name": "ZodPrefault",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1701,
+        1708
+      ],
+      "range_lines": 8,
+      "file_in_coverage": true,
+      "executable_lines": 8,
+      "covered_lines": 8,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "061-ZodNonOptional",
+      "class_name": "ZodNonOptional",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1729,
+        1737
+      ],
+      "range_lines": 9,
+      "file_in_coverage": true,
+      "executable_lines": 8,
+      "covered_lines": 8,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "062-ZodSuccess",
+      "class_name": "ZodSuccess",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1756,
+        1761
+      ],
+      "range_lines": 6,
+      "file_in_coverage": true,
+      "executable_lines": 5,
+      "covered_lines": 5,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "063-ZodCatch",
+      "class_name": "ZodCatch",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1778,
+        1784
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 6,
+      "covered_lines": 6,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "064-ZodNaN",
+      "class_name": "ZodNaN",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1802,
+        1805
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "065-ZodPipe",
+      "class_name": "ZodPipe",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1818,
+        1824
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 6,
+      "covered_lines": 6,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "066-ZodReadonly",
+      "class_name": "ZodReadonly",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1843,
+        1849
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "067-ZodTemplateLiteral",
+      "class_name": "ZodTemplateLiteral",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1862,
+        1868
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "068-ZodLazy",
+      "class_name": "ZodLazy",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1887,
+        1892
+      ],
+      "range_lines": 6,
+      "file_in_coverage": true,
+      "executable_lines": 5,
+      "covered_lines": 5,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "069-ZodPromise",
+      "class_name": "ZodPromise",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1907,
+        1912
+      ],
+      "range_lines": 6,
+      "file_in_coverage": true,
+      "executable_lines": 5,
+      "covered_lines": 5,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "070-ZodCustom",
+      "class_name": "ZodCustom",
+      "file": "packages/zod/src/v4/classic/schemas.ts",
+      "dir": "classic",
+      "kind": "b",
+      "range": [
+        1925,
+        1928
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "071-$ZodCheck",
+      "class_name": "$ZodCheck",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        32,
+        39
+      ],
+      "range_lines": 8,
+      "file_in_coverage": true,
+      "executable_lines": 8,
+      "covered_lines": 8,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "072-$ZodCheckLessThan",
+      "class_name": "$ZodCheckLessThan",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        64,
+        95
+      ],
+      "range_lines": 32,
+      "file_in_coverage": true,
+      "executable_lines": 29,
+      "covered_lines": 29,
+      "line_pct": 100.0,
+      "branches_total": 13,
+      "branches_covered": 13,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "073-$ZodCheckGreaterThan",
+      "class_name": "$ZodCheckGreaterThan",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        115,
+        146
+      ],
+      "range_lines": 32,
+      "file_in_coverage": true,
+      "executable_lines": 29,
+      "covered_lines": 29,
+      "line_pct": 100.0,
+      "branches_total": 13,
+      "branches_covered": 13,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "074-$ZodCheckMultipleOf",
+      "class_name": "$ZodCheckMultipleOf",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        168,
+        194
+      ],
+      "range_lines": 27,
+      "file_in_coverage": true,
+      "executable_lines": 24,
+      "covered_lines": 24,
+      "line_pct": 100.0,
+      "branches_total": 7,
+      "branches_covered": 6,
+      "branch_pct": 85.71,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "075-$ZodCheckNumberFormat",
+      "class_name": "$ZodCheckNumberFormat",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        264,
+        367
+      ],
+      "range_lines": 104,
+      "file_in_coverage": true,
+      "executable_lines": 76,
+      "covered_lines": 76,
+      "line_pct": 100.0,
+      "branches_total": 16,
+      "branches_covered": 15,
+      "branch_pct": 93.75,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "076-$ZodCheckBigIntFormat",
+      "class_name": "$ZodCheckBigIntFormat",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        389,
+        429
+      ],
+      "range_lines": 41,
+      "file_in_coverage": true,
+      "executable_lines": 36,
+      "covered_lines": 36,
+      "line_pct": 100.0,
+      "branches_total": 5,
+      "branches_covered": 5,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "077-$ZodCheckMaxSize",
+      "class_name": "$ZodCheckMaxSize",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        448,
+        478
+      ],
+      "range_lines": 31,
+      "file_in_coverage": true,
+      "executable_lines": 27,
+      "covered_lines": 27,
+      "line_pct": 100.0,
+      "branches_total": 9,
+      "branches_covered": 9,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "078-$ZodCheckMinSize",
+      "class_name": "$ZodCheckMinSize",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        497,
+        527
+      ],
+      "range_lines": 31,
+      "file_in_coverage": true,
+      "executable_lines": 27,
+      "covered_lines": 27,
+      "line_pct": 100.0,
+      "branches_total": 9,
+      "branches_covered": 9,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "079-$ZodCheckSizeEquals",
+      "class_name": "$ZodCheckSizeEquals",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        546,
+        580
+      ],
+      "range_lines": 35,
+      "file_in_coverage": true,
+      "executable_lines": 31,
+      "covered_lines": 28,
+      "line_pct": 90.32,
+      "branches_total": 6,
+      "branches_covered": 4,
+      "branch_pct": 66.67,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "080-$ZodCheckMaxLength",
+      "class_name": "$ZodCheckMaxLength",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        600,
+        632
+      ],
+      "range_lines": 33,
+      "file_in_coverage": true,
+      "executable_lines": 29,
+      "covered_lines": 29,
+      "line_pct": 100.0,
+      "branches_total": 9,
+      "branches_covered": 9,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "081-$ZodCheckMinLength",
+      "class_name": "$ZodCheckMinLength",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        651,
+        683
+      ],
+      "range_lines": 33,
+      "file_in_coverage": true,
+      "executable_lines": 29,
+      "covered_lines": 29,
+      "line_pct": 100.0,
+      "branches_total": 9,
+      "branches_covered": 9,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "082-$ZodCheckLengthEquals",
+      "class_name": "$ZodCheckLengthEquals",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        703,
+        737
+      ],
+      "range_lines": 35,
+      "file_in_coverage": true,
+      "executable_lines": 32,
+      "covered_lines": 32,
+      "line_pct": 100.0,
+      "branches_total": 9,
+      "branches_covered": 9,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "083-$ZodCheckStringFormat",
+      "class_name": "$ZodCheckStringFormat",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        788,
+        818
+      ],
+      "range_lines": 31,
+      "file_in_coverage": true,
+      "executable_lines": 29,
+      "covered_lines": 29,
+      "line_pct": 100.0,
+      "branches_total": 10,
+      "branches_covered": 9,
+      "branch_pct": 90.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "084-$ZodCheckRegex",
+      "class_name": "$ZodCheckRegex",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        837,
+        856
+      ],
+      "range_lines": 20,
+      "file_in_coverage": true,
+      "executable_lines": 19,
+      "covered_lines": 19,
+      "line_pct": 100.0,
+      "branches_total": 5,
+      "branches_covered": 5,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "085-$ZodCheckLowerCase",
+      "class_name": "$ZodCheckLowerCase",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        908,
+        914
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "class_name": "$ZodCheckUpperCase",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        930,
+        936
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "087-$ZodCheckIncludes",
+      "class_name": "$ZodCheckIncludes",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        955,
+        982
+      ],
+      "range_lines": 28,
+      "file_in_coverage": true,
+      "executable_lines": 26,
+      "covered_lines": 26,
+      "line_pct": 100.0,
+      "branches_total": 8,
+      "branches_covered": 8,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "088-$ZodCheckStartsWith",
+      "class_name": "$ZodCheckStartsWith",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1000,
+        1026
+      ],
+      "range_lines": 27,
+      "file_in_coverage": true,
+      "executable_lines": 25,
+      "covered_lines": 25,
+      "line_pct": 100.0,
+      "branches_total": 4,
+      "branches_covered": 4,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "089-$ZodCheckEndsWith",
+      "class_name": "$ZodCheckEndsWith",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1044,
+        1070
+      ],
+      "range_lines": 27,
+      "file_in_coverage": true,
+      "executable_lines": 25,
+      "covered_lines": 25,
+      "line_pct": 100.0,
+      "branches_total": 6,
+      "branches_covered": 6,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "090-$ZodCheckProperty",
+      "class_name": "$ZodCheckProperty",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1099,
+        1121
+      ],
+      "range_lines": 23,
+      "file_in_coverage": true,
+      "executable_lines": 20,
+      "covered_lines": 4,
+      "line_pct": 20.0,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "091-$ZodCheckMimeType",
+      "class_name": "$ZodCheckMimeType",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1140,
+        1158
+      ],
+      "range_lines": 19,
+      "file_in_coverage": true,
+      "executable_lines": 19,
+      "covered_lines": 19,
+      "line_pct": 100.0,
+      "branches_total": 5,
+      "branches_covered": 5,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "092-$ZodCheckOverwrite",
+      "class_name": "$ZodCheckOverwrite",
+      "file": "packages/zod/src/v4/core/checks.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1207,
+        1216
+      ],
+      "range_lines": 10,
+      "file_in_coverage": true,
+      "executable_lines": 9,
+      "covered_lines": 9,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "093-$ZodAsyncError",
+      "class_name": "$ZodAsyncError",
+      "file": "packages/zod/src/v4/core/core.ts",
+      "dir": "core",
+      "kind": "a",
+      "range": [
+        75,
+        79
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 5,
+      "covered_lines": 5,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "094-Doc",
+      "class_name": "Doc",
+      "file": "packages/zod/src/v4/core/doc.ts",
+      "dir": "core",
+      "kind": "a",
+      "range": [
+        3,
+        44
+      ],
+      "range_lines": 42,
+      "file_in_coverage": true,
+      "executable_lines": 33,
+      "covered_lines": 25,
+      "line_pct": 75.76,
+      "branches_total": 11,
+      "branches_covered": 9,
+      "branch_pct": 81.82,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "095-$ZodError",
+      "class_name": "$ZodError",
+      "file": "packages/zod/src/v4/core/errors.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        212,
+        212
+      ],
+      "range_lines": 1,
+      "file_in_coverage": true,
+      "executable_lines": 1,
+      "covered_lines": 1,
+      "line_pct": 100.0,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "096-$ZodRealError",
+      "class_name": "$ZodRealError",
+      "file": "packages/zod/src/v4/core/errors.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        214,
+        214
+      ],
+      "range_lines": 1,
+      "file_in_coverage": true,
+      "executable_lines": 1,
+      "covered_lines": 1,
+      "line_pct": 100.0,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "097-$ZodFunction",
+      "class_name": "$ZodFunction",
+      "file": "packages/zod/src/v4/core/function.ts",
+      "dir": "core",
+      "kind": "a",
+      "range": [
+        44,
+        132
+      ],
+      "range_lines": 89,
+      "file_in_coverage": true,
+      "executable_lines": 66,
+      "covered_lines": 58,
+      "line_pct": 87.88,
+      "branches_total": 20,
+      "branches_covered": 12,
+      "branch_pct": 60.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "class_name": "$ZodType",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        172,
+        268
+      ],
+      "range_lines": 97,
+      "file_in_coverage": true,
+      "executable_lines": 81,
+      "covered_lines": 81,
+      "line_pct": 100.0,
+      "branches_total": 52,
+      "branches_covered": 50,
+      "branch_pct": 96.15,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "099-$ZodString",
+      "class_name": "$ZodString",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        305,
+        324
+      ],
+      "range_lines": 20,
+      "file_in_coverage": true,
+      "executable_lines": 18,
+      "covered_lines": 18,
+      "line_pct": 100.0,
+      "branches_total": 9,
+      "branches_covered": 8,
+      "branch_pct": 88.89,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "100-$ZodStringFormat",
+      "class_name": "$ZodStringFormat",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        341,
+        348
+      ],
+      "range_lines": 8,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "101-$ZodGUID",
+      "class_name": "$ZodGUID",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        358,
+        361
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "102-$ZodUUID",
+      "class_name": "$ZodUUID",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        377,
+        394
+      ],
+      "range_lines": 18,
+      "file_in_coverage": true,
+      "executable_lines": 18,
+      "covered_lines": 18,
+      "line_pct": 100.0,
+      "branches_total": 4,
+      "branches_covered": 3,
+      "branch_pct": 75.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "103-$ZodEmail",
+      "class_name": "$ZodEmail",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        404,
+        410
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "104-$ZodURL",
+      "class_name": "$ZodURL",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        426,
+        482
+      ],
+      "range_lines": 57,
+      "file_in_coverage": true,
+      "executable_lines": 52,
+      "covered_lines": 52,
+      "line_pct": 100.0,
+      "branches_total": 17,
+      "branches_covered": 16,
+      "branch_pct": 94.12,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "105-$ZodEmoji",
+      "class_name": "$ZodEmoji",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        493,
+        499
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "106-$ZodNanoID",
+      "class_name": "$ZodNanoID",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        510,
+        516
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "107-$ZodCUID",
+      "class_name": "$ZodCUID",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        527,
+        530
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "108-$ZodCUID2",
+      "class_name": "$ZodCUID2",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        541,
+        547
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "109-$ZodULID",
+      "class_name": "$ZodULID",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        558,
+        561
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "110-$ZodXID",
+      "class_name": "$ZodXID",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        572,
+        575
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "111-$ZodKSUID",
+      "class_name": "$ZodKSUID",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        586,
+        592
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "112-$ZodISODateTime",
+      "class_name": "$ZodISODateTime",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        610,
+        616
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "113-$ZodISODate",
+      "class_name": "$ZodISODate",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        627,
+        633
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "114-$ZodISOTime",
+      "class_name": "$ZodISOTime",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        649,
+        655
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "115-$ZodISODuration",
+      "class_name": "$ZodISODuration",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        666,
+        672
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "116-$ZodIPv4",
+      "class_name": "$ZodIPv4",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        688,
+        695
+      ],
+      "range_lines": 8,
+      "file_in_coverage": true,
+      "executable_lines": 8,
+      "covered_lines": 8,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "117-$ZodIPv6",
+      "class_name": "$ZodIPv6",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        711,
+        734
+      ],
+      "range_lines": 24,
+      "file_in_coverage": true,
+      "executable_lines": 21,
+      "covered_lines": 21,
+      "line_pct": 100.0,
+      "branches_total": 4,
+      "branches_covered": 4,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "118-$ZodCIDRv4",
+      "class_name": "$ZodCIDRv4",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        750,
+        756
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "119-$ZodCIDRv6",
+      "class_name": "$ZodCIDRv6",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        772,
+        797
+      ],
+      "range_lines": 26,
+      "file_in_coverage": true,
+      "executable_lines": 25,
+      "covered_lines": 25,
+      "line_pct": 100.0,
+      "branches_total": 11,
+      "branches_covered": 11,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "120-$ZodBase64",
+      "class_name": "$ZodBase64",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        818,
+        840
+      ],
+      "range_lines": 23,
+      "file_in_coverage": true,
+      "executable_lines": 20,
+      "covered_lines": 20,
+      "line_pct": 100.0,
+      "branches_total": 5,
+      "branches_covered": 5,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "121-$ZodBase64URL",
+      "class_name": "$ZodBase64URL",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        857,
+        879
+      ],
+      "range_lines": 23,
+      "file_in_coverage": true,
+      "executable_lines": 20,
+      "covered_lines": 20,
+      "line_pct": 100.0,
+      "branches_total": 5,
+      "branches_covered": 5,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "122-$ZodE164",
+      "class_name": "$ZodE164",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        890,
+        893
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "123-$ZodJWT",
+      "class_name": "$ZodJWT",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        925,
+        938
+      ],
+      "range_lines": 14,
+      "file_in_coverage": true,
+      "executable_lines": 13,
+      "covered_lines": 13,
+      "line_pct": 100.0,
+      "branches_total": 4,
+      "branches_covered": 4,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "124-$ZodCustomStringFormat",
+      "class_name": "$ZodCustomStringFormat",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        955,
+        971
+      ],
+      "range_lines": 17,
+      "file_in_coverage": true,
+      "executable_lines": 16,
+      "covered_lines": 16,
+      "line_pct": 100.0,
+      "branches_total": 3,
+      "branches_covered": 3,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "125-$ZodNumber",
+      "class_name": "$ZodNumber",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1007,
+        1039
+      ],
+      "range_lines": 33,
+      "file_in_coverage": true,
+      "executable_lines": 30,
+      "covered_lines": 29,
+      "line_pct": 96.67,
+      "branches_total": 17,
+      "branches_covered": 15,
+      "branch_pct": 88.24,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "126-$ZodNumberFormat",
+      "class_name": "$ZodNumberFormat",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1055,
+        1061
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "127-$ZodBoolean",
+      "class_name": "$ZodBoolean",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1087,
+        1109
+      ],
+      "range_lines": 23,
+      "file_in_coverage": true,
+      "executable_lines": 22,
+      "covered_lines": 22,
+      "line_pct": 100.0,
+      "branches_total": 7,
+      "branches_covered": 6,
+      "branch_pct": 85.71,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "128-$ZodBigInt",
+      "class_name": "$ZodBigInt",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1141,
+        1160
+      ],
+      "range_lines": 20,
+      "file_in_coverage": true,
+      "executable_lines": 18,
+      "covered_lines": 18,
+      "line_pct": 100.0,
+      "branches_total": 7,
+      "branches_covered": 7,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "129-$ZodBigIntFormat",
+      "class_name": "$ZodBigIntFormat",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1177,
+        1183
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "130-$ZodSymbol",
+      "class_name": "$ZodSymbol",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1205,
+        1219
+      ],
+      "range_lines": 15,
+      "file_in_coverage": true,
+      "executable_lines": 14,
+      "covered_lines": 14,
+      "line_pct": 100.0,
+      "branches_total": 4,
+      "branches_covered": 4,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "131-$ZodUndefined",
+      "class_name": "$ZodUndefined",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1243,
+        1264
+      ],
+      "range_lines": 22,
+      "file_in_coverage": true,
+      "executable_lines": 21,
+      "covered_lines": 21,
+      "line_pct": 100.0,
+      "branches_total": 3,
+      "branches_covered": 3,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "132-$ZodNull",
+      "class_name": "$ZodNull",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1289,
+        1305
+      ],
+      "range_lines": 17,
+      "file_in_coverage": true,
+      "executable_lines": 16,
+      "covered_lines": 16,
+      "line_pct": 100.0,
+      "branches_total": 5,
+      "branches_covered": 5,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "133-$ZodAny",
+      "class_name": "$ZodAny",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1328,
+        1332
+      ],
+      "range_lines": 5,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "134-$ZodUnknown",
+      "class_name": "$ZodUnknown",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1355,
+        1362
+      ],
+      "range_lines": 8,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "135-$ZodNever",
+      "class_name": "$ZodNever",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1385,
+        1396
+      ],
+      "range_lines": 12,
+      "file_in_coverage": true,
+      "executable_lines": 12,
+      "covered_lines": 12,
+      "line_pct": 100.0,
+      "branches_total": 2,
+      "branches_covered": 2,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "136-$ZodVoid",
+      "class_name": "$ZodVoid",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1419,
+        1433
+      ],
+      "range_lines": 15,
+      "file_in_coverage": true,
+      "executable_lines": 14,
+      "covered_lines": 14,
+      "line_pct": 100.0,
+      "branches_total": 3,
+      "branches_covered": 3,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "137-$ZodDate",
+      "class_name": "$ZodDate",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1461,
+        1485
+      ],
+      "range_lines": 25,
+      "file_in_coverage": true,
+      "executable_lines": 22,
+      "covered_lines": 22,
+      "line_pct": 100.0,
+      "branches_total": 10,
+      "branches_covered": 10,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "138-$ZodArray",
+      "class_name": "$ZodArray",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1517,
+        1558
+      ],
+      "range_lines": 42,
+      "file_in_coverage": true,
+      "executable_lines": 36,
+      "covered_lines": 33,
+      "line_pct": 91.67,
+      "branches_total": 11,
+      "branches_covered": 9,
+      "branch_pct": 81.82,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "139-$ZodObject",
+      "class_name": "$ZodObject",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1680,
+        1883
+      ],
+      "range_lines": 204,
+      "file_in_coverage": true,
+      "executable_lines": 152,
+      "covered_lines": 146,
+      "line_pct": 96.05,
+      "branches_total": 57,
+      "branches_covered": 53,
+      "branch_pct": 92.98,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "140-$ZodUnion",
+      "class_name": "$ZodUnion",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        1938,
+        1990
+      ],
+      "range_lines": 53,
+      "file_in_coverage": true,
+      "executable_lines": 46,
+      "covered_lines": 38,
+      "line_pct": 82.61,
+      "branches_total": 24,
+      "branches_covered": 21,
+      "branch_pct": 87.5,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "141-$ZodDiscriminatedUnion",
+      "class_name": "$ZodDiscriminatedUnion",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2016,
+        2088
+      ],
+      "range_lines": 73,
+      "file_in_coverage": true,
+      "executable_lines": 64,
+      "covered_lines": 62,
+      "line_pct": 96.88,
+      "branches_total": 22,
+      "branches_covered": 20,
+      "branch_pct": 90.91,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "142-$ZodIntersection",
+      "class_name": "$ZodIntersection",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2117,
+        2137
+      ],
+      "range_lines": 21,
+      "file_in_coverage": true,
+      "executable_lines": 18,
+      "covered_lines": 14,
+      "line_pct": 77.78,
+      "branches_total": 3,
+      "branches_covered": 2,
+      "branch_pct": 66.67,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "143-$ZodTuple",
+      "class_name": "$ZodTuple",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2280,
+        2356
+      ],
+      "range_lines": 77,
+      "file_in_coverage": true,
+      "executable_lines": 69,
+      "covered_lines": 68,
+      "line_pct": 98.55,
+      "branches_total": 25,
+      "branches_covered": 23,
+      "branch_pct": 92.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "144-$ZodRecord",
+      "class_name": "$ZodRecord",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2433,
+        2539
+      ],
+      "range_lines": 107,
+      "file_in_coverage": true,
+      "executable_lines": 96,
+      "covered_lines": 75,
+      "line_pct": 78.12,
+      "branches_total": 32,
+      "branches_covered": 27,
+      "branch_pct": 84.38,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "145-$ZodMap",
+      "class_name": "$ZodMap",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2566,
+        2602
+      ],
+      "range_lines": 37,
+      "file_in_coverage": true,
+      "executable_lines": 32,
+      "covered_lines": 32,
+      "line_pct": 100.0,
+      "branches_total": 14,
+      "branches_covered": 14,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "146-$ZodSet",
+      "class_name": "$ZodSet",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2667,
+        2694
+      ],
+      "range_lines": 28,
+      "file_in_coverage": true,
+      "executable_lines": 25,
+      "covered_lines": 25,
+      "line_pct": 100.0,
+      "branches_total": 14,
+      "branches_covered": 14,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "147-$ZodEnum",
+      "class_name": "$ZodEnum",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2736,
+        2763
+      ],
+      "range_lines": 28,
+      "file_in_coverage": true,
+      "executable_lines": 24,
+      "covered_lines": 24,
+      "line_pct": 100.0,
+      "branches_total": 9,
+      "branches_covered": 9,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "148-$ZodLiteral",
+      "class_name": "$ZodLiteral",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2789,
+        2816
+      ],
+      "range_lines": 28,
+      "file_in_coverage": true,
+      "executable_lines": 25,
+      "covered_lines": 25,
+      "line_pct": 100.0,
+      "branches_total": 10,
+      "branches_covered": 10,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "149-$ZodFile",
+      "class_name": "$ZodFile",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2891,
+        2905
+      ],
+      "range_lines": 15,
+      "file_in_coverage": true,
+      "executable_lines": 14,
+      "covered_lines": 14,
+      "line_pct": 100.0,
+      "branches_total": 4,
+      "branches_covered": 4,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "150-$ZodTransform",
+      "class_name": "$ZodTransform",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2927,
+        2949
+      ],
+      "range_lines": 23,
+      "file_in_coverage": true,
+      "executable_lines": 21,
+      "covered_lines": 19,
+      "line_pct": 90.48,
+      "branches_total": 8,
+      "branches_covered": 6,
+      "branch_pct": 75.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "151-$ZodOptional",
+      "class_name": "$ZodOptional",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        2977,
+        3002
+      ],
+      "range_lines": 26,
+      "file_in_coverage": true,
+      "executable_lines": 24,
+      "covered_lines": 24,
+      "line_pct": 100.0,
+      "branches_total": 12,
+      "branches_covered": 11,
+      "branch_pct": 91.67,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "152-$ZodNullable",
+      "class_name": "$ZodNullable",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3030,
+        3051
+      ],
+      "range_lines": 22,
+      "file_in_coverage": true,
+      "executable_lines": 19,
+      "covered_lines": 19,
+      "line_pct": 100.0,
+      "branches_total": 12,
+      "branches_covered": 11,
+      "branch_pct": 91.67,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "153-$ZodDefault",
+      "class_name": "$ZodDefault",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3081,
+        3105
+      ],
+      "range_lines": 25,
+      "file_in_coverage": true,
+      "executable_lines": 19,
+      "covered_lines": 17,
+      "line_pct": 89.47,
+      "branches_total": 8,
+      "branches_covered": 7,
+      "branch_pct": 87.5,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "154-$ZodPrefault",
+      "class_name": "$ZodPrefault",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3142,
+        3157
+      ],
+      "range_lines": 16,
+      "file_in_coverage": true,
+      "executable_lines": 14,
+      "covered_lines": 14,
+      "line_pct": 100.0,
+      "branches_total": 3,
+      "branches_covered": 3,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "155-$ZodNonOptional",
+      "class_name": "$ZodNonOptional",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3184,
+        3202
+      ],
+      "range_lines": 19,
+      "file_in_coverage": true,
+      "executable_lines": 17,
+      "covered_lines": 13,
+      "line_pct": 76.47,
+      "branches_total": 3,
+      "branches_covered": 2,
+      "branch_pct": 66.67,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "156-$ZodSuccess",
+      "class_name": "$ZodSuccess",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3279,
+        3296
+      ],
+      "range_lines": 18,
+      "file_in_coverage": true,
+      "executable_lines": 17,
+      "covered_lines": 7,
+      "line_pct": 41.18,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "157-$ZodCatch",
+      "class_name": "$ZodCatch",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3333,
+        3373
+      ],
+      "range_lines": 41,
+      "file_in_coverage": true,
+      "executable_lines": 37,
+      "covered_lines": 22,
+      "line_pct": 59.46,
+      "branches_total": 7,
+      "branches_covered": 6,
+      "branch_pct": 85.71,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "158-$ZodNaN",
+      "class_name": "$ZodNaN",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3395,
+        3410
+      ],
+      "range_lines": 16,
+      "file_in_coverage": true,
+      "executable_lines": 15,
+      "covered_lines": 15,
+      "line_pct": 100.0,
+      "branches_total": 5,
+      "branches_covered": 5,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "159-$ZodPipe",
+      "class_name": "$ZodPipe",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3439,
+        3453
+      ],
+      "range_lines": 15,
+      "file_in_coverage": true,
+      "executable_lines": 14,
+      "covered_lines": 14,
+      "line_pct": 100.0,
+      "branches_total": 9,
+      "branches_covered": 9,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "160-$ZodReadonly",
+      "class_name": "$ZodReadonly",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3489,
+        3506
+      ],
+      "range_lines": 18,
+      "file_in_coverage": true,
+      "executable_lines": 17,
+      "covered_lines": 17,
+      "line_pct": 100.0,
+      "branches_total": 7,
+      "branches_covered": 7,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "161-$ZodTemplateLiteral",
+      "class_name": "$ZodTemplateLiteral",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3586,
+        3640
+      ],
+      "range_lines": 55,
+      "file_in_coverage": true,
+      "executable_lines": 47,
+      "covered_lines": 47,
+      "line_pct": 100.0,
+      "branches_total": 22,
+      "branches_covered": 20,
+      "branch_pct": 90.91,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "162-$ZodPromise",
+      "class_name": "$ZodPromise",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3664,
+        3673
+      ],
+      "range_lines": 10,
+      "file_in_coverage": true,
+      "executable_lines": 9,
+      "covered_lines": 9,
+      "line_pct": 100.0,
+      "branches_total": 3,
+      "branches_covered": 3,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "163-$ZodLazy",
+      "class_name": "$ZodLazy",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3704,
+        3716
+      ],
+      "range_lines": 13,
+      "file_in_coverage": true,
+      "executable_lines": 12,
+      "covered_lines": 12,
+      "line_pct": 100.0,
+      "branches_total": 6,
+      "branches_covered": 6,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "164-$ZodCustom",
+      "class_name": "$ZodCustom",
+      "file": "packages/zod/src/v4/core/schemas.ts",
+      "dir": "core",
+      "kind": "b",
+      "range": [
+        3749,
+        3766
+      ],
+      "range_lines": 18,
+      "file_in_coverage": true,
+      "executable_lines": 16,
+      "covered_lines": 16,
+      "line_pct": 100.0,
+      "branches_total": 7,
+      "branches_covered": 7,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "165-JSONSchemaGenerator",
+      "class_name": "JSONSchemaGenerator",
+      "file": "packages/zod/src/v4/core/to-json-schema.ts",
+      "dir": "core",
+      "kind": "a",
+      "range": [
+        72,
+        821
+      ],
+      "range_lines": 750,
+      "file_in_coverage": true,
+      "executable_lines": 601,
+      "covered_lines": 552,
+      "line_pct": 91.85,
+      "branches_total": 242,
+      "branches_covered": 201,
+      "branch_pct": 83.06,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "166-Class",
+      "class_name": "Class",
+      "file": "packages/zod/src/v4/core/util.ts",
+      "dir": "core",
+      "kind": "a",
+      "range": [
+        773,
+        775
+      ],
+      "range_lines": 3,
+      "file_in_coverage": true,
+      "executable_lines": 3,
+      "covered_lines": 3,
+      "line_pct": 100.0,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "167-ZodMiniISODateTime",
+      "class_name": "ZodMiniISODateTime",
+      "file": "packages/zod/src/v4/mini/iso.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        8,
+        14
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "168-ZodMiniISODate",
+      "class_name": "ZodMiniISODate",
+      "file": "packages/zod/src/v4/mini/iso.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        23,
+        29
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "169-ZodMiniISOTime",
+      "class_name": "ZodMiniISOTime",
+      "file": "packages/zod/src/v4/mini/iso.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        38,
+        44
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "170-ZodMiniISODuration",
+      "class_name": "ZodMiniISODuration",
+      "file": "packages/zod/src/v4/mini/iso.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        53,
+        59
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "171-ZodMiniType",
+      "class_name": "ZodMiniType",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        40,
+        72
+      ],
+      "range_lines": 33,
+      "file_in_coverage": true,
+      "executable_lines": 31,
+      "covered_lines": 28,
+      "line_pct": 90.32,
+      "branches_total": 11,
+      "branches_covered": 10,
+      "branch_pct": 90.91,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "172-ZodMiniString",
+      "class_name": "ZodMiniString",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        84,
+        90
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "173-ZodMiniStringFormat",
+      "class_name": "ZodMiniStringFormat",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        102,
+        108
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "174-ZodMiniEmail",
+      "class_name": "ZodMiniEmail",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        112,
+        118
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "175-ZodMiniGUID",
+      "class_name": "ZodMiniGUID",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        128,
+        134
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 4,
+      "line_pct": 57.14,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "176-ZodMiniUUID",
+      "class_name": "ZodMiniUUID",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        144,
+        150
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "177-ZodMiniURL",
+      "class_name": "ZodMiniURL",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        176,
+        179
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "178-ZodMiniEmoji",
+      "class_name": "ZodMiniEmoji",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        189,
+        195
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "179-ZodMiniNanoID",
+      "class_name": "ZodMiniNanoID",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        205,
+        211
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "180-ZodMiniCUID",
+      "class_name": "ZodMiniCUID",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        221,
+        227
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "181-ZodMiniCUID2",
+      "class_name": "ZodMiniCUID2",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        237,
+        243
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "182-ZodMiniULID",
+      "class_name": "ZodMiniULID",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        253,
+        259
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "183-ZodMiniXID",
+      "class_name": "ZodMiniXID",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        269,
+        272
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "184-ZodMiniKSUID",
+      "class_name": "ZodMiniKSUID",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        282,
+        288
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "185-ZodMiniIPv4",
+      "class_name": "ZodMiniIPv4",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        298,
+        304
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "186-ZodMiniIPv6",
+      "class_name": "ZodMiniIPv6",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        314,
+        320
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "187-ZodMiniCIDRv4",
+      "class_name": "ZodMiniCIDRv4",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        330,
+        336
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 4,
+      "line_pct": 57.14,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "188-ZodMiniCIDRv6",
+      "class_name": "ZodMiniCIDRv6",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        346,
+        352
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 4,
+      "line_pct": 57.14,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "189-ZodMiniBase64",
+      "class_name": "ZodMiniBase64",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        362,
+        368
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "190-ZodMiniBase64URL",
+      "class_name": "ZodMiniBase64URL",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        377,
+        383
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 4,
+      "line_pct": 57.14,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "191-ZodMiniE164",
+      "class_name": "ZodMiniE164",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        392,
+        398
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "192-ZodMiniJWT",
+      "class_name": "ZodMiniJWT",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        408,
+        411
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "193-ZodMiniCustomStringFormat",
+      "class_name": "ZodMiniCustomStringFormat",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        423,
+        429
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 4,
+      "line_pct": 57.14,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "194-ZodMiniNumber",
+      "class_name": "ZodMiniNumber",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        448,
+        454
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "195-ZodMiniNumberFormat",
+      "class_name": "ZodMiniNumberFormat",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        462,
+        468
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "196-ZodMiniBoolean",
+      "class_name": "ZodMiniBoolean",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        504,
+        510
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "197-ZodMiniBigInt",
+      "class_name": "ZodMiniBigInt",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        520,
+        526
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "198-ZodMiniBigIntFormat",
+      "class_name": "ZodMiniBigIntFormat",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        538,
+        544
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "199-ZodMiniSymbol",
+      "class_name": "ZodMiniSymbol",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        562,
+        568
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "200-ZodMiniUndefined",
+      "class_name": "ZodMiniUndefined",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        578,
+        584
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "201-ZodMiniNull",
+      "class_name": "ZodMiniNull",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        595,
+        601
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "202-ZodMiniAny",
+      "class_name": "ZodMiniAny",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        612,
+        615
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "203-ZodMiniUnknown",
+      "class_name": "ZodMiniUnknown",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        625,
+        631
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "204-ZodMiniNever",
+      "class_name": "ZodMiniNever",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        641,
+        647
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "205-ZodMiniVoid",
+      "class_name": "ZodMiniVoid",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        657,
+        663
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "206-ZodMiniDate",
+      "class_name": "ZodMiniDate",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        675,
+        681
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "207-ZodMiniArray",
+      "class_name": "ZodMiniArray",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        693,
+        699
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "208-ZodMiniObject",
+      "class_name": "ZodMiniObject",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        725,
+        732
+      ],
+      "range_lines": 8,
+      "file_in_coverage": true,
+      "executable_lines": 8,
+      "covered_lines": 8,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "209-ZodMiniUnion",
+      "class_name": "ZodMiniUnion",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        886,
+        892
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "210-ZodMiniDiscriminatedUnion",
+      "class_name": "ZodMiniDiscriminatedUnion",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        910,
+        916
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 4,
+      "line_pct": 57.14,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "211-ZodMiniIntersection",
+      "class_name": "ZodMiniIntersection",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        938,
+        944
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "212-ZodMiniTuple",
+      "class_name": "ZodMiniTuple",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        961,
+        967
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "213-ZodMiniRecord",
+      "class_name": "ZodMiniRecord",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1002,
+        1008
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "214-ZodMiniMap",
+      "class_name": "ZodMiniMap",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1040,
+        1043
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "215-ZodMiniSet",
+      "class_name": "ZodMiniSet",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1062,
+        1065
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "216-ZodMiniEnum",
+      "class_name": "ZodMiniEnum",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1079,
+        1085
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "217-ZodMiniLiteral",
+      "class_name": "ZodMiniLiteral",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1123,
+        1129
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "218-ZodMiniFile",
+      "class_name": "ZodMiniFile",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1151,
+        1157
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "219-ZodMiniTransform",
+      "class_name": "ZodMiniTransform",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1167,
+        1173
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "220-ZodMiniOptional",
+      "class_name": "ZodMiniOptional",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1190,
+        1196
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "221-ZodMiniNullable",
+      "class_name": "ZodMiniNullable",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1210,
+        1216
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "222-ZodMiniDefault",
+      "class_name": "ZodMiniDefault",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1234,
+        1240
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "223-ZodMiniPrefault",
+      "class_name": "ZodMiniPrefault",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1260,
+        1266
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 4,
+      "line_pct": 57.14,
+      "branches_total": 0,
+      "branches_covered": 0,
+      "branch_pct": null,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "224-ZodMiniNonOptional",
+      "class_name": "ZodMiniNonOptional",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1285,
+        1291
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "225-ZodMiniSuccess",
+      "class_name": "ZodMiniSuccess",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1308,
+        1314
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "226-ZodMiniCatch",
+      "class_name": "ZodMiniCatch",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1327,
+        1333
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "227-ZodMiniNaN",
+      "class_name": "ZodMiniNaN",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1353,
+        1356
+      ],
+      "range_lines": 4,
+      "file_in_coverage": true,
+      "executable_lines": 4,
+      "covered_lines": 4,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "228-ZodMiniPipe",
+      "class_name": "ZodMiniPipe",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1367,
+        1373
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "229-ZodMiniReadonly",
+      "class_name": "ZodMiniReadonly",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1400,
+        1406
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "230-ZodMiniTemplateLiteral",
+      "class_name": "ZodMiniTemplateLiteral",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1420,
+        1426
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "class_name": "ZodMiniLazy",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1443,
+        1449
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "232-ZodMiniPromise",
+      "class_name": "ZodMiniPromise",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1466,
+        1472
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    },
+    {
+      "unit_id": "233-ZodMiniCustom",
+      "class_name": "ZodMiniCustom",
+      "file": "packages/zod/src/v4/mini/schemas.ts",
+      "dir": "mini",
+      "kind": "b",
+      "range": [
+        1485,
+        1491
+      ],
+      "range_lines": 7,
+      "file_in_coverage": true,
+      "executable_lines": 7,
+      "covered_lines": 7,
+      "line_pct": 100.0,
+      "branches_total": 1,
+      "branches_covered": 1,
+      "branch_pct": 100.0,
+      "has_coverage_data": true
+    }
+  ]
+}

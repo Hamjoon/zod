@@ -1,0 +1,18 @@
+{
+  "unit_id": "053-ZodEnum",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:20:41.453412+00:00",
+  "latency_s": 26.278,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "DeepInfra",
+  "response_id": "gen-1790335241-FqAsJrUWOIrZWpKiRrmh",
+  "content_chars": 7306,
+  "content_empty": false,
+  "completion_tokens": 2091,
+  "prompt_tokens_reported": 697,
+  "error": null
+}

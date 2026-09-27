@@ -1,0 +1,91 @@
+086-$ZodCheckUpperCase   TOT   errors=0 warnings=0 cats={}
+086-$ZodCheckUpperCase   GTOT  errors=1 warnings=0 cats={'lint/correctness/noUnusedImports': 1}
+098-$ZodType             COT   errors=0 warnings=0 cats={}
+098-$ZodType             TOT   errors=0 warnings=0 cats={}
+098-$ZodType             GTOT  errors=0 warnings=1 cats={'lint/correctness/noUnusedVariables': 1}
+053-ZodEnum              COT   errors=0 warnings=0 cats={}
+053-ZodEnum              TOT   errors=0 warnings=0 cats={}
+053-ZodEnum              GTOT  errors=0 warnings=0 cats={}
+038-ZodNull              TOT   errors=1 warnings=0 cats={'lint/complexity/noForEach': 1}
+038-ZodNull              GTOT  errors=5 warnings=0 cats={'lint/complexity/noForEach': 1, 'lint/complexity/noUselessEmptyExport': 1, 'lint/suspicious/noExportsInTest': 1, 'lint/style/useNumberNamespace': 2}
+231-ZodMiniLazy          COT   errors=0 warnings=0 cats={}
+231-ZodMiniLazy          TOT   errors=1 warnings=0 cats={'lint/style/useImportType': 1}
+117-$ZodIPv6             COT   errors=0 warnings=0 cats={}
+117-$ZodIPv6             TOT   errors=1 warnings=0 cats={'lint/complexity/noForEach': 1}
+117-$ZodIPv6             GTOT  errors=0 warnings=0 cats={}
+088-$ZodCheckStartsWith  COT   errors=1 warnings=0 cats={'lint/complexity/noForEach': 1}
+088-$ZodCheckStartsWith  TOT   errors=1 warnings=2 cats={'lint/complexity/noForEach': 1, 'lint/correctness/noUnusedVariables': 2}
+088-$ZodCheckStartsWith  GTOT  errors=0 warnings=2 cats={'lint/correctness/noUnusedVariables': 2}
+140-$ZodUnion            COT   errors=0 warnings=0 cats={}
+140-$ZodUnion            TOT   errors=0 warnings=0 cats={}
+140-$ZodUnion            GTOT  errors=2 warnings=1 cats={'lint/complexity/noUselessTypeConstraint': 1, 'lint/correctness/noUnusedImports': 1, 'lint/correctness/noUnusedVariables': 1}
+087-$ZodCheckIncludes    COT   errors=2 warnings=0 cats={'lint/complexity/noForEach': 2}
+087-$ZodCheckIncludes    TOT   errors=1 warnings=0 cats={'lint/complexity/noForEach': 1}
+087-$ZodCheckIncludes    GTOT  errors=2 warnings=0 cats={'lint/complexity/noForEach': 1, 'lint/correctness/noUnusedImports': 1}
+130-$ZodSymbol           COT   errors=0 warnings=0 cats={}
+130-$ZodSymbol           TOT   errors=0 warnings=0 cats={}
+130-$ZodSymbol           GTOT  errors=0 warnings=0 cats={}
+147-$ZodEnum             COT   errors=0 warnings=0 cats={}
+147-$ZodEnum             TOT   errors=0 warnings=0 cats={}
+147-$ZodEnum             GTOT  errors=0 warnings=2 cats={'lint/correctness/noUnusedVariables': 2}
+159-$ZodPipe             COT   errors=0 warnings=0 cats={}
+159-$ZodPipe             TOT   errors=0 warnings=0 cats={}
+159-$ZodPipe             GTOT  errors=1 warnings=0 cats={'lint/correctness/noUnusedImports': 1}
+153-$ZodDefault          COT   errors=0 warnings=2 cats={'lint/correctness/noUnusedVariables': 2}
+153-$ZodDefault          TOT   errors=0 warnings=1 cats={'lint/correctness/noUnusedVariables': 1}
+153-$ZodDefault          GTOT  errors=0 warnings=0 cats={}
+105-$ZodEmoji            COT   errors=0 warnings=0 cats={}
+105-$ZodEmoji            TOT   errors=0 warnings=0 cats={}
+105-$ZodEmoji            GTOT  errors=0 warnings=0 cats={}
+137-$ZodDate             COT   errors=3 warnings=0 cats={'lint/complexity/noForEach': 1, 'lint/style/useNumberNamespace': 2}
+137-$ZodDate             TOT   errors=0 warnings=0 cats={}
+137-$ZodDate             GTOT  errors=2 warnings=0 cats={'lint/style/useNumberNamespace': 2}
+055-ZodFile              COT   errors=3 warnings=0 cats={'lint/correctness/noUnusedImports': 1, 'lint/style/useNumberNamespace': 2}
+055-ZodFile              TOT   errors=2 warnings=0 cats={'lint/style/noInferrableTypes': 2}
+055-ZodFile              GTOT  errors=1 warnings=0 cats={'lint/correctness/noUnusedImports': 1}
+013-ZodUUID              COT   errors=0 warnings=0 cats={}
+013-ZodUUID              TOT   errors=0 warnings=0 cats={}
+013-ZodUUID              GTOT  errors=0 warnings=0 cats={}
+036-ZodSymbol            COT   errors=0 warnings=0 cats={}
+036-ZodSymbol            TOT   errors=0 warnings=0 cats={}
+036-ZodSymbol            GTOT  errors=0 warnings=0 cats={}
+062-ZodSuccess           COT   errors=0 warnings=0 cats={}
+062-ZodSuccess           TOT   errors=0 warnings=1 cats={'lint/correctness/noUnusedVariables': 1}
+062-ZodSuccess           GTOT  errors=0 warnings=1 cats={'lint/correctness/noUnusedVariables': 1}
+003-ZodISODateTime       COT   errors=0 warnings=0 cats={}
+003-ZodISODateTime       TOT   errors=2 warnings=0 cats={'lint/complexity/noForEach': 2}
+003-ZodISODateTime       GTOT  errors=1 warnings=3 cats={'lint/complexity/noForEach': 1, 'lint/correctness/noUnusedVariables': 3}
+021-ZodKSUID             COT   errors=0 warnings=0 cats={}
+021-ZodKSUID             TOT   errors=0 warnings=0 cats={}
+021-ZodKSUID             GTOT  errors=0 warnings=0 cats={}
+058-ZodNullable          COT   errors=1 warnings=0 cats={'lint/correctness/noUnusedImports': 1}
+058-ZodNullable          TOT   errors=0 warnings=1 cats={'lint/correctness/noUnusedVariables': 1}
+058-ZodNullable          GTOT  errors=0 warnings=0 cats={}
+168-ZodMiniISODate       COT   errors=4 warnings=0 cats={'lint/complexity/noForEach': 4}
+168-ZodMiniISODate       TOT   errors=0 warnings=0 cats={}
+168-ZodMiniISODate       GTOT  errors=0 warnings=0 cats={}
+210-ZodMiniDiscriminatedUnion COT   errors=2 warnings=1 cats={'lint/correctness/noUnusedImports': 1, 'lint/correctness/noUnusedVariables': 1, 'lint/complexity/noUselessThisAlias': 1}
+210-ZodMiniDiscriminatedUnion GTOT  errors=3 warnings=0 cats={'lint/complexity/noForEach': 1, 'lint/complexity/noUselessEmptyExport': 1, 'lint/suspicious/noExportsInTest': 1}
+197-ZodMiniBigInt        COT   errors=1 warnings=0 cats={'lint/style/useNumberNamespace': 1}
+197-ZodMiniBigInt        TOT   errors=0 warnings=0 cats={}
+197-ZodMiniBigInt        GTOT  errors=1 warnings=0 cats={'parse': 1}
+206-ZodMiniDate          COT   errors=2 warnings=0 cats={'lint/style/useNumberNamespace': 2}
+206-ZodMiniDate          TOT   errors=0 warnings=0 cats={}
+206-ZodMiniDate          GTOT  errors=1 warnings=0 cats={'lint/style/useNumberNamespace': 1}
+205-ZodMiniVoid          COT   errors=0 warnings=0 cats={}
+205-ZodMiniVoid          TOT   errors=1 warnings=0 cats={'lint/complexity/noForEach': 1}
+205-ZodMiniVoid          GTOT  errors=0 warnings=0 cats={}
+232-ZodMiniPromise       COT   errors=0 warnings=0 cats={}
+232-ZodMiniPromise       TOT   errors=0 warnings=0 cats={}
+232-ZodMiniPromise       GTOT  errors=0 warnings=0 cats={}
+211-ZodMiniIntersection  COT   errors=0 warnings=0 cats={}
+211-ZodMiniIntersection  TOT   errors=1 warnings=0 cats={'lint/complexity/noForEach': 1}
+211-ZodMiniIntersection  GTOT  errors=3 warnings=0 cats={'lint/complexity/noUselessEmptyExport': 1, 'lint/suspicious/noExportsInTest': 1, 'lint/correctness/noUnusedImports': 1}
+181-ZodMiniCUID2         TOT   errors=0 warnings=0 cats={}
+181-ZodMiniCUID2         GTOT  errors=0 warnings=0 cats={}
+Phase 7 biome: git tree clean of pilot files and tracked changes
+dev: files=81 errors=0 warnings=0 biome_exit=0 summary={'changed': 0, 'unchanged': 81, 'matches': 0, 'duration': {'secs': 0, 'nanos': 23917500}, 'errors': 0, 'warnings': 0, 'skipped': 0, 'suggestedFixesSkipped': 0, 'diagnosticsNotPrinted': 0}
+038-ZodNull              COT   errors=1 warnings=0 cats={'lint/style/useNumberNamespace': 1}
+Phase 7 biome: git tree clean of pilot files and tracked changes
+231-ZodMiniLazy          GTOT  errors=0 warnings=1 cats={'lint/correctness/noUnusedVariables': 1}
+Phase 7 biome: git tree clean of pilot files and tracked changes

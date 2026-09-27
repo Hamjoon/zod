@@ -1,0 +1,10 @@
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(50,35): error TS2339: Property 'parse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(54,33): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(65,31): error TS2339: Property 'parse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(66,31): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(82,33): error TS2339: Property 'parse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(83,33): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(100,33): error TS2339: Property 'parse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(101,33): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(136,41): error TS2339: Property 'optional' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>'.
+packages/zod/src/v4/mini/ZodMiniCUID2.pilot.test.ts(152,41): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodMiniCUID2, $ZodStringFormatDef<"cuid2">>'.

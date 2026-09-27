@@ -1,0 +1,25 @@
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(83,34): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(125,3): error TS2304: Cannot find name 'beforeEach'.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(127,51): error TS7006: Parameter 'left' implicitly has an 'any' type.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(127,57): error TS7006: Parameter 'def' implicitly has an 'any' type.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(127,62): error TS7006: Parameter 'ctx' implicitly has an 'any' type.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(145,31): error TS2345: Argument of type '{ in: any; out: any; }' is not assignable to parameter of type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ in: any; out: any; }' but required in type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(147,38): error TS2353: Object literal may only specify known properties, and 'any' does not exist in type 'ParsePayload<any>'.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(174,31): error TS2345: Argument of type '{ in: any; out: any; }' is not assignable to parameter of type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ in: any; out: any; }' but required in type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(176,37): error TS2554: Expected 2 arguments, but got 1.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(213,31): error TS2345: Argument of type '{ in: any; out: any; }' is not assignable to parameter of type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ in: any; out: any; }' but required in type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(233,31): error TS2345: Argument of type '{ in: any; out: any; }' is not assignable to parameter of type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ in: any; out: any; }' but required in type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(235,28): error TS2554: Expected 2 arguments, but got 1.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(248,31): error TS2345: Argument of type '{ in: any; out: any; }' is not assignable to parameter of type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ in: any; out: any; }' but required in type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(250,28): error TS2554: Expected 2 arguments, but got 1.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(267,31): error TS2345: Argument of type '{ in: any; out: any; }' is not assignable to parameter of type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ in: any; out: any; }' but required in type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(269,28): error TS2554: Expected 2 arguments, but got 1.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(292,31): error TS2345: Argument of type '{ in: any; out: any; }' is not assignable to parameter of type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+  Property 'type' is missing in type '{ in: any; out: any; }' but required in type '$ZodPipeDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>'.
+packages/zod/src/v4/core/$ZodPipe.pilot.test.ts(294,30): error TS2554: Expected 2 arguments, but got 1.

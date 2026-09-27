@@ -1,0 +1,2 @@
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(27,20): error TS6133: 'name' is declared but its value is never read.
+packages/zod/src/v4/classic/ZodSuccess.pilot.test.ts(60,5): error TS2698: Spread types may only be created from object types.

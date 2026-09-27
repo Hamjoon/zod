@@ -1,0 +1,18 @@
+{
+  "unit_id": "197-ZodMiniBigInt",
+  "technique": "TOT",
+  "timestamp_utc": "2026-09-25T11:50:34.022924+00:00",
+  "latency_s": 79.201,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "AkashML",
+  "response_id": "gen-1790337036-WRSOwO41JWjKXMm0QZqa",
+  "content_chars": 6190,
+  "content_empty": false,
+  "completion_tokens": 1952,
+  "prompt_tokens_reported": 348,
+  "error": null
+}

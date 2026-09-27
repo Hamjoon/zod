@@ -1,0 +1,18 @@
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(12,20): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(16,28): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(22,28): error TS2339: Property 'optional' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(27,28): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(32,28): error TS2339: Property 'array' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(39,28): error TS2339: Property 'default' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(44,28): error TS2339: Property 'describe' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(49,28): error TS2339: Property 'refine' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(49,36): error TS7006: Parameter 'val' implicitly has an 'any' type.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(72,28): error TS2339: Property 'parse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(86,30): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(95,28): error TS2339: Property 'optional' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(101,28): error TS2339: Property 'nullable' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(107,28): error TS2339: Property 'array' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(120,26): error TS2339: Property 'default' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(124,28): error TS2339: Property 'refine' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(136,28): error TS2339: Property 'describe' does not exist on type '$constructor<ZodUUID, $ZodUUIDDef>'.
+packages/zod/src/v4/classic/ZodUUID.pilot.test.ts(139,5): error TS2578: Unused '@ts-expect-error' directive.

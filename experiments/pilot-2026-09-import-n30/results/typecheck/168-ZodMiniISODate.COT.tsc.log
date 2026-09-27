@@ -1,0 +1,8 @@
+packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts(50,21): error TS2339: Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<"date">>'.
+packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts(51,25): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<"date">>'.
+packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts(61,35): error TS2339: Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<"date">>'.
+packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts(67,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<"date">>'.
+packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts(78,33): error TS2339: Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<"date">>'.
+packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts(115,33): error TS2339: Property 'parse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<"date">>'.
+packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts(164,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<"date">>'.
+packages/zod/src/v4/mini/ZodMiniISODate.pilot.test.ts(176,36): error TS2339: Property 'safeParse' does not exist on type '$constructor<ZodMiniISODate, $ZodStringFormatDef<"date">>'.

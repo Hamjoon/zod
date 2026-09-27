@@ -1,0 +1,18 @@
+{
+  "unit_id": "021-ZodKSUID",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:45:12.879131+00:00",
+  "latency_s": 2.746,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "Cerebras",
+  "response_id": "gen-1790336714-w7hGys6N9wFEFGKxfPku",
+  "content_chars": 9184,
+  "content_empty": false,
+  "completion_tokens": 2606,
+  "prompt_tokens_reported": 367,
+  "error": null
+}

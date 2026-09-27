@@ -1,0 +1,3 @@
+packages/zod/src/v4/mini/ZodMiniDiscriminatedUnion.pilot.test.ts(43,5): error TS2352: Conversion of type '{ parse: null; safeParse: null; refine: null; superRefine: null; optional: null; nullable: null; array: null; catch: null; }' to type 'ExpectedMethods' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'parse' are incompatible.
+    Type 'null' is not comparable to type '(value: unknown) => any'.

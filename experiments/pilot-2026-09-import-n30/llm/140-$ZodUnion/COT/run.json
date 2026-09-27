@@ -1,0 +1,18 @@
+{
+  "unit_id": "140-$ZodUnion",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:26:37.059919+00:00",
+  "latency_s": 16.964,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "Crusoe",
+  "response_id": "gen-1790335597-5V49n4NjC5qc5F1idKu6",
+  "content_chars": 7544,
+  "content_empty": false,
+  "completion_tokens": 4413,
+  "prompt_tokens_reported": 968,
+  "error": null
+}

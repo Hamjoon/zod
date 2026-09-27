@@ -1,0 +1,10 @@
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(28,10): error TS2305: Module '"./regexes.js"' has no exported member 'regexes'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(29,10): error TS2305: Module '"./errors.js"' has no exported member 'errors'.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(57,20): error TS2554: Expected 1 arguments, but got 0.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(67,20): error TS2554: Expected 1 arguments, but got 0.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(76,20): error TS2554: Expected 1 arguments, but got 0.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(90,20): error TS2554: Expected 1 arguments, but got 0.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(97,20): error TS2554: Expected 1 arguments, but got 0.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(112,20): error TS2554: Expected 1 arguments, but got 0.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(122,20): error TS2554: Expected 1 arguments, but got 0.
+packages/zod/src/v4/core/$ZodCheckUpperCase.pilot.test.ts(150,20): error TS2554: Expected 1 arguments, but got 0.

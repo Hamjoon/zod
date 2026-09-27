@@ -1,0 +1,2555 @@
+{
+  "rule": "run-coverage.py: Phase 6 (RQ5). For each structured extraction that loaded without error, copy it in place (D6),\nrun vitest with --coverage --coverage.reporter=json --coverage.include=<unit source file>, compute line/branch\ncoverage restricted to the unit's declaring statement range (same rule as the DEV baseline), then remove the copy.\nAlso records per (unit, technique): test cases, expect( calls, file LOC. Output: results/coverage/{unit}.{TECH}/ and\nresults/rq5-coverage.json. Run from the zod repo root.",
+  "rows": [
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/checks.ts",
+      "cases": 9,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 155,
+      "expect_calls": 13,
+      "test_calls_static": 9,
+      "coverage": {
+        "range": [
+          930,
+          936
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "086-$ZodCheckUpperCase",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/checks.ts",
+      "cases": 21,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 229,
+      "expect_calls": 26,
+      "test_calls_static": 15,
+      "coverage": {
+        "range": [
+          930,
+          936
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.7
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 8,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 211,
+      "expect_calls": 8,
+      "test_calls_static": 8,
+      "coverage": {
+        "range": [
+          172,
+          268
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 81,
+        "covered_lines": 7,
+        "line_pct": 8.64,
+        "branches_total": 4,
+        "branches_covered": 2,
+        "branch_pct": 50.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 96.15,
+        "executable_lines": 81,
+        "branches_total": 52
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 318,
+      "expect_calls": 14,
+      "test_calls_static": 6,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 96.15,
+        "executable_lines": 81,
+        "branches_total": 52
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "098-$ZodType",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 6,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 256,
+      "expect_calls": 10,
+      "test_calls_static": 6,
+      "coverage": {
+        "range": [
+          172,
+          268
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 81,
+        "covered_lines": 27,
+        "line_pct": 33.33,
+        "branches_total": 9,
+        "branches_covered": 4,
+        "branch_pct": 44.44
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 96.15,
+        "executable_lines": 81,
+        "branches_total": 52
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 14,
+      "passed": 14,
+      "load_error": false,
+      "file_loc": 203,
+      "expect_calls": 19,
+      "test_calls_static": 14,
+      "coverage": {
+        "range": [
+          1438,
+          1476
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 35,
+        "covered_lines": 35,
+        "line_pct": 100.0,
+        "branches_total": 10,
+        "branches_covered": 10,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 71.43,
+        "executable_lines": 35,
+        "branches_total": 7
+      },
+      "runner_error": null,
+      "coverage_seconds": 1.0
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 11,
+      "passed": 11,
+      "load_error": false,
+      "file_loc": 171,
+      "expect_calls": 26,
+      "test_calls_static": 11,
+      "coverage": {
+        "range": [
+          1438,
+          1476
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 35,
+        "covered_lines": 35,
+        "line_pct": 100.0,
+        "branches_total": 9,
+        "branches_covered": 9,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 71.43,
+        "executable_lines": 35,
+        "branches_total": 7
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "053-ZodEnum",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 10,
+      "passed": 10,
+      "load_error": false,
+      "file_loc": 170,
+      "expect_calls": 20,
+      "test_calls_static": 10,
+      "coverage": {
+        "range": [
+          1438,
+          1476
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 35,
+        "covered_lines": 35,
+        "line_pct": 100.0,
+        "branches_total": 11,
+        "branches_covered": 11,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 71.43,
+        "executable_lines": 35,
+        "branches_total": 7
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 16,
+      "passed": 5,
+      "load_error": false,
+      "file_loc": 181,
+      "expect_calls": 27,
+      "test_calls_static": 16,
+      "coverage": {
+        "range": [
+          930,
+          933
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 4,
+        "covered_lines": 1,
+        "line_pct": 25.0,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 105,
+      "expect_calls": 10,
+      "test_calls_static": 7,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "038-ZodNull",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 157,
+      "expect_calls": 17,
+      "test_calls_static": 10,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 17,
+      "passed": 3,
+      "load_error": false,
+      "file_loc": 195,
+      "expect_calls": 29,
+      "test_calls_static": 17,
+      "coverage": {
+        "range": [
+          1443,
+          1449
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 1.0
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 140,
+      "expect_calls": 15,
+      "test_calls_static": 8,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "231-ZodMiniLazy",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 14,
+      "passed": 1,
+      "load_error": false,
+      "file_loc": 195,
+      "expect_calls": 24,
+      "test_calls_static": 14,
+      "coverage": {
+        "range": [
+          1443,
+          1449
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 1.0
+    },
+    {
+      "unit_id": "117-$ZodIPv6",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 221,
+      "expect_calls": 18,
+      "test_calls_static": 6,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 21,
+        "branches_total": 4
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "117-$ZodIPv6",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 5,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 131,
+      "expect_calls": 8,
+      "test_calls_static": 6,
+      "coverage": {
+        "range": [
+          711,
+          734
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 21,
+        "covered_lines": 7,
+        "line_pct": 33.33,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 21,
+        "branches_total": 4
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "117-$ZodIPv6",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 8,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 89,
+      "expect_calls": 16,
+      "test_calls_static": 8,
+      "coverage": {
+        "range": [
+          711,
+          734
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 21,
+        "covered_lines": 7,
+        "line_pct": 33.33,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 21,
+        "branches_total": 4
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "088-$ZodCheckStartsWith",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/checks.ts",
+      "cases": 8,
+      "passed": 7,
+      "load_error": false,
+      "file_loc": 186,
+      "expect_calls": 15,
+      "test_calls_static": 8,
+      "coverage": {
+        "range": [
+          1000,
+          1026
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 25,
+        "covered_lines": 25,
+        "line_pct": 100.0,
+        "branches_total": 5,
+        "branches_covered": 5,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 25,
+        "branches_total": 4
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.7
+    },
+    {
+      "unit_id": "088-$ZodCheckStartsWith",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/checks.ts",
+      "cases": 6,
+      "passed": 6,
+      "load_error": false,
+      "file_loc": 147,
+      "expect_calls": 20,
+      "test_calls_static": 6,
+      "coverage": {
+        "range": [
+          1000,
+          1026
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 25,
+        "covered_lines": 25,
+        "line_pct": 100.0,
+        "branches_total": 5,
+        "branches_covered": 5,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 25,
+        "branches_total": 4
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.7
+    },
+    {
+      "unit_id": "088-$ZodCheckStartsWith",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/checks.ts",
+      "cases": 11,
+      "passed": 10,
+      "load_error": false,
+      "file_loc": 152,
+      "expect_calls": 23,
+      "test_calls_static": 13,
+      "coverage": {
+        "range": [
+          1000,
+          1026
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 25,
+        "covered_lines": 25,
+        "line_pct": 100.0,
+        "branches_total": 5,
+        "branches_covered": 5,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 25,
+        "branches_total": 4
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.7
+    },
+    {
+      "unit_id": "140-$ZodUnion",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 13,
+      "passed": 9,
+      "load_error": false,
+      "file_loc": 182,
+      "expect_calls": 21,
+      "test_calls_static": 16,
+      "coverage": {
+        "range": [
+          1938,
+          1990
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 46,
+        "covered_lines": 46,
+        "line_pct": 100.0,
+        "branches_total": 28,
+        "branches_covered": 28,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 82.61,
+        "branch_pct": 87.5,
+        "executable_lines": 46,
+        "branches_total": 24
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "140-$ZodUnion",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 12,
+      "passed": 10,
+      "load_error": false,
+      "file_loc": 248,
+      "expect_calls": 16,
+      "test_calls_static": 15,
+      "coverage": {
+        "range": [
+          1938,
+          1990
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 46,
+        "covered_lines": 46,
+        "line_pct": 100.0,
+        "branches_total": 28,
+        "branches_covered": 27,
+        "branch_pct": 96.43
+      },
+      "dev_coverage": {
+        "line_pct": 82.61,
+        "branch_pct": 87.5,
+        "executable_lines": 46,
+        "branches_total": 24
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.7
+    },
+    {
+      "unit_id": "140-$ZodUnion",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 13,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 285,
+      "expect_calls": 21,
+      "test_calls_static": 16,
+      "coverage": {
+        "range": [
+          1938,
+          1990
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 46,
+        "covered_lines": 12,
+        "line_pct": 26.09,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 82.61,
+        "branch_pct": 87.5,
+        "executable_lines": 46,
+        "branches_total": 24
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "087-$ZodCheckIncludes",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/checks.ts",
+      "cases": 9,
+      "passed": 8,
+      "load_error": false,
+      "file_loc": 223,
+      "expect_calls": 18,
+      "test_calls_static": 9,
+      "coverage": {
+        "range": [
+          955,
+          982
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 26,
+        "covered_lines": 26,
+        "line_pct": 100.0,
+        "branches_total": 7,
+        "branches_covered": 7,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 26,
+        "branches_total": 8
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.7
+    },
+    {
+      "unit_id": "087-$ZodCheckIncludes",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/checks.ts",
+      "cases": 8,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 245,
+      "expect_calls": 18,
+      "test_calls_static": 8,
+      "coverage": {
+        "range": [
+          955,
+          982
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 26,
+        "covered_lines": 15,
+        "line_pct": 57.69,
+        "branches_total": 4,
+        "branches_covered": 4,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 26,
+        "branches_total": 8
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.7
+    },
+    {
+      "unit_id": "087-$ZodCheckIncludes",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/checks.ts",
+      "cases": 10,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 158,
+      "expect_calls": 16,
+      "test_calls_static": 10,
+      "coverage": {
+        "range": [
+          955,
+          982
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 26,
+        "covered_lines": 12,
+        "line_pct": 46.15,
+        "branches_total": 3,
+        "branches_covered": 1,
+        "branch_pct": 33.33
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 26,
+        "branches_total": 8
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.7
+    },
+    {
+      "unit_id": "130-$ZodSymbol",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 138,
+      "expect_calls": 10,
+      "test_calls_static": 13,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 14,
+        "branches_total": 4
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "130-$ZodSymbol",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 5,
+      "passed": 5,
+      "load_error": false,
+      "file_loc": 166,
+      "expect_calls": 19,
+      "test_calls_static": 5,
+      "coverage": {
+        "range": [
+          1205,
+          1219
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 14,
+        "covered_lines": 14,
+        "line_pct": 100.0,
+        "branches_total": 4,
+        "branches_covered": 4,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 14,
+        "branches_total": 4
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "130-$ZodSymbol",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 115,
+      "expect_calls": 21,
+      "test_calls_static": 8,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 14,
+        "branches_total": 4
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "147-$ZodEnum",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 18,
+      "passed": 3,
+      "load_error": false,
+      "file_loc": 246,
+      "expect_calls": 49,
+      "test_calls_static": 30,
+      "coverage": {
+        "range": [
+          2736,
+          2763
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 24,
+        "covered_lines": 12,
+        "line_pct": 50.0,
+        "branches_total": 5,
+        "branches_covered": 5,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 24,
+        "branches_total": 9
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "147-$ZodEnum",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 15,
+      "passed": 2,
+      "load_error": false,
+      "file_loc": 210,
+      "expect_calls": 46,
+      "test_calls_static": 30,
+      "coverage": {
+        "range": [
+          2736,
+          2763
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 24,
+        "covered_lines": 22,
+        "line_pct": 91.67,
+        "branches_total": 7,
+        "branches_covered": 6,
+        "branch_pct": 85.71
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 24,
+        "branches_total": 9
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "147-$ZodEnum",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 8,
+      "passed": 7,
+      "load_error": false,
+      "file_loc": 172,
+      "expect_calls": 27,
+      "test_calls_static": 17,
+      "coverage": {
+        "range": [
+          2736,
+          2763
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 24,
+        "covered_lines": 24,
+        "line_pct": 100.0,
+        "branches_total": 7,
+        "branches_covered": 7,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 24,
+        "branches_total": 9
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "159-$ZodPipe",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 305,
+      "expect_calls": 18,
+      "test_calls_static": 7,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 14,
+        "branches_total": 9
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "159-$ZodPipe",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 5,
+      "passed": 3,
+      "load_error": false,
+      "file_loc": 203,
+      "expect_calls": 19,
+      "test_calls_static": 5,
+      "coverage": {
+        "range": [
+          3439,
+          3453
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 14,
+        "covered_lines": 14,
+        "line_pct": 100.0,
+        "branches_total": 9,
+        "branches_covered": 9,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 14,
+        "branches_total": 9
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "159-$ZodPipe",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 9,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 205,
+      "expect_calls": 18,
+      "test_calls_static": 9,
+      "coverage": {
+        "range": [
+          3439,
+          3453
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 14,
+        "covered_lines": 1,
+        "line_pct": 7.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 14,
+        "branches_total": 9
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "153-$ZodDefault",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 8,
+      "passed": 7,
+      "load_error": false,
+      "file_loc": 287,
+      "expect_calls": 17,
+      "test_calls_static": 8,
+      "coverage": {
+        "range": [
+          3081,
+          3105
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 19,
+        "covered_lines": 0,
+        "line_pct": 0.0,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 89.47,
+        "branch_pct": 87.5,
+        "executable_lines": 19,
+        "branches_total": 8
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "153-$ZodDefault",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 6,
+      "passed": 3,
+      "load_error": false,
+      "file_loc": 153,
+      "expect_calls": 14,
+      "test_calls_static": 6,
+      "coverage": {
+        "range": [
+          3081,
+          3105
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 19,
+        "covered_lines": 19,
+        "line_pct": 100.0,
+        "branches_total": 6,
+        "branches_covered": 6,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 89.47,
+        "branch_pct": 87.5,
+        "executable_lines": 19,
+        "branches_total": 8
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "153-$ZodDefault",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 9,
+      "passed": 9,
+      "load_error": false,
+      "file_loc": 104,
+      "expect_calls": 10,
+      "test_calls_static": 9,
+      "coverage": {
+        "range": [
+          3081,
+          3105
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 19,
+        "covered_lines": 19,
+        "line_pct": 100.0,
+        "branches_total": 7,
+        "branches_covered": 7,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 89.47,
+        "branch_pct": 87.5,
+        "executable_lines": 19,
+        "branches_total": 8
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "105-$ZodEmoji",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 114,
+      "expect_calls": 19,
+      "test_calls_static": 13,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "105-$ZodEmoji",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 13,
+      "passed": 7,
+      "load_error": false,
+      "file_loc": 105,
+      "expect_calls": 13,
+      "test_calls_static": 13,
+      "coverage": {
+        "range": [
+          493,
+          499
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.7
+    },
+    {
+      "unit_id": "105-$ZodEmoji",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 13,
+      "passed": 5,
+      "load_error": false,
+      "file_loc": 99,
+      "expect_calls": 16,
+      "test_calls_static": 13,
+      "coverage": {
+        "range": [
+          493,
+          499
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "137-$ZodDate",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 14,
+      "passed": 13,
+      "load_error": false,
+      "file_loc": 151,
+      "expect_calls": 29,
+      "test_calls_static": 9,
+      "coverage": {
+        "range": [
+          1461,
+          1485
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 22,
+        "covered_lines": 22,
+        "line_pct": 100.0,
+        "branches_total": 9,
+        "branches_covered": 8,
+        "branch_pct": 88.89
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 22,
+        "branches_total": 10
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "137-$ZodDate",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 7,
+      "passed": 6,
+      "load_error": false,
+      "file_loc": 195,
+      "expect_calls": 25,
+      "test_calls_static": 7,
+      "coverage": {
+        "range": [
+          1461,
+          1485
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 22,
+        "covered_lines": 22,
+        "line_pct": 100.0,
+        "branches_total": 9,
+        "branches_covered": 8,
+        "branch_pct": 88.89
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 22,
+        "branches_total": 10
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "137-$ZodDate",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/core/schemas.ts",
+      "cases": 13,
+      "passed": 10,
+      "load_error": false,
+      "file_loc": 141,
+      "expect_calls": 35,
+      "test_calls_static": 13,
+      "coverage": {
+        "range": [
+          1461,
+          1485
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 22,
+        "covered_lines": 22,
+        "line_pct": 100.0,
+        "branches_total": 9,
+        "branches_covered": 8,
+        "branch_pct": 88.89
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 22,
+        "branches_total": 10
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "055-ZodFile",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 17,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 155,
+      "expect_calls": 17,
+      "test_calls_static": 17,
+      "coverage": {
+        "range": [
+          1553,
+          1560
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 6
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "055-ZodFile",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 17,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 221,
+      "expect_calls": 13,
+      "test_calls_static": 17,
+      "coverage": {
+        "range": [
+          1553,
+          1560
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 6
+      },
+      "runner_error": null,
+      "coverage_seconds": 1.0
+    },
+    {
+      "unit_id": "055-ZodFile",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 12,
+      "passed": 4,
+      "load_error": false,
+      "file_loc": 111,
+      "expect_calls": 19,
+      "test_calls_static": 12,
+      "coverage": {
+        "range": [
+          1553,
+          1560
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 6
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "013-ZodUUID",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 13,
+      "passed": 4,
+      "load_error": false,
+      "file_loc": 189,
+      "expect_calls": 23,
+      "test_calls_static": 15,
+      "coverage": {
+        "range": [
+          418,
+          422
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 4,
+        "covered_lines": 1,
+        "line_pct": 25.0,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "013-ZodUUID",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 8,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 155,
+      "expect_calls": 18,
+      "test_calls_static": 8,
+      "coverage": {
+        "range": [
+          418,
+          422
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 4,
+        "covered_lines": 1,
+        "line_pct": 25.0,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "013-ZodUUID",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 16,
+      "passed": 2,
+      "load_error": false,
+      "file_loc": 142,
+      "expect_calls": 25,
+      "test_calls_static": 16,
+      "coverage": {
+        "range": [
+          418,
+          422
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 4,
+        "covered_lines": 1,
+        "line_pct": 25.0,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "036-ZodSymbol",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 15,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 134,
+      "expect_calls": 21,
+      "test_calls_static": 15,
+      "coverage": {
+        "range": [
+          904,
+          907
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "036-ZodSymbol",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 8,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 139,
+      "expect_calls": 13,
+      "test_calls_static": 8,
+      "coverage": {
+        "range": [
+          904,
+          907
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 4,
+        "covered_lines": 4,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "036-ZodSymbol",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 163,
+      "expect_calls": 10,
+      "test_calls_static": 13,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "062-ZodSuccess",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 10,
+      "passed": 9,
+      "load_error": false,
+      "file_loc": 118,
+      "expect_calls": 10,
+      "test_calls_static": 10,
+      "coverage": {
+        "range": [
+          1756,
+          1761
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 5,
+        "covered_lines": 5,
+        "line_pct": 100.0,
+        "branches_total": 2,
+        "branches_covered": 2,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 5,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "062-ZodSuccess",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 6,
+      "passed": 4,
+      "load_error": false,
+      "file_loc": 156,
+      "expect_calls": 11,
+      "test_calls_static": 6,
+      "coverage": {
+        "range": [
+          1756,
+          1761
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 5,
+        "covered_lines": 5,
+        "line_pct": 100.0,
+        "branches_total": 2,
+        "branches_covered": 2,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 5,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 1.0
+    },
+    {
+      "unit_id": "062-ZodSuccess",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 13,
+      "passed": 13,
+      "load_error": false,
+      "file_loc": 170,
+      "expect_calls": 9,
+      "test_calls_static": 8,
+      "coverage": {
+        "range": [
+          1756,
+          1761
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 5,
+        "covered_lines": 5,
+        "line_pct": 100.0,
+        "branches_total": 2,
+        "branches_covered": 2,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 5,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "003-ZodISODateTime",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/iso.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 298,
+      "expect_calls": 32,
+      "test_calls_static": 28,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "003-ZodISODateTime",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/iso.ts",
+      "cases": 31,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 148,
+      "expect_calls": 12,
+      "test_calls_static": 7,
+      "coverage": {
+        "range": [
+          15,
+          21
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "003-ZodISODateTime",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/iso.ts",
+      "cases": 23,
+      "passed": 1,
+      "load_error": false,
+      "file_loc": 231,
+      "expect_calls": 38,
+      "test_calls_static": 23,
+      "coverage": {
+        "range": [
+          15,
+          21
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 1.0
+    },
+    {
+      "unit_id": "021-ZodKSUID",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 22,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 230,
+      "expect_calls": 28,
+      "test_calls_static": 22,
+      "coverage": {
+        "range": [
+          546,
+          550
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 4,
+        "covered_lines": 1,
+        "line_pct": 25.0,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "021-ZodKSUID",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 8,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 143,
+      "expect_calls": 16,
+      "test_calls_static": 8,
+      "coverage": {
+        "range": [
+          546,
+          550
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 4,
+        "covered_lines": 1,
+        "line_pct": 25.0,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "021-ZodKSUID",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 15,
+      "passed": 9,
+      "load_error": false,
+      "file_loc": 130,
+      "expect_calls": 26,
+      "test_calls_static": 15,
+      "coverage": {
+        "range": [
+          546,
+          550
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 4,
+        "covered_lines": 1,
+        "line_pct": 25.0,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 4,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "058-ZodNullable",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 8,
+      "passed": 7,
+      "load_error": false,
+      "file_loc": 203,
+      "expect_calls": 13,
+      "test_calls_static": 9,
+      "coverage": {
+        "range": [
+          1644,
+          1652
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 8,
+        "covered_lines": 0,
+        "line_pct": 0.0,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 8,
+        "branches_total": 2
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.7
+    },
+    {
+      "unit_id": "058-ZodNullable",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 7,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 196,
+      "expect_calls": 12,
+      "test_calls_static": 7,
+      "coverage": {
+        "range": [
+          1644,
+          1652
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 8,
+        "covered_lines": 4,
+        "line_pct": 50.0,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 8,
+        "branches_total": 2
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "058-ZodNullable",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/classic/schemas.ts",
+      "cases": 5,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 65,
+      "expect_calls": 7,
+      "test_calls_static": 5,
+      "coverage": {
+        "range": [
+          1644,
+          1652
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 8,
+        "covered_lines": 8,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 8,
+        "branches_total": 2
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "168-ZodMiniISODate",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/mini/iso.ts",
+      "cases": 12,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 183,
+      "expect_calls": 14,
+      "test_calls_static": 12,
+      "coverage": {
+        "range": [
+          23,
+          29
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "168-ZodMiniISODate",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/mini/iso.ts",
+      "cases": 15,
+      "passed": 11,
+      "load_error": false,
+      "file_loc": 129,
+      "expect_calls": 16,
+      "test_calls_static": 15,
+      "coverage": {
+        "range": [
+          23,
+          29
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "168-ZodMiniISODate",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/mini/iso.ts",
+      "cases": 14,
+      "passed": 9,
+      "load_error": false,
+      "file_loc": 97,
+      "expect_calls": 16,
+      "test_calls_static": 14,
+      "coverage": {
+        "range": [
+          23,
+          29
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "210-ZodMiniDiscriminatedUnion",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 6,
+      "passed": 3,
+      "load_error": false,
+      "file_loc": 189,
+      "expect_calls": 13,
+      "test_calls_static": 6,
+      "coverage": {
+        "range": [
+          910,
+          916
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 57.14,
+        "branch_pct": null,
+        "executable_lines": 7,
+        "branches_total": 0
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "210-ZodMiniDiscriminatedUnion",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 14,
+      "passed": 5,
+      "load_error": false,
+      "file_loc": 204,
+      "expect_calls": 18,
+      "test_calls_static": 13,
+      "coverage": {
+        "range": [
+          910,
+          916
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 57.14,
+        "branch_pct": null,
+        "executable_lines": 7,
+        "branches_total": 0
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "197-ZodMiniBigInt",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 24,
+      "passed": 1,
+      "load_error": false,
+      "file_loc": 240,
+      "expect_calls": 43,
+      "test_calls_static": 24,
+      "coverage": {
+        "range": [
+          520,
+          526
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "197-ZodMiniBigInt",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 186,
+      "expect_calls": 31,
+      "test_calls_static": 16,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "197-ZodMiniBigInt",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 141,
+      "expect_calls": 27,
+      "test_calls_static": 18,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "206-ZodMiniDate",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 14,
+      "passed": 7,
+      "load_error": false,
+      "file_loc": 298,
+      "expect_calls": 39,
+      "test_calls_static": 15,
+      "coverage": {
+        "range": [
+          675,
+          681
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.8
+    },
+    {
+      "unit_id": "206-ZodMiniDate",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 14,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 149,
+      "expect_calls": 26,
+      "test_calls_static": 14,
+      "coverage": {
+        "range": [
+          675,
+          681
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "206-ZodMiniDate",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 25,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 178,
+      "expect_calls": 32,
+      "test_calls_static": 25,
+      "coverage": {
+        "range": [
+          675,
+          681
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "205-ZodMiniVoid",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 10,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 121,
+      "expect_calls": 20,
+      "test_calls_static": 10,
+      "coverage": {
+        "range": [
+          657,
+          663
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "205-ZodMiniVoid",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 62,
+      "passed": 24,
+      "load_error": false,
+      "file_loc": 196,
+      "expect_calls": 19,
+      "test_calls_static": 14,
+      "coverage": {
+        "range": [
+          657,
+          663
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "205-ZodMiniVoid",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 201,
+      "expect_calls": 27,
+      "test_calls_static": 20,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "232-ZodMiniPromise",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 304,
+      "expect_calls": 35,
+      "test_calls_static": 21,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "232-ZodMiniPromise",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 168,
+      "expect_calls": 18,
+      "test_calls_static": 15,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "232-ZodMiniPromise",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 15,
+      "passed": 3,
+      "load_error": false,
+      "file_loc": 193,
+      "expect_calls": 25,
+      "test_calls_static": 15,
+      "coverage": {
+        "range": [
+          1466,
+          1472
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "211-ZodMiniIntersection",
+      "technique": "COT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 10,
+      "passed": 5,
+      "load_error": false,
+      "file_loc": 129,
+      "expect_calls": 13,
+      "test_calls_static": 10,
+      "coverage": {
+        "range": [
+          938,
+          944
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "211-ZodMiniIntersection",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 211,
+      "expect_calls": 15,
+      "test_calls_static": 14,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "211-ZodMiniIntersection",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 0,
+      "passed": 0,
+      "load_error": true,
+      "file_loc": 173,
+      "expect_calls": 18,
+      "test_calls_static": 9,
+      "coverage": null,
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "coverage_skipped_reason": "file did not load without error in Phase 5"
+    },
+    {
+      "unit_id": "181-ZodMiniCUID2",
+      "technique": "TOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 9,
+      "passed": 1,
+      "load_error": false,
+      "file_loc": 187,
+      "expect_calls": 25,
+      "test_calls_static": 9,
+      "coverage": {
+        "range": [
+          237,
+          243
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 4,
+        "line_pct": 57.14,
+        "branches_total": 0,
+        "branches_covered": 0,
+        "branch_pct": null
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    },
+    {
+      "unit_id": "181-ZodMiniCUID2",
+      "technique": "GTOT",
+      "source_file": "packages/zod/src/v4/mini/schemas.ts",
+      "cases": 50,
+      "passed": 0,
+      "load_error": false,
+      "file_loc": 156,
+      "expect_calls": 15,
+      "test_calls_static": 10,
+      "coverage": {
+        "range": [
+          237,
+          243
+        ],
+        "file_in_coverage": true,
+        "executable_lines": 7,
+        "covered_lines": 7,
+        "line_pct": 100.0,
+        "branches_total": 1,
+        "branches_covered": 1,
+        "branch_pct": 100.0
+      },
+      "dev_coverage": {
+        "line_pct": 100.0,
+        "branch_pct": 100.0,
+        "executable_lines": 7,
+        "branches_total": 1
+      },
+      "runner_error": null,
+      "coverage_seconds": 0.9
+    }
+  ]
+}

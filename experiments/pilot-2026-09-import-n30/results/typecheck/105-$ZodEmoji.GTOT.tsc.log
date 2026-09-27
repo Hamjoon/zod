@@ -1,0 +1,12 @@
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(26,22): error TS2339: Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(31,22): error TS2339: Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(36,22): error TS2339: Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(41,22): error TS2339: Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(46,22): error TS2339: Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(52,28): error TS2339: Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(56,28): error TS2339: Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(60,28): error TS2339: Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(65,28): error TS2339: Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(69,28): error TS2339: Property 'parse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(75,30): error TS2339: Property 'safeParse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.
+packages/zod/src/v4/core/$ZodEmoji.pilot.test.ts(83,30): error TS2339: Property 'safeParse' does not exist on type '$constructor<$ZodEmoji, $ZodStringFormatDef<"emoji">>'.

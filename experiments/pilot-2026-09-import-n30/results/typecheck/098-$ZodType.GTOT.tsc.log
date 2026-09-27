@@ -1,0 +1,2 @@
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(44,10): error TS2348: Value of type '$constructor<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, $ZodTypeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/core/$ZodType.pilot.test.ts(168,18): error TS6133: 'payload' is declared but its value is never read.

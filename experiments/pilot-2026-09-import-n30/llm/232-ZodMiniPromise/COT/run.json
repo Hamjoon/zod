@@ -1,0 +1,18 @@
+{
+  "unit_id": "232-ZodMiniPromise",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:54:16.428356+00:00",
+  "latency_s": 17.987,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "Novita",
+  "response_id": "gen-1790337258-cFCNs0kAf1suyx617JRQ",
+  "content_chars": 13482,
+  "content_empty": false,
+  "completion_tokens": 3629,
+  "prompt_tokens_reported": 380,
+  "error": null
+}

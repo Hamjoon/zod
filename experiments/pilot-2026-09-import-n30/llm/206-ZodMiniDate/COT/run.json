@@ -1,0 +1,18 @@
+{
+  "unit_id": "206-ZodMiniDate",
+  "technique": "COT",
+  "timestamp_utc": "2026-09-25T11:52:02.909393+00:00",
+  "latency_s": 22.613,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "native_finish_reason": "end_turn",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "provider": "Amazon Bedrock",
+  "response_id": "gen-1790337124-lzABZL56N6P7k9nU4IIK",
+  "content_chars": 11577,
+  "content_empty": false,
+  "completion_tokens": 3299,
+  "prompt_tokens_reported": 371,
+  "error": null
+}

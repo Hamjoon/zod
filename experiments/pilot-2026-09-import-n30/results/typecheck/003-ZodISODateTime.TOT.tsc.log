@@ -1,0 +1,8 @@
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(29,20): error TS2348: Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(35,20): error TS2348: Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(66,22): error TS2348: Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(108,22): error TS2348: Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(124,20): error TS2348: Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(129,20): error TS2348: Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(135,20): error TS2348: Value of type '$constructor<ZodISODateTime, $ZodISODateTimeDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/classic/ZodISODateTime.pilot.test.ts(135,45): error TS7006: Parameter 'val' implicitly has an 'any' type.

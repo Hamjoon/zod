@@ -1,0 +1,8 @@
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(41,33): error TS2348: Value of type '$constructor<ZodNumber, $ZodNumberDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(54,31): error TS2348: Value of type '$constructor<ZodString, $ZodStringDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(69,9): error TS7022: 'Node' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(69,21): error TS7024: Function implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(70,5): error TS2348: Value of type '$constructor<ZodObject<$ZodLooseShape, $strip>, $ZodObjectDef<$ZodLooseShape>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(71,14): error TS2348: Value of type '$constructor<ZodNumber, $ZodNumberDef>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(73,17): error TS2348: Value of type '$constructor<ZodArray<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>, $ZodArrayDef<$ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>>>' is not callable. Did you mean to include 'new'?
+packages/zod/src/v4/mini/ZodMiniLazy.pilot.test.ts(129,33): error TS2348: Value of type '$constructor<ZodNumber, $ZodNumberDef>' is not callable. Did you mean to include 'new'?
