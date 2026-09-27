@@ -1,0 +1,270 @@
+{
+  "metaData": {
+    "packageName": "zod",
+    "useDocSnippets": true,
+    "useCodeSnippets": false,
+    "numSnippets": 3,
+    "snippetLength": 20,
+    "numCompletions": 1
+  },
+  "nrUniqueSnippets": 6,
+  "stats": {
+    "nrTests": 11,
+    "nrPasses": 7,
+    "nrFailures": 4,
+    "nrPending": 0,
+    "nrOther": 0,
+    "snippetExtractionTime": 369.67162499999995,
+    "codexQueryTime": 0,
+    "totalTime": 162209.691865
+  },
+  "tests": [
+    {
+      "testName": "test_0.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_0.js",
+      "promptIds": [
+        0
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 488.7353750000002
+    },
+    {
+      "testName": "test_1.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_1.js",
+      "promptIds": [
+        1
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 663.2925419999992
+    },
+    {
+      "testName": "test_2.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_2.js",
+      "promptIds": [
+        2
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 461.99429200000304
+    },
+    {
+      "testName": "test_3.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_3.js",
+      "promptIds": [
+        3
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Invalid discriminator value/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"code\": \"invalid_union\",\\n' +\n  '    \"errors\": [],\\n' +\n  '    \"note\": \"No matching discriminator\",\\n' +\n  '    \"path\": [\\n' +\n  '      \"status\"\\n' +\n  '    ],\\n' +\n  '    \"message\": \"Invalid input\"\\n' +\n  '  }\\n' +\n  ']'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-Jbf1Rn/test_3.js:23:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The input did not match the regular expression /Invalid discriminator value/. Input:\n\n'[\\n' +\n  '  {\\n' +\n  '    \"code\": \"invalid_union\",\\n' +\n  '    \"errors\": [],\\n' +\n  '    \"note\": \"No matching discriminator\",\\n' +\n  '    \"path\": [\\n' +\n  '      \"status\"\\n' +\n  '    ],\\n' +\n  '    \"message\": \"Invalid input\"\\n' +\n  '  }\\n' +\n  ']'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"code\": \"invalid_union\",\n    \"errors\": [],\n    \"note\": \"No matching discriminator\",\n    \"path\": [\n      \"status\"\n    ],\n    \"message\": \"Invalid input\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 566.4390839999978
+    },
+    {
+      "testName": "test_4.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_4.js",
+      "promptIds": [
+        4
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 440.9806249999965
+    },
+    {
+      "testName": "test_5.js",
+      "api": "zod.z.check",
+      "testFile": "test_5.js",
+      "promptIds": [
+        5
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'object'\n- 'function'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-Jbf1Rn/test_5.js:16:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'object'\n- 'function'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": "object",
+        "expected": "function",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 387.64591700000165
+    },
+    {
+      "testName": "test_6.js",
+      "api": "zod.z.check",
+      "testFile": "test_6.js",
+      "promptIds": [
+        6
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: The check type should be \"custom\"\n+ actual - expected\n\n+ undefined\n- 'custom'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-Jbf1Rn/test_6.js:24:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "The check type should be \"custom\"\n+ actual - expected\n\n+ undefined\n- 'custom'\n",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "expected": "custom",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 436.9959999999992
+    },
+    {
+      "testName": "test_7.js",
+      "api": "zod.z.check",
+      "testFile": "test_7.js",
+      "promptIds": [
+        7
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 460.76491699999315
+    },
+    {
+      "testName": "test_8.js",
+      "api": "zod.z.check",
+      "testFile": "test_8.js",
+      "promptIds": [
+        8
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ],
+      "duration": 431.467416999978
+    },
+    {
+      "testName": "test_9.js",
+      "api": "zod.z.check",
+      "testFile": "test_9.js",
+      "promptIds": [
+        9
+      ],
+      "status": "FAILED",
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'object'\n- 'function'\n\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-Jbf1Rn/test_9.js:46:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'object'\n- 'function'\n",
+        "generatedMessage": true,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": "object",
+        "expected": "function",
+        "operator": "strictEqual",
+        "diff": "simple"
+      },
+      "coveredStatements": [],
+      "duration": 444.86966699999175
+    },
+    {
+      "testName": "test_10.js",
+      "api": "zod.z.check",
+      "testFile": "test_10.js",
+      "promptIds": [
+        10
+      ],
+      "status": "PASSED",
+      "err": {},
+      "coveredStatements": [
+        "index.js@1:0-1:32"
+      ]
+    }
+  ],
+  "coverage": {
+    "total": {
+      "lines": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "statements": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "functions": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branches": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": "Unknown"
+      }
+    },
+    "/work/zod/experiments/testpilot-2026-09/wrappers/zod/index.js": {
+      "lines": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "functions": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "statements": {
+        "total": 1,
+        "covered": 1,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branches": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      }
+    }
+  }
+}

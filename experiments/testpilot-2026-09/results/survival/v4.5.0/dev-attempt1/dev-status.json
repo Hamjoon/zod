@@ -1,0 +1,8 @@
+{
+  "release": "v4.5.0",
+  "vitestExitCode": 1,
+  "typecheckFlagAccepted": true,
+  "harness": "failed",
+  "wallSeconds": 0.4909533340000003,
+  "error": "Error: Projects definition references a non-existing file or a directory: /work/zod-versions/v4.5.0/packages/zod/vitest.compile.config.ts"
+}

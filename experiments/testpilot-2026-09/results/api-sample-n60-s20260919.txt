@@ -1,0 +1,61 @@
+accessPath	stratum	signature	implLength	snippets_docs
+zod.z.discriminatedUnion	S	(discriminator, options, params)	272	5
+zod.z.number	S	(params)	79	168
+zod.z.file	S	(params)	73	5
+zod.z.nullish	S	(innerType)	73	7
+zod.z.readonly	S	(innerType)	133	6
+zod.z.map	S	(keyType, valueType, params)	213	6
+zod.z.cidrv4	S	(params)	79	5
+zod.z.cidrv6	S	(params)	79	5
+zod.z.strictObject	S	(shape, params)	319	3
+zod.z.date	S	(params)	73	78
+zod.z.base64	S	(params)	79	2
+zod.z.tuple	S	(items, _paramsOrRest, _params)	365	8
+zod.z.guid	S	(params)	73	2
+zod.z.nanoid	S	(params)	79	3
+zod.z.uuidv6	S	(params)	77	1
+zod.z.array	S	(element, params)	94	35
+zod.z.int64	S	(params)	83	3
+zod.z.any	S	()	56	3
+zod.z.ulid	S	(params)	73	3
+zod.z.templateLiteral	S	(parts, params)	196	3
+zod.z.nullable	S	(innerType)	133	12
+zod.z.ksuid	S	(params)	76	0
+zod.z.never	S	(params)	76	1
+zod.z.email	S	(params)	76	17
+zod.z.looseObject	S	(shape, params)	320	2
+zod.z.symbol	S	(params)	79	4
+zod.z.uuidv7	S	(params)	77	2
+zod.z.uuid	S	(params)	73	22
+zod.z.prefault	S	(innerType, defaultValue)	274	3
+zod.z.cuid2	S	(params)	76	3
+zod.z.unknown	S	()	68	5
+zod.z.uint32	S	(params)	85	1
+zod.z.keyof	S	(schema)	107	3
+zod.z.catch	S	(innerType, catchValue)	225	6
+zod.z.nonoptional	S	(innerType, params)	202	1
+zod.z.boolean	S	(params)	82	30
+zod.z.check	C	(fn)	174	27
+zod.z.uppercase	C	(params)	184	3
+zod.z.minLength	C	(minimum, params)	178	10
+zod.z.negative	C	(params)	57	8
+zod.z.gte	C	(value, params)	197	8
+zod.z.size	C	(size, params)	169	5
+zod.z.endsWith	C	(suffix, params)	206	4
+zod.z.property	C	(property, schema, params)	200	0
+zod.z.multipleOf	C	(value, params)	177	8
+zod.z.maxSize	C	(maximum, params)	172	4
+zod.z.lt	C	(value, params)	191	8
+zod.z.trim	C	()	68	9
+zod.z.transform	C	(fn)	122	27
+zod.z.positive	C	(params)	57	9
+zod.z.overwrite	C	(tx)	118	2
+zod.z.preprocess	C	(fn, schema)	75	1
+zod.z.nonpositive	C	(params)	61	8
+zod.z.iso.duration	Q	(params)	91	3
+zod.z.safeParse	Q	(schema, value, _ctx)	500	60
+zod.z.parseAsync	Q	(schema, value, _ctx, params)	498	14
+zod.z.coerce.number	Q	(params)	86	168
+zod.z.coerce.boolean	Q	(params)	89	30
+zod.z.parse	Q	(schema, value, _ctx, _params)	517	250
+zod.z.iso.time	Q	(params)	79	16

@@ -1,0 +1,265 @@
+{
+  "metaData": {
+    "packageName": "zod",
+    "useDocSnippets": true,
+    "useCodeSnippets": false,
+    "numSnippets": 3,
+    "snippetLength": 20,
+    "numCompletions": 1
+  },
+  "nrUniqueSnippets": 6,
+  "stats": {
+    "nrTests": 16,
+    "nrPasses": 0,
+    "nrFailures": 16,
+    "nrPending": 0,
+    "nrOther": 0,
+    "snippetExtractionTime": 367.81679199999996,
+    "codexQueryTime": 0,
+    "totalTime": 152318.815653
+  },
+  "tests": [
+    {
+      "testName": "test_0.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_0.js",
+      "promptIds": [
+        0
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_1.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_1.js",
+      "promptIds": [
+        0
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_2.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_2.js",
+      "promptIds": [
+        0
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_3.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_3.js",
+      "promptIds": [
+        1
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_4.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_4.js",
+      "promptIds": [
+        2
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_5.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_5.js",
+      "promptIds": [
+        3
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_6.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_6.js",
+      "promptIds": [
+        3
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_7.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_7.js",
+      "promptIds": [
+        3
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_8.js",
+      "api": "zod.z.discriminatedUnion",
+      "testFile": "test_8.js",
+      "promptIds": [
+        4
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_9.js",
+      "api": "zod.z.check",
+      "testFile": "test_9.js",
+      "promptIds": [
+        5
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_10.js",
+      "api": "zod.z.check",
+      "testFile": "test_10.js",
+      "promptIds": [
+        6
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_11.js",
+      "api": "zod.z.check",
+      "testFile": "test_11.js",
+      "promptIds": [
+        7
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_12.js",
+      "api": "zod.z.check",
+      "testFile": "test_12.js",
+      "promptIds": [
+        8
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_13.js",
+      "api": "zod.z.check",
+      "testFile": "test_13.js",
+      "promptIds": [
+        9
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_14.js",
+      "api": "zod.z.check",
+      "testFile": "test_14.js",
+      "promptIds": [
+        9
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    },
+    {
+      "testName": "test_15.js",
+      "api": "zod.z.check",
+      "testFile": "test_15.js",
+      "promptIds": [
+        9
+      ],
+      "status": "FAILED",
+      "err": {
+        "message": "Invalid syntax"
+      },
+      "coveredStatements": []
+    }
+  ],
+  "coverage": {
+    "total": {
+      "lines": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 0
+      },
+      "statements": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 0
+      },
+      "functions": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 0
+      },
+      "branches": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 0
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 0
+      }
+    }
+  }
+}

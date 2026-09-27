@@ -1,0 +1,1 @@
+It looks like the code snippet you’re referring to didn’t come through in your message, so I can’t see the exact syntax error to fix. Could you please repost the code (or the relevant portion) that’s causing the “Invalid syntax” error? Once I have the code, I’ll be able to correct the syntax and provide the updated version in a fenced code block.

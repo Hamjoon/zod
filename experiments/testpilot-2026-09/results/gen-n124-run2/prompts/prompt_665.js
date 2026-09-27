@@ -1,0 +1,45 @@
+The test:
+```
+let mocha = require('mocha');
+let assert = require('assert');
+let zod = require('zod');
+
+describe('test zod', function() {
+    it('test zod.z.uppercase', function(done) {
+        // Test with custom parameters
+        const customParams = { message: 'must be uppercase' };
+        const checkWithParams = zod.z.uppercase(customParams);
+
+        // Verify the returned object has the expected structure and values
+        assert.ok(checkWithParams, 'Returned check object should exist');
+        assert.strictEqual(checkWithParams.check, 'string_format', 'check property should be "string_format"');
+        assert.strictEqual(checkWithParams.format, 'uppercase', 'format property should be "uppercase"');
+        assert.strictEqual(checkWithParams.message, customParams.message, 'Custom param should be merged');
+
+        // Test with no parameters (defaults)
+        const checkDefault = zod.z.uppercase();
+
+        // Verify defaults are correctly set
+        assert.ok(checkDefault, 'Returned default check object should exist');
+        assert.strictEqual(checkDefault.check, 'string_format', 'Default check property should be "string_format"');
+        assert.strictEqual(checkDefault.format, 'uppercase', 'Default format property should be "uppercase"');
+        // No custom params means message (or any other param) should be undefined
+        assert.strictEqual(checkDefault.message, undefined, 'Default check should not have a message property');
+
+        done();
+    });
+});
+``` 
+failed with the following error message:
+```
+check property should be "string_format"
++ actual - expected
+
++ undefined
+- 'string_format'
+  
+```
+
+Your task is to modify the above code to fix the test. 
+
+Provide your answer as a fenced code block.

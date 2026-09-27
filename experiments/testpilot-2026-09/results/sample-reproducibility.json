@@ -1,0 +1,11 @@
+{
+  "byteIdentical": true,
+  "sha256": {
+    "population-main.json": "530b39f52feedc65cf7a7ebb97520fc037e6d0b89386263691a90b7a8a664500",
+    "population-main.txt": "8588eb1b569d0048427875259afcc439f84c55efc15343d564a006f39c36b96a",
+    "api-sample-n60-s20260919.json": "82d902eb9bb729ef4f2c2ceba06e2c12a36e2ad1d8935701f744df98b95ada68",
+    "api-sample-n60-s20260919.txt": "8a3a0e722ed54bcb0ea3cf67271f3a7c7ff4ae42b6658730a4ca81d0110f9066",
+    "population-mini-specific.txt": "2f85d97e7cd249b52e87b415a64442ff0b6305c3e91aaca36d9d2c24a96a99ca",
+    "population-stats.json": "2b2345b1da52c38dae13c655d263ec6dd5ba5aafd589d06fdb91f062b3cf9423"
+  }
+}

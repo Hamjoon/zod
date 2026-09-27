@@ -1,0 +1,39 @@
+Options:
+  --help             Show help                                         [boolean]
+  --version          Show version number                               [boolean]
+  --outputDir        directory where output files will be placed
+                                                             [string] [required]
+  --package          package source                          [string] [required]
+  --api              JSON file with API to generate tests for (usually api.json
+                     from a previous run)                               [string]
+  --snippets         where to collect usage snippets from
+              [string] [choices: "code", "doc", "both", "none"] [default: "doc"]
+  --database         CodeQL database; only required if collecting snippets from
+                     code                                               [string]
+  --responses        file with simulated model responses (usually prompts.json
+                     from a previous run)                               [string]
+  --timeLimit        time limit in seconds (default is five hours)
+                                                       [number] [default: 18000]
+  --numSnippets      number of snippets to include in the prompt, or "all" to
+                     include all snippets                       [default: "all"]
+  --snippetLength    maximum length of each snippet in lines
+                                                          [number] [default: 20]
+  --maxTokens        maximum number of tokens in a completion
+                                                        [number] [default: 1000]
+  --temperatures     whitespace-separated list of sampling temperatures to try
+                     when obtaining completions        [string] [default: "0.0"]
+  --numCompletions   number of completions to generate for each prompt
+                                                           [number] [default: 5]
+  --strictResponses  whether to require that all prompts are found when running
+                     with --responses; does not have any effect otherwise
+                                                       [boolean] [default: true]
+  --model            LLM to use
+                           [string] [required] [default: "llama-3-70b-instruct"]
+  --template         Handlebars template file to use
+                        [string] [required] [default: "./templates/template.hb"]
+  --retryTemplate    Handlebars template file to use
+                  [string] [required] [default: "./templates/retry-template.hb"]
+  --nrAttempts       number of attempts to make for each request
+                                                           [number] [default: 3]
+  --rateLimit        number of milliseconds between prompts or "benchmark"
+                                                          [string] [default: ""]

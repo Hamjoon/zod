@@ -1,0 +1,115 @@
+Warning: --strictResponses has no effect when not using --responses
+Using openai/gpt-oss-120b at https://openrouter.ai/api/v1/chat/completions with 3 attempts and NoRateLimiter
+Running experiment for zod
+Loading API from /work/zod/experiments/testpilot-2026-09/results/api-n124-tail.json
+Extracting snippets
+Generating tests
+test_0.js (for zod.z.startsWith at temperature 0, 3 snippets available): FAILED
+(node:9) [DEP0147] DeprecationWarning: In future versions of Node.js, fs.rmdir(path, { recursive: true }) will be removed. Use fs.rm(path, { recursive: true }) instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+test_1.js (for zod.z.startsWith at temperature 0, 3 snippets available): FAILED
+test_2.js (for zod.z.startsWith at temperature 0, 3 snippets available): FAILED
+test_3.js (for zod.z.startsWith at temperature 0, 3 snippets available): FAILED
+test_4.js (for zod.z.startsWith at temperature 0, 3 snippets available): FAILED
+test_5.js (for zod.z.startsWith at temperature 0, 3 snippets available): FAILED
+test_6.js (for zod.z.startsWith at temperature 0, 3 snippets available): FAILED
+test_7.js (for zod.z.endsWith at temperature 0, 3 snippets available): FAILED
+test_8.js (for zod.z.endsWith at temperature 0, 3 snippets available): FAILED
+test_9.js (for zod.z.endsWith at temperature 0, 3 snippets available): FAILED
+test_10.js (for zod.z.endsWith at temperature 0, 3 snippets available): FAILED
+test_11.js (for zod.z.endsWith at temperature 0, 3 snippets available): PASSED
+test_12.js (for zod.z.endsWith at temperature 0, 3 snippets available): FAILED
+test_13.js (for zod.z.endsWith at temperature 0, 3 snippets available): FAILED
+test_14.js (for zod.z.endsWith at temperature 0, 3 snippets available): FAILED
+test_15.js (for zod.z.property at temperature 0, 0 snippets available): FAILED
+test_16.js (for zod.z.property at temperature 0, 0 snippets available): FAILED
+test_17.js (for zod.z.property at temperature 0, 0 snippets available): FAILED
+test_18.js (for zod.z.property at temperature 0, 0 snippets available): FAILED
+test_19.js (for zod.z.mime at temperature 0, 3 snippets available): FAILED
+test_20.js (for zod.z.mime at temperature 0, 3 snippets available): FAILED
+test_21.js (for zod.z.mime at temperature 0, 3 snippets available): FAILED
+test_22.js (for zod.z.mime at temperature 0, 3 snippets available): FAILED
+test_23.js (for zod.z.mime at temperature 0, 3 snippets available): FAILED
+test_24.js (for zod.z.mime at temperature 0, 3 snippets available): FAILED
+test_25.js (for zod.z.mime at temperature 0, 3 snippets available): FAILED
+Error parsing coverage report: Error: ENOENT: no such file or directory, open '/tmp/mocha-validator7liV2g/report.json'
+test_26.js (for zod.z.mime at temperature 0, 3 snippets available): FAILED
+test_27.js (for zod.z.overwrite at temperature 0, 2 snippets available): PASSED
+test_28.js (for zod.z.overwrite at temperature 0, 2 snippets available): FAILED
+test_29.js (for zod.z.overwrite at temperature 0, 2 snippets available): FAILED
+test_30.js (for zod.z.overwrite at temperature 0, 2 snippets available): FAILED
+test_31.js (for zod.z.overwrite at temperature 0, 2 snippets available): FAILED
+test_32.js (for zod.z.overwrite at temperature 0, 2 snippets available): PASSED
+test_33.js (for zod.z.normalize at temperature 0, 0 snippets available): FAILED
+test_34.js (for zod.z.normalize at temperature 0, 0 snippets available): FAILED
+test_35.js (for zod.z.normalize at temperature 0, 0 snippets available): PASSED
+test_36.js (for zod.z.normalize at temperature 0, 0 snippets available): FAILED
+test_37.js (for zod.z.trim at temperature 0, 3 snippets available): FAILED
+test_38.js (for zod.z.trim at temperature 0, 3 snippets available): FAILED
+test_39.js (for zod.z.trim at temperature 0, 3 snippets available): PASSED
+test_40.js (for zod.z.trim at temperature 0, 3 snippets available): PASSED
+Error parsing coverage report: Error: ENOENT: no such file or directory, open '/tmp/mocha-validatorQMaJyv/report.json'
+test_41.js (for zod.z.trim at temperature 0, 3 snippets available): FAILED
+test_42.js (for zod.z.trim at temperature 0, 3 snippets available): FAILED
+test_43.js (for zod.z.trim at temperature 0, 3 snippets available): FAILED
+test_44.js (for zod.z.toLowerCase at temperature 0, 3 snippets available): PASSED
+test_45.js (for zod.z.toLowerCase at temperature 0, 3 snippets available): FAILED
+test_46.js (for zod.z.toLowerCase at temperature 0, 3 snippets available): FAILED
+test_47.js (for zod.z.toLowerCase at temperature 0, 3 snippets available): PASSED
+test_48.js (for zod.z.toLowerCase at temperature 0, 3 snippets available): FAILED
+test_49.js (for zod.z.toLowerCase at temperature 0, 3 snippets available): PASSED
+test_50.js (for zod.z.toUpperCase at temperature 0, 3 snippets available): PASSED
+test_51.js (for zod.z.toUpperCase at temperature 0, 3 snippets available): FAILED
+test_52.js (for zod.z.toUpperCase at temperature 0, 3 snippets available): PASSED
+test_53.js (for zod.z.toUpperCase at temperature 0, 3 snippets available): FAILED
+test_54.js (for zod.z.toUpperCase at temperature 0, 3 snippets available): PASSED
+test_55.js (for zod.z.toUpperCase at temperature 0, 3 snippets available): PASSED
+test_56.js (for zod.z.parse at temperature 0, 3 snippets available): PASSED
+test_57.js (for zod.z.parse at temperature 0, 3 snippets available): FAILED
+Error parsing coverage report: Error: ENOENT: no such file or directory, open '/tmp/mocha-validator86OD52/report.json'
+test_58.js (for zod.z.parse at temperature 0, 3 snippets available): FAILED
+test_59.js (for zod.z.parse at temperature 0, 3 snippets available): PASSED
+test_60.js (for zod.z.parse at temperature 0, 3 snippets available): FAILED
+test_61.js (for zod.z.parse at temperature 0, 3 snippets available): FAILED
+test_62.js (for zod.z.parseAsync at temperature 0, 3 snippets available): FAILED
+test_63.js (for zod.z.parseAsync at temperature 0, 3 snippets available): PASSED
+test_64.js (for zod.z.parseAsync at temperature 0, 3 snippets available): FAILED
+test_65.js (for zod.z.parseAsync at temperature 0, 3 snippets available): FAILED
+test_66.js (for zod.z.parseAsync at temperature 0, 3 snippets available): PASSED
+test_67.js (for zod.z.parseAsync at temperature 0, 3 snippets available): PASSED
+test_68.js (for zod.z.safeParse at temperature 0, 3 snippets available): PASSED
+test_69.js (for zod.z.safeParse at temperature 0, 3 snippets available): FAILED
+test_70.js (for zod.z.safeParse at temperature 0, 3 snippets available): FAILED
+test_71.js (for zod.z.safeParse at temperature 0, 3 snippets available): FAILED
+test_72.js (for zod.z.safeParse at temperature 0, 3 snippets available): FAILED
+test_73.js (for zod.z.safeParse at temperature 0, 3 snippets available): FAILED
+test_74.js (for zod.z.safeParse at temperature 0, 3 snippets available): FAILED
+test_75.js (for zod.z.safeParseAsync at temperature 0, 3 snippets available): PASSED
+test_76.js (for zod.z.safeParseAsync at temperature 0, 3 snippets available): PASSED
+test_77.js (for zod.z.safeParseAsync at temperature 0, 3 snippets available): PASSED
+test_78.js (for zod.z.safeParseAsync at temperature 0, 3 snippets available): PASSED
+test_79.js (for zod.z.setErrorMap at temperature 0, 0 snippets available): PASSED
+test_80.js (for zod.z.setErrorMap at temperature 0, 0 snippets available): FAILED
+test_81.js (for zod.z.setErrorMap at temperature 0, 0 snippets available): FAILED
+test_82.js (for zod.z.getErrorMap at temperature 0, 0 snippets available): FAILED
+test_83.js (for zod.z.getErrorMap at temperature 0, 0 snippets available): FAILED
+test_84.js (for zod.z.getErrorMap at temperature 0, 0 snippets available): PASSED
+test_85.js (for zod.z.getErrorMap at temperature 0, 0 snippets available): FAILED
+25 passed, 61 failed, 0 pending, 0 other
+API coverage:
+  zod.z.startsWith: [31m✗test_0.js[0m, [31m✗test_1.js[0m, [31m✗test_2.js[0m, [31m✗test_3.js[0m, [31m✗test_4.js[0m, [31m✗test_5.js[0m, [31m✗test_6.js[0m
+  zod.z.endsWith: [31m✗test_7.js[0m, [31m✗test_8.js[0m, [31m✗test_9.js[0m, [31m✗test_10.js[0m, [32m✓test_11.js[0m, [31m✗test_12.js[0m, [31m✗test_13.js[0m, [31m✗test_14.js[0m
+  zod.z.property: [31m✗test_15.js[0m, [31m✗test_16.js[0m, [31m✗test_17.js[0m, [31m✗test_18.js[0m
+  zod.z.mime: [31m✗test_19.js[0m, [31m✗test_20.js[0m, [31m✗test_21.js[0m, [31m✗test_22.js[0m, [31m✗test_23.js[0m, [31m✗test_24.js[0m, [31m✗test_25.js[0m, [31m✗test_26.js[0m
+  zod.z.overwrite: [32m✓test_27.js[0m, [31m✗test_28.js[0m, [31m✗test_29.js[0m, [31m✗test_30.js[0m, [31m✗test_31.js[0m, [32m✓test_32.js[0m
+  zod.z.normalize: [31m✗test_33.js[0m, [31m✗test_34.js[0m, [32m✓test_35.js[0m, [31m✗test_36.js[0m
+  zod.z.trim: [31m✗test_37.js[0m, [31m✗test_38.js[0m, [32m✓test_39.js[0m, [32m✓test_40.js[0m, [31m✗test_41.js[0m, [31m✗test_42.js[0m, [31m✗test_43.js[0m
+  zod.z.toLowerCase: [32m✓test_44.js[0m, [31m✗test_45.js[0m, [31m✗test_46.js[0m, [32m✓test_47.js[0m, [31m✗test_48.js[0m, [32m✓test_49.js[0m
+  zod.z.toUpperCase: [32m✓test_50.js[0m, [31m✗test_51.js[0m, [32m✓test_52.js[0m, [31m✗test_53.js[0m, [32m✓test_54.js[0m, [32m✓test_55.js[0m
+  zod.z.parse: [32m✓test_56.js[0m, [31m✗test_57.js[0m, [31m✗test_58.js[0m, [32m✓test_59.js[0m, [31m✗test_60.js[0m, [31m✗test_61.js[0m
+  zod.z.parseAsync: [31m✗test_62.js[0m, [32m✓test_63.js[0m, [31m✗test_64.js[0m, [31m✗test_65.js[0m, [32m✓test_66.js[0m, [32m✓test_67.js[0m
+  zod.z.safeParse: [32m✓test_68.js[0m, [31m✗test_69.js[0m, [31m✗test_70.js[0m, [31m✗test_71.js[0m, [31m✗test_72.js[0m, [31m✗test_73.js[0m, [31m✗test_74.js[0m
+  zod.z.safeParseAsync: [32m✓test_75.js[0m, [32m✓test_76.js[0m, [32m✓test_77.js[0m, [32m✓test_78.js[0m
+  zod.z.setErrorMap: [32m✓test_79.js[0m, [31m✗test_80.js[0m, [31m✗test_81.js[0m
+  zod.z.getErrorMap: [31m✗test_82.js[0m, [31m✗test_83.js[0m, [32m✓test_84.js[0m, [31m✗test_85.js[0m
+100% statement coverage

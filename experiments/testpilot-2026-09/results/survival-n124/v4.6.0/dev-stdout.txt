@@ -1,0 +1,2370 @@
+== primary cwd=/work/zod-versions/v4.6.0
+$ npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival-n124/v4.6.0/dev-run.json
+[33mTesting types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.[39m
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.5 [39m[90m/work/zod-versions/v4.6.0[39m
+
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/intersection.test.ts [2m([22m[2m10 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 21[2mms[22m[39m
+   [32m✓[39m object intersection[32m 4[2mms[22m[39m
+   [32m✓[39m object intersection: loose[32m 1[2mms[22m[39m
+[31m   [31m×[31m object intersection: strict[39m[32m 4[2mms[22m[39m
+   [32m✓[39m deep intersection[32m 1[2mms[22m[39m
+   [32m✓[39m deep intersection of arrays[32m 1[2mms[22m[39m
+   [32m✓[39m invalid intersection types[32m 3[2mms[22m[39m
+   [32m✓[39m invalid array merge (incompatible lengths)[32m 1[2mms[22m[39m
+   [32m✓[39m invalid array merge (incompatible elements)[32m 2[2mms[22m[39m
+   [32m✓[39m invalid object merge[32m 1[2mms[22m[39m
+   [32m✓[39m invalid deep merge of object and array combination[32m 1[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/tuple.test.ts [2m([22m[2m6 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 21[2mms[22m[39m
+[31m   [31m×[31m successful validation[39m[32m 10[2mms[22m[39m
+[31m   [31m×[31m async validation[39m[32m 4[2mms[22m[39m
+   [32m✓[39m tuple with optional elements[32m 3[2mms[22m[39m
+   [32m✓[39m tuple with optional elements followed by required[32m 2[2mms[22m[39m
+   [32m✓[39m tuple with rest schema[32m 0[2mms[22m[39m
+   [32m✓[39m sparse array input[32m 0[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/preprocess.test.ts [2m([22m[2m11 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[32m 24[2mms[22m[39m
+   [32m✓[39m preprocess[32m 2[2mms[22m[39m
+   [32m✓[39m async preprocess[32m 8[2mms[22m[39m
+   [32m✓[39m ctx.addIssue accepts string[32m 2[2mms[22m[39m
+   [32m✓[39m preprocess ctx.addIssue with parse[32m 1[2mms[22m[39m
+[31m   [31m×[31m preprocess ctx.addIssue non-fatal by default[39m[32m 3[2mms[22m[39m
+   [32m✓[39m preprocess ctx.addIssue fatal true[32m 1[2mms[22m[39m
+   [32m✓[39m async preprocess ctx.addIssue with parseAsync[32m 1[2mms[22m[39m
+[31m   [31m×[31m z.NEVER in preprocess[39m[32m 1[2mms[22m[39m
+   [32m✓[39m preprocess as the second property of object[32m 2[2mms[22m[39m
+   [32m✓[39m preprocess validates with sibling errors[32m 1[2mms[22m[39m
+[31m   [31m×[31m perform transform with non-fatal issues[39m[32m 1[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/validations.test.ts [2m([22m[2m13 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 22[2mms[22m[39m
+[31m   [31m×[31m string length[39m[32m 8[2mms[22m[39m
+   [32m✓[39m string min/max[32m 1[2mms[22m[39m
+   [32m✓[39m string max[32m 1[2mms[22m[39m
+   [32m✓[39m number min[32m 4[2mms[22m[39m
+   [32m✓[39m number gte[32m 1[2mms[22m[39m
+   [32m✓[39m number gt[32m 1[2mms[22m[39m
+   [32m✓[39m number max[32m 1[2mms[22m[39m
+   [32m✓[39m number lte[32m 1[2mms[22m[39m
+   [32m✓[39m number lt[32m 1[2mms[22m[39m
+   [32m✓[39m number nonnegative[32m 1[2mms[22m[39m
+   [32m✓[39m number nonpositive[32m 0[2mms[22m[39m
+   [32m✓[39m number negative[32m 1[2mms[22m[39m
+   [32m✓[39m number positive[32m 1[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/number.test.ts [2m([22m[2m25 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 34[2mms[22m[39m
+   [32m✓[39m z.number() basic validation[32m 3[2mms[22m[39m
+   [32m✓[39m NaN validation[32m 1[2mms[22m[39m
+[31m   [31m×[31m Infinity validation[39m[32m 15[2mms[22m[39m
+   [32m✓[39m .gt() validation[32m 1[2mms[22m[39m
+   [32m✓[39m .gte() validation[32m 0[2mms[22m[39m
+   [32m✓[39m .min() validation[32m 0[2mms[22m[39m
+   [32m✓[39m .lt() validation[32m 0[2mms[22m[39m
+   [32m✓[39m .lte() validation[32m 0[2mms[22m[39m
+   [32m✓[39m .max() validation[32m 0[2mms[22m[39m
+   [32m✓[39m .int() validation[32m 1[2mms[22m[39m
+   [32m✓[39m .positive() validation[32m 1[2mms[22m[39m
+   [32m✓[39m .negative() validation[32m 0[2mms[22m[39m
+   [32m✓[39m .nonpositive() validation[32m 0[2mms[22m[39m
+   [32m✓[39m .nonnegative() validation[32m 0[2mms[22m[39m
+   [32m✓[39m .multipleOf() with positive divisor[32m 1[2mms[22m[39m
+   [32m✓[39m .multipleOf() with negative divisor[32m 0[2mms[22m[39m
+   [32m✓[39m .step() validation[32m 0[2mms[22m[39m
+[31m   [31m×[31m .finite() validation[39m[32m 1[2mms[22m[39m
+   [32m✓[39m .safe() validation[32m 0[2mms[22m[39m
+   [32m✓[39m min value getters[32m 2[2mms[22m[39m
+   [32m✓[39m max value getters[32m 1[2mms[22m[39m
+   [32m✓[39m int getter[32m 0[2mms[22m[39m
+   [32m✓[39m finite getter[32m 0[2mms[22m[39m
+   [32m✓[39m string format methods[32m 1[2mms[22m[39m
+   [32m✓[39m error customization[32m 0[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/error.test.ts [2m([22m[2m27 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[32m 38[2mms[22m[39m
+   [32m✓[39m error creation[32m 1[2mms[22m[39m
+   [32m✓[39m do not allow error and message together[32m 1[2mms[22m[39m
+   [32m✓[39m type error with custom error map[32m 8[2mms[22m[39m
+   [32m✓[39m refinement fail with params[32m 2[2mms[22m[39m
+   [32m✓[39m hard coded error  with custom errormap[32m 2[2mms[22m[39m
+   [32m✓[39m default error message[32m 1[2mms[22m[39m
+   [32m✓[39m override error in refine[32m 1[2mms[22m[39m
+   [32m✓[39m override error in refinement[32m 2[2mms[22m[39m
+   [32m✓[39m array minimum[32m 2[2mms[22m[39m
+   [32m✓[39m literal bigint default error message[32m 1[2mms[22m[39m
+   [32m✓[39m custom path in custom error map[32m 2[2mms[22m[39m
+   [32m✓[39m root level formatting[32m 1[2mms[22m[39m
+   [32m✓[39m custom path[32m 1[2mms[22m[39m
+   [32m✓[39m custom path[32m 0[2mms[22m[39m
+   [32m✓[39m no abort early on refinements[32m 1[2mms[22m[39m
+   [32m✓[39m detect issue with input fallback[32m 1[2mms[22m[39m
+   [32m✓[39m formatting[32m 1[2mms[22m[39m
+   [32m✓[39m formatting with nullable and optional fields[32m 4[2mms[22m[39m
+   [32m✓[39m inferFlattenedErrors[32m 1[2mms[22m[39m
+   [32m✓[39m schema-bound error map[32m 0[2mms[22m[39m
+   [32m✓[39m bound error map overrides contextual[32m 0[2mms[22m[39m
+[31m   [31m×[31m z.config customError [39m[32m 3[2mms[22m[39m
+   [32m✓[39m empty string error message[32m 0[2mms[22m[39m
+[31m   [31m×[31m dont short circuit on continuable errors[39m[32m 1[2mms[22m[39m
+   [32m✓[39m string error params[32m 1[2mms[22m[39m
+   [32m✓[39m error inheritance[32m 0[2mms[22m[39m
+[31m   [31m×[31m error serialization[39m[32m 1[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/discriminated-unions.test.ts [2m([22m[2m21 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 46[2mms[22m[39m
+   [32m✓[39m _values[32m 4[2mms[22m[39m
+   [32m✓[39m valid parse - object[32m 4[2mms[22m[39m
+   [32m✓[39m valid - include discriminator key (deprecated)[32m 1[2mms[22m[39m
+   [32m✓[39m valid - optional discriminator (object)[32m 3[2mms[22m[39m
+   [32m✓[39m valid - discriminator value of various primitive types[32m 5[2mms[22m[39m
+   [32m✓[39m invalid - null[32m 6[2mms[22m[39m
+[31m   [31m×[31m invalid discriminator value[39m[32m 4[2mms[22m[39m
+   [32m✓[39m invalid discriminator value - unionFallback[32m 2[2mms[22m[39m
+   [32m✓[39m valid discriminator value, invalid data[32m 1[2mms[22m[39m
+   [32m✓[39m wrong schema - missing discriminator[32m 0[2mms[22m[39m
+   [32m✓[39m async - valid[32m 1[2mms[22m[39m
+   [32m✓[39m async - invalid[32m 1[2mms[22m[39m
+   [32m✓[39m valid - literals with .default or .pipe[32m 1[2mms[22m[39m
+   [32m✓[39m enum and nativeEnum[32m 1[2mms[22m[39m
+   [32m✓[39m branded[32m 1[2mms[22m[39m
+   [32m✓[39m optional and nullable[32m 1[2mms[22m[39m
+   [32m✓[39m multiple discriminators[32m 1[2mms[22m[39m
+   [32m✓[39m single element union[32m 2[2mms[22m[39m
+   [32m✓[39m nested discriminated unions[32m 5[2mms[22m[39m
+   [32m✓[39m readonly literal discriminator[32m 1[2mms[22m[39m
+   [32m✓[39m pipes[32m 0[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/template-literal.test.ts [2m([22m[2m8 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 49[2mms[22m[39m
+   [32m✓[39m template literal type inference[32m 2[2mms[22m[39m
+   [32m✓[39m template literal unsupported args[32m 14[2mms[22m[39m
+   [32m✓[39m template literal parsing - success - basic cases[32m 3[2mms[22m[39m
+[31m   [31m×[31m template literal parsing - failure - basic cases[39m[32m 11[2mms[22m[39m
+[31m   [31m×[31m regexes[39m[32m 6[2mms[22m[39m
+   [32m✓[39m template literal parsing - success - complex cases[32m 1[2mms[22m[39m
+[31m   [31m×[31m template literal parsing - failure - complex cases[39m[32m 1[2mms[22m[39m
+[31m   [31m×[31m template literal parsing - failure - issue format[39m[32m 8[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts [2m([22m[2m48 tests[22m[2m | [22m[31m15 failed[39m[2m)[22m[32m 116[2mms[22m[39m
+[31m     [31m×[31m primitive types[39m[32m 28[2mms[22m[39m
+     [32m✓[39m unsupported schema types[32m 9[2mms[22m[39m
+[31m     [31m×[31m string formats[39m[32m 1[2mms[22m[39m
+[31m     [31m×[31m string patterns[39m[32m 1[2mms[22m[39m
+     [32m✓[39m number constraints[32m 3[2mms[22m[39m
+     [32m✓[39m arrays[32m 1[2mms[22m[39m
+[31m     [31m×[31m unions[39m[32m 1[2mms[22m[39m
+[31m     [31m×[31m intersections[39m[32m 5[2mms[22m[39m
+     [32m✓[39m record[32m 1[2mms[22m[39m
+[31m     [31m×[31m tuple[39m[32m 1[2mms[22m[39m
+     [32m✓[39m promise[32m 5[2mms[22m[39m
+     [32m✓[39m lazy[32m 1[2mms[22m[39m
+     [32m✓[39m enum[32m 1[2mms[22m[39m
+     [32m✓[39m literal[32m 1[2mms[22m[39m
+     [32m✓[39m pipe[32m 0[2mms[22m[39m
+     [32m✓[39m simple objects[32m 0[2mms[22m[39m
+     [32m✓[39m additionalproperties in z.object[32m 1[2mms[22m[39m
+     [32m✓[39m catchall objects[32m 1[2mms[22m[39m
+     [32m✓[39m optional fields - object[32m 1[2mms[22m[39m
+     [32m✓[39m recursive object[32m 0[2mms[22m[39m
+     [32m✓[39m simple interface[32m 0[2mms[22m[39m
+     [32m✓[39m catchall interface[32m 1[2mms[22m[39m
+     [32m✓[39m recursive interface schemas[32m 0[2mms[22m[39m
+     [32m✓[39m mutually recursive interface schemas[32m 0[2mms[22m[39m
+   [32m✓[39m override[32m 0[2mms[22m[39m
+[31m   [31m×[31m override: do not run on references[39m[32m 2[2mms[22m[39m
+   [32m✓[39m override with refs[32m 0[2mms[22m[39m
+[31m   [31m×[31m override execution order[39m[32m 0[2mms[22m[39m
+   [32m✓[39m override with path[32m 0[2mms[22m[39m
+   [32m✓[39m pipe[32m 0[2mms[22m[39m
+   [32m✓[39m passthrough schemas[32m 0[2mms[22m[39m
+[31m   [31m×[31m extract schemas with id[39m[32m 1[2mms[22m[39m
+   [32m✓[39m unrepresentable literal values are ignored[32m 1[2mms[22m[39m
+[31m   [31m×[31m describe with id[39m[32m 1[2mms[22m[39m
+[31m   [31m×[31m overwrite id[39m[32m 1[2mms[22m[39m
+   [32m✓[39m overwrite descriptions[32m 1[2mms[22m[39m
+[31m   [31m×[31m top-level readonly[39m[32m 5[2mms[22m[39m
+   [32m✓[39m basic registry[32m 1[2mms[22m[39m
+   [32m✓[39m _ref[32m 2[2mms[22m[39m
+   [32m✓[39m defaults/prefaults[32m 4[2mms[22m[39m
+[31m   [31m×[31m input type[39m[32m 3[2mms[22m[39m
+   [32m✓[39m examples on pipe[32m 1[2mms[22m[39m
+   [32m✓[39m use output type for preprocess[32m 1[2mms[22m[39m
+[31m   [31m×[31m flatten simple intersections[39m[32m 3[2mms[22m[39m
+[31m   [31m×[31m z.file()[39m[32m 17[2mms[22m[39m
+   [32m✓[39m custom toJSONSchema[32m 1[2mms[22m[39m
+   [32m✓[39m cycle detection - root[32m 1[2mms[22m[39m
+   [32m✓[39m cycle detection - mutual recursion[32m 1[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/string.test.ts [2m([22m[2m36 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[32m 211[2mms[22m[39m
+   [32m✓[39m length checks[32m 5[2mms[22m[39m
+   [32m✓[39m includes[32m 2[2mms[22m[39m
+   [32m✓[39m startswith/endswith[32m 1[2mms[22m[39m
+   [32m✓[39m email validations[32m 3[2mms[22m[39m
+   [32m✓[39m base64 validations[32m 3[2mms[22m[39m
+   [32m✓[39m base64url validations[32m 1[2mms[22m[39m
+   [32m✓[39m big base64 and base64url[32m 162[2mms[22m[39m
+   [32m✓[39m jwt token[32m 1[2mms[22m[39m
+   [32m✓[39m url validations[32m 1[2mms[22m[39m
+   [32m✓[39m httpurl[32m 2[2mms[22m[39m
+   [32m✓[39m url error overrides[32m 1[2mms[22m[39m
+   [32m✓[39m emoji validations[32m 1[2mms[22m[39m
+   [32m✓[39m nanoid[32m 7[2mms[22m[39m
+   [32m✓[39m bad nanoid[32m 1[2mms[22m[39m
+   [32m✓[39m good uuid[32m 1[2mms[22m[39m
+[31m   [31m×[31m bad uuid[39m[32m 3[2mms[22m[39m
+   [32m✓[39m good guid[32m 0[2mms[22m[39m
+   [32m✓[39m bad guid[32m 0[2mms[22m[39m
+[31m   [31m×[31m cuid[39m[32m 2[2mms[22m[39m
+   [32m✓[39m cuid2[32m 0[2mms[22m[39m
+[31m   [31m×[31m ulid[39m[32m 1[2mms[22m[39m
+   [32m✓[39m xid[32m 1[2mms[22m[39m
+   [32m✓[39m ksuid[32m 1[2mms[22m[39m
+   [32m✓[39m regex[32m 0[2mms[22m[39m
+   [32m✓[39m regexp error message[32m 1[2mms[22m[39m
+   [32m✓[39m regexp error custom message[32m 1[2mms[22m[39m
+   [32m✓[39m regex lastIndex reset[32m 0[2mms[22m[39m
+   [32m✓[39m format[32m 2[2mms[22m[39m
+   [32m✓[39m min max getters[32m 0[2mms[22m[39m
+   [32m✓[39m trim[32m 0[2mms[22m[39m
+   [32m✓[39m lowerCase[32m 0[2mms[22m[39m
+   [32m✓[39m IPv4 validation[32m 1[2mms[22m[39m
+   [32m✓[39m IPv6 validation[32m 1[2mms[22m[39m
+   [32m✓[39m CIDR v4 validation[32m 1[2mms[22m[39m
+   [32m✓[39m CIDR v6 validation[32m 1[2mms[22m[39m
+   [32m✓[39m E.164 validation[32m 0[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/datetime.test.ts [2m([22m[2m14 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 822[2mms[22m[39m
+   [32m✓[39m basic datetime parsing[32m 5[2mms[22m[39m
+   [32m✓[39m datetime parsing with precision -1[32m 1[2mms[22m[39m
+   [32m✓[39m datetime parsing with precision 0[32m 1[2mms[22m[39m
+   [32m✓[39m datetime parsing with precision 3[32m 1[2mms[22m[39m
+   [32m✓[39m datetime parsing with offset[32m 1[2mms[22m[39m
+   [32m✓[39m datetime parsing with offset and precision 0[32m 1[2mms[22m[39m
+   [32m✓[39m datetime parsing with offset and precision 4[32m 1[2mms[22m[39m
+   [32m✓[39m datetime offset normalization[32m 1[2mms[22m[39m
+   [32m✓[39m datetime parsing with local option[32m 3[2mms[22m[39m
+[31m   [31m×[31m datetime parsing with local and offset[39m[32m 4[2mms[22m[39m
+   [32m✓[39m date parsing[32m 2[2mms[22m[39m
+   [32m✓[39m time parsing[32m 1[2mms[22m[39m
+   [32m✓[39m duration[32m 1[2mms[22m[39m
+   [33m[2m✓[22m[39m redos checker [33m 795[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/core/tests/locales/tr.test.ts [2m([22m[2m2 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 13[2mms[22m[39m
+[31m   [31m×[31m parsedType[39m[32m 3[2mms[22m[39m
+   [32m✓[39m locales - tr[32m 8[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/pipe.test.ts [2m([22m[2m5 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 20[2mms[22m[39m
+   [32m✓[39m string to number pipe[32m 4[2mms[22m[39m
+   [32m✓[39m string to number pipe async[32m 1[2mms[22m[39m
+   [32m✓[39m string with default fallback[32m 1[2mms[22m[39m
+[31m   [31m×[31m continue on non-fatal errors[39m[32m 8[2mms[22m[39m
+   [32m✓[39m break on fatal errors[32m 1[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/function.test.ts [2m([22m[2m13 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 23[2mms[22m[39m
+   [32m✓[39m function parsing[32m 2[2mms[22m[39m
+   [32m✓[39m parsed function fail 1[32m 1[2mms[22m[39m
+   [32m✓[39m parsed function fail 2[32m 0[2mms[22m[39m
+   [32m✓[39m function inference 1[32m 0[2mms[22m[39m
+   [32m✓[39m args method[32m 1[2mms[22m[39m
+   [32m✓[39m function inference 2[32m 0[2mms[22m[39m
+   [32m✓[39m valid function run[32m 1[2mms[22m[39m
+[31m   [31m×[31m input validation error[39m[32m 10[2mms[22m[39m
+   [32m✓[39m array inputs[32m 1[2mms[22m[39m
+   [32m✓[39m output validation error[32m 1[2mms[22m[39m
+   [32m✓[39m function with async refinements[32m 1[2mms[22m[39m
+   [32m✓[39m non async function with async refinements should fail[32m 0[2mms[22m[39m
+   [32m✓[39m extra parameters with rest[32m 0[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/lazy.test.ts [2m([22m[2m9 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 22[2mms[22m[39m
+[31m   [31m×[31m opt passthrough[39m[32m 12[2mms[22m[39m
+   [32m✓[39m schema getter[32m 0[2mms[22m[39m
+   [32m✓[39m lazy proxy[32m 1[2mms[22m[39m
+   [32m✓[39m recursion with z.lazy[32m 2[2mms[22m[39m
+   [32m✓[39m recursive union wit z.lazy[32m 1[2mms[22m[39m
+   [32m✓[39m mutual recursion with lazy[32m 2[2mms[22m[39m
+   [32m✓[39m mutual recursion with cyclical data[32m 0[2mms[22m[39m
+   [32m✓[39m complicated self-recursion[32m 0[2mms[22m[39m
+   [32m✓[39m lazy initialization[32m 1[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/set.test.ts [2m([22m[2m12 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 20[2mms[22m[39m
+   [32m✓[39m type inference[32m 1[2mms[22m[39m
+   [32m✓[39m valid parse[32m 2[2mms[22m[39m
+   [32m✓[39m valid parse async[32m 1[2mms[22m[39m
+   [32m✓[39m valid parse: size-related methods[32m 1[2mms[22m[39m
+   [32m✓[39m failing when parsing empty set in nonempty [32m 2[2mms[22m[39m
+   [32m✓[39m failing when set is smaller than min() [32m 0[2mms[22m[39m
+   [32m✓[39m failing when set is bigger than max() [32m 0[2mms[22m[39m
+   [32m✓[39m doesn’t throw when an empty set is given[32m 0[2mms[22m[39m
+   [32m✓[39m throws when a Map is given[32m 7[2mms[22m[39m
+   [32m✓[39m throws when the given set has invalid input[32m 1[2mms[22m[39m
+   [32m✓[39m throws when the given set has multiple invalid entries[32m 1[2mms[22m[39m
+[31m   [31m×[31m min/max[39m[32m 3[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/array.test.ts [2m([22m[2m9 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 24[2mms[22m[39m
+   [32m✓[39m type inference[32m 1[2mms[22m[39m
+   [32m✓[39m array min/max[32m 9[2mms[22m[39m
+[31m   [31m×[31m array length[39m[32m 4[2mms[22m[39m
+   [32m✓[39m array.nonempty()[32m 1[2mms[22m[39m
+   [32m✓[39m array.nonempty().max()[32m 1[2mms[22m[39m
+   [32m✓[39m parse empty array in nonempty[32m 1[2mms[22m[39m
+   [32m✓[39m get element[32m 0[2mms[22m[39m
+   [32m✓[39m continue parsing despite array size error[32m 3[2mms[22m[39m
+   [32m✓[39m parse should fail given sparse array[32m 1[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/union.test.ts [2m([22m[2m8 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 16[2mms[22m[39m
+   [32m✓[39m function parsing[32m 3[2mms[22m[39m
+   [32m✓[39m union 2[32m 1[2mms[22m[39m
+   [32m✓[39m return valid over invalid[32m 2[2mms[22m[39m
+[31m   [31m×[31m return errors from both union arms[39m[32m 8[2mms[22m[39m
+   [32m✓[39m options getter[32m 0[2mms[22m[39m
+   [32m✓[39m readonly union[32m 0[2mms[22m[39m
+   [32m✓[39m union inferred types[32m 0[2mms[22m[39m
+   [32m✓[39m union values[32m 1[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/optional.test.ts [2m([22m[2m5 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 21[2mms[22m[39m
+   [32m✓[39m .optional()[32m 2[2mms[22m[39m
+   [32m✓[39m unwrap[32m 1[2mms[22m[39m
+[31m   [31m×[31m optionality[39m[32m 8[2mms[22m[39m
+[31m   [31m×[31m pipe optionality[39m[32m 5[2mms[22m[39m
+   [32m✓[39m pipe optionality inside objects[32m 3[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/continuability.test.ts [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 33[2mms[22m[39m
+[31m   [31m×[31m continuability[39m[32m 25[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/core/tests/locales/en.test.ts [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 5[2mms[22m[39m
+[31m   [31m×[31m parsedType[39m[32m 3[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/classic/tests/file.test.ts [2m([22m[2m2 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 16[2mms[22m[39m
+   [32m✓[39m passing validations[32m 4[2mms[22m[39m
+[31m   [31m×[31m failing validations[39m[32m 10[2mms[22m[39m
+ [31m❯[39m [30m[43m zod [49m[39m src/v4/mini/tests/computed.test.ts [2m([22m[2m5 tests[22m[2m | [22m[31m5 failed[39m[2m)[22m[32m 14[2mms[22m[39m
+[31m   [31m×[31m min/max[39m[32m 9[2mms[22m[39m
+[31m   [31m×[31m multipleOf[39m[32m 1[2mms[22m[39m
+[31m   [31m×[31m int64 format[39m[32m 1[2mms[22m[39m
+[31m   [31m×[31m int32 format[39m[32m 1[2mms[22m[39m
+[31m   [31m×[31m array size[39m[32m 1[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/refine.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/index.test.ts [2m([22m[2m56 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/object.test.ts [2m([22m[2m45 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/error-utils.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/index.test.ts [2m([22m[2m56 tests[22m[2m)[22m[32m 61[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/default.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/record.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/string.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/transform.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/async-parsing.test.ts [2m([22m[2m23 tests[22m[2m)[22m[33m 519[2mms[22m[39m
+   [33m[2m✓[22m[39m async validation multiple errors 2 [33m 502[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/catch.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/primitive.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/recursive-types.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/enum.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/map.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/readonly.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/nonoptional.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/string-formats.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/async-refinements.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/nested-refine.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/promise.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/pickomit.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/literal.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/coerce.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/assignability.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/custom.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/standard-schema.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/number.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/checks.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/partial.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/object.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/core/tests/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/registries.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/prefault.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/generics.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/core/tests/locales/be.test.ts [2m([22m[2m38 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/stringbool.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/brand.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/recursive-types.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/bigint.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/core/tests/locales/ru.test.ts [2m([22m[2m38 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/assignability.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/instanceof.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/nullable.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/anyunknown.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/date.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/error.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/nan.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/description.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/prototypes.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/void.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/brand.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/base.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/coalesce.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/prototypes.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/classic/tests/firstparty.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [2m[90m↓[39m[22m [30m[43m zod [49m[39m src/v4/classic/tests/json.test.ts [2m([22m[2m1 test[22m[2m | [22m[90m1 todo[39m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m src/v4/mini/tests/functions.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/datetime.test.ts [2m([22m[2m14 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/string.test.ts [2m([22m[2m36 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/to-json-schema.test.ts [2m([22m[2m48 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/template-literal.test.ts [2m([22m[2m8 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/discriminated-unions.test.ts [2m([22m[2m21 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/error.test.ts [2m([22m[2m27 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/preprocess.test.ts [2m([22m[2m11 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/number.test.ts [2m([22m[2m25 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/tuple.test.ts [2m([22m[2m6 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/validations.test.ts [2m([22m[2m13 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/intersection.test.ts [2m([22m[2m10 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/function.test.ts [2m([22m[2m13 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/array.test.ts [2m([22m[2m9 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/lazy.test.ts [2m([22m[2m9 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/union.test.ts [2m([22m[2m8 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/set.test.ts [2m([22m[2m12 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/pipe.test.ts [2m([22m[2m5 tests[22m[2m)[22m
+ [31m❯[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/core/tests/locales/tr.test.ts [2m([22m[2m2 tests[22m[2m)[22m
+   [32m✓[39m parsedType
+   [32m✓[39m locales - tr
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/continuability.test.ts [2m([22m[2m1 test[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/file.test.ts [2m([22m[2m2 tests[22m[2m)[22m
+ [31m❯[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/optional.test.ts [2m([22m[2m5 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m
+   [32m✓[39m .optional()
+   [32m✓[39m unwrap
+[31m   [31m×[31m optionality[39m
+[31m   [31m×[31m pipe optionality[39m
+   [32m✓[39m pipe optionality inside objects
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/computed.test.ts [2m([22m[2m5 tests[22m[2m)[22m
+ [31m❯[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/core/tests/locales/en.test.ts [2m([22m[2m1 test[22m[2m)[22m
+   [32m✓[39m parsedType
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/async-parsing.test.ts [2m([22m[2m23 tests[22m[2m)[22m
+ [31m❯[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/index.test.ts [2m([22m[2m56 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m
+   [32m✓[39m z.boolean
+   [32m✓[39m z.bigint
+   [32m✓[39m z.symbol
+   [32m✓[39m z.date
+   [32m✓[39m z.coerce.string
+   [32m✓[39m z.coerce.number
+   [32m✓[39m z.coerce.boolean
+   [32m✓[39m z.coerce.bigint
+   [32m✓[39m z.coerce.date
+   [32m✓[39m z.iso.datetime
+   [32m✓[39m z.iso.date
+   [32m✓[39m z.iso.time
+   [32m✓[39m z.iso.duration
+   [32m✓[39m z.undefined
+   [32m✓[39m z.null
+   [32m✓[39m z.any
+   [32m✓[39m z.unknown
+   [32m✓[39m z.never
+   [32m✓[39m z.void
+   [32m✓[39m z.array
+   [32m✓[39m z.union
+   [32m✓[39m z.intersection
+   [32m✓[39m z.tuple
+   [32m✓[39m z.record
+   [32m✓[39m z.map
+   [32m✓[39m z.map invalid_element
+   [32m✓[39m z.map async
+   [32m✓[39m z.set
+   [32m✓[39m z.enum
+   [32m✓[39m z.enum - native
+   [32m✓[39m z.nativeEnum
+   [32m✓[39m z.literal
+   [32m✓[39m z.file
+   [32m✓[39m z.transform
+   [32m✓[39m z.transform async
+   [32m✓[39m z.preprocess
+   [32m✓[39m z.optional
+   [32m✓[39m z.nullable
+   [32m✓[39m z.default
+   [32m✓[39m z.catch
+   [32m✓[39m z.nan
+   [32m✓[39m z.pipe
+   [32m✓[39m z.readonly
+   [32m✓[39m z.templateLiteral
+   [32m✓[39m z.custom schema
+   [32m✓[39m z.custom check
+   [32m✓[39m z.check
+   [32m✓[39m z.instanceof
+   [32m✓[39m z.refine
+   [32m✓[39m z.transform
+   [32m✓[39m z.$brand()
+   [32m✓[39m z.lazy
+   [32m✓[39m z.json
+[31m   [31m×[31m z.promise[39m
+   [32m✓[39m isPlainObject
+   [32m✓[39m def typing
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/refine.test.ts [2m([22m[2m15 tests[22m[2m)[22m
+ [31m❯[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/index.test.ts [2m([22m[2m56 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m
+   [32m✓[39m z.boolean
+   [32m✓[39m z.bigint
+   [32m✓[39m z.symbol
+   [32m✓[39m z.date
+   [32m✓[39m z.coerce.string
+   [32m✓[39m z.coerce.number
+   [32m✓[39m z.coerce.boolean
+   [32m✓[39m z.coerce.bigint
+   [32m✓[39m z.coerce.date
+   [32m✓[39m z.iso.datetime
+   [32m✓[39m z.iso.date
+   [32m✓[39m z.iso.time
+   [32m✓[39m z.iso.duration
+   [32m✓[39m z.undefined
+   [32m✓[39m z.null
+   [32m✓[39m z.any
+   [32m✓[39m z.unknown
+   [32m✓[39m z.never
+   [32m✓[39m z.void
+   [32m✓[39m z.array
+   [32m✓[39m z.union
+   [32m✓[39m z.intersection
+   [32m✓[39m z.tuple
+   [32m✓[39m z.record
+   [32m✓[39m z.map
+   [32m✓[39m z.map invalid_element
+   [32m✓[39m z.map async
+   [32m✓[39m z.set
+   [32m✓[39m z.enum
+   [32m✓[39m z.enum - native
+   [32m✓[39m z.nativeEnum
+   [32m✓[39m z.literal
+   [32m✓[39m z.file
+   [32m✓[39m z.transform
+   [32m✓[39m z.transform async
+   [32m✓[39m z.preprocess
+   [32m✓[39m z.optional
+   [32m✓[39m z.nullable
+   [32m✓[39m z.default
+   [32m✓[39m z.catch
+   [32m✓[39m z.nan
+   [32m✓[39m z.pipe
+   [32m✓[39m z.readonly
+   [32m✓[39m z.templateLiteral
+   [32m✓[39m z.custom
+   [32m✓[39m z.check
+   [32m✓[39m z.instanceof
+   [32m✓[39m z.refine
+   [32m✓[39m z.transform
+   [32m✓[39m z.$brand()
+   [32m✓[39m z.lazy
+   [32m✓[39m z.json
+   [32m✓[39m z.stringbool
+[31m   [31m×[31m z.promise[39m
+   [32m✓[39m z.pipe type enforcement
+   [32m✓[39m def typing
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/error-utils.test.ts [2m([22m[2m12 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/object.test.ts [2m([22m[2m45 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/default.test.ts [2m([22m[2m13 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/record.test.ts [2m([22m[2m13 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/string.test.ts [2m([22m[2m24 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/transform.test.ts [2m([22m[2m16 tests[22m[2m)[22m
+ [31m❯[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/catch.test.ts [2m([22m[2m16 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m
+   [32m✓[39m basic catch
+   [32m✓[39m catch fn does not run when parsing succeeds
+   [32m✓[39m basic catch async
+   [32m✓[39m catch replace wrong types
+[31m   [31m×[31m catch with transform[39m
+[31m   [31m×[31m catch on existing optional[39m
+[31m   [31m×[31m optional on catch[39m
+   [32m✓[39m complex chain example
+   [32m✓[39m removeCatch
+[31m   [31m×[31m nested[39m
+   [32m✓[39m chained catch
+   [32m✓[39m native enum
+   [32m✓[39m enum
+   [32m✓[39m reported issues with nested usage
+   [32m✓[39m catch error
+   [32m✓[39m ctx.input
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/primitive.test.ts [2m([22m[2m14 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/enum.test.ts [2m([22m[2m19 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/map.test.ts [2m([22m[2m8 tests[22m[2m)[22m
+ [31m❯[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/readonly.test.ts [2m([22m[2m7 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m
+[31m   [31m×[31m flat inference[39m
+   [32m✓[39m object freezing
+   [32m✓[39m async object freezing
+   [32m✓[39m readonly inference
+   [32m✓[39m readonly parse
+   [32m✓[39m readonly parse with tuples
+   [32m✓[39m readonly and the get method
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/recursive-types.test.ts [2m([22m[2m8 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/string-formats.test.ts [2m([22m[2m2 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/nonoptional.test.ts [2m([22m[2m3 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/async-refinements.test.ts [2m([22m[2m4 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/nested-refine.test.ts [2m([22m[2m1 test[22m[2m)[22m
+ [31m❯[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/promise.test.ts [2m([22m[2m10 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m
+[31m   [31m×[31m promise inference[39m
+   [32m✓[39m promise parsing success
+   [32m✓[39m promise parsing fail
+   [32m✓[39m promise parsing fail 2
+   [32m✓[39m promise parsing fail
+   [32m✓[39m sync promise parsing
+   [32m✓[39m async function pass
+   [32m✓[39m async function fail
+   [32m✓[39m async promise parsing
+   [32m✓[39m resolves
+ [31m❯[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/pickomit.test.ts [2m([22m[2m12 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m
+   [32m✓[39m pick type inference
+   [32m✓[39m pick parse - success
+   [32m✓[39m pick parse - fail
+   [32m✓[39m pick - remove optional
+   [32m✓[39m omit type inference
+   [32m✓[39m omit parse - success
+   [32m✓[39m omit parse - fail
+   [32m✓[39m omit - remove optional
+   [32m✓[39m nonstrict inference
+   [32m✓[39m nonstrict parsing - pass
+   [32m✓[39m nonstrict parsing - fail
+[31m   [31m×[31m pick/omit/required/partial - do not allow unknown keys[39m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/literal.test.ts [2m([22m[2m9 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/standard-schema.test.ts [2m([22m[2m4 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/coerce.test.ts [2m([22m[2m6 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/assignability.test.ts [2m([22m[2m5 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/custom.test.ts [2m([22m[2m4 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/number.test.ts [2m([22m[2m9 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/checks.test.ts [2m([22m[2m17 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/partial.test.ts [2m([22m[2m8 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/object.test.ts [2m([22m[2m11 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/core/tests/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/registries.test.ts [2m([22m[2m16 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/prefault.test.ts [2m([22m[2m2 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/generics.test.ts [2m([22m[2m4 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/stringbool.test.ts [2m([22m[2m4 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/core/tests/locales/be.test.ts [2m([22m[2m4 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/brand.test.ts [2m([22m[2m3 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/recursive-types.test.ts [2m([22m[2m6 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/bigint.test.ts [2m([22m[2m3 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/core/tests/locales/ru.test.ts [2m([22m[2m4 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/assignability.test.ts [2m([22m[2m2 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/nullable.test.ts [2m([22m[2m3 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/instanceof.test.ts [2m([22m[2m2 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/anyunknown.test.ts [2m([22m[2m3 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/date.test.ts [2m([22m[2m3 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/nan.test.ts [2m([22m[2m2 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/error.test.ts [2m([22m[2m2 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/description.test.ts [2m([22m[2m2 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/void.test.ts [2m([22m[2m1 test[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/prototypes.test.ts [2m([22m[2m2 tests[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/base.test.ts [2m([22m[2m1 test[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/brand.test.ts [2m([22m[2m1 test[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/coalesce.test.ts [2m([22m[2m1 test[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/prototypes.test.ts [2m([22m[2m1 test[22m[2m)[22m
+ [31m❯[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/firstparty.test.ts [2m([22m[2m2 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m
+[31m   [31m×[31m first party switch[39m
+[31m   [31m×[31m $ZodSchemaTypes[39m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/mini/tests/functions.test.ts [2m([22m[2m1 test[22m[2m)[22m
+ [32m✓[39m [30m[43m zod [49m[39m [44m[1m TS [22m[49m src/v4/classic/tests/json.test.ts [2m([22m[2m1 test[22m[2m)[22m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Suites 2 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/core/tests/locales/en.test.ts[2m [ packages/zod/src/v4/core/tests/locales/en.test.ts ][22m
+[31m[1mTypeCheckError[22m: Module '"../../../locales/en.js"' has no exported member 'parsedType'. Did you mean to use 'import parsedType from "../../../locales/en.js"' instead?[39m
+[36m [2m❯[22m src/v4/core/tests/locales/en.test.ts:[2m2:10[22m[39m
+    [90m  1|[39m [35mimport[39m { expect[33m,[39m test } [35mfrom[39m [32m"vitest"[39m[33m;[39m
+    [90m  2|[39m [35mimport[39m { parsedType } [35mfrom[39m [32m"../../../locales/en.js"[39m[33m;[39m
+    [90m   |[39m          [31m^[39m
+    [90m  3|[39m
+    [90m  4|[39m [34mtest[39m([32m"parsedType"[39m[33m,[39m () [33m=>[39m {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/core/tests/locales/tr.test.ts[2m [ packages/zod/src/v4/core/tests/locales/tr.test.ts ][22m
+[31m[1mTypeCheckError[22m: Module '"../../../locales/tr.js"' has no exported member 'parsedType'. Did you mean to use 'import parsedType from "../../../locales/tr.js"' instead?[39m
+[36m [2m❯[22m src/v4/core/tests/locales/tr.test.ts:[2m3:10[22m[39m
+    [90m  1|[39m [35mimport[39m { expect[33m,[39m test } [35mfrom[39m [32m"vitest"[39m[33m;[39m
+    [90m  2|[39m [35mimport[39m [33m*[39m [35mas[39m z [35mfrom[39m [32m"zod/v4"[39m[33m;[39m
+    [90m  3|[39m [35mimport[39m { parsedType } [35mfrom[39m [32m"../../../locales/tr.js"[39m[33m;[39m
+    [90m   |[39m          [31m^[39m
+    [90m  4|[39m
+    [90m  5|[39m [34mtest[39m([32m"parsedType"[39m[33m,[39m () [33m=>[39m {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/71]⎯[22m[39m
+
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 66 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/array.test.ts[2m > [22marray length
+[31m[1mError[22m: Snapshot `array length 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  [[22m
+[2m    {[22m
+[2m      "code": "too_small",[22m
+[2m      "exact": true,[22m
+[2m      "inclusive": true,[22m
+[32m-     "message": "Too small: expected array to have [7m>=[27m2 items",[39m
+[31m+     "message": "Too small: expected array to have [7mexactly [27m2 items",[39m
+[2m      "minimum": 2,[22m
+[2m      "origin": "array",[22m
+[2m      "path": [],[22m
+[2m    },[22m
+[2m  ][22m
+
+[36m [2m❯[22m src/v4/classic/tests/array.test.ts:[2m48:28[22m[39m
+    [90m 46|[39m   [35mconst[39m r1 [33m=[39m [35mawait[39m schema[33m.[39m[34msafeParse[39m([[32m"asdf"[39m])[33m;[39m
+    [90m 47|[39m   [34mexpect[39m(r1[33m.[39msuccess)[33m.[39m[34mtoEqual[39m([35mfalse[39m)[33m;[39m
+    [90m 48|[39m   [34mexpect[39m(r1[33m.[39merror[33m![39m[33m.[39missues)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                            [31m^[39m
+    [90m 49|[39m     [
+    [90m 50|[39m       {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/continuability.test.ts[2m > [22mcontinuability
+[31m[1mError[22m: Snapshot `continuability 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -3,11 +3,11 @@[39m
+[2m      "code": "invalid_format",[22m
+[2m      "format": "email",[22m
+[2m      "message": "Invalid email address",[22m
+[2m      "origin": "string",[22m
+[2m      "path": [],[22m
+[32m-     "pattern": "/^(?[7m!\.)(?!.*\.[27m\.)[7m([27m[A-Za-z0-9_'+\-[7m\.[27m]*[7m)[27m[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/",[39m
+[31m+     "pattern": "/^(?[7m:[A-Za-z0-9_'+\-]+[27m\.)[7m*[27m[A-Za-z0-9_'+\-]*[A-Za-z0-9_+-]@([7m?:[27m[A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/",[39m
+[2m    },[22m
+[2m    {[22m
+[2m      "code": "custom",[22m
+[2m      "message": "Invalid input",[22m
+[2m      "path": [],[22m
+
+[36m [2m❯[22m src/v4/classic/tests/continuability.test.ts:[2m35:5[22m[39m
+    [90m 33|[39m       [33m.[39m[34mrefine[39m(() [33m=>[39m [35mfalse[39m)
+    [90m 34|[39m       [33m.[39m[34msafeParse[39m([32m"invalid_value"[39m)[33m.[39merror[33m![39m[33m.[39missues
+    [90m 35|[39m   )[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m     [31m^[39m
+    [90m 36|[39m     [
+    [90m 37|[39m       {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/datetime.test.ts[2m > [22mdatetime parsing with local and offset
+[31m[1mZodError[22m: [
+  {
+    "origin": "string",
+    "code": "invalid_format",
+    "format": "datetime",
+    "pattern": "/^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d))|(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?)$/",
+    "path": [],
+    "message": "Invalid ISO datetime"
+  }
+][39m
+[36m [2m❯[22m src/v4/classic/tests/datetime.test.ts:[2m124:5[22m[39m
+    [90m122|[39m   a[33m.[39m[34mparse[39m([32m"2022-10-13T12:52:00"[39m)[33m;[39m
+    [90m123|[39m   a[33m.[39m[34mparse[39m([32m"2022-10-13T12:52:00Z"[39m)[33m;[39m
+    [90m124|[39m   a[33m.[39m[34mparse[39m([32m"2022-10-13T12:52Z"[39m)[33m;[39m
+    [90m   |[39m     [31m^[39m
+    [90m125|[39m   a[33m.[39m[34mparse[39m([32m"2022-10-13T12:52"[39m)[33m;[39m
+    [90m126|[39m   a[33m.[39m[34mparse[39m([32m"2022-10-13T12:52+02:00"[39m)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/discriminated-unions.test.ts[2m > [22minvalid discriminator value
+[31m[1mError[22m: Snapshot `invalid discriminator value 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -2,13 +2,18 @@[39m
+[2m    "error": [ZodError: [[22m
+[2m    {[22m
+[2m      "code": "invalid_union",[22m
+[2m      "errors": [],[22m
+[2m      "note": "No matching discriminator",[22m
+[31m+     "discriminator": "type",[39m
+[31m+     "options": [[39m
+[31m+       "a",[39m
+[31m+       "b"[39m
+[31m+     ],[39m
+[2m      "path": [[22m
+[2m        "type"[22m
+[2m      ],[22m
+[32m-     "message": "Invalid [7minput[27m"[39m
+[31m+     "message": "Invalid [7mdiscriminator value. Expected 'a' | 'b'[27m"[39m
+[2m    }[22m
+[2m  ]],[22m
+[2m    "success": false,[22m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/discriminated-unions.test.ts:[2m153:18[22m[39m
+    [90m151|[39m     [33m.[39m[34msafeParse[39m({ type[33m:[39m [32m"x"[39m[33m,[39m a[33m:[39m [32m"abc"[39m })[33m;[39m
+    [90m152|[39m
+    [90m153|[39m   [34mexpect[39m(result)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                  [31m^[39m
+    [90m154|[39m     {
+    [90m155|[39m       "error": [ZodError: [
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/error.test.ts[2m > [22mz.config customError 
+[31m[1mError[22m: Snapshot `z.config customError  1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -3,8 +3,8 @@[39m
+[2m      "origin": "string",[22m
+[2m      "code": "too_small",[22m
+[2m      "minimum": 10,[22m
+[2m      "inclusive": true,[22m
+[2m      "path": [],[22m
+[32m-     "message": "[7moverride[27m"[39m
+[31m+     "message": "[7mbound[27m"[39m
+[2m    }[22m
+[2m  ]][22m
+
+[36m [2m❯[22m src/v4/classic/tests/error.test.ts:[2m528:24[22m[39m
+    [90m526|[39m   [35mconst[39m result [33m=[39m stringWithCustomError[33m.[39m[34mmin[39m([34m10[39m)[33m.[39m[34msafeParse[39m([32m"tooshort"[39m)[33m;[39m
+    [90m527|[39m   [34mexpect[39m(result[33m.[39msuccess)[33m.[39m[34mtoBe[39m([35mfalse[39m)[33m;[39m
+    [90m528|[39m   [34mexpect[39m(result[33m.[39merror)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                        [31m^[39m
+    [90m529|[39m     [ZodError: [
+    [90m530|[39m       {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/error.test.ts[2m > [22mdont short circuit on continuable errors
+[31m[1mError[22m: Snapshot `dont short circuit on continuable errors 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -5,11 +5,11 @@[39m
+[2m      "minimum": 6,[22m
+[2m      "inclusive": true,[22m
+[2m      "path": [[22m
+[2m        "password"[22m
+[2m      ],[22m
+[32m-     "message": "[7mToo small: expected string to have >=6 characters[27m"[39m
+[31m+     "message": "[7moverride[27m"[39m
+[2m    },[22m
+[2m    {[22m
+[2m      "code": "custom",[22m
+[2m      "path": [[22m
+[2m        "confirm"[22m
+
+[36m [2m❯[22m src/v4/classic/tests/error.test.ts:[2m613:24[22m[39m
+    [90m611|[39m   [35mconst[39m result [33m=[39m user[33m.[39m[34msafeParse[39m({ password[33m:[39m [32m"asdf"[39m[33m,[39m confirm[33m:[39m [32m"qwer"[39m })[33m;[39m
+    [90m612|[39m   [34mexpect[39m(result[33m.[39msuccess)[33m.[39m[34mtoBe[39m([35mfalse[39m)[33m;[39m
+    [90m613|[39m   [34mexpect[39m(result[33m.[39merror)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                        [31m^[39m
+    [90m614|[39m     [ZodError: [
+    [90m615|[39m       {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/error.test.ts[2m > [22merror serialization
+[31m[1mError[22m: Snapshot `error serialization 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  [ZodError: [[22m
+[2m    {[22m
+[2m      "expected": "string",[22m
+[2m      "code": "invalid_type",[22m
+[2m      "path": [],[22m
+[32m-     "message": "[7mInvalid input: expected string, received number[27m"[39m
+[31m+     "message": "[7moverride[27m"[39m
+[2m    }[22m
+[2m  ]][22m
+
+[36m [2m❯[22m src/v4/classic/tests/error.test.ts:[2m690:15[22m[39m
+    [90m688|[39m     z[33m.[39m[34mstring[39m()[33m.[39m[34mparse[39m([34m123[39m)[33m;[39m
+    [90m689|[39m   } [35mcatch[39m (e) {
+    [90m690|[39m     [34mexpect[39m(e)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m               [31m^[39m
+    [90m691|[39m       [ZodError: [
+    [90m692|[39m         {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/file.test.ts[2m > [22mfailing validations
+[31m[1mError[22m: Snapshot `failing validations 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -2,11 +2,12 @@[39m
+[2m    "error": [ZodError: [[22m
+[2m    {[22m
+[2m      "origin": "file",[22m
+[2m      "code": "too_small",[22m
+[2m      "minimum": 5,[22m
+[31m+     "inclusive": true,[39m
+[2m      "path": [],[22m
+[32m-     "message": "Too small: expected file to have >5 bytes"[39m
+[31m+     "message": "Too small: expected file to have >[7m=[27m5 bytes"[39m
+[2m    }[22m
+[2m  ]],[22m
+[2m    "success": false,[22m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/file.test.ts:[2m31:62[22m[39m
+    [90m 29|[39m
+    [90m 30|[39m [34mtest[39m([32m"failing validations"[39m[33m,[39m () [33m=>[39m {
+    [90m 31|[39m   expect(minCheck.safeParse(new File(["1234"], "test.txt"))).toMatchIn…
+    [90m   |[39m                                                              [31m^[39m
+    [90m 32|[39m     {
+    [90m 33|[39m       "error": [ZodError: [
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/function.test.ts[2m > [22minput validation error
+[31m[1mError[22m: Snapshot `input validation error 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  [[22m
+[2m    {[22m
+[32m-     "code": "[7minvalid_type",[27m[39m
+[32m-     "expected": "string",[39m
+[32m- [7m    "message": "Invalid input: expected string, received undefined[27m",[39m
+[31m+     "code": "[7mtoo_small",[27m[39m
+[31m+     "inclusive": true,[39m
+[31m+ [7m    "message": "Too small: expected array to have >=1 items[27m",[39m
+[32m-     "[7mpath[27m": [7m[[27m[39m
+[31m+     "[7mminimum[27m": [7m1,[27m[39m
+[32m-     [7m  0,[27m[39m
+[32m- [7m    [27m],[39m
+[31m+     [7m"origin": "array",[27m[39m
+[31m+ [7m    "path": [[27m],[39m
+[2m    },[22m
+[2m  ][22m
+
+[36m [2m❯[22m src/v4/classic/tests/function.test.ts:[2m146:22[22m[39m
+    [90m144|[39m     [34mchecker[39m()[33m;[39m
+    [90m145|[39m   } [35mcatch[39m (e[33m:[39m any) {
+    [90m146|[39m     [34mexpect[39m(e[33m.[39missues)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                      [31m^[39m
+    [90m147|[39m       [
+    [90m148|[39m         {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/intersection.test.ts[2m > [22mobject intersection: strict
+[31m[1mAssertionError[22m: expected true to deeply equal false[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- false[39m
+[31m+ true[39m
+
+[36m [2m❯[22m src/v4/classic/tests/intersection.test.ts:[2m40:26[22m[39m
+    [90m 38|[39m
+    [90m 39|[39m   [35mconst[39m result [33m=[39m [33mC[39m[33m.[39m[34msafeParse[39m(data)[33m;[39m
+    [90m 40|[39m   [34mexpect[39m(result[33m.[39msuccess)[33m.[39m[34mtoEqual[39m([35mfalse[39m)[33m;[39m
+    [90m   |[39m                          [31m^[39m
+    [90m 41|[39m })[33m;[39m
+    [90m 42|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/lazy.test.ts[2m > [22mopt passthrough
+[31m[1mAssertionError[22m: expected 'defaulted' to deeply equal 'optional'[39m
+
+Expected: [32m"optional"[39m
+Received: [31m"defaulted"[39m
+
+[36m [2m❯[22m src/v4/classic/tests/lazy.test.ts:[2m45:63[22m[39m
+    [90m 43|[39m   expect(z.lazy(() => z.string().optional())._zod.optout).toEqual("opt…
+    [90m 44|[39m
+    [90m 45|[39m   expect(z.lazy(() => z.string().default("asdf"))._zod.optin).toEqual(…
+    [90m   |[39m                                                               [31m^[39m
+    [90m 46|[39m   expect(z.lazy(() => z.string().default("asdf"))._zod.optout).toEqual…
+    [90m 47|[39m })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/number.test.ts[2m > [22mInfinity validation
+[31m[1mError[22m: Snapshot `Infinity validation 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -3,10 +3,10 @@[39m
+[2m    {[22m
+[2m      "expected": "number",[22m
+[2m      "code": "invalid_type",[22m
+[2m      "received": "Infinity",[22m
+[2m      "path": [],[22m
+[32m-     "message": "Invalid input: expected number, received [7mnumber[27m"[39m
+[31m+     "message": "Invalid input: expected number, received [7mInfinity[27m"[39m
+[2m    }[22m
+[2m  ]],[22m
+[2m    "success": false,[22m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/number.test.ts:[2m17:54[22m[39m
+    [90m 15|[39m [34mtest[39m([32m"Infinity validation"[39m[33m,[39m () [33m=>[39m {
+    [90m 16|[39m   [35mconst[39m schema [33m=[39m z[33m.[39m[34mnumber[39m()[33m;[39m
+    [90m 17|[39m   expect(schema.safeParse(Number.POSITIVE_INFINITY)).toMatchInlineSnap…
+    [90m   |[39m                                                      [31m^[39m
+    [90m 18|[39m     {
+    [90m 19|[39m       "error": [ZodError: [
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/number.test.ts[2m > [22m.finite() validation
+[31m[1mError[22m: Snapshot `.finite() validation 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -3,10 +3,10 @@[39m
+[2m    {[22m
+[2m      "expected": "number",[22m
+[2m      "code": "invalid_type",[22m
+[2m      "received": "Infinity",[22m
+[2m      "path": [],[22m
+[32m-     "message": "Invalid input: expected number, received [7mnumber[27m"[39m
+[31m+     "message": "Invalid input: expected number, received [7mInfinity[27m"[39m
+[2m    }[22m
+[2m  ]],[22m
+[2m    "success": false,[22m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/number.test.ts:[2m150:54[22m[39m
+    [90m148|[39m   [35mconst[39m schema [33m=[39m z[33m.[39m[34mnumber[39m()[33m.[39m[34mfinite[39m()[33m;[39m
+    [90m149|[39m   [34mexpect[39m(schema[33m.[39m[34mparse[39m([34m123[39m))[33m.[39m[34mtoEqual[39m([34m123[39m)[33m;[39m
+    [90m150|[39m   expect(schema.safeParse(Number.POSITIVE_INFINITY)).toMatchInlineSnap…
+    [90m   |[39m                                                      [31m^[39m
+    [90m151|[39m     {
+    [90m152|[39m       "error": [ZodError: [
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/optional.test.ts[2m > [22moptionality
+[31m[1mAssertionError[22m: expected 'defaulted' to deeply equal 'optional'[39m
+
+Expected: [32m"optional"[39m
+Received: [31m"defaulted"[39m
+
+[36m [2m❯[22m src/v4/classic/tests/optional.test.ts:[2m30:24[22m[39m
+    [90m 28|[39m
+    [90m 29|[39m   [35mconst[39m c [33m=[39m z[33m.[39m[34mstring[39m()[33m.[39m[35mdefault[39m([32m"asdf"[39m)[33m;[39m
+    [90m 30|[39m   [34mexpect[39m(c[33m.[39m_zod[33m.[39moptin)[33m.[39m[34mtoEqual[39m([32m"optional"[39m)[33m;[39m
+    [90m   |[39m                        [31m^[39m
+    [90m 31|[39m   [34mexpect[39m(c[33m.[39m_zod[33m.[39moptout)[33m.[39m[34mtoEqual[39m(undefined)[33m;[39m
+    [90m 32|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/optional.test.ts[2m > [22mpipe optionality
+[31m[1mAssertionError[22m: expected 'defaulted' to deeply equal 'optional'[39m
+
+Expected: [32m"optional"[39m
+Received: [31m"defaulted"[39m
+
+[36m [2m❯[22m src/v4/classic/tests/optional.test.ts:[2m80:24[22m[39m
+    [90m 78|[39m
+    [90m 79|[39m   [35mconst[39m c [33m=[39m z[33m.[39m[34mstring[39m()[33m.[39m[35mdefault[39m([32m"asdf"[39m)[33m.[39m[34mpipe[39m(z[33m.[39m[34mstring[39m())[33m;[39m
+    [90m 80|[39m   [34mexpect[39m(c[33m.[39m_zod[33m.[39moptin)[33m.[39m[34mtoEqual[39m([32m"optional"[39m)[33m;[39m
+    [90m   |[39m                        [31m^[39m
+    [90m 81|[39m   [34mexpect[39m(c[33m.[39m_zod[33m.[39moptout)[33m.[39m[34mtoEqual[39m(undefined)[33m;[39m
+    [90m 82|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/pipe.test.ts[2m > [22mcontinue on non-fatal errors
+[31m[1mError[22m: Snapshot `continue on non-fatal errors 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -2,14 +2,9 @@[39m
+[2m    "error": [ZodError: [[22m
+[2m    {[22m
+[2m      "code": "custom",[22m
+[2m      "path": [],[22m
+[2m      "message": "A"[22m
+[32m-   },[39m
+[32m-   {[39m
+[32m-     "code": "custom",[39m
+[32m-     "path": [],[39m
+[32m-     "message": "B"[39m
+[2m    }[22m
+[2m  ]],[22m
+[2m    "success": false,[22m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/pipe.test.ts:[2m41:36[22m[39m
+    [90m 39|[39m   schema[33m.[39m[34mparse[39m([32m"1234"[39m)[33m;[39m
+    [90m 40|[39m
+    [90m 41|[39m   [34mexpect[39m(schema[33m.[39m[34msafeParse[39m([32m"4321"[39m))[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                                    [31m^[39m
+    [90m 42|[39m     {
+    [90m 43|[39m       "error": [ZodError: [
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/preprocess.test.ts[2m > [22mpreprocess ctx.addIssue non-fatal by default
+[31m[1mAssertionError[22m: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 2[39m
+[31m+ 1[39m
+
+[36m [2m❯[22m src/v4/classic/tests/preprocess.test.ts:[2m86:32[22m[39m
+    [90m 84|[39m   [35mconst[39m result [33m=[39m schema[33m.[39m[34msafeParse[39m([34m1234[39m)[33m;[39m
+    [90m 85|[39m
+    [90m 86|[39m   [34mexpect[39m(result[33m.[39merror[33m![39m[33m.[39missues)[33m.[39m[34mtoHaveLength[39m([34m2[39m)[33m;[39m
+    [90m   |[39m                                [31m^[39m
+    [90m 87|[39m   [34mexpect[39m(result)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m 88|[39m     {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/preprocess.test.ts[2m > [22mz.NEVER in preprocess
+[31m[1mAssertionError[22m: expected [ { code: 'custom', …(2) } ] to have a length of 2 but got 1[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 2[39m
+[31m+ 1[39m
+
+[36m [2m❯[22m src/v4/classic/tests/preprocess.test.ts:[2m178:32[22m[39m
+    [90m176|[39m   [35mconst[39m result [33m=[39m foo[33m.[39m[34msafeParse[39m(undefined)[33m;[39m
+    [90m177|[39m
+    [90m178|[39m   [34mexpect[39m(result[33m.[39merror[33m![39m[33m.[39missues)[33m.[39m[34mtoHaveLength[39m([34m2[39m)[33m;[39m
+    [90m   |[39m                                [31m^[39m
+    [90m179|[39m   [34mexpect[39m(result)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m180|[39m     {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/preprocess.test.ts[2m > [22mperform transform with non-fatal issues
+[31m[1mAssertionError[22m: expected [ { code: 'custom', path: [], …(1) } ] to have a length of 2 but got 1[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 2[39m
+[31m+ 1[39m
+
+[36m [2m❯[22m src/v4/classic/tests/preprocess.test.ts:[2m283:49[22m[39m
+    [90m281|[39m     [33m.[39m[34mpipe[39m(z[33m.[39m[34mnumber[39m())
+    [90m282|[39m     [33m.[39m[34mrefine[39m((_) [33m=>[39m [35mfalse[39m)[33m;[39m
+    [90m283|[39m   [34mexpect[39m([33mA[39m[33m.[39m[34msafeParse[39m([32m"asdfasdf"[39m)[33m.[39merror[33m![39m[33m.[39missues)[33m.[39m[34mtoHaveLength[39m([34m2[39m)[33m;[39m
+    [90m   |[39m                                                 [31m^[39m
+    [90m284|[39m   [34mexpect[39m([33mA[39m[33m.[39m[34msafeParse[39m([32m"asdfasdf"[39m)[33m.[39merror)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m285|[39m     [ZodError: [
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/set.test.ts[2m > [22mmin/max
+[31m[1mError[22m: Snapshot `min/max 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  [[22m
+[2m    {[22m
+[2m      "code": "too_small",[22m
+[32m-     "message": "Too small: expected set to have >4 items",[39m
+[31m+     "inclusive": true,[39m
+[31m+     "message": "Too small: expected set to have >[7m=[27m4 items",[39m
+[2m      "minimum": 4,[22m
+[2m      "origin": "set",[22m
+[2m      "path": [],[22m
+[2m    },[22m
+[2m  ][22m
+
+[36m [2m❯[22m src/v4/classic/tests/set.test.ts:[2m154:28[22m[39m
+    [90m152|[39m   [35mconst[39m r2 [33m=[39m schema[33m.[39m[34msafeParse[39m([35mnew[39m [33mSet[39m([[32m"a"[39m[33m,[39m [32m"b"[39m[33m,[39m [32m"c"[39m]))[33m;[39m
+    [90m153|[39m   [34mexpect[39m(r2[33m.[39msuccess)[33m.[39m[34mtoEqual[39m([35mfalse[39m)[33m;[39m
+    [90m154|[39m   [34mexpect[39m(r2[33m.[39merror[33m![39m[33m.[39missues)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                            [31m^[39m
+    [90m155|[39m     [
+    [90m156|[39m       {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/string.test.ts[2m > [22mbad uuid
+[31m[1mAssertionError[22m: expected { success: true, …(1) } to match object { success: false }
+(1 matching property omitted from actual)[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[32m-   "success": false,[39m
+[31m+   "success": true,[39m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/string.test.ts:[2m474:20[22m[39m
+    [90m472|[39m   ]) {
+    [90m473|[39m     [35mconst[39m result [33m=[39m uuid[33m.[39m[34msafeParse[39m(badUuid)[33m;[39m
+    [90m474|[39m     [34mexpect[39m(result)[33m.[39m[34mtoMatchObject[39m({ success[33m:[39m [35mfalse[39m })[33m;[39m
+    [90m   |[39m                    [31m^[39m
+    [90m475|[39m     [34mexpect[39m(result[33m.[39merror[33m?.[39missues[[34m0[39m][33m.[39mmessage)[33m.[39m[34mtoEqual[39m([32m"custom error"[39m)[33m;[39m
+    [90m476|[39m   }
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[23/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/string.test.ts[2m > [22mcuid
+[31m[1mError[22m: Snapshot `cuid 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  [ZodError: [[22m
+[2m    {[22m
+[2m      "origin": "string",[22m
+[2m      "code": "invalid_format",[22m
+[2m      "format": "cuid",[22m
+[32m-     "pattern": "/^[cC][[7m^\\s-[27m]{[7m8[27m,}$/",[39m
+[31m+     "pattern": "/^[cC][[7m0-9a-z[27m]{[7m6[27m,}$/",[39m
+[2m      "path": [],[22m
+[2m      "message": "Invalid cuid"[22m
+[2m    }[22m
+[2m  ]][22m
+
+[36m [2m❯[22m src/v4/classic/tests/string.test.ts:[2m510:24[22m[39m
+    [90m508|[39m
+    [90m509|[39m   [34mexpect[39m(result[33m.[39merror[33m![39m[33m.[39missues[[34m0[39m][33m.[39mmessage)[33m.[39m[34mtoEqual[39m([32m"Invalid cuid"[39m)[33m;[39m
+    [90m510|[39m   [34mexpect[39m(result[33m.[39merror)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                        [31m^[39m
+    [90m511|[39m     [ZodError: [
+    [90m512|[39m       {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[24/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/string.test.ts[2m > [22mulid
+[31m[1mError[22m: Snapshot `ulid 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  [ZodError: [[22m
+[2m    {[22m
+[2m      "origin": "string",[22m
+[2m      "code": "invalid_format",[22m
+[2m      "format": "ulid",[22m
+[32m-     "pattern": "/^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{2[7m6[27m}$/",[39m
+[31m+     "pattern": "/^[0-[7m7][0-[27m9A-HJKMNP-TV-Za-hjkmnp-tv-z]{2[7m5[27m}$/",[39m
+[2m      "path": [],[22m
+[2m      "message": "Invalid ULID"[22m
+[2m    }[22m
+[2m  ]][22m
+
+[36m [2m❯[22m src/v4/classic/tests/string.test.ts:[2m559:24[22m[39m
+    [90m557|[39m
+    [90m558|[39m   [34mexpect[39m(result[33m.[39merror[33m![39m[33m.[39missues[[34m0[39m][33m.[39mmessage)[33m.[39m[34mtoEqual[39m([32m"Invalid ULID"[39m)[33m;[39m
+    [90m559|[39m   [34mexpect[39m(result[33m.[39merror)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                        [31m^[39m
+    [90m560|[39m     [ZodError: [
+    [90m561|[39m       {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[25/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/template-literal.test.ts[2m > [22mtemplate literal parsing - failure - basic cases
+[31m[1mAssertionError[22m: expected [Function] to throw an error[39m
+[36m [2m❯[22m src/v4/classic/tests/template-literal.test.ts:[2m479:40[22m[39m
+    [90m477|[39m   [34mexpect[39m(() [33m=>[39m nullishBruh[33m.[39m[34mparse[39m([32m"undefined"[39m))[33m.[39m[34mtoThrow[39m()[33m;[39m
+    [90m478|[39m   [34mexpect[39m(() [33m=>[39m cuid[33m.[39m[34mparse[39m([32m"bjld2cyuq0000t3rmniod1foy"[39m))[33m.[39m[34mtoThrow[39m()[33m;[39m
+    [90m479|[39m   [34mexpect[39m(() [33m=>[39m cuid[33m.[39m[34mparse[39m([32m"cjld2cyu"[39m))[33m.[39m[34mtoThrow[39m()[33m;[39m
+    [90m   |[39m                                        [31m^[39m
+    [90m480|[39m   [34mexpect[39m(() [33m=>[39m cuid[33m.[39m[34mparse[39m([32m"cjld2 cyu"[39m))[33m.[39m[34mtoThrow[39m()[33m;[39m
+    [90m481|[39m   [34mexpect[39m(() [33m=>[39m cuid[33m.[39m[34mparse[39m([32m"cjld2cyuq0000t3rmniod1foy "[39m))[33m.[39m[34mtoThrow[39m()[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[26/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/template-literal.test.ts[2m > [22mregexes
+[31m[1mError[22m: Snapshot `regexes 17` mismatched[39m
+
+Expected: [32m""^\d+$""[39m
+Received: [31m""^[7m-?[27m\d+$""[39m
+
+[36m [2m❯[22m src/v4/classic/tests/template-literal.test.ts:[2m534:38[22m[39m
+    [90m532|[39m   expect(lazyString._zod.pattern.source).toMatchInlineSnapshot(`"^[\\s…
+    [90m533|[39m   expect(anyNumber._zod.pattern.source).toMatchInlineSnapshot(`"^-?\\d…
+    [90m534|[39m   [34mexpect[39m(anyInt[33m.[39m_zod[33m.[39mpattern[33m.[39msource)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`"^\\d+$"`[39m)[33m;[39m
+    [90m   |[39m                                      [31m^[39m
+    [90m535|[39m   // expect(anyFiniteNumber._zod.pattern.source).toMatchInlineSnapshot…
+    [90m536|[39m   // expect(anyNegativeNumber._zod.pattern.source).toMatchInlineSnapsh…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[27/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/template-literal.test.ts[2m > [22mtemplate literal parsing - failure - complex cases
+[31m[1mAssertionError[22m: expected [Function] to throw an error[39m
+[36m [2m❯[22m src/v4/classic/tests/template-literal.test.ts:[2m673:64[22m[39m
+    [90m671|[39m   expect(() => connectionString.parse("mongodb://host:d234")).toThrow(…
+    [90m672|[39m   expect(() => connectionString.parse("mongodb://host:12.34")).toThrow…
+    [90m673|[39m   expect(() => connectionString.parse("mongodb://host:-1234")).toThrow…
+    [90m   |[39m                                                                [31m^[39m
+    [90m674|[39m   expect(() => connectionString.parse("mongodb://host:-12.34")).toThro…
+    [90m675|[39m   [34mexpect[39m(() [33m=>[39m connectionString[33m.[39m[34mparse[39m([32m"mongodb://host:"[39m))[33m.[39m[34mtoThrow[39m()[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[28/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/template-literal.test.ts[2m > [22mtemplate literal parsing - failure - issue format
+[31m[1mError[22m: Snapshot `template literal parsing - failure - issue format 2` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -1,11 +1,11 @@[39m
+[2m  {[22m
+[2m    "error": [ZodError: [[22m
+[2m    {[22m
+[2m      "code": "invalid_format",[22m
+[2m      "format": "template_literal",[22m
+[32m-     "pattern": "^[cC][[7m^\\s-[27m]{[7m8[27m,}ZZZ$",[39m
+[31m+     "pattern": "^[cC][[7m0-9a-z[27m]{[7m6[27m,}ZZZ$",[39m
+[2m      "path": [],[22m
+[2m      "message": "Invalid input"[22m
+[2m    }[22m
+[2m  ]],[22m
+[2m    "success": false,[22m
+
+[36m [2m❯[22m src/v4/classic/tests/template-literal.test.ts:[2m701:62[22m[39m
+    [90m699|[39m     }
+    [90m700|[39m   `[39m)[33m;[39m
+    [90m701|[39m   expect(cuidZZZ.safeParse("1cjld2cyuq0000t3rmniod1foyZZZ")).toMatchIn…
+    [90m   |[39m                                                              [31m^[39m
+    [90m702|[39m     {
+    [90m703|[39m       "error": [ZodError: [
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[29/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mtoJSONSchema[2m > [22mprimitive types
+[31m[1mError[22m: Snapshot `toJSONSchema > primitive types 9` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[2m    "$schema": "https://json-schema.org/draft/2020-12/schema",[22m
+[2m    "format": "email",[22m
+[32m-   "pattern": "^(?[7m!\.)(?!.*\.[27m\.)[7m([27m[A-Za-z0-9_'+\-[7m\.[27m]*[7m)[27m[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$",[39m
+[31m+   "pattern": "^(?[7m:[A-Za-z0-9_'+\-]+[27m\.)[7m*[27m[A-Za-z0-9_'+\-]*[A-Za-z0-9_+-]@([7m?:[27m[A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$",[39m
+[2m    "type": "string",[22m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m52:39[22m[39m
+    [90m 50|[39m       }
+    [90m 51|[39m     `[39m)[33m;[39m
+    [90m 52|[39m     [34mexpect[39m(z[33m.[39m[34mtoJSONSchema[39m(z[33m.[39m[34memail[39m()))[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                                       [31m^[39m
+    [90m 53|[39m       {
+    [90m 54|[39m         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[30/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mtoJSONSchema[2m > [22mstring formats
+[31m[1mError[22m: Snapshot `toJSONSchema > string formats 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[2m    "$schema": "https://json-schema.org/draft/2020-12/schema",[22m
+[2m    "format": "email",[22m
+[32m-   "pattern": "^(?[7m!\.)(?!.*\.[27m\.)[7m([27m[A-Za-z0-9_'+\-[7m\.[27m]*[7m)[27m[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$",[39m
+[31m+   "pattern": "^(?[7m:[A-Za-z0-9_'+\-]+[27m\.)[7m*[27m[A-Za-z0-9_'+\-]*[A-Za-z0-9_+-]@([7m?:[27m[A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$",[39m
+[2m    "type": "string",[22m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m260:48[22m[39m
+    [90m258|[39m
+    [90m259|[39m   [34mtest[39m([32m"string formats"[39m[33m,[39m () [33m=>[39m {
+    [90m260|[39m     [34mexpect[39m(z[33m.[39m[34mtoJSONSchema[39m(z[33m.[39m[34mstring[39m()[33m.[39m[34memail[39m()))[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                                                [31m^[39m
+    [90m261|[39m       {
+    [90m262|[39m         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[31/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mtoJSONSchema[2m > [22mstring patterns
+[31m[1mError[22m: Snapshot `toJSONSchema > string patterns 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -6,11 +6,11 @@[39m
+[2m      },[22m
+[2m      {[22m
+[2m        "pattern": "cruel",[22m
+[2m      },[22m
+[2m      {[22m
+[32m-       "pattern": "^.{10}dark",[39m
+[31m+       "pattern": "^.{10[7m,[27m}dark",[39m
+[2m      },[22m
+[2m      {[22m
+[2m        "pattern": ".*world$",[22m
+[2m      },[22m
+[2m      {[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m377:7[22m[39m
+    [90m375|[39m           [33m.[39m[34mregex[39m([36m/stuff/[39m)
+    [90m376|[39m       )
+    [90m377|[39m     )[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m       [31m^[39m
+    [90m378|[39m       {
+    [90m379|[39m         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[32/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mtoJSONSchema[2m > [22munions
+[31m[1mError[22m: Snapshot `toJSONSchema > unions 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[2m    "$schema": "https://json-schema.org/draft/2020-12/schema",[22m
+[32m-   "[7manyOf": [[27m[39m
+[32m-     {[39m
+[32m-       "type": "string",[39m
+[32m-     },[39m
+[32m-     {[39m
+[32m- [7m      "type":[27m "number",[39m
+[31m+   "[7mtype": [[27m[39m
+[31m+     "string",[39m
+[31m+ [7m   [27m "number",[39m
+[32m-     },[39m
+[2m    ],[22m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m556:36[22m[39m
+    [90m554|[39m   [34mtest[39m([32m"unions"[39m[33m,[39m () [33m=>[39m {
+    [90m555|[39m     [35mconst[39m schema [33m=[39m z[33m.[39m[34munion[39m([z[33m.[39m[34mstring[39m()[33m,[39m z[33m.[39m[34mnumber[39m()])[33m;[39m
+    [90m556|[39m     [34mexpect[39m(z[33m.[39m[34mtoJSONSchema[39m(schema))[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                                    [31m^[39m
+    [90m557|[39m       {
+    [90m558|[39m         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[33/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mtoJSONSchema[2m > [22mintersections
+[31m[1mError[22m: Snapshot `toJSONSchema > intersections 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[2m    "$schema": "https://json-schema.org/draft/2020-12/schema",[22m
+[32m-   "allOf": [[39m
+[32m-     {[39m
+[32m- [7m    [27m  "additionalProperties": false,[39m
+[31m+   "additionalProperties": false,[39m
+[32m- [7m    [27m  "properties": {[39m
+[31m+   "properties": {[39m
+[32m- [7m    [27m    "[7mnam[27me": {[39m
+[31m+     "[7mag[27me": {[39m
+[32m-       [7m [27m[7m   [27m"type": "[7mstring",[27m[39m
+[32m-         },[39m
+[32m-       },[39m
+[32m-       "required": [[39m
+[32m-         "name",[39m
+[32m-       ],[39m
+[32m-       "type": "object",[39m
+[32m-     },[39m
+[32m-     {[39m
+[32m-       "additionalProperties": false,[39m
+[32m-       "properties": {[39m
+[32m- [7m        "ag[27me": {[39m
+[31m+       "type": "[7mnumber",[27m[39m
+[31m+     },[39m
+[31m+ [7m    "nam[27me": {[39m
+[32m-       [7m    [27m"type": "[7mnumber[27m",[39m
+[31m+       "type": "[7mstring[27m",[39m
+[32m-     [7m [27m[7m   [27m},[39m
+[31m+     },[39m
+[32m-   [7m [27m[7m   },[27m[39m
+[32m- [7m    [27m  "required": [[39m
+[31m+   [7m},[27m[39m
+[31m+   "required": [[39m
+[32m-         "age",[39m
+[31m+     [7m"name",[27m[39m
+[31m+     "age",[39m
+[32m-   [7m [27m[7m   ],[27m[39m
+[32m- [7m    [27m  "type": "object",[39m
+[31m+   [7m],[27m[39m
+[31m+   "type": "object",[39m
+[32m-     },[39m
+[32m-   ],[39m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m574:36[22m[39m
+    [90m572|[39m     const schema = z.intersection(z.object({ name: z.string() }), z.ob…
+    [90m573|[39m
+    [90m574|[39m     [34mexpect[39m(z[33m.[39m[34mtoJSONSchema[39m(schema))[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                                    [31m^[39m
+    [90m575|[39m       {
+    [90m576|[39m         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[34/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mtoJSONSchema[2m > [22mtuple
+[31m[1mError[22m: Snapshot `toJSONSchema > tuple 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -1,10 +1,11 @@[39m
+[2m  {[22m
+[2m    "$schema": "https://json-schema.org/draft/2020-12/schema",[22m
+[2m    "items": {[22m
+[2m      "type": "boolean",[22m
+[2m    },[22m
+[31m+   "minItems": 2,[39m
+[2m    "prefixItems": [[22m
+[2m      {[22m
+[2m        "type": "string",[22m
+[2m      },[22m
+[2m      {[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m625:36[22m[39m
+    [90m623|[39m   [34mtest[39m([32m"tuple"[39m[33m,[39m () [33m=>[39m {
+    [90m624|[39m     [35mconst[39m schema [33m=[39m z[33m.[39m[34mtuple[39m([z[33m.[39m[34mstring[39m()[33m,[39m z[33m.[39m[34mnumber[39m()])[33m.[39m[34mrest[39m(z[33m.[39m[34mboolean[39m())[33m;[39m
+    [90m625|[39m     [34mexpect[39m(z[33m.[39m[34mtoJSONSchema[39m(schema))[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                                    [31m^[39m
+    [90m626|[39m       {
+    [90m627|[39m         "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[35/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22moverride: do not run on references
+[31m[1mAssertionError[22m: expected 12 to be 6 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 6[39m
+[31m+ 12[39m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m1216:25[22m[39m
+    [90m1214|[39m   })[33m;[39m
+    [90m1215|[39m
+    [90m1216|[39m   [34mexpect[39m(overrideCount)[33m.[39m[34mtoBe[39m([34m6[39m)[33m;[39m
+    [90m   |[39m                         [31m^[39m
+    [90m1217|[39m })[33m;[39m
+    [90m1218|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[36/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22moverride execution order
+[31m[1mError[22m: Snapshot `override execution order 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[32m-   "[7manyOf": [[27m[39m
+[32m-     {[39m
+[32m-       "type": "string",[39m
+[32m-     },[39m
+[32m-     {[39m
+[32m- [7m      "type":[27m "number",[39m
+[31m+   "[7mtype": [[27m[39m
+[31m+     "string",[39m
+[31m+ [7m   [27m "number",[39m
+[32m-     },[39m
+[2m    ],[22m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m1248:23[22m[39m
+    [90m1246|[39m   })[33m;[39m
+    [90m1247|[39m
+    [90m1248|[39m   [34mexpect[39m(unionSchema)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                       [31m^[39m
+    [90m1249|[39m     {
+    [90m1250|[39m       "anyOf": [
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[37/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mextract schemas with id
+[31m[1mError[22m: Snapshot `extract schemas with id 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -1,13 +1,11 @@[39m
+[2m  {[22m
+[2m    "$defs": {[22m
+[2m      "age": {[22m
+[32m-       "id": "age",[39m
+[2m        "type": "number",[22m
+[2m      },[22m
+[2m      "name": {[22m
+[32m-       "id": "name",[39m
+[2m        "type": "string",[22m
+[2m      },[22m
+[2m    },[22m
+[2m    "$schema": "https://json-schema.org/draft/2020-12/schema",[22m
+[2m    "additionalProperties": false,[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m1395:18[22m[39m
+    [90m1393|[39m     })
+    [90m1394|[39m   )[33m;[39m
+    [90m1395|[39m   [34mexpect[39m(result)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                  [31m^[39m
+    [90m1396|[39m     {
+    [90m1397|[39m       "$defs": {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[38/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mdescribe with id
+[31m[1mError[22m: Snapshot `describe with id 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -1,9 +1,8 @@[39m
+[2m  {[22m
+[2m    "$defs": {[22m
+[2m      "jobId": {[22m
+[32m-       "id": "jobId",[39m
+[2m        "type": "string",[22m
+[2m      },[22m
+[2m    },[22m
+[2m    "$schema": "https://json-schema.org/draft/2020-12/schema",[22m
+[2m    "additionalProperties": false,[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m1483:13[22m[39m
+    [90m1481|[39m     })
+    [90m1482|[39m   )[33m;[39m
+    [90m1483|[39m   [34mexpect[39m(a)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m             [31m^[39m
+    [90m1484|[39m     {
+    [90m1485|[39m       "$defs": {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[39/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22moverwrite id
+[31m[1mError[22m: Snapshot `overwrite id 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -1,14 +1,12 @@[39m
+[2m  {[22m
+[2m    "$defs": {[22m
+[2m      "aaa": {[22m
+[32m-       "id": "aaa",[39m
+[2m        "type": "string",[22m
+[2m      },[22m
+[2m      "bbb": {[22m
+[2m        "$ref": "#/$defs/aaa",[22m
+[32m-       "id": "bbb",[39m
+[2m      },[22m
+[2m    },[22m
+[2m    "$schema": "https://json-schema.org/draft/2020-12/schema",[22m
+[2m    "additionalProperties": false,[22m
+[2m    "properties": {[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m1521:13[22m[39m
+    [90m1519|[39m     })
+    [90m1520|[39m   )[33m;[39m
+    [90m1521|[39m   [34mexpect[39m(a)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m             [31m^[39m
+    [90m1522|[39m     {
+    [90m1523|[39m       "$defs": {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[40/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mtop-level readonly
+[31m[1mError[22m: Snapshot `top-level readonly 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[2m    "$defs": {[22m
+[32m-     "[7mB[27m": {[39m
+[31m+     "[7mA[27m": {[39m
+[2m        "additionalProperties": false,[22m
+[32m-       "id": "B",[39m
+[2m        "properties": {[22m
+[32m-         "[7ma[27m": {[39m
+[31m+         "[7mb[27m": {[39m
+[32m-           "$ref": "#",[39m
+[31m+           "$ref": "#[7m/$defs/B[27m",[39m
+[2m          },[22m
+[2m          "name": {[22m
+[2m            "type": "string",[22m
+[2m          },[22m
+[2m        },[22m
+[2m        "readOnly": true,[22m
+[2m        "required": [[22m
+[2m          "name",[22m
+[32m-         "[7ma[27m",[39m
+[31m+         "[7mb[27m",[39m
+[2m        ],[22m
+[2m        "type": "object",[22m
+[2m      },[22m
+[32m-   [7m},[27m[39m
+[32m-   "$schema": "https://json-schema.org/draft/2020-12/schema",[39m
+[32m-   "additionalProperties": false,[39m
+[31m+   [7m  "B": {[27m[39m
+[31m+ [7m    [27m  "additionalProperties": false,[39m
+[32m-   [7m"id": "A",[27m[39m
+[32m-   "properties": {[39m
+[31m+   [7m  [27m  "properties": {[39m
+[32m-     [7m"b[27m": {[39m
+[31m+     [7m    "a[27m": {[39m
+[32m-       "$ref": "#/$defs/[7mB[27m",[39m
+[31m+       [7m  [27m[7m  [27m"$ref": "#/$defs/[7mA[27m",[39m
+[32m-     },[39m
+[31m+ [7m    [27m    },[39m
+[32m-     "name": {[39m
+[31m+ [7m    [27m    "name": {[39m
+[32m-       "type": "string",[39m
+[31m+ [7m    [27m      "type": "string",[39m
+[32m-     [7m},[27m[39m
+[32m-   },[39m
+[32m-   "readOnly": true,[39m
+[31m+     [7m    },[27m[39m
+[31m+       },[39m
+[31m+ [7m    [27m  "readOnly": true,[39m
+[32m-   "required": [[39m
+[31m+ [7m    [27m  "required": [[39m
+[32m-     "name",[39m
+[31m+     [7m  [27m[7m  [27m"name",[39m
+[32m-     [7m"b",[27m[39m
+[32m-   ],[39m
+[32m- [7m  "type": "object[27m",[39m
+[31m+     [7m [27m[7m   "a",[27m[39m
+[31m+       ],[39m
+[31m+       "type": "object",[39m
+[31m+     },[39m
+[31m+   },[39m
+[31m+   "$ref": "#/$defs/A",[39m
+[31m+ [7m  "$schema": "https://json-schema.org/draft/2020-12/schema[27m",[39m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m1686:18[22m[39m
+    [90m1684|[39m
+    [90m1685|[39m   [35mconst[39m result [33m=[39m z[33m.[39mz[33m.[39m[34mtoJSONSchema[39m([33mA[39m)[33m;[39m
+    [90m1686|[39m   [34mexpect[39m(result)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                  [31m^[39m
+    [90m1687|[39m     {
+    [90m1688|[39m       "$defs": {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[41/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22minput type
+[31m[1mError[22m: Snapshot `input type 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -10,17 +10,13 @@[39m
+[2m      "c": {[22m
+[2m        "default": "hello",[22m
+[2m        "type": "string",[22m
+[2m      },[22m
+[2m      "d": {[22m
+[32m-       "[7manyOf": [[27m[39m
+[32m-         {[39m
+[32m- [7m          "type":[27m "string",[39m
+[31m+       "[7mtype": [[27m[39m
+[31m+ [7m       [27m "string",[39m
+[32m-       [7m  [27m[7m},[27m[39m
+[32m-         {[39m
+[32m-           "type": "null",[39m
+[32m- [7m        }[27m,[39m
+[31m+       [7m  "null"[27m,[39m
+[2m        ],[22m
+[2m      },[22m
+[2m      "e": {[22m
+[2m        "default": "hello",[22m
+[2m        "type": "string",[22m
+[33m@@ -42,22 +38,16 @@[39m
+[2m            "type": "number",[22m
+[2m          },[22m
+[2m        ],[22m
+[2m      },[22m
+[2m      "i": {[22m
+[32m-       "anyOf": [[39m
+[32m-         {[39m
+[32m-           "type": "string",[39m
+[32m-         },[39m
+[32m-         {[39m
+[32m- [7m    [27m      "type": "string",[39m
+[31m+       "type": "string",[39m
+[32m-         },[39m
+[32m-       ],[39m
+[2m      },[22m
+[2m    },[22m
+[2m    "required": [[22m
+[2m      "a",[22m
+[2m      "d",[22m
+[31m+     "f",[39m
+[2m      "g",[22m
+[2m    ],[22m
+[2m    "type": "object",[22m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m1895:51[22m[39m
+    [90m1893|[39m     i[33m:[39m z[33m.[39m[34munion[39m([z[33m.[39m[34mstring[39m()[33m,[39m z[33m.[39m[34mstring[39m()[33m.[39m[34moptional[39m()])[33m,[39m
+    [90m1894|[39m   })[33m;[39m
+    [90m1895|[39m   expect(z.toJSONSchema(schema, { io: "input" })).toMatchInlineSnapsho…
+    [90m   |[39m                                                   [31m^[39m
+    [90m1896|[39m     {
+    [90m1897|[39m       "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[42/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mflatten simple intersections
+[31m[1mError[22m: Snapshot `flatten simple intersections 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[2m    "$schema": "http://json-schema.org/draft-07/schema#",[22m
+[32m-   "allOf": [[39m
+[32m-     {[39m
+[32m- [7m    [27m  "additionalProperties": false,[39m
+[31m+   "additionalProperties": false,[39m
+[32m-   [7m  [27m  "properties": {[39m
+[31m+   [7m"description": "123",[27m[39m
+[31m+   "properties": {[39m
+[32m- [7m    [27m    "test[7mNum[27m": {[39m
+[31m+     "test[7mBool[27m": {[39m
+[32m-       [7m    [27m"type": "[7mnumber",[27m[39m
+[32m-         },[39m
+[32m-       },[39m
+[32m-       "required": [[39m
+[32m- [7m    [27m    "testNum"[7m,[27m[39m
+[32m-       ],[39m
+[31m+       "type": "[7mboolean",[27m[39m
+[31m+     },[39m
+[31m+     "testNum"[7m: {[27m[39m
+[32m-       "type": "[7mobject[27m",[39m
+[31m+       "type": "[7mnumber[27m",[39m
+[2m      },[22m
+[32m-     {[39m
+[32m-       "additionalProperties": false,[39m
+[32m-       "properties": {[39m
+[32m- [7m    [27m    "testStr": {[39m
+[31m+     "testStr": {[39m
+[32m- [7m    [27m      "type": "string",[39m
+[31m+       "type": "string",[39m
+[32m-     [7m    },[27m[39m
+[32m- [7m   [27m  [7m [27m},[39m
+[31m+     [7m},[27m[39m
+[31m+   },[39m
+[32m- [7m    [27m  "required": [[39m
+[31m+   "required": [[39m
+[32m-     [7m  [27m[7m  [27m"test[7mStr",[27m[39m
+[32m-       ],[39m
+[32m-       "type": "object",[39m
+[32m-     },[39m
+[32m-     {[39m
+[32m-       "additionalProperties": false,[39m
+[32m-       "properties": {[39m
+[32m-         "testBool": {[39m
+[32m-           "type": "boolean",[39m
+[32m-         },[39m
+[32m-       },[39m
+[32m-       "required": [[39m
+[31m+     "test[7mNum",[27m[39m
+[31m+     "testStr",[39m
+[32m- [7m    [27m    "testBool",[39m
+[31m+     "testBool",[39m
+[32m-   [7m    ],[27m[39m
+[32m- [7m   [27m  [7m [27m"type": "object",[39m
+[31m+   [7m],[27m[39m
+[31m+   "type": "object",[39m
+[32m-     },[39m
+[32m-   ],[39m
+[32m-   "description": "123",[39m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m2167:18[22m[39m
+    [90m2165|[39m   [90m// Zod 4[39m
+    [90m2166|[39m   [35mconst[39m result [33m=[39m z[33m.[39m[34mtoJSONSchema[39m([33mHelloSchema[39m[33m,[39m { target[33m:[39m [32m"draft-7"[39m })[33m;[39m
+    [90m2167|[39m   [34mexpect[39m(result)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                  [31m^[39m
+    [90m2168|[39m     {
+    [90m2169|[39m       "$schema": "http://json-schema.org/draft-07/schema#",
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[43/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/to-json-schema.test.ts[2m > [22mz.file()
+[31m[1mError[22m: Snapshot `z.file() 3` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[2m    "$schema": "https://json-schema.org/draft/2020-12/schema",[22m
+[2m    "anyOf": [[22m
+[2m      {[22m
+[32m-       "contentEncoding": "binary",[39m
+[2m        "contentMediaType": "image/png",[22m
+[32m-     [7m  "format": "binary"[27m,[39m
+[31m+     [7m}[27m,[39m
+[32m-     [7m [27m[7m "maxLength": 10000,[27m[39m
+[32m-       "minLength": 1000,[39m
+[32m- [7m      "type": "strin[27mg",[39m
+[31m+     [7m{[27m[39m
+[31m+ [7m      "contentMediaType": "image/jp[27mg",[39m
+[2m      },[22m
+[32m-   [7m  {[27m[39m
+[32m- [7m    [27m  "contentEncoding": "binary",[39m
+[31m+   [7m],[27m[39m
+[31m+   "contentEncoding": "binary",[39m
+[32m-       "contentMediaType": "image/jpg",[39m
+[32m- [7m    [27m  "format": "binary",[39m
+[31m+   "format": "binary",[39m
+[32m- [7m    [27m  "maxLength": 10000,[39m
+[31m+   "maxLength": 10000,[39m
+[32m- [7m    [27m  "minLength": 1000,[39m
+[31m+   "minLength": 1000,[39m
+[32m- [7m    [27m  "type": "string",[39m
+[31m+   "type": "string",[39m
+[32m-     },[39m
+[32m-   ],[39m
+[2m  }[22m
+
+[36m [2m❯[22m src/v4/classic/tests/to-json-schema.test.ts:[2m2238:29[22m[39m
+    [90m2236|[39m
+    [90m2237|[39m   const c = z.file().mime(["image/png", "image/jpg"]).min(1000).max(10…
+    [90m2238|[39m   [34mexpect[39m(z[33m.[39m[34mtoJSONSchema[39m(c))[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                             [31m^[39m
+    [90m2239|[39m     {
+    [90m2240|[39m       "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[44/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/tuple.test.ts[2m > [22msuccessful validation
+[31m[1mError[22m: Snapshot `successful validation 2` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  [ZodError: [[22m
+[2m    {[22m
+[32m-     "origin": "array",[39m
+[2m      "code": "too_big",[22m
+[2m      "maximum": 2,[22m
+[31m+     "inclusive": true,[39m
+[31m+     "origin": "array",[39m
+[2m      "path": [],[22m
+[32m-     "message": "Too big: expected array to have <2 items"[39m
+[31m+     "message": "Too big: expected array to have <[7m=[27m2 items"[39m
+[2m    }[22m
+[2m  ]][22m
+
+[36m [2m❯[22m src/v4/classic/tests/tuple.test.ts:[2m28:21[22m[39m
+    [90m 26|[39m   [35mconst[39m r2 [33m=[39m testTuple[33m.[39m[34msafeParse[39m([[32m"asdf"[39m[33m,[39m [34m1234[39m[33m,[39m [35mtrue[39m])[33m;[39m
+    [90m 27|[39m   [34mexpect[39m(r2[33m.[39msuccess)[33m.[39m[34mtoEqual[39m([35mfalse[39m)[33m;[39m
+    [90m 28|[39m   [34mexpect[39m(r2[33m.[39merror[33m![39m)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                     [31m^[39m
+    [90m 29|[39m     [ZodError: [
+    [90m 30|[39m       {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[45/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/tuple.test.ts[2m > [22masync validation
+[31m[1mError[22m: Snapshot `async validation 2` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  [ZodError: [[22m
+[2m    {[22m
+[32m-     "origin": "array",[39m
+[2m      "code": "too_big",[22m
+[2m      "maximum": 2,[22m
+[31m+     "inclusive": true,[39m
+[31m+     "origin": "array",[39m
+[2m      "path": [],[22m
+[32m-     "message": "Too big: expected array to have <2 items"[39m
+[31m+     "message": "Too big: expected array to have <[7m=[27m2 items"[39m
+[2m    }[22m
+[2m  ]][22m
+
+[36m [2m❯[22m src/v4/classic/tests/tuple.test.ts:[2m80:21[22m[39m
+    [90m 78|[39m   [35mconst[39m r2 [33m=[39m [35mawait[39m testTuple[33m.[39m[34msafeParseAsync[39m([[32m"asdf"[39m[33m,[39m [34m1234[39m[33m,[39m [35mtrue[39m])[33m;[39m
+    [90m 79|[39m   [34mexpect[39m(r2[33m.[39msuccess)[33m.[39m[34mtoEqual[39m([35mfalse[39m)[33m;[39m
+    [90m 80|[39m   [34mexpect[39m(r2[33m.[39merror[33m![39m)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                     [31m^[39m
+    [90m 81|[39m     [ZodError: [
+    [90m 82|[39m       {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[46/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/union.test.ts[2m > [22mreturn errors from both union arms
+[31m[1mError[22m: Snapshot `return errors from both union arms 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  [[22m
+[2m    {[22m
+[32m-     "code": "[7minvalid_union",[27m[39m
+[32m-     "errors": [[39m
+[32m-       [[39m
+[32m-         {[39m
+[32m-           "code": "invalid_type",[39m
+[32m-           "expected": "number",[39m
+[32m-           "message": "Invalid input: expected number, received string",[39m
+[32m-           "path": [],[39m
+[32m-         },[39m
+[32m-       ],[39m
+[32m-       [[39m
+[32m-         {[39m
+[32m-           "code": "custom",[39m
+[32m-           "message": "Invalid input",[39m
+[32m-           "path": [],[39m
+[32m-         },[39m
+[32m-       ],[39m
+[32m- [7m    ][27m,[39m
+[31m+     "code": "[7mcustom"[27m,[39m
+[2m      "message": "Invalid input",[22m
+[2m      "path": [],[22m
+[2m    },[22m
+[2m  ][22m
+
+[36m [2m❯[22m src/v4/classic/tests/union.test.ts:[2m33:33[22m[39m
+    [90m 31|[39m   [34mexpect[39m(result[33m.[39msuccess)[33m.[39m[34mtoEqual[39m([35mfalse[39m)[33m;[39m
+    [90m 32|[39m   [35mif[39m ([33m![39mresult[33m.[39msuccess) {
+    [90m 33|[39m     [34mexpect[39m(result[33m.[39merror[33m.[39missues)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                                 [31m^[39m
+    [90m 34|[39m       [
+    [90m 35|[39m         {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[47/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/validations.test.ts[2m > [22mstring length
+[31m[1mError[22m: Snapshot `string length 1` mismatched[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  [[22m
+[2m    {[22m
+[2m      "code": "too_small",[22m
+[2m      "exact": true,[22m
+[2m      "inclusive": true,[22m
+[32m-     "message": "Too small: expected string to have [7m>=[27m4 characters",[39m
+[31m+     "message": "Too small: expected string to have [7mexactly [27m4 characters",[39m
+[2m      "minimum": 4,[22m
+[2m      "origin": "string",[22m
+[2m      "path": [],[22m
+[2m    },[22m
+[2m  ][22m
+
+[36m [2m❯[22m src/v4/classic/tests/validations.test.ts:[2m10:40[22m[39m
+    [90m  8|[39m   } [35mcatch[39m (err) {
+    [90m  9|[39m     [90m// ("String must contain exactly 4 character(s)");[39m
+    [90m 10|[39m     [34mexpect[39m((err [35mas[39m z[33m.[39m[33mZodError[39m)[33m.[39missues)[33m.[39m[34mtoMatchInlineSnapshot[39m([32m`
+    [90m   |[39m                                        [31m^[39m
+    [90m 11|[39m       [
+    [90m 12|[39m         {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[48/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/mini/tests/computed.test.ts[2m > [22mmin/max
+[31m[1mAssertionError[22m: expected undefined to deeply equal 7[39m
+
+[32m- Expected:[39m
+7
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m src/v4/mini/tests/computed.test.ts:[2m8:30[22m[39m
+    [90m  6|[39m   const a = z.number().check(z.minimum(5), z.minimum(6), z.minimum(7),…
+    [90m  7|[39m
+    [90m  8|[39m   [34mexpect[39m(a[33m.[39m_zod[33m.[39mbag[33m.[39mminimum)[33m.[39m[34mtoEqual[39m([34m7[39m)[33m;[39m
+    [90m   |[39m                              [31m^[39m
+    [90m  9|[39m   [34mexpect[39m(a[33m.[39m_zod[33m.[39mbag[33m.[39mmaximum)[33m.[39m[34mtoEqual[39m([34m10[39m)[33m;[39m
+    [90m 10|[39m })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[49/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/mini/tests/computed.test.ts[2m > [22mmultipleOf
+[31m[1mAssertionError[22m: expected undefined to deeply equal 5[39m
+
+[32m- Expected:[39m
+5
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m src/v4/mini/tests/computed.test.ts:[2m14:33[22m[39m
+    [90m 12|[39m [34mtest[39m([32m"multipleOf"[39m[33m,[39m () [33m=>[39m {
+    [90m 13|[39m   [35mconst[39m b [33m=[39m z[33m.[39m[34mnumber[39m()[33m.[39m[34mcheck[39m(z[33m.[39m[34mmultipleOf[39m([34m5[39m))[33m;[39m
+    [90m 14|[39m   [34mexpect[39m(b[33m.[39m_zod[33m.[39mbag[33m.[39mmultipleOf)[33m.[39m[34mtoEqual[39m([34m5[39m)[33m;[39m
+    [90m   |[39m                                 [31m^[39m
+    [90m 15|[39m })[33m;[39m
+    [90m 16|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[50/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/mini/tests/computed.test.ts[2m > [22mint64 format
+[31m[1mAssertionError[22m: expected undefined to deeply equal 'int64'[39m
+
+[32m- Expected:[39m
+"int64"
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m src/v4/mini/tests/computed.test.ts:[2m19:29[22m[39m
+    [90m 17|[39m [34mtest[39m([32m"int64 format"[39m[33m,[39m () [33m=>[39m {
+    [90m 18|[39m   [35mconst[39m c [33m=[39m z[33m.[39m[34mint64[39m()[33m;[39m
+    [90m 19|[39m   [34mexpect[39m(c[33m.[39m_zod[33m.[39mbag[33m.[39mformat)[33m.[39m[34mtoEqual[39m([32m"int64"[39m)[33m;[39m
+    [90m   |[39m                             [31m^[39m
+    [90m 20|[39m   [34mexpect[39m(c[33m.[39m_zod[33m.[39mbag[33m.[39mminimum)[33m.[39m[34mtoEqual[39m(zc[33m.[39m[33mBIGINT_FORMAT_RANGES[39m[33m.[39mint64[[34m0[39m])[33m;[39m
+    [90m 21|[39m   [34mexpect[39m(c[33m.[39m_zod[33m.[39mbag[33m.[39mmaximum)[33m.[39m[34mtoEqual[39m(zc[33m.[39m[33mBIGINT_FORMAT_RANGES[39m[33m.[39mint64[[34m1[39m])[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[51/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/mini/tests/computed.test.ts[2m > [22mint32 format
+[31m[1mAssertionError[22m: expected undefined to deeply equal 'int32'[39m
+
+[32m- Expected:[39m
+"int32"
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m src/v4/mini/tests/computed.test.ts:[2m26:29[22m[39m
+    [90m 24|[39m [34mtest[39m([32m"int32 format"[39m[33m,[39m () [33m=>[39m {
+    [90m 25|[39m   [35mconst[39m d [33m=[39m z[33m.[39m[34mint32[39m()[33m;[39m
+    [90m 26|[39m   [34mexpect[39m(d[33m.[39m_zod[33m.[39mbag[33m.[39mformat)[33m.[39m[34mtoEqual[39m([32m"int32"[39m)[33m;[39m
+    [90m   |[39m                             [31m^[39m
+    [90m 27|[39m   [34mexpect[39m(d[33m.[39m_zod[33m.[39mbag[33m.[39mminimum)[33m.[39m[34mtoEqual[39m(zc[33m.[39m[33mNUMBER_FORMAT_RANGES[39m[33m.[39mint32[[34m0[39m])[33m;[39m
+    [90m 28|[39m   [34mexpect[39m(d[33m.[39m_zod[33m.[39mbag[33m.[39mmaximum)[33m.[39m[34mtoEqual[39m(zc[33m.[39m[33mNUMBER_FORMAT_RANGES[39m[33m.[39mint32[[34m1[39m])[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[52/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/mini/tests/computed.test.ts[2m > [22marray size
+[31m[1mAssertionError[22m: expected undefined to deeply equal 5[39m
+
+[32m- Expected:[39m
+5
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m src/v4/mini/tests/computed.test.ts:[2m33:29[22m[39m
+    [90m 31|[39m [34mtest[39m([32m"array size"[39m[33m,[39m () [33m=>[39m {
+    [90m 32|[39m   [35mconst[39m e [33m=[39m z[33m.[39m[34marray[39m(z[33m.[39m[34mstring[39m())[33m.[39m[34mcheck[39m(z[33m.[39m[34mlength[39m([34m5[39m))[33m;[39m
+    [90m 33|[39m   [34mexpect[39m(e[33m.[39m_zod[33m.[39mbag[33m.[39mlength)[33m.[39m[34mtoEqual[39m([34m5[39m)[33m;[39m
+    [90m   |[39m                             [31m^[39m
+    [90m 34|[39m   [34mexpect[39m(e[33m.[39m_zod[33m.[39mbag[33m.[39mminimum)[33m.[39m[34mtoEqual[39m([34m5[39m)[33m;[39m
+    [90m 35|[39m   [34mexpect[39m(e[33m.[39m_zod[33m.[39mbag[33m.[39mmaximum)[33m.[39m[34mtoEqual[39m([34m5[39m)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[53/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/core/tests/locales/en.test.ts[2m > [22mparsedType
+[31m[1mTypeError[22m: parsedType is not a function[39m
+[36m [2m❯[22m src/v4/core/tests/locales/en.test.ts:[2m5:10[22m[39m
+    [90m  3|[39m
+    [90m  4|[39m [34mtest[39m([32m"parsedType"[39m[33m,[39m () [33m=>[39m {
+    [90m  5|[39m   [34mexpect[39m([34mparsedType[39m([32m"string"[39m))[33m.[39m[34mtoBe[39m([32m"string"[39m)[33m;[39m
+    [90m   |[39m          [31m^[39m
+    [90m  6|[39m   [34mexpect[39m([34mparsedType[39m([34m1[39m))[33m.[39m[34mtoBe[39m([32m"number"[39m)[33m;[39m
+    [90m  7|[39m   [34mexpect[39m([34mparsedType[39m([35mtrue[39m))[33m.[39m[34mtoBe[39m([32m"boolean"[39m)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[54/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/core/tests/locales/tr.test.ts[2m > [22mparsedType
+[31m[1mTypeError[22m: parsedType is not a function[39m
+[36m [2m❯[22m src/v4/core/tests/locales/tr.test.ts:[2m6:10[22m[39m
+    [90m  4|[39m
+    [90m  5|[39m [34mtest[39m([32m"parsedType"[39m[33m,[39m () [33m=>[39m {
+    [90m  6|[39m   [34mexpect[39m([34mparsedType[39m([32m"string"[39m))[33m.[39m[34mtoBe[39m([32m"string"[39m)[33m;[39m
+    [90m   |[39m          [31m^[39m
+    [90m  7|[39m   [34mexpect[39m([34mparsedType[39m([34m1[39m))[33m.[39m[34mtoBe[39m([32m"number"[39m)[33m;[39m
+    [90m  8|[39m   [34mexpect[39m([34mparsedType[39m([35mtrue[39m))[33m.[39m[34mtoBe[39m([32m"boolean"[39m)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[55/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/catch.test.ts[2m > [22mcatch with transform
+[31m[1mTypeCheckError[22m: Type 'string | Whatever' does not satisfy the constraint '"Expected unknown, Actual never"'.
+  Type 'undefined' is not assignable to type '"Expected unknown, Actual never"'.[39m
+[36m [2m❯[22m src/v4/classic/tests/catch.test.ts:[2m48:37[22m[39m
+    [90m 46|[39m
+    [90m 47|[39m   type inp [33m=[39m z[33m.[39minput[33m<[39m[35mtypeof[39m stringWithDefault[33m>[39m[33m;[39m
+    [90m 48|[39m   expectTypeOf[33m<[39minp[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39mstring [33m|[39m util[33m.[39m[33mWhatever[39m[33m>[39m()[33m;[39m
+    [90m   |[39m                                     [31m^[39m
+    [90m 49|[39m   type out [33m=[39m z[33m.[39moutput[33m<[39m[35mtypeof[39m stringWithDefault[33m>[39m[33m;[39m
+    [90m 50|[39m   expectTypeOf[33m<[39mout[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39mstring[33m>[39m()[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[56/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/catch.test.ts[2m > [22mcatch on existing optional
+[31m[1mTypeCheckError[22m: Type 'string | Whatever' does not satisfy the constraint '"Expected unknown, Actual never"'.[39m
+[36m [2m❯[22m src/v4/classic/tests/catch.test.ts:[2m62:37[22m[39m
+    [90m 60|[39m
+    [90m 61|[39m   type inp [33m=[39m z[33m.[39minput[33m<[39m[35mtypeof[39m stringWithDefault[33m>[39m[33m;[39m
+    [90m 62|[39m   expectTypeOf<inp>().toEqualTypeOf<string | undefined | util.Whatever…
+    [90m   |[39m                                     [31m^[39m
+    [90m 63|[39m   type out [33m=[39m z[33m.[39moutput[33m<[39m[35mtypeof[39m stringWithDefault[33m>[39m[33m;[39m
+    [90m 64|[39m   expectTypeOf[33m<[39mout[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39mstring [33m|[39m undefined[33m>[39m()[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[57/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/catch.test.ts[2m > [22moptional on catch
+[31m[1mTypeCheckError[22m: Type 'string | Whatever' does not satisfy the constraint '"Expected unknown, Actual never"'.[39m
+[36m [2m❯[22m src/v4/classic/tests/catch.test.ts:[2m71:37[22m[39m
+    [90m 69|[39m
+    [90m 70|[39m   type inp [33m=[39m z[33m.[39minput[33m<[39m[35mtypeof[39m stringWithDefault[33m>[39m[33m;[39m
+    [90m 71|[39m   expectTypeOf[33m<[39minp[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39mstring [33m|[39m util[33m.[39m[33mWhatever[39m[33m>[39m()[33m;[39m
+    [90m   |[39m                                     [31m^[39m
+    [90m 72|[39m   type out [33m=[39m z[33m.[39moutput[33m<[39m[35mtypeof[39m stringWithDefault[33m>[39m[33m;[39m
+    [90m 73|[39m   expectTypeOf[33m<[39mout[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39mstring [33m|[39m undefined[33m>[39m()[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[58/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/catch.test.ts[2m > [22mnested
+[31m[1mTypeCheckError[22m: Type 'Whatever | { inner string | Whatever; }' does not satisfy the constraint '{ inner "Expected never, Actual string"; }'.
+  Type 'undefined' is not assignable to type '{ inner "Expected never, Actual string"; }'.[39m
+[36m [2m❯[22m src/v4/classic/tests/catch.test.ts:[2m105:39[22m[39m
+    [90m103|[39m   })[33m;[39m
+    [90m104|[39m   type input [33m=[39m z[33m.[39minput[33m<[39m[35mtypeof[39m outer[33m>[39m[33m;[39m
+    [90m105|[39m   expectTypeOf<input>().toEqualTypeOf<{ inner: string | util.Whatever …
+    [90m   |[39m                                       [31m^[39m
+    [90m106|[39m   type out [33m=[39m z[33m.[39moutput[33m<[39m[35mtypeof[39m outer[33m>[39m[33m;[39m
+    [90m107|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[59/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/firstparty.test.ts[2m > [22mfirst party switch
+[31m[1mTypeCheckError[22m: Expected 1 arguments, but got 0.[39m
+[36m [2m❯[22m src/v4/classic/tests/firstparty.test.ts:[2m86:25[22m[39m
+    [90m 84|[39m       [35mbreak[39m[33m;[39m
+    [90m 85|[39m     [35mdefault[39m[33m:[39m
+    [90m 86|[39m       [34mexpectTypeOf[39m(def)[33m.[39mtoEqualTypeOf[33m<[39mnever[33m>[39m()[33m;[39m
+    [90m   |[39m                         [31m^[39m
+    [90m 87|[39m   }
+    [90m 88|[39m })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[60/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/firstparty.test.ts[2m > [22m$ZodSchemaTypes
+[31m[1mTypeCheckError[22m: Expected 1 arguments, but got 0.[39m
+[36m [2m❯[22m src/v4/classic/tests/firstparty.test.ts:[2m173:26[22m[39m
+    [90m171|[39m
+    [90m172|[39m     [35mdefault[39m[33m:[39m
+    [90m173|[39m       [34mexpectTypeOf[39m(type)[33m.[39mtoEqualTypeOf[33m<[39mnever[33m>[39m()[33m;[39m
+    [90m   |[39m                          [31m^[39m
+    [90m174|[39m   }
+    [90m175|[39m })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[61/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/index.test.ts[2m > [22mz.promise
+[31m[1mTypeCheckError[22m: Type 'string' does not satisfy the constraint '{ [x number] "Expected string, Actual never"; [toStringTag] "Expected never, Actual string"; then "Expected never, Actual function"; catch "Expected never, Actual function"; ... 49 more ...; valueOf? "Expected function, Actual never"; }'.[39m
+[36m [2m❯[22m src/v4/classic/tests/index.test.ts:[2m752:35[22m[39m
+    [90m750|[39m   [35mconst[39m a [33m=[39m z[33m.[39m[34mpromise[39m(z[33m.[39m[34mstring[39m())[33m;[39m
+    [90m751|[39m   type a [33m=[39m z[33m.[39moutput[33m<[39m[35mtypeof[39m a[33m>[39m[33m;[39m
+    [90m752|[39m   expectTypeOf[33m<[39ma[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39mstring[33m>[39m()[33m;[39m
+    [90m   |[39m                                   [31m^[39m
+    [90m753|[39m
+    [90m754|[39m   expect(await z.safeParseAsync(a, Promise.resolve("hello"))).toMatchO…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[62/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/optional.test.ts[2m > [22moptionality
+[31m[1mTypeCheckError[22m: Type '"optional" | undefined' does not satisfy the constraint '"Expected undefined, Actual literal string defaulted" | "Expected literal string optional, Actual literal string defaulted"'.
+  Type 'undefined' is not assignable to type '"Expected undefined, Actual literal string defaulted" | "Expected literal string optional, Actual literal string defaulted"'.[39m
+[36m [2m❯[22m src/v4/classic/tests/optional.test.ts:[2m45:53[22m[39m
+    [90m 43|[39m   [34mexpect[39m(f[33m.[39m_zod[33m.[39moptin)[33m.[39m[34mtoEqual[39m([32m"optional"[39m)[33m;[39m
+    [90m 44|[39m   [34mexpect[39m(f[33m.[39m_zod[33m.[39moptout)[33m.[39m[34mtoEqual[39m([32m"optional"[39m)[33m;[39m
+    [90m 45|[39m   expectTypeOf<typeof f._zod.optin>().toEqualTypeOf<"optional" | undef…
+    [90m   |[39m                                                     [31m^[39m
+    [90m 46|[39m   expectTypeOf<typeof f._zod.optout>().toEqualTypeOf<"optional" | unde…
+    [90m 47|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[63/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/optional.test.ts[2m > [22moptionality
+[31m[1mTypeCheckError[22m: Type '"optional" | undefined' does not satisfy the constraint '"Expected undefined, Actual literal string defaulted" | "Expected literal string optional, Actual literal string defaulted"'.[39m
+[36m [2m❯[22m src/v4/classic/tests/optional.test.ts:[2m52:53[22m[39m
+    [90m 50|[39m   [34mexpect[39m(g[33m.[39m_zod[33m.[39moptin)[33m.[39m[34mtoEqual[39m([32m"optional"[39m)[33m;[39m
+    [90m 51|[39m   [34mexpect[39m(g[33m.[39m_zod[33m.[39moptout)[33m.[39m[34mtoEqual[39m([32m"optional"[39m)[33m;[39m
+    [90m 52|[39m   expectTypeOf<typeof g._zod.optin>().toEqualTypeOf<"optional" | undef…
+    [90m   |[39m                                                     [31m^[39m
+    [90m 53|[39m   expectTypeOf<typeof g._zod.optout>().toEqualTypeOf<"optional" | unde…
+    [90m 54|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[64/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/optional.test.ts[2m > [22moptionality
+[31m[1mTypeCheckError[22m: Type '"optional"' does not satisfy the constraint '"Expected literal string optional, Actual literal string defaulted"'.[39m
+[36m [2m❯[22m src/v4/classic/tests/optional.test.ts:[2m58:53[22m[39m
+    [90m 56|[39m   [34mexpect[39m(h[33m.[39m_zod[33m.[39moptin)[33m.[39m[34mtoEqual[39m([32m"optional"[39m)[33m;[39m
+    [90m 57|[39m   [34mexpect[39m(h[33m.[39m_zod[33m.[39moptout)[33m.[39m[34mtoEqual[39m([32m"optional"[39m)[33m;[39m
+    [90m 58|[39m   expectTypeOf[33m<[39m[35mtypeof[39m h[33m.[39m_zod[33m.[39moptin[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39m[32m"optional"[39m[33m>[39m()[33m;[39m
+    [90m   |[39m                                                     [31m^[39m
+    [90m 59|[39m   expectTypeOf[33m<[39m[35mtypeof[39m h[33m.[39m_zod[33m.[39moptout[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39m[32m"optional"[39m[33m>[39m()[33m;[39m
+    [90m 60|[39m })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[65/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/optional.test.ts[2m > [22mpipe optionality
+[31m[1mTypeCheckError[22m: Type '"optional"' does not satisfy the constraint '"Expected literal string optional, Actual literal string defaulted"'.[39m
+[36m [2m❯[22m src/v4/classic/tests/optional.test.ts:[2m67:53[22m[39m
+    [90m 65|[39m   [34mexpect[39m(a[33m.[39m_zod[33m.[39moptin)[33m.[39m[34mtoEqual[39m([32m"optional"[39m)[33m;[39m
+    [90m 66|[39m   [34mexpect[39m(a[33m.[39m_zod[33m.[39moptout)[33m.[39m[34mtoEqual[39m(undefined)[33m;[39m
+    [90m 67|[39m   expectTypeOf[33m<[39m[35mtypeof[39m a[33m.[39m_zod[33m.[39moptin[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39m[32m"optional"[39m[33m>[39m()[33m;[39m
+    [90m   |[39m                                                     [31m^[39m
+    [90m 68|[39m   expectTypeOf<typeof a._zod.optout>().toEqualTypeOf<"optional" | unde…
+    [90m 69|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[66/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/optional.test.ts[2m > [22mpipe optionality
+[31m[1mTypeCheckError[22m: Type '"optional" | undefined' does not satisfy the constraint '"Expected undefined, Actual literal string defaulted" | "Expected literal string optional, Actual literal string defaulted"'.[39m
+[36m [2m❯[22m src/v4/classic/tests/optional.test.ts:[2m76:53[22m[39m
+    [90m 74|[39m   [34mexpect[39m(b[33m.[39m_zod[33m.[39moptin)[33m.[39m[34mtoEqual[39m(undefined)[33m;[39m
+    [90m 75|[39m   [34mexpect[39m(b[33m.[39m_zod[33m.[39moptout)[33m.[39m[34mtoEqual[39m([32m"optional"[39m)[33m;[39m
+    [90m 76|[39m   expectTypeOf<typeof b._zod.optin>().toEqualTypeOf<"optional" | undef…
+    [90m   |[39m                                                     [31m^[39m
+    [90m 77|[39m   expectTypeOf[33m<[39m[35mtypeof[39m b[33m.[39m_zod[33m.[39moptout[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39m[32m"optional"[39m[33m>[39m()[33m;[39m
+    [90m 78|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[67/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/pickomit.test.ts[2m > [22mpick/omit/required/partial - do not allow unknown keys
+[31m[1mTypeCheckError[22m: Type 'boolean' is not assignable to type 'never'.[39m
+[36m [2m❯[22m src/v4/classic/tests/pickomit.test.ts:[2m117:42[22m[39m
+    [90m115|[39m   })[33m;[39m
+    [90m116|[39m
+    [90m117|[39m   [34mexpect[39m(() [33m=>[39m schema[33m.[39m[34mpick[39m({ name[33m:[39m [35mtrue[39m[33m,[39m asdf[33m:[39m [35mtrue[39m }))[33m.[39m[34mtoThrow[39m()[33m;[39m
+    [90m   |[39m                                          [31m^[39m
+    [90m118|[39m
+    [90m119|[39m   [90m// @ts-expect-error[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[68/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/promise.test.ts[2m > [22mpromise inference
+[31m[1mTypeCheckError[22m: Type '{ name string; age number; }' does not satisfy the constraint '{ name "Expected string, Actual never"; [toStringTag] "Expected never, Actual string"; then "Expected never, Actual function"; catch "Expected never, Actual function"; age "Expected number, Actual never"; finally "Expected never, Actual function"; }'.
+  Type '{ name string; age number; }' is missing the following properties from type '{ name "Expected string, Actual never"; [toStringTag] "Expected never, Actual string"; then "Expected never, Actual function"; catch "Expected never, Actual function"; age "Expected number, Actual never"; finally "Expected never, Actual function"; }' [toStringTag], then, catch, finally[39m
+[36m [2m❯[22m src/v4/classic/tests/promise.test.ts:[2m13:48[22m[39m
+    [90m 11|[39m [34mtest[39m([32m"promise inference"[39m[33m,[39m () [33m=>[39m {
+    [90m 12|[39m   type promSchemaType [33m=[39m z[33m.[39minfer[33m<[39m[35mtypeof[39m promSchema[33m>[39m[33m;[39m
+    [90m 13|[39m   expectTypeOf<promSchemaType>().toEqualTypeOf<{ name: string; age: nu…
+    [90m   |[39m                                                [31m^[39m
+    [90m 14|[39m })[33m;[39m
+    [90m 15|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[69/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/classic/tests/readonly.test.ts[2m > [22mflat inference
+[31m[1mTypeCheckError[22m: Type 'string' does not satisfy the constraint '{ [x number] "Expected string, Actual never"; [toStringTag] "Expected never, Actual string"; then "Expected never, Actual function"; catch "Expected never, Actual function"; ... 49 more ...; valueOf? "Expected function, Actual never"; }'.[39m
+[36m [2m❯[22m src/v4/classic/tests/readonly.test.ts:[2m50:64[22m[39m
+    [90m 48|[39m   expectTypeOf<typeof readonlyObject._output>().toEqualTypeOf<{ readon…
+    [90m 49|[39m   expectTypeOf<typeof readonlyEnum._output>().toEqualTypeOf<Readonly<t…
+    [90m 50|[39m   expectTypeOf<typeof readonlyPromise._output>().toEqualTypeOf<string>…
+    [90m   |[39m                                                                [31m^[39m
+    [90m 51|[39m })[33m;[39m
+    [90m 52|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[70/71]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[43m zod [49m[39m src/v4/mini/tests/index.test.ts[2m > [22mz.promise
+[31m[1mTypeCheckError[22m: Type 'string' does not satisfy the constraint '{ [x number] "Expected string, Actual never"; [toStringTag] "Expected never, Actual string"; then "Expected never, Actual function"; catch "Expected never, Actual function"; ... 49 more ...; valueOf? "Expected function, Actual never"; }'.[39m
+[36m [2m❯[22m src/v4/mini/tests/index.test.ts:[2m792:35[22m[39m
+    [90m790|[39m   [35mconst[39m a [33m=[39m z[33m.[39m[34mpromise[39m(z[33m.[39m[34mstring[39m())[33m;[39m
+    [90m791|[39m   type a [33m=[39m z[33m.[39moutput[33m<[39m[35mtypeof[39m a[33m>[39m[33m;[39m
+    [90m792|[39m   expectTypeOf[33m<[39ma[33m>[39m()[33m.[39mtoEqualTypeOf[33m<[39mstring[33m>[39m()[33m;[39m
+    [90m   |[39m                                   [31m^[39m
+    [90m793|[39m
+    [90m794|[39m   expect(await z.safeParseAsync(a, Promise.resolve("hello"))).toMatchO…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[71/71]⎯[22m[39m
+
+
+[2m  Snapshots [22m [1m[31m34 failed[39m[22m
+[2m Test Files [22m [1m[31m33 failed[39m[22m[2m | [22m[1m[32m128 passed[39m[22m[2m | [22m[33m1 skipped[39m[90m (162)[39m
+[2m      Tests [22m [1m[31m66 failed[39m[22m[2m | [22m[1m[32m1641 passed[39m[22m[2m | [22m[90m1 todo[39m[90m (1708)[39m
+[2mType Errors [22m [1m[31m13 failed[39m[22m
+[2m   Start at [22m 03:29:16
+[2m   Duration [22m 8.79s[2m (transform 9.67s, setup 3.30s, import 19.81s, tests 2.80s, environment 6ms, typecheck 1.42s)[22m
+
+JSON report written to /work/zod/experiments/testpilot-2026-09/results/survival-n124/v4.6.0/dev-run.json
+
+== exit=1, wallSeconds=9.574

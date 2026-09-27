@@ -1,0 +1,35 @@
+const { describe, it } = require('mocha');
+const assert = require('assert');
+const { z } = require('zod');
+
+describe('test zod', function () {
+  it('test zod.z.null', function (done) {
+    // Create a null schema with custom error messages
+    const schema = z.null({
+      required_error: 'Must be null',
+      invalid_type_error: 'Not null',
+    });
+
+    // Valid case: null should pass without throwing
+    assert.doesNotThrow(() => schema.parse(null));
+
+    // Invalid case: a number should fail with the custom invalid_type_error
+    try {
+      schema.parse(42);
+      assert.fail('Expected schema.parse to throw for non‑null value');
+    } catch (e) {
+      // Zod stores validation problems in `issues`
+      assert.strictEqual(e.issues[0].message, 'Not null');
+    }
+
+    // Invalid case: undefined should fail with the custom required_error
+    try {
+      schema.parse(undefined);
+      assert.fail('Expected schema.parse to throw for undefined');
+    } catch (e) {
+      assert.strictEqual(e.issues[0].message, 'Must be null');
+    }
+
+    done();
+  });
+});

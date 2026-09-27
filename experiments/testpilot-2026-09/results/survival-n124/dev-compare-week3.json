@@ -1,0 +1,233 @@
+[
+  {
+    "release": "v4.0.5",
+    "casesWeek3": 888,
+    "casesWeek4": 888,
+    "sameIdentities": true,
+    "onlyWeek3": [],
+    "onlyWeek4": [],
+    "statusDiffering": [],
+    "identical": true,
+    "messageFirstLineDiffering": 0,
+    "summaryWeek3": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 888,
+      "failed": 0,
+      "skipped": 0
+    },
+    "summaryWeek4": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 888,
+      "failed": 0,
+      "skipped": 0
+    },
+    "commandWeek3": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.0.5/dev-run.json",
+    "commandWeek4": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.0.5/dev-run.json",
+    "fallbackWeek3": 0,
+    "fallbackWeek4": 0
+  },
+  {
+    "release": "v4.1.0",
+    "casesWeek3": 888,
+    "casesWeek4": 888,
+    "sameIdentities": true,
+    "onlyWeek3": [],
+    "onlyWeek4": [],
+    "statusDiffering": [],
+    "identical": true,
+    "messageFirstLineDiffering": 0,
+    "summaryWeek3": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 871,
+      "failed": 17,
+      "skipped": 0
+    },
+    "summaryWeek4": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 871,
+      "failed": 17,
+      "skipped": 0
+    },
+    "commandWeek3": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.1.0/dev-run.json",
+    "commandWeek4": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.1.0/dev-run.json",
+    "fallbackWeek3": 0,
+    "fallbackWeek4": 0
+  },
+  {
+    "release": "v4.2.0",
+    "casesWeek3": 888,
+    "casesWeek4": 888,
+    "sameIdentities": true,
+    "onlyWeek3": [],
+    "onlyWeek4": [],
+    "statusDiffering": [],
+    "identical": true,
+    "messageFirstLineDiffering": 0,
+    "summaryWeek3": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 868,
+      "failed": 19,
+      "skipped": 1
+    },
+    "summaryWeek4": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 868,
+      "failed": 19,
+      "skipped": 1
+    },
+    "commandWeek3": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.2.0/dev-run.json",
+    "commandWeek4": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.2.0/dev-run.json",
+    "fallbackWeek3": 0,
+    "fallbackWeek4": 0
+  },
+  {
+    "release": "v4.3.0",
+    "casesWeek3": 888,
+    "casesWeek4": 888,
+    "sameIdentities": true,
+    "onlyWeek3": [],
+    "onlyWeek4": [],
+    "statusDiffering": [],
+    "identical": true,
+    "messageFirstLineDiffering": 0,
+    "summaryWeek3": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 864,
+      "failed": 23,
+      "skipped": 1
+    },
+    "summaryWeek4": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 864,
+      "failed": 23,
+      "skipped": 1
+    },
+    "commandWeek3": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.3.0/dev-run.json",
+    "commandWeek4": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.3.0/dev-run.json",
+    "fallbackWeek3": 0,
+    "fallbackWeek4": 0
+  },
+  {
+    "release": "v4.4.0",
+    "casesWeek3": 888,
+    "casesWeek4": 888,
+    "sameIdentities": true,
+    "onlyWeek3": [],
+    "onlyWeek4": [],
+    "statusDiffering": [],
+    "identical": true,
+    "messageFirstLineDiffering": 0,
+    "summaryWeek3": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 853,
+      "failed": 34,
+      "skipped": 1
+    },
+    "summaryWeek4": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 853,
+      "failed": 34,
+      "skipped": 1
+    },
+    "commandWeek3": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.4.0/dev-run.json",
+    "commandWeek4": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.4.0/dev-run.json",
+    "fallbackWeek3": 0,
+    "fallbackWeek4": 0
+  },
+  {
+    "release": "v4.5.0",
+    "casesWeek3": 888,
+    "casesWeek4": 888,
+    "sameIdentities": true,
+    "onlyWeek3": [],
+    "onlyWeek4": [],
+    "statusDiffering": [],
+    "identical": true,
+    "messageFirstLineDiffering": 0,
+    "summaryWeek3": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 838,
+      "failed": 49,
+      "skipped": 1
+    },
+    "summaryWeek4": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 838,
+      "failed": 49,
+      "skipped": 1
+    },
+    "commandWeek3": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.5.0/dev-run.json",
+    "commandWeek4": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.5.0/dev-run.json",
+    "fallbackWeek3": 0,
+    "fallbackWeek4": 0
+  },
+  {
+    "release": "v4.6.0",
+    "casesWeek3": 888,
+    "casesWeek4": 888,
+    "sameIdentities": true,
+    "onlyWeek3": [],
+    "onlyWeek4": [],
+    "statusDiffering": [],
+    "identical": true,
+    "messageFirstLineDiffering": 0,
+    "summaryWeek3": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 834,
+      "failed": 53,
+      "skipped": 1
+    },
+    "summaryWeek4": {
+      "files": 81,
+      "files_loaded": 81,
+      "files_load_failed": 0,
+      "cases": 888,
+      "passed": 834,
+      "failed": 53,
+      "skipped": 1
+    },
+    "commandWeek3": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.6.0/dev-run.json",
+    "commandWeek4": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/<root>/v4.6.0/dev-run.json",
+    "fallbackWeek3": 0,
+    "fallbackWeek4": 0
+  }
+]

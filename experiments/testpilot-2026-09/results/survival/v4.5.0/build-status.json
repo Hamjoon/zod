@@ -1,0 +1,17 @@
+{
+  "release": "v4.5.0",
+  "install": true,
+  "build": true,
+  "probe": "ok",
+  "fallbacks": [],
+  "buildExitCode": 0,
+  "exports": {
+    "@zod/source": "./src/index.ts",
+    "types": "./index.d.cts",
+    "import": "./index.js",
+    "require": "./index.cjs"
+  },
+  "requireEntry": "./index.cjs",
+  "entryExists": true,
+  "wallSeconds": 53.668298900000025
+}

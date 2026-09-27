@@ -1,0 +1,298 @@
+{
+  "D": 63,
+  "devMissing": [
+    "index.ts",
+    "v4/classic/checks.ts",
+    "v4/core/index.ts",
+    "v4/locales/index.ts"
+  ],
+  "noZod": {
+    "s124": [
+      "gen-n124-run2/test_84.js"
+    ],
+    "s60": []
+  },
+  "passing": {
+    "s124": 266,
+    "s60": 139
+  },
+  "A": {
+    "s124": {
+      "statements": {
+        "total": 5640,
+        "covered": 2616,
+        "skipped": 0,
+        "pct": 46.38
+      },
+      "branches": {
+        "total": 3623,
+        "covered": 726,
+        "skipped": 0,
+        "pct": 20.03
+      },
+      "functions": {
+        "total": 1174,
+        "covered": 612,
+        "skipped": 0,
+        "pct": 52.12
+      },
+      "lines": {
+        "total": 5054,
+        "covered": 2396,
+        "skipped": 0,
+        "pct": 47.4
+      }
+    },
+    "s60": {
+      "statements": {
+        "total": 5640,
+        "covered": 2213,
+        "skipped": 0,
+        "pct": 39.23
+      },
+      "branches": {
+        "total": 3623,
+        "covered": 557,
+        "skipped": 0,
+        "pct": 15.37
+      },
+      "functions": {
+        "total": 1174,
+        "covered": 448,
+        "skipped": 0,
+        "pct": 38.16
+      },
+      "lines": {
+        "total": 5054,
+        "covered": 2034,
+        "skipped": 0,
+        "pct": 40.24
+      }
+    }
+  },
+  "loading": {
+    "statements": {
+      "total": 5640,
+      "covered": 857,
+      "skipped": 0,
+      "pct": 15.19
+    },
+    "branches": {
+      "total": 3623,
+      "covered": 7,
+      "skipped": 0,
+      "pct": 0.19
+    },
+    "functions": {
+      "total": 1174,
+      "covered": 13,
+      "skipped": 0,
+      "pct": 1.1
+    },
+    "lines": {
+      "total": 5054,
+      "covered": 796,
+      "skipped": 0,
+      "pct": 15.74
+    }
+  },
+  "dev": {
+    "statements": {
+      "total": 5084,
+      "covered": 3033,
+      "skipped": 0,
+      "pct": 59.65
+    },
+    "branches": {
+      "total": 3485,
+      "covered": 1234,
+      "skipped": 0,
+      "pct": 35.4
+    },
+    "functions": {
+      "total": 1084,
+      "covered": 795,
+      "skipped": 0,
+      "pct": 73.33
+    },
+    "lines": {
+      "total": 4553,
+      "covered": 2721,
+      "skipped": 0,
+      "pct": 59.76
+    }
+  },
+  "perFunction": {
+    "s124": {
+      "functions": 124,
+      "min": 0.0,
+      "median": 1.0,
+      "max": 1.0,
+      "zero": 17,
+      "full": 106,
+      "bodyMin": 1,
+      "bodyMedian": 1.0,
+      "bodyMax": 14,
+      "zeroList": [
+        "zod.z.file",
+        "zod.z.json",
+        "zod.z.keyof",
+        "zod.z.maxSize",
+        "zod.z.mime",
+        "zod.z.minSize",
+        "zod.z.negative",
+        "zod.z.nonnegative",
+        "zod.z.nonpositive",
+        "zod.z.normalize",
+        "zod.z.nullish",
+        "zod.z.positive",
+        "zod.z.property",
+        "zod.z.size",
+        "zod.z.startsWith",
+        "zod.z.url",
+        "zod.z.xid"
+      ]
+    },
+    "s60": {
+      "functions": 60,
+      "min": 0.0,
+      "median": 1.0,
+      "max": 1.0,
+      "zero": 10,
+      "full": 50,
+      "bodyMin": 1,
+      "bodyMedian": 1.0,
+      "bodyMax": 4,
+      "zeroList": [
+        "zod.z.coerce.boolean",
+        "zod.z.keyof",
+        "zod.z.ksuid",
+        "zod.z.maxSize",
+        "zod.z.negative",
+        "zod.z.nonpositive",
+        "zod.z.positive",
+        "zod.z.property",
+        "zod.z.size",
+        "zod.z.templateLiteral"
+      ]
+    }
+  },
+  "notLocated": [],
+  "unique": {
+    "s124": 43,
+    "s60": 28
+  },
+  "lines": {
+    "s124": {
+      "executable": 5070,
+      "llm": 2396,
+      "dev": 2721,
+      "both": 1868,
+      "llmOnly": 528,
+      "devOnly": 853,
+      "neither": 1821
+    },
+    "s60": {
+      "executable": 5070,
+      "llm": 2034,
+      "dev": 2721,
+      "both": 1510,
+      "llmOnly": 524,
+      "devOnly": 1211,
+      "neither": 1825
+    }
+  },
+  "linesWithoutReexportFiles": {
+    "s124": {
+      "executable": 4983,
+      "llm": 2309,
+      "dev": 2721,
+      "both": 1868,
+      "llmOnly": 441,
+      "devOnly": 853,
+      "neither": 1821
+    },
+    "s60": {
+      "executable": 4983,
+      "llm": 1947,
+      "dev": 2721,
+      "both": 1510,
+      "llmOnly": 437,
+      "devOnly": 1211,
+      "neither": 1825
+    }
+  },
+  "changed": {
+    "v4.1.0": [
+      239,
+      133,
+      208,
+      118,
+      15,
+      90,
+      16,
+      117
+    ],
+    "v4.2.0": [
+      829,
+      211,
+      611,
+      184,
+      27,
+      427,
+      191,
+      162
+    ],
+    "v4.3.0": [
+      1311,
+      230,
+      644,
+      203,
+      27,
+      441,
+      640,
+      180
+    ],
+    "v4.4.0": [
+      1475,
+      353,
+      796,
+      326,
+      27,
+      470,
+      652,
+      295
+    ],
+    "v4.5.0": [
+      1829,
+      634,
+      1110,
+      596,
+      38,
+      514,
+      681,
+      561
+    ],
+    "v4.6.0": [
+      1946,
+      727,
+      1221,
+      689,
+      38,
+      532,
+      687,
+      633
+    ]
+  },
+  "cross": {
+    "s124": {
+      "executed/survived": 257,
+      "executed/broke": 8,
+      "not executed/survived": 1
+    },
+    "s60": {
+      "executed/survived": 138,
+      "executed/broke": 1
+    }
+  }
+}

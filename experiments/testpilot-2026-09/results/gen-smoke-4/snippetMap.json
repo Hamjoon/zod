@@ -1,0 +1,18 @@
+[
+  [
+    "discriminatedUnion",
+    [
+      "const MyResult = z.discriminatedUnion(\"status\", [\n  // simple literal\n  z.object({ status: z.literal(\"aaa\"), data: z.string() }),\n  // union discriminator\n  z.object({ status: z.union([z.literal(\"bbb\"), z.literal(\"ccc\")]) }),\n  // pipe discriminator\n  z.object({ status: z.literal(\"fail\").transform(val => val.toUpperCase()) }),\n]);",
+      "const BaseError = z.object({ status: z.literal(\"failed\"), message: z.string() });\n\nconst MyResult = z.discriminatedUnion(\"status\", [\n  z.object({ status: z.literal(\"success\"), data: z.string() }),\n  z.discriminatedUnion(\"code\", [\n    BaseError.extend({ code: z.literal(400) }),\n    BaseError.extend({ code: z.literal(401) }),\n    BaseError.extend({ code: z.literal(500) })\n  ])\n]);",
+      "const MyResult = z.discriminatedUnion(\"status\", [\n  z.object({ status: z.literal(\"success\"), data: z.string() }),\n  z.object({ status: z.literal(\"failed\"), error: z.string() }),\n]);"
+    ]
+  ],
+  [
+    "check",
+    [
+      "const schema = z\n  .object({\n    password: z.string().min(8),\n    confirmPassword: z.string(),\n    anotherField: z.string(),\n  })\n  .check(z.refine((data) => data.password === data.confirmPassword, {\n    message: \"Passwords do not match\",\n    path: [\"confirmPassword\"],\n    when(payload) { // [!code ++]\n      // no issues with `password` or `confirmPassword` // [!code ++]\n      return payload.issues.every((iss) => { // [!code ++]\n        const firstPathEl = iss.path?.[0]; // [!code ++]\n        return firstPathEl !== \"password\" && firstPathEl !== \"confirmPassword\"; // [!code ++]\n      }); // [!code ++]\n    },  // [!code ++]\n  }));\n\nschema.parse({\n  password: \"asdf\",",
+      "const UniqueStringArray = z.array(z.string()).check((ctx) => {\n  if (ctx.value.length > 3) {\n    ctx.issues.push({\n      code: \"too_big\",\n      maximum: 3,\n      origin: \"array\",\n      inclusive: true,\n      message: \"Too many items 😡\",\n      input: ctx.value\n    });\n  }\n\n  if (ctx.value.length !== new Set(ctx.value).size) {\n    ctx.issues.push({\n      code: \"custom\",\n      message: `No duplicates allowed.`,\n      input: ctx.value\n    });\n  }\n});",
+      "const myString = z.string().check(\n  z.refine((val) => val.length > 8, { error: \"Too short!\" })\n);"
+    ]
+  ]
+]

@@ -1,0 +1,87 @@
+{
+  "zod.z.discriminatedUnion": [
+    "classic/tests/discriminated-unions.test.ts"
+  ],
+  "zod.z.file": [
+    "classic/tests/file.test.ts"
+  ],
+  "zod.z.nullish": [],
+  "zod.z.readonly": [
+    "classic/tests/readonly.test.ts"
+  ],
+  "zod.z.map": [
+    "classic/tests/map.test.ts"
+  ],
+  "zod.z.cidrv4": [],
+  "zod.z.cidrv6": [],
+  "zod.z.strictObject": [],
+  "zod.z.date": [
+    "classic/tests/date.test.ts"
+  ],
+  "zod.z.base64": [],
+  "zod.z.tuple": [
+    "classic/tests/tuple.test.ts"
+  ],
+  "zod.z.guid": [],
+  "zod.z.nanoid": [],
+  "zod.z.uuidv6": [],
+  "zod.z.array": [
+    "classic/tests/array.test.ts"
+  ],
+  "zod.z.int64": [],
+  "zod.z.any": [],
+  "zod.z.ulid": [],
+  "zod.z.nullable": [
+    "classic/tests/nullable.test.ts"
+  ],
+  "zod.z.never": [],
+  "zod.z.email": [],
+  "zod.z.looseObject": [],
+  "zod.z.symbol": [],
+  "zod.z.uuidv7": [],
+  "zod.z.uuid": [],
+  "zod.z.prefault": [
+    "classic/tests/prefault.test.ts"
+  ],
+  "zod.z.cuid2": [],
+  "zod.z.unknown": [],
+  "zod.z.uint32": [],
+  "zod.z.keyof": [],
+  "zod.z.catch": [
+    "classic/tests/catch.test.ts"
+  ],
+  "zod.z.nonoptional": [
+    "classic/tests/nonoptional.test.ts"
+  ],
+  "zod.z.boolean": [],
+  "zod.z.check": [
+    "mini/tests/checks.test.ts"
+  ],
+  "zod.z.uppercase": [],
+  "zod.z.minLength": [],
+  "zod.z.negative": [],
+  "zod.z.gte": [],
+  "zod.z.endsWith": [],
+  "zod.z.multipleOf": [],
+  "zod.z.lt": [],
+  "zod.z.trim": [],
+  "zod.z.transform": [
+    "classic/tests/transform.test.ts"
+  ],
+  "zod.z.positive": [],
+  "zod.z.overwrite": [],
+  "zod.z.preprocess": [
+    "classic/tests/preprocess.test.ts"
+  ],
+  "zod.z.nonpositive": [],
+  "zod.z.iso.duration": [],
+  "zod.z.safeParse": [],
+  "zod.z.parseAsync": [],
+  "zod.z.coerce.number": [
+    "classic/tests/number.test.ts",
+    "mini/tests/number.test.ts"
+  ],
+  "zod.z.coerce.boolean": [],
+  "zod.z.parse": [],
+  "zod.z.iso.time": []
+}

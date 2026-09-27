@@ -1,0 +1,20 @@
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Startup Error [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯⎯[39m
+Error: No projects were found. Make sure your configuration is correct. The projects definition: [
+    "packages/*"
+].
+    at resolveProjects (file:///work/zod-versions/v4.4.0/node_modules/.pnpm/vitest@4.0.10_@types+debug@4.1.12_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.3_t_b2cbceb149fd532049b56d1784b3cebb/node_modules/vitest/dist/chunks/cli-api.RnIE1JbW.js:9481:37)
+    at Vitest._setServer (file:///work/zod-versions/v4.4.0/node_modules/.pnpm/vitest@4.0.10_@types+debug@4.1.12_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.3_t_b2cbceb149fd532049b56d1784b3cebb/node_modules/vitest/dist/chunks/cli-api.RnIE1JbW.js:11287:20)
+    at BasicMinimalPluginContext.handler (file:///work/zod-versions/v4.4.0/node_modules/.pnpm/vitest@4.0.10_@types+debug@4.1.12_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.3_t_b2cbceb149fd532049b56d1784b3cebb/node_modules/vitest/dist/chunks/cli-api.RnIE1JbW.js:12121:6)
+    at _createServer (file:///work/zod-versions/v4.4.0/node_modules/.pnpm/vite@7.2.2_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.3_terser@5.39.0_tsx@4.19.3_yaml@2.8.0/node_modules/vite/dist/node/chunks/config.js:26220:86)
+    at createViteServer (file:///work/zod-versions/v4.4.0/node_modules/.pnpm/vitest@4.0.10_@types+debug@4.1.12_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.3_t_b2cbceb149fd532049b56d1784b3cebb/node_modules/vitest/dist/chunks/cli-api.RnIE1JbW.js:8987:17)
+    at createVitest (file:///work/zod-versions/v4.4.0/node_modules/.pnpm/vitest@4.0.10_@types+debug@4.1.12_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.3_t_b2cbceb149fd532049b56d1784b3cebb/node_modules/vitest/dist/chunks/cli-api.RnIE1JbW.js:12149:17)
+    at prepareVitest (file:///work/zod-versions/v4.4.0/node_modules/.pnpm/vitest@4.0.10_@types+debug@4.1.12_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.3_t_b2cbceb149fd532049b56d1784b3cebb/node_modules/vitest/dist/chunks/cli-api.RnIE1JbW.js:12510:14)
+    at startVitest (file:///work/zod-versions/v4.4.0/node_modules/.pnpm/vitest@4.0.10_@types+debug@4.1.12_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.3_t_b2cbceb149fd532049b56d1784b3cebb/node_modules/vitest/dist/chunks/cli-api.RnIE1JbW.js:12457:14)
+    at start (file:///work/zod-versions/v4.4.0/node_modules/.pnpm/vitest@4.0.10_@types+debug@4.1.12_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.3_t_b2cbceb149fd532049b56d1784b3cebb/node_modules/vitest/dist/chunks/cac.D9CYcNPM.js:1361:15)
+    at CAC.run (file:///work/zod-versions/v4.4.0/node_modules/.pnpm/vitest@4.0.10_@types+debug@4.1.12_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.3_t_b2cbceb149fd532049b56d1784b3cebb/node_modules/vitest/dist/chunks/cac.D9CYcNPM.js:1343:2)
+
+
+
+
+exit=1

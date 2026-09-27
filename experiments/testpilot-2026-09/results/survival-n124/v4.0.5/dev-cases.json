@@ -1,0 +1,6218 @@
+[
+  {
+    "file": "core/tests/index.test.ts",
+    "fullName": "test",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/index.test.ts",
+    "fullName": "test2",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/index.test.ts",
+    "fullName": "async validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/anyunknown.test.ts",
+    "fullName": "check any inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/anyunknown.test.ts",
+    "fullName": "check unknown inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/anyunknown.test.ts",
+    "fullName": "check never inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/array.test.ts",
+    "fullName": "type inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/array.test.ts",
+    "fullName": "array min/max",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/array.test.ts",
+    "fullName": "array length",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/array.test.ts",
+    "fullName": "array.nonempty()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/array.test.ts",
+    "fullName": "array.nonempty().max()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/array.test.ts",
+    "fullName": "parse empty array in nonempty",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/array.test.ts",
+    "fullName": "get element",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/array.test.ts",
+    "fullName": "continue parsing despite array size error",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/array.test.ts",
+    "fullName": "parse should fail given sparse array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/assignability.test.ts",
+    "fullName": "assignability",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/assignability.test.ts",
+    "fullName": "checks",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/assignability.test.ts",
+    "fullName": "assignability to $ZodType",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/assignability.test.ts",
+    "fullName": "assignability with narrowing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/assignability.test.ts",
+    "fullName": "generic assignability in objects",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "string async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "number async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "bigInt async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "boolean async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "date async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "undefined async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "null async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "any async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "unknown async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "void async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "array async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "object async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "union async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "record async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "literal async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "enum async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "nativeEnum async parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "promise async parse good",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "promise async parse bad",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "async validation non-empty strings",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "async validation multiple errors 1",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "async validation multiple errors 2",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-parsing.test.ts",
+    "fullName": "ensure early async failure prevents follow-up refinement checks",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-refinements.test.ts",
+    "fullName": "async refine .parse()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-refinements.test.ts",
+    "fullName": "async refine",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-refinements.test.ts",
+    "fullName": "async refine with Promises",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/async-refinements.test.ts",
+    "fullName": "async refine that uses value",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/base.test.ts",
+    "fullName": "test this binding",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/bigint.test.ts",
+    "fullName": "passing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/bigint.test.ts",
+    "fullName": "failing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/bigint.test.ts",
+    "fullName": "min max getters",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/brand.test.ts",
+    "fullName": "branded types",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/brand.test.ts",
+    "fullName": "$branded",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/brand.test.ts",
+    "fullName": "branded record",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "basic catch",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "catch fn does not run when parsing succeeds",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "basic catch async",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "catch replace wrong types",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "catch with transform",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "catch on existing optional",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "optional on catch",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "complex chain example",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "removeCatch",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "nested",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "chained catch",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "native enum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "enum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "reported issues with nested usage",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "catch error",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/catch.test.ts",
+    "fullName": "ctx.input",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/coalesce.test.ts",
+    "fullName": "coalesce",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/coerce.test.ts",
+    "fullName": "string coercion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/coerce.test.ts",
+    "fullName": "number coercion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/coerce.test.ts",
+    "fullName": "boolean coercion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/coerce.test.ts",
+    "fullName": "bigint coercion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/coerce.test.ts",
+    "fullName": "date coercion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/coerce.test.ts",
+    "fullName": "override input type",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/continuability.test.ts",
+    "fullName": "continuability",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/custom.test.ts",
+    "fullName": "passing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/custom.test.ts",
+    "fullName": "string params",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/custom.test.ts",
+    "fullName": "instanceof",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/custom.test.ts",
+    "fullName": "non-continuable by default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/date.test.ts",
+    "fullName": "passing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/date.test.ts",
+    "fullName": "failing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/date.test.ts",
+    "fullName": "min max getters",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "basic datetime parsing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "datetime parsing with precision -1",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "datetime parsing with precision 0",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "datetime parsing with precision 3",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "datetime parsing with offset",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "datetime parsing with offset and precision 0",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "datetime parsing with offset and precision 4",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "datetime offset normalization",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "datetime parsing with local option",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "datetime parsing with local and offset",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "date parsing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "time parsing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "duration",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/datetime.test.ts",
+    "fullName": "redos checker",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "basic defaults",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "default with optional",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "default with transform",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "default on existing optional",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "optional on default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "removeDefault",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "apply default at output",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "nested",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "chained defaults",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "object optionality",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "nested prefault/default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "failing default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/default.test.ts",
+    "fullName": "partial should not clobber defaults",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/description.test.ts",
+    "fullName": ".describe",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/description.test.ts",
+    "fullName": "adding description with z.globalRegistry",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "_values",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "valid parse - object",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "valid - include discriminator key (deprecated)",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "valid - optional discriminator (object)",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "valid - discriminator value of various primitive types",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "invalid - null",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "invalid discriminator value",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "invalid discriminator value - unionFallback",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "valid discriminator value, invalid data",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "wrong schema - missing discriminator",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "async - valid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "async - invalid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "valid - literals with .default or .pipe",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "enum and nativeEnum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "branded",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "optional and nullable",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "multiple discriminators",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "single element union",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "nested discriminated unions",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "readonly literal discriminator",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/discriminated-unions.test.ts",
+    "fullName": "pipes",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "enum from string array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "enum from const object",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "enum from native enum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "enum from native enum with numeric keys",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "issue metadata",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "enum from non-const inputs",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "get options",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "readonly enum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "error map",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "type signatures",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "extract",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "exclude",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "error map inheritance",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "readonly in ZodEnumDef",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "enum error message, invalid enum elementstring",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "enum error message, invalid type",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "nativeEnum default error message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "enum with message returns the custom error message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/enum.test.ts",
+    "fullName": "enum with diagonal keys",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": "regular error",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": ".flatten()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": "custom .flatten()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": ".format()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": "custom .format()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": "all errors",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": "z.treeifyError",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": "z.treeifyError 2",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": "z.prettifyError",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": "z.toDotPath",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": "inheritance",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error-utils.test.ts",
+    "fullName": "disc union treeify/format",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "error creation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "do not allow error and message together",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "type error with custom error map",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "refinement fail with params",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "hard coded error  with custom errormap",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "default error message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "override error in refine",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "override error in refinement",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "array minimum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "literal bigint default error message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "custom path in custom error map",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "root level formatting",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "custom path",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "custom path",
+    "occurrence": 2,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "no abort early on refinements",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "detect issue with input fallback",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "formatting",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "formatting with nullable and optional fields",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "inferFlattenedErrors",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "schema-bound error map",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "bound error map overrides contextual",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "z.config customError ",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "empty string error message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "dont short circuit on continuable errors",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "string error params",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "error inheritance",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/error.test.ts",
+    "fullName": "error serialization",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/file.test.ts",
+    "fullName": "passing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/file.test.ts",
+    "fullName": "failing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/firstparty.test.ts",
+    "fullName": "first party switch",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/firstparty.test.ts",
+    "fullName": "$ZodSchemaTypes",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "function parsing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "parsed function fail 1",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "parsed function fail 2",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "function inference 1",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "args method",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "function inference 2",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "valid function run",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "input validation error",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "array inputs",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "output validation error",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "function with async refinements",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "non async function with async refinements should fail",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/function.test.ts",
+    "fullName": "extra parameters with rest",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/generics.test.ts",
+    "fullName": "generics",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/generics.test.ts",
+    "fullName": "generics with optional",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/generics.test.ts",
+    "fullName": "nested no undefined",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/generics.test.ts",
+    "fullName": "generic on output type",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.boolean",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.bigint",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.symbol",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.date",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.coerce.string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.coerce.number",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.coerce.boolean",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.coerce.bigint",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.coerce.date",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.iso.datetime",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.iso.date",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.iso.time",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.iso.duration",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.undefined",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.null",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.any",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.unknown",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.never",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.void",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.union",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.intersection",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.tuple",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.record",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.map",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.map invalid_element",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.map async",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.enum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.enum - native",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.nativeEnum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.literal",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.transform",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.transform async",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.preprocess",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.optional",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.nullable",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.catch",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.nan",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.pipe",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.readonly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.templateLiteral",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.custom schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.custom check",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.check",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.instanceof",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.refine",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.transform",
+    "occurrence": 2,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.$brand()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.lazy",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.json",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "z.promise",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "isPlainObject",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/index.test.ts",
+    "fullName": "def typing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/instanceof.test.ts",
+    "fullName": "instanceof",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/instanceof.test.ts",
+    "fullName": "instanceof fatal",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/intersection.test.ts",
+    "fullName": "object intersection",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/intersection.test.ts",
+    "fullName": "object intersection: loose",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/intersection.test.ts",
+    "fullName": "object intersection: strict",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/intersection.test.ts",
+    "fullName": "deep intersection",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/intersection.test.ts",
+    "fullName": "deep intersection of arrays",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/intersection.test.ts",
+    "fullName": "invalid intersection types",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/intersection.test.ts",
+    "fullName": "invalid array merge (incompatible lengths)",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/intersection.test.ts",
+    "fullName": "invalid array merge (incompatible elements)",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/intersection.test.ts",
+    "fullName": "invalid object merge",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/intersection.test.ts",
+    "fullName": "invalid deep merge of object and array combination",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/json.test.ts",
+    "fullName": "<anonymous>",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/lazy.test.ts",
+    "fullName": "opt passthrough",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/lazy.test.ts",
+    "fullName": "schema getter",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/lazy.test.ts",
+    "fullName": "lazy proxy",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/lazy.test.ts",
+    "fullName": "recursion with z.lazy",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/lazy.test.ts",
+    "fullName": "recursive union wit z.lazy",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/lazy.test.ts",
+    "fullName": "mutual recursion with lazy",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/lazy.test.ts",
+    "fullName": "mutual recursion with cyclical data",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/lazy.test.ts",
+    "fullName": "complicated self-recursion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/lazy.test.ts",
+    "fullName": "lazy initialization",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/literal.test.ts",
+    "fullName": "passing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/literal.test.ts",
+    "fullName": "failing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/literal.test.ts",
+    "fullName": "invalid_literal should have `input` field with data",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/literal.test.ts",
+    "fullName": "invalid_literal should return default message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/literal.test.ts",
+    "fullName": "invalid_literal should return custom message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/literal.test.ts",
+    "fullName": "literal default error message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/literal.test.ts",
+    "fullName": "literal bigint default error message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/literal.test.ts",
+    "fullName": ".value getter",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/literal.test.ts",
+    "fullName": "readonly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/map.test.ts",
+    "fullName": "type inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/map.test.ts",
+    "fullName": "valid parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/map.test.ts",
+    "fullName": "valid parse async",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/map.test.ts",
+    "fullName": "throws when a Set is given",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/map.test.ts",
+    "fullName": "throws when the given map has invalid key and invalid input",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/map.test.ts",
+    "fullName": "throws when the given map has multiple invalid entries",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/map.test.ts",
+    "fullName": "dirty",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/map.test.ts",
+    "fullName": "map with object keys",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/nan.test.ts",
+    "fullName": "passing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/nan.test.ts",
+    "fullName": "failing validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/nested-refine.test.ts",
+    "fullName": "nested refinements",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/nonoptional.test.ts",
+    "fullName": "nonoptional",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/nonoptional.test.ts",
+    "fullName": "nonoptional with default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/nonoptional.test.ts",
+    "fullName": "nonoptional in object",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/nullable.test.ts",
+    "fullName": ".nullable()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/nullable.test.ts",
+    "fullName": ".nullable unwrap",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/nullable.test.ts",
+    "fullName": "z.null",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": "z.number() basic validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": "NaN validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": "Infinity validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".gt() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".gte() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".min() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".lt() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".lte() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".max() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".int() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".positive() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".negative() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".nonpositive() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".nonnegative() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".multipleOf() with positive divisor",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".multipleOf() with negative divisor",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".step() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".finite() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": ".safe() validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": "min value getters",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": "max value getters",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": "int getter",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": "finite getter",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": "string format methods",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/number.test.ts",
+    "fullName": "error customization",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "object type inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "unknown throw",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "shape() should return schema of particular key",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "correct parsing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "nonstrict by default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "parse optional keys ",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "empty object",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "strip by default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "unknownkeys override",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "passthrough unknown",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "strip unknown",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "strict",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "catchall inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "catchall overrides strict",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "catchall overrides strict",
+    "occurrence": 2,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "optional keys are unset",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "catchall parsing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "nonexistent keys",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "test async union",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "test inferred merged type",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "inferred type with Record shape",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "inferred merged object type with optional properties",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "inferred unioned object type with optional properties",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "inferred enum type",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "inferred partial object type with optional properties",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "inferred picked object type with optional properties",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "inferred type for unknown/any keys",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "strictObject",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "object with refine",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "intersection of object with date",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "intersection of object with refine with date",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "constructor key",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "constructor key",
+    "occurrence": 2,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "catchall",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "unknownkeys merging",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "extend() should return schema with new key",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "extend() should have power to override existing key",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "passthrough index signature",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "assignability",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "null prototype",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "empty objects",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "preserve key order",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "empty shape",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "zodtype assignability",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/object.test.ts",
+    "fullName": "index signature in shape",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/optional.test.ts",
+    "fullName": ".optional()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/optional.test.ts",
+    "fullName": "unwrap",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/optional.test.ts",
+    "fullName": "optionality",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/optional.test.ts",
+    "fullName": "pipe optionality",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/optional.test.ts",
+    "fullName": "pipe optionality inside objects",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/partial.test.ts",
+    "fullName": "shallow inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/partial.test.ts",
+    "fullName": "shallow partial parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/partial.test.ts",
+    "fullName": "required",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/partial.test.ts",
+    "fullName": "required inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/partial.test.ts",
+    "fullName": "required with mask",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/partial.test.ts",
+    "fullName": "required with mask -- ignore falsy values",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/partial.test.ts",
+    "fullName": "partial with mask",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/partial.test.ts",
+    "fullName": "partial with mask -- ignore falsy values",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "pick type inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "pick parse - success",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "pick parse - fail",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "pick - remove optional",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "omit type inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "omit parse - success",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "omit parse - fail",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "omit - remove optional",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "nonstrict inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "nonstrict parsing - pass",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "nonstrict parsing - fail",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pickomit.test.ts",
+    "fullName": "pick/omit/required/partial - do not allow unknown keys",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pipe.test.ts",
+    "fullName": "string to number pipe",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pipe.test.ts",
+    "fullName": "string to number pipe async",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pipe.test.ts",
+    "fullName": "string with default fallback",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pipe.test.ts",
+    "fullName": "continue on non-fatal errors",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/pipe.test.ts",
+    "fullName": "break on fatal errors",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/prefault.test.ts",
+    "fullName": "basic prefault",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/prefault.test.ts",
+    "fullName": "prefault inside object",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "preprocess",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "async preprocess",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "ctx.addIssue accepts string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "preprocess ctx.addIssue with parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "preprocess ctx.addIssue non-fatal by default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "preprocess ctx.addIssue fatal true",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "async preprocess ctx.addIssue with parseAsync",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "z.NEVER in preprocess",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "preprocess as the second property of object",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "preprocess validates with sibling errors",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/preprocess.test.ts",
+    "fullName": "perform transform with non-fatal issues",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "literal string schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "literal number schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "literal boolean schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "literal bigint schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "string schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "number schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "bigint schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "boolean schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "date schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "symbol schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "undefined schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "null schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "primitive inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/primitive.test.ts",
+    "fullName": "get literal values",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/promise.test.ts",
+    "fullName": "promise inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/promise.test.ts",
+    "fullName": "promise parsing success",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/promise.test.ts",
+    "fullName": "promise parsing fail",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/promise.test.ts",
+    "fullName": "promise parsing fail 2",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/promise.test.ts",
+    "fullName": "promise parsing fail",
+    "occurrence": 2,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/promise.test.ts",
+    "fullName": "sync promise parsing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/promise.test.ts",
+    "fullName": "async function pass",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/promise.test.ts",
+    "fullName": "async function fail",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/promise.test.ts",
+    "fullName": "async promise parsing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/promise.test.ts",
+    "fullName": "resolves",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/prototypes.test.ts",
+    "fullName": "prototype extension",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/readonly.test.ts",
+    "fullName": "flat inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/readonly.test.ts",
+    "fullName": "object freezing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/readonly.test.ts",
+    "fullName": "async object freezing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/readonly.test.ts",
+    "fullName": "readonly inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/readonly.test.ts",
+    "fullName": "readonly parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/readonly.test.ts",
+    "fullName": "readonly parse with tuples",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/readonly.test.ts",
+    "fullName": "readonly and the get method",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "type inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "enum exhaustiveness",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "literal exhaustiveness",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "pipe exhaustiveness",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "union exhaustiveness",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "string record parse - pass",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "key and value getters",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "is not vulnerable to prototype pollution",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "dont remove undefined values",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "allow undefined values",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "async parsing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "async parsing",
+    "occurrence": 2,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/record.test.ts",
+    "fullName": "partial record",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/recursive-types.test.ts",
+    "fullName": "recursion with z.lazy",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/recursive-types.test.ts",
+    "fullName": "recursion involving union type",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/recursive-types.test.ts",
+    "fullName": "mutual recursion - native",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/recursive-types.test.ts",
+    "fullName": "pick and omit with getter",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/recursive-types.test.ts",
+    "fullName": "deferred self-recursion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/recursive-types.test.ts",
+    "fullName": "deferred mutual recursion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/recursive-types.test.ts",
+    "fullName": "mutual recursion with meta",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/recursive-types.test.ts",
+    "fullName": "recursion compatibility",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "basic refinement functionality should create a new schema instance when refining",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "basic refinement functionality should validate according to refinement logic",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "basic refinement functionality should validate strict mode correctly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "refinement with custom error messages should use custom error message when validation fails",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "async refinements should support async refinement functions",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "early termination options should abort early with continue: false",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "early termination options should abort early with fatal: true",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "early termination options should abort early with abort flag",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "custom error paths should use custom path in error message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "superRefine functionality should support multiple validation rules",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "superRefine functionality should support async superRefine",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "superRefine functionality should accept string as shorthand for custom error message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "superRefine functionality should respect fatal flag in superRefine",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "chained refinements should collect all validation errors when appropriate",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/refine.test.ts",
+    "fullName": "when",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "globalRegistry",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "z.registry",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "z.registry no metadata",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "z.registry with schema constraints",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "output type in registry meta",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "output type in registry meta - objects and arrays",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "input type in registry meta",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "input type in registry meta - objects and arrays",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": ".meta method",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": ".meta metadata does not bubble up",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": ".describe",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "inherit across clone",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "loose examples",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "function meta witout replacement",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "function meta with replacement",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/registries.test.ts",
+    "fullName": "test .clear()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "type inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "valid parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "valid parse async",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "valid parse: size-related methods",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "failing when parsing empty set in nonempty ",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "failing when set is smaller than min() ",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "failing when set is bigger than max() ",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "doesn\u2019t throw when an empty set is given",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "throws when a Map is given",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "throws when the given set has invalid input",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "throws when the given set has multiple invalid entries",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/set.test.ts",
+    "fullName": "min/max",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/standard-schema.test.ts",
+    "fullName": "length checks",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/standard-schema.test.ts",
+    "fullName": "length checks",
+    "occurrence": 2,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/standard-schema.test.ts",
+    "fullName": "length checks",
+    "occurrence": 3,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/standard-schema.test.ts",
+    "fullName": "length checks",
+    "occurrence": 4,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string-formats.test.ts",
+    "fullName": "string format methods",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string-formats.test.ts",
+    "fullName": "z.stringFormat",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "length checks",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "includes",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "startswith/endswith",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "email validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "base64 validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "base64url validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "big base64 and base64url",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "jwt token",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "url validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "httpurl",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "url error overrides",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "emoji validations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "nanoid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "bad nanoid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "good uuid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "bad uuid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "good guid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "bad guid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "cuid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "cuid2",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "ulid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "xid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "ksuid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "regex",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "regexp error message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "regexp error custom message",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "regex lastIndex reset",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "format",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "min max getters",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "trim",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "lowerCase",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "IPv4 validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "IPv6 validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "CIDR v4 validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "CIDR v6 validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/string.test.ts",
+    "fullName": "E.164 validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/stringbool.test.ts",
+    "fullName": "z.stringbool",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/stringbool.test.ts",
+    "fullName": "custom values",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/stringbool.test.ts",
+    "fullName": "custom values - case sensitive",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/stringbool.test.ts",
+    "fullName": "z.stringbool with custom error messages",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/template-literal.test.ts",
+    "fullName": "template literal type inference",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/template-literal.test.ts",
+    "fullName": "template literal unsupported args",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/template-literal.test.ts",
+    "fullName": "template literal parsing - success - basic cases",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/template-literal.test.ts",
+    "fullName": "template literal parsing - failure - basic cases",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/template-literal.test.ts",
+    "fullName": "regexes",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/template-literal.test.ts",
+    "fullName": "template literal parsing - success - complex cases",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/template-literal.test.ts",
+    "fullName": "template literal parsing - failure - complex cases",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/template-literal.test.ts",
+    "fullName": "template literal parsing - failure - issue format",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema primitive types",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema unsupported schema types",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema string formats",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema string patterns",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema number constraints",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema arrays",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema unions",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema intersections",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema record",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema tuple",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema promise",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema lazy",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema enum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema literal",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema pipe",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema simple objects",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema additionalproperties in z.object",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema catchall objects",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema optional fields - object",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema recursive object",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema simple interface",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema catchall interface",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema recursive interface schemas",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "toJSONSchema mutually recursive interface schemas",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "override",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "override: do not run on references",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "override with refs",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "override execution order",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "override with path",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "pipe",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "passthrough schemas",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "extract schemas with id",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "unrepresentable literal values are ignored",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "describe with id",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "overwrite id",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "overwrite descriptions",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "top-level readonly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "basic registry",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "_ref",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "defaults/prefaults",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "input type",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "examples on pipe",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "use output type for preprocess",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "flatten simple intersections",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "z.file()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "custom toJSONSchema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "cycle detection - root",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/to-json-schema.test.ts",
+    "fullName": "cycle detection - mutual recursion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "transform ctx.addIssue with parse",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "transform ctx.addIssue with parseAsync",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "z.NEVER in transform",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "basic transformations",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "coercion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "async coercion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "sync coercion async error",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "dynamic default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "default when property is null or undefined",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "default with falsy values",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "object typing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "transform method overloads",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "multiple transformers",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "short circuit on dirty",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/transform.test.ts",
+    "fullName": "async short circuit on dirty",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/tuple.test.ts",
+    "fullName": "successful validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/tuple.test.ts",
+    "fullName": "async validation",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/tuple.test.ts",
+    "fullName": "tuple with optional elements",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/tuple.test.ts",
+    "fullName": "tuple with optional elements followed by required",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/tuple.test.ts",
+    "fullName": "tuple with rest schema",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/tuple.test.ts",
+    "fullName": "sparse array input",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/union.test.ts",
+    "fullName": "function parsing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/union.test.ts",
+    "fullName": "union 2",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/union.test.ts",
+    "fullName": "return valid over invalid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/union.test.ts",
+    "fullName": "return errors from both union arms",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/union.test.ts",
+    "fullName": "options getter",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/union.test.ts",
+    "fullName": "readonly union",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/union.test.ts",
+    "fullName": "union inferred types",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/union.test.ts",
+    "fullName": "union values",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "string length",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "string min/max",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "string max",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "number min",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "number gte",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "number gt",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "number max",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "number lte",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "number lt",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "number nonnegative",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "number nonpositive",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "number negative",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/validations.test.ts",
+    "fullName": "number positive",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "classic/tests/void.test.ts",
+    "fullName": "void",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/assignability.test.ts",
+    "fullName": "assignability",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/assignability.test.ts",
+    "fullName": "assignability with type narrowing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/brand.test.ts",
+    "fullName": "branded types",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.lt",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.lte",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.max",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.gt",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.gte",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.min",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.maxLength",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.minLength",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.length",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.regex",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.includes",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.startsWith",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.endsWith",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.lowercase",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.uppercase",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "z.overwrite",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/checks.test.ts",
+    "fullName": "abort early",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/computed.test.ts",
+    "fullName": "min/max",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/computed.test.ts",
+    "fullName": "multipleOf",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/computed.test.ts",
+    "fullName": "int64 format",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/computed.test.ts",
+    "fullName": "int32 format",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/computed.test.ts",
+    "fullName": "array size",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/error.test.ts",
+    "fullName": "no locale by default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/error.test.ts",
+    "fullName": "error inheritance",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/functions.test.ts",
+    "fullName": "z.function",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.boolean",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.bigint",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.symbol",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.date",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.coerce.string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.coerce.number",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.coerce.boolean",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.coerce.bigint",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.coerce.date",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.iso.datetime",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.iso.date",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.iso.time",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.iso.duration",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.undefined",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.null",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.any",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.unknown",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.never",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.void",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.union",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.intersection",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.tuple",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.record",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.map",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.map invalid_element",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.map async",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.enum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.enum - native",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.nativeEnum",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.literal",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.transform",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.transform async",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.preprocess",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.optional",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.nullable",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.default",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.catch",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.nan",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.pipe",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.readonly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.templateLiteral",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.custom",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.check",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.instanceof",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.refine",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.transform",
+    "occurrence": 2,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.$brand()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.lazy",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.json",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.stringbool",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.promise",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "z.pipe type enforcement",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/index.test.ts",
+    "fullName": "def typing",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/number.test.ts",
+    "fullName": "z.number",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/number.test.ts",
+    "fullName": "z.number async",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/number.test.ts",
+    "fullName": "z.int",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/number.test.ts",
+    "fullName": "z.float32",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/number.test.ts",
+    "fullName": "z.float64",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/number.test.ts",
+    "fullName": "z.int32",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/number.test.ts",
+    "fullName": "z.uint32",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/number.test.ts",
+    "fullName": "z.int64",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/number.test.ts",
+    "fullName": "z.uint64",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.object",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.object().check()",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.strictObject",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.looseObject",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.keyof",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.extend",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.pick",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.omit",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.partial",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.partial with mask",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/object.test.ts",
+    "fullName": "z.catchall",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/prototypes.test.ts",
+    "fullName": "prototype extension",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/prototypes.test.ts",
+    "fullName": "prototype extension",
+    "occurrence": 2,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/recursive-types.test.ts",
+    "fullName": "recursion with z.lazy",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/recursive-types.test.ts",
+    "fullName": "recursion involving union type",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/recursive-types.test.ts",
+    "fullName": "mutual recursion - native",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/recursive-types.test.ts",
+    "fullName": "pick and omit with getter",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/recursive-types.test.ts",
+    "fullName": "deferred self-recursion",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/recursive-types.test.ts",
+    "fullName": "recursion compatibility",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.string with custom error",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "inference in checks",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.string async",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.uuid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.email",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.url",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.url with optional hostname regex",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.url - file urls",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.url with optional protocol regex",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.url with both hostname and protocol regexes",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.url with invalid regex patterns",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.emoji",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.nanoid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.cuid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.cuid2",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.ulid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.xid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.ksuid",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.ipv4",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.ipv6",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.base64",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.e164",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "mini/tests/string.test.ts",
+    "fullName": "z.jwt",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules array pluralization correctly pluralizes 1 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules array pluralization correctly pluralizes 2 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules array pluralization correctly pluralizes 5 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules array pluralization correctly pluralizes 11 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules array pluralization correctly pluralizes 21 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules array pluralization correctly pluralizes 22 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules array pluralization correctly pluralizes 25 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules array pluralization correctly pluralizes 101 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules array pluralization correctly pluralizes 111 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules set pluralization correctly pluralizes 1 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules set pluralization correctly pluralizes 2 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules set pluralization correctly pluralizes 5 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules set pluralization correctly pluralizes 11 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules set pluralization correctly pluralizes 21 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules set pluralization correctly pluralizes 22 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules set pluralization correctly pluralizes 25 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules set pluralization correctly pluralizes 101 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules set pluralization correctly pluralizes 111 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules string pluralization correctly pluralizes 1 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules string pluralization correctly pluralizes 2 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules string pluralization correctly pluralizes 5 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules string pluralization correctly pluralizes 11 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules string pluralization correctly pluralizes 21 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules string pluralization correctly pluralizes 22 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules string pluralization correctly pluralizes 25 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules file pluralization correctly pluralizes 0 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules file pluralization correctly pluralizes 1 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules file pluralization correctly pluralizes 2 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules file pluralization correctly pluralizes 5 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules file pluralization correctly pluralizes 11 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules file pluralization correctly pluralizes 21 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules file pluralization correctly pluralizes 22 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules file pluralization correctly pluralizes 25 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules file pluralization correctly pluralizes 101 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules file pluralization correctly pluralizes 110 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules handles negative numbers correctly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules handles zero correctly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/be.test.ts",
+    "fullName": "Belarusian localization pluralization rules handles bigint values correctly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/en.test.ts",
+    "fullName": "parsedType",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules array pluralization correctly pluralizes 1 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules array pluralization correctly pluralizes 2 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules array pluralization correctly pluralizes 5 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules array pluralization correctly pluralizes 11 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules array pluralization correctly pluralizes 21 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules array pluralization correctly pluralizes 22 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules array pluralization correctly pluralizes 25 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules array pluralization correctly pluralizes 101 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules array pluralization correctly pluralizes 111 array",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules set pluralization correctly pluralizes 1 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules set pluralization correctly pluralizes 2 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules set pluralization correctly pluralizes 5 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules set pluralization correctly pluralizes 11 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules set pluralization correctly pluralizes 21 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules set pluralization correctly pluralizes 22 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules set pluralization correctly pluralizes 25 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules set pluralization correctly pluralizes 101 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules set pluralization correctly pluralizes 111 set",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules string pluralization correctly pluralizes 1 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules string pluralization correctly pluralizes 2 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules string pluralization correctly pluralizes 5 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules string pluralization correctly pluralizes 11 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules string pluralization correctly pluralizes 21 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules string pluralization correctly pluralizes 22 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules string pluralization correctly pluralizes 25 string",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules file pluralization correctly pluralizes 0 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules file pluralization correctly pluralizes 1 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules file pluralization correctly pluralizes 2 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules file pluralization correctly pluralizes 5 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules file pluralization correctly pluralizes 11 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules file pluralization correctly pluralizes 21 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules file pluralization correctly pluralizes 22 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules file pluralization correctly pluralizes 25 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules file pluralization correctly pluralizes 101 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules file pluralization correctly pluralizes 110 file",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules handles negative numbers correctly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules handles zero correctly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/ru.test.ts",
+    "fullName": "Russian localization pluralization rules handles bigint values correctly",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/tr.test.ts",
+    "fullName": "parsedType",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  },
+  {
+    "file": "core/tests/locales/tr.test.ts",
+    "fullName": "locales - tr",
+    "occurrence": 1,
+    "status": "passed",
+    "message_first_line": ""
+  }
+]

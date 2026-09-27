@@ -1,0 +1,20 @@
+{
+  "main": {
+    "functions": 569,
+    "constructors": 6,
+    "async": 4,
+    "docComments": 0,
+    "snippets_native": 16,
+    "snippets_docs": 149,
+    "rawFunctions": 569
+  },
+  "mini": {
+    "functions": 563,
+    "constructors": 6,
+    "async": 2,
+    "docComments": 0,
+    "snippets_native": 0,
+    "snippets_docs": 149,
+    "rawFunctions": 563
+  }
+}

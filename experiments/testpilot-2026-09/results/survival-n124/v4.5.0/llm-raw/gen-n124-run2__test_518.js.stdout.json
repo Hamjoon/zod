@@ -1,0 +1,60 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-25T03:26:47.807Z",
+    "end": "2026-09-25T03:26:47.810Z",
+    "duration": 3
+  },
+  "tests": [
+    {
+      "title": "test zod.z.instanceof",
+      "fullTitle": "test zod test zod.z.instanceof",
+      "file": "/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_518.js",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Should throw default error when input is not an instance of MyClass\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_518.js:23:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Should throw default error when input is not an instance of MyClass",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"MyClass\",\n    \"path\": [],\n    \"message\": \"Invalid input: expected MyClass, received object\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "test zod.z.instanceof",
+      "fullTitle": "test zod test zod.z.instanceof",
+      "file": "/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_518.js",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError [ERR_ASSERTION]: Should throw default error when input is not an instance of MyClass\n    at Context.<anonymous> (/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_518.js:23:16)\n    at callFnAsync (/work/testpilot2/node_modules/mocha/lib/runnable.js:394:21)\n    at Runnable.run (/work/testpilot2/node_modules/mocha/lib/runnable.js:338:7)\n    at Runner.runTest (/work/testpilot2/node_modules/mocha/lib/runner.js:666:10)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:789:12\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:581:14)\n    at /work/testpilot2/node_modules/mocha/lib/runner.js:591:7\n    at next (/work/testpilot2/node_modules/mocha/lib/runner.js:474:14)\n    at Immediate._onImmediate (/work/testpilot2/node_modules/mocha/lib/runner.js:559:5)\n    at process.processImmediate (node:internal/timers:484:21)",
+        "message": "Should throw default error when input is not an instance of MyClass",
+        "generatedMessage": false,
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "ZodError",
+          "message": "[\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"MyClass\",\n    \"path\": [],\n    \"message\": \"Invalid input: expected MyClass, received object\"\n  }\n]"
+        },
+        "expected": {},
+        "operator": "throws",
+        "diff": "simple"
+      }
+    }
+  ],
+  "passes": []
+}

@@ -1,0 +1,3 @@
+./classic/tests
+./core/tests
+./mini/tests

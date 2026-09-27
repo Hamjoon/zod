@@ -1,0 +1,93 @@
+[
+  {
+    "release": "v4.0.5",
+    "checkedFiles": 101,
+    "changed": [],
+    "missingInTree": [],
+    "extraInTree": [],
+    "indexCjs": {
+      "exists": true,
+      "sha256": "2a3455cecff4f7021c92d0a3e2e5fc170c0448dc5cc261160127e08f4888a9c2"
+    },
+    "testsFiles": 81,
+    "testsEqualFrozen": true
+  },
+  {
+    "release": "v4.1.0",
+    "checkedFiles": 104,
+    "changed": [],
+    "missingInTree": [],
+    "extraInTree": [],
+    "indexCjs": {
+      "exists": true,
+      "sha256": "2a3455cecff4f7021c92d0a3e2e5fc170c0448dc5cc261160127e08f4888a9c2"
+    },
+    "testsFiles": 81,
+    "testsEqualFrozen": true
+  },
+  {
+    "release": "v4.2.0",
+    "checkedFiles": 111,
+    "changed": [],
+    "missingInTree": [],
+    "extraInTree": [],
+    "indexCjs": {
+      "exists": true,
+      "sha256": "2a3455cecff4f7021c92d0a3e2e5fc170c0448dc5cc261160127e08f4888a9c2"
+    },
+    "testsFiles": 81,
+    "testsEqualFrozen": true
+  },
+  {
+    "release": "v4.3.0",
+    "checkedFiles": 113,
+    "changed": [],
+    "missingInTree": [],
+    "extraInTree": [],
+    "indexCjs": {
+      "exists": true,
+      "sha256": "2a3455cecff4f7021c92d0a3e2e5fc170c0448dc5cc261160127e08f4888a9c2"
+    },
+    "testsFiles": 81,
+    "testsEqualFrozen": true
+  },
+  {
+    "release": "v4.4.0",
+    "checkedFiles": 116,
+    "changed": [],
+    "missingInTree": [],
+    "extraInTree": [],
+    "indexCjs": {
+      "exists": true,
+      "sha256": "2a3455cecff4f7021c92d0a3e2e5fc170c0448dc5cc261160127e08f4888a9c2"
+    },
+    "testsFiles": 81,
+    "testsEqualFrozen": true
+  },
+  {
+    "release": "v4.5.0",
+    "checkedFiles": 133,
+    "changed": [],
+    "missingInTree": [],
+    "extraInTree": [],
+    "indexCjs": {
+      "exists": true,
+      "sha256": "9215109ec960156cd1417c8fb61b9d34d7fc534b03a6eba183b3aa4a133d8e85"
+    },
+    "testsFiles": 81,
+    "testsEqualFrozen": true
+  },
+  {
+    "release": "v4.6.0",
+    "checkedFiles": 133,
+    "changed": [],
+    "missingInTree": [],
+    "extraInTree": [],
+    "indexCjs": {
+      "exists": true,
+      "sha256": "d93a8730d52c0fedab13619c8bc971cc99934c13d8dce7c97ee4d03a98d4096e"
+    },
+    "testsFiles": 81,
+    "testsEqualFrozen": true
+  }
+]

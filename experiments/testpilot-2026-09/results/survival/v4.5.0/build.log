@@ -1,0 +1,171 @@
+== 2026-09-19T15:01:14.535043+00:00 ['pnpm', 'install', '--frozen-lockfile']
+Scope: all 8 workspace projects
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +1094
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1094, reused 702, downloaded 0, added 0
+Progress: resolved 1094, reused 930, downloaded 12, added 0
+Progress: resolved 1094, reused 930, downloaded 26, added 13
+Progress: resolved 1094, reused 930, downloaded 33, added 19
+Progress: resolved 1094, reused 930, downloaded 47, added 42
+Progress: resolved 1094, reused 930, downloaded 64, added 72
+Progress: resolved 1094, reused 930, downloaded 69, added 99
+Progress: resolved 1094, reused 930, downloaded 78, added 159
+Progress: resolved 1094, reused 930, downloaded 89, added 193
+Progress: resolved 1094, reused 930, downloaded 99, added 206
+Progress: resolved 1094, reused 930, downloaded 108, added 248
+Progress: resolved 1094, reused 930, downloaded 112, added 312
+Progress: resolved 1094, reused 930, downloaded 125, added 348
+Progress: resolved 1094, reused 930, downloaded 128, added 374
+Progress: resolved 1094, reused 930, downloaded 132, added 392
+Progress: resolved 1094, reused 930, downloaded 141, added 398
+Progress: resolved 1094, reused 930, downloaded 149, added 435
+Progress: resolved 1094, reused 930, downloaded 153, added 506
+Progress: resolved 1094, reused 930, downloaded 156, added 541
+Progress: resolved 1094, reused 930, downloaded 157, added 590
+Progress: resolved 1094, reused 930, downloaded 157, added 659
+Progress: resolved 1094, reused 930, downloaded 158, added 721
+Progress: resolved 1094, reused 930, downloaded 159, added 734
+Progress: resolved 1094, reused 930, downloaded 160, added 760
+Progress: resolved 1094, reused 930, downloaded 160, added 794
+Progress: resolved 1094, reused 930, downloaded 160, added 871
+Progress: resolved 1094, reused 930, downloaded 160, added 928
+Progress: resolved 1094, reused 930, downloaded 160, added 980
+Progress: resolved 1094, reused 930, downloaded 160, added 992
+Progress: resolved 1094, reused 930, downloaded 161, added 1021
+Progress: resolved 1094, reused 930, downloaded 162, added 1077
+Progress: resolved 1094, reused 930, downloaded 162, added 1085
+Progress: resolved 1094, reused 930, downloaded 162, added 1086
+Progress: resolved 1094, reused 930, downloaded 162, added 1091
+Progress: resolved 1094, reused 930, downloaded 162, added 1093
+Progress: resolved 1094, reused 930, downloaded 163, added 1093
+Progress: resolved 1094, reused 930, downloaded 163, added 1094
+Progress: resolved 1094, reused 930, downloaded 163, added 1094, done
+
+devDependencies:
++ @arethetypeswrong/cli 0.17.4
++ @biomejs/biome 1.9.4
++ @seriousme/openapi-schema-validator 2.9.0
++ @types/benchmark 2.1.5
++ @types/semver 7.7.0
++ @web-std/file 3.0.3
++ arktype 2.1.19
++ benchmark 2.1.4
++ chalk 5.4.1
++ console-table-printer 2.12.1
++ esbuild 0.25.5
++ execa 9.5.2
++ globby 16.2.0
++ husky 9.1.7
++ jsr 0.12.4
++ lint-staged 16.4.0
++ madge 8.0.0
++ mitata 0.1.14
++ prettier 3.5.3
++ recheck 4.6.0-beta.3
++ rolldown 1.0.0-beta.18
++ rollup 4.60.2
++ semver 7.7.2
++ supershy 1.0.0
++ tinybench 2.9.0
++ ts-morph 28.0.0
++ tsdown 0.21.10
++ tslib 2.8.1
++ tsx 4.19.3
++ typescript 5.5.4
++ vite 7.3.2
++ vitest 4.1.5
++ zod 4.5.0 <- packages/zod
++ zod3 <- zod 3.24.3
++ zshy 0.7.2
+
+╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: @biomejs/biome, esbuild, sharp.                     │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+packages/docs postinstall$ fumadocs-mdx
+packages/docs postinstall: [MDX] types generated
+packages/docs postinstall: Done
+. prepare$ husky
+. prepare: HUSKY=0 skip install
+. prepare: Done
+Done in 45.3s using pnpm v10.12.1
+== exit=0 wall=45.496s
+== 2026-09-19T15:02:00.030722+00:00 ['pnpm', 'build']
+
+> @ build /work/zod-versions/v4.5.0
+> pnpm run -r --filter zod build
+
+
+> zod@4.5.0 build /work/zod-versions/v4.5.0/packages/zod
+> zshy --project tsconfig.build.json
+
+   ╔═══════════════════════════════════════════════╗
+   ║ zshy » the bundler-free TypeScript build tool ║
+   ╚═══════════════════════════════════════════════╝
+»  Starting build...
+»  Detected project root: /work/zod-versions/v4.5.0/packages/zod
+»  Reading package.json from ./package.json
+»  Reading tsconfig from ./tsconfig.build.json
+»  You're building your code to the project root. This means your compiled files will be generated alongside your source files.
+   Ensure that your "files" in package.json does not include TypeScript source files, or your users may experience .d.ts resolution issues in some environments:
+     "files": ["**/*.js", "**/*.mjs", "**/*.cjs", "**/*.d.ts", "**/*.d.mts", "**/*.d.cts"]
+»  Determining entrypoints...
+   ╔════════════════════╤═════════════════════════════════╗
+   ║ Subpath            │ Entrypoint                      ║
+   ╟────────────────────┼─────────────────────────────────╢
+   ║ "zod"              │ ./src/index.ts                  ║
+   ║ "zod/mini"         │ ./src/mini/index.ts             ║
+   ║ "zod/compile"      │ ./src/compile.ts                ║
+   ║ "zod/locales"      │ ./src/locales/index.ts          ║
+   ║ "zod/v3"           │ ./src/v3/index.ts               ║
+   ║ "zod/v4"           │ ./src/v4/index.ts               ║
+   ║ "zod/v4-mini"      │ ./src/v4-mini/index.ts          ║
+   ║ "zod/v4/mini"      │ ./src/v4/mini/index.ts          ║
+   ║ "zod/v4/core"      │ ./src/v4/core/index.ts          ║
+   ║ "zod/v4/locales"   │ ./src/v4/locales/index.ts       ║
+   ║ "zod/v4/locales/*" │ ./src/v4/locales/* (63 matches) ║
+   ╚════════════════════╧═════════════════════════════════╝
+»  Resolved build paths:
+   ╔══════════╤═══════════════╗
+   ║ Location │ Resolved path ║
+   ╟──────────┼───────────────╢
+   ║ rootDir  │ ./src         ║
+   ║ outDir   │ .             ║
+   ╚══════════╧═══════════════╝
+»  Package is an ES module (package.json#/type is "module")
+»  Skipping cleanup of outDir as it contains source files
+»  Skipping cleanup of declarationDir as it contains source files
+»  Building CJS... (rewriting .ts -> .cjs/.d.cts)
+»  Building ESM...
+»  Updating package.json...
+»  Updating jsr.json...
+»  Reading jsr.json from ./jsr.json
+»  Build complete! ✅
+
+> zod@4.5.0 postbuild /work/zod-versions/v4.5.0/packages/zod
+> tsx ../../scripts/write-stub-package-jsons.ts && pnpm biome check --write .
+
+✅ Created locales/package.json
+✅ Created mini/package.json
+✅ Created v3/package.json
+✅ Created v4/classic/package.json
+✅ Created v4/core/package.json
+✅ Created v4/package.json
+✅ Created v4/locales/package.json
+✅ Created v4/mini/package.json
+✅ Created v4-mini/package.json
+
+✨ Done! All stub package.json files have been created.
+Checked 325 files in 289ms. No fixes applied.
+
+> @ postbuild /work/zod-versions/v4.5.0
+> biome format --write .
+
+Formatted 436 files in 189ms. No fixes applied.
+== exit=0 wall=7.736s

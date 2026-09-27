@@ -1,0 +1,36 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-25T03:22:12.343Z",
+    "end": "2026-09-25T03:22:12.346Z",
+    "duration": 3
+  },
+  "tests": [
+    {
+      "title": "test custom uint64 schema",
+      "fullTitle": "test zod test custom uint64 schema",
+      "file": "/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_254.js",
+      "duration": 2,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "test custom uint64 schema",
+      "fullTitle": "test zod test custom uint64 schema",
+      "file": "/work/zod/experiments/testpilot-2026-09/wrappers/zod/test-s/test_254.js",
+      "duration": 2,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ]
+}

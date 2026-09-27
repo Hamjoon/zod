@@ -1,0 +1,197 @@
+{
+  "zod.z.iso.datetime": [
+    "classic/tests/datetime.test.ts"
+  ],
+  "zod.z.iso.date": [
+    "classic/tests/date.test.ts"
+  ],
+  "zod.z.iso.time": [],
+  "zod.z.iso.duration": [],
+  "zod.z.coerce.string": [
+    "classic/tests/string.test.ts",
+    "mini/tests/string.test.ts"
+  ],
+  "zod.z.coerce.number": [
+    "classic/tests/number.test.ts",
+    "mini/tests/number.test.ts"
+  ],
+  "zod.z.coerce.boolean": [],
+  "zod.z.coerce.bigint": [
+    "classic/tests/bigint.test.ts"
+  ],
+  "zod.z.coerce.date": [
+    "classic/tests/date.test.ts"
+  ],
+  "zod.z.stringbool": [
+    "classic/tests/stringbool.test.ts"
+  ],
+  "zod.z.string": [
+    "classic/tests/string.test.ts",
+    "mini/tests/string.test.ts"
+  ],
+  "zod.z.email": [],
+  "zod.z.guid": [],
+  "zod.z.uuid": [],
+  "zod.z.uuidv4": [],
+  "zod.z.uuidv6": [],
+  "zod.z.uuidv7": [],
+  "zod.z.url": [],
+  "zod.z.emoji": [],
+  "zod.z.nanoid": [],
+  "zod.z.cuid": [],
+  "zod.z.cuid2": [],
+  "zod.z.ulid": [],
+  "zod.z.ksuid": [],
+  "zod.z.ipv4": [],
+  "zod.z.ipv6": [],
+  "zod.z.cidrv4": [],
+  "zod.z.cidrv6": [],
+  "zod.z.base64": [],
+  "zod.z.base64url": [],
+  "zod.z.e164": [],
+  "zod.z.jwt": [],
+  "zod.z.stringFormat": [
+    "classic/tests/string-formats.test.ts"
+  ],
+  "zod.z.number": [
+    "classic/tests/number.test.ts",
+    "mini/tests/number.test.ts"
+  ],
+  "zod.z.int": [],
+  "zod.z.float32": [],
+  "zod.z.float64": [],
+  "zod.z.int32": [],
+  "zod.z.uint32": [],
+  "zod.z.boolean": [],
+  "zod.z.bigint": [
+    "classic/tests/bigint.test.ts"
+  ],
+  "zod.z.int64": [],
+  "zod.z.uint64": [],
+  "zod.z.symbol": [],
+  "zod.z.undefined": [],
+  "zod.z.null": [],
+  "zod.z.any": [],
+  "zod.z.unknown": [],
+  "zod.z.never": [],
+  "zod.z.void": [
+    "classic/tests/void.test.ts"
+  ],
+  "zod.z.date": [
+    "classic/tests/date.test.ts"
+  ],
+  "zod.z.array": [
+    "classic/tests/array.test.ts"
+  ],
+  "zod.z.object": [
+    "classic/tests/object.test.ts",
+    "mini/tests/object.test.ts"
+  ],
+  "zod.z.strictObject": [],
+  "zod.z.looseObject": [],
+  "zod.z.discriminatedUnion": [
+    "classic/tests/discriminated-unions.test.ts"
+  ],
+  "zod.z.intersection": [
+    "classic/tests/intersection.test.ts"
+  ],
+  "zod.z.tuple": [
+    "classic/tests/tuple.test.ts"
+  ],
+  "zod.z.record": [
+    "classic/tests/record.test.ts"
+  ],
+  "zod.z.partialRecord": [],
+  "zod.z.map": [
+    "classic/tests/map.test.ts"
+  ],
+  "zod.z.set": [
+    "classic/tests/set.test.ts"
+  ],
+  "zod.z.enum": [
+    "classic/tests/enum.test.ts"
+  ],
+  "zod.z.nativeEnum": [],
+  "zod.z.literal": [
+    "classic/tests/literal.test.ts"
+  ],
+  "zod.z.transform": [
+    "classic/tests/transform.test.ts"
+  ],
+  "zod.z.optional": [
+    "classic/tests/optional.test.ts"
+  ],
+  "zod.z.nullable": [
+    "classic/tests/nullable.test.ts"
+  ],
+  "zod.z.nullish": [],
+  "zod.z.prefault": [
+    "classic/tests/prefault.test.ts"
+  ],
+  "zod.z.nonoptional": [
+    "classic/tests/nonoptional.test.ts"
+  ],
+  "zod.z.success": [],
+  "zod.z.catch": [
+    "classic/tests/catch.test.ts"
+  ],
+  "zod.z.nan": [
+    "classic/tests/nan.test.ts"
+  ],
+  "zod.z.readonly": [
+    "classic/tests/readonly.test.ts"
+  ],
+  "zod.z.templateLiteral": [
+    "classic/tests/template-literal.test.ts"
+  ],
+  "zod.z.lazy": [
+    "classic/tests/lazy.test.ts"
+  ],
+  "zod.z.promise": [
+    "classic/tests/promise.test.ts"
+  ],
+  "zod.z.check": [
+    "mini/tests/checks.test.ts"
+  ],
+  "zod.z.custom": [
+    "classic/tests/custom.test.ts"
+  ],
+  "zod.z.refine": [
+    "classic/tests/refine.test.ts"
+  ],
+  "zod.z.superRefine": [],
+  "zod.z.instanceof": [
+    "classic/tests/instanceof.test.ts"
+  ],
+  "zod.z.preprocess": [
+    "classic/tests/preprocess.test.ts"
+  ],
+  "zod.z.lte": [],
+  "zod.z.gt": [],
+  "zod.z.gte": [],
+  "zod.z.positive": [],
+  "zod.z.negative": [],
+  "zod.z.nonpositive": [],
+  "zod.z.multipleOf": [],
+  "zod.z.maxSize": [],
+  "zod.z.minSize": [],
+  "zod.z.size": [],
+  "zod.z.maxLength": [],
+  "zod.z.length": [],
+  "zod.z.regex": [],
+  "zod.z.lowercase": [],
+  "zod.z.uppercase": [],
+  "zod.z.includes": [],
+  "zod.z.endsWith": [],
+  "zod.z.overwrite": [],
+  "zod.z.normalize": [],
+  "zod.z.trim": [],
+  "zod.z.toLowerCase": [],
+  "zod.z.toUpperCase": [],
+  "zod.z.parse": [],
+  "zod.z.parseAsync": [],
+  "zod.z.safeParse": [],
+  "zod.z.safeParseAsync": [],
+  "zod.z.setErrorMap": [],
+  "zod.z.getErrorMap": []
+}

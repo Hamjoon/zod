@@ -1,0 +1,8 @@
+{
+  "release": "v4.3.0",
+  "vitestExitCode": 1,
+  "typecheckFlagAccepted": true,
+  "harness": "failed",
+  "wallSeconds": 0.412650124999999,
+  "error": "Error: No projects were found. Make sure your configuration is correct. The projects definition: ["
+}

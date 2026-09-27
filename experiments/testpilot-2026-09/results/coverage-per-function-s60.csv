@@ -1,0 +1,125 @@
+api,stratum,inN60Sample,file,declLine,located,statements,covered,fraction
+zod.z.iso.datetime,Q,False,v4/classic/iso.ts,23,fnMap,1,1,1.0000
+zod.z.iso.date,Q,False,v4/classic/iso.ts,43,fnMap,1,0,0.0000
+zod.z.iso.time,Q,True,v4/classic/iso.ts,65,fnMap,1,1,1.0000
+zod.z.iso.duration,Q,True,v4/classic/iso.ts,88,fnMap,1,1,1.0000
+zod.z.coerce.string,Q,False,v4/classic/coerce.ts,5,fnMap,1,0,0.0000
+zod.z.coerce.number,Q,True,v4/classic/coerce.ts,10,fnMap,1,1,1.0000
+zod.z.coerce.boolean,Q,True,v4/classic/coerce.ts,15,fnMap,1,0,0.0000
+zod.z.coerce.bigint,Q,False,v4/classic/coerce.ts,20,fnMap,1,0,0.0000
+zod.z.coerce.date,Q,False,v4/classic/coerce.ts,25,fnMap,1,0,0.0000
+zod.z.stringbool,S,False,v4/classic/schemas.ts,2002,text (exported const),3,3,1.0000
+zod.z.string,S,False,v4/classic/schemas.ts,371,fnMap,1,1,1.0000
+zod.z.email,S,True,v4/classic/schemas.ts,396,fnMap,1,1,1.0000
+zod.z.guid,S,True,v4/classic/schemas.ts,410,fnMap,1,1,1.0000
+zod.z.uuid,S,True,v4/classic/schemas.ts,424,fnMap,1,1,1.0000
+zod.z.uuidv4,S,False,v4/classic/schemas.ts,428,fnMap,1,0,0.0000
+zod.z.uuidv6,S,True,v4/classic/schemas.ts,434,fnMap,1,1,1.0000
+zod.z.uuidv7,S,True,v4/classic/schemas.ts,440,fnMap,1,1,1.0000
+zod.z.url,S,False,v4/classic/schemas.ts,454,fnMap,1,0,0.0000
+zod.z.emoji,S,False,v4/classic/schemas.ts,468,fnMap,1,0,0.0000
+zod.z.nanoid,S,True,v4/classic/schemas.ts,482,fnMap,1,1,1.0000
+zod.z.cuid,S,False,v4/classic/schemas.ts,496,fnMap,1,0,0.0000
+zod.z.cuid2,S,True,v4/classic/schemas.ts,510,fnMap,1,1,1.0000
+zod.z.ulid,S,True,v4/classic/schemas.ts,524,fnMap,1,1,1.0000
+zod.z.xid,S,False,v4/classic/schemas.ts,538,fnMap,1,0,0.0000
+zod.z.ksuid,S,True,v4/classic/schemas.ts,552,fnMap,1,0,0.0000
+zod.z.ipv4,S,False,v4/classic/schemas.ts,580,fnMap,1,0,0.0000
+zod.z.ipv6,S,False,v4/classic/schemas.ts,593,fnMap,1,0,0.0000
+zod.z.cidrv4,S,True,v4/classic/schemas.ts,606,fnMap,1,1,1.0000
+zod.z.cidrv6,S,True,v4/classic/schemas.ts,619,fnMap,1,1,1.0000
+zod.z.base64,S,True,v4/classic/schemas.ts,632,fnMap,1,1,1.0000
+zod.z.base64url,S,False,v4/classic/schemas.ts,648,fnMap,1,0,0.0000
+zod.z.e164,S,False,v4/classic/schemas.ts,662,fnMap,1,0,0.0000
+zod.z.jwt,S,False,v4/classic/schemas.ts,676,fnMap,1,0,0.0000
+zod.z.stringFormat,C,False,v4/classic/schemas.ts,694,fnMap,1,0,0.0000
+zod.z.number,S,True,v4/classic/schemas.ts,771,fnMap,1,1,1.0000
+zod.z.int,S,False,v4/classic/schemas.ts,789,fnMap,1,1,1.0000
+zod.z.float32,S,False,v4/classic/schemas.ts,795,fnMap,1,0,0.0000
+zod.z.float64,S,False,v4/classic/schemas.ts,801,fnMap,1,0,0.0000
+zod.z.int32,S,False,v4/classic/schemas.ts,807,fnMap,1,0,0.0000
+zod.z.uint32,S,True,v4/classic/schemas.ts,813,fnMap,1,1,1.0000
+zod.z.boolean,S,True,v4/classic/schemas.ts,825,fnMap,1,1,1.0000
+zod.z.bigint,S,False,v4/classic/schemas.ts,875,fnMap,1,1,1.0000
+zod.z.int64,S,True,v4/classic/schemas.ts,893,fnMap,1,1,1.0000
+zod.z.uint64,S,False,v4/classic/schemas.ts,898,fnMap,1,0,0.0000
+zod.z.symbol,S,True,v4/classic/schemas.ts,909,fnMap,1,1,1.0000
+zod.z.undefined,S,False,v4/classic/schemas.ts,923,fnMap,1,0,0.0000
+zod.z.null,S,False,v4/classic/schemas.ts,935,fnMap,1,0,0.0000
+zod.z.any,S,True,v4/classic/schemas.ts,947,fnMap,1,1,1.0000
+zod.z.unknown,S,True,v4/classic/schemas.ts,958,fnMap,1,1,1.0000
+zod.z.never,S,True,v4/classic/schemas.ts,969,fnMap,1,1,1.0000
+zod.z.void,S,False,v4/classic/schemas.ts,980,fnMap,1,0,0.0000
+zod.z.date,S,True,v4/classic/schemas.ts,1009,fnMap,1,1,1.0000
+zod.z.array,S,True,v4/classic/schemas.ts,1038,fnMap,1,1,1.0000
+zod.z.keyof,S,True,v4/classic/schemas.ts,1043,fnMap,2,0,0.0000
+zod.z.object,S,False,v4/classic/schemas.ts,1150,fnMap,4,4,1.0000
+zod.z.strictObject,S,True,v4/classic/schemas.ts,1167,fnMap,3,3,1.0000
+zod.z.looseObject,S,True,v4/classic/schemas.ts,1184,fnMap,3,3,1.0000
+zod.z.union,S,False,v4/classic/schemas.ts,1211,fnMap,1,1,1.0000
+zod.z.discriminatedUnion,S,True,v4/classic/schemas.ts,1236,fnMap,1,1,1.0000
+zod.z.intersection,S,False,v4/classic/schemas.ts,1264,fnMap,1,0,0.0000
+zod.z.tuple,S,True,v4/classic/schemas.ts,1303,fnMap,4,4,1.0000
+zod.z.record,S,False,v4/classic/schemas.ts,1336,fnMap,1,0,0.0000
+zod.z.partialRecord,S,False,v4/classic/schemas.ts,1349,fnMap,1,1,1.0000
+zod.z.map,S,True,v4/classic/schemas.ts,1376,fnMap,1,1,1.0000
+zod.z.set,S,False,v4/classic/schemas.ts,1409,fnMap,1,0,0.0000
+zod.z.enum,S,False,v4/classic/schemas.ts,1483,fnMap,3,3,1.0000
+zod.z.nativeEnum,S,False,v4/classic/schemas.ts,1501,fnMap,1,0,0.0000
+zod.z.literal,S,False,v4/classic/schemas.ts,1539,fnMap,1,1,1.0000
+zod.z.file,S,True,v4/classic/schemas.ts,1562,fnMap,1,1,1.0000
+zod.z.transform,C,True,v4/classic/schemas.ts,1606,fnMap,1,1,1.0000
+zod.z.optional,S,False,v4/classic/schemas.ts,1631,fnMap,1,1,1.0000
+zod.z.nullable,S,True,v4/classic/schemas.ts,1654,fnMap,1,1,1.0000
+zod.z.nullish,S,True,v4/classic/schemas.ts,1662,fnMap,1,1,1.0000
+zod.z.prefault,S,True,v4/classic/schemas.ts,1710,fnMap,2,2,1.0000
+zod.z.nonoptional,S,True,v4/classic/schemas.ts,1739,fnMap,1,1,1.0000
+zod.z.success,S,False,v4/classic/schemas.ts,1763,fnMap,1,0,0.0000
+zod.z.catch,S,True,v4/classic/schemas.ts,1786,fnMap,2,2,1.0000
+zod.z.nan,S,False,v4/classic/schemas.ts,1807,fnMap,1,0,0.0000
+zod.z.pipe,S,False,v4/classic/schemas.ts,1830,fnMap,1,1,1.0000
+zod.z.readonly,S,True,v4/classic/schemas.ts,1851,fnMap,1,1,1.0000
+zod.z.templateLiteral,S,True,v4/classic/schemas.ts,1870,fnMap,1,0,0.0000
+zod.z.lazy,S,False,v4/classic/schemas.ts,1894,fnMap,1,1,1.0000
+zod.z.promise,S,False,v4/classic/schemas.ts,1914,fnMap,1,0,0.0000
+zod.z.check,C,True,v4/classic/schemas.ts,1931,fnMap,3,3,1.0000
+zod.z.custom,C,False,v4/classic/schemas.ts,1941,fnMap,2,0,0.0000
+zod.z.refine,C,False,v4/classic/schemas.ts,1948,fnMap,1,1,1.0000
+zod.z.superRefine,C,False,v4/classic/schemas.ts,1956,fnMap,14,12,0.8571
+zod.z.instanceof,S,False,v4/classic/schemas.ts,1983,fnMap,4,0,0.0000
+zod.z.json,S,False,v4/classic/schemas.ts,2029,fnMap,3,0,0.0000
+zod.z.preprocess,C,True,v4/classic/schemas.ts,2040,fnMap,1,1,1.0000
+zod.z.lt,C,True,v4/core/api.ts,772,fnMap via re-export in v4/classic/checks.ts,1,1,1.0000
+zod.z.lte,C,False,v4/core/api.ts,784,fnMap via re-export in v4/classic/checks.ts,1,1,1.0000
+zod.z.gt,C,False,v4/core/api.ts,803,fnMap via re-export in v4/classic/checks.ts,1,1,1.0000
+zod.z.gte,C,True,v4/core/api.ts,813,fnMap via re-export in v4/classic/checks.ts,1,1,1.0000
+zod.z.positive,C,True,v4/core/api.ts,827,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.negative,C,True,v4/core/api.ts,832,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.nonpositive,C,True,v4/core/api.ts,837,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.nonnegative,C,False,v4/core/api.ts,842,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.multipleOf,C,True,v4/core/api.ts,847,fnMap via re-export in v4/classic/checks.ts,1,1,1.0000
+zod.z.maxSize,C,True,v4/core/api.ts,859,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.minSize,C,False,v4/core/api.ts,871,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.size,C,True,v4/core/api.ts,883,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.maxLength,C,False,v4/core/api.ts,895,fnMap via re-export in v4/classic/checks.ts,2,2,1.0000
+zod.z.minLength,C,True,v4/core/api.ts,908,fnMap via re-export in v4/classic/checks.ts,1,1,1.0000
+zod.z.length,C,False,v4/core/api.ts,920,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.regex,C,False,v4/core/api.ts,932,fnMap via re-export in v4/classic/checks.ts,1,1,1.0000
+zod.z.lowercase,C,False,v4/core/api.ts,942,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.uppercase,C,True,v4/core/api.ts,952,fnMap via re-export in v4/classic/checks.ts,1,1,1.0000
+zod.z.includes,C,False,v4/core/api.ts,961,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.startsWith,C,False,v4/core/api.ts,973,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.endsWith,C,True,v4/core/api.ts,984,fnMap via re-export in v4/classic/checks.ts,1,1,1.0000
+zod.z.property,C,True,v4/core/api.ts,994,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.mime,C,False,v4/core/api.ts,1008,fnMap via re-export in v4/classic/checks.ts,1,0,0.0000
+zod.z.overwrite,C,True,v4/core/api.ts,1016,fnMap via re-export in v4/classic/checks.ts,1,1,1.0000
+zod.z.normalize,C,False,v4/core/api.ts,1023,fnMap via re-export in v4/classic/checks.ts,2,0,0.0000
+zod.z.trim,C,True,v4/core/api.ts,1028,fnMap via re-export in v4/classic/checks.ts,2,2,1.0000
+zod.z.toLowerCase,C,False,v4/core/api.ts,1032,fnMap via re-export in v4/classic/checks.ts,2,0,0.0000
+zod.z.toUpperCase,C,False,v4/core/api.ts,1036,fnMap via re-export in v4/classic/checks.ts,2,2,1.0000
+zod.z.parse,Q,True,v4/classic/parse.ts,8,text (exported const),1,1,1.0000
+zod.z.parseAsync,Q,True,v4/classic/parse.ts,15,text (exported const),1,1,1.0000
+zod.z.safeParse,Q,True,v4/classic/parse.ts,22,text (exported const),1,1,1.0000
+zod.z.safeParseAsync,Q,False,v4/classic/parse.ts,29,text (exported const),1,1,1.0000
+zod.z.setErrorMap,Q,False,v4/classic/compat.ts,46,fnMap,1,0,0.0000
+zod.z.getErrorMap,Q,False,v4/classic/compat.ts,53,fnMap,1,0,0.0000

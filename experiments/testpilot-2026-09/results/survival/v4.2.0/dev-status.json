@@ -1,0 +1,22 @@
+{
+  "release": "v4.2.0",
+  "harness": "ok",
+  "fallbackUsed": 0,
+  "attempts": [
+    {
+      "command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.2.0/dev-run.json",
+      "cwd": "/work/zod-versions/v4.2.0",
+      "fallback": 0,
+      "exitCode": 1,
+      "wallSeconds": 11.72869075600002
+    }
+  ],
+  "command": "npx vitest run --project zod packages/zod/src/v4 --typecheck.enabled=false --reporter=default --reporter=json --outputFile.json=/work/zod/experiments/testpilot-2026-09/results/survival/v4.2.0/dev-run.json",
+  "cwd": "/work/zod-versions/v4.2.0",
+  "vitestExitCode": 1,
+  "typecheckFlagAccepted": true,
+  "typecheckFlagEffective": false,
+  "wallSeconds": 11.820801547999991,
+  "runtimeSplit": "meta.typecheck",
+  "reprocessedFromAddendum2": true
+}

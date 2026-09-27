@@ -1,0 +1,58 @@
+[
+  {
+    "tag": "v4.0.5",
+    "commit": "45afab0f846dffd591362b6f770017507eb185b5",
+    "date": "2025-07-10",
+    "package_version": "4.0.5",
+    "packageManager": "pnpm@10.12.1",
+    "engines_node": "-"
+  },
+  {
+    "tag": "v4.1.0",
+    "commit": "2ca716d6313dcfab425d3555ac8bf85929bc57a4",
+    "date": "2025-08-23",
+    "package_version": "4.1.0",
+    "packageManager": "pnpm@10.12.1",
+    "engines_node": "-"
+  },
+  {
+    "tag": "v4.2.0",
+    "commit": "dcef9734f55fc1c8e73795a2be80c60fa7a4a568",
+    "date": "2025-12-14",
+    "package_version": "4.2.0",
+    "packageManager": "pnpm@10.12.1",
+    "engines_node": "-"
+  },
+  {
+    "tag": "v4.3.0",
+    "commit": "1899684fc34d149ebb5d6f9fd95a588e94f27053",
+    "date": "2025-12-30",
+    "package_version": "4.3.0",
+    "packageManager": "pnpm@10.12.1",
+    "engines_node": "-"
+  },
+  {
+    "tag": "v4.4.0",
+    "commit": "d05f026e9e6eae0e1e6c2efbf11c89007ca40494",
+    "date": "2026-04-29",
+    "package_version": "4.4.0",
+    "packageManager": "pnpm@10.12.1",
+    "engines_node": "-"
+  },
+  {
+    "tag": "v4.5.0",
+    "commit": "0a69bcb3d9554c6ec382ea9ba6b43c2421f3fa78",
+    "date": "2026-08-28",
+    "package_version": "4.5.0",
+    "packageManager": "pnpm@10.12.1",
+    "engines_node": "-"
+  },
+  {
+    "tag": "v4.6.0",
+    "commit": "1c51cbe0fe23d09f8d520b31487d50a01588fae5",
+    "date": "2026-09-09",
+    "package_version": "4.6.0",
+    "packageManager": "nub@0.8.3",
+    "engines_node": "-"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "failedRequests": 0,
+  "prompts": 10,
+  "refinerPrompts": 8,
+  "invalidCompletions": [
+    {
+      "id": 2,
+      "length": 203,
+      "fences": 0
+    }
+  ],
+  "stats": {
+    "nrTests": 16,
+    "nrPasses": 0,
+    "nrFailures": 16,
+    "nrPending": 0,
+    "nrOther": 0,
+    "snippetExtractionTime": 367.81679199999996,
+    "codexQueryTime": 0,
+    "totalTime": 152318.815653
+  },
+  "metaData": {
+    "packageName": "zod",
+    "useDocSnippets": true,
+    "useCodeSnippets": false,
+    "numSnippets": 3,
+    "snippetLength": 20,
+    "numCompletions": 1
+  },
+  "gatePassed": false
+}
